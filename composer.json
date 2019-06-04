@@ -1,0 +1,25 @@
+{
+    "name": "voximplant/voximplant-php-sdk",
+    "description": "API",
+    "keywords": ["voximplant", "api", "client"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitriy Ivaneychik",
+            "email": "ivaneychik@voximplant.com"
+        },
+        {
+            "name": "Utkin Mikhail",
+            "email": "utkin@voximplant.com"
+        }
+    ],
+    "require": {
+        "php": ">= 7.0",
+        "firebase/php-jwt": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Voximplant\\": "src"
+        }
+    }
+}

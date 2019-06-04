@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @method AddAdminUser Adds a new admin user into the specified parent or child account.
+ */
+
+// Path to your autoload.php
+require_once '/path/to/vendor/autoload.php';
+
+use Voximplant\VoximplantApi;
+use Voximplant\Resources\Params\AddAdminUserParams;
+
+/**
+ * In order to use Voximplant PHP SDK, you need the following:
+ * 1. A developer account. If you don't have one, sign up here https://voximplant.com/sign-up/.
+ * 2. A private API key. To create it, call the [CreateKey] method. Save the result value in a file.
+ */
+
+// Create API Object
+$voxApi = new VoximplantApi('path/to/private/api/key.json');
+
+/**
+ * @param array $params (See below)
+ * new_admin_user_name - The admin user name. The length must be less than 50.
+ * admin_user_display_name - The admin user display name. The length must be less than 256.
+ * new_admin_user_password - The admin user password. The length must be at least 6 symbols.
+ * admin_role_id - The role(s) ID created via Managing Admin Roles methods. The attaching admin role ID list or the 'all' value.
+ */
+$params = new AddAdminUserParams();
+
+$params->new_admin_user_name = 'adm1';
+$params->admin_user_display_name = 'adm1';
+$params->new_admin_user_password = '1234567';
+$params->admin_role_id = '1';
+
+// Add a new admin user.
+$result = $voxApi->AdminUsers->AddAdminUser($params);
+
+// Show result
+var_dump($result);
