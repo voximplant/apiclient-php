@@ -22,7 +22,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
         }
     ],
     "require": {
-        "voximplant/voximplant-php-sdk": "*@dev"
+        "voximplant/apiclient-php": "*@dev"
     }
 }
 ```

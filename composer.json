@@ -1,16 +1,12 @@
 {
-    "name": "voximplant/voximplant-php-sdk",
+    "name": "voximplant/apiclient-php",
     "description": "API",
-    "keywords": ["voximplant", "api", "client"],
+    "keywords": ["voximplant", "API", "client", "php", "SDK", "HTTP"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Dmitriy Ivaneychik",
-            "email": "ivaneychik@voximplant.com"
-        },
-        {
-            "name": "Utkin Mikhail",
-            "email": "utkin@voximplant.com"
+            "name": "Voximplant PHP API client",
+            "homepage": "https://github.com/voximplant/apiclient-php"
         }
     ],
     "require": {
