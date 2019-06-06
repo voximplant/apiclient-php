@@ -1,12 +1,27 @@
 {
     "name": "voximplant/apiclient-php",
-    "description": "API",
-    "keywords": ["voximplant", "API", "client", "php", "SDK", "HTTP"],
+    "description": "Voximplant PHP API client library. Voximplant is a cloud communications platform for business and developers",
+    "keywords": [
+        "voximplant",
+        "communication",
+        "messaging",
+        "chat",
+        "voice",
+        "video",
+        "sms",
+        "WebRTC",
+        "call"
+    ],
     "license": "MIT",
+    "homepage": "https://github.com/voximplant/apiclient-php",
     "authors": [
         {
-            "name": "Voximplant PHP API client",
-            "homepage": "https://github.com/voximplant/apiclient-php"
+            "name": "Dmitriy Ivaneychik",
+            "email": "ivaneychik@voximplant.com"
+        },
+        {
+            "name": "Utkin Mikhail",
+            "email": "utkin@voximplant.com"
         }
     ],
     "require": {

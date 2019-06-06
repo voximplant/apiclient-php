@@ -7,7 +7,7 @@ In order to use the Voximplant PHP SDK, you need the following:
 1. A developer account. If you don't have one, [sign up here](https://voximplant.com/sign-up/).
 1. A private API key. There are 2 options to obtain it: 
     1. Either generate it in the [Voximplant Control panel](https://manage.voximplant.com/settings/service_accounts)
-    1. Or call the [CreateKey](http://testsite.phpstend.internal/docs/references/httpapi/managing_role_system#createkey) HTTP API method with the specified [authentication parameters](https://voximplant.com/docs/references/httpapi/auth_parameters). You'll receive a response with the __result__ field in it. Save the __result__ value in a file (since we don't store the keys, save it securely on your side).
+    1. Or call the [CreateKey](https://voximplant.com/docs/references/httpapi/managing_role_system#createkey) HTTP API method with the specified [authentication parameters](https://voximplant.com/docs/references/httpapi/auth_parameters). You'll receive a response with the __result__ field in it. Save the __result__ value in a file (since we don't store the keys, save it securely on your side).
 
 ## How to use
 To install the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:
