@@ -15,12 +15,6 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
 
 ```json 
 {
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/voximplant/apiclient-php.git"
-        }
-    ],
     "require": {
         "voximplant/apiclient-php": "*@dev"
     }
