@@ -13,17 +13,25 @@ class Token
 	public function generateAuthorizationHeader($keyPath)
 	{
 		$token = false;
+		$keyData = false;
 
 		if (file_exists($keyPath)) {
 		    $privateKey = json_decode(file_get_contents($keyPath));
-		    if(!empty($privateKey->result->private_key)) {
-		        $payload = [
-		        'iat' => time(), // start time
-		        'iss' => $privateKey->result->account_id,
-		        'exp' => time() + $this->expTime, // finish time
-		        ];
 
-		        $token = 'Bearer ' . JWT::encode($payload, $privateKey->result->private_key, 'RS256', $privateKey->result->key_id);
+		    if(!empty($privateKey->result->private_key)) {
+		        $keyData = $privateKey->result->private_key;
+		    } elseif (!empty($privateKey->private_key)) {
+		        $keyData = $privateKey->private_key;
+		    }
+
+		    if($keyData) {
+		    $payload = [
+		        'iat' => time(), // start time
+		        'iss' => $keyData->account_id,
+		        'exp' => time() + $this->expTime, // finish time
+		    ];
+
+		    $token = 'Bearer ' . JWT::encode($payload, $keyData->private_key, 'RS256', $keyData->key_id);
 		    }
 		}
 
