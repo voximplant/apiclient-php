@@ -19,19 +19,19 @@ class Token
 		    $privateKey = json_decode(file_get_contents($keyPath));
 
 		    if(!empty($privateKey->result->private_key)) {
-		        $keyData = $privateKey->result->private_key;
+		        $keyData = $privateKey->result;
 		    } elseif (!empty($privateKey->private_key)) {
-		        $keyData = $privateKey->private_key;
+		        $keyData = $privateKey;
 		    }
 
 		    if($keyData) {
-		    $payload = [
-		        'iat' => time(), // start time
-		        'iss' => $keyData->account_id,
-		        'exp' => time() + $this->expTime, // finish time
-		    ];
+		        $payload = [
+		            'iat' => time(), // start time
+		            'iss' => $keyData->account_id,
+		            'exp' => time() + $this->expTime, // finish time
+		        ];
 
-		    $token = 'Bearer ' . JWT::encode($payload, $keyData->private_key, 'RS256', $keyData->key_id);
+		        $token = 'Bearer ' . JWT::encode($payload, $keyData->private_key, 'RS256', $keyData->key_id);
 		    }
 		}
 
