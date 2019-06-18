@@ -16,28 +16,28 @@ class Queues implements QueuesInterface
 {
 	protected $client;
 
-	/** @ objectAddQueue */
+	/** @object AddQueue */
 	protected $AddQueueReturn;
 
-	/** @ objectBindUserToQueue */
+	/** @object BindUserToQueue */
 	protected $BindUserToQueueReturn;
 
-	/** @ objectDelQueue */
+	/** @object DelQueue */
 	protected $DelQueueReturn;
 
-	/** @ objectSetQueueInfo */
+	/** @object SetQueueInfo */
 	protected $SetQueueInfoReturn;
 
-	/** @ objectGetQueues */
+	/** @object GetQueues */
 	protected $GetQueuesReturn;
 
-	/** @ objectGetACDState */
+	/** @object GetACDState */
 	protected $GetACDStateReturn;
 
-	/** @ objectGetACDOperatorStatistics */
+	/** @object GetACDOperatorStatistics */
 	protected $GetACDOperatorStatisticsReturn;
 
-	/** @ objectGetACDQueueStatistics */
+	/** @object GetACDQueueStatistics */
 	protected $GetACDQueueStatisticsReturn;
 
 

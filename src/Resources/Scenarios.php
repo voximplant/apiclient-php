@@ -16,28 +16,28 @@ class Scenarios implements ScenariosInterface
 {
 	protected $client;
 
-	/** @ objectAddScenario */
+	/** @object AddScenario */
 	protected $AddScenarioReturn;
 
-	/** @ objectDelScenario */
+	/** @object DelScenario */
 	protected $DelScenarioReturn;
 
-	/** @ objectBindScenario */
+	/** @object BindScenario */
 	protected $BindScenarioReturn;
 
-	/** @ objectGetScenarios */
+	/** @object GetScenarios */
 	protected $GetScenariosReturn;
 
-	/** @ objectSetScenarioInfo */
+	/** @object SetScenarioInfo */
 	protected $SetScenarioInfoReturn;
 
-	/** @ objectReorderScenarios */
+	/** @object ReorderScenarios */
 	protected $ReorderScenariosReturn;
 
-	/** @ objectStartScenarios */
+	/** @object StartScenarios */
 	protected $StartScenariosReturn;
 
-	/** @ objectStartConference */
+	/** @object StartConference */
 	protected $StartConferenceReturn;
 
 

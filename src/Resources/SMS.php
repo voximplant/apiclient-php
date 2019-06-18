@@ -10,10 +10,10 @@ class SMS implements SMSInterface
 {
 	protected $client;
 
-	/** @ objectSendSmsMessage */
+	/** @object SendSmsMessage */
 	protected $SendSmsMessageReturn;
 
-	/** @ objectControlSms */
+	/** @object ControlSms */
 	protected $ControlSmsReturn;
 
 

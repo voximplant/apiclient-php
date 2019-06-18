@@ -14,22 +14,22 @@ class RegulationAddress implements RegulationAddressInterface
 {
 	protected $client;
 
-	/** @ objectLinkregulationAddress */
+	/** @object LinkregulationAddress */
 	protected $LinkregulationAddressReturn;
 
-	/** @ objectGetZIPCodes */
+	/** @object GetZIPCodes */
 	protected $GetZIPCodesReturn;
 
-	/** @ objectGetRegulationsAddress */
+	/** @object GetRegulationsAddress */
 	protected $GetRegulationsAddressReturn;
 
-	/** @ objectGetAvailableRegulations */
+	/** @object GetAvailableRegulations */
 	protected $GetAvailableRegulationsReturn;
 
-	/** @ objectGetCountries */
+	/** @object GetCountries */
 	protected $GetCountriesReturn;
 
-	/** @ objectGetRegions */
+	/** @object GetRegions */
 	protected $GetRegionsReturn;
 
 

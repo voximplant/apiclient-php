@@ -12,16 +12,16 @@ class SIPWhiteList implements SIPWhiteListInterface
 {
 	protected $client;
 
-	/** @ objectAddSipWhiteListItem */
+	/** @object AddSipWhiteListItem */
 	protected $AddSipWhiteListItemReturn;
 
-	/** @ objectDelSipWhiteListItem */
+	/** @object DelSipWhiteListItem */
 	protected $DelSipWhiteListItemReturn;
 
-	/** @ objectSetSipWhiteListItem */
+	/** @object SetSipWhiteListItem */
 	protected $SetSipWhiteListItemReturn;
 
-	/** @ objectGetSipWhiteList */
+	/** @object GetSipWhiteList */
 	protected $GetSipWhiteListReturn;
 
 

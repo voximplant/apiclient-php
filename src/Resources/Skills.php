@@ -13,19 +13,19 @@ class Skills implements SkillsInterface
 {
 	protected $client;
 
-	/** @ objectAddSkill */
+	/** @object AddSkill */
 	protected $AddSkillReturn;
 
-	/** @ objectDelSkill */
+	/** @object DelSkill */
 	protected $DelSkillReturn;
 
-	/** @ objectSetSkillInfo */
+	/** @object SetSkillInfo */
 	protected $SetSkillInfoReturn;
 
-	/** @ objectGetSkills */
+	/** @object GetSkills */
 	protected $GetSkillsReturn;
 
-	/** @ objectBindSkill */
+	/** @object BindSkill */
 	protected $BindSkillReturn;
 
 

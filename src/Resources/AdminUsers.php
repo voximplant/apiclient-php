@@ -13,19 +13,19 @@ class AdminUsers implements AdminUsersInterface
 {
 	protected $client;
 
-	/** @ objectAddAdminUser */
+	/** @object AddAdminUser */
 	protected $AddAdminUserReturn;
 
-	/** @ objectDelAdminUser */
+	/** @object DelAdminUser */
 	protected $DelAdminUserReturn;
 
-	/** @ objectSetAdminUserInfo */
+	/** @object SetAdminUserInfo */
 	protected $SetAdminUserInfoReturn;
 
-	/** @ objectGetAdminUsers */
+	/** @object GetAdminUsers */
 	protected $GetAdminUsersReturn;
 
-	/** @ objectAttachAdminRole */
+	/** @object AttachAdminRole */
 	protected $AttachAdminRoleReturn;
 
 

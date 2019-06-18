@@ -13,19 +13,19 @@ class SIPRegistration implements SIPRegistrationInterface
 {
 	protected $client;
 
-	/** @ objectCreateSipRegistration */
+	/** @object CreateSipRegistration */
 	protected $CreateSipRegistrationReturn;
 
-	/** @ objectUpdateSipRegistration */
+	/** @object UpdateSipRegistration */
 	protected $UpdateSipRegistrationReturn;
 
-	/** @ objectBindSipRegistration */
+	/** @object BindSipRegistration */
 	protected $BindSipRegistrationReturn;
 
-	/** @ objectDeleteSipRegistration */
+	/** @object DeleteSipRegistration */
 	protected $DeleteSipRegistrationReturn;
 
-	/** @ objectGetSipRegistrations */
+	/** @object GetSipRegistrations */
 	protected $GetSipRegistrationsReturn;
 
 

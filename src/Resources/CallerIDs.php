@@ -13,19 +13,19 @@ class CallerIDs implements CallerIDsInterface
 {
 	protected $client;
 
-	/** @ objectAddCallerID */
+	/** @object AddCallerID */
 	protected $AddCallerIDReturn;
 
-	/** @ objectActivateCallerID */
+	/** @object ActivateCallerID */
 	protected $ActivateCallerIDReturn;
 
-	/** @ objectDelCallerID */
+	/** @object DelCallerID */
 	protected $DelCallerIDReturn;
 
-	/** @ objectGetCallerIDs */
+	/** @object GetCallerIDs */
 	protected $GetCallerIDsReturn;
 
-	/** @ objectVerifyCallerID */
+	/** @object VerifyCallerID */
 	protected $VerifyCallerIDReturn;
 
 

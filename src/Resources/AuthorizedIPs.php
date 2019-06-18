@@ -12,16 +12,16 @@ class AuthorizedIPs implements AuthorizedIPsInterface
 {
 	protected $client;
 
-	/** @ objectAddAuthorizedAccountIP */
+	/** @object AddAuthorizedAccountIP */
 	protected $AddAuthorizedAccountIPReturn;
 
-	/** @ objectDelAuthorizedAccountIP */
+	/** @object DelAuthorizedAccountIP */
 	protected $DelAuthorizedAccountIPReturn;
 
-	/** @ objectGetAuthorizedAccountIPs */
+	/** @object GetAuthorizedAccountIPs */
 	protected $GetAuthorizedAccountIPsReturn;
 
-	/** @ objectCheckAuthorizedAccountIP */
+	/** @object CheckAuthorizedAccountIP */
 	protected $CheckAuthorizedAccountIPReturn;
 
 

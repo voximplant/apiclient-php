@@ -44,13 +44,19 @@ class VoximplantApi
 	/** @var default helpers */
 	private $functionHelpers;
 
-	/** Convert result date fields to UTC TimeZone format or set false */
-	public $resultTimeZone = 'UTC';
-
-	/** Convert send date fields to UTC TimeZone format or set false */
+	/** @var string Convert send date fields to UTC TimeZone format or set false */
 	public $requestTimeZone = 'UTC';
 
-	/** @var Path to file with result CreateKey method */
+	/** @var string Convert result date fields to UTC TimeZone format or set false */
+	public $resultTimeZone = 'UTC';
+
+	/** @var array Convert request date fields ignore for methods */
+	public $requestTimeZoneIgnore = ['GetCallHistory', 'GetTransactionHistory'];
+
+	/** @var array Convert result date fields ignore for methods */
+	public $resultTimeZoneIgnore = ['GetCallHistory', 'GetTransactionHistory'];
+
+	/** @var string Path to file with result CreateKey method */
 	public $tokenPath = false;
 
 	/** @var object Accounts Gets the account's info such as account_id, account_name, account_email etc. */
@@ -186,7 +192,7 @@ class VoximplantApi
 		}
 
 		// Date request modifier
-		if ($this->requestTimeZone) {
+		if ($this->requestTimeZone && !in_array($method, $this->requestTimeZoneIgnore)) {
 		    $requestType = new RequestType();
 		    $requestMap = $requestType->$method();
 		    $params = $this->dateHelpers->dateModify($params, $requestMap, $this->requestTimeZone);
@@ -203,7 +209,7 @@ class VoximplantApi
 		$result = $this->curl->send($url, $data);
 
 		// Date result modifier
-		if ($this->resultTimeZone) {
+		if ($this->resultTimeZone && !in_array($method, $this->resultTimeZoneIgnore)) {
 		    $resultType = new ResultType();
 		    $fieldMap = $resultType->$method();
 		    $result = $this->dateHelpers->dateModify($result, $fieldMap, $this->resultTimeZone);

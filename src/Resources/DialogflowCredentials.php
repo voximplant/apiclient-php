@@ -12,16 +12,16 @@ class DialogflowCredentials implements DialogflowCredentialsInterface
 {
 	protected $client;
 
-	/** @ objectAddDialogflowKey */
+	/** @object AddDialogflowKey */
 	protected $AddDialogflowKeyReturn;
 
-	/** @ objectDelDialogflowKey */
+	/** @object DelDialogflowKey */
 	protected $DelDialogflowKeyReturn;
 
-	/** @ objectGetDialogflowKeys */
+	/** @object GetDialogflowKeys */
 	protected $GetDialogflowKeysReturn;
 
-	/** @ objectBindDialogflowKeys */
+	/** @object BindDialogflowKeys */
 	protected $BindDialogflowKeysReturn;
 
 

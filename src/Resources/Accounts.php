@@ -19,37 +19,37 @@ class Accounts implements AccountsInterface
 {
 	protected $client;
 
-	/** @ objectGetAccountInfo */
+	/** @object GetAccountInfo */
 	protected $GetAccountInfoReturn;
 
-	/** @ objectSetAccountInfo */
+	/** @object SetAccountInfo */
 	protected $SetAccountInfoReturn;
 
-	/** @ objectSetChildAccountInfo */
+	/** @object SetChildAccountInfo */
 	protected $SetChildAccountInfoReturn;
 
-	/** @ objectGetCurrencyRate */
+	/** @object GetCurrencyRate */
 	protected $GetCurrencyRateReturn;
 
-	/** @ objectGetResourcePrice */
+	/** @object GetResourcePrice */
 	protected $GetResourcePriceReturn;
 
-	/** @ objectGetSubscriptionPrice */
+	/** @object GetSubscriptionPrice */
 	protected $GetSubscriptionPriceReturn;
 
-	/** @ objectGetChildrenAccounts */
+	/** @object GetChildrenAccounts */
 	protected $GetChildrenAccountsReturn;
 
-	/** @ objectTransferMoneyToChildAccount */
+	/** @object TransferMoneyToChildAccount */
 	protected $TransferMoneyToChildAccountReturn;
 
-	/** @ objectGetMoneyAmountToCharge */
+	/** @object GetMoneyAmountToCharge */
 	protected $GetMoneyAmountToChargeReturn;
 
-	/** @ objectChargeAccount */
+	/** @object ChargeAccount */
 	protected $ChargeAccountReturn;
 
-	/** @ objectGetAccountDocuments */
+	/** @object GetAccountDocuments */
 	protected $GetAccountDocumentsReturn;
 
 

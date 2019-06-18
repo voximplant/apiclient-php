@@ -12,16 +12,16 @@ class Applications implements ApplicationsInterface
 {
 	protected $client;
 
-	/** @ objectAddApplication */
+	/** @object AddApplication */
 	protected $AddApplicationReturn;
 
-	/** @ objectDelApplication */
+	/** @object DelApplication */
 	protected $DelApplicationReturn;
 
-	/** @ objectSetApplicationInfo */
+	/** @object SetApplicationInfo */
 	protected $SetApplicationInfoReturn;
 
-	/** @ objectGetApplications */
+	/** @object GetApplications */
 	protected $GetApplicationsReturn;
 
 

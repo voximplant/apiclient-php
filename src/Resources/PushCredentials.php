@@ -13,19 +13,19 @@ class PushCredentials implements PushCredentialsInterface
 {
 	protected $client;
 
-	/** @ objectAddPushCredential */
+	/** @object AddPushCredential */
 	protected $AddPushCredentialReturn;
 
-	/** @ objectSetPushCredential */
+	/** @object SetPushCredential */
 	protected $SetPushCredentialReturn;
 
-	/** @ objectDelPushCredential */
+	/** @object DelPushCredential */
 	protected $DelPushCredentialReturn;
 
-	/** @ objectGetPushCredential */
+	/** @object GetPushCredential */
 	protected $GetPushCredentialReturn;
 
-	/** @ objectBindPushCredential */
+	/** @object BindPushCredential */
 	protected $BindPushCredentialReturn;
 
 

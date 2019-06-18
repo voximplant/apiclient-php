@@ -12,16 +12,16 @@ class Users implements UsersInterface
 {
 	protected $client;
 
-	/** @ objectAddUser */
+	/** @object AddUser */
 	protected $AddUserReturn;
 
-	/** @ objectDelUser */
+	/** @object DelUser */
 	protected $DelUserReturn;
 
-	/** @ objectSetUserInfo */
+	/** @object SetUserInfo */
 	protected $SetUserInfoReturn;
 
-	/** @ objectGetUsers */
+	/** @object GetUsers */
 	protected $GetUsersReturn;
 
 

@@ -16,28 +16,28 @@ class CallLists implements CallListsInterface
 {
 	protected $client;
 
-	/** @ objectCreateCallList */
+	/** @object CreateCallList */
 	protected $CreateCallListReturn;
 
-	/** @ objectCreateManualCallList */
+	/** @object CreateManualCallList */
 	protected $CreateManualCallListReturn;
 
-	/** @ objectStartNextCallTask */
+	/** @object StartNextCallTask */
 	protected $StartNextCallTaskReturn;
 
-	/** @ objectAppendToCallList */
+	/** @object AppendToCallList */
 	protected $AppendToCallListReturn;
 
-	/** @ objectGetCallLists */
+	/** @object GetCallLists */
 	protected $GetCallListsReturn;
 
-	/** @ objectGetCallListDetails */
+	/** @object GetCallListDetails */
 	protected $GetCallListDetailsReturn;
 
-	/** @ objectStopCallListProcessing */
+	/** @object StopCallListProcessing */
 	protected $StopCallListProcessingReturn;
 
-	/** @ objectRecoverCallList */
+	/** @object RecoverCallList */
 	protected $RecoverCallListReturn;
 
 

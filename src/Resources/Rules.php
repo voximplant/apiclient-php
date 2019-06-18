@@ -13,19 +13,19 @@ class Rules implements RulesInterface
 {
 	protected $client;
 
-	/** @ objectAddRule */
+	/** @object AddRule */
 	protected $AddRuleReturn;
 
-	/** @ objectDelRule */
+	/** @object DelRule */
 	protected $DelRuleReturn;
 
-	/** @ objectSetRuleInfo */
+	/** @object SetRuleInfo */
 	protected $SetRuleInfoReturn;
 
-	/** @ objectGetRules */
+	/** @object GetRules */
 	protected $GetRulesReturn;
 
-	/** @ objectReorderRules */
+	/** @object ReorderRules */
 	protected $ReorderRulesReturn;
 
 

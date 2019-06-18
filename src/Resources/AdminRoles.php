@@ -13,19 +13,19 @@ class AdminRoles implements AdminRolesInterface
 {
 	protected $client;
 
-	/** @ objectAddAdminRole */
+	/** @object AddAdminRole */
 	protected $AddAdminRoleReturn;
 
-	/** @ objectDelAdminRole */
+	/** @object DelAdminRole */
 	protected $DelAdminRoleReturn;
 
-	/** @ objectSetAdminRoleInfo */
+	/** @object SetAdminRoleInfo */
 	protected $SetAdminRoleInfoReturn;
 
-	/** @ objectGetAdminRoles */
+	/** @object GetAdminRoles */
 	protected $GetAdminRolesReturn;
 
-	/** @ objectGetAvailableAdminRoleEntries */
+	/** @object GetAvailableAdminRoleEntries */
 	protected $GetAvailableAdminRoleEntriesReturn;
 
 

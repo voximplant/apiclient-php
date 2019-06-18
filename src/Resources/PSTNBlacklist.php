@@ -12,16 +12,16 @@ class PSTNBlacklist implements PSTNBlacklistInterface
 {
 	protected $client;
 
-	/** @ objectAddPstnBlackListItem */
+	/** @object AddPstnBlackListItem */
 	protected $AddPstnBlackListItemReturn;
 
-	/** @ objectSetPstnBlackListItem */
+	/** @object SetPstnBlackListItem */
 	protected $SetPstnBlackListItemReturn;
 
-	/** @ objectDelPstnBlackListItem */
+	/** @object DelPstnBlackListItem */
 	protected $DelPstnBlackListItemReturn;
 
-	/** @ objectGetPstnBlackList */
+	/** @object GetPstnBlackList */
 	protected $GetPstnBlackListReturn;
 
 

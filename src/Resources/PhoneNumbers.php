@@ -18,34 +18,34 @@ class PhoneNumbers implements PhoneNumbersInterface
 {
 	protected $client;
 
-	/** @ objectAttachPhoneNumber */
+	/** @object AttachPhoneNumber */
 	protected $AttachPhoneNumberReturn;
 
-	/** @ objectBindPhoneNumberToApplication */
+	/** @object BindPhoneNumberToApplication */
 	protected $BindPhoneNumberToApplicationReturn;
 
-	/** @ objectDeactivatePhoneNumber */
+	/** @object DeactivatePhoneNumber */
 	protected $DeactivatePhoneNumberReturn;
 
-	/** @ objectSetPhoneNumberInfo */
+	/** @object SetPhoneNumberInfo */
 	protected $SetPhoneNumberInfoReturn;
 
-	/** @ objectGetPhoneNumbers */
+	/** @object GetPhoneNumbers */
 	protected $GetPhoneNumbersReturn;
 
-	/** @ objectGetNewPhoneNumbers */
+	/** @object GetNewPhoneNumbers */
 	protected $GetNewPhoneNumbersReturn;
 
-	/** @ objectGetPhoneNumberCategories */
+	/** @object GetPhoneNumberCategories */
 	protected $GetPhoneNumberCategoriesReturn;
 
-	/** @ objectGetPhoneNumberCountryStates */
+	/** @object GetPhoneNumberCountryStates */
 	protected $GetPhoneNumberCountryStatesReturn;
 
-	/** @ objectGetPhoneNumberRegions */
+	/** @object GetPhoneNumberRegions */
 	protected $GetPhoneNumberRegionsReturn;
 
-	/** @ objectGetActualPhoneNumberRegion */
+	/** @object GetActualPhoneNumberRegion */
 	protected $GetActualPhoneNumberRegionReturn;
 
 

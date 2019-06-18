@@ -9,7 +9,7 @@ class RecordStorages implements RecordStoragesInterface
 {
 	protected $client;
 
-	/** @ objectGetRecordStorages */
+	/** @object GetRecordStorages */
 	protected $GetRecordStoragesReturn;
 
 

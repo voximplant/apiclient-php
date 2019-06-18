@@ -15,25 +15,25 @@ class History implements HistoryInterface
 {
 	protected $client;
 
-	/** @ objectGetCallHistory */
+	/** @object GetCallHistory */
 	protected $GetCallHistoryReturn;
 
-	/** @ objectGetHistoryReports */
+	/** @object GetHistoryReports */
 	protected $GetHistoryReportsReturn;
 
-	/** @ objectDownloadHistoryReport */
+	/** @object DownloadHistoryReport */
 	protected $DownloadHistoryReportReturn;
 
-	/** @ objectGetTransactionHistory */
+	/** @object GetTransactionHistory */
 	protected $GetTransactionHistoryReturn;
 
-	/** @ objectDeleteRecord */
+	/** @object DeleteRecord */
 	protected $DeleteRecordReturn;
 
-	/** @ objectGetACDHistory */
+	/** @object GetACDHistory */
 	protected $GetACDHistoryReturn;
 
-	/** @ objectGetAuditLog */
+	/** @object GetAuditLog */
 	protected $GetAuditLogReturn;
 
 
