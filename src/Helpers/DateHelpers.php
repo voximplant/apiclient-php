@@ -37,7 +37,7 @@ class DateHelpers
 		            ) {
 		                $dateTime = new DateTime($val);
 		                $dateTime->setTimezone(new DateTimeZone($replace));
-		                $array[$key] = $dateTime;
+		                $array[$key] = $dateTime->format('Y-m-d H:i:s');
 		            } else {
 		                $array[$key] = $val;
 		            }
