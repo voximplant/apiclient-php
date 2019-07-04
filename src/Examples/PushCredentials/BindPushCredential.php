@@ -22,10 +22,12 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * push_credential_id - The push credentials ID list.
+ * application_id - The application ID list or the 'all' value.
  */
 $params = new BindPushCredentialParams();
 
 $params->push_credential_id = 1;
+$params->application_id = 1;
 
 // Bind the push credential to the application.
 $result = $voxApi->PushCredentials->BindPushCredential($params);

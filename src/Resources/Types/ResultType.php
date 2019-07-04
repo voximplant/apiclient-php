@@ -41,6 +41,324 @@ class ResultType extends BaseType
 		        'callback_url' => 'string',
 		        'callback_salt' => 'string',
 		        'send_js_error' => 'boolean',
+		        'billing_limits' =>
+		        array (
+		            'account_id' => 'number',
+		            'account_name' => 'string',
+		            'account_email' => 'string',
+		            'api_key' => 'string',
+		            'account_first_name' => 'string',
+		            'account_last_name' => 'string',
+		            'created' => 'timestamp',
+		            'language_code' => 'string',
+		            'location' => 'string',
+		            'min_balance_to_notify' => 'decimal',
+		            'account_notifications' => 'boolean',
+		            'tariff_changing_notifications' => 'boolean',
+		            'news_notifications' => 'boolean',
+		            'billing_address_name' => 'string',
+		            'billing_address_country_code' => 'string',
+		            'billing_address_address' => 'string',
+		            'billing_address_zip' => 'string',
+		            'billing_address_phone' => 'string',
+		            'active' => 'boolean',
+		            'frozen' => 'boolean',
+		            'balance' => 'decimal',
+		            'credit_limit' => 'decimal',
+		            'currency' => 'string',
+		            'support_robokassa' => 'boolean',
+		            'support_bank_card' => 'boolean',
+		            'support_invoice' => 'boolean',
+		            'account_custom_data' => 'string',
+		            'access_entries' => '[string]',
+		            'with_access_entries' => 'boolean',
+		            'callback_url' => 'string',
+		            'callback_salt' => 'string',
+		            'send_js_error' => 'boolean',
+		            '|array|' =>
+		            array (
+		                'robokassa' =>
+		                array (
+		                    'account_id' => 'number',
+		                    'account_name' => 'string',
+		                    'account_email' => 'string',
+		                    'api_key' => 'string',
+		                    'account_first_name' => 'string',
+		                    'account_last_name' => 'string',
+		                    'created' => 'timestamp',
+		                    'language_code' => 'string',
+		                    'location' => 'string',
+		                    'min_balance_to_notify' => 'decimal',
+		                    'account_notifications' => 'boolean',
+		                    'tariff_changing_notifications' => 'boolean',
+		                    'news_notifications' => 'boolean',
+		                    'billing_address_name' => 'string',
+		                    'billing_address_country_code' => 'string',
+		                    'billing_address_address' => 'string',
+		                    'billing_address_zip' => 'string',
+		                    'billing_address_phone' => 'string',
+		                    'active' => 'boolean',
+		                    'frozen' => 'boolean',
+		                    'balance' => 'decimal',
+		                    'credit_limit' => 'decimal',
+		                    'currency' => 'string',
+		                    'support_robokassa' => 'boolean',
+		                    'support_bank_card' => 'boolean',
+		                    'support_invoice' => 'boolean',
+		                    'account_custom_data' => 'string',
+		                    'access_entries' => '[string]',
+		                    'with_access_entries' => 'boolean',
+		                    'callback_url' => 'string',
+		                    'callback_salt' => 'string',
+		                    'send_js_error' => 'boolean',
+		                    '|array|' =>
+		                    array (
+		                        'min_amount' => 'number',
+		                        'currency' => 'string',
+		                    ),
+		                ),
+		                'bank_card' =>
+		                array (
+		                    'account_id' => 'number',
+		                    'account_name' => 'string',
+		                    'account_email' => 'string',
+		                    'api_key' => 'string',
+		                    'account_first_name' => 'string',
+		                    'account_last_name' => 'string',
+		                    'created' => 'timestamp',
+		                    'language_code' => 'string',
+		                    'location' => 'string',
+		                    'min_balance_to_notify' => 'decimal',
+		                    'account_notifications' => 'boolean',
+		                    'tariff_changing_notifications' => 'boolean',
+		                    'news_notifications' => 'boolean',
+		                    'billing_address_name' => 'string',
+		                    'billing_address_country_code' => 'string',
+		                    'billing_address_address' => 'string',
+		                    'billing_address_zip' => 'string',
+		                    'billing_address_phone' => 'string',
+		                    'active' => 'boolean',
+		                    'frozen' => 'boolean',
+		                    'balance' => 'decimal',
+		                    'credit_limit' => 'decimal',
+		                    'currency' => 'string',
+		                    'support_robokassa' => 'boolean',
+		                    'support_bank_card' => 'boolean',
+		                    'support_invoice' => 'boolean',
+		                    'account_custom_data' => 'string',
+		                    'access_entries' => '[string]',
+		                    'with_access_entries' => 'boolean',
+		                    'callback_url' => 'string',
+		                    'callback_salt' => 'string',
+		                    'send_js_error' => 'boolean',
+		                    '|array|' =>
+		                    array (
+		                        'robokassa' =>
+		                        array (
+		                            'account_id' => 'number',
+		                            'account_name' => 'string',
+		                            'account_email' => 'string',
+		                            'api_key' => 'string',
+		                            'account_first_name' => 'string',
+		                            'account_last_name' => 'string',
+		                            'created' => 'timestamp',
+		                            'language_code' => 'string',
+		                            'location' => 'string',
+		                            'min_balance_to_notify' => 'decimal',
+		                            'account_notifications' => 'boolean',
+		                            'tariff_changing_notifications' => 'boolean',
+		                            'news_notifications' => 'boolean',
+		                            'billing_address_name' => 'string',
+		                            'billing_address_country_code' => 'string',
+		                            'billing_address_address' => 'string',
+		                            'billing_address_zip' => 'string',
+		                            'billing_address_phone' => 'string',
+		                            'active' => 'boolean',
+		                            'frozen' => 'boolean',
+		                            'balance' => 'decimal',
+		                            'credit_limit' => 'decimal',
+		                            'currency' => 'string',
+		                            'support_robokassa' => 'boolean',
+		                            'support_bank_card' => 'boolean',
+		                            'support_invoice' => 'boolean',
+		                            'account_custom_data' => 'string',
+		                            'access_entries' => '[string]',
+		                            'with_access_entries' => 'boolean',
+		                            'callback_url' => 'string',
+		                            'callback_salt' => 'string',
+		                            'send_js_error' => 'boolean',
+		                            '|array|' =>
+		                            array (
+		                                'min_amount' => 'number',
+		                                'currency' => 'string',
+		                            ),
+		                        ),
+		                        'min_amount' => 'number',
+		                        'currency' => 'string',
+		                    ),
+		                ),
+		                'invoice' =>
+		                array (
+		                    'account_id' => 'number',
+		                    'account_name' => 'string',
+		                    'account_email' => 'string',
+		                    'api_key' => 'string',
+		                    'account_first_name' => 'string',
+		                    'account_last_name' => 'string',
+		                    'created' => 'timestamp',
+		                    'language_code' => 'string',
+		                    'location' => 'string',
+		                    'min_balance_to_notify' => 'decimal',
+		                    'account_notifications' => 'boolean',
+		                    'tariff_changing_notifications' => 'boolean',
+		                    'news_notifications' => 'boolean',
+		                    'billing_address_name' => 'string',
+		                    'billing_address_country_code' => 'string',
+		                    'billing_address_address' => 'string',
+		                    'billing_address_zip' => 'string',
+		                    'billing_address_phone' => 'string',
+		                    'active' => 'boolean',
+		                    'frozen' => 'boolean',
+		                    'balance' => 'decimal',
+		                    'credit_limit' => 'decimal',
+		                    'currency' => 'string',
+		                    'support_robokassa' => 'boolean',
+		                    'support_bank_card' => 'boolean',
+		                    'support_invoice' => 'boolean',
+		                    'account_custom_data' => 'string',
+		                    'access_entries' => '[string]',
+		                    'with_access_entries' => 'boolean',
+		                    'callback_url' => 'string',
+		                    'callback_salt' => 'string',
+		                    'send_js_error' => 'boolean',
+		                    '|array|' =>
+		                    array (
+		                        'robokassa' =>
+		                        array (
+		                            'account_id' => 'number',
+		                            'account_name' => 'string',
+		                            'account_email' => 'string',
+		                            'api_key' => 'string',
+		                            'account_first_name' => 'string',
+		                            'account_last_name' => 'string',
+		                            'created' => 'timestamp',
+		                            'language_code' => 'string',
+		                            'location' => 'string',
+		                            'min_balance_to_notify' => 'decimal',
+		                            'account_notifications' => 'boolean',
+		                            'tariff_changing_notifications' => 'boolean',
+		                            'news_notifications' => 'boolean',
+		                            'billing_address_name' => 'string',
+		                            'billing_address_country_code' => 'string',
+		                            'billing_address_address' => 'string',
+		                            'billing_address_zip' => 'string',
+		                            'billing_address_phone' => 'string',
+		                            'active' => 'boolean',
+		                            'frozen' => 'boolean',
+		                            'balance' => 'decimal',
+		                            'credit_limit' => 'decimal',
+		                            'currency' => 'string',
+		                            'support_robokassa' => 'boolean',
+		                            'support_bank_card' => 'boolean',
+		                            'support_invoice' => 'boolean',
+		                            'account_custom_data' => 'string',
+		                            'access_entries' => '[string]',
+		                            'with_access_entries' => 'boolean',
+		                            'callback_url' => 'string',
+		                            'callback_salt' => 'string',
+		                            'send_js_error' => 'boolean',
+		                            '|array|' =>
+		                            array (
+		                                'min_amount' => 'number',
+		                                'currency' => 'string',
+		                            ),
+		                        ),
+		                        'bank_card' =>
+		                        array (
+		                            'account_id' => 'number',
+		                            'account_name' => 'string',
+		                            'account_email' => 'string',
+		                            'api_key' => 'string',
+		                            'account_first_name' => 'string',
+		                            'account_last_name' => 'string',
+		                            'created' => 'timestamp',
+		                            'language_code' => 'string',
+		                            'location' => 'string',
+		                            'min_balance_to_notify' => 'decimal',
+		                            'account_notifications' => 'boolean',
+		                            'tariff_changing_notifications' => 'boolean',
+		                            'news_notifications' => 'boolean',
+		                            'billing_address_name' => 'string',
+		                            'billing_address_country_code' => 'string',
+		                            'billing_address_address' => 'string',
+		                            'billing_address_zip' => 'string',
+		                            'billing_address_phone' => 'string',
+		                            'active' => 'boolean',
+		                            'frozen' => 'boolean',
+		                            'balance' => 'decimal',
+		                            'credit_limit' => 'decimal',
+		                            'currency' => 'string',
+		                            'support_robokassa' => 'boolean',
+		                            'support_bank_card' => 'boolean',
+		                            'support_invoice' => 'boolean',
+		                            'account_custom_data' => 'string',
+		                            'access_entries' => '[string]',
+		                            'with_access_entries' => 'boolean',
+		                            'callback_url' => 'string',
+		                            'callback_salt' => 'string',
+		                            'send_js_error' => 'boolean',
+		                            '|array|' =>
+		                            array (
+		                                'robokassa' =>
+		                                array (
+		                                    'account_id' => 'number',
+		                                    'account_name' => 'string',
+		                                    'account_email' => 'string',
+		                                    'api_key' => 'string',
+		                                    'account_first_name' => 'string',
+		                                    'account_last_name' => 'string',
+		                                    'created' => 'timestamp',
+		                                    'language_code' => 'string',
+		                                    'location' => 'string',
+		                                    'min_balance_to_notify' => 'decimal',
+		                                    'account_notifications' => 'boolean',
+		                                    'tariff_changing_notifications' => 'boolean',
+		                                    'news_notifications' => 'boolean',
+		                                    'billing_address_name' => 'string',
+		                                    'billing_address_country_code' => 'string',
+		                                    'billing_address_address' => 'string',
+		                                    'billing_address_zip' => 'string',
+		                                    'billing_address_phone' => 'string',
+		                                    'active' => 'boolean',
+		                                    'frozen' => 'boolean',
+		                                    'balance' => 'decimal',
+		                                    'credit_limit' => 'decimal',
+		                                    'currency' => 'string',
+		                                    'support_robokassa' => 'boolean',
+		                                    'support_bank_card' => 'boolean',
+		                                    'support_invoice' => 'boolean',
+		                                    'account_custom_data' => 'string',
+		                                    'access_entries' => '[string]',
+		                                    'with_access_entries' => 'boolean',
+		                                    'callback_url' => 'string',
+		                                    'callback_salt' => 'string',
+		                                    'send_js_error' => 'boolean',
+		                                    '|array|' =>
+		                                    array (
+		                                        'min_amount' => 'number',
+		                                        'currency' => 'string',
+		                                    ),
+		                                ),
+		                                'min_amount' => 'number',
+		                                'currency' => 'string',
+		                            ),
+		                        ),
+		                        'min_amount' => 'number',
+		                        'currency' => 'string',
+		                    ),
+		                ),
+		            ),
+		        ),
 		    ),
 		    'api_address' => 'string',
 		);
@@ -174,6 +492,317 @@ class ResultType extends BaseType
 		            'callback_url' => 'string',
 		            'callback_salt' => 'string',
 		            'send_js_error' => 'boolean',
+		            'billing_limits' =>
+		            array (
+		                '|array|' =>
+		                array (
+		                    'account_id' => 'number',
+		                    'account_name' => 'string',
+		                    'account_email' => 'string',
+		                    'api_key' => 'string',
+		                    'account_first_name' => 'string',
+		                    'account_last_name' => 'string',
+		                    'created' => 'timestamp',
+		                    'language_code' => 'string',
+		                    'location' => 'string',
+		                    'min_balance_to_notify' => 'decimal',
+		                    'account_notifications' => 'boolean',
+		                    'tariff_changing_notifications' => 'boolean',
+		                    'news_notifications' => 'boolean',
+		                    'billing_address_name' => 'string',
+		                    'billing_address_country_code' => 'string',
+		                    'billing_address_address' => 'string',
+		                    'billing_address_zip' => 'string',
+		                    'billing_address_phone' => 'string',
+		                    'active' => 'boolean',
+		                    'frozen' => 'boolean',
+		                    'balance' => 'decimal',
+		                    'credit_limit' => 'decimal',
+		                    'currency' => 'string',
+		                    'support_robokassa' => 'boolean',
+		                    'support_bank_card' => 'boolean',
+		                    'support_invoice' => 'boolean',
+		                    'account_custom_data' => 'string',
+		                    'access_entries' => '[string]',
+		                    'with_access_entries' => 'boolean',
+		                    'callback_url' => 'string',
+		                    'callback_salt' => 'string',
+		                    'send_js_error' => 'boolean',
+		                    'robokassa' =>
+		                    array (
+		                        '|array|' =>
+		                        array (
+		                            'account_id' => 'number',
+		                            'account_name' => 'string',
+		                            'account_email' => 'string',
+		                            'api_key' => 'string',
+		                            'account_first_name' => 'string',
+		                            'account_last_name' => 'string',
+		                            'created' => 'timestamp',
+		                            'language_code' => 'string',
+		                            'location' => 'string',
+		                            'min_balance_to_notify' => 'decimal',
+		                            'account_notifications' => 'boolean',
+		                            'tariff_changing_notifications' => 'boolean',
+		                            'news_notifications' => 'boolean',
+		                            'billing_address_name' => 'string',
+		                            'billing_address_country_code' => 'string',
+		                            'billing_address_address' => 'string',
+		                            'billing_address_zip' => 'string',
+		                            'billing_address_phone' => 'string',
+		                            'active' => 'boolean',
+		                            'frozen' => 'boolean',
+		                            'balance' => 'decimal',
+		                            'credit_limit' => 'decimal',
+		                            'currency' => 'string',
+		                            'support_robokassa' => 'boolean',
+		                            'support_bank_card' => 'boolean',
+		                            'support_invoice' => 'boolean',
+		                            'account_custom_data' => 'string',
+		                            'access_entries' => '[string]',
+		                            'with_access_entries' => 'boolean',
+		                            'callback_url' => 'string',
+		                            'callback_salt' => 'string',
+		                            'send_js_error' => 'boolean',
+		                            'min_amount' => 'number',
+		                        ),
+		                    ),
+		                    'bank_card' =>
+		                    array (
+		                        '|array|' =>
+		                        array (
+		                            'account_id' => 'number',
+		                            'account_name' => 'string',
+		                            'account_email' => 'string',
+		                            'api_key' => 'string',
+		                            'account_first_name' => 'string',
+		                            'account_last_name' => 'string',
+		                            'created' => 'timestamp',
+		                            'language_code' => 'string',
+		                            'location' => 'string',
+		                            'min_balance_to_notify' => 'decimal',
+		                            'account_notifications' => 'boolean',
+		                            'tariff_changing_notifications' => 'boolean',
+		                            'news_notifications' => 'boolean',
+		                            'billing_address_name' => 'string',
+		                            'billing_address_country_code' => 'string',
+		                            'billing_address_address' => 'string',
+		                            'billing_address_zip' => 'string',
+		                            'billing_address_phone' => 'string',
+		                            'active' => 'boolean',
+		                            'frozen' => 'boolean',
+		                            'balance' => 'decimal',
+		                            'credit_limit' => 'decimal',
+		                            'currency' => 'string',
+		                            'support_robokassa' => 'boolean',
+		                            'support_bank_card' => 'boolean',
+		                            'support_invoice' => 'boolean',
+		                            'account_custom_data' => 'string',
+		                            'access_entries' => '[string]',
+		                            'with_access_entries' => 'boolean',
+		                            'callback_url' => 'string',
+		                            'callback_salt' => 'string',
+		                            'send_js_error' => 'boolean',
+		                            'robokassa' =>
+		                            array (
+		                                '|array|' =>
+		                                array (
+		                                    'account_id' => 'number',
+		                                    'account_name' => 'string',
+		                                    'account_email' => 'string',
+		                                    'api_key' => 'string',
+		                                    'account_first_name' => 'string',
+		                                    'account_last_name' => 'string',
+		                                    'created' => 'timestamp',
+		                                    'language_code' => 'string',
+		                                    'location' => 'string',
+		                                    'min_balance_to_notify' => 'decimal',
+		                                    'account_notifications' => 'boolean',
+		                                    'tariff_changing_notifications' => 'boolean',
+		                                    'news_notifications' => 'boolean',
+		                                    'billing_address_name' => 'string',
+		                                    'billing_address_country_code' => 'string',
+		                                    'billing_address_address' => 'string',
+		                                    'billing_address_zip' => 'string',
+		                                    'billing_address_phone' => 'string',
+		                                    'active' => 'boolean',
+		                                    'frozen' => 'boolean',
+		                                    'balance' => 'decimal',
+		                                    'credit_limit' => 'decimal',
+		                                    'currency' => 'string',
+		                                    'support_robokassa' => 'boolean',
+		                                    'support_bank_card' => 'boolean',
+		                                    'support_invoice' => 'boolean',
+		                                    'account_custom_data' => 'string',
+		                                    'access_entries' => '[string]',
+		                                    'with_access_entries' => 'boolean',
+		                                    'callback_url' => 'string',
+		                                    'callback_salt' => 'string',
+		                                    'send_js_error' => 'boolean',
+		                                    'min_amount' => 'number',
+		                                ),
+		                            ),
+		                            'min_amount' => 'number',
+		                        ),
+		                    ),
+		                    'invoice' =>
+		                    array (
+		                        '|array|' =>
+		                        array (
+		                            'account_id' => 'number',
+		                            'account_name' => 'string',
+		                            'account_email' => 'string',
+		                            'api_key' => 'string',
+		                            'account_first_name' => 'string',
+		                            'account_last_name' => 'string',
+		                            'created' => 'timestamp',
+		                            'language_code' => 'string',
+		                            'location' => 'string',
+		                            'min_balance_to_notify' => 'decimal',
+		                            'account_notifications' => 'boolean',
+		                            'tariff_changing_notifications' => 'boolean',
+		                            'news_notifications' => 'boolean',
+		                            'billing_address_name' => 'string',
+		                            'billing_address_country_code' => 'string',
+		                            'billing_address_address' => 'string',
+		                            'billing_address_zip' => 'string',
+		                            'billing_address_phone' => 'string',
+		                            'active' => 'boolean',
+		                            'frozen' => 'boolean',
+		                            'balance' => 'decimal',
+		                            'credit_limit' => 'decimal',
+		                            'currency' => 'string',
+		                            'support_robokassa' => 'boolean',
+		                            'support_bank_card' => 'boolean',
+		                            'support_invoice' => 'boolean',
+		                            'account_custom_data' => 'string',
+		                            'access_entries' => '[string]',
+		                            'with_access_entries' => 'boolean',
+		                            'callback_url' => 'string',
+		                            'callback_salt' => 'string',
+		                            'send_js_error' => 'boolean',
+		                            'robokassa' =>
+		                            array (
+		                                '|array|' =>
+		                                array (
+		                                    'account_id' => 'number',
+		                                    'account_name' => 'string',
+		                                    'account_email' => 'string',
+		                                    'api_key' => 'string',
+		                                    'account_first_name' => 'string',
+		                                    'account_last_name' => 'string',
+		                                    'created' => 'timestamp',
+		                                    'language_code' => 'string',
+		                                    'location' => 'string',
+		                                    'min_balance_to_notify' => 'decimal',
+		                                    'account_notifications' => 'boolean',
+		                                    'tariff_changing_notifications' => 'boolean',
+		                                    'news_notifications' => 'boolean',
+		                                    'billing_address_name' => 'string',
+		                                    'billing_address_country_code' => 'string',
+		                                    'billing_address_address' => 'string',
+		                                    'billing_address_zip' => 'string',
+		                                    'billing_address_phone' => 'string',
+		                                    'active' => 'boolean',
+		                                    'frozen' => 'boolean',
+		                                    'balance' => 'decimal',
+		                                    'credit_limit' => 'decimal',
+		                                    'currency' => 'string',
+		                                    'support_robokassa' => 'boolean',
+		                                    'support_bank_card' => 'boolean',
+		                                    'support_invoice' => 'boolean',
+		                                    'account_custom_data' => 'string',
+		                                    'access_entries' => '[string]',
+		                                    'with_access_entries' => 'boolean',
+		                                    'callback_url' => 'string',
+		                                    'callback_salt' => 'string',
+		                                    'send_js_error' => 'boolean',
+		                                    'min_amount' => 'number',
+		                                ),
+		                            ),
+		                            'bank_card' =>
+		                            array (
+		                                '|array|' =>
+		                                array (
+		                                    'account_id' => 'number',
+		                                    'account_name' => 'string',
+		                                    'account_email' => 'string',
+		                                    'api_key' => 'string',
+		                                    'account_first_name' => 'string',
+		                                    'account_last_name' => 'string',
+		                                    'created' => 'timestamp',
+		                                    'language_code' => 'string',
+		                                    'location' => 'string',
+		                                    'min_balance_to_notify' => 'decimal',
+		                                    'account_notifications' => 'boolean',
+		                                    'tariff_changing_notifications' => 'boolean',
+		                                    'news_notifications' => 'boolean',
+		                                    'billing_address_name' => 'string',
+		                                    'billing_address_country_code' => 'string',
+		                                    'billing_address_address' => 'string',
+		                                    'billing_address_zip' => 'string',
+		                                    'billing_address_phone' => 'string',
+		                                    'active' => 'boolean',
+		                                    'frozen' => 'boolean',
+		                                    'balance' => 'decimal',
+		                                    'credit_limit' => 'decimal',
+		                                    'currency' => 'string',
+		                                    'support_robokassa' => 'boolean',
+		                                    'support_bank_card' => 'boolean',
+		                                    'support_invoice' => 'boolean',
+		                                    'account_custom_data' => 'string',
+		                                    'access_entries' => '[string]',
+		                                    'with_access_entries' => 'boolean',
+		                                    'callback_url' => 'string',
+		                                    'callback_salt' => 'string',
+		                                    'send_js_error' => 'boolean',
+		                                    'robokassa' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'account_id' => 'number',
+		                                            'account_name' => 'string',
+		                                            'account_email' => 'string',
+		                                            'api_key' => 'string',
+		                                            'account_first_name' => 'string',
+		                                            'account_last_name' => 'string',
+		                                            'created' => 'timestamp',
+		                                            'language_code' => 'string',
+		                                            'location' => 'string',
+		                                            'min_balance_to_notify' => 'decimal',
+		                                            'account_notifications' => 'boolean',
+		                                            'tariff_changing_notifications' => 'boolean',
+		                                            'news_notifications' => 'boolean',
+		                                            'billing_address_name' => 'string',
+		                                            'billing_address_country_code' => 'string',
+		                                            'billing_address_address' => 'string',
+		                                            'billing_address_zip' => 'string',
+		                                            'billing_address_phone' => 'string',
+		                                            'active' => 'boolean',
+		                                            'frozen' => 'boolean',
+		                                            'balance' => 'decimal',
+		                                            'credit_limit' => 'decimal',
+		                                            'currency' => 'string',
+		                                            'support_robokassa' => 'boolean',
+		                                            'support_bank_card' => 'boolean',
+		                                            'support_invoice' => 'boolean',
+		                                            'account_custom_data' => 'string',
+		                                            'access_entries' => '[string]',
+		                                            'with_access_entries' => 'boolean',
+		                                            'callback_url' => 'string',
+		                                            'callback_salt' => 'string',
+		                                            'send_js_error' => 'boolean',
+		                                            'min_amount' => 'number',
+		                                        ),
+		                                    ),
+		                                    'min_amount' => 'number',
+		                                ),
+		                            ),
+		                            'min_amount' => 'number',
+		                        ),
+		                    ),
+		                ),
+		            ),
 		        ),
 		    ),
 		    'total_count' => 'number',
@@ -793,7 +1422,7 @@ class ResultType extends BaseType
 		            'finish_execution_time' => 'string',
 		            'result_data' => 'string',
 		            'last_attempt' => 'string',
-		            'attmepts_left' => 'number',
+		            'attempts_left' => 'number',
 		            'status_id' => 'number',
 		            'status' => 'string',
 		        ),
@@ -29790,6 +30419,3610 @@ class ResultType extends BaseType
 	}
 
 
+	public function GetACDOperatorStatusStatistics()
+	{
+		return array (
+		    'result' =>
+		    array (
+		        '|array|' =>
+		        array (
+		            'user_id' => 'string',
+		            'date' => 'date',
+		            'hour' => 'number',
+		            'statistics' =>
+		            array (
+		                '|array|' =>
+		                array (
+		                    'user_id' => 'string',
+		                    'date' => 'date',
+		                    'hour' => 'number',
+		                    'acd_status' =>
+		                    array (
+		                        '|array|' =>
+		                        array (
+		                            'user_id' => 'string',
+		                            'date' => 'date',
+		                            'hour' => 'number',
+		                            'OFFLINE' =>
+		                            array (
+		                                '|array|' =>
+		                                array (
+		                                    'user_id' => 'string',
+		                                    'date' => 'date',
+		                                    'hour' => 'number',
+		                                ),
+		                                'min' => 'number',
+		                                'avg' => 'number',
+		                                'max' => 'number',
+		                                'count' => 'number',
+		                                'sum' => 'number',
+		                            ),
+		                            'ONLINE' =>
+		                            array (
+		                                '|array|' =>
+		                                array (
+		                                    'user_id' => 'string',
+		                                    'date' => 'date',
+		                                    'hour' => 'number',
+		                                    'OFFLINE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                ),
+		                                'min' => 'number',
+		                                'avg' => 'number',
+		                                'max' => 'number',
+		                                'count' => 'number',
+		                                'sum' => 'number',
+		                            ),
+		                            'READY' =>
+		                            array (
+		                                '|array|' =>
+		                                array (
+		                                    'user_id' => 'string',
+		                                    'date' => 'date',
+		                                    'hour' => 'number',
+		                                    'OFFLINE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'ONLINE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                ),
+		                                'min' => 'number',
+		                                'avg' => 'number',
+		                                'max' => 'number',
+		                                'count' => 'number',
+		                                'sum' => 'number',
+		                            ),
+		                            'BANNED' =>
+		                            array (
+		                                '|array|' =>
+		                                array (
+		                                    'user_id' => 'string',
+		                                    'date' => 'date',
+		                                    'hour' => 'number',
+		                                    'OFFLINE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'ONLINE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'READY' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                ),
+		                                'min' => 'number',
+		                                'avg' => 'number',
+		                                'max' => 'number',
+		                                'count' => 'number',
+		                                'sum' => 'number',
+		                            ),
+		                            'IN_SERVICE' =>
+		                            array (
+		                                '|array|' =>
+		                                array (
+		                                    'user_id' => 'string',
+		                                    'date' => 'date',
+		                                    'hour' => 'number',
+		                                    'OFFLINE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'ONLINE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'READY' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'BANNED' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'READY' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                ),
+		                                'min' => 'number',
+		                                'avg' => 'number',
+		                                'max' => 'number',
+		                                'count' => 'number',
+		                                'sum' => 'number',
+		                            ),
+		                            'AFTER_SERVICE' =>
+		                            array (
+		                                '|array|' =>
+		                                array (
+		                                    'user_id' => 'string',
+		                                    'date' => 'date',
+		                                    'hour' => 'number',
+		                                    'OFFLINE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'ONLINE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'READY' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'BANNED' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'READY' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'IN_SERVICE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'READY' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'BANNED' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'READY' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                ),
+		                                'min' => 'number',
+		                                'avg' => 'number',
+		                                'max' => 'number',
+		                                'count' => 'number',
+		                                'sum' => 'number',
+		                            ),
+		                            'TIMEOUT' =>
+		                            array (
+		                                '|array|' =>
+		                                array (
+		                                    'user_id' => 'string',
+		                                    'date' => 'date',
+		                                    'hour' => 'number',
+		                                    'OFFLINE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'ONLINE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'READY' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'BANNED' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'READY' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'IN_SERVICE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'READY' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'BANNED' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'READY' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'AFTER_SERVICE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'READY' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'BANNED' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'READY' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'IN_SERVICE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'READY' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'BANNED' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'READY' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                    'ONLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                            'OFFLINE' =>
+		                                                                            array (
+		                                                                                '|array|' =>
+		                                                                                array (
+		                                                                                    'user_id' => 'string',
+		                                                                                    'date' => 'date',
+		                                                                                    'hour' => 'number',
+		                                                                                ),
+		                                                                                'min' => 'number',
+		                                                                                'avg' => 'number',
+		                                                                                'max' => 'number',
+		                                                                                'count' => 'number',
+		                                                                                'sum' => 'number',
+		                                                                            ),
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                ),
+		                                'min' => 'number',
+		                                'avg' => 'number',
+		                                'max' => 'number',
+		                                'count' => 'number',
+		                                'sum' => 'number',
+		                            ),
+		                            'DND' =>
+		                            array (
+		                                '|array|' =>
+		                                array (
+		                                    'user_id' => 'string',
+		                                    'date' => 'date',
+		                                    'hour' => 'number',
+		                                    'OFFLINE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'ONLINE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'READY' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'BANNED' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'READY' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'IN_SERVICE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'READY' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'BANNED' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'READY' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'AFTER_SERVICE' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'READY' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'BANNED' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'READY' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'IN_SERVICE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'READY' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'BANNED' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'READY' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                    'ONLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                            'OFFLINE' =>
+		                                                                            array (
+		                                                                                '|array|' =>
+		                                                                                array (
+		                                                                                    'user_id' => 'string',
+		                                                                                    'date' => 'date',
+		                                                                                    'hour' => 'number',
+		                                                                                ),
+		                                                                                'min' => 'number',
+		                                                                                'avg' => 'number',
+		                                                                                'max' => 'number',
+		                                                                                'count' => 'number',
+		                                                                                'sum' => 'number',
+		                                                                            ),
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                    'TIMEOUT' =>
+		                                    array (
+		                                        '|array|' =>
+		                                        array (
+		                                            'user_id' => 'string',
+		                                            'date' => 'date',
+		                                            'hour' => 'number',
+		                                            'OFFLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'ONLINE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'READY' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'BANNED' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'READY' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'IN_SERVICE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'READY' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'BANNED' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'READY' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                    'ONLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                            'OFFLINE' =>
+		                                                                            array (
+		                                                                                '|array|' =>
+		                                                                                array (
+		                                                                                    'user_id' => 'string',
+		                                                                                    'date' => 'date',
+		                                                                                    'hour' => 'number',
+		                                                                                ),
+		                                                                                'min' => 'number',
+		                                                                                'avg' => 'number',
+		                                                                                'max' => 'number',
+		                                                                                'count' => 'number',
+		                                                                                'sum' => 'number',
+		                                                                            ),
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                            'AFTER_SERVICE' =>
+		                                            array (
+		                                                '|array|' =>
+		                                                array (
+		                                                    'user_id' => 'string',
+		                                                    'date' => 'date',
+		                                                    'hour' => 'number',
+		                                                    'OFFLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'ONLINE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'READY' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'BANNED' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'READY' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                    'ONLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                            'OFFLINE' =>
+		                                                                            array (
+		                                                                                '|array|' =>
+		                                                                                array (
+		                                                                                    'user_id' => 'string',
+		                                                                                    'date' => 'date',
+		                                                                                    'hour' => 'number',
+		                                                                                ),
+		                                                                                'min' => 'number',
+		                                                                                'avg' => 'number',
+		                                                                                'max' => 'number',
+		                                                                                'count' => 'number',
+		                                                                                'sum' => 'number',
+		                                                                            ),
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                    'IN_SERVICE' =>
+		                                                    array (
+		                                                        '|array|' =>
+		                                                        array (
+		                                                            'user_id' => 'string',
+		                                                            'date' => 'date',
+		                                                            'hour' => 'number',
+		                                                            'OFFLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'ONLINE' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'READY' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                    'ONLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                            'OFFLINE' =>
+		                                                                            array (
+		                                                                                '|array|' =>
+		                                                                                array (
+		                                                                                    'user_id' => 'string',
+		                                                                                    'date' => 'date',
+		                                                                                    'hour' => 'number',
+		                                                                                ),
+		                                                                                'min' => 'number',
+		                                                                                'avg' => 'number',
+		                                                                                'max' => 'number',
+		                                                                                'count' => 'number',
+		                                                                                'sum' => 'number',
+		                                                                            ),
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                            'BANNED' =>
+		                                                            array (
+		                                                                '|array|' =>
+		                                                                array (
+		                                                                    'user_id' => 'string',
+		                                                                    'date' => 'date',
+		                                                                    'hour' => 'number',
+		                                                                    'OFFLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                    'ONLINE' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                            'OFFLINE' =>
+		                                                                            array (
+		                                                                                '|array|' =>
+		                                                                                array (
+		                                                                                    'user_id' => 'string',
+		                                                                                    'date' => 'date',
+		                                                                                    'hour' => 'number',
+		                                                                                ),
+		                                                                                'min' => 'number',
+		                                                                                'avg' => 'number',
+		                                                                                'max' => 'number',
+		                                                                                'count' => 'number',
+		                                                                                'sum' => 'number',
+		                                                                            ),
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                    'READY' =>
+		                                                                    array (
+		                                                                        '|array|' =>
+		                                                                        array (
+		                                                                            'user_id' => 'string',
+		                                                                            'date' => 'date',
+		                                                                            'hour' => 'number',
+		                                                                            'OFFLINE' =>
+		                                                                            array (
+		                                                                                '|array|' =>
+		                                                                                array (
+		                                                                                    'user_id' => 'string',
+		                                                                                    'date' => 'date',
+		                                                                                    'hour' => 'number',
+		                                                                                ),
+		                                                                                'min' => 'number',
+		                                                                                'avg' => 'number',
+		                                                                                'max' => 'number',
+		                                                                                'count' => 'number',
+		                                                                                'sum' => 'number',
+		                                                                            ),
+		                                                                            'ONLINE' =>
+		                                                                            array (
+		                                                                                '|array|' =>
+		                                                                                array (
+		                                                                                    'user_id' => 'string',
+		                                                                                    'date' => 'date',
+		                                                                                    'hour' => 'number',
+		                                                                                    'OFFLINE' =>
+		                                                                                    array (
+		                                                                                        '|array|' =>
+		                                                                                        array (
+		                                                                                            'user_id' => 'string',
+		                                                                                            'date' => 'date',
+		                                                                                            'hour' => 'number',
+		                                                                                        ),
+		                                                                                        'min' => 'number',
+		                                                                                        'avg' => 'number',
+		                                                                                        'max' => 'number',
+		                                                                                        'count' => 'number',
+		                                                                                        'sum' => 'number',
+		                                                                                    ),
+		                                                                                ),
+		                                                                                'min' => 'number',
+		                                                                                'avg' => 'number',
+		                                                                                'max' => 'number',
+		                                                                                'count' => 'number',
+		                                                                                'sum' => 'number',
+		                                                                            ),
+		                                                                        ),
+		                                                                        'min' => 'number',
+		                                                                        'avg' => 'number',
+		                                                                        'max' => 'number',
+		                                                                        'count' => 'number',
+		                                                                        'sum' => 'number',
+		                                                                    ),
+		                                                                ),
+		                                                                'min' => 'number',
+		                                                                'avg' => 'number',
+		                                                                'max' => 'number',
+		                                                                'count' => 'number',
+		                                                                'sum' => 'number',
+		                                                            ),
+		                                                        ),
+		                                                        'min' => 'number',
+		                                                        'avg' => 'number',
+		                                                        'max' => 'number',
+		                                                        'count' => 'number',
+		                                                        'sum' => 'number',
+		                                                    ),
+		                                                ),
+		                                                'min' => 'number',
+		                                                'avg' => 'number',
+		                                                'max' => 'number',
+		                                                'count' => 'number',
+		                                                'sum' => 'number',
+		                                            ),
+		                                        ),
+		                                        'min' => 'number',
+		                                        'avg' => 'number',
+		                                        'max' => 'number',
+		                                        'count' => 'number',
+		                                        'sum' => 'number',
+		                                    ),
+		                                ),
+		                                'min' => 'number',
+		                                'avg' => 'number',
+		                                'max' => 'number',
+		                                'count' => 'number',
+		                                'sum' => 'number',
+		                            ),
+		                        ),
+		                    ),
+		                ),
+		            ),
+		        ),
+		    ),
+		);
+	}
+
+
 	public function AddSkill()
 	{
 		return array (
@@ -30773,6 +35006,258 @@ class ResultType extends BaseType
 		        'record_storage_id' => 'number',
 		        'record_storage_name' => 'string',
 		        'is_public' => 'boolean',
+		    ),
+		);
+	}
+
+
+	public function CreateKey()
+	{
+		return array (
+		    'result' =>
+		    array (
+		        '|array|' =>
+		        array (
+		            'account_email' => 'string',
+		            'account_id' => 'number',
+		            'key_id' => 'string',
+		            'private_key' => 'string',
+		        ),
+		    ),
+		);
+	}
+
+
+	public function GetKeys()
+	{
+		return array (
+		    'result' =>
+		    array (
+		        '|array|' =>
+		        array (
+		            'key_id' => 'string',
+		            'roles' =>
+		            array (
+		                '|array|' =>
+		                array (
+		                    'key_id' => 'string',
+		                    'role_name' => 'string',
+		                    'role_id' => 'number',
+		                    'inherited' => 'boolean',
+		                    'parent_role_id' => '[number]',
+		                    'gui_only' => 'boolean',
+		                ),
+		            ),
+		            'description' => 'string',
+		            'subuser' =>
+		            array (
+		                '|array|' =>
+		                array (
+		                    'key_id' => 'string',
+		                    'roles' =>
+		                    array (
+		                        '|array|' =>
+		                        array (
+		                            'key_id' => 'string',
+		                            'roles' =>
+		                            array (
+		                                '|array|' =>
+		                                array (
+		                                    'key_id' => 'string',
+		                                    'role_name' => 'string',
+		                                    'role_id' => 'number',
+		                                    'inherited' => 'boolean',
+		                                    'parent_role_id' => '[number]',
+		                                    'gui_only' => 'boolean',
+		                                ),
+		                            ),
+		                            'description' => 'string',
+		                            'subuser_id' => 'number',
+		                            'subuser_name' => 'string',
+		                            'role_name' => 'string',
+		                            'role_id' => 'number',
+		                            'inherited' => 'boolean',
+		                            'parent_role_id' => '[number]',
+		                            'gui_only' => 'boolean',
+		                        ),
+		                    ),
+		                    'description' => 'string',
+		                    'subuser_id' => 'number',
+		                    'subuser_name' => 'string',
+		                ),
+		            ),
+		        ),
+		    ),
+		);
+	}
+
+
+	public function UpdateKey()
+	{
+		return array (
+		    'result' => 'number',
+		);
+	}
+
+
+	public function DeleteKey()
+	{
+		return array (
+		    'result' => 'number',
+		);
+	}
+
+
+	public function SetKeyRoles()
+	{
+		return array (
+		    'result' => 'number',
+		);
+	}
+
+
+	public function GetKeyRoles()
+	{
+		return array (
+		    'result' =>
+		    array (
+		        '|array|' =>
+		        array (
+		            'role_name' => 'string',
+		            'role_id' => 'number',
+		            'inherited' => 'boolean',
+		            'parent_role_id' => '[number]',
+		            'gui_only' => 'boolean',
+		        ),
+		    ),
+		);
+	}
+
+
+	public function RemoveKeyRoles()
+	{
+		return array (
+		    'result' => 'number',
+		);
+	}
+
+
+	public function AddSubUser()
+	{
+		return array (
+		    'result' => 'number',
+		);
+	}
+
+
+	public function GetSubUsers()
+	{
+		return array (
+		    'result' =>
+		    array (
+		        '|array|' =>
+		        array (
+		            'subuser_id' => 'number',
+		            'subuser_name' => 'string',
+		            'description' => 'string',
+		            'roles' =>
+		            array (
+		                '|array|' =>
+		                array (
+		                    'subuser_id' => 'number',
+		                    'subuser_name' => 'string',
+		                    'description' => 'string',
+		                    'role_name' => 'string',
+		                    'role_id' => 'number',
+		                    'inherited' => 'boolean',
+		                    'parent_role_id' => '[number]',
+		                    'gui_only' => 'boolean',
+		                ),
+		            ),
+		        ),
+		    ),
+		);
+	}
+
+
+	public function SetSubUserInfo()
+	{
+		return array (
+		    'result' => 'number',
+		);
+	}
+
+
+	public function DelSubUser()
+	{
+		return array (
+		    'result' => 'number',
+		);
+	}
+
+
+	public function SetSubUserRoles()
+	{
+		return array (
+		    'result' => 'number',
+		);
+	}
+
+
+	public function GetSubUserRoles()
+	{
+		return array (
+		    'result' =>
+		    array (
+		        '|array|' =>
+		        array (
+		            'role_name' => 'string',
+		            'role_id' => 'number',
+		            'inherited' => 'boolean',
+		            'parent_role_id' => '[number]',
+		            'gui_only' => 'boolean',
+		        ),
+		    ),
+		);
+	}
+
+
+	public function RemoveSubUserRoles()
+	{
+		return array (
+		    'result' => 'number',
+		);
+	}
+
+
+	public function GetRoles()
+	{
+		return array (
+		    'result' =>
+		    array (
+		        '|array|' =>
+		        array (
+		            'role_name' => 'string',
+		            'role_id' => 'number',
+		            'inherited' => 'boolean',
+		            'parent_role_id' => '[number]',
+		            'gui_only' => 'boolean',
+		        ),
+		    ),
+		);
+	}
+
+
+	public function GetRoleGroups()
+	{
+		return array (
+		    'result' =>
+		    array (
+		        '|array|' =>
+		        array (
+		            'id' => 'number',
+		            'name' => 'string',
+		        ),
 		    ),
 		);
 	}

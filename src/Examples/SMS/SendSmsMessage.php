@@ -23,7 +23,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * source - The source phone number.
  * destination - The destination phone number.
- * sms_body - The message.
+ * sms_body - The message text, up to 70 characters. The message of 71-140 characters is billed like 2 messages; the message of 141-210 characters is billed like 3 messages and so on.
  */
 $params = new SendSmsMessageParams();
 

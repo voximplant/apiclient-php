@@ -21,12 +21,14 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
+ * application_id - The application ID.
  * template - Search for template matching
  * with_scenarios - Set true to get bound scenarios info.
  * count - The max returning record count.
  */
 $params = new GetRulesParams();
 
+$params->application_id = 1;
 $params->template = '74951234567';
 $params->with_scenarios = true;
 $params->count = 1;

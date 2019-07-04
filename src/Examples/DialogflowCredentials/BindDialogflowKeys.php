@@ -22,10 +22,12 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * dialogflow_key_id - The Dialogflow key's ID 
+ * application_id - The application ID list or the 'all' value.
  */
 $params = new BindDialogflowKeysParams();
 
 $params->dialogflow_key_id = 1;
+$params->application_id = 1;
 
 // Bind a Dialogflow key to the application.
 $result = $voxApi->DialogflowCredentials->BindDialogflowKeys($params);

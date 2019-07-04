@@ -21,11 +21,13 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
+ * application_id - The application ID.
  * rule_name - The rule name. The length must be less than 100
  * rule_pattern - The rule pattern regex. The length must be less than 64 KB.
  */
 $params = new AddRuleParams();
 
+$params->application_id = 1;
 $params->rule_name = 'allowall';
 $params->rule_pattern = '.*';
 

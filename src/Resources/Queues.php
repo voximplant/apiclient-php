@@ -6,6 +6,7 @@ use Voximplant\Interfaces\AddQueueReturn;
 use Voximplant\Interfaces\BindUserToQueueReturn;
 use Voximplant\Interfaces\DelQueueReturn;
 use Voximplant\Interfaces\GetACDOperatorStatisticsReturn;
+use Voximplant\Interfaces\GetACDOperatorStatusStatisticsReturn;
 use Voximplant\Interfaces\GetACDQueueStatisticsReturn;
 use Voximplant\Interfaces\GetACDStateReturn;
 use Voximplant\Interfaces\GetQueuesReturn;
@@ -40,6 +41,9 @@ class Queues implements QueuesInterface
 	/** @object GetACDQueueStatistics */
 	protected $GetACDQueueStatisticsReturn;
 
+	/** @object GetACDOperatorStatusStatistics */
+	protected $GetACDOperatorStatusStatisticsReturn;
+
 
 	public function __construct($client)
 	{
@@ -53,6 +57,7 @@ class Queues implements QueuesInterface
 		$this->GetACDStateReturn = new GetACDStateReturn();
 		$this->GetACDOperatorStatisticsReturn = new GetACDOperatorStatisticsReturn();
 		$this->GetACDQueueStatisticsReturn = new GetACDQueueStatisticsReturn();
+		$this->GetACDOperatorStatusStatisticsReturn = new GetACDOperatorStatusStatisticsReturn();
 	}
 
 
@@ -149,5 +154,17 @@ class Queues implements QueuesInterface
 		    $this->GetACDQueueStatisticsReturn->$key = $value;
 		}
 		return $this->GetACDQueueStatisticsReturn;
+	}
+
+
+	/**
+	 * @method Get statistics for the specified operators and ACD statuses. This method can filter statistics by operator ids and statuses. It can also group results by day/hour or users.
+	 */
+	public function GetACDOperatorStatusStatistics(Params\GetACDOperatorStatusStatisticsParams $params = null): GetACDOperatorStatusStatisticsReturn
+	{
+		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+		    $this->GetACDOperatorStatusStatisticsReturn->$key = $value;
+		}
+		return $this->GetACDOperatorStatusStatisticsReturn;
 	}
 }

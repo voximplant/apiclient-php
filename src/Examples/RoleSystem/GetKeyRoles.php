@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method GetUsers Shows the users of the specified account.
+ * @method GetKeyRoles Gets roles of the specified key.
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\GetUsersParams;
+use Voximplant\Resources\Params\GetKeyRolesParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -21,16 +21,14 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * application_id - The application ID to filter.
- * count - The max returning record count.
+ * key_id - The key's ID.
  */
-$params = new GetUsersParams();
+$params = new GetKeyRolesParams();
 
-$params->application_id = 1;
-$params->count = 2;
+$params->key_id = 'ab81c50e-573e-4446-9af9-105269dfafca';
 
-// Get two first identities.
-$result = $voxApi->Users->GetUsers($params);
+// Get roles of the key.
+$result = $voxApi->RoleSystem->GetKeyRoles($params);
 
 // Show result
 var_dump($result);

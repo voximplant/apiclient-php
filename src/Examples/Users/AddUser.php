@@ -24,12 +24,14 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * user_name - The user name in format [a-z0-9][a-z0-9_-]{2,49}
  * user_display_name - The user display name. The length must be less than 256.
  * user_password - The user password. The length must be at least 6 symbols.
+ * application_id - The application ID which new user will be bound to. Could be used instead of the application_name parameter.
  */
 $params = new AddUserParams();
 
 $params->user_name = 'iden1';
 $params->user_display_name = 'iden1';
 $params->user_password = '1234567';
+$params->application_id = 1;
 
 // Add a new user.
 $result = $voxApi->Users->AddUser($params);

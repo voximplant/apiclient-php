@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method GetUsers Shows the users of the specified account.
+ * @method UpdateKey Updates info of the specified key.
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\GetUsersParams;
+use Voximplant\Resources\Params\UpdateKeyParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -21,16 +21,16 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * application_id - The application ID to filter.
- * count - The max returning record count.
+ * key_id - The key's ID
+ * description - The key's description.
  */
-$params = new GetUsersParams();
+$params = new UpdateKeyParams();
 
-$params->application_id = 1;
-$params->count = 2;
+$params->key_id = 'ab98c70e-573e-4446-9af9-105269dfafca';
+$params->description = 'test_desc';
 
-// Get two first identities.
-$result = $voxApi->Users->GetUsers($params);
+// Create a new subuser for account_id = 1.
+$result = $voxApi->RoleSystem->UpdateKey($params);
 
 // Show result
 var_dump($result);

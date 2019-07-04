@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method GetUsers Shows the users of the specified account.
+ * @method RemoveSubUserRoles Removes the specified roles of a subuser.
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\GetUsersParams;
+use Voximplant\Resources\Params\RemoveSubUserRolesParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -21,16 +21,16 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * application_id - The application ID to filter.
- * count - The max returning record count.
+ * subuser_id - The subuser's ID.
+ * role_id - The role id list.
  */
-$params = new GetUsersParams();
+$params = new RemoveSubUserRolesParams();
 
-$params->application_id = 1;
-$params->count = 2;
+$params->subuser_id = 12;
+$params->role_id = '1;2;3';
 
-// Get two first identities.
-$result = $voxApi->Users->GetUsers($params);
+// Remove roles 1,2,3 from the subuser with id = 12
+$result = $voxApi->RoleSystem->RemoveSubUserRoles($params);
 
 // Show result
 var_dump($result);

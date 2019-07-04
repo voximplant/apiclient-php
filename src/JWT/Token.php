@@ -6,8 +6,8 @@ use Firebase\JWT\JWT;
 
 class Token
 {
-	/** Max 30 seconds */
-	public $expTime = 25;
+	/** Min 30 sec, max 3600 sec. */
+	public $expTime = 60;
 
 
 	public function generateAuthorizationHeader($keyPath)

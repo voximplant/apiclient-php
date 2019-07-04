@@ -58,6 +58,7 @@ class RequestType extends BaseType
 		    'support_bank_card' => 'boolean',
 		    'support_invoice' => 'boolean',
 		    'can_use_restricted' => 'boolean',
+		    'min_payment_amount' => 'number',
 		);
 	}
 
@@ -1104,6 +1105,19 @@ class RequestType extends BaseType
 	}
 
 
+	public function GetACDOperatorStatusStatistics()
+	{
+		return array (
+		    'from_date' => 'timestamp',
+		    'to_date' => 'timestamp',
+		    'acd_status' => 'stringlist',
+		    'user_id' => 'stringlist',
+		    'aggregation' => 'string',
+		    'group' => 'string',
+		);
+	}
+
+
 	public function AddSkill()
 	{
 		return array (
@@ -1532,6 +1546,157 @@ class RequestType extends BaseType
 		    'record_storage_id' => 'intlist',
 		    'record_storage_name' => 'stringlist',
 		    'with_private' => 'boolean',
+		);
+	}
+
+
+	public function CreateKey()
+	{
+		return array (
+		    'description' => 'string',
+		    'role_id' => 'string',
+		    'role_name' => 'string',
+		);
+	}
+
+
+	public function GetKeys()
+	{
+		return array (
+		    'key_id' => 'string',
+		    'with_roles' => 'boolean',
+		    'offset' => 'number',
+		    'count' => 'number',
+		);
+	}
+
+
+	public function UpdateKey()
+	{
+		return array (
+		    'key_id' => 'string',
+		    'description' => 'string',
+		);
+	}
+
+
+	public function DeleteKey()
+	{
+		return array (
+		    'key_id' => 'string',
+		);
+	}
+
+
+	public function SetKeyRoles()
+	{
+		return array (
+		    'key_id' => 'string',
+		    'role_id' => 'string',
+		    'role_name' => 'string',
+		);
+	}
+
+
+	public function GetKeyRoles()
+	{
+		return array (
+		    'key_id' => 'string',
+		);
+	}
+
+
+	public function RemoveKeyRoles()
+	{
+		return array (
+		    'key_id' => 'string',
+		    'role_id' => 'string',
+		    'role_name' => 'string',
+		);
+	}
+
+
+	public function AddSubUser()
+	{
+		return array (
+		    'new_subuser_login' => 'string',
+		    'new_subuser_password' => 'string',
+		    'role_id' => 'string',
+		    'role_name' => 'string',
+		    'description' => 'string',
+		);
+	}
+
+
+	public function GetSubUsers()
+	{
+		return array (
+		    'subuser_id' => 'number',
+		    'with_roles' => 'boolean',
+		    'offset' => 'number',
+		    'count' => 'number',
+		);
+	}
+
+
+	public function SetSubUserInfo()
+	{
+		return array (
+		    'subuser_id' => 'number',
+		    'old_subuser_password' => 'string',
+		    'new_subuser_password' => 'string',
+		    'description' => 'string',
+		);
+	}
+
+
+	public function DelSubUser()
+	{
+		return array (
+		    'subuser_id' => 'number',
+		);
+	}
+
+
+	public function SetSubUserRoles()
+	{
+		return array (
+		    'subuser_id' => 'number',
+		    'role_id' => 'string',
+		    'role_name' => 'string',
+		);
+	}
+
+
+	public function GetSubUserRoles()
+	{
+		return array (
+		    'subuser_id' => 'number',
+		);
+	}
+
+
+	public function RemoveSubUserRoles()
+	{
+		return array (
+		    'subuser_id' => 'number',
+		    'role_id' => 'string',
+		    'role_name' => 'string',
+		);
+	}
+
+
+	public function GetRoles()
+	{
+		return array (
+		    'group_name' => 'string',
+		);
+	}
+
+
+	public function GetRoleGroups()
+	{
+		return array (
 		);
 	}
 }

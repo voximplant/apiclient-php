@@ -21,9 +21,14 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
+ * application_id - The application ID list or the 'all' value.
  */
 $params = new DelApplicationParams();
 
+$params->application_id = array (
+    0 => 1,
+    1 => 3,
+);
 
 // Delete the application 1 and 3.
 $result = $voxApi->Applications->DelApplication($params);

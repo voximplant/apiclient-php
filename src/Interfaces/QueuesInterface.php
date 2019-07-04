@@ -50,6 +50,12 @@ interface QueuesInterface
 	 * @method Get statistics for calls distributed to users (referred as 'operators') via the 'queue' distribution system. This method can filter statistic based on operator ids, queue ids and date-time interval. It can also group results by day or hour.
 	 */
 	public function GetACDQueueStatistics(\Voximplant\Resources\Params\GetACDQueueStatisticsParams $params);
+
+
+	/**
+	 * @method Get statistics for the specified operators and ACD statuses. This method can filter statistics by operator ids and statuses. It can also group results by day/hour or users.
+	 */
+	public function GetACDOperatorStatusStatistics(\Voximplant\Resources\Params\GetACDOperatorStatusStatisticsParams $params);
 }
 class AddQueueReturn
 {
@@ -140,6 +146,17 @@ interface QueuesInterface
 class GetACDQueueStatisticsReturn
 {
 	/** @var [ACDQueueStatisticsType] List of records grouped grouped by date according to the 'aggregation' method call argument */
+	public $result;
+
+	/** @var array The returned error message. */
+	public $error;
+
+	/** @var array The returned error message. */
+	public $errors;
+}
+class GetACDOperatorStatusStatisticsReturn
+{
+	/** @var [ACDOperatorStatusAggregationGroupType] List of groups, grouped by user ID or date according to the 'group' method call argument */
 	public $result;
 
 	/** @var array The returned error message. */

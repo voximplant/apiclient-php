@@ -22,10 +22,12 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * phone_id - The phone ID list or the 'all' value.
+ * application_id - The application ID.
  */
 $params = new BindPhoneNumberToApplicationParams();
 
 $params->phone_id = 1;
+$params->application_id = 1;
 
 // Bind the phone 1 to the application 1.
 $result = $voxApi->PhoneNumbers->BindPhoneNumberToApplication($params);

@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method GetUsers Shows the users of the specified account.
+ * @method DelSubUser Deletes a subuser.
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\GetUsersParams;
+use Voximplant\Resources\Params\DelSubUserParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -21,16 +21,14 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * application_id - The application ID to filter.
- * count - The max returning record count.
+ * subuser_id - The subuser's ID.
  */
-$params = new GetUsersParams();
+$params = new DelSubUserParams();
 
-$params->application_id = 1;
-$params->count = 2;
+$params->subuser_id = 12;
 
-// Get two first identities.
-$result = $voxApi->Users->GetUsers($params);
+// Delete the subuser with id = 12 from account_id = 1
+$result = $voxApi->RoleSystem->DelSubUser($params);
 
 // Show result
 var_dump($result);

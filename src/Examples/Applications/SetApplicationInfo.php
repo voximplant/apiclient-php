@@ -21,10 +21,12 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
+ * application_id - The application ID.
  * application_name - The new short application name in format [a-z][a-z0-9-]{1,79}
  */
 $params = new SetApplicationInfoParams();
 
+$params->application_id = 1;
 $params->application_name = 'myapp11';
 
 // Change the application name.

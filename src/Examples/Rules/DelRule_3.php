@@ -22,10 +22,12 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * rule_id - The rule ID list or the 'all' value.
+ * application_id - The application ID list or the 'all' value.
  */
 $params = new DelRuleParams();
 
 $params->rule_id = 'all';
+$params->application_id = 'all';
 
 // Delete the all rules from the all applications.
 $result = $voxApi->Rules->DelRule($params);

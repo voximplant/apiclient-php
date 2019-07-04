@@ -20,6 +20,7 @@ use Voximplant\Resources\PushCredentials;
 use Voximplant\Resources\Queues;
 use Voximplant\Resources\RecordStorages;
 use Voximplant\Resources\RegulationAddress;
+use Voximplant\Resources\RoleSystem;
 use Voximplant\Resources\Rules;
 use Voximplant\Resources\SIPRegistration;
 use Voximplant\Resources\SIPWhiteList;
@@ -125,6 +126,9 @@ class VoximplantApi
 	/** @var object RecordStorages Get the record storages. */
 	public $RecordStorages;
 
+	/** @var object RoleSystem Creates a public/private key pair. */
+	public $RoleSystem;
+
 
 	public function __construct($tokenPath = false, $host = false)
 	{
@@ -170,6 +174,7 @@ class VoximplantApi
 		$this->DialogflowCredentials = new DialogflowCredentials($this);
 		$this->SMS = new SMS($this);
 		$this->RecordStorages = new RecordStorages($this);
+		$this->RoleSystem = new RoleSystem($this);
 	}
 
 
@@ -185,7 +190,9 @@ class VoximplantApi
 		    $tokenContent = file_get_contents($this->tokenPath);
 		    if ($tokenContent) {
 		        $keyContent = json_decode($tokenContent);
-		        if (!empty($keyContent->result->account_id)) {
+		        if (!empty($keyContent->account_id)) {
+		            $params['account_id'] = $keyContent->account_id;
+		        } elseif (!empty($keyContent->result->account_id)) {
 		            $params['account_id'] = $keyContent->result->account_id;
 		        }
 		    }
@@ -203,10 +210,9 @@ class VoximplantApi
 
 		// Generate url
 		$url = 'https://' . $this->baseUrl . '/platform_api/' . $method;
-		$data = $params;
 
 		// HTTP curl request
-		$result = $this->curl->send($url, $data);
+		$result = $this->curl->send($url, $params);
 
 		// Date result modifier
 		if ($this->resultTimeZone && !in_array($method, $this->resultTimeZoneIgnore)) {

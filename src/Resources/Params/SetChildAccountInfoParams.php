@@ -51,4 +51,7 @@ class SetChildAccountInfoParams
 
 	/** @var boolean Set to true to allow use restricted directions. */
 	public $can_use_restricted;
+
+	/** @var number The minimum payment amount. */
+	public $min_payment_amount;
 }

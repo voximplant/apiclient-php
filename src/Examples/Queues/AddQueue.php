@@ -21,10 +21,12 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
+ * application_id - The application ID.
  * acd_queue_name - The queue name. The length must be less than 100.
  */
 $params = new AddQueueParams();
 
+$params->application_id = 1;
 $params->acd_queue_name = 'myqueue';
 
 // Add a new ACD queue for the application 1.

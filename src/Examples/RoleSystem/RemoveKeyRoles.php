@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method GetUsers Shows the users of the specified account.
+ * @method RemoveKeyRoles Removes the specified roles of a key.
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\GetUsersParams;
+use Voximplant\Resources\Params\RemoveKeyRolesParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -21,16 +21,16 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * application_id - The application ID to filter.
- * count - The max returning record count.
+ * key_id - The key's ID.
+ * role_id - The role id list.
  */
-$params = new GetUsersParams();
+$params = new RemoveKeyRolesParams();
 
-$params->application_id = 1;
-$params->count = 2;
+$params->key_id = 'ab81c90e-543e-4446-9af9-105269dfafca';
+$params->role_id = '1;2;3';
 
-// Get two first identities.
-$result = $voxApi->Users->GetUsers($params);
+// Remove the roles 1, 2, 3 from the key.
+$result = $voxApi->RoleSystem->RemoveKeyRoles($params);
 
 // Show result
 var_dump($result);

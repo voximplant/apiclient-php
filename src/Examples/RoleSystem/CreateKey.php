@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method GetUsers Shows the users of the specified account.
+ * @method CreateKey Creates a public/private key pair.
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\GetUsersParams;
+use Voximplant\Resources\Params\CreateKeyParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -21,16 +21,12 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * application_id - The application ID to filter.
- * count - The max returning record count.
  */
-$params = new GetUsersParams();
+$params = new CreateKeyParams();
 
-$params->application_id = 1;
-$params->count = 2;
 
-// Get two first identities.
-$result = $voxApi->Users->GetUsers($params);
+// Create a key pair.
+$result = $voxApi->RoleSystem->CreateKey($params);
 
 // Show result
 var_dump($result);

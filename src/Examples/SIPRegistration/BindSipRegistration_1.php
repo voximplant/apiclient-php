@@ -21,11 +21,13 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
+ * application_id - The application ID which the SIP registration will be bound to. Could be used instead of the application_name parameter.
  * sip_registration_id - The registration ID
  * bind - Bind or unbind?
  */
 $params = new BindSipRegistrationParams();
 
+$params->application_id = 123;
 $params->sip_registration_id = 1;
 $params->bind = true;
 

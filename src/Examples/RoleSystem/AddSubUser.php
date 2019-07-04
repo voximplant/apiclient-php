@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method GetUsers Shows the users of the specified account.
+ * @method AddSubUser Creates a subuser.
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\GetUsersParams;
+use Voximplant\Resources\Params\AddSubUserParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -21,16 +21,14 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * application_id - The application ID to filter.
- * count - The max returning record count.
  */
-$params = new GetUsersParams();
+$params = new AddSubUserParams();
 
-$params->application_id = 1;
-$params->count = 2;
+$params->login = 'test_login';
+$params->password = 'test_pass';
 
-// Get two first identities.
-$result = $voxApi->Users->GetUsers($params);
+// Create a new subuser for account_id = 1
+$result = $voxApi->RoleSystem->AddSubUser($params);
 
 // Show result
 var_dump($result);
