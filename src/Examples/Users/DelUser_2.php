@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method DelUser Deletes the user.
+ * @method DelUser Deletes the specified user(s).
  */
 
 // Path to your autoload.php
@@ -29,7 +29,7 @@ $params = new DelUserParams();
 $params->user_id = 'all';
 $params->application_name = 'myapp1';
 
-// Delete the all users bound to the 'myapp1' application.
+// Delete all the users bound to the 'myapp1' application.
 $result = $voxApi->Users->DelUser($params);
 
 // Show result

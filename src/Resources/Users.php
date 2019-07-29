@@ -49,7 +49,7 @@ class Users implements UsersInterface
 
 
 	/**
-	 * @method Deletes the user.
+	 * @method Deletes the specified user(s).
 	 */
 	public function DelUser(Params\DelUserParams $params = null): DelUserReturn
 	{

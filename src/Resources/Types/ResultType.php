@@ -34736,6 +34736,14 @@ class ResultType extends BaseType
 	}
 
 
+	public function SetDialogflowKey()
+	{
+		return array (
+		    'result' => 'number',
+		);
+	}
+
+
 	public function DelDialogflowKey()
 	{
 		return array (

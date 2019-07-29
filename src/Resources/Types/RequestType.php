@@ -1487,6 +1487,16 @@ class RequestType extends BaseType
 		return array (
 		    'external_app_name' => 'string',
 		    'json_credentials' => 'string',
+		    'description' => 'string',
+		);
+	}
+
+
+	public function SetDialogflowKey()
+	{
+		return array (
+		    'dialogflow_key_id' => 'number',
+		    'description' => 'string',
 		);
 	}
 
@@ -1619,7 +1629,7 @@ class RequestType extends BaseType
 	public function AddSubUser()
 	{
 		return array (
-		    'new_subuser_login' => 'string',
+		    'new_subuser_name' => 'string',
 		    'new_subuser_password' => 'string',
 		    'role_id' => 'string',
 		    'role_name' => 'string',

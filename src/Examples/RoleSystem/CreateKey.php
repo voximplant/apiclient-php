@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method CreateKey Creates a public/private key pair.
+ * @method CreateKey Creates a public/private key pair. You can optionally specify one or more roles for the key, see [this article](https://voximplant.com/blog/service-accounts-introduction) for details.
  */
 
 // Path to your autoload.php

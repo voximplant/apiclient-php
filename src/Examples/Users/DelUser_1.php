@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method DelUser Deletes the user.
+ * @method DelUser Deletes the specified user(s).
  */
 
 // Path to your autoload.php
@@ -30,7 +30,7 @@ $params->user_id = array (
     1 => 55,
 );
 
-// Delete the two user.
+// Delete two users with ID 3 and 55.
 $result = $voxApi->Users->DelUser($params);
 
 // Show result

@@ -7,6 +7,7 @@ use Voximplant\Interfaces\BindDialogflowKeysReturn;
 use Voximplant\Interfaces\DelDialogflowKeyReturn;
 use Voximplant\Interfaces\DialogflowCredentialsInterface;
 use Voximplant\Interfaces\GetDialogflowKeysReturn;
+use Voximplant\Interfaces\SetDialogflowKeyReturn;
 
 class DialogflowCredentials implements DialogflowCredentialsInterface
 {
@@ -14,6 +15,9 @@ class DialogflowCredentials implements DialogflowCredentialsInterface
 
 	/** @object AddDialogflowKey */
 	protected $AddDialogflowKeyReturn;
+
+	/** @object SetDialogflowKey */
+	protected $SetDialogflowKeyReturn;
 
 	/** @object DelDialogflowKey */
 	protected $DelDialogflowKeyReturn;
@@ -30,6 +34,7 @@ class DialogflowCredentials implements DialogflowCredentialsInterface
 		$this->client = $client;
 
 		$this->AddDialogflowKeyReturn = new AddDialogflowKeyReturn();
+		$this->SetDialogflowKeyReturn = new SetDialogflowKeyReturn();
 		$this->DelDialogflowKeyReturn = new DelDialogflowKeyReturn();
 		$this->GetDialogflowKeysReturn = new GetDialogflowKeysReturn();
 		$this->BindDialogflowKeysReturn = new BindDialogflowKeysReturn();
@@ -45,6 +50,18 @@ class DialogflowCredentials implements DialogflowCredentialsInterface
 		    $this->AddDialogflowKeyReturn->$key = $value;
 		}
 		return $this->AddDialogflowKeyReturn;
+	}
+
+
+	/**
+	 * @method Edit Dialogflow key
+	 */
+	public function SetDialogflowKey(Params\SetDialogflowKeyParams $params = null): SetDialogflowKeyReturn
+	{
+		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+		    $this->SetDialogflowKeyReturn->$key = $value;
+		}
+		return $this->SetDialogflowKeyReturn;
 	}
 
 

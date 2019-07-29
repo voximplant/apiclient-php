@@ -16,7 +16,7 @@ class CreateCallListParams
 	/** @var number Number of attempts. Minimum is 1, maximum is 5. */
 	public $num_attempts;
 
-	/** @var string File name. */
+	/** @var string File name, up to 255 characters and can't contain the '/' and '\' symbols. */
 	public $name;
 
 	/** @var string Send as "body" part of the HTTP request or as multiform. The sending "file_content" via URL is at its own risk because the network devices tend to drop HTTP requests with large headers. */

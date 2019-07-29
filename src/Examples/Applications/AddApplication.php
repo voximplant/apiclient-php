@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * application_name - The short application name in format [a-z][a-z0-9-]{1,79}
+ * application_name - The short application name in format \[a-z\]\[a-z0-9-\]{1,64}
  */
 $params = new AddApplicationParams();
 

@@ -126,7 +126,7 @@ class VoximplantApi
 	/** @var object RecordStorages Get the record storages. */
 	public $RecordStorages;
 
-	/** @var object RoleSystem Creates a public/private key pair. */
+	/** @var object RoleSystem Creates a public/private key pair. You can optionally specify one or more roles for the key, see [this article](https://voximplant.com/blog/service-accounts-introduction) for details. */
 	public $RoleSystem;
 
 

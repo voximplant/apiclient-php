@@ -11,6 +11,12 @@ interface DialogflowCredentialsInterface
 
 
 	/**
+	 * @method Edit Dialogflow key
+	 */
+	public function SetDialogflowKey(\Voximplant\Resources\Params\SetDialogflowKeyParams $params);
+
+
+	/**
 	 * @method Remove Dialogflow key
 	 */
 	public function DelDialogflowKey(\Voximplant\Resources\Params\DelDialogflowKeyParams $params);
@@ -34,6 +40,17 @@ interface DialogflowCredentialsInterface
 
 	/** @var number */
 	public $dialogflow_key_id;
+
+	/** @var array The returned error message. */
+	public $error;
+
+	/** @var array The returned error message. */
+	public $errors;
+}
+class SetDialogflowKeyReturn
+{
+	/** @var number */
+	public $result;
 
 	/** @var array The returned error message. */
 	public $error;

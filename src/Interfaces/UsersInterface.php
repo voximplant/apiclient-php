@@ -11,7 +11,7 @@ interface UsersInterface
 
 
 	/**
-	 * @method Deletes the user.
+	 * @method Deletes the specified user(s).
 	 */
 	public function DelUser(\Voximplant\Resources\Params\DelUserParams $params);
 
