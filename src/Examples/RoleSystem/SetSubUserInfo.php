@@ -22,12 +22,15 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * subuser_id - The subuser's ID.
+ * old_subuser_password - The subuser old password. It is required if __new_subuser_password__ is specified.
+ * new_subuser_password - The new user password. The length must be at least 6 symbols.
  * description - The new subuser description.
  */
 $params = new SetSubUserInfoParams();
 
 $params->subuser_id = 12;
-$params->password = 'test_pass';
+$params->old_subuser_password = 'old_test_password';
+$params->new_subuser_password = 'test_pass';
 $params->description = 'test_desc';
 
 // Edit the password and description for the subuser with id = 12 from account_id = 1

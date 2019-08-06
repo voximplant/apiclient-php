@@ -27,7 +27,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 $params = new SetSubUserRolesParams();
 
 $params->subuser_id = 12;
-$params->role_id = '1;2;3';
+$params->role_id = array (
+    0 => 1,
+    1 => 2,
+    2 => 3,
+);
 
 // Add the roles 1, 2, 3 to the subuser with id = 12
 $result = $voxApi->RoleSystem->SetSubUserRoles($params);

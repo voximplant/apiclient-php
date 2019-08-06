@@ -27,6 +27,7 @@ class ResultType extends BaseType
 		        'billing_address_address' => 'string',
 		        'billing_address_zip' => 'string',
 		        'billing_address_phone' => 'string',
+		        'billing_address_state' => 'string',
 		        'active' => 'boolean',
 		        'frozen' => 'boolean',
 		        'balance' => 'decimal',
@@ -61,6 +62,7 @@ class ResultType extends BaseType
 		            'billing_address_address' => 'string',
 		            'billing_address_zip' => 'string',
 		            'billing_address_phone' => 'string',
+		            'billing_address_state' => 'string',
 		            'active' => 'boolean',
 		            'frozen' => 'boolean',
 		            'balance' => 'decimal',
@@ -97,6 +99,7 @@ class ResultType extends BaseType
 		                    'billing_address_address' => 'string',
 		                    'billing_address_zip' => 'string',
 		                    'billing_address_phone' => 'string',
+		                    'billing_address_state' => 'string',
 		                    'active' => 'boolean',
 		                    'frozen' => 'boolean',
 		                    'balance' => 'decimal',
@@ -137,6 +140,7 @@ class ResultType extends BaseType
 		                    'billing_address_address' => 'string',
 		                    'billing_address_zip' => 'string',
 		                    'billing_address_phone' => 'string',
+		                    'billing_address_state' => 'string',
 		                    'active' => 'boolean',
 		                    'frozen' => 'boolean',
 		                    'balance' => 'decimal',
@@ -173,6 +177,7 @@ class ResultType extends BaseType
 		                            'billing_address_address' => 'string',
 		                            'billing_address_zip' => 'string',
 		                            'billing_address_phone' => 'string',
+		                            'billing_address_state' => 'string',
 		                            'active' => 'boolean',
 		                            'frozen' => 'boolean',
 		                            'balance' => 'decimal',
@@ -217,6 +222,7 @@ class ResultType extends BaseType
 		                    'billing_address_address' => 'string',
 		                    'billing_address_zip' => 'string',
 		                    'billing_address_phone' => 'string',
+		                    'billing_address_state' => 'string',
 		                    'active' => 'boolean',
 		                    'frozen' => 'boolean',
 		                    'balance' => 'decimal',
@@ -253,6 +259,7 @@ class ResultType extends BaseType
 		                            'billing_address_address' => 'string',
 		                            'billing_address_zip' => 'string',
 		                            'billing_address_phone' => 'string',
+		                            'billing_address_state' => 'string',
 		                            'active' => 'boolean',
 		                            'frozen' => 'boolean',
 		                            'balance' => 'decimal',
@@ -293,6 +300,7 @@ class ResultType extends BaseType
 		                            'billing_address_address' => 'string',
 		                            'billing_address_zip' => 'string',
 		                            'billing_address_phone' => 'string',
+		                            'billing_address_state' => 'string',
 		                            'active' => 'boolean',
 		                            'frozen' => 'boolean',
 		                            'balance' => 'decimal',
@@ -329,6 +337,7 @@ class ResultType extends BaseType
 		                                    'billing_address_address' => 'string',
 		                                    'billing_address_zip' => 'string',
 		                                    'billing_address_phone' => 'string',
+		                                    'billing_address_state' => 'string',
 		                                    'active' => 'boolean',
 		                                    'frozen' => 'boolean',
 		                                    'balance' => 'decimal',
@@ -478,6 +487,7 @@ class ResultType extends BaseType
 		            'billing_address_address' => 'string',
 		            'billing_address_zip' => 'string',
 		            'billing_address_phone' => 'string',
+		            'billing_address_state' => 'string',
 		            'active' => 'boolean',
 		            'frozen' => 'boolean',
 		            'balance' => 'decimal',
@@ -514,6 +524,7 @@ class ResultType extends BaseType
 		                    'billing_address_address' => 'string',
 		                    'billing_address_zip' => 'string',
 		                    'billing_address_phone' => 'string',
+		                    'billing_address_state' => 'string',
 		                    'active' => 'boolean',
 		                    'frozen' => 'boolean',
 		                    'balance' => 'decimal',
@@ -550,6 +561,7 @@ class ResultType extends BaseType
 		                            'billing_address_address' => 'string',
 		                            'billing_address_zip' => 'string',
 		                            'billing_address_phone' => 'string',
+		                            'billing_address_state' => 'string',
 		                            'active' => 'boolean',
 		                            'frozen' => 'boolean',
 		                            'balance' => 'decimal',
@@ -589,6 +601,7 @@ class ResultType extends BaseType
 		                            'billing_address_address' => 'string',
 		                            'billing_address_zip' => 'string',
 		                            'billing_address_phone' => 'string',
+		                            'billing_address_state' => 'string',
 		                            'active' => 'boolean',
 		                            'frozen' => 'boolean',
 		                            'balance' => 'decimal',
@@ -625,6 +638,7 @@ class ResultType extends BaseType
 		                                    'billing_address_address' => 'string',
 		                                    'billing_address_zip' => 'string',
 		                                    'billing_address_phone' => 'string',
+		                                    'billing_address_state' => 'string',
 		                                    'active' => 'boolean',
 		                                    'frozen' => 'boolean',
 		                                    'balance' => 'decimal',
@@ -667,6 +681,7 @@ class ResultType extends BaseType
 		                            'billing_address_address' => 'string',
 		                            'billing_address_zip' => 'string',
 		                            'billing_address_phone' => 'string',
+		                            'billing_address_state' => 'string',
 		                            'active' => 'boolean',
 		                            'frozen' => 'boolean',
 		                            'balance' => 'decimal',
@@ -703,6 +718,7 @@ class ResultType extends BaseType
 		                                    'billing_address_address' => 'string',
 		                                    'billing_address_zip' => 'string',
 		                                    'billing_address_phone' => 'string',
+		                                    'billing_address_state' => 'string',
 		                                    'active' => 'boolean',
 		                                    'frozen' => 'boolean',
 		                                    'balance' => 'decimal',
@@ -742,6 +758,7 @@ class ResultType extends BaseType
 		                                    'billing_address_address' => 'string',
 		                                    'billing_address_zip' => 'string',
 		                                    'billing_address_phone' => 'string',
+		                                    'billing_address_state' => 'string',
 		                                    'active' => 'boolean',
 		                                    'frozen' => 'boolean',
 		                                    'balance' => 'decimal',
@@ -778,6 +795,7 @@ class ResultType extends BaseType
 		                                            'billing_address_address' => 'string',
 		                                            'billing_address_zip' => 'string',
 		                                            'billing_address_phone' => 'string',
+		                                            'billing_address_state' => 'string',
 		                                            'active' => 'boolean',
 		                                            'frozen' => 'boolean',
 		                                            'balance' => 'decimal',
@@ -1345,6 +1363,15 @@ class ResultType extends BaseType
 	}
 
 
+	public function TransferMoneyToUser()
+	{
+		return array (
+		    'result' => 'number',
+		    'balance' => 'decimal',
+		);
+	}
+
+
 	public function CreateCallList()
 	{
 		return array (
@@ -1486,6 +1513,7 @@ class ResultType extends BaseType
 		            'scenario_name' => 'string',
 		            'scenario_script' => 'string',
 		            'modified' => 'timestamp',
+		            'parent' => 'boolean',
 		        ),
 		    ),
 		    'total_count' => 'number',
@@ -1583,6 +1611,7 @@ class ResultType extends BaseType
 		                    'scenario_name' => 'string',
 		                    'scenario_script' => 'string',
 		                    'modified' => 'timestamp',
+		                    'parent' => 'boolean',
 		                ),
 		            ),
 		            'modified' => 'timestamp',
@@ -35153,7 +35182,10 @@ class ResultType extends BaseType
 	public function AddSubUser()
 	{
 		return array (
-		    'result' => 'number',
+		    'result' =>
+		    array (
+		        'subuser_id' => 'number',
+		    ),
 		);
 	}
 

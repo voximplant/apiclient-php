@@ -6,6 +6,7 @@ use Voximplant\Interfaces\AddUserReturn;
 use Voximplant\Interfaces\DelUserReturn;
 use Voximplant\Interfaces\GetUsersReturn;
 use Voximplant\Interfaces\SetUserInfoReturn;
+use Voximplant\Interfaces\TransferMoneyToUserReturn;
 use Voximplant\Interfaces\UsersInterface;
 
 class Users implements UsersInterface
@@ -24,6 +25,9 @@ class Users implements UsersInterface
 	/** @object GetUsers */
 	protected $GetUsersReturn;
 
+	/** @object TransferMoneyToUser */
+	protected $TransferMoneyToUserReturn;
+
 
 	public function __construct($client)
 	{
@@ -33,6 +37,7 @@ class Users implements UsersInterface
 		$this->DelUserReturn = new DelUserReturn();
 		$this->SetUserInfoReturn = new SetUserInfoReturn();
 		$this->GetUsersReturn = new GetUsersReturn();
+		$this->TransferMoneyToUserReturn = new TransferMoneyToUserReturn();
 	}
 
 
@@ -81,5 +86,17 @@ class Users implements UsersInterface
 		    $this->GetUsersReturn->$key = $value;
 		}
 		return $this->GetUsersReturn;
+	}
+
+
+	/**
+	 * @method Transfer the account's money to the user or transfer the user's money to the account if the money amount is negative.
+	 */
+	public function TransferMoneyToUser(Params\TransferMoneyToUserParams $params = null): TransferMoneyToUserReturn
+	{
+		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+		    $this->TransferMoneyToUserReturn->$key = $value;
+		}
+		return $this->TransferMoneyToUserReturn;
 	}
 }

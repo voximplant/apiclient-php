@@ -21,11 +21,9 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * with_roles - Show subuser's roles
  */
 $params = new GetSubUsersParams();
 
-$params->with_roles = true;
 
 // Get subusers info
 $result = $voxApi->RoleSystem->GetSubUsers($params);

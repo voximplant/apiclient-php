@@ -21,11 +21,9 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * with_roles - Show roles for the key.
  */
 $params = new GetKeysParams();
 
-$params->with_roles = true;
 
 // Get keys info of the specified account.
 $result = $voxApi->RoleSystem->GetKeys($params);

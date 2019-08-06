@@ -19,6 +19,9 @@ class GetUsersParams
 	/** @var number The ACD queue ID to filter. */
 	public $acd_queue_id;
 
+	/** @var number The excluded ACD queue ID to filter. */
+	public $excluded_acd_queue_id;
+
 	/** @var number The user ID to filter. */
 	public $user_id;
 

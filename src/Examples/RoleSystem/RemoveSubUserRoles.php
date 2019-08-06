@@ -27,7 +27,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 $params = new RemoveSubUserRolesParams();
 
 $params->subuser_id = 12;
-$params->role_id = '1;2;3';
+$params->role_id = array (
+    0 => 1,
+    1 => 2,
+    2 => 3,
+);
 
 // Remove roles 1,2,3 from the subuser with id = 12
 $result = $voxApi->RoleSystem->RemoveSubUserRoles($params);

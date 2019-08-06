@@ -21,11 +21,13 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
+ * new_subuser_name - Login of a new subuser, should be unique within the Voximplant account. The login specified is always converted to lowercase.
+ * new_subuser_password - Password of a new subuser, plain text.
  */
 $params = new AddSubUserParams();
 
-$params->login = 'test_login';
-$params->password = 'test_pass';
+$params->new_subuser_name = 'test_login';
+$params->new_subuser_password = 'test_pass';
 
 // Create a new subuser for account_id = 1
 $result = $voxApi->RoleSystem->AddSubUser($params);

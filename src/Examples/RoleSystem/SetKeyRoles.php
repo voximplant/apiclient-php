@@ -27,7 +27,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 $params = new SetKeyRolesParams();
 
 $params->key_id = 'ab81c76e-573e-4046-9af9-105269dfafca';
-$params->role_id = '1;2;3';
+$params->role_id = array (
+    0 => 1,
+    1 => 2,
+    2 => 3,
+);
 
 // Set roles 1, 2, 3 for the key.
 $result = $voxApi->RoleSystem->SetKeyRoles($params);

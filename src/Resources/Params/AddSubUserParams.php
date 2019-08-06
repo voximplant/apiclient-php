@@ -10,10 +10,10 @@ class AddSubUserParams
 	/** @var string Password of a new subuser, plain text. */
 	public $new_subuser_password;
 
-	/** @var string The role id list separated by the ';' symbol. */
+	/** @var intlist The role id list separated by the ';' symbol. */
 	public $role_id;
 
-	/** @var string The role name list separated by the ';' symbol. */
+	/** @var stringlist The role name list separated by the ';' symbol. */
 	public $role_name;
 
 	/** @var string Description of a new subuser. */

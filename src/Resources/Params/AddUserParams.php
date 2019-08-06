@@ -19,7 +19,7 @@ class AddUserParams
 	/** @var string The application name which new user will be bound to. Could be used instead of the application_id parameter. */
 	public $application_name;
 
-	/** @var boolean Does the parent account's money use? */
+	/** @var boolean 'True' if the user will use the parent account's money, 'false' if the user will have a separate balance. */
 	public $parent_accounting;
 
 	/** @var string The user mobile phone. The length must be less than 50. */

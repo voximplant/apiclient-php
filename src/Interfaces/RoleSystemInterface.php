@@ -178,7 +178,7 @@ interface RoleSystemInterface
 }
 class AddSubUserReturn
 {
-	/** @var number */
+	/** @var SubUserID */
 	public $result;
 
 	/** @var array The returned error message. */

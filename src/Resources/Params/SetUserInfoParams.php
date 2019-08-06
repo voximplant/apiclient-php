@@ -25,7 +25,7 @@ class SetUserInfoParams
 	/** @var string The new user password. The length must be at least 6 symbols. */
 	public $user_password;
 
-	/** @var boolean Does the parent account's money use? */
+	/** @var boolean  Set 'true' to use the parent account's money, 'false' to use a separate user balance. */
 	public $parent_accounting;
 
 	/** @var boolean The user enable flag */

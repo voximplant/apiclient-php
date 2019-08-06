@@ -245,6 +245,7 @@ class RequestType extends BaseType
 		    'skill_id' => 'number',
 		    'excluded_skill_id' => 'number',
 		    'acd_queue_id' => 'number',
+		    'excluded_acd_queue_id' => 'number',
 		    'user_id' => 'number',
 		    'user_name' => 'string',
 		    'user_active' => 'boolean',
@@ -257,6 +258,22 @@ class RequestType extends BaseType
 		    'offset' => 'number',
 		    'order_by' => 'string',
 		    'return_live_balance' => 'boolean',
+		);
+	}
+
+
+	public function TransferMoneyToUser()
+	{
+		return array (
+		    'user_id' => 'intlist',
+		    'user_name' => 'stringlist',
+		    'amount' => 'decimal',
+		    'application_id' => 'number',
+		    'application_name' => 'string',
+		    'currency' => 'string',
+		    'strict_mode' => 'boolean',
+		    'user_transaction_description' => 'string',
+		    'account_transaction_description' => 'string',
 		);
 	}
 
@@ -1564,8 +1581,8 @@ class RequestType extends BaseType
 	{
 		return array (
 		    'description' => 'string',
-		    'role_id' => 'string',
-		    'role_name' => 'string',
+		    'role_id' => 'intlist',
+		    'role_name' => 'stringlist',
 		);
 	}
 
@@ -1602,8 +1619,8 @@ class RequestType extends BaseType
 	{
 		return array (
 		    'key_id' => 'string',
-		    'role_id' => 'string',
-		    'role_name' => 'string',
+		    'role_id' => 'intlist',
+		    'role_name' => 'stringlist',
 		);
 	}
 
@@ -1620,8 +1637,8 @@ class RequestType extends BaseType
 	{
 		return array (
 		    'key_id' => 'string',
-		    'role_id' => 'string',
-		    'role_name' => 'string',
+		    'role_id' => 'intlist',
+		    'role_name' => 'stringlist',
 		);
 	}
 
@@ -1631,8 +1648,8 @@ class RequestType extends BaseType
 		return array (
 		    'new_subuser_name' => 'string',
 		    'new_subuser_password' => 'string',
-		    'role_id' => 'string',
-		    'role_name' => 'string',
+		    'role_id' => 'intlist',
+		    'role_name' => 'stringlist',
 		    'description' => 'string',
 		);
 	}
@@ -1672,8 +1689,8 @@ class RequestType extends BaseType
 	{
 		return array (
 		    'subuser_id' => 'number',
-		    'role_id' => 'string',
-		    'role_name' => 'string',
+		    'role_id' => 'intlist',
+		    'role_name' => 'stringlist',
 		);
 	}
 
@@ -1682,6 +1699,7 @@ class RequestType extends BaseType
 	{
 		return array (
 		    'subuser_id' => 'number',
+		    'with_expanded_roles' => 'boolean',
 		);
 	}
 
@@ -1690,8 +1708,9 @@ class RequestType extends BaseType
 	{
 		return array (
 		    'subuser_id' => 'number',
-		    'role_id' => 'string',
-		    'role_name' => 'string',
+		    'role_id' => 'intlist',
+		    'role_name' => 'stringlist',
+		    'force' => 'boolean',
 		);
 	}
 

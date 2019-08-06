@@ -27,7 +27,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 $params = new RemoveKeyRolesParams();
 
 $params->key_id = 'ab81c90e-543e-4446-9af9-105269dfafca';
-$params->role_id = '1;2;3';
+$params->role_id = array (
+    0 => 1,
+    1 => 2,
+    2 => 3,
+);
 
 // Remove the roles 1, 2, 3 from the key.
 $result = $voxApi->RoleSystem->RemoveKeyRoles($params);
