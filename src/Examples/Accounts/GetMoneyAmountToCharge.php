@@ -21,10 +21,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
+ * currency - The currency name. Examples: USD, RUR, EUR.
  */
 $params = new GetMoneyAmountToChargeParams();
 
-$params->amp;currency = 'USD';
+$params->currency = 'USD';
 
 // Get the recommended money amount to charge in USD.
 $result = $voxApi->Accounts->GetMoneyAmountToCharge($params);

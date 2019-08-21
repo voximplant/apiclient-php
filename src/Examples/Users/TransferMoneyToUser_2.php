@@ -23,12 +23,13 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * user_id - The user ID list or the 'all' value.
  * amount - The money amount, $. The absolute amount value must be equal or greater than 0.01
+ * currency - The amount currency. Examples: RUR, EUR, USD.
  */
 $params = new TransferMoneyToUserParams();
 
 $params->user_id = 1;
 $params->amount = -5.67;
-$params->amp;currency = 'USD';
+$params->currency = 'USD';
 
 // Transfer 5.67 $ from the user 1 to the account.
 $result = $voxApi->Users->TransferMoneyToUser($params);
