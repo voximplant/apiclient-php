@@ -2,7 +2,7 @@
 
 namespace Voximplant\Resources\Types;
 
-class RequestType extends BaseType
+class RequestType
 {
 	public function GetAccountInfo()
 	{

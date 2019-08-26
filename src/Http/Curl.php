@@ -14,6 +14,11 @@ class Curl
 	private $client;
 
 
+	/**
+	 * Curl constructor.
+	 *
+	 * @param $client
+	 */
 	public function __construct($client)
 	{
 		$this->client = $client;
@@ -21,6 +26,13 @@ class Curl
 	}
 
 
+	/**
+	 * @param $url
+	 * @param $data
+	 *
+	 * @return mixed
+	 * @throws Exception
+	 */
 	public function send($url, $data)
 	{
 		$ch = curl_init();

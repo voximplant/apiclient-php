@@ -2,7 +2,7 @@
 
 namespace Voximplant\Resources\Types;
 
-class ResultType extends BaseType
+class ResultType
 {
 	public function GetAccountInfo()
 	{

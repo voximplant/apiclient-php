@@ -69,7 +69,7 @@ class VoximplantApi
 	/** @var object Users Adds a new user. */
 	public $Users;
 
-	/** @var object CallLists Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the options ____start_execution_time__ and ____end_execution_time__ in CSV file. Time is in UTC+0 24-h format: HH:mm:ss. IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active. */
+	/** @var object CallLists Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the following options in a CSV file: ____start_execution_time__ – when the call list processing will start every day____end_execution_time__ – when the call list processing will stop every day____start_at__ – when the call list processing will start. If not specified, the processing will start immediately after a method call.Time is in UTC+0 24-h format: HH:mm:ss. IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active. */
 	public $CallLists;
 
 	/** @var object Scenarios Adds a new scenario. Please use the POST method. */
@@ -130,6 +130,12 @@ class VoximplantApi
 	public $RoleSystem;
 
 
+	/**
+	 * VoximplantApi constructor.
+	 *
+	 * @param bool $tokenPath
+	 * @param bool $host
+	 */
 	public function __construct($tokenPath = false, $host = false)
 	{
 		// Token file path
@@ -178,6 +184,14 @@ class VoximplantApi
 	}
 
 
+	/**
+	 * @param      $method
+	 * @param      $params
+	 * @param bool $filterArray
+	 *
+	 * @return array|mixed
+	 * @throws \Exception
+	 */
 	public function request($method, $params, $filterArray = true)
 	{
 		// Remove empty params

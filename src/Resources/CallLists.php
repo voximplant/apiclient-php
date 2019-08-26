@@ -57,7 +57,7 @@ class CallLists implements CallListsInterface
 
 
 	/**
-	 * @method Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the options ____start_execution_time__ and ____end_execution_time__ in CSV file. Time is in UTC+0 24-h format: HH:mm:ss. IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active.
+	 * @method Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the following options in a CSV file: ____start_execution_time__ – when the call list processing will start every day____end_execution_time__ – when the call list processing will stop every day____start_at__ – when the call list processing will start. If not specified, the processing will start immediately after a method call.Time is in UTC+0 24-h format: HH:mm:ss. IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active.
 	 */
 	public function CreateCallList(Params\CreateCallListParams $params = null): CreateCallListReturn
 	{

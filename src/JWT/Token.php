@@ -10,6 +10,11 @@ class Token
 	public $expTime = 60;
 
 
+	/**
+	 * @param $keyPath
+	 *
+	 * @return bool|string
+	 */
 	public function generateAuthorizationHeader($keyPath)
 	{
 		$token = false;
