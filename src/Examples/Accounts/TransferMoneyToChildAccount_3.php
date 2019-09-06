@@ -24,12 +24,14 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * child_account_id - The child account ID list.
  * amount - The money amount, $. The absolute amount value must be equal or greater than 0.01
  * strict_mode - Returns error if strict_mode is true and an child account or the parent account hasn't enough money.
+ * currency - The amount currency (the parent account currency by default). Examples: RUR, EUR, USD.
  */
 $params = new TransferMoneyToChildAccountParams();
 
 $params->child_account_id = 1;
 $params->amount = -10000000.0;
 $params->strict_mode = false;
+$params->currency = 'USD';
 
 // Transfer the all money from the child account 1 to the parent account.
 $result = $voxApi->Accounts->TransferMoneyToChildAccount($params);
