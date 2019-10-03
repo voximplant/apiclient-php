@@ -348,6 +348,7 @@ class RequestType
 		    'type_list' => 'string',
 		    'count' => 'number',
 		    'offset' => 'number',
+		    'application_id' => 'intlist',
 		);
 	}
 
@@ -580,6 +581,7 @@ class RequestType
 		    'desc_order' => 'boolean',
 		    'count' => 'number',
 		    'offset' => 'number',
+		    'application_id' => 'intlist',
 		);
 	}
 
@@ -1502,7 +1504,8 @@ class RequestType
 	public function AddDialogflowKey()
 	{
 		return array (
-		    'external_app_name' => 'string',
+		    'application_id' => 'string',
+		    'application_name' => 'string',
 		    'json_credentials' => 'string',
 		    'description' => 'string',
 		);
@@ -1629,6 +1632,7 @@ class RequestType
 	{
 		return array (
 		    'key_id' => 'string',
+		    'with_expanded_roles' => 'boolean',
 		);
 	}
 

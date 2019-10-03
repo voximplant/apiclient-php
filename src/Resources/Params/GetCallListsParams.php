@@ -24,4 +24,7 @@ class GetCallListsParams
 
 	/** @var number The first N records will be skipped in the output. */
 	public $offset;
+
+	/** @var intlist The application ID to filter. Can be a list separated by the ';' symbol or the 'all' value. */
+	public $application_id;
 }
