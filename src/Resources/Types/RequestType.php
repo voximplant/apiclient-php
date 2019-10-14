@@ -341,6 +341,7 @@ class RequestType
 	public function GetCallLists()
 	{
 		return array (
+		    'list_id' => 'intlist',
 		    'name' => 'string',
 		    'is_active' => 'boolean',
 		    'from_date' => 'timestamp',
@@ -387,6 +388,8 @@ class RequestType
 		return array (
 		    'scenario_name' => 'string',
 		    'scenario_script' => 'string',
+		    'rule_id' => 'number',
+		    'rule_name' => 'string',
 		    'rewrite' => 'boolean',
 		);
 	}
@@ -1442,7 +1445,6 @@ class RequestType
 		return array (
 		    'push_provider_name' => 'string',
 		    'push_provider_id' => 'number',
-		    'external_app_name' => 'string',
 		    'credential_bundle' => 'string',
 		    'cert_content' => 'string',
 		    'cert_file_name' => 'string',
@@ -1458,7 +1460,6 @@ class RequestType
 	{
 		return array (
 		    'push_credential_id' => 'number',
-		    'external_app_name' => 'string',
 		    'cert_content' => 'string',
 		    'cert_password' => 'string',
 		    'is_dev_mode' => 'boolean',
@@ -1484,7 +1485,6 @@ class RequestType
 		    'push_provider_id' => 'number',
 		    'application_name' => 'string',
 		    'application_id' => 'number',
-		    'external_app' => 'string',
 		    'with_cert' => 'boolean',
 		    'with_secret_info' => 'boolean',
 		);
@@ -1535,7 +1535,6 @@ class RequestType
 		    'dialogflow_key_id' => 'number',
 		    'application_name' => 'string',
 		    'application_id' => 'number',
-		    'external_app' => 'string',
 		    'with_secret_info' => 'boolean',
 		);
 	}
@@ -1730,6 +1729,57 @@ class RequestType
 	public function GetRoleGroups()
 	{
 		return array (
+		);
+	}
+
+
+	public function AddChildAccountSubscription()
+	{
+		return array (
+		    'child_account_id' => 'number',
+		    'subscription_template_id' => 'number',
+		    'subscription_name' => 'string',
+		);
+	}
+
+
+	public function GetChildAccountSubscriptions()
+	{
+		return array (
+		    'child_account_id' => 'number',
+		    'subscription_id' => 'number',
+		);
+	}
+
+
+	public function GetChildAccountSubscriptionTemplates()
+	{
+		return array (
+		);
+	}
+
+
+	public function DeactivateChildAccountSubscription()
+	{
+		return array (
+		    'subscription_id' => 'number',
+		    'child_account_id' => 'number',
+		    'subscription_finish_date' => 'timestamp',
+		);
+	}
+
+
+	public function GetSmsHistory()
+	{
+		return array (
+		    'source_number' => 'string',
+		    'destination_number' => 'string',
+		    'direction' => 'string',
+		    'count' => 'number',
+		    'offset' => 'number',
+		    'from_date' => 'date',
+		    'to_date' => 'date',
+		    'output' => 'string',
 		);
 	}
 }

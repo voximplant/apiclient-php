@@ -14,6 +14,12 @@ interface SMSInterface
 	 * @method Enable or disable SMS sending and receiving for the phone number. Can be used only for phone numbers with SMS support, which is indicated by the <b>is_sms_supported</b> property in the objects returned by the <a href='//voximplant.com/docs/references/httpapi/managing_phone_numbers#getphonenumbers'>/GetPhoneNumbers</a> HTTP API. Each inbound SMS message is billed according to the <a href='//voximplant.com/pricing'>pricing</a>. If enabled, SMS can be sent from this phone number using the <a href='//voximplant.com/docs/references/httpapi/managing_sms#sendsmsmessage'>/SendSmsMessage</a> HTTP API and received using the [InboundSmsCallback] property of the HTTP callback. See <a href='//voximplant.com/blog/http-api-callbacks'>this article</a> for HTTP callback details.
 	 */
 	public function ControlSms(\Voximplant\Resources\Params\ControlSmsParams $params);
+
+
+	/**
+	 * @method Get history of sent and/or received SMS.
+	 */
+	public function GetSmsHistory(\Voximplant\Resources\Params\GetSmsHistoryParams $params);
 }
 class SendSmsMessageReturn
 {
@@ -33,6 +39,20 @@ interface SMSInterface
 {
 	/** @var number */
 	public $result;
+
+	/** @var array The returned error message. */
+	public $error;
+
+	/** @var array The returned error message. */
+	public $errors;
+}
+class GetSmsHistoryReturn
+{
+	/** @var [SmsHistoryType] */
+	public $result;
+
+	/** @var number Total number of distinct messages fetched. */
+	public $total_count;
 
 	/** @var array The returned error message. */
 	public $error;

@@ -22,13 +22,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * push_credential_id - The push credentials id.
- * external_app_name - The application name.
  * cert_password - The secret password for private key.
  */
 $params = new SetPushCredentialParams();
 
 $params->push_credential_id = 1;
-$params->external_app_name = 'testapp';
 $params->cert_password = '1234567';
 
 // Modify credentials.

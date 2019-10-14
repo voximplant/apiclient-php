@@ -4,6 +4,9 @@ namespace Voximplant\Resources\Params;
 
 class GetCallListsParams
 {
+	/** @var intlist The list ID to filter. Can be a list separated by the ';' symbol or the 'all' value. */
+	public $list_id;
+
 	/** @var string Find call lists by name */
 	public $name;
 

@@ -3,6 +3,7 @@
 namespace Voximplant\Resources;
 
 use Voximplant\Interfaces\ControlSmsReturn;
+use Voximplant\Interfaces\GetSmsHistoryReturn;
 use Voximplant\Interfaces\SMSInterface;
 use Voximplant\Interfaces\SendSmsMessageReturn;
 
@@ -16,6 +17,9 @@ class SMS implements SMSInterface
 	/** @object ControlSms */
 	protected $ControlSmsReturn;
 
+	/** @object GetSmsHistory */
+	protected $GetSmsHistoryReturn;
+
 
 	public function __construct($client)
 	{
@@ -23,6 +27,7 @@ class SMS implements SMSInterface
 
 		$this->SendSmsMessageReturn = new SendSmsMessageReturn();
 		$this->ControlSmsReturn = new ControlSmsReturn();
+		$this->GetSmsHistoryReturn = new GetSmsHistoryReturn();
 	}
 
 
@@ -47,5 +52,17 @@ class SMS implements SMSInterface
 		    $this->ControlSmsReturn->$key = $value;
 		}
 		return $this->ControlSmsReturn;
+	}
+
+
+	/**
+	 * @method Get history of sent and/or received SMS.
+	 */
+	public function GetSmsHistory(Params\GetSmsHistoryParams $params = null): GetSmsHistoryReturn
+	{
+		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+		    $this->GetSmsHistoryReturn->$key = $value;
+		}
+		return $this->GetSmsHistoryReturn;
 	}
 }

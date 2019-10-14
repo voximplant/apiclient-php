@@ -34466,7 +34466,6 @@ class ResultType
 		            'push_credential_id' => 'number',
 		            'push_provider_id' => 'number',
 		            'push_provider_name' => 'string',
-		            'external_app_name' => 'string',
 		            'credential_bundle' => 'string',
 		            'content' =>
 		            array (
@@ -34475,7 +34474,6 @@ class ResultType
 		                    'push_credential_id' => 'number',
 		                    'push_provider_id' => 'number',
 		                    'push_provider_name' => 'string',
-		                    'external_app_name' => 'string',
 		                    'credential_bundle' => 'string',
 		                ),
 		                'cert_file_name' => 'string',
@@ -34492,7 +34490,6 @@ class ResultType
 		                    'push_credential_id' => 'number',
 		                    'push_provider_id' => 'number',
 		                    'push_provider_name' => 'string',
-		                    'external_app_name' => 'string',
 		                    'credential_bundle' => 'string',
 		                    'content' =>
 		                    array (
@@ -34501,7 +34498,6 @@ class ResultType
 		                            'push_credential_id' => 'number',
 		                            'push_provider_id' => 'number',
 		                            'push_provider_name' => 'string',
-		                            'external_app_name' => 'string',
 		                            'credential_bundle' => 'string',
 		                        ),
 		                        'cert_file_name' => 'string',
@@ -34522,7 +34518,6 @@ class ResultType
 		                            'push_credential_id' => 'number',
 		                            'push_provider_id' => 'number',
 		                            'push_provider_name' => 'string',
-		                            'external_app_name' => 'string',
 		                            'credential_bundle' => 'string',
 		                            'content' =>
 		                            array (
@@ -34531,7 +34526,6 @@ class ResultType
 		                                    'push_credential_id' => 'number',
 		                                    'push_provider_id' => 'number',
 		                                    'push_provider_name' => 'string',
-		                                    'external_app_name' => 'string',
 		                                    'credential_bundle' => 'string',
 		                                ),
 		                                'cert_file_name' => 'string',
@@ -34573,7 +34567,6 @@ class ResultType
 		                                    'push_credential_id' => 'number',
 		                                    'push_provider_id' => 'number',
 		                                    'push_provider_name' => 'string',
-		                                    'external_app_name' => 'string',
 		                                    'credential_bundle' => 'string',
 		                                    'content' =>
 		                                    array (
@@ -34582,7 +34575,6 @@ class ResultType
 		                                            'push_credential_id' => 'number',
 		                                            'push_provider_id' => 'number',
 		                                            'push_provider_name' => 'string',
-		                                            'external_app_name' => 'string',
 		                                            'credential_bundle' => 'string',
 		                                        ),
 		                                        'cert_file_name' => 'string',
@@ -34628,7 +34620,6 @@ class ResultType
 		                                    'push_credential_id' => 'number',
 		                                    'push_provider_id' => 'number',
 		                                    'push_provider_name' => 'string',
-		                                    'external_app_name' => 'string',
 		                                    'credential_bundle' => 'string',
 		                                    'content' =>
 		                                    array (
@@ -34637,7 +34628,6 @@ class ResultType
 		                                            'push_credential_id' => 'number',
 		                                            'push_provider_id' => 'number',
 		                                            'push_provider_name' => 'string',
-		                                            'external_app_name' => 'string',
 		                                            'credential_bundle' => 'string',
 		                                        ),
 		                                        'cert_file_name' => 'string',
@@ -34679,7 +34669,6 @@ class ResultType
 		                                            'push_credential_id' => 'number',
 		                                            'push_provider_id' => 'number',
 		                                            'push_provider_name' => 'string',
-		                                            'external_app_name' => 'string',
 		                                            'credential_bundle' => 'string',
 		                                            'content' =>
 		                                            array (
@@ -34688,7 +34677,6 @@ class ResultType
 		                                                    'push_credential_id' => 'number',
 		                                                    'push_provider_id' => 'number',
 		                                                    'push_provider_name' => 'string',
-		                                                    'external_app_name' => 'string',
 		                                                    'credential_bundle' => 'string',
 		                                                ),
 		                                                'cert_file_name' => 'string',
@@ -34786,13 +34774,11 @@ class ResultType
 		        '|array|' =>
 		        array (
 		            'dialogflow_key_id' => 'number',
-		            'external_app_name' => 'string',
 		            'content' =>
 		            array (
 		                '|array|' =>
 		                array (
 		                    'dialogflow_key_id' => 'number',
-		                    'external_app_name' => 'string',
 		                ),
 		                'project_id' => 'string',
 		                'json_file' => 'string',
@@ -34802,13 +34788,11 @@ class ResultType
 		                '|array|' =>
 		                array (
 		                    'dialogflow_key_id' => 'number',
-		                    'external_app_name' => 'string',
 		                    'content' =>
 		                    array (
 		                        '|array|' =>
 		                        array (
 		                            'dialogflow_key_id' => 'number',
-		                            'external_app_name' => 'string',
 		                        ),
 		                        'project_id' => 'string',
 		                        'json_file' => 'string',
@@ -34822,13 +34806,11 @@ class ResultType
 		                        '|array|' =>
 		                        array (
 		                            'dialogflow_key_id' => 'number',
-		                            'external_app_name' => 'string',
 		                            'content' =>
 		                            array (
 		                                '|array|' =>
 		                                array (
 		                                    'dialogflow_key_id' => 'number',
-		                                    'external_app_name' => 'string',
 		                                ),
 		                                'project_id' => 'string',
 		                                'json_file' => 'string',
@@ -34863,13 +34845,11 @@ class ResultType
 		                                '|array|' =>
 		                                array (
 		                                    'dialogflow_key_id' => 'number',
-		                                    'external_app_name' => 'string',
 		                                    'content' =>
 		                                    array (
 		                                        '|array|' =>
 		                                        array (
 		                                            'dialogflow_key_id' => 'number',
-		                                            'external_app_name' => 'string',
 		                                        ),
 		                                        'project_id' => 'string',
 		                                        'json_file' => 'string',
@@ -34908,13 +34888,11 @@ class ResultType
 		                                '|array|' =>
 		                                array (
 		                                    'dialogflow_key_id' => 'number',
-		                                    'external_app_name' => 'string',
 		                                    'content' =>
 		                                    array (
 		                                        '|array|' =>
 		                                        array (
 		                                            'dialogflow_key_id' => 'number',
-		                                            'external_app_name' => 'string',
 		                                        ),
 		                                        'project_id' => 'string',
 		                                        'json_file' => 'string',
@@ -34949,13 +34927,11 @@ class ResultType
 		                                        '|array|' =>
 		                                        array (
 		                                            'dialogflow_key_id' => 'number',
-		                                            'external_app_name' => 'string',
 		                                            'content' =>
 		                                            array (
 		                                                '|array|' =>
 		                                                array (
 		                                                    'dialogflow_key_id' => 'number',
-		                                                    'external_app_name' => 'string',
 		                                                ),
 		                                                'project_id' => 'string',
 		                                                'json_file' => 'string',
@@ -35303,6 +35279,96 @@ class ResultType
 		            'name' => 'string',
 		        ),
 		    ),
+		);
+	}
+
+
+	public function AddChildAccountSubscription()
+	{
+		return array (
+		    'result' => 'number',
+		    'subscriptions' =>
+		    array (
+		        '|array|' =>
+		        array (
+		            'subscription_id' => 'number',
+		            'subscription_name' => 'string',
+		            'subscription_template_id' => 'number',
+		            'auto_charge' => 'boolean',
+		            'next_renewal' => 'date',
+		            'periodic_price' => 'decimal',
+		            'active' => 'boolean',
+		        ),
+		    ),
+		);
+	}
+
+
+	public function GetChildAccountSubscriptions()
+	{
+		return array (
+		    'result' =>
+		    array (
+		        '|array|' =>
+		        array (
+		            'subscription_id' => 'number',
+		            'subscription_name' => 'string',
+		            'subscription_template_id' => 'number',
+		            'auto_charge' => 'boolean',
+		            'next_renewal' => 'date',
+		            'periodic_price' => 'decimal',
+		            'active' => 'boolean',
+		        ),
+		    ),
+		);
+	}
+
+
+	public function GetChildAccountSubscriptionTemplates()
+	{
+		return array (
+		    'result' =>
+		    array (
+		        '|array|' =>
+		        array (
+		            'subscription_template_id' => 'number',
+		            'subscription_template_name' => 'string',
+		            'installation_price' => 'decimal',
+		            'periodic_price' => 'decimal',
+		        ),
+		    ),
+		);
+	}
+
+
+	public function DeactivateChildAccountSubscription()
+	{
+		return array (
+		    'result' => 'number',
+		);
+	}
+
+
+	public function GetSmsHistory()
+	{
+		return array (
+		    'result' =>
+		    array (
+		        '|array|' =>
+		        array (
+		            'sms_id' => 'number',
+		            'source_number' => 'number',
+		            'destination_number' => 'number',
+		            'direction' => 'string',
+		            'fragments' => 'number',
+		            'cost' => 'decimal',
+		            'status_id' => 'number',
+		            'error_message' => 'string',
+		            'processed_date' => 'date',
+		            'transaction_id' => 'number',
+		        ),
+		    ),
+		    'total_count' => 'number',
 		);
 	}
 }

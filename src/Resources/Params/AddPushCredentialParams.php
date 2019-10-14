@@ -10,9 +10,6 @@ class AddPushCredentialParams
 	/** @var number The push provider id. */
 	public $push_provider_id;
 
-	/** @var string The application name. */
-	public $external_app_name;
-
 	/** @var string The bundle of Android/iOS application. */
 	public $credential_bundle;
 

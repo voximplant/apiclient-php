@@ -7,9 +7,6 @@ class SetPushCredentialParams
 	/** @var number The push credentials id. */
 	public $push_credential_id;
 
-	/** @var string The application name. */
-	public $external_app_name;
-
 	/** @var string Public and private keys in PKCS12 format. */
 	public $cert_content;
 

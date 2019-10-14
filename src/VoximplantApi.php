@@ -12,6 +12,7 @@ use Voximplant\Resources\Applications;
 use Voximplant\Resources\AuthorizedIPs;
 use Voximplant\Resources\CallLists;
 use Voximplant\Resources\CallerIDs;
+use Voximplant\Resources\ChildAccounts;
 use Voximplant\Resources\DialogflowCredentials;
 use Voximplant\Resources\History;
 use Voximplant\Resources\PSTNBlacklist;
@@ -90,7 +91,7 @@ class VoximplantApi
 	/** @var object SIPRegistration Create a new SIP registration. You should specify the application_id or application_name if you specify the rule_name or user_id, or user_name. You should set is_persistent=true if you specify the user_id or user_name. You can bind only one SIP registration to the user (the previous SIP registration will be auto unbound). */
 	public $SIPRegistration;
 
-	/** @var object PhoneNumbers Attach the phone number to the account. To attach the German, Italian phone numbers you should specify the phone_owner_* parameters. */
+	/** @var object PhoneNumbers Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps. */
 	public $PhoneNumbers;
 
 	/** @var object CallerIDs Adds a new caller ID. Caller ID is the phone that will be displayed to the called user. This number can be used for call back. */
@@ -128,6 +129,9 @@ class VoximplantApi
 
 	/** @var object RoleSystem Creates a public/private key pair. You can optionally specify one or more roles for the key, see [this article](https://voximplant.com/blog/service-accounts-introduction) for details. */
 	public $RoleSystem;
+
+	/** @var object ChildAccounts Adds a new subscription for the specified child account. */
+	public $ChildAccounts;
 
 
 	/**
@@ -181,6 +185,7 @@ class VoximplantApi
 		$this->SMS = new SMS($this);
 		$this->RecordStorages = new RecordStorages($this);
 		$this->RoleSystem = new RoleSystem($this);
+		$this->ChildAccounts = new ChildAccounts($this);
 	}
 
 

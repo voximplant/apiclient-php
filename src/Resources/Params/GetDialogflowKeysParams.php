@@ -13,9 +13,6 @@ class GetDialogflowKeysParams
 	/** @var number The id of bound application. */
 	public $application_id;
 
-	/** @var string The push provider's application name. */
-	public $external_app;
-
 	/** @var boolean Set true to get the json web key. */
 	public $with_secret_info;
 }

@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method ReorderScenarios Configures the order of scenarios that are assigned to the specified rule.
+ * @method GetChildAccountSubscriptionTemplates Gets all the eligible subscription templates. A template is considered to be eligible if it is of a type that supports child accounts management.
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\ReorderScenariosParams;
+use Voximplant\Resources\Params\GetChildAccountSubscriptionTemplatesParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -21,20 +21,12 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * rule_id - The rule ID.
- * scenario_id - The scenario ID list.
  */
-$params = new ReorderScenariosParams();
+$params = new GetChildAccountSubscriptionTemplatesParams();
 
-$params->rule_id = 2;
-$params->scenario_id = array (
-    0 => 17,
-    1 => 15,
-    2 => 20,
-);
 
-// Set the scenario loading order: 17, 15, 20.
-$result = $voxApi->Scenarios->ReorderScenarios($params);
+// Get the eligible subscription templates.
+$result = $voxApi->ChildAccounts->GetChildAccountSubscriptionTemplates($params);
 
 // Show result
 var_dump($result);

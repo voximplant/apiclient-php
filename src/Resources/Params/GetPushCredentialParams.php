@@ -19,9 +19,6 @@ class GetPushCredentialParams
 	/** @var number The id of bound application. */
 	public $application_id;
 
-	/** @var string The push provider's application name. */
-	public $external_app;
-
 	/** @var boolean Set true to get the user's certificate. */
 	public $with_cert;
 

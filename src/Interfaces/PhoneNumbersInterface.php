@@ -5,7 +5,7 @@ namespace Voximplant\Interfaces;
 interface PhoneNumbersInterface
 {
 	/**
-	 * @method Attach the phone number to the account. To attach the German, Italian phone numbers you should specify the phone_owner_* parameters.
+	 * @method Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps.
 	 */
 	public function AttachPhoneNumber(\Voximplant\Resources\Params\AttachPhoneNumberParams $params);
 

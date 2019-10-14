@@ -117,7 +117,7 @@ class Scenarios implements ScenariosInterface
 
 
 	/**
-	 * @method Configures the order of the rules that are assigned to the specified rule.
+	 * @method Configures the order of scenarios that are assigned to the specified rule.
 	 */
 	public function ReorderScenarios(Params\ReorderScenariosParams $params = null): ReorderScenariosReturn
 	{
