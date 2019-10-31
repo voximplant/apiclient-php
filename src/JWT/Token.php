@@ -23,20 +23,14 @@ class Token
 		if (file_exists($keyPath)) {
 		    $privateKey = json_decode(file_get_contents($keyPath));
 
-		    if(!empty($privateKey->result->private_key)) {
-		        $keyData = $privateKey->result;
-		    } elseif (!empty($privateKey->private_key)) {
-		        $keyData = $privateKey;
-		    }
-
-		    if($keyData) {
+		    if($privateKey) {
 		        $payload = [
 		            'iat' => time(), // start time
-		            'iss' => $keyData->account_id,
+		            'iss' => $privateKey->account_id,
 		            'exp' => time() + $this->expTime, // finish time
 		        ];
 
-		        $token = 'Bearer ' . JWT::encode($payload, $keyData->private_key, 'RS256', $keyData->key_id);
+		        $token = 'Bearer ' . JWT::encode($payload, $privateKey->private_key, 'RS256', $privateKey->key_id);
 		    }
 		}
 

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method StartScenarios Run the JavaScript scenarios on a VoxImplant server. The scenarios run in a new media session.
+ * @method StartScenarios Runs JavaScript scenarios on a VoxImplant server. The scenarios run in a new media session.
  */
 
 // Path to your autoload.php

@@ -833,7 +833,7 @@ class RequestType
 	{
 		return array (
 		    'phone_count' => 'number',
-		    'phone_number' => 'string',
+		    'phone_number' => 'stringlist',
 		    'country_code' => 'string',
 		    'phone_category_name' => 'string',
 		    'country_state' => 'string',
@@ -1780,6 +1780,14 @@ class RequestType
 		    'from_date' => 'date',
 		    'to_date' => 'date',
 		    'output' => 'string',
+		);
+	}
+
+
+	public function DownloadAgreement()
+	{
+		return array (
+		    'document_id' => 'number',
 		);
 	}
 }

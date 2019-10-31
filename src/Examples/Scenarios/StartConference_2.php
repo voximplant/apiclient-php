@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method StartConference Start a new conference or join the conference.
+ * @method StartConference Runs a session for video conferencing or joins the existing video conference session.<br/><br/>When a session is created by calling this method, a scenario assigned to the specified **rule_id** will run on one of the servers dedicated to video conferencing. All further method calls with the same **rule_id** won't create a new video conference session, but join the already existing one.<br/><br/>Use the [StartScenarios] method for creating audio conferences.
  */
 
 // Path to your autoload.php

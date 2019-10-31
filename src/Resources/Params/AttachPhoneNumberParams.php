@@ -7,7 +7,7 @@ class AttachPhoneNumberParams
 	/** @var number The phone count to attach. */
 	public $phone_count;
 
-	/** @var string The phone number that can be used instead of phone_count. See the [GetNewPhoneNumbers] method. */
+	/** @var stringlist The phone number that can be used instead of phone_count. See the [GetNewPhoneNumbers] method. */
 	public $phone_number;
 
 	/** @var string The country code. */

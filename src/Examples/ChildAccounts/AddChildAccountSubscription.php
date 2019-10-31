@@ -22,12 +22,13 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * child_account_id - The child account ID.
+ * subscription_template_id - The subscription template ID.
  * subscription_name - The subscription name.
  */
 $params = new AddChildAccountSubscriptionParams();
 
 $params->child_account_id = 10;
-$params->template_id = '184';
+$params->subscription_template_id = 184;
 $params->subscription_name = 'Meaningful subscription name';
 
 // Create a subscription for the child account with ID = 10 using the subscription template with ID = 184.

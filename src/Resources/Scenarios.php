@@ -129,7 +129,7 @@ class Scenarios implements ScenariosInterface
 
 
 	/**
-	 * @method Run the JavaScript scenarios on a VoxImplant server. The scenarios run in a new media session.
+	 * @method Runs JavaScript scenarios on a VoxImplant server. The scenarios run in a new media session.
 	 */
 	public function StartScenarios(Params\StartScenariosParams $params = null): StartScenariosReturn
 	{
@@ -141,7 +141,7 @@ class Scenarios implements ScenariosInterface
 
 
 	/**
-	 * @method Start a new conference or join the conference.
+	 * @method Runs a session for video conferencing or joins the existing video conference session.When a session is created by calling this method, a scenario assigned to the specified **rule_id** will run on one of the servers dedicated to video conferencing. All further method calls with the same **rule_id** won't create a new video conference session, but join the already existing one.Use the [StartScenarios] method for creating audio conferences.
 	 */
 	public function StartConference(Params\StartConferenceParams $params = null): StartConferenceReturn
 	{

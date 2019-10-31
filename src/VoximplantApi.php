@@ -8,6 +8,7 @@ use Voximplant\Http\Curl;
 use Voximplant\Resources\Accounts;
 use Voximplant\Resources\AdminRoles;
 use Voximplant\Resources\AdminUsers;
+use Voximplant\Resources\Agreements;
 use Voximplant\Resources\Applications;
 use Voximplant\Resources\AuthorizedIPs;
 use Voximplant\Resources\CallLists;
@@ -70,7 +71,7 @@ class VoximplantApi
 	/** @var object Users Adds a new user. */
 	public $Users;
 
-	/** @var object CallLists Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the following options in a CSV file: ____start_execution_time__ – when the call list processing will start every day____end_execution_time__ – when the call list processing will stop every day____start_at__ – when the call list processing will start. If not specified, the processing will start immediately after a method call.Time is in UTC+0 24-h format: HH:mm:ss. IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active. */
+	/** @var object CallLists Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the following options in a CSV file: **__start_execution_time** – when the call list processing will start every day, UTC+0 24-h format: HH:mm:ss**__end_execution_time** – when the call list processing will stop every day,  UTC+0 24-h format: HH:mm:ss**__start_at** – when the call list processing will start, UNIX timestamp. If not specified, the processing will start immediately after a method callIMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active. */
 	public $CallLists;
 
 	/** @var object Scenarios Adds a new scenario. Please use the POST method. */
@@ -133,6 +134,9 @@ class VoximplantApi
 	/** @var object ChildAccounts Adds a new subscription for the specified child account. */
 	public $ChildAccounts;
 
+	/** @var object Agreements Downloads Agreement in PDF format */
+	public $Agreements;
+
 
 	/**
 	 * VoximplantApi constructor.
@@ -186,6 +190,7 @@ class VoximplantApi
 		$this->RecordStorages = new RecordStorages($this);
 		$this->RoleSystem = new RoleSystem($this);
 		$this->ChildAccounts = new ChildAccounts($this);
+		$this->Agreements = new Agreements($this);
 	}
 
 
@@ -211,8 +216,6 @@ class VoximplantApi
 		        $keyContent = json_decode($tokenContent);
 		        if (!empty($keyContent->account_id)) {
 		            $params['account_id'] = $keyContent->account_id;
-		        } elseif (!empty($keyContent->result->account_id)) {
-		            $params['account_id'] = $keyContent->result->account_id;
 		        }
 		    }
 		}

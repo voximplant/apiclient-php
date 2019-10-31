@@ -112,11 +112,7 @@ class ResultType
 		                'callback_url' => 'string',
 		                'callback_salt' => 'string',
 		                'send_js_error' => 'boolean',
-		                '|array|' =>
-		                array (
-		                    'min_amount' => 'number',
-		                    'currency' => 'string',
-		                ),
+		                'min_amount' => 'number',
 		            ),
 		            'bank_card' =>
 		            array (
@@ -188,17 +184,9 @@ class ResultType
 		                    'callback_url' => 'string',
 		                    'callback_salt' => 'string',
 		                    'send_js_error' => 'boolean',
-		                    '|array|' =>
-		                    array (
-		                        'min_amount' => 'number',
-		                        'currency' => 'string',
-		                    ),
-		                ),
-		                '|array|' =>
-		                array (
 		                    'min_amount' => 'number',
-		                    'currency' => 'string',
 		                ),
+		                'min_amount' => 'number',
 		            ),
 		            'invoice' =>
 		            array (
@@ -270,11 +258,7 @@ class ResultType
 		                    'callback_url' => 'string',
 		                    'callback_salt' => 'string',
 		                    'send_js_error' => 'boolean',
-		                    '|array|' =>
-		                    array (
-		                        'min_amount' => 'number',
-		                        'currency' => 'string',
-		                    ),
+		                    'min_amount' => 'number',
 		                ),
 		                'bank_card' =>
 		                array (
@@ -346,23 +330,11 @@ class ResultType
 		                        'callback_url' => 'string',
 		                        'callback_salt' => 'string',
 		                        'send_js_error' => 'boolean',
-		                        '|array|' =>
-		                        array (
-		                            'min_amount' => 'number',
-		                            'currency' => 'string',
-		                        ),
-		                    ),
-		                    '|array|' =>
-		                    array (
 		                        'min_amount' => 'number',
-		                        'currency' => 'string',
 		                    ),
-		                ),
-		                '|array|' =>
-		                array (
 		                    'min_amount' => 'number',
-		                    'currency' => 'string',
 		                ),
+		                'min_amount' => 'number',
 		            ),
 		        ),
 		    ),
@@ -574,8 +546,9 @@ class ResultType
 		                        'callback_url' => 'string',
 		                        'callback_salt' => 'string',
 		                        'send_js_error' => 'boolean',
-		                        'min_amount' => 'number',
 		                    ),
+		                    'min_amount' => 'number',
+		                    'currency' => 'string',
 		                ),
 		                'bank_card' =>
 		                array (
@@ -614,7 +587,6 @@ class ResultType
 		                        'callback_url' => 'string',
 		                        'callback_salt' => 'string',
 		                        'send_js_error' => 'boolean',
-		                        'min_amount' => 'number',
 		                    ),
 		                    'robokassa' =>
 		                    array (
@@ -653,9 +625,12 @@ class ResultType
 		                            'callback_url' => 'string',
 		                            'callback_salt' => 'string',
 		                            'send_js_error' => 'boolean',
-		                            'min_amount' => 'number',
 		                        ),
+		                        'min_amount' => 'number',
+		                        'currency' => 'string',
 		                    ),
+		                    'min_amount' => 'number',
+		                    'currency' => 'string',
 		                ),
 		                'invoice' =>
 		                array (
@@ -694,7 +669,6 @@ class ResultType
 		                        'callback_url' => 'string',
 		                        'callback_salt' => 'string',
 		                        'send_js_error' => 'boolean',
-		                        'min_amount' => 'number',
 		                    ),
 		                    'robokassa' =>
 		                    array (
@@ -733,8 +707,9 @@ class ResultType
 		                            'callback_url' => 'string',
 		                            'callback_salt' => 'string',
 		                            'send_js_error' => 'boolean',
-		                            'min_amount' => 'number',
 		                        ),
+		                        'min_amount' => 'number',
+		                        'currency' => 'string',
 		                    ),
 		                    'bank_card' =>
 		                    array (
@@ -773,7 +748,6 @@ class ResultType
 		                            'callback_url' => 'string',
 		                            'callback_salt' => 'string',
 		                            'send_js_error' => 'boolean',
-		                            'min_amount' => 'number',
 		                        ),
 		                        'robokassa' =>
 		                        array (
@@ -812,10 +786,15 @@ class ResultType
 		                                'callback_url' => 'string',
 		                                'callback_salt' => 'string',
 		                                'send_js_error' => 'boolean',
-		                                'min_amount' => 'number',
 		                            ),
+		                            'min_amount' => 'number',
+		                            'currency' => 'string',
 		                        ),
+		                        'min_amount' => 'number',
+		                        'currency' => 'string',
 		                    ),
+		                    'min_amount' => 'number',
+		                    'currency' => 'string',
 		                ),
 		            ),
 		        ),
@@ -35369,6 +35348,14 @@ class ResultType
 		        ),
 		    ),
 		    'total_count' => 'number',
+		);
+	}
+
+
+	public function DownloadAgreement()
+	{
+		return array (
+		    'unknown' => 'unknown',
 		);
 	}
 }

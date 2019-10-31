@@ -31,9 +31,12 @@ $params = new AttachPhoneNumberParams();
 $params->country_code = 'RU';
 $params->phone_category_name = 'GEOGRAPHIC';
 $params->phone_region_id = 4;
-$params->phone_number = '74953332211';
+$params->phone_number = array (
+    0 => '74953332211',
+    1 => '74953332211',
+);
 
-// Attach the '74953332211' phone number to the account 1.
+// Attach the '74953332211' and '74953332299' phone numbers to the account 1.
 $result = $voxApi->PhoneNumbers->AttachPhoneNumber($params);
 
 // Show result

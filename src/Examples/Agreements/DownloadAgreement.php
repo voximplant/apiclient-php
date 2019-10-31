@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method StartScenarios Runs JavaScript scenarios on a VoxImplant server. The scenarios run in a new media session.
+ * @method DownloadAgreement Downloads Agreement in PDF format
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\StartScenariosParams;
+use Voximplant\Resources\Params\DownloadAgreementParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -21,16 +21,15 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * rule_id - The rule ID.
- * script_custom_data - The script custom data (like a script argument). Can be accessed in JS scenario via the VoxEngine.customData() method
+ * document_id - The ID of the account document, based on which the agreement document will be constructed.
  */
-$params = new StartScenariosParams();
+$params = new DownloadAgreementParams();
 
-$params->rule_id = 1;
-$params->script_custom_data = 'mystr';
+$params->output = 'pdf';
+$params->document_id = 48;
 
-// Start the scripts from the account.
-$result = $voxApi->Scenarios->StartScenarios($params);
+// Downloads agreement with account document id = 48
+$result = $voxApi->Agreements->DownloadAgreement($params);
 
 // Show result
 var_dump($result);
