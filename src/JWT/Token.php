@@ -2,38 +2,39 @@
 
 namespace Voximplant\JWT;
 
+use Exception;
 use Firebase\JWT\JWT;
 
 class Token
 {
-	/** Min 30 sec, max 3600 sec. */
-	public $expTime = 60;
+    /** @var int Min 30 sec, max 3600 sec. */
+    public $expTime = 60;
 
+    /**
+     * @param string $tokenPath
+     *
+     * @return string
+     *
+     * @throws Exception
+     */
+    public function generateAuthorizationHeader($tokenPath): string
+    {
+        if (!file_exists($tokenPath)) {
+            throw new Exception('Token file not found!');
+        }
 
-	/**
-	 * @param $keyPath
-	 *
-	 * @return bool|string
-	 */
-	public function generateAuthorizationHeader($keyPath)
-	{
-		$token = false;
-		$keyData = false;
+        $content = file_get_contents($tokenPath);
 
-		if (file_exists($keyPath)) {
-		    $privateKey = json_decode(file_get_contents($keyPath));
+        if (!($privateKey = json_decode($content))) {
+            throw new Exception('JWT authorization error: Token not found!');
+        }
 
-		    if($privateKey) {
-		        $payload = [
-		            'iat' => time(), // start time
-		            'iss' => $privateKey->account_id,
-		            'exp' => time() + $this->expTime, // finish time
-		        ];
+        $payload = [
+            'iat' => time(),
+            'iss' => $privateKey->account_id,
+            'exp' => time() + $this->expTime,
+        ];
 
-		        $token = 'Bearer ' . JWT::encode($payload, $privateKey->private_key, 'RS256', $privateKey->key_id);
-		    }
-		}
-
-		return $token;
-	}
+        return 'Bearer '.JWT::encode($payload, $privateKey->private_key, 'RS256', $privateKey->key_id);
+    }
 }

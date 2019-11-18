@@ -4,28 +4,25 @@ namespace Voximplant\Interfaces;
 
 interface AuthorizedIPsInterface
 {
-	/**
-	 * @method Adds a new authorized IP4 or network to the white/black list.
-	 */
-	public function AddAuthorizedAccountIP(\Voximplant\Resources\Params\AddAuthorizedAccountIPParams $params);
+    /**
+     * @method Adds a new authorized IP4 or network to the white/black list.
+     */
+    public function AddAuthorizedAccountIP(\Voximplant\Resources\Params\AddAuthorizedAccountIPParams $params);
 
+    /**
+     * @method Removes the authorized IP4 or network from the white/black list.
+     */
+    public function DelAuthorizedAccountIP(\Voximplant\Resources\Params\DelAuthorizedAccountIPParams $params);
 
-	/**
-	 * @method Removes the authorized IP4 or network from the white/black list.
-	 */
-	public function DelAuthorizedAccountIP(\Voximplant\Resources\Params\DelAuthorizedAccountIPParams $params);
+    /**
+     * @method Gets the authorized IP4 or network.
+     */
+    public function GetAuthorizedAccountIPs(\Voximplant\Resources\Params\GetAuthorizedAccountIPsParams $params);
 
-
-	/**
-	 * @method Gets the authorized IP4 or network.
-	 */
-	public function GetAuthorizedAccountIPs(\Voximplant\Resources\Params\GetAuthorizedAccountIPsParams $params);
-
-
-	/**
-	 * @method Tests whether the IP4 is banned or allowed.
-	 */
-	public function CheckAuthorizedAccountIP(\Voximplant\Resources\Params\CheckAuthorizedAccountIPParams $params);
+    /**
+     * @method Tests whether the IP4 is banned or allowed.
+     */
+    public function CheckAuthorizedAccountIP(\Voximplant\Resources\Params\CheckAuthorizedAccountIPParams $params);
 }
 class AddAuthorizedAccountIPReturn
 {

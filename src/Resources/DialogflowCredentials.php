@@ -11,92 +11,86 @@ use Voximplant\Interfaces\SetDialogflowKeyReturn;
 
 class DialogflowCredentials implements DialogflowCredentialsInterface
 {
-	protected $client;
+    protected $client;
 
-	/** @object AddDialogflowKey */
-	protected $AddDialogflowKeyReturn;
+    /** @object AddDialogflowKey */
+    protected $AddDialogflowKeyReturn;
 
-	/** @object SetDialogflowKey */
-	protected $SetDialogflowKeyReturn;
+    /** @object SetDialogflowKey */
+    protected $SetDialogflowKeyReturn;
 
-	/** @object DelDialogflowKey */
-	protected $DelDialogflowKeyReturn;
+    /** @object DelDialogflowKey */
+    protected $DelDialogflowKeyReturn;
 
-	/** @object GetDialogflowKeys */
-	protected $GetDialogflowKeysReturn;
+    /** @object GetDialogflowKeys */
+    protected $GetDialogflowKeysReturn;
 
-	/** @object BindDialogflowKeys */
-	protected $BindDialogflowKeysReturn;
+    /** @object BindDialogflowKeys */
+    protected $BindDialogflowKeysReturn;
 
+    public function __construct($client)
+    {
+        $this->client = $client;
 
-	public function __construct($client)
-	{
-		$this->client = $client;
+        $this->AddDialogflowKeyReturn = new AddDialogflowKeyReturn();
+        $this->SetDialogflowKeyReturn = new SetDialogflowKeyReturn();
+        $this->DelDialogflowKeyReturn = new DelDialogflowKeyReturn();
+        $this->GetDialogflowKeysReturn = new GetDialogflowKeysReturn();
+        $this->BindDialogflowKeysReturn = new BindDialogflowKeysReturn();
+    }
 
-		$this->AddDialogflowKeyReturn = new AddDialogflowKeyReturn();
-		$this->SetDialogflowKeyReturn = new SetDialogflowKeyReturn();
-		$this->DelDialogflowKeyReturn = new DelDialogflowKeyReturn();
-		$this->GetDialogflowKeysReturn = new GetDialogflowKeysReturn();
-		$this->BindDialogflowKeysReturn = new BindDialogflowKeysReturn();
-	}
+    /**
+     * @method Add Dialogflow key
+     */
+    public function AddDialogflowKey(Params\AddDialogflowKeyParams $params = null): AddDialogflowKeyReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->AddDialogflowKeyReturn->$key = $value;
+        }
+        return $this->AddDialogflowKeyReturn;
+    }
 
+    /**
+     * @method Edit Dialogflow key
+     */
+    public function SetDialogflowKey(Params\SetDialogflowKeyParams $params = null): SetDialogflowKeyReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->SetDialogflowKeyReturn->$key = $value;
+        }
+        return $this->SetDialogflowKeyReturn;
+    }
 
-	/**
-	 * @method Add Dialogflow key
-	 */
-	public function AddDialogflowKey(Params\AddDialogflowKeyParams $params = null): AddDialogflowKeyReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->AddDialogflowKeyReturn->$key = $value;
-		}
-		return $this->AddDialogflowKeyReturn;
-	}
+    /**
+     * @method Remove Dialogflow key
+     */
+    public function DelDialogflowKey(Params\DelDialogflowKeyParams $params = null): DelDialogflowKeyReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->DelDialogflowKeyReturn->$key = $value;
+        }
+        return $this->DelDialogflowKeyReturn;
+    }
 
+    /**
+     * @method Get Dialogflow keys
+     */
+    public function GetDialogflowKeys(Params\GetDialogflowKeysParams $params = null): GetDialogflowKeysReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetDialogflowKeysReturn->$key = $value;
+        }
+        return $this->GetDialogflowKeysReturn;
+    }
 
-	/**
-	 * @method Edit Dialogflow key
-	 */
-	public function SetDialogflowKey(Params\SetDialogflowKeyParams $params = null): SetDialogflowKeyReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->SetDialogflowKeyReturn->$key = $value;
-		}
-		return $this->SetDialogflowKeyReturn;
-	}
-
-
-	/**
-	 * @method Remove Dialogflow key
-	 */
-	public function DelDialogflowKey(Params\DelDialogflowKeyParams $params = null): DelDialogflowKeyReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->DelDialogflowKeyReturn->$key = $value;
-		}
-		return $this->DelDialogflowKeyReturn;
-	}
-
-
-	/**
-	 * @method Get Dialogflow keys
-	 */
-	public function GetDialogflowKeys(Params\GetDialogflowKeysParams $params = null): GetDialogflowKeysReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->GetDialogflowKeysReturn->$key = $value;
-		}
-		return $this->GetDialogflowKeysReturn;
-	}
-
-
-	/**
-	 * @method Bind a Dialogflow key to the specified applications
-	 */
-	public function BindDialogflowKeys(Params\BindDialogflowKeysParams $params = null): BindDialogflowKeysReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->BindDialogflowKeysReturn->$key = $value;
-		}
-		return $this->BindDialogflowKeysReturn;
-	}
+    /**
+     * @method Bind a Dialogflow key to the specified applications
+     */
+    public function BindDialogflowKeys(Params\BindDialogflowKeysParams $params = null): BindDialogflowKeysReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->BindDialogflowKeysReturn->$key = $value;
+        }
+        return $this->BindDialogflowKeysReturn;
+    }
 }

@@ -4,34 +4,30 @@ namespace Voximplant\Interfaces;
 
 interface AdminUsersInterface
 {
-	/**
-	 * @method Adds a new admin user into the specified parent or child account.
-	 */
-	public function AddAdminUser(\Voximplant\Resources\Params\AddAdminUserParams $params);
+    /**
+     * @method Adds a new admin user into the specified parent or child account.
+     */
+    public function AddAdminUser(\Voximplant\Resources\Params\AddAdminUserParams $params);
 
+    /**
+     * @method Deletes the specified admin user.
+     */
+    public function DelAdminUser(\Voximplant\Resources\Params\DelAdminUserParams $params);
 
-	/**
-	 * @method Deletes the specified admin user.
-	 */
-	public function DelAdminUser(\Voximplant\Resources\Params\DelAdminUserParams $params);
+    /**
+     * @method Edits the specified admin user.
+     */
+    public function SetAdminUserInfo(\Voximplant\Resources\Params\SetAdminUserInfoParams $params);
 
+    /**
+     * @method Gets the admin users of the specified account. Note that both account types - parent and child - could have its own admins.
+     */
+    public function GetAdminUsers(\Voximplant\Resources\Params\GetAdminUsersParams $params);
 
-	/**
-	 * @method Edits the specified admin user.
-	 */
-	public function SetAdminUserInfo(\Voximplant\Resources\Params\SetAdminUserInfoParams $params);
-
-
-	/**
-	 * @method Gets the admin users of the specified account. Note that both account types - parent and child - could have its own admins.
-	 */
-	public function GetAdminUsers(\Voximplant\Resources\Params\GetAdminUsersParams $params);
-
-
-	/**
-	 * @method Attaches the admin role(s) to the already existing admin(s).
-	 */
-	public function AttachAdminRole(\Voximplant\Resources\Params\AttachAdminRoleParams $params);
+    /**
+     * @method Attaches the admin role(s) to the already existing admin(s).
+     */
+    public function AttachAdminRole(\Voximplant\Resources\Params\AttachAdminRoleParams $params);
 }
 class AddAdminUserReturn
 {

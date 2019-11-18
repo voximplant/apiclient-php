@@ -4,30 +4,30 @@ namespace Voximplant\Resources\Params;
 
 class BindSkillParams
 {
-	/** @var intlist The skill ID list separated by the ';' symbol or the 'all' value. */
-	public $skill_id;
+    /** @var intlist The skill ID list separated by the ';' symbol or the 'all' value. */
+    public $skill_id;
 
-	/** @var stringlist Can be used instead of skill_id. The skill name list separated by the ';' symbol. */
-	public $skill_name;
+    /** @var stringlist Can be used instead of skill_id. The skill name list separated by the ';' symbol. */
+    public $skill_name;
 
-	/** @var intlist The user ID list separated by the ';' symbol or the 'all' value. */
-	public $user_id;
+    /** @var intlist The user ID list separated by the ';' symbol or the 'all' value. */
+    public $user_id;
 
-	/** @var stringlist The user name that can be used instead of user_id. The user name list separated by the ';' symbol. */
-	public $user_name;
+    /** @var stringlist The user name that can be used instead of user_id. The user name list separated by the ';' symbol. */
+    public $user_name;
 
-	/** @var intlist The ACD queue ID list separated by the ';' symbol or the 'all' value. */
-	public $acd_queue_id;
+    /** @var intlist The ACD queue ID list separated by the ';' symbol or the 'all' value. */
+    public $acd_queue_id;
 
-	/** @var stringlist The ACD queue name that can be used instead of acd_queue_id. The ACD queue name list separated by the ';' symbol. */
-	public $acd_queue_name;
+    /** @var stringlist The ACD queue name that can be used instead of acd_queue_id. The ACD queue name list separated by the ';' symbol. */
+    public $acd_queue_name;
 
-	/** @var number The application ID. It is required if the user_name is specified. */
-	public $application_id;
+    /** @var number The application ID. It is required if the user_name is specified. */
+    public $application_id;
 
-	/** @var string The application name that can be used instead of application_id. */
-	public $application_name;
+    /** @var string The application name that can be used instead of application_id. */
+    public $application_name;
 
-	/** @var boolean Bind or unbind? */
-	public $bind;
+    /** @var boolean Bind or unbind? */
+    public $bind;
 }

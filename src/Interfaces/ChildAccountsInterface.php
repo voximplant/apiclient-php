@@ -4,28 +4,25 @@ namespace Voximplant\Interfaces;
 
 interface ChildAccountsInterface
 {
-	/**
-	 * @method Adds a new subscription for the specified child account.
-	 */
-	public function AddChildAccountSubscription(\Voximplant\Resources\Params\AddChildAccountSubscriptionParams $params);
+    /**
+     * @method Adds a new subscription for the specified child account.
+     */
+    public function AddChildAccountSubscription(\Voximplant\Resources\Params\AddChildAccountSubscriptionParams $params);
 
+    /**
+     * @method Gets the active subscription(s) for the specified child account.
+     */
+    public function GetChildAccountSubscriptions(\Voximplant\Resources\Params\GetChildAccountSubscriptionsParams $params);
 
-	/**
-	 * @method Gets the active subscription(s) for the specified child account.
-	 */
-	public function GetChildAccountSubscriptions(\Voximplant\Resources\Params\GetChildAccountSubscriptionsParams $params);
+    /**
+     * @method Gets all the eligible subscription templates. A template is considered to be eligible if it is of a type that supports child accounts management.
+     */
+    public function GetChildAccountSubscriptionTemplates(\Voximplant\Resources\Params\GetChildAccountSubscriptionTemplatesParams $params);
 
-
-	/**
-	 * @method Gets all the eligible subscription templates. A template is considered to be eligible if it is of a type that supports child accounts management.
-	 */
-	public function GetChildAccountSubscriptionTemplates(\Voximplant\Resources\Params\GetChildAccountSubscriptionTemplatesParams $params);
-
-
-	/**
-	 * @method Deactivates the specified subscription(s).
-	 */
-	public function DeactivateChildAccountSubscription(\Voximplant\Resources\Params\DeactivateChildAccountSubscriptionParams $params);
+    /**
+     * @method Deactivates the specified subscription(s).
+     */
+    public function DeactivateChildAccountSubscription(\Voximplant\Resources\Params\DeactivateChildAccountSubscriptionParams $params);
 }
 class AddChildAccountSubscriptionReturn
 {

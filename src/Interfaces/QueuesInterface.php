@@ -4,58 +4,50 @@ namespace Voximplant\Interfaces;
 
 interface QueuesInterface
 {
-	/**
-	 * @method Adds a new ACD queue.
-	 */
-	public function AddQueue(\Voximplant\Resources\Params\AddQueueParams $params);
+    /**
+     * @method Adds a new ACD queue.
+     */
+    public function AddQueue(\Voximplant\Resources\Params\AddQueueParams $params);
 
+    /**
+     * @method Bind/unbind users to/from the specified ACD queues. Note that users and queues should be already bound to the same application.
+     */
+    public function BindUserToQueue(\Voximplant\Resources\Params\BindUserToQueueParams $params);
 
-	/**
-	 * @method Bind/unbind users to/from the specified ACD queues. Note that users and queues should be already bound to the same application.
-	 */
-	public function BindUserToQueue(\Voximplant\Resources\Params\BindUserToQueueParams $params);
+    /**
+     * @method Deletes the ACD queue.
+     */
+    public function DelQueue(\Voximplant\Resources\Params\DelQueueParams $params);
 
+    /**
+     * @method Edits the ACD queue.
+     */
+    public function SetQueueInfo(\Voximplant\Resources\Params\SetQueueInfoParams $params);
 
-	/**
-	 * @method Deletes the ACD queue.
-	 */
-	public function DelQueue(\Voximplant\Resources\Params\DelQueueParams $params);
+    /**
+     * @method Gets the ACD queues.
+     */
+    public function GetQueues(\Voximplant\Resources\Params\GetQueuesParams $params);
 
+    /**
+     * @method Gets the current ACD queue state.
+     */
+    public function GetACDState(\Voximplant\Resources\Params\GetACDStateParams $params);
 
-	/**
-	 * @method Edits the ACD queue.
-	 */
-	public function SetQueueInfo(\Voximplant\Resources\Params\SetQueueInfoParams $params);
+    /**
+     * @method Get statistics for calls distributed to users (referred as 'operators') via the 'ACD' module. This method can filter statistic based on operator ids, queue ids and date-time interval. It can also group results by day or hour.
+     */
+    public function GetACDOperatorStatistics(\Voximplant\Resources\Params\GetACDOperatorStatisticsParams $params);
 
+    /**
+     * @method Get statistics for calls distributed to users (referred as 'operators') via the 'queue' distribution system. This method can filter statistic based on operator ids, queue ids and date-time interval. It can also group results by day or hour.
+     */
+    public function GetACDQueueStatistics(\Voximplant\Resources\Params\GetACDQueueStatisticsParams $params);
 
-	/**
-	 * @method Gets the ACD queues.
-	 */
-	public function GetQueues(\Voximplant\Resources\Params\GetQueuesParams $params);
-
-
-	/**
-	 * @method Gets the current ACD queue state.
-	 */
-	public function GetACDState(\Voximplant\Resources\Params\GetACDStateParams $params);
-
-
-	/**
-	 * @method Get statistics for calls distributed to users (referred as 'operators') via the 'ACD' module. This method can filter statistic based on operator ids, queue ids and date-time interval. It can also group results by day or hour.
-	 */
-	public function GetACDOperatorStatistics(\Voximplant\Resources\Params\GetACDOperatorStatisticsParams $params);
-
-
-	/**
-	 * @method Get statistics for calls distributed to users (referred as 'operators') via the 'queue' distribution system. This method can filter statistic based on operator ids, queue ids and date-time interval. It can also group results by day or hour.
-	 */
-	public function GetACDQueueStatistics(\Voximplant\Resources\Params\GetACDQueueStatisticsParams $params);
-
-
-	/**
-	 * @method Get statistics for the specified operators and ACD statuses. This method can filter statistics by operator ids and statuses. It can also group results by day/hour or users.
-	 */
-	public function GetACDOperatorStatusStatistics(\Voximplant\Resources\Params\GetACDOperatorStatusStatisticsParams $params);
+    /**
+     * @method Get statistics for the specified operators and ACD statuses. This method can filter statistics by operator ids and statuses. It can also group results by day/hour or users.
+     */
+    public function GetACDOperatorStatusStatistics(\Voximplant\Resources\Params\GetACDOperatorStatusStatisticsParams $params);
 }
 class AddQueueReturn
 {

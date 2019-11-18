@@ -4,34 +4,30 @@ namespace Voximplant\Interfaces;
 
 interface AdminRolesInterface
 {
-	/**
-	 * @method Adds a new admin role.
-	 */
-	public function AddAdminRole(\Voximplant\Resources\Params\AddAdminRoleParams $params);
+    /**
+     * @method Adds a new admin role.
+     */
+    public function AddAdminRole(\Voximplant\Resources\Params\AddAdminRoleParams $params);
 
+    /**
+     * @method Deletes the specified admin role.
+     */
+    public function DelAdminRole(\Voximplant\Resources\Params\DelAdminRoleParams $params);
 
-	/**
-	 * @method Deletes the specified admin role.
-	 */
-	public function DelAdminRole(\Voximplant\Resources\Params\DelAdminRoleParams $params);
+    /**
+     * @method Edits the specified admin role.
+     */
+    public function SetAdminRoleInfo(\Voximplant\Resources\Params\SetAdminRoleInfoParams $params);
 
+    /**
+     * @method Gets the admin roles.
+     */
+    public function GetAdminRoles(\Voximplant\Resources\Params\GetAdminRolesParams $params);
 
-	/**
-	 * @method Edits the specified admin role.
-	 */
-	public function SetAdminRoleInfo(\Voximplant\Resources\Params\SetAdminRoleInfoParams $params);
-
-
-	/**
-	 * @method Gets the admin roles.
-	 */
-	public function GetAdminRoles(\Voximplant\Resources\Params\GetAdminRolesParams $params);
-
-
-	/**
-	 * @method Gets the all available admin role entries.
-	 */
-	public function GetAvailableAdminRoleEntries(\Voximplant\Resources\Params\GetAvailableAdminRoleEntriesParams $params);
+    /**
+     * @method Gets the all available admin role entries.
+     */
+    public function GetAvailableAdminRoleEntries(\Voximplant\Resources\Params\GetAvailableAdminRoleEntriesParams $params);
 }
 class AddAdminRoleReturn
 {

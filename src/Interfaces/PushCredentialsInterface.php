@@ -4,34 +4,30 @@ namespace Voximplant\Interfaces;
 
 interface PushCredentialsInterface
 {
-	/**
-	 * @method Add push credentials
-	 */
-	public function AddPushCredential(\Voximplant\Resources\Params\AddPushCredentialParams $params);
+    /**
+     * @method Add push credentials
+     */
+    public function AddPushCredential(\Voximplant\Resources\Params\AddPushCredentialParams $params);
 
+    /**
+     * @method Modify push credentials
+     */
+    public function SetPushCredential(\Voximplant\Resources\Params\SetPushCredentialParams $params);
 
-	/**
-	 * @method Modify push credentials
-	 */
-	public function SetPushCredential(\Voximplant\Resources\Params\SetPushCredentialParams $params);
+    /**
+     * @method Remove push credentials
+     */
+    public function DelPushCredential(\Voximplant\Resources\Params\DelPushCredentialParams $params);
 
+    /**
+     * @method Get push credentials
+     */
+    public function GetPushCredential(\Voximplant\Resources\Params\GetPushCredentialParams $params);
 
-	/**
-	 * @method Remove push credentials
-	 */
-	public function DelPushCredential(\Voximplant\Resources\Params\DelPushCredentialParams $params);
-
-
-	/**
-	 * @method Get push credentials
-	 */
-	public function GetPushCredential(\Voximplant\Resources\Params\GetPushCredentialParams $params);
-
-
-	/**
-	 * @method Bind push credentials to applications
-	 */
-	public function BindPushCredential(\Voximplant\Resources\Params\BindPushCredentialParams $params);
+    /**
+     * @method Bind push credentials to applications
+     */
+    public function BindPushCredential(\Voximplant\Resources\Params\BindPushCredentialParams $params);
 }
 class AddPushCredentialReturn
 {

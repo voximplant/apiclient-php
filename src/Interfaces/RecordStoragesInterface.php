@@ -4,10 +4,10 @@ namespace Voximplant\Interfaces;
 
 interface RecordStoragesInterface
 {
-	/**
-	 * @method Get the record storages.
-	 */
-	public function GetRecordStorages(\Voximplant\Resources\Params\GetRecordStoragesParams $params);
+    /**
+     * @method Get the record storages.
+     */
+    public function GetRecordStorages(\Voximplant\Resources\Params\GetRecordStoragesParams $params);
 }
 class GetRecordStoragesReturn
 {

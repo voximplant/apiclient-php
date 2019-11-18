@@ -4,52 +4,45 @@ namespace Voximplant\Interfaces;
 
 interface ScenariosInterface
 {
-	/**
-	 * @method Adds a new scenario. Please use the POST method.
-	 */
-	public function AddScenario(\Voximplant\Resources\Params\AddScenarioParams $params);
+    /**
+     * @method Adds a new scenario. Please use the POST method.
+     */
+    public function AddScenario(\Voximplant\Resources\Params\AddScenarioParams $params);
 
+    /**
+     * @method Deletes the scenario.
+     */
+    public function DelScenario(\Voximplant\Resources\Params\DelScenarioParams $params);
 
-	/**
-	 * @method Deletes the scenario.
-	 */
-	public function DelScenario(\Voximplant\Resources\Params\DelScenarioParams $params);
+    /**
+     * @method Bind the scenario list to the rule. You should specify the application_id or application_name if you specify the rule_name.
+     */
+    public function BindScenario(\Voximplant\Resources\Params\BindScenarioParams $params);
 
+    /**
+     * @method Gets the account's scenarios.
+     */
+    public function GetScenarios(\Voximplant\Resources\Params\GetScenariosParams $params);
 
-	/**
-	 * @method Bind the scenario list to the rule. You should specify the application_id or application_name if you specify the rule_name.
-	 */
-	public function BindScenario(\Voximplant\Resources\Params\BindScenarioParams $params);
+    /**
+     * @method Edits the scenario. Please use the POST method.
+     */
+    public function SetScenarioInfo(\Voximplant\Resources\Params\SetScenarioInfoParams $params);
 
+    /**
+     * @method Configures the order of scenarios that are assigned to the specified rule.
+     */
+    public function ReorderScenarios(\Voximplant\Resources\Params\ReorderScenariosParams $params);
 
-	/**
-	 * @method Gets the account's scenarios.
-	 */
-	public function GetScenarios(\Voximplant\Resources\Params\GetScenariosParams $params);
+    /**
+     * @method Runs JavaScript scenarios on a VoxImplant server. The scenarios run in a new media session.
+     */
+    public function StartScenarios(\Voximplant\Resources\Params\StartScenariosParams $params);
 
-
-	/**
-	 * @method Edits the scenario. Please use the POST method.
-	 */
-	public function SetScenarioInfo(\Voximplant\Resources\Params\SetScenarioInfoParams $params);
-
-
-	/**
-	 * @method Configures the order of scenarios that are assigned to the specified rule.
-	 */
-	public function ReorderScenarios(\Voximplant\Resources\Params\ReorderScenariosParams $params);
-
-
-	/**
-	 * @method Runs JavaScript scenarios on a VoxImplant server. The scenarios run in a new media session.
-	 */
-	public function StartScenarios(\Voximplant\Resources\Params\StartScenariosParams $params);
-
-
-	/**
-	 * @method Runs a session for video conferencing or joins the existing video conference session.<br/><br/>When a session is created by calling this method, a scenario assigned to the specified **rule_id** will run on one of the servers dedicated to video conferencing. All further method calls with the same **rule_id** won't create a new video conference session, but join the already existing one.<br/><br/>Use the [StartScenarios] method for creating audio conferences.
-	 */
-	public function StartConference(\Voximplant\Resources\Params\StartConferenceParams $params);
+    /**
+     * @method Runs a session for video conferencing or joins the existing video conference session.<br/><br/>When a session is created by calling this method, a scenario assigned to the specified **rule_id** will run on one of the servers dedicated to video conferencing. All further method calls with the same **rule_id** won't create a new video conference session, but join the already existing one.<br/><br/>Use the [StartScenarios] method for creating audio conferences.
+     */
+    public function StartConference(\Voximplant\Resources\Params\StartConferenceParams $params);
 }
 class AddScenarioReturn
 {

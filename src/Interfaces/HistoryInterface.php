@@ -4,46 +4,40 @@ namespace Voximplant\Interfaces;
 
 interface HistoryInterface
 {
-	/**
-	 * @method Gets the call history.
-	 */
-	public function GetCallHistory(\Voximplant\Resources\Params\GetCallHistoryParams $params);
+    /**
+     * @method Gets the call history.
+     */
+    public function GetCallHistory(\Voximplant\Resources\Params\GetCallHistoryParams $params);
 
+    /**
+     * @method Gets the list of history reports and their statuses. The method returns info about reports made via [GetCallHistory] with the specified __output=csv__ and **is_async=true** parameters.
+     */
+    public function GetHistoryReports(\Voximplant\Resources\Params\GetHistoryReportsParams $params);
 
-	/**
-	 * @method Gets the list of history reports and their statuses. The method returns info about reports made via [GetCallHistory] with the specified __output=csv__ and **is_async=true** parameters.
-	 */
-	public function GetHistoryReports(\Voximplant\Resources\Params\GetHistoryReportsParams $params);
+    /**
+     * @method Downloads the required history report.
+     */
+    public function DownloadHistoryReport(\Voximplant\Resources\Params\DownloadHistoryReportParams $params);
 
+    /**
+     * @method Gets the transaction history.
+     */
+    public function GetTransactionHistory(\Voximplant\Resources\Params\GetTransactionHistoryParams $params);
 
-	/**
-	 * @method Downloads the required history report.
-	 */
-	public function DownloadHistoryReport(\Voximplant\Resources\Params\DownloadHistoryReportParams $params);
+    /**
+     * @method Try to remove record and transcription files.
+     */
+    public function DeleteRecord(\Voximplant\Resources\Params\DeleteRecordParams $params);
 
+    /**
+     * @method Gets the ACD history.
+     */
+    public function GetACDHistory(\Voximplant\Resources\Params\GetACDHistoryParams $params);
 
-	/**
-	 * @method Gets the transaction history.
-	 */
-	public function GetTransactionHistory(\Voximplant\Resources\Params\GetTransactionHistoryParams $params);
-
-
-	/**
-	 * @method Try to remove record and transcription files.
-	 */
-	public function DeleteRecord(\Voximplant\Resources\Params\DeleteRecordParams $params);
-
-
-	/**
-	 * @method Gets the ACD history.
-	 */
-	public function GetACDHistory(\Voximplant\Resources\Params\GetACDHistoryParams $params);
-
-
-	/**
-	 * @method Gets the history of account changes.
-	 */
-	public function GetAuditLog(\Voximplant\Resources\Params\GetAuditLogParams $params);
+    /**
+     * @method Gets the history of account changes.
+     */
+    public function GetAuditLog(\Voximplant\Resources\Params\GetAuditLogParams $params);
 }
 class GetCallHistoryReturn
 {

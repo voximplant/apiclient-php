@@ -15,156 +15,146 @@ use Voximplant\Interfaces\SetQueueInfoReturn;
 
 class Queues implements QueuesInterface
 {
-	protected $client;
+    protected $client;
 
-	/** @object AddQueue */
-	protected $AddQueueReturn;
+    /** @object AddQueue */
+    protected $AddQueueReturn;
 
-	/** @object BindUserToQueue */
-	protected $BindUserToQueueReturn;
+    /** @object BindUserToQueue */
+    protected $BindUserToQueueReturn;
 
-	/** @object DelQueue */
-	protected $DelQueueReturn;
+    /** @object DelQueue */
+    protected $DelQueueReturn;
 
-	/** @object SetQueueInfo */
-	protected $SetQueueInfoReturn;
+    /** @object SetQueueInfo */
+    protected $SetQueueInfoReturn;
 
-	/** @object GetQueues */
-	protected $GetQueuesReturn;
+    /** @object GetQueues */
+    protected $GetQueuesReturn;
 
-	/** @object GetACDState */
-	protected $GetACDStateReturn;
+    /** @object GetACDState */
+    protected $GetACDStateReturn;
 
-	/** @object GetACDOperatorStatistics */
-	protected $GetACDOperatorStatisticsReturn;
+    /** @object GetACDOperatorStatistics */
+    protected $GetACDOperatorStatisticsReturn;
 
-	/** @object GetACDQueueStatistics */
-	protected $GetACDQueueStatisticsReturn;
+    /** @object GetACDQueueStatistics */
+    protected $GetACDQueueStatisticsReturn;
 
-	/** @object GetACDOperatorStatusStatistics */
-	protected $GetACDOperatorStatusStatisticsReturn;
+    /** @object GetACDOperatorStatusStatistics */
+    protected $GetACDOperatorStatusStatisticsReturn;
 
+    public function __construct($client)
+    {
+        $this->client = $client;
 
-	public function __construct($client)
-	{
-		$this->client = $client;
+        $this->AddQueueReturn = new AddQueueReturn();
+        $this->BindUserToQueueReturn = new BindUserToQueueReturn();
+        $this->DelQueueReturn = new DelQueueReturn();
+        $this->SetQueueInfoReturn = new SetQueueInfoReturn();
+        $this->GetQueuesReturn = new GetQueuesReturn();
+        $this->GetACDStateReturn = new GetACDStateReturn();
+        $this->GetACDOperatorStatisticsReturn = new GetACDOperatorStatisticsReturn();
+        $this->GetACDQueueStatisticsReturn = new GetACDQueueStatisticsReturn();
+        $this->GetACDOperatorStatusStatisticsReturn = new GetACDOperatorStatusStatisticsReturn();
+    }
 
-		$this->AddQueueReturn = new AddQueueReturn();
-		$this->BindUserToQueueReturn = new BindUserToQueueReturn();
-		$this->DelQueueReturn = new DelQueueReturn();
-		$this->SetQueueInfoReturn = new SetQueueInfoReturn();
-		$this->GetQueuesReturn = new GetQueuesReturn();
-		$this->GetACDStateReturn = new GetACDStateReturn();
-		$this->GetACDOperatorStatisticsReturn = new GetACDOperatorStatisticsReturn();
-		$this->GetACDQueueStatisticsReturn = new GetACDQueueStatisticsReturn();
-		$this->GetACDOperatorStatusStatisticsReturn = new GetACDOperatorStatusStatisticsReturn();
-	}
+    /**
+     * @method Adds a new ACD queue.
+     */
+    public function AddQueue(Params\AddQueueParams $params = null): AddQueueReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->AddQueueReturn->$key = $value;
+        }
+        return $this->AddQueueReturn;
+    }
 
+    /**
+     * @method Bind/unbind users to/from the specified ACD queues. Note that users and queues should be already bound to the same application.
+     */
+    public function BindUserToQueue(Params\BindUserToQueueParams $params = null): BindUserToQueueReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->BindUserToQueueReturn->$key = $value;
+        }
+        return $this->BindUserToQueueReturn;
+    }
 
-	/**
-	 * @method Adds a new ACD queue.
-	 */
-	public function AddQueue(Params\AddQueueParams $params = null): AddQueueReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->AddQueueReturn->$key = $value;
-		}
-		return $this->AddQueueReturn;
-	}
+    /**
+     * @method Deletes the ACD queue.
+     */
+    public function DelQueue(Params\DelQueueParams $params = null): DelQueueReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->DelQueueReturn->$key = $value;
+        }
+        return $this->DelQueueReturn;
+    }
 
+    /**
+     * @method Edits the ACD queue.
+     */
+    public function SetQueueInfo(Params\SetQueueInfoParams $params = null): SetQueueInfoReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->SetQueueInfoReturn->$key = $value;
+        }
+        return $this->SetQueueInfoReturn;
+    }
 
-	/**
-	 * @method Bind/unbind users to/from the specified ACD queues. Note that users and queues should be already bound to the same application.
-	 */
-	public function BindUserToQueue(Params\BindUserToQueueParams $params = null): BindUserToQueueReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->BindUserToQueueReturn->$key = $value;
-		}
-		return $this->BindUserToQueueReturn;
-	}
+    /**
+     * @method Gets the ACD queues.
+     */
+    public function GetQueues(Params\GetQueuesParams $params = null): GetQueuesReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetQueuesReturn->$key = $value;
+        }
+        return $this->GetQueuesReturn;
+    }
 
+    /**
+     * @method Gets the current ACD queue state.
+     */
+    public function GetACDState(Params\GetACDStateParams $params = null): GetACDStateReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetACDStateReturn->$key = $value;
+        }
+        return $this->GetACDStateReturn;
+    }
 
-	/**
-	 * @method Deletes the ACD queue.
-	 */
-	public function DelQueue(Params\DelQueueParams $params = null): DelQueueReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->DelQueueReturn->$key = $value;
-		}
-		return $this->DelQueueReturn;
-	}
+    /**
+     * @method Get statistics for calls distributed to users (referred as 'operators') via the 'ACD' module. This method can filter statistic based on operator ids, queue ids and date-time interval. It can also group results by day or hour.
+     */
+    public function GetACDOperatorStatistics(Params\GetACDOperatorStatisticsParams $params = null): GetACDOperatorStatisticsReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetACDOperatorStatisticsReturn->$key = $value;
+        }
+        return $this->GetACDOperatorStatisticsReturn;
+    }
 
+    /**
+     * @method Get statistics for calls distributed to users (referred as 'operators') via the 'queue' distribution system. This method can filter statistic based on operator ids, queue ids and date-time interval. It can also group results by day or hour.
+     */
+    public function GetACDQueueStatistics(Params\GetACDQueueStatisticsParams $params = null): GetACDQueueStatisticsReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetACDQueueStatisticsReturn->$key = $value;
+        }
+        return $this->GetACDQueueStatisticsReturn;
+    }
 
-	/**
-	 * @method Edits the ACD queue.
-	 */
-	public function SetQueueInfo(Params\SetQueueInfoParams $params = null): SetQueueInfoReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->SetQueueInfoReturn->$key = $value;
-		}
-		return $this->SetQueueInfoReturn;
-	}
-
-
-	/**
-	 * @method Gets the ACD queues.
-	 */
-	public function GetQueues(Params\GetQueuesParams $params = null): GetQueuesReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->GetQueuesReturn->$key = $value;
-		}
-		return $this->GetQueuesReturn;
-	}
-
-
-	/**
-	 * @method Gets the current ACD queue state.
-	 */
-	public function GetACDState(Params\GetACDStateParams $params = null): GetACDStateReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->GetACDStateReturn->$key = $value;
-		}
-		return $this->GetACDStateReturn;
-	}
-
-
-	/**
-	 * @method Get statistics for calls distributed to users (referred as 'operators') via the 'ACD' module. This method can filter statistic based on operator ids, queue ids and date-time interval. It can also group results by day or hour.
-	 */
-	public function GetACDOperatorStatistics(Params\GetACDOperatorStatisticsParams $params = null): GetACDOperatorStatisticsReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->GetACDOperatorStatisticsReturn->$key = $value;
-		}
-		return $this->GetACDOperatorStatisticsReturn;
-	}
-
-
-	/**
-	 * @method Get statistics for calls distributed to users (referred as 'operators') via the 'queue' distribution system. This method can filter statistic based on operator ids, queue ids and date-time interval. It can also group results by day or hour.
-	 */
-	public function GetACDQueueStatistics(Params\GetACDQueueStatisticsParams $params = null): GetACDQueueStatisticsReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->GetACDQueueStatisticsReturn->$key = $value;
-		}
-		return $this->GetACDQueueStatisticsReturn;
-	}
-
-
-	/**
-	 * @method Get statistics for the specified operators and ACD statuses. This method can filter statistics by operator ids and statuses. It can also group results by day/hour or users.
-	 */
-	public function GetACDOperatorStatusStatistics(Params\GetACDOperatorStatusStatisticsParams $params = null): GetACDOperatorStatusStatisticsReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->GetACDOperatorStatusStatisticsReturn->$key = $value;
-		}
-		return $this->GetACDOperatorStatusStatisticsReturn;
-	}
+    /**
+     * @method Get statistics for the specified operators and ACD statuses. This method can filter statistics by operator ids and statuses. It can also group results by day/hour or users.
+     */
+    public function GetACDOperatorStatusStatistics(Params\GetACDOperatorStatusStatisticsParams $params = null): GetACDOperatorStatusStatisticsReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetACDOperatorStatusStatisticsReturn->$key = $value;
+        }
+        return $this->GetACDOperatorStatusStatisticsReturn;
+    }
 }

@@ -4,34 +4,30 @@ namespace Voximplant\Interfaces;
 
 interface SkillsInterface
 {
-	/**
-	 * @method Adds a new ACD operator skill.
-	 */
-	public function AddSkill(\Voximplant\Resources\Params\AddSkillParams $params);
+    /**
+     * @method Adds a new ACD operator skill.
+     */
+    public function AddSkill(\Voximplant\Resources\Params\AddSkillParams $params);
 
+    /**
+     * @method Deletes the skill.
+     */
+    public function DelSkill(\Voximplant\Resources\Params\DelSkillParams $params);
 
-	/**
-	 * @method Deletes the skill.
-	 */
-	public function DelSkill(\Voximplant\Resources\Params\DelSkillParams $params);
+    /**
+     * @method Edits the skill.
+     */
+    public function SetSkillInfo(\Voximplant\Resources\Params\SetSkillInfoParams $params);
 
+    /**
+     * @method Gets the skills.
+     */
+    public function GetSkills(\Voximplant\Resources\Params\GetSkillsParams $params);
 
-	/**
-	 * @method Edits the skill.
-	 */
-	public function SetSkillInfo(\Voximplant\Resources\Params\SetSkillInfoParams $params);
-
-
-	/**
-	 * @method Gets the skills.
-	 */
-	public function GetSkills(\Voximplant\Resources\Params\GetSkillsParams $params);
-
-
-	/**
-	 * @method Binds the specified skills to the users (ACD operators) and/or the ACD queues.
-	 */
-	public function BindSkill(\Voximplant\Resources\Params\BindSkillParams $params);
+    /**
+     * @method Binds the specified skills to the users (ACD operators) and/or the ACD queues.
+     */
+    public function BindSkill(\Voximplant\Resources\Params\BindSkillParams $params);
 }
 class AddSkillReturn
 {

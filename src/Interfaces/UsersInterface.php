@@ -4,34 +4,30 @@ namespace Voximplant\Interfaces;
 
 interface UsersInterface
 {
-	/**
-	 * @method Adds a new user.
-	 */
-	public function AddUser(\Voximplant\Resources\Params\AddUserParams $params);
+    /**
+     * @method Adds a new user.
+     */
+    public function AddUser(\Voximplant\Resources\Params\AddUserParams $params);
 
+    /**
+     * @method Deletes the specified user(s).
+     */
+    public function DelUser(\Voximplant\Resources\Params\DelUserParams $params);
 
-	/**
-	 * @method Deletes the specified user(s).
-	 */
-	public function DelUser(\Voximplant\Resources\Params\DelUserParams $params);
+    /**
+     * @method Edits the user.
+     */
+    public function SetUserInfo(\Voximplant\Resources\Params\SetUserInfoParams $params);
 
+    /**
+     * @method Shows the users of the specified account.
+     */
+    public function GetUsers(\Voximplant\Resources\Params\GetUsersParams $params);
 
-	/**
-	 * @method Edits the user.
-	 */
-	public function SetUserInfo(\Voximplant\Resources\Params\SetUserInfoParams $params);
-
-
-	/**
-	 * @method Shows the users of the specified account.
-	 */
-	public function GetUsers(\Voximplant\Resources\Params\GetUsersParams $params);
-
-
-	/**
-	 * @method Transfer the account's money to the user or transfer the user's money to the account if the money amount is negative.
-	 */
-	public function TransferMoneyToUser(\Voximplant\Resources\Params\TransferMoneyToUserParams $params);
+    /**
+     * @method Transfer the account's money to the user or transfer the user's money to the account if the money amount is negative.
+     */
+    public function TransferMoneyToUser(\Voximplant\Resources\Params\TransferMoneyToUserParams $params);
 }
 class AddUserReturn
 {

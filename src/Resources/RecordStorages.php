@@ -7,28 +7,26 @@ use Voximplant\Interfaces\RecordStoragesInterface;
 
 class RecordStorages implements RecordStoragesInterface
 {
-	protected $client;
+    protected $client;
 
-	/** @object GetRecordStorages */
-	protected $GetRecordStoragesReturn;
+    /** @object GetRecordStorages */
+    protected $GetRecordStoragesReturn;
 
+    public function __construct($client)
+    {
+        $this->client = $client;
 
-	public function __construct($client)
-	{
-		$this->client = $client;
+        $this->GetRecordStoragesReturn = new GetRecordStoragesReturn();
+    }
 
-		$this->GetRecordStoragesReturn = new GetRecordStoragesReturn();
-	}
-
-
-	/**
-	 * @method Get the record storages.
-	 */
-	public function GetRecordStorages(Params\GetRecordStoragesParams $params = null): GetRecordStoragesReturn
-	{
-		foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-		    $this->GetRecordStoragesReturn->$key = $value;
-		}
-		return $this->GetRecordStoragesReturn;
-	}
+    /**
+     * @method Get the record storages.
+     */
+    public function GetRecordStorages(Params\GetRecordStoragesParams $params = null): GetRecordStoragesReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetRecordStoragesReturn->$key = $value;
+        }
+        return $this->GetRecordStoragesReturn;
+    }
 }

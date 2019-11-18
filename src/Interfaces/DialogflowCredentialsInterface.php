@@ -4,34 +4,30 @@ namespace Voximplant\Interfaces;
 
 interface DialogflowCredentialsInterface
 {
-	/**
-	 * @method Add Dialogflow key
-	 */
-	public function AddDialogflowKey(\Voximplant\Resources\Params\AddDialogflowKeyParams $params);
+    /**
+     * @method Add Dialogflow key
+     */
+    public function AddDialogflowKey(\Voximplant\Resources\Params\AddDialogflowKeyParams $params);
 
+    /**
+     * @method Edit Dialogflow key
+     */
+    public function SetDialogflowKey(\Voximplant\Resources\Params\SetDialogflowKeyParams $params);
 
-	/**
-	 * @method Edit Dialogflow key
-	 */
-	public function SetDialogflowKey(\Voximplant\Resources\Params\SetDialogflowKeyParams $params);
+    /**
+     * @method Remove Dialogflow key
+     */
+    public function DelDialogflowKey(\Voximplant\Resources\Params\DelDialogflowKeyParams $params);
 
+    /**
+     * @method Get Dialogflow keys
+     */
+    public function GetDialogflowKeys(\Voximplant\Resources\Params\GetDialogflowKeysParams $params);
 
-	/**
-	 * @method Remove Dialogflow key
-	 */
-	public function DelDialogflowKey(\Voximplant\Resources\Params\DelDialogflowKeyParams $params);
-
-
-	/**
-	 * @method Get Dialogflow keys
-	 */
-	public function GetDialogflowKeys(\Voximplant\Resources\Params\GetDialogflowKeysParams $params);
-
-
-	/**
-	 * @method Bind a Dialogflow key to the specified applications
-	 */
-	public function BindDialogflowKeys(\Voximplant\Resources\Params\BindDialogflowKeysParams $params);
+    /**
+     * @method Bind a Dialogflow key to the specified applications
+     */
+    public function BindDialogflowKeys(\Voximplant\Resources\Params\BindDialogflowKeysParams $params);
 }
 class AddDialogflowKeyReturn
 {

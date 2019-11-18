@@ -4,34 +4,30 @@ namespace Voximplant\Interfaces;
 
 interface CallerIDsInterface
 {
-	/**
-	 * @method Adds a new caller ID. Caller ID is the phone that will be displayed to the called user. This number can be used for call back.
-	 */
-	public function AddCallerID(\Voximplant\Resources\Params\AddCallerIDParams $params);
+    /**
+     * @method Adds a new caller ID. Caller ID is the phone that will be displayed to the called user. This number can be used for call back.
+     */
+    public function AddCallerID(\Voximplant\Resources\Params\AddCallerIDParams $params);
 
+    /**
+     * @method Activates the CallerID by the verification code.
+     */
+    public function ActivateCallerID(\Voximplant\Resources\Params\ActivateCallerIDParams $params);
 
-	/**
-	 * @method Activates the CallerID by the verification code.
-	 */
-	public function ActivateCallerID(\Voximplant\Resources\Params\ActivateCallerIDParams $params);
+    /**
+     * @method Deletes the CallerID. Note: you can't delete a CID permanently (the antispam defence).
+     */
+    public function DelCallerID(\Voximplant\Resources\Params\DelCallerIDParams $params);
 
+    /**
+     * @method Gets the account callerIDs.
+     */
+    public function GetCallerIDs(\Voximplant\Resources\Params\GetCallerIDsParams $params);
 
-	/**
-	 * @method Deletes the CallerID. Note: you can't delete a CID permanently (the antispam defence).
-	 */
-	public function DelCallerID(\Voximplant\Resources\Params\DelCallerIDParams $params);
-
-
-	/**
-	 * @method Gets the account callerIDs.
-	 */
-	public function GetCallerIDs(\Voximplant\Resources\Params\GetCallerIDsParams $params);
-
-
-	/**
-	 * @method Gets a verification code by make call to the callerID number.
-	 */
-	public function VerifyCallerID(\Voximplant\Resources\Params\VerifyCallerIDParams $params);
+    /**
+     * @method Gets a verification code by make call to the callerID number.
+     */
+    public function VerifyCallerID(\Voximplant\Resources\Params\VerifyCallerIDParams $params);
 }
 class AddCallerIDReturn
 {

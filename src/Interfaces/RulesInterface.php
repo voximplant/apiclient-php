@@ -4,34 +4,30 @@ namespace Voximplant\Interfaces;
 
 interface RulesInterface
 {
-	/**
-	 * @method Adds a new rule for the application.
-	 */
-	public function AddRule(\Voximplant\Resources\Params\AddRuleParams $params);
+    /**
+     * @method Adds a new rule for the application.
+     */
+    public function AddRule(\Voximplant\Resources\Params\AddRuleParams $params);
 
+    /**
+     * @method Deletes the rule.
+     */
+    public function DelRule(\Voximplant\Resources\Params\DelRuleParams $params);
 
-	/**
-	 * @method Deletes the rule.
-	 */
-	public function DelRule(\Voximplant\Resources\Params\DelRuleParams $params);
+    /**
+     * @method Edits the rule.
+     */
+    public function SetRuleInfo(\Voximplant\Resources\Params\SetRuleInfoParams $params);
 
+    /**
+     * @method Gets the rules.
+     */
+    public function GetRules(\Voximplant\Resources\Params\GetRulesParams $params);
 
-	/**
-	 * @method Edits the rule.
-	 */
-	public function SetRuleInfo(\Voximplant\Resources\Params\SetRuleInfoParams $params);
-
-
-	/**
-	 * @method Gets the rules.
-	 */
-	public function GetRules(\Voximplant\Resources\Params\GetRulesParams $params);
-
-
-	/**
-	 * @method Configures the rules' order in the <a href='//manage.voximplant.com/#editApplication'>Applications</a> section of Control panel. Note: the rules must belong to the same application!
-	 */
-	public function ReorderRules(\Voximplant\Resources\Params\ReorderRulesParams $params);
+    /**
+     * @method Configures the rules' order in the <a href='//manage.voximplant.com/#editApplication'>Applications</a> section of Control panel. Note: the rules must belong to the same application!
+     */
+    public function ReorderRules(\Voximplant\Resources\Params\ReorderRulesParams $params);
 }
 class AddRuleReturn
 {

@@ -4,40 +4,35 @@ namespace Voximplant\Interfaces;
 
 interface RegulationAddressInterface
 {
-	/**
-	 * @method Link regulation address to phone
-	 */
-	public function LinkregulationAddress(\Voximplant\Resources\Params\LinkregulationAddressParams $params);
+    /**
+     * @method Link regulation address to phone
+     */
+    public function LinkregulationAddress(\Voximplant\Resources\Params\LinkregulationAddressParams $params);
 
+    /**
+     * @method Search available zip codes
+     */
+    public function GetZIPCodes(\Voximplant\Resources\Params\GetZIPCodesParams $params);
 
-	/**
-	 * @method Search available zip codes
-	 */
-	public function GetZIPCodes(\Voximplant\Resources\Params\GetZIPCodesParams $params);
+    /**
+     * @method Search user's regulation address
+     */
+    public function GetRegulationsAddress(\Voximplant\Resources\Params\GetRegulationsAddressParams $params);
 
+    /**
+     * @method Search available regulation for link
+     */
+    public function GetAvailableRegulations(\Voximplant\Resources\Params\GetAvailableRegulationsParams $params);
 
-	/**
-	 * @method Search user's regulation address
-	 */
-	public function GetRegulationsAddress(\Voximplant\Resources\Params\GetRegulationsAddressParams $params);
+    /**
+     * @method Get all countries
+     */
+    public function GetCountries(\Voximplant\Resources\Params\GetCountriesParams $params);
 
-
-	/**
-	 * @method Search available regulation for link
-	 */
-	public function GetAvailableRegulations(\Voximplant\Resources\Params\GetAvailableRegulationsParams $params);
-
-
-	/**
-	 * @method Get all countries
-	 */
-	public function GetCountries(\Voximplant\Resources\Params\GetCountriesParams $params);
-
-
-	/**
-	 * @method Get available regions in country
-	 */
-	public function GetRegions(\Voximplant\Resources\Params\GetRegionsParams $params);
+    /**
+     * @method Get available regions in country
+     */
+    public function GetRegions(\Voximplant\Resources\Params\GetRegionsParams $params);
 }
 class LinkregulationAddressReturn
 {

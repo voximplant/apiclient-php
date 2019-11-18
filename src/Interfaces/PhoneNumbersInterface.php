@@ -4,64 +4,55 @@ namespace Voximplant\Interfaces;
 
 interface PhoneNumbersInterface
 {
-	/**
-	 * @method Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps.
-	 */
-	public function AttachPhoneNumber(\Voximplant\Resources\Params\AttachPhoneNumberParams $params);
+    /**
+     * @method Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps.
+     */
+    public function AttachPhoneNumber(\Voximplant\Resources\Params\AttachPhoneNumberParams $params);
 
+    /**
+     * @method Bind the phone number to the application or unbind the phone number from the application. You should specify the application_id or application_name if you specify the rule_name.
+     */
+    public function BindPhoneNumberToApplication(\Voximplant\Resources\Params\BindPhoneNumberToApplicationParams $params);
 
-	/**
-	 * @method Bind the phone number to the application or unbind the phone number from the application. You should specify the application_id or application_name if you specify the rule_name.
-	 */
-	public function BindPhoneNumberToApplication(\Voximplant\Resources\Params\BindPhoneNumberToApplicationParams $params);
+    /**
+     * @method Deactivates the phone number.
+     */
+    public function DeactivatePhoneNumber(\Voximplant\Resources\Params\DeactivatePhoneNumberParams $params);
 
+    /**
+     * @method Configure the phone number.
+     */
+    public function SetPhoneNumberInfo(\Voximplant\Resources\Params\SetPhoneNumberInfoParams $params);
 
-	/**
-	 * @method Deactivates the phone number.
-	 */
-	public function DeactivatePhoneNumber(\Voximplant\Resources\Params\DeactivatePhoneNumberParams $params);
+    /**
+     * @method Gets the account phone numbers.
+     */
+    public function GetPhoneNumbers(\Voximplant\Resources\Params\GetPhoneNumbersParams $params);
 
+    /**
+     * @method Gets the new phone numbers.
+     */
+    public function GetNewPhoneNumbers(\Voximplant\Resources\Params\GetNewPhoneNumbersParams $params);
 
-	/**
-	 * @method Configure the phone number.
-	 */
-	public function SetPhoneNumberInfo(\Voximplant\Resources\Params\SetPhoneNumberInfoParams $params);
+    /**
+     * @method Gets the phone number categories.
+     */
+    public function GetPhoneNumberCategories(\Voximplant\Resources\Params\GetPhoneNumberCategoriesParams $params);
 
+    /**
+     * @method Gets the phone number country states.
+     */
+    public function GetPhoneNumberCountryStates(\Voximplant\Resources\Params\GetPhoneNumberCountryStatesParams $params);
 
-	/**
-	 * @method Gets the account phone numbers.
-	 */
-	public function GetPhoneNumbers(\Voximplant\Resources\Params\GetPhoneNumbersParams $params);
+    /**
+     * @method Get the country regions of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
+     */
+    public function GetPhoneNumberRegions(\Voximplant\Resources\Params\GetPhoneNumberRegionsParams $params);
 
-
-	/**
-	 * @method Gets the new phone numbers.
-	 */
-	public function GetNewPhoneNumbers(\Voximplant\Resources\Params\GetNewPhoneNumbersParams $params);
-
-
-	/**
-	 * @method Gets the phone number categories.
-	 */
-	public function GetPhoneNumberCategories(\Voximplant\Resources\Params\GetPhoneNumberCategoriesParams $params);
-
-
-	/**
-	 * @method Gets the phone number country states.
-	 */
-	public function GetPhoneNumberCountryStates(\Voximplant\Resources\Params\GetPhoneNumberCountryStatesParams $params);
-
-
-	/**
-	 * @method Get the country regions of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
-	 */
-	public function GetPhoneNumberRegions(\Voximplant\Resources\Params\GetPhoneNumberRegionsParams $params);
-
-
-	/**
-	 * @method Get actual info the country region of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
-	 */
-	public function GetActualPhoneNumberRegion(\Voximplant\Resources\Params\GetActualPhoneNumberRegionParams $params);
+    /**
+     * @method Get actual info the country region of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
+     */
+    public function GetActualPhoneNumberRegion(\Voximplant\Resources\Params\GetActualPhoneNumberRegionParams $params);
 }
 class AttachPhoneNumberReturn
 {

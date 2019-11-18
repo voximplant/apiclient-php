@@ -4,28 +4,25 @@ namespace Voximplant\Interfaces;
 
 interface ApplicationsInterface
 {
-	/**
-	 * @method Adds a new account's application.
-	 */
-	public function AddApplication(\Voximplant\Resources\Params\AddApplicationParams $params);
+    /**
+     * @method Adds a new account's application.
+     */
+    public function AddApplication(\Voximplant\Resources\Params\AddApplicationParams $params);
 
+    /**
+     * @method Deletes the account's application.
+     */
+    public function DelApplication(\Voximplant\Resources\Params\DelApplicationParams $params);
 
-	/**
-	 * @method Deletes the account's application.
-	 */
-	public function DelApplication(\Voximplant\Resources\Params\DelApplicationParams $params);
+    /**
+     * @method Edits the account's application.
+     */
+    public function SetApplicationInfo(\Voximplant\Resources\Params\SetApplicationInfoParams $params);
 
-
-	/**
-	 * @method Edits the account's application.
-	 */
-	public function SetApplicationInfo(\Voximplant\Resources\Params\SetApplicationInfoParams $params);
-
-
-	/**
-	 * @method Gets the account's applications.
-	 */
-	public function GetApplications(\Voximplant\Resources\Params\GetApplicationsParams $params);
+    /**
+     * @method Gets the account's applications.
+     */
+    public function GetApplications(\Voximplant\Resources\Params\GetApplicationsParams $params);
 }
 class AddApplicationReturn
 {
