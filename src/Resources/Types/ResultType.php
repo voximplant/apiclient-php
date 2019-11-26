@@ -1823,13 +1823,6 @@ class ResultType
         );
     }
 
-    public function DownloadHistoryReport()
-    {
-        return array (
-            'unknown' => 'unknown',
-        );
-    }
-
     public function GetTransactionHistory()
     {
         return array (
@@ -1847,11 +1840,9 @@ class ResultType
                     'payment_reference' => 'string',
                 ),
             ),
-            'end_balance' => 'decimal',
             'total_count' => 'number',
             'timezone' => 'string',
             'count' => 'number',
-            'start_balance' => 'decimal',
             'history_report_id' => 'number',
         );
     }

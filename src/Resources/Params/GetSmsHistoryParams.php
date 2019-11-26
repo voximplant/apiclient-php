@@ -19,10 +19,10 @@ class GetSmsHistoryParams
     /** @var number The first N records will be skipped in the output. */
     public $offset;
 
-    /** @var date Date from which to perform search. Format is 'yyyy-MM-dd HH:mm:ss'. */
+    /** @var timestamp Date from which to perform search. Format is 'yyyy-MM-dd HH:mm:ss'. */
     public $from_date;
 
-    /** @var date Date until which to perform search. Format is 'yyyy-MM-dd HH:mm:ss'. */
+    /** @var timestamp Date until which to perform search. Format is 'yyyy-MM-dd HH:mm:ss'. */
     public $to_date;
 
     /** @var string The output format. The following values available: json, csv. */

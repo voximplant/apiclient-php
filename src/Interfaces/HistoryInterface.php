@@ -15,11 +15,6 @@ interface HistoryInterface
     public function GetHistoryReports(\Voximplant\Resources\Params\GetHistoryReportsParams $params);
 
     /**
-     * @method Downloads the required history report.
-     */
-    public function DownloadHistoryReport(\Voximplant\Resources\Params\DownloadHistoryReportParams $params);
-
-    /**
      * @method Gets the transaction history.
      */
     public function GetTransactionHistory(\Voximplant\Resources\Params\GetTransactionHistoryParams $params);
@@ -79,24 +74,10 @@ interface HistoryInterface
 	/** @var array The returned error message. */
 	public $errors;
 }
-class DownloadHistoryReportReturn
-{
-	/** @var unknown See the HTTP Content-Type header instead. */
-	public $unknown;
-
-	/** @var array The returned error message. */
-	public $error;
-
-	/** @var array The returned error message. */
-	public $errors;
-}
 class GetTransactionHistoryReturn
 {
 	/** @var [TransactionInfoType] */
 	public $result;
-
-	/** @var decimal The committed balance on the date equals from_date value. The parameter value is the number rounded to 4 decimal places and displays in the currency specified for the account. */
-	public $end_balance;
 
 	/** @var number The total found transaction count. */
 	public $total_count;
@@ -106,9 +87,6 @@ interface HistoryInterface
 
 	/** @var number The returned transaction count. */
 	public $count;
-
-	/** @var decimal The committed balance on the date equals to_date value. The parameter value is the number rounded to 4 decimal places and displays in the currency specified for the account. */
-	public $start_balance;
 
 	/** @var number The history report ID (async mode). */
 	public $history_report_id;

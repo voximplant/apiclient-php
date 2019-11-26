@@ -547,13 +547,6 @@ class RequestType
         );
     }
 
-    public function DownloadHistoryReport()
-    {
-        return array (
-            'history_report_id' => 'number',
-        );
-    }
-
     public function GetTransactionHistory()
     {
         return array (
@@ -1634,8 +1627,8 @@ class RequestType
             'direction' => 'string',
             'count' => 'number',
             'offset' => 'number',
-            'from_date' => 'date',
-            'to_date' => 'date',
+            'from_date' => 'timestamp',
+            'to_date' => 'timestamp',
             'output' => 'string',
         );
     }

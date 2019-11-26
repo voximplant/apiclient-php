@@ -3,7 +3,6 @@
 namespace Voximplant\Resources;
 
 use Voximplant\Interfaces\DeleteRecordReturn;
-use Voximplant\Interfaces\DownloadHistoryReportReturn;
 use Voximplant\Interfaces\GetACDHistoryReturn;
 use Voximplant\Interfaces\GetAuditLogReturn;
 use Voximplant\Interfaces\GetCallHistoryReturn;
@@ -20,9 +19,6 @@ class History implements HistoryInterface
 
     /** @object GetHistoryReports */
     protected $GetHistoryReportsReturn;
-
-    /** @object DownloadHistoryReport */
-    protected $DownloadHistoryReportReturn;
 
     /** @object GetTransactionHistory */
     protected $GetTransactionHistoryReturn;
@@ -42,7 +38,6 @@ class History implements HistoryInterface
 
         $this->GetCallHistoryReturn = new GetCallHistoryReturn();
         $this->GetHistoryReportsReturn = new GetHistoryReportsReturn();
-        $this->DownloadHistoryReportReturn = new DownloadHistoryReportReturn();
         $this->GetTransactionHistoryReturn = new GetTransactionHistoryReturn();
         $this->DeleteRecordReturn = new DeleteRecordReturn();
         $this->GetACDHistoryReturn = new GetACDHistoryReturn();
@@ -69,17 +64,6 @@ class History implements HistoryInterface
             $this->GetHistoryReportsReturn->$key = $value;
         }
         return $this->GetHistoryReportsReturn;
-    }
-
-    /**
-     * @method Downloads the required history report.
-     */
-    public function DownloadHistoryReport(Params\DownloadHistoryReportParams $params = null): DownloadHistoryReportReturn
-    {
-        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-            $this->DownloadHistoryReportReturn->$key = $value;
-        }
-        return $this->DownloadHistoryReportReturn;
     }
 
     /**
