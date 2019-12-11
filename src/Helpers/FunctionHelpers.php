@@ -17,8 +17,7 @@ class FunctionHelpers
             if (is_array($itemParam)) {
                 $params[$keyItemParam] = '';
                 foreach ($itemParam as $iParam) {
-                    $params[$keyItemParam] .= $iParam;
-                    $params[$keyItemParam] .= ';';
+                    $params[$keyItemParam] .= $iParam.';';
                 }
                 $params[$keyItemParam] = rtrim($params[$keyItemParam], ';');
             }
