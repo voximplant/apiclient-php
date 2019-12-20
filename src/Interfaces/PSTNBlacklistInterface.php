@@ -26,54 +26,54 @@ interface PSTNBlacklistInterface
 }
 class AddPstnBlackListItemReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var number The PSTN black list item ID. */
-	public $pstn_blacklist_id;
+    /** @var number The PSTN black list item ID. */
+    public $pstn_blacklist_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class SetPstnBlackListItemReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DelPstnBlackListItemReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetPstnBlackListReturn
 {
-	/** @var [PstnBlackListInfoType] */
-	public $result;
+    /** @var [PstnBlackListInfoType] */
+    public $result;
 
-	/** @var number The total found phone numbers count. */
-	public $total_count;
+    /** @var number The total found phone numbers count. */
+    public $total_count;
 
-	/** @var number The returned phone numbers count. */
-	public $count;
+    /** @var number The returned phone numbers count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

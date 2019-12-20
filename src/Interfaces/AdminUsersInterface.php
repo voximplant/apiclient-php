@@ -31,68 +31,68 @@ interface AdminUsersInterface
 }
 class AddAdminUserReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var number The new admin user ID. */
-	public $admin_user_id;
+    /** @var number The new admin user ID. */
+    public $admin_user_id;
 
-	/** @var string The admin user API key. */
-	public $admin_user_api_key;
+    /** @var string The admin user API key. */
+    public $admin_user_api_key;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DelAdminUserReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class SetAdminUserInfoReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetAdminUsersReturn
 {
-	/** @var [AdminUserType] */
-	public $result;
+    /** @var [AdminUserType] */
+    public $result;
 
-	/** @var number The total found admin user count. */
-	public $total_count;
+    /** @var number The total found admin user count. */
+    public $total_count;
 
-	/** @var number The returned admin user count. */
-	public $count;
+    /** @var number The returned admin user count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class AttachAdminRoleReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

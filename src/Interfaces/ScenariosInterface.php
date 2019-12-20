@@ -46,113 +46,113 @@ interface ScenariosInterface
 }
 class AddScenarioReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var number The new scenario ID. */
-	public $scenario_id;
+    /** @var number The new scenario ID. */
+    public $scenario_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DelScenarioReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class BindScenarioReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetScenariosReturn
 {
-	/** @var [ScenarioInfoType] */
-	public $result;
+    /** @var [ScenarioInfoType] */
+    public $result;
 
-	/** @var number The total found scenario count. */
-	public $total_count;
+    /** @var number The total found scenario count. */
+    public $total_count;
 
-	/** @var number The returned scenario count. */
-	public $count;
+    /** @var number The returned scenario count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class SetScenarioInfoReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class ReorderScenariosReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class StartScenariosReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var string The URL to control a created media session. It can be used for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTP request on this URL will result in the [AppEvents.HttpRequest](https://voximplant.com/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for scenario, with HTTP request data passed to it. */
-	public $media_session_access_url;
+    /** @var string The URL to control a created media session. It can be used for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTP request on this URL will result in the [AppEvents.HttpRequest](https://voximplant.com/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for scenario, with HTTP request data passed to it. */
+    public $media_session_access_url;
 
-	/** @var string The URL to control a created media session. It can be used for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTPS request on this URL will result in the [AppEvents.HttpRequest](https://voximplant.com/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for scenario, with HTTP request data passed to it. */
-	public $media_session_access_secure_url;
+    /** @var string The URL to control a created media session. It can be used for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTPS request on this URL will result in the [AppEvents.HttpRequest](https://voximplant.com/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for scenario, with HTTP request data passed to it. */
+    public $media_session_access_secure_url;
 
-	/** @var string The URL to check media session */
-	public $media_session_check_url;
+    /** @var string The URL to check media session */
+    public $media_session_check_url;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class StartConferenceReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var string The URL to control a created media session. It can be used for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTP request on this URL will result in the [AppEvents.HttpRequest](https://voximplant.com/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for a scenario, with an HTTP request data passed to it. */
-	public $media_session_access_url;
+    /** @var string The URL to control a created media session. It can be used for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTP request on this URL will result in the [AppEvents.HttpRequest](https://voximplant.com/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for a scenario, with an HTTP request data passed to it. */
+    public $media_session_access_url;
 
-	/** @var string The URL to control a created media session. It can be used for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTPS request on this URL will result in the [AppEvents.HttpRequest](https://voximplant.com/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for a scenario, with an HTTP request data passed to it. */
-	public $media_session_access_secure_url;
+    /** @var string The URL to control a created media session. It can be used for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTPS request on this URL will result in the [AppEvents.HttpRequest](https://voximplant.com/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for a scenario, with an HTTP request data passed to it. */
+    public $media_session_access_secure_url;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

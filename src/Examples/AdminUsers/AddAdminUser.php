@@ -24,7 +24,9 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * new_admin_user_name - The admin user name. The length must be less than 50.
  * admin_user_display_name - The admin user display name. The length must be less than 256.
  * new_admin_user_password - The admin user password. The length must be at least 6 symbols.
+ * admin_user_active - The admin user enable flag.
  * admin_role_id - The role(s) ID created via Managing Admin Roles methods. The attaching admin role ID list or the 'all' value.
+ * admin_role_name - The role(s) name(s) created via Managing Admin Roles methods. The attaching admin role name that can be used instead of admin_role_id.
  */
 $params = new AddAdminUserParams();
 

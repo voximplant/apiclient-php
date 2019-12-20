@@ -46,125 +46,125 @@ interface CallListsInterface
 }
 class CreateCallListReturn
 {
-	/** @var boolean true */
-	public $result;
+    /** @var boolean true */
+    public $result;
 
-	/** @var number The number of stored records */
-	public $count;
+    /** @var number The number of stored records */
+    public $count;
 
-	/** @var number The list ID. */
-	public $list_id;
+    /** @var number The list ID. */
+    public $list_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class CreateManualCallListReturn
 {
-	/** @var boolean true */
-	public $result;
+    /** @var boolean true */
+    public $result;
 
-	/** @var number The number of stored records */
-	public $count;
+    /** @var number The number of stored records */
+    public $count;
 
-	/** @var number The list ID. */
-	public $list_id;
+    /** @var number The list ID. */
+    public $list_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class StartNextCallTaskReturn
 {
-	/** @var number true */
-	public $result;
+    /** @var number true */
+    public $result;
 
-	/** @var number The list id. */
-	public $list_id;
+    /** @var number The list id. */
+    public $list_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class AppendToCallListReturn
 {
-	/** @var boolean true */
-	public $result;
+    /** @var boolean true */
+    public $result;
 
-	/** @var number The number of stored records */
-	public $count;
+    /** @var number The number of stored records */
+    public $count;
 
-	/** @var number The list ID. */
-	public $list_id;
+    /** @var number The list ID. */
+    public $list_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetCallListsReturn
 {
-	/** @var [CallListType] Array of lists. */
-	public $result;
+    /** @var [CallListType] Array of lists. */
+    public $result;
 
-	/** @var number The returned call list count. */
-	public $count;
+    /** @var number The returned call list count. */
+    public $count;
 
-	/** @var number The total found call list count. */
-	public $total_count;
+    /** @var number The total found call list count. */
+    public $total_count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetCallListDetailsReturn
 {
-	/** @var [CallListDetailType] Array of tasks for the roll call. */
-	public $result;
+    /** @var [CallListDetailType] Array of tasks for the roll call. */
+    public $result;
 
-	/** @var number The number of tasks. */
-	public $count;
+    /** @var number The number of tasks. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class StopCallListProcessingReturn
 {
-	/** @var boolean true */
-	public $result;
+    /** @var boolean true */
+    public $result;
 
-	/** @var string Result message. */
-	public $msg;
+    /** @var string Result message. */
+    public $msg;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class RecoverCallListReturn
 {
-	/** @var boolean true */
-	public $result;
+    /** @var boolean true */
+    public $result;
 
-	/** @var number Number restored tasks */
-	public $count_recovery;
+    /** @var number Number restored tasks */
+    public $count_recovery;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

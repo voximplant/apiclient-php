@@ -22,6 +22,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * list_id - The list Id. Can use a set of identifiers with the separator ";"
+ * custom_params - The custom param. Use to transfer the call initiator parameters to the scenario.
  */
 $params = new StartNextCallTaskParams();
 

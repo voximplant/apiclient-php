@@ -56,126 +56,126 @@ interface PhoneNumbersInterface
 }
 class AttachPhoneNumberReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var [NewAttachedPhoneInfoType] The attached phone numbers. */
-	public $phone_numbers;
+    /** @var [NewAttachedPhoneInfoType] The attached phone numbers. */
+    public $phone_numbers;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class BindPhoneNumberToApplicationReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DeactivatePhoneNumberReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class SetPhoneNumberInfoReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetPhoneNumbersReturn
 {
-	/** @var [AttachedPhoneInfoType] */
-	public $result;
+    /** @var [AttachedPhoneInfoType] */
+    public $result;
 
-	/** @var number The total found phone count. */
-	public $total_count;
+    /** @var number The total found phone count. */
+    public $total_count;
 
-	/** @var number The returned phone count. */
-	public $count;
+    /** @var number The returned phone count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetNewPhoneNumbersReturn
 {
-	/** @var [NewPhoneInfoType] */
-	public $result;
+    /** @var [NewPhoneInfoType] */
+    public $result;
 
-	/** @var number The total found phone count. */
-	public $total_count;
+    /** @var number The total found phone count. */
+    public $total_count;
 
-	/** @var number The returned phone count. */
-	public $count;
+    /** @var number The returned phone count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetPhoneNumberCategoriesReturn
 {
-	/** @var [PhoneNumberCountryInfoType] */
-	public $result;
+    /** @var [PhoneNumberCountryInfoType] */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetPhoneNumberCountryStatesReturn
 {
-	/** @var [PhoneNumberCountryStateInfoType] */
-	public $result;
+    /** @var [PhoneNumberCountryStateInfoType] */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetPhoneNumberRegionsReturn
 {
-	/** @var [PhoneNumberCountryRegionInfoType] */
-	public $result;
+    /** @var [PhoneNumberCountryRegionInfoType] */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetActualPhoneNumberRegionReturn
 {
-	/** @var PhoneNumberCountryRegionInfoType */
-	public $result;
+    /** @var PhoneNumberCountryRegionInfoType */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

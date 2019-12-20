@@ -19,7 +19,7 @@ class GetCallHistoryParams
     /** @var string The application name, can be used instead of application_id. */
     public $application_name;
 
-    /** @var intlist The user ID list separated by the ';' symbol. If it's specified the output will contain only calls from/to any VoxImplant SDK related to the specified user. */
+    /** @var intlist The user ID list separated by the ';' symbol. If it's specified, the output will contain the calls from the listed users only. */
     public $user_id;
 
     /** @var string The rule name to filter. */

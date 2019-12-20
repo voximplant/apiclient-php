@@ -31,68 +31,68 @@ interface UsersInterface
 }
 class AddUserReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var number The new user ID. */
-	public $user_id;
+    /** @var number The new user ID. */
+    public $user_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DelUserReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class SetUserInfoReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetUsersReturn
 {
-	/** @var [UserInfoType] The UserInfoType records. */
-	public $result;
+    /** @var [UserInfoType] The UserInfoType records. */
+    public $result;
 
-	/** @var number The total found user count. */
-	public $total_count;
+    /** @var number The total found user count. */
+    public $total_count;
 
-	/** @var number The returned user count. */
-	public $count;
+    /** @var number The returned user count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class TransferMoneyToUserReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var decimal The new account balance. */
-	public $balance;
+    /** @var decimal The new account balance. */
+    public $balance;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

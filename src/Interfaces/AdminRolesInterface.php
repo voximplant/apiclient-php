@@ -31,65 +31,65 @@ interface AdminRolesInterface
 }
 class AddAdminRoleReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var number The new admin role ID. */
-	public $admin_role_id;
+    /** @var number The new admin role ID. */
+    public $admin_role_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DelAdminRoleReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class SetAdminRoleInfoReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetAdminRolesReturn
 {
-	/** @var [AdminRoleType] */
-	public $result;
+    /** @var [AdminRoleType] */
+    public $result;
 
-	/** @var number The total found admin role count. */
-	public $total_count;
+    /** @var number The total found admin role count. */
+    public $total_count;
 
-	/** @var number The returned admin role count. */
-	public $count;
+    /** @var number The returned admin role count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetAvailableAdminRoleEntriesReturn
 {
-	/** @var [string] Array of the admin role entries. */
-	public $result;
+    /** @var [string] Array of the admin role entries. */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

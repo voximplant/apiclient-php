@@ -23,6 +23,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * regulation_address_id - The regulation address ID
  * phone_id - The phone ID for link
+ * phone_number - The phone number for link
  */
 $params = new LinkregulationAddressParams();
 

@@ -22,7 +22,14 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * skill_id - The skill ID list or the 'all' value.
+ * skill_name - Can be used instead of skill_id. The skill name list.
  * user_id - The user ID list or the 'all' value.
+ * user_name - The user name that can be used instead of user_id. The user name list.
+ * acd_queue_id - The ACD queue ID list or the 'all' value.
+ * acd_queue_name - The ACD queue name that can be used instead of acd_queue_id. The ACD queue name list.
+ * application_id - The application ID. It is required if the user_name is specified.
+ * application_name - The application name that can be used instead of application_id.
+ * bind - Bind or unbind?
  */
 $params = new BindSkillParams();
 

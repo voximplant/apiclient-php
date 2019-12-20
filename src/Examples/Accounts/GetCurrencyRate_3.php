@@ -22,6 +22,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * currency - The currency code list. Examples: RUR, EUR, USD
+ * date - The date, format: YYYY-MM-DD
  */
 $params = new GetCurrencyRateParams();
 

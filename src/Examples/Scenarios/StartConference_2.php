@@ -23,8 +23,12 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * conference_name - The conference name. The name length must be less than 50 symbols.
  * rule_id - The rule ID.
- * script_custom_data - The script custom data (like a script argument). Can be accessed in JS scenario via the VoxEngine.customData() method
  * user_id - The user ID. Run the scripts from the user if set.
+ * user_name - The user name that can be used instead of user_id. Run the scripts from the user if set.
+ * application_id - The application ID.
+ * application_name - The application name that can be used instead of application_id.
+ * script_custom_data - The script custom data (like a script argument). Can be accessed in JS scenario via the VoxEngine.customData() method
+ * reference_ip - Specifies the IP from the geolocation of predicted subscribers. It allows selecting the nearest server for serving subscribers.
  */
 $params = new StartConferenceParams();
 

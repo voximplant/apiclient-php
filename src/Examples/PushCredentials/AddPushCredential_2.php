@@ -22,6 +22,12 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * push_provider_name - The push provider name. Available values: APPLE, APPLE_VOIP, GOOGLE.
+ * push_provider_id - The push provider id.
+ * credential_bundle - The bundle of Android/iOS application.
+ * cert_content - Public and private keys in PKCS12 format.
+ * cert_file_name - The parameter is required, when set 'cert_content' as POST body.
+ * cert_password - The secret password for private key.
+ * is_dev_mode - Set true for use this certificate in apple's sandbox environment
  * sender_id - The sender id, provided by Google.
  * server_key - The server key, provided by Google.
  */

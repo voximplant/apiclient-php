@@ -26,54 +26,54 @@ interface AuthorizedIPsInterface
 }
 class AddAuthorizedAccountIPReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DelAuthorizedAccountIPReturn
 {
-	/** @var number The removed network count. */
-	public $result;
+    /** @var number The removed network count. */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetAuthorizedAccountIPsReturn
 {
-	/** @var [AuthorizedAccountIPType] */
-	public $result;
+    /** @var [AuthorizedAccountIPType] */
+    public $result;
 
-	/** @var number The total found network count. */
-	public $total_count;
+    /** @var number The total found network count. */
+    public $total_count;
 
-	/** @var number The returned network count. */
-	public $count;
+    /** @var number The returned network count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class CheckAuthorizedAccountIPReturn
 {
-	/** @var boolean True if IP is allowed. */
-	public $result;
+    /** @var boolean True if IP is allowed. */
+    public $result;
 
-	/** @var string The matched authorized IP or network (if found). */
-	public $authorized_ip;
+    /** @var string The matched authorized IP or network (if found). */
+    public $authorized_ip;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

@@ -22,7 +22,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * list_id - The list ID.
+ * count - Maximum number of entries in the result
+ * offset - The first N records will be skipped in the output.
  * output - Output format (CSV/JSON/XLS). Default CSV
+ * encoding - Encoding of the output file. Default UTF-8
+ * delimiter - Separator values. The default is ';'
  */
 $params = new GetCallListDetailsParams();
 

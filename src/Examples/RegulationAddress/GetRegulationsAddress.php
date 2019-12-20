@@ -21,7 +21,14 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
+ * country_code - The country code according to the ISO 3166-1 alpha-2.
+ * phone_category_name - The phone category name. See the GetPhoneNumberCategories method.
+ * phone_region_code - The phone region code. See the GetRegions method.
  * regulation_address_id - The regulation address ID.
+ * verification_id - The regulation address type ID.
+ * verified - Show only verified regulation address.
+ * in_progress - Show only in progress regulation address.
+ * with_region_code - Return with phone_region_code parameters
  */
 $params = new GetRegulationsAddressParams();
 

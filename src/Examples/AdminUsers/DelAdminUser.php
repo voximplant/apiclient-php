@@ -22,6 +22,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * required_admin_user_id - The admin user ID list or the 'all' value.
+ * required_admin_user_name - The admin user name to delete, can be used instead of required_admin_user_id.
  */
 $params = new DelAdminUserParams();
 

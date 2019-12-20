@@ -22,7 +22,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * push_credential_id - The push credentials id.
+ * cert_content - Public and private keys in PKCS12 format.
  * cert_password - The secret password for private key.
+ * is_dev_mode - Set true for use this certificate in apple's sandbox environment
+ * sender_id - The sender id, provided by Google.
+ * server_key - The server key, provided by Google.
  */
 $params = new SetPushCredentialParams();
 

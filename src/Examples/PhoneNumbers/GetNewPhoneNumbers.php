@@ -23,8 +23,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * country_code - The country code.
  * phone_category_name - The phone category name. See the GetPhoneNumberCategories function.
+ * country_state - The country state. See the GetPhoneNumberCategories and GetPhoneNumberCountryStates functions.
  * phone_region_id - The phone region ID. See the GetPhoneNumberRegions method.
  * count - The max returning record count.
+ * offset - The first N records will be skipped in the output.
  */
 $params = new GetNewPhoneNumbersParams();
 

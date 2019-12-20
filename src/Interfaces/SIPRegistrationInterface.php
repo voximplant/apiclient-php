@@ -31,65 +31,65 @@ interface SIPRegistrationInterface
 }
 class CreateSipRegistrationReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var number The sip registration id. */
-	public $sip_registration_id;
+    /** @var number The sip registration id. */
+    public $sip_registration_id;
 
-	/** @var ShortAccountInfoType The current account state. */
-	public $account_info;
+    /** @var ShortAccountInfoType The current account state. */
+    public $account_info;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class UpdateSipRegistrationReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class BindSipRegistrationReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DeleteSipRegistrationReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetSipRegistrationsReturn
 {
-	/** @var [SIPRegistrationType] Active SIP registrations */
-	public $result;
+    /** @var [SIPRegistrationType] Active SIP registrations */
+    public $result;
 
-	/** @var number Count rows */
-	public $count;
+    /** @var number Count rows */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

@@ -21,7 +21,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
+ * subscription_template_id - The subscription template ID list.
  * subscription_template_type - The subscription template type. The following values are possible: PHONE_NUM, SIP_REGISTRATION.
+ * subscription_template_name - The subscription template name  (example: SIP registration, Phone GB, Phone RU 495, ...).
+ * count - The max returning record count.
+ * offset - The first N records will be skipped in the output.
  */
 $params = new GetSubscriptionPriceParams();
 

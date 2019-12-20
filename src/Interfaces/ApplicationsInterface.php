@@ -26,66 +26,66 @@ interface ApplicationsInterface
 }
 class AddApplicationReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var number The application ID */
-	public $application_id;
+    /** @var number The application ID */
+    public $application_id;
 
-	/** @var string The full application name */
-	public $application_name;
+    /** @var string The full application name */
+    public $application_name;
 
-	/** @var boolean This flag indicates whether a secure storage for logs and records is enabled or not. */
-	public $secure_record_storage;
+    /** @var boolean This flag indicates whether a secure storage for logs and records is enabled or not. */
+    public $secure_record_storage;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DelApplicationReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class SetApplicationInfoReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var string The new full application name */
-	public $application_name;
+    /** @var string The new full application name */
+    public $application_name;
 
-	/** @var boolean This flag indicates whether a secure storage for logs and records is enabled or not. */
-	public $secure_record_storage;
+    /** @var boolean This flag indicates whether a secure storage for logs and records is enabled or not. */
+    public $secure_record_storage;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetApplicationsReturn
 {
-	/** @var [ApplicationInfoType] */
-	public $result;
+    /** @var [ApplicationInfoType] */
+    public $result;
 
-	/** @var number The total found application count. */
-	public $total_count;
+    /** @var number The total found application count. */
+    public $total_count;
 
-	/** @var number The returned application count. */
-	public $count;
+    /** @var number The returned application count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

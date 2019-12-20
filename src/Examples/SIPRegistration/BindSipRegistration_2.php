@@ -21,7 +21,13 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
+ * sip_registration_id - The registration ID
+ * application_id - The application ID which the SIP registration will be bound to. Could be used instead of the application_name parameter.
+ * application_name - The application name which the SIP registration will be bound to. Could be used instead of the application_id parameter.
+ * rule_id - The rule ID which the SIP registration will be bound to. Could be used instead of the rule_name parameter.
+ * rule_name - The rule name which the SIP registration will be bound to. Could be used instead of the rule_id parameter.
  * user_id - The user ID which the SIP registration will be bound to. Could be used instead of the user_name parameter.
+ * user_name - The user name which the SIP registration will be bound to. Could be used instead of the user_id parameter.
  * bind - Bind or unbind?
  */
 $params = new BindSipRegistrationParams();

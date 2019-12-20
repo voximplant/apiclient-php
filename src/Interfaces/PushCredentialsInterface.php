@@ -31,59 +31,59 @@ interface PushCredentialsInterface
 }
 class AddPushCredentialReturn
 {
-	/** @var number */
-	public $result;
+    /** @var number */
+    public $result;
 
-	/** @var number */
-	public $push_credential_id;
+    /** @var number */
+    public $push_credential_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class SetPushCredentialReturn
 {
-	/** @var number */
-	public $result;
+    /** @var number */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DelPushCredentialReturn
 {
-	/** @var number */
-	public $result;
+    /** @var number */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetPushCredentialReturn
 {
-	/** @var [PushCredentialInfo] */
-	public $result;
+    /** @var [PushCredentialInfo] */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class BindPushCredentialReturn
 {
-	/** @var number */
-	public $result;
+    /** @var number */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

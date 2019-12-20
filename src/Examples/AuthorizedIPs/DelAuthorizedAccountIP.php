@@ -22,6 +22,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * authorized_ip - The authorized IP4 or network to remove. Set to 'all' to remove all items.
+ * contains_ip - Can be used instead of autharized_ip. Specify the parameter to remove the networks that contains the particular IP4.
+ * allowed - Set true to remove the network from the white list. Set false to remove the network from the black list. Omit the parameter to remove the network from all lists.
  */
 $params = new DelAuthorizedAccountIPParams();
 

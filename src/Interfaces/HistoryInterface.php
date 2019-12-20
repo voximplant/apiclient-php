@@ -36,115 +36,115 @@ interface HistoryInterface
 }
 class GetCallHistoryReturn
 {
-	/** @var [CallSessionInfoType] The CallSessionInfoType records in sync mode or 1 in async mode. */
-	public $result;
+    /** @var [CallSessionInfoType] The CallSessionInfoType records in sync mode or 1 in async mode. */
+    public $result;
 
-	/** @var number The total found call session count (sync mode). */
-	public $total_count;
+    /** @var number The total found call session count (sync mode). */
+    public $total_count;
 
-	/** @var number The returned call session count (sync mode). */
-	public $count;
+    /** @var number The returned call session count (sync mode). */
+    public $count;
 
-	/** @var string The used timezone. */
-	public $timezone;
+    /** @var string The used timezone. */
+    public $timezone;
 
-	/** @var number The history report ID (async mode). */
-	public $history_report_id;
+    /** @var number The history report ID (async mode). */
+    public $history_report_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetHistoryReportsReturn
 {
-	/** @var [HistoryReportType] */
-	public $result;
+    /** @var [HistoryReportType] */
+    public $result;
 
-	/** @var number The total found reports count. */
-	public $total_count;
+    /** @var number The total found reports count. */
+    public $total_count;
 
-	/** @var number The returned reports count. */
-	public $count;
+    /** @var number The returned reports count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetTransactionHistoryReturn
 {
-	/** @var [TransactionInfoType] */
-	public $result;
+    /** @var [TransactionInfoType] */
+    public $result;
 
-	/** @var number The total found transaction count. */
-	public $total_count;
+    /** @var number The total found transaction count. */
+    public $total_count;
 
-	/** @var string The used timezone. 'Etc/GMT' for example. */
-	public $timezone;
+    /** @var string The used timezone. 'Etc/GMT' for example. */
+    public $timezone;
 
-	/** @var number The returned transaction count. */
-	public $count;
+    /** @var number The returned transaction count. */
+    public $count;
 
-	/** @var number The history report ID (async mode). */
-	public $history_report_id;
+    /** @var number The history report ID (async mode). */
+    public $history_report_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DeleteRecordReturn
 {
-	/** @var number */
-	public $result;
+    /** @var number */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetACDHistoryReturn
 {
-	/** @var [ACDSessionInfoType] */
-	public $result;
+    /** @var [ACDSessionInfoType] */
+    public $result;
 
-	/** @var number The total found ACD session count. */
-	public $total_count;
+    /** @var number The total found ACD session count. */
+    public $total_count;
 
-	/** @var number The returned ACD session count. */
-	public $count;
+    /** @var number The returned ACD session count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetAuditLogReturn
 {
-	/** @var [AuditLogInfoType] */
-	public $result;
+    /** @var [AuditLogInfoType] */
+    public $result;
 
-	/** @var number The total found item count. */
-	public $total_count;
+    /** @var number The total found item count. */
+    public $total_count;
 
-	/** @var number The returned item count. */
-	public $count;
+    /** @var number The returned item count. */
+    public $count;
 
-	/** @var string The used timezone. */
-	public $timezone;
+    /** @var string The used timezone. */
+    public $timezone;
 
-	/** @var number The history report ID (async mode). */
-	public $history_report_id;
+    /** @var number The history report ID (async mode). */
+    public $history_report_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

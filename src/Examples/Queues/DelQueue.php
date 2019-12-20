@@ -22,6 +22,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * acd_queue_id - The ACD queue ID list.
+ * acd_queue_name - The ACD queue name that can be used instead of acd_queue_id. The ACD queue name list.
  */
 $params = new DelQueueParams();
 

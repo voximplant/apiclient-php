@@ -26,54 +26,54 @@ interface SIPWhiteListInterface
 }
 class AddSipWhiteListItemReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var number The SIP white list item ID. */
-	public $sip_whitelist_id;
+    /** @var number The SIP white list item ID. */
+    public $sip_whitelist_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DelSipWhiteListItemReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class SetSipWhiteListItemReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetSipWhiteListReturn
 {
-	/** @var [SipWhiteListInfoType] */
-	public $result;
+    /** @var [SipWhiteListInfoType] */
+    public $result;
 
-	/** @var number The total found networks count. */
-	public $total_count;
+    /** @var number The total found networks count. */
+    public $total_count;
 
-	/** @var number The returned networks count. */
-	public $count;
+    /** @var number The returned networks count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

@@ -21,8 +21,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * offset - The first N records will be skipped in the output.
+ * skill_id - The skill ID to filter.
+ * skill_name - The skill name part to filter.
  * count - The max returning record count.
+ * offset - The first N records will be skipped in the output.
  */
 $params = new GetSkillsParams();
 

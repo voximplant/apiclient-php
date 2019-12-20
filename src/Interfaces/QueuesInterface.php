@@ -51,109 +51,109 @@ interface QueuesInterface
 }
 class AddQueueReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var number The ACD queue ID. */
-	public $acd_queue_id;
+    /** @var number The ACD queue ID. */
+    public $acd_queue_id;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class BindUserToQueueReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DelQueueReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class SetQueueInfoReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetQueuesReturn
 {
-	/** @var [QueueInfoType] */
-	public $result;
+    /** @var [QueueInfoType] */
+    public $result;
 
-	/** @var number The total found queue count. */
-	public $total_count;
+    /** @var number The total found queue count. */
+    public $total_count;
 
-	/** @var number The returned queue count. */
-	public $count;
+    /** @var number The returned queue count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetACDStateReturn
 {
-	/** @var ACDStateType */
-	public $result;
+    /** @var ACDStateType */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetACDOperatorStatisticsReturn
 {
-	/** @var [ACDOperatorAggregationGroupType] List of groups, grouped by user ID or date according to the 'group' method call argument */
-	public $result;
+    /** @var [ACDOperatorAggregationGroupType] List of groups, grouped by user ID or date according to the 'group' method call argument */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetACDQueueStatisticsReturn
 {
-	/** @var [ACDQueueStatisticsType] List of records grouped grouped by date according to the 'aggregation' method call argument */
-	public $result;
+    /** @var [ACDQueueStatisticsType] List of records grouped grouped by date according to the 'aggregation' method call argument */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetACDOperatorStatusStatisticsReturn
 {
-	/** @var [ACDOperatorStatusAggregationGroupType] List of groups, grouped by user ID or date according to the 'group' method call argument */
-	public $result;
+    /** @var [ACDOperatorStatusAggregationGroupType] List of groups, grouped by user ID or date according to the 'group' method call argument */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

@@ -23,6 +23,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * country_code - The country code.
  * phone_category_name - The phone category name. See the GetPhoneNumberCategories function.
+ * country_state - The country state code (example: AL, CA, ... ).
  */
 $params = new GetPhoneNumberCountryStatesParams();
 

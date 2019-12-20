@@ -22,6 +22,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * phone_id - The phone ID.
+ * phone_number - The phone number that can be used instead of phone_id.
  */
 $params = new DeactivatePhoneNumberParams();
 

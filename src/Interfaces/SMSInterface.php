@@ -21,40 +21,40 @@ interface SMSInterface
 }
 class SendSmsMessageReturn
 {
-	/** @var number */
-	public $result;
+    /** @var number */
+    public $result;
 
-	/** @var number The number of fragments to which the message divided. */
-	public $fragments_count;
+    /** @var number The number of fragments to which the message divided. */
+    public $fragments_count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class ControlSmsReturn
 {
-	/** @var number */
-	public $result;
+    /** @var number */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetSmsHistoryReturn
 {
-	/** @var [SmsHistoryType] */
-	public $result;
+    /** @var [SmsHistoryType] */
+    public $result;
 
-	/** @var number Total number of distinct messages fetched. */
-	public $total_count;
+    /** @var number Total number of distinct messages fetched. */
+    public $total_count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

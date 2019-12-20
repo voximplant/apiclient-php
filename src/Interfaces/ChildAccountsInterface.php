@@ -26,48 +26,48 @@ interface ChildAccountsInterface
 }
 class AddChildAccountSubscriptionReturn
 {
-	/** @var number */
-	public $result;
+    /** @var number */
+    public $result;
 
-	/** @var [ChildAccountSubscriptionType] */
-	public $subscriptions;
+    /** @var [ChildAccountSubscriptionType] */
+    public $subscriptions;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetChildAccountSubscriptionsReturn
 {
-	/** @var [ChildAccountSubscriptionType] */
-	public $result;
+    /** @var [ChildAccountSubscriptionType] */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetChildAccountSubscriptionTemplatesReturn
 {
-	/** @var [ChildAccountSubscriptionTemplateType] */
-	public $result;
+    /** @var [ChildAccountSubscriptionTemplateType] */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class DeactivateChildAccountSubscriptionReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

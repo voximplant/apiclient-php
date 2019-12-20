@@ -22,7 +22,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * required_admin_user_id - The admin user to edit.
+ * required_admin_user_name - The admin user to edit, can be used instead of required_admin_user_id.
+ * new_admin_user_name - The new admin user name. The length must be less than 50.
+ * admin_user_display_name - The new admin user display name. The length must be less than 256.
  * new_admin_user_password - The new admin user password. The length must be at least 6 symbols.
+ * admin_user_active - The admin user enable flag.
  */
 $params = new SetAdminUserInfoParams();
 

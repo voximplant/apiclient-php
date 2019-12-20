@@ -61,137 +61,137 @@ interface AccountsInterface
 }
 class GetAccountInfoReturn
 {
-	/** @var AccountInfoType Account's info as the [AccountInfoType] object instance. */
-	public $result;
+    /** @var AccountInfoType Account's info as the [AccountInfoType] object instance. */
+    public $result;
 
-	/** @var string The preferred address for the http api requests. */
-	public $api_address;
+    /** @var string The preferred address for the http api requests. */
+    public $api_address;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class SetAccountInfoReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class SetChildAccountInfoReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetCurrencyRateReturn
 {
-	/** @var ExchangeRates The exchange rates. */
-	public $result;
+    /** @var ExchangeRates The exchange rates. */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetResourcePriceReturn
 {
-	/** @var [ResourcePrice] The resource prices. */
-	public $result;
+    /** @var [ResourcePrice] The resource prices. */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetSubscriptionPriceReturn
 {
-	/** @var [SubscriptionTemplateType] The subscription template prices. */
-	public $result;
+    /** @var [SubscriptionTemplateType] The subscription template prices. */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetChildrenAccountsReturn
 {
-	/** @var [AccountInfoType] */
-	public $result;
+    /** @var [AccountInfoType] */
+    public $result;
 
-	/** @var number The total found user count. */
-	public $total_count;
+    /** @var number The total found user count. */
+    public $total_count;
 
-	/** @var number The returned user count. */
-	public $count;
+    /** @var number The returned user count. */
+    public $count;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class TransferMoneyToChildAccountReturn
 {
-	/** @var number 1 */
-	public $result;
+    /** @var number 1 */
+    public $result;
 
-	/** @var decimal The updated parent's account balance. */
-	public $balance;
+    /** @var decimal The updated parent's account balance. */
+    public $balance;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetMoneyAmountToChargeReturn
 {
-	/** @var GetMoneyAmountToChargeResult Result */
-	public $result;
+    /** @var GetMoneyAmountToChargeResult Result */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class ChargeAccountReturn
 {
-	/** @var ChargeAccountResult Result */
-	public $result;
+    /** @var ChargeAccountResult Result */
+    public $result;
 
-	/** @var ShortAccountInfoType The current account state. */
-	public $account_info;
+    /** @var ShortAccountInfoType The current account state. */
+    public $account_info;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }
 class GetAccountDocumentsReturn
 {
-	/** @var [AccountVerifications] The account verifications. */
-	public $result;
+    /** @var [AccountVerifications] The account verifications. */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

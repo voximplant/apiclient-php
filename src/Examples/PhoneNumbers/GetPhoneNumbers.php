@@ -21,7 +21,36 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
+ * phone_id - The particular phone ID to filter
+ * application_id - The application ID.
+ * application_name - The application name that can be used instead of application_id.
+ * is_bound_to_application - Is a phone bound to an application.
+ * phone_template - The phone number start to filter
+ * country_code - The country code list.
+ * phone_category_name - The phone category name. See the GetPhoneNumberCategories method.
+ * canceled - The flag of the canceled (deleted) subscription to filter.
+ * deactivated - The flag of the deactivated (frozen) subscription to filter.
+ * auto_charge - The auto_charge flag to filter.
+ * from_phone_next_renewal - The UTC 'from' date filter in format: YYYY-MM-DD
+ * to_phone_next_renewal - The UTC 'to' date filter in format: YYYY-MM-DD
+ * from_phone_purchase_date - The UTC 'from' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
+ * to_phone_purchase_date - The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
+ * child_account_id - The child account ID list or the 'all' value.
+ * children_phones_only - Set true to get the children phones only.
+ * verification_name - The required account verification name to filter.
+ * verification_status - The account verification status list. The following values are possible: REQUIRED, IN_PROGRESS, VERIFIED
+ * from_unverified_hold_until - Unverified phone hold until the date (from ...) in format: YYYY-MM-DD
+ * to_unverified_hold_until - Unverified phone hold until the date (... to) in format: YYYY-MM-DD
+ * can_be_used - Can the unverified account use the phone?
+ * order_by - The following values are available: 'phone_number' (ascent order), 'phone_price' (ascent order), 'phone_country_code' (ascent order), 'deactivated' (deactivated first, active last), 'purchase_date' (descent order), 'phone_next_renewal' (ascent order), 'verification_status', 'unverified_hold_until' (ascent order), 'verification_name'.
+ * sandbox - Flag allows you to display only the numbers of the sandbox, real numbers, or all numbers. The following values are possible: 'all', 'true', 'false'.
  * count - The max returning record count.
+ * offset - The first N records will be skipped in the output.
+ * sms_supported - The flag of the SMS support.
+ * phone_region_name - The region names list.
+ * rule_id - The rule ID list.
+ * rule_name - The rule names list. Can be used only if __application_id__ or __application_name__ is specified.
+ * is_bound_to_rule - Is a number bound to any rule?
  */
 $params = new GetPhoneNumbersParams();
 

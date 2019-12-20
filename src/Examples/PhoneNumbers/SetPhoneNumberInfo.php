@@ -22,6 +22,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * phone_id - The phone ID list or the 'all' value.
+ * phone_number - The phone number list that can be used instead of phone_id.
  * auto_charge - Set true to enable the auto charging.
  */
 $params = new SetPhoneNumberInfoParams();

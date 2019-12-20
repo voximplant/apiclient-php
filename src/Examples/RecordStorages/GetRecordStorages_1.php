@@ -21,6 +21,9 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
+ * record_storage_id - The record storage ID list.
+ * record_storage_name - The record storage name list.
+ * with_private - Set true to get the private record storages. If set to true, there is the __is_public : bool__ parameter in a response.
  */
 $params = new GetRecordStoragesParams();
 

@@ -24,6 +24,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * child_account_id - The child account ID list.
  * amount - The money amount, $. The absolute amount value must be equal or greater than 0.01
  * currency - The amount currency (the parent account currency by default). Examples: RUR, EUR, USD.
+ * strict_mode - Returns error if strict_mode is true and an child account or the parent account hasn't enough money.
+ * child_transaction_description - The child account transaction description.
+ * parent_transaction_description - The parent account transaction description. The following macro available: ${child_account_id}, ${child_account_name}
+ * payment_reference - The external payment reference (extra info).
+ * check_duplicate_reference_from - Specify the date in 24-h format: YYYY-MM-DD HH:mm:ss to skip the duplicate transaction.
  */
 $params = new TransferMoneyToChildAccountParams();
 

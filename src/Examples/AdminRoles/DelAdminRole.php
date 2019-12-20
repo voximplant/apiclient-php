@@ -22,6 +22,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * admin_role_id - The admin role ID list or the 'all' value.
+ * admin_role_name - The admin role name to delete, can be used instead of admin_role_id.
  */
 $params = new DelAdminRoleParams();
 

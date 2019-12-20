@@ -22,6 +22,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * skill_id - The skill ID.
+ * skill_name - The skill name that can be used instead of skill_id.
  * new_skill_name - The new skill name. The length must be less than 512.
  */
 $params = new SetSkillInfoParams();

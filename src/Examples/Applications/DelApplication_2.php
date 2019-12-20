@@ -22,6 +22,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * application_id - The application ID list or the 'all' value.
+ * application_name - The application name list. Can be used instead of appliction_id.
  */
 $params = new DelApplicationParams();
 

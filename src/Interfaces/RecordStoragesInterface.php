@@ -11,12 +11,12 @@ interface RecordStoragesInterface
 }
 class GetRecordStoragesReturn
 {
-	/** @var RecordStorageInfoType */
-	public $result;
+    /** @var RecordStorageInfoType */
+    public $result;
 
-	/** @var array The returned error message. */
-	public $error;
+    /** @var array The returned error message. */
+    public $error;
 
-	/** @var array The returned error message. */
-	public $errors;
+    /** @var array The returned error message. */
+    public $errors;
 }

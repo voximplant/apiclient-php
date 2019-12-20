@@ -21,8 +21,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * offset - The first N records will be skipped in the output.
+ * scenario_id - The scenario ID to filter
+ * scenario_name - The scenario name to filter. Can be used instead of scenario_id. All scenarios containing this param in their names will be returned. The parameter is case insensitive.
+ * with_script - Set true to get the scenario text. You must specify the 'scenario_id' too!
  * count - The max returning record count.
+ * offset - The first N records will be skipped in the output.
  */
 $params = new GetScenariosParams();
 
