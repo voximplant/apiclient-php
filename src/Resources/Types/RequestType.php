@@ -792,8 +792,8 @@ class RequestType
     public function DeactivatePhoneNumber()
     {
         return array (
-            'phone_id' => 'number',
-            'phone_number' => 'string',
+            'phone_id' => 'intlist',
+            'phone_number' => 'stringlist',
         );
     }
 
