@@ -35,7 +35,7 @@ interface ScenariosInterface
     public function ReorderScenarios(\Voximplant\Resources\Params\ReorderScenariosParams $params);
 
     /**
-     * @method Runs JavaScript scenarios on a VoxImplant server. The scenarios run in a new media session.
+     * @method Runs JavaScript scenarios on a Voximplant server. The scenarios run in a new media session.
      */
     public function StartScenarios(\Voximplant\Resources\Params\StartScenariosParams $params);
 

@@ -28,13 +28,13 @@ class SetAccountInfoParams
     /** @var decimal The min balance value to notify by email or SMS. */
     public $min_balance_to_notify;
 
-    /** @var boolean Are the VoxImplant notifications required? */
+    /** @var boolean Are the Voximplant notifications required? */
     public $account_notifications;
 
-    /** @var boolean Set to true to receive the emails about the VoxImplant plan changing. */
+    /** @var boolean Set to true to receive the emails about the Voximplant plan changing. */
     public $tariff_changing_notifications;
 
-    /** @var boolean Set to true to receive the emails about the VoxImplant news. */
+    /** @var boolean Set to true to receive the emails about the Voximplant news. */
     public $news_notifications;
 
     /** @var boolean Set to true to receive the emails about a JS scenario error. */

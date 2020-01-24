@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetDialogflowKeys Get Dialogflow keys
+ * @method GetDialogflowKeys Get Dialogflow keys.
  */
 
 // Path to your autoload.php

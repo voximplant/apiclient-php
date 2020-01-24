@@ -118,7 +118,7 @@ class VoximplantApi
     /** @var object PushCredentials Add push credentials */
     public $PushCredentials;
 
-    /** @var object DialogflowCredentials Add Dialogflow key */
+    /** @var object DialogflowCredentials Add Dialogflow key. */
     public $DialogflowCredentials;
 
     /** @var object SMS Send SMS message between two phone numbers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the is_sms_supported property in the objects returned by the /GetPhoneNumbers HTTP API) and SMS should be enabled for it via the /ControlSms HTTP API. SMS messages can be received via HTTP callbacks, see this article for details. */

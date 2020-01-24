@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method DelDialogflowKey Remove Dialogflow key
+ * @method DelDialogflowKey Remove Dialogflow key.
  */
 
 // Path to your autoload.php

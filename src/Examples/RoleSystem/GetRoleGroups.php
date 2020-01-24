@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetRoleGroups Gets role groups
+ * @method GetRoleGroups Gets role groups.
  */
 
 // Path to your autoload.php

@@ -121,7 +121,7 @@ class Scenarios implements ScenariosInterface
     }
 
     /**
-     * @method Runs JavaScript scenarios on a VoxImplant server. The scenarios run in a new media session.
+     * @method Runs JavaScript scenarios on a Voximplant server. The scenarios run in a new media session.
      */
     public function StartScenarios(Params\StartScenariosParams $params = null): StartScenariosReturn
     {

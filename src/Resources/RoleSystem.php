@@ -260,7 +260,7 @@ class RoleSystem implements RoleSystemInterface
     }
 
     /**
-     * @method Gets role groups
+     * @method Gets role groups.
      */
     public function GetRoleGroups(Params\GetRoleGroupsParams $params = null): GetRoleGroupsReturn
     {

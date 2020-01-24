@@ -80,7 +80,7 @@ interface RoleSystemInterface
     public function GetRoles(\Voximplant\Resources\Params\GetRolesParams $params);
 
     /**
-     * @method Gets role groups
+     * @method Gets role groups.
      */
     public function GetRoleGroups(\Voximplant\Resources\Params\GetRoleGroupsParams $params);
 }

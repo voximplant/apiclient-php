@@ -19,13 +19,13 @@ class SetChildAccountInfoParams
     /** @var string The new child account password. */
     public $new_child_account_password;
 
-    /** @var boolean Are the VoxImplant notifications required? */
+    /** @var boolean Are the Voximplant notifications required? */
     public $account_notifications;
 
-    /** @var boolean Set to true to receive the emails about the VoxImplant plan changing. */
+    /** @var boolean Set to true to receive the emails about the Voximplant plan changing. */
     public $tariff_changing_notifications;
 
-    /** @var boolean Set to true to receive the emails about the VoxImplant news. */
+    /** @var boolean Set to true to receive the emails about the Voximplant news. */
     public $news_notifications;
 
     /** @var boolean Set false to disable the child account. */
