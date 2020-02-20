@@ -797,15 +797,6 @@ class RequestType
         );
     }
 
-    public function SetPhoneNumberInfo()
-    {
-        return array (
-            'phone_id' => 'intlist',
-            'phone_number' => 'stringlist',
-            'auto_charge' => 'boolean',
-        );
-    }
-
     public function GetPhoneNumbers()
     {
         return array (

@@ -12,7 +12,6 @@ use Voximplant\Interfaces\GetPhoneNumberCountryStatesReturn;
 use Voximplant\Interfaces\GetPhoneNumberRegionsReturn;
 use Voximplant\Interfaces\GetPhoneNumbersReturn;
 use Voximplant\Interfaces\PhoneNumbersInterface;
-use Voximplant\Interfaces\SetPhoneNumberInfoReturn;
 
 class PhoneNumbers implements PhoneNumbersInterface
 {
@@ -26,9 +25,6 @@ class PhoneNumbers implements PhoneNumbersInterface
 
     /** @object DeactivatePhoneNumber */
     protected $DeactivatePhoneNumberReturn;
-
-    /** @object SetPhoneNumberInfo */
-    protected $SetPhoneNumberInfoReturn;
 
     /** @object GetPhoneNumbers */
     protected $GetPhoneNumbersReturn;
@@ -55,7 +51,6 @@ class PhoneNumbers implements PhoneNumbersInterface
         $this->AttachPhoneNumberReturn = new AttachPhoneNumberReturn();
         $this->BindPhoneNumberToApplicationReturn = new BindPhoneNumberToApplicationReturn();
         $this->DeactivatePhoneNumberReturn = new DeactivatePhoneNumberReturn();
-        $this->SetPhoneNumberInfoReturn = new SetPhoneNumberInfoReturn();
         $this->GetPhoneNumbersReturn = new GetPhoneNumbersReturn();
         $this->GetNewPhoneNumbersReturn = new GetNewPhoneNumbersReturn();
         $this->GetPhoneNumberCategoriesReturn = new GetPhoneNumberCategoriesReturn();
@@ -95,17 +90,6 @@ class PhoneNumbers implements PhoneNumbersInterface
             $this->DeactivatePhoneNumberReturn->$key = $value;
         }
         return $this->DeactivatePhoneNumberReturn;
-    }
-
-    /**
-     * @method Configure the phone number.
-     */
-    public function SetPhoneNumberInfo(Params\SetPhoneNumberInfoParams $params = null): SetPhoneNumberInfoReturn
-    {
-        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-            $this->SetPhoneNumberInfoReturn->$key = $value;
-        }
-        return $this->SetPhoneNumberInfoReturn;
     }
 
     /**

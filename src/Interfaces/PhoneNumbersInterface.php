@@ -20,11 +20,6 @@ interface PhoneNumbersInterface
     public function DeactivatePhoneNumber(\Voximplant\Resources\Params\DeactivatePhoneNumberParams $params);
 
     /**
-     * @method Configure the phone number.
-     */
-    public function SetPhoneNumberInfo(\Voximplant\Resources\Params\SetPhoneNumberInfoParams $params);
-
-    /**
      * @method Gets the account phone numbers.
      */
     public function GetPhoneNumbers(\Voximplant\Resources\Params\GetPhoneNumbersParams $params);
@@ -80,17 +75,6 @@ interface PhoneNumbersInterface
     public $errors;
 }
 class DeactivatePhoneNumberReturn
-{
-    /** @var number 1 */
-    public $result;
-
-    /** @var array The returned error message. */
-    public $error;
-
-    /** @var array The returned error message. */
-    public $errors;
-}
-class SetPhoneNumberInfoReturn
 {
     /** @var number 1 */
     public $result;

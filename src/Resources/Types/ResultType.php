@@ -2098,13 +2098,6 @@ class ResultType
         );
     }
 
-    public function SetPhoneNumberInfo()
-    {
-        return array (
-            'result' => 'number',
-        );
-    }
-
     public function GetPhoneNumbers()
     {
         return array (
