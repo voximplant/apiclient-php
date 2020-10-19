@@ -7,7 +7,7 @@ class SetUserInfoParams
     /** @var number The user to edit. */
     public $user_id;
 
-    /** @var string Can be used instead of user_id. */
+    /** @var string The user name that can be used instead of user_id. */
     public $user_name;
 
     /** @var number The application ID. It is required if the user_name is specified. */

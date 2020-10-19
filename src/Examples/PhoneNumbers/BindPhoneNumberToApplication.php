@@ -27,7 +27,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * application_name - The application name that can be used instead of application_id.
  * rule_id - The rule ID.
  * rule_name - The rule name that can be used instead of rule_id.
- * bind - Bind or unbind?
+ * bind - Bind or unbind (set true or false respectively).
  */
 $params = new BindPhoneNumberToApplicationParams();
 

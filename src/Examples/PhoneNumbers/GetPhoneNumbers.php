@@ -27,7 +27,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * is_bound_to_application - Is a phone bound to an application.
  * phone_template - The phone number start to filter
  * country_code - The country code list.
- * phone_category_name - The phone category name. See the GetPhoneNumberCategories method.
+ * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method.
  * canceled - The flag of the canceled (deleted) subscription to filter.
  * deactivated - The flag of the deactivated (frozen) subscription to filter.
  * auto_charge - The auto_charge flag to filter.
@@ -41,7 +41,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * verification_status - The account verification status list. The following values are possible: REQUIRED, IN_PROGRESS, VERIFIED
  * from_unverified_hold_until - Unverified phone hold until the date (from ...) in format: YYYY-MM-DD
  * to_unverified_hold_until - Unverified phone hold until the date (... to) in format: YYYY-MM-DD
- * can_be_used - Can the unverified account use the phone?
+ * can_be_used - Unverified account can use the phone.
  * order_by - The following values are available: 'phone_number' (ascent order), 'phone_price' (ascent order), 'phone_country_code' (ascent order), 'deactivated' (deactivated first, active last), 'purchase_date' (descent order), 'phone_next_renewal' (ascent order), 'verification_status', 'unverified_hold_until' (ascent order), 'verification_name'.
  * sandbox - Flag allows you to display only the numbers of the sandbox, real numbers, or all numbers. The following values are possible: 'all', 'true', 'false'.
  * count - The max returning record count.
@@ -50,7 +50,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * phone_region_name - The region names list.
  * rule_id - The rule ID list.
  * rule_name - The rule names list. Can be used only if __application_id__ or __application_name__ is specified.
- * is_bound_to_rule - Is a number bound to any rule?
+ * is_bound_to_rule - Number is bound to some rule.
  */
 $params = new GetPhoneNumbersParams();
 

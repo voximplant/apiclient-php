@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method AddPushCredential Add push credentials
+ * @method AddPushCredential Adds push credentials
  */
 
 // Path to your autoload.php
@@ -21,8 +21,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * push_provider_name - The push provider name. Available values: APPLE, APPLE_VOIP, GOOGLE.
+ * push_provider_name - The push provider name. The possible values are: APPLE, APPLE_VOIP, GOOGLE.
  * push_provider_id - The push provider id.
+ * application_id - The application id.
+ * application_name - The application name that can be used instead of application_id.
  * credential_bundle - The bundle of Android/iOS application.
  * cert_content - Public and private keys in PKCS12 format.
  * cert_file_name - The parameter is required, when set 'cert_content' as POST body.
@@ -30,6 +32,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * is_dev_mode - Set true for use this certificate in apple's sandbox environment
  * sender_id - The sender id, provided by Google.
  * server_key - The server key, provided by Google.
+ * service_account_file - The service account key file, provided by Google.
  */
 $params = new AddPushCredentialParams();
 

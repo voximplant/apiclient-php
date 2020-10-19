@@ -25,7 +25,7 @@ interface RulesInterface
     public function GetRules(\Voximplant\Resources\Params\GetRulesParams $params);
 
     /**
-     * @method Configures the rules' order in the <a href='//manage.voximplant.com/#editApplication'>Applications</a> section of Control panel. Note: the rules must belong to the same application!
+     * @method Configures the rules' order in the <a href='//manage.voximplant.com/applications'>Applications</a> section of Control panel. Note: the rules must belong to the same application!
      */
     public function ReorderRules(\Voximplant\Resources\Params\ReorderRulesParams $params);
 }

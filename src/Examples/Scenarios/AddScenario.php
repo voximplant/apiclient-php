@@ -25,11 +25,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * scenario_script - The scenario text. The length must be less than 128 KB.
  * rule_id - The rule ID.
  * rule_name - The rule name that can be used instead of rule_id.
- * rewrite - Is the existing scenario rewrite?
+ * rewrite - Rewrite the existing scenario.
  */
 $params = new AddScenarioParams();
 
-$params->scenario_name = 'scen1';
+$params->scenario_name = 'call_scenario';
 $params->scenario_script = 'var s="hello";';
 
 // Add a new scenario: var s='hello';

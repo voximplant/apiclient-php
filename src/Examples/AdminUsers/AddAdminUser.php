@@ -30,8 +30,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  */
 $params = new AddAdminUserParams();
 
-$params->new_admin_user_name = 'adm1';
-$params->admin_user_display_name = 'adm1';
+$params->new_admin_user_name = 'Overseer_Campbell';
+$params->admin_user_display_name = 'Overseer_Campbell';
 $params->new_admin_user_password = '1234567';
 $params->admin_role_id = '1';
 

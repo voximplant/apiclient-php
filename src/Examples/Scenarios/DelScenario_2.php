@@ -22,7 +22,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * scenario_id - The scenario ID list or the 'all' value.
- * scenario_name - Can be used instead of scenario_id. The scenario name list.
+ * scenario_name - The scenario name list. Can be used instead of scenario_id.
  */
 $params = new DelScenarioParams();
 

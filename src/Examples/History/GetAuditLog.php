@@ -23,7 +23,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * from_date - The UTC 'from' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * to_date - The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
- * timezone - The selected timezone or the 'auto' value (will be used the account location).
+ * timezone - The selected timezone or the 'auto' value (the account location).
  * audit_log_id - The audit history ID list.
  * filtered_admin_user_id - The admin user ID to filter.
  * filtered_ip - The IP list to filter.
@@ -35,7 +35,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * count - The max returning record count.
  * offset - The first N records will be skipped in the output.
  * output - The output format. The following values available: json, csv.
- * is_async - Set true to get records in the asynchronous mode (for csv output only). If it's true, the request could be available via GetHistoryReports and DownloadHistoryReport methods.
+ * is_async - Set true to get records in the asynchronous mode (for csv output only). If it's true, the request is available via [GetHistoryReports] and [DownloadHistoryReport] methods.
  */
 $params = new GetAuditLogParams();
 

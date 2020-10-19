@@ -13,13 +13,13 @@ class AttachPhoneNumberParams
     /** @var string The country code. */
     public $country_code;
 
-    /** @var string The phone category name. See the GetPhoneNumberCategories method. */
+    /** @var string The phone category name. See the [GetPhoneNumberCategories] method. */
     public $phone_category_name;
 
-    /** @var string The country state. See the GetPhoneNumberCategories and GetPhoneNumberCountryStates methods. */
+    /** @var string The country state. See the [GetPhoneNumberCategories] and [GetPhoneNumberCountryStates] methods. */
     public $country_state;
 
-    /** @var number The phone region ID. See the GetPhoneNumberRegions method. */
+    /** @var number The phone region ID. See the [GetPhoneNumberRegions] method. */
     public $phone_region_id;
 
     /** @var number The phone regulation address ID. */

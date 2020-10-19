@@ -7,7 +7,7 @@ class BindScenarioParams
     /** @var intlist The scenario ID list separated by the ';' symbol. */
     public $scenario_id;
 
-    /** @var stringlist Can be used instead of scenario_id. The scenario name list separated by the ';' symbol. */
+    /** @var stringlist The scenario name list separated by the ';' symbol. Can be used instead of scenario_id. */
     public $scenario_name;
 
     /** @var number The rule ID. */
@@ -22,6 +22,6 @@ class BindScenarioParams
     /** @var string The application name that can be used instead of application_id. */
     public $application_name;
 
-    /** @var boolean Bind or unbind? */
+    /** @var boolean Bind or unbind (set true or false respectively). */
     public $bind;
 }

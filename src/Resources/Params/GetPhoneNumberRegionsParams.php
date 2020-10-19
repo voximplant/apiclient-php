@@ -7,7 +7,7 @@ class GetPhoneNumberRegionsParams
     /** @var string The country code. */
     public $country_code;
 
-    /** @var string The phone category name. See the GetPhoneNumberCategories method. */
+    /** @var string The phone category name. See the [GetPhoneNumberCategories] method. */
     public $phone_category_name;
 
     /** @var string The country state code (example: AL, CA, ... ). */
@@ -24,4 +24,7 @@ class GetPhoneNumberRegionsParams
 
     /** @var string The region phone prefix to filter. */
     public $phone_region_code;
+
+    /** @var string The 2-letter locale code. Supported values are EN, RU. */
+    public $locale;
 }

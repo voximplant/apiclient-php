@@ -7,13 +7,13 @@ class BindSkillParams
     /** @var intlist The skill ID list separated by the ';' symbol or the 'all' value. */
     public $skill_id;
 
-    /** @var stringlist Can be used instead of skill_id. The skill name list separated by the ';' symbol. */
+    /** @var stringlist The skill name list separated by the ';' symbol. Can be used instead of skill_id. */
     public $skill_name;
 
     /** @var intlist The user ID list separated by the ';' symbol or the 'all' value. */
     public $user_id;
 
-    /** @var stringlist The user name that can be used instead of user_id. The user name list separated by the ';' symbol. */
+    /** @var stringlist The user name list separated by the ';' symbol. user_name can be used instead of user_id. */
     public $user_name;
 
     /** @var intlist The ACD queue ID list separated by the ';' symbol or the 'all' value. */
@@ -28,6 +28,6 @@ class BindSkillParams
     /** @var string The application name that can be used instead of application_id. */
     public $application_name;
 
-    /** @var boolean Bind or unbind? */
+    /** @var boolean Bind or unbind (set true or false respectively). */
     public $bind;
 }

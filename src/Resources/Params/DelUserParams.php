@@ -13,6 +13,6 @@ class DelUserParams
     /** @var number Delete the specified users bound to the application ID. It is required if the user_name is specified. */
     public $application_id;
 
-    /** @var string Delete the specified users bound to the application name. Could be used instead of the application_id parameter. */
+    /** @var string Delete the specified users bound to the application name. Can be used instead of the application_id parameter. */
     public $application_name;
 }

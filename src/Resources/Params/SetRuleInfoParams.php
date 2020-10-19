@@ -16,6 +16,6 @@ class SetRuleInfoParams
     /** @var string The new exclude pattern regex. The length must be less than 64 KB. */
     public $rule_pattern_exclude;
 
-    /** @var boolean Is video conference required? */
+    /** @var boolean Video conference is required. */
     public $video_conference;
 }

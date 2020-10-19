@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method BindDialogflowKeys Bind a Dialogflow key to the specified applications.
+ * @method BindDialogflowKeys Binds a Dialogflow key to the specified applications.
  */
 
 // Path to your autoload.php

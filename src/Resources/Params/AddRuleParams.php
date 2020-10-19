@@ -19,12 +19,12 @@ class AddRuleParams
     /** @var string The exclude pattern regex. The length must be less than 64 KB. */
     public $rule_pattern_exclude;
 
-    /** @var boolean Is video conference required? */
+    /** @var boolean Video conference is required. */
     public $video_conference;
 
     /** @var intlist The scenario ID list separated by the ';' symbol. */
     public $scenario_id;
 
-    /** @var stringlist Can be used instead of scenario_id. The scenario name list separated by the ';' symbol. */
+    /** @var stringlist The scenario name list separated by the ';' symbol. Can be used instead of scenario_id. */
     public $scenario_name;
 }

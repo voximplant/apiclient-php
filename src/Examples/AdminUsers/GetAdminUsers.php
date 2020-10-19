@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetAdminUsers Gets the admin users of the specified account. Note that both account types - parent and child - could have its own admins.
+ * @method GetAdminUsers Gets the admin users of the specified account. Note that both account types - parent and child - can have its own admins.
  */
 
 // Path to your autoload.php

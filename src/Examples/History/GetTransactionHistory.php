@@ -23,7 +23,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * from_date - The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss
  * to_date - The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss
- * timezone - The selected timezone or the 'auto' value (will be used the account location).
+ * timezone - The selected timezone or the 'auto' value (the account location).
  * transaction_id - The transaction ID list.
  * payment_reference - The external payment reference to filter.
  * transaction_type - The transaction type list. The following values are possible: periodic_charge, resource_charge, money_distribution, subscription_charge, subscription_installation_charge, card_periodic_payment, card_overrun_payment, card_payment, robokassa_payment, gift, add_money, subscription_cancel, adjustment, wire_transfer, refund.

@@ -20,7 +20,7 @@ class RecordStorages implements RecordStoragesInterface
     }
 
     /**
-     * @method Get the record storages.
+     * @method Gets the record storages.
      */
     public function GetRecordStorages(Params\GetRecordStoragesParams $params = null): GetRecordStoragesReturn
     {

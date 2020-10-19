@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetActualPhoneNumberRegion Get actual info the country region of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
+ * @method GetActualPhoneNumberRegion Get actual info on the country region of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
  */
 
 // Path to your autoload.php
@@ -22,8 +22,9 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * country_code - The country code.
- * phone_category_name - The phone category name. See the GetPhoneNumberCategories method.
+ * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method.
  * phone_region_id - The phone region ID to filter.
+ * locale - The 2-letter locale code. Supported values are EN, RU.
  */
 $params = new GetActualPhoneNumberRegionParams();
 

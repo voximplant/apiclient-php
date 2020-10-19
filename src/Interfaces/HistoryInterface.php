@@ -10,7 +10,7 @@ interface HistoryInterface
     public function GetCallHistory(\Voximplant\Resources\Params\GetCallHistoryParams $params);
 
     /**
-     * @method Gets the list of history reports and their statuses. The method returns info about reports made via [GetCallHistory] with the specified __output=csv__ and **is_async=true** parameters.
+     * @method Gets the list of history reports and their statuses. The method returns info about reports made via [GetCallHistory] with the specified __output=csv__ and **is_async=true** parameters. Note that the **file_size** field in response is valid only for video calls.
      */
     public function GetHistoryReports(\Voximplant\Resources\Params\GetHistoryReportsParams $params);
 

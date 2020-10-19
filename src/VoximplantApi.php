@@ -12,7 +12,6 @@ use Voximplant\Resources\Applications;
 use Voximplant\Resources\AuthorizedIPs;
 use Voximplant\Resources\CallLists;
 use Voximplant\Resources\CallerIDs;
-use Voximplant\Resources\ChildAccounts;
 use Voximplant\Resources\DialogflowCredentials;
 use Voximplant\Resources\History;
 use Voximplant\Resources\PSTNBlacklist;
@@ -70,7 +69,7 @@ class VoximplantApi
     /** @var object Users Adds a new user. */
     public $Users;
 
-    /** @var object CallLists Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the following options in a CSV file: **__start_execution_time** – when the call list processing will start every day, UTC+0 24-h format: HH:mm:ss**__end_execution_time** – when the call list processing will stop every day,  UTC+0 24-h format: HH:mm:ss**__start_at** – when the call list processing will start, UNIX timestamp. If not specified, the processing will start immediately after a method callIMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active. */
+    /** @var object CallLists Adds a new CSV file for manual call list processing and bind it with the specified rule. To send a file, use the request body. To start processing calls, use the function [StartNextCallTask]. IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active. */
     public $CallLists;
 
     /** @var object Scenarios Adds a new scenario. Please use the POST method. */
@@ -112,26 +111,23 @@ class VoximplantApi
     /** @var object AuthorizedIPs Adds a new authorized IP4 or network to the white/black list. */
     public $AuthorizedIPs;
 
-    /** @var object RegulationAddress Link regulation address to phone */
+    /** @var object RegulationAddress Links the regulation address to a phone */
     public $RegulationAddress;
 
-    /** @var object PushCredentials Add push credentials */
+    /** @var object PushCredentials Adds push credentials */
     public $PushCredentials;
 
-    /** @var object DialogflowCredentials Add Dialogflow key. */
+    /** @var object DialogflowCredentials Adds a Dialogflow key. */
     public $DialogflowCredentials;
 
-    /** @var object SMS Send SMS message between two phone numbers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the is_sms_supported property in the objects returned by the /GetPhoneNumbers HTTP API) and SMS should be enabled for it via the /ControlSms HTTP API. SMS messages can be received via HTTP callbacks, see this article for details. */
+    /** @var object SMS Sends an SMS message between two phone numbers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the is_sms_supported property in the objects returned by the [GetPhoneNumbers] HTTP API) and SMS should be enabled for it via the [ControlSms] HTTP API. SMS messages can be received via HTTP callbacks, see this article for details. */
     public $SMS;
 
-    /** @var object RecordStorages Get the record storages. */
+    /** @var object RecordStorages Gets the record storages. */
     public $RecordStorages;
 
     /** @var object RoleSystem Creates a public/private key pair. You can optionally specify one or more roles for the key, see [this article](https://voximplant.com/blog/service-accounts-introduction) for details. */
     public $RoleSystem;
-
-    /** @var object ChildAccounts Adds a new subscription for the specified child account. */
-    public $ChildAccounts;
 
     /**
      * @param bool $tokenPath
@@ -177,7 +173,6 @@ class VoximplantApi
         $this->SMS = new SMS($this);
         $this->RecordStorages = new RecordStorages($this);
         $this->RoleSystem = new RoleSystem($this);
-        $this->ChildAccounts = new ChildAccounts($this);
     }
 
     /**

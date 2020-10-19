@@ -43,7 +43,7 @@ class GetSipRegistrationsParams
     /** @var stringlist The list of proxy servers to use, divided by the ';' symbol. */
     public $proxy;
 
-    /** @var boolean Is the SIP registration is still in progress or not? */
+    /** @var boolean SIP registration is still in progress. */
     public $in_progress;
 
     /** @var string The list of SIP response codes. The __code1:code2__ means a range from __code1__ to __code2__ including; the __code1;code2__ meanse either __code1__ or __code2__. You can combine ranges, e.g., __code1;code2:code3__. */

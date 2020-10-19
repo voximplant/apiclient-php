@@ -16,7 +16,7 @@ class GetHistoryReportsParams
     /** @var timestamp The UTC creation to date filter in 24-h format: YYYY-MM-DD HH:mm:ss */
     public $created_to;
 
-    /** @var boolean Is report completed? */
+    /** @var boolean Report is completed. */
     public $is_completed;
 
     /** @var boolean Set true to get records in the descent order. */

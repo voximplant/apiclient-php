@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method ReorderRules Configures the rules' order in the <a href='//manage.voximplant.com/#editApplication'>Applications</a> section of Control panel. Note: the rules must belong to the same application!
+ * @method ReorderRules Configures the rules' order in the <a href='//manage.voximplant.com/applications'>Applications</a> section of Control panel. Note: the rules must belong to the same application!
  */
 
 // Path to your autoload.php

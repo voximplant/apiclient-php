@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetRecordStorages Get the record storages.
+ * @method GetRecordStorages Gets the record storages.
  */
 
 // Path to your autoload.php

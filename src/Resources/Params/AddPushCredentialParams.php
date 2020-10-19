@@ -4,11 +4,17 @@ namespace Voximplant\Resources\Params;
 
 class AddPushCredentialParams
 {
-    /** @var string The push provider name. Available values: APPLE, APPLE_VOIP, GOOGLE. */
+    /** @var string The push provider name. The possible values are: APPLE, APPLE_VOIP, GOOGLE. */
     public $push_provider_name;
 
     /** @var number The push provider id. */
     public $push_provider_id;
+
+    /** @var number The application id. */
+    public $application_id;
+
+    /** @var string The application name that can be used instead of application_id. */
+    public $application_name;
 
     /** @var string The bundle of Android/iOS application. */
     public $credential_bundle;
@@ -30,4 +36,7 @@ class AddPushCredentialParams
 
     /** @var string The server key, provided by Google. */
     public $server_key;
+
+    /** @var string The service account key file, provided by Google. */
+    public $service_account_file;
 }

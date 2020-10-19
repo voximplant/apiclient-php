@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetPushCredential Get push credentials
+ * @method GetPushCredential Gets push credentials
  */
 
 // Path to your autoload.php
@@ -22,10 +22,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * push_credential_id - The push credentials id.
- * push_provider_name - The push provider name. Available values: APPLE, APPLE_VOIP, GOOGLE.
+ * push_provider_name - The push provider name. The possible values are: APPLE, APPLE_VOIP, GOOGLE.
  * push_provider_id - The push provider id.
- * application_name - The name of bound application.
- * application_id - The id of bound application.
+ * application_name - The name of the bound application.
+ * application_id - The id of the bound application.
  * with_cert - Set true to get the user's certificate.
  * with_secret_info - Set true to get the certificate's password.
  */

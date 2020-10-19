@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method SetPushCredential Modify push credentials
+ * @method SetPushCredential Modifies push credentials
  */
 
 // Path to your autoload.php

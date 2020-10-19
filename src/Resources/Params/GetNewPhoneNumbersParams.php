@@ -13,7 +13,7 @@ class GetNewPhoneNumbersParams
     /** @var string The country state. See the GetPhoneNumberCategories and GetPhoneNumberCountryStates functions. */
     public $country_state;
 
-    /** @var number The phone region ID. See the GetPhoneNumberRegions method. */
+    /** @var number The phone region ID. See the [GetPhoneNumberRegions] method. */
     public $phone_region_id;
 
     /** @var number The max returning record count. */

@@ -25,7 +25,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * application_id - The application ID.
  * application_name - The application name that can be used instead of application_id.
  * user_id - The user ID list or the 'all' value to specify all users bound to the application.
- * user_name - The user name that can be used instead of user_id. The user name list.
+ * user_name - The user name list. user_name can be used instead of user_id.
  * acd_queue_id - The ACD queue ID list or the 'all' value to specify all queues bound to the application.
  * acd_queue_name - The queue name that can be used instead of acd_queue_id. The queue name list.
  */

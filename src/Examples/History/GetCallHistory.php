@@ -23,7 +23,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * from_date - The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss
  * to_date - The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss
- * timezone - The selected timezone or the 'auto' value (will be used the account location).
+ * timezone - The selected timezone or the 'auto' value (the account location).
  * call_session_history_id - The call session history ID list. The sessions IDs can be accessed in JS scenario via the sessionID property of the AppEvents.Started event
  * application_id - The application ID.
  * application_name - The application name, can be used instead of application_id.
@@ -43,16 +43,18 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * count - The max returning record count.
  * offset - The first N records will be skipped in the output.
  * output - The output format. The following values available: json, csv.
- * is_async - Set true to get records in the asynchronous mode (for csv output only). If it's true, the request could be available via GetHistoryReports and DownloadHistoryReport methods.
+ * is_async - Set true to get records in the asynchronous mode (for csv output only). If it's true, the request is available via [GetHistoryReports] and [DownloadHistoryReport] methods.
  */
 $params = new GetCallHistoryParams();
 
-$params->from_date = '2012-01-01 00:00:00';
-$params->to_date = '2014-01-01 00:00:00';
+$params->from_date = '2020-02-25 00:00:00';
+$params->to_date = '2020-02-26 00:00:00';
 $params->count = 1;
 $params->timezone = 'Etc/GMT';
+$params->with_calls = true;
+$params->with_records = true;
 
-// Get the first call session history record from the 2012-01-01 00:00:00 UTC to the 2014-01-01 00:00:00 UTC
+// Get the first call session history record with calls and record URLs from the 2020-02-25 00:00:00 UTC to the 2020-02-26 00:00:00 UTC
 $result = $voxApi->History->GetCallHistory($params);
 
 // Show result

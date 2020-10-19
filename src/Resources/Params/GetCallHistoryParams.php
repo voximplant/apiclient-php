@@ -67,6 +67,6 @@ class GetCallHistoryParams
     /** @var string The output format. The following values available: json, csv. */
     public $output;
 
-    /** @var boolean Set true to get records in the asynchronous mode (for csv output only). If it's true, the request could be available via GetHistoryReports and DownloadHistoryReport methods. */
+    /** @var boolean Set true to get records in the asynchronous mode (for csv output only). If it's true, the request is available via [GetHistoryReports] and [DownloadHistoryReport] methods. */
     public $is_async;
 }

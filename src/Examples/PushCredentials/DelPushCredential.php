@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method DelPushCredential Remove push credentials
+ * @method DelPushCredential Removes push credentials
  */
 
 // Path to your autoload.php

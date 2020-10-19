@@ -19,7 +19,7 @@ class GetCallListsParams
     /** @var timestamp The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss */
     public $to_date;
 
-    /** @var string The type of call list. Available values: AUTOMATIC and MANUAL */
+    /** @var string The type of the call list. The possible values are: AUTOMATIC and MANUAL */
     public $type_list;
 
     /** @var number The max returning record count. */

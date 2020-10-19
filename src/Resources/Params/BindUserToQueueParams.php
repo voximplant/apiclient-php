@@ -16,7 +16,7 @@ class BindUserToQueueParams
     /** @var intlist The user ID list separated by the ';' symbol or the 'all' value to specify all users bound to the application. */
     public $user_id;
 
-    /** @var stringlist The user name that can be used instead of user_id. The user name list separated by the ';' symbol. */
+    /** @var stringlist The user name list separated by the ';' symbol. user_name can be used instead of user_id. */
     public $user_name;
 
     /** @var intlist The ACD queue ID list separated by the ';' symbol or the 'all' value to specify all queues bound to the application. */

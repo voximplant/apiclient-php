@@ -5,27 +5,27 @@ namespace Voximplant\Interfaces;
 interface DialogflowCredentialsInterface
 {
     /**
-     * @method Add Dialogflow key.
+     * @method Adds a Dialogflow key.
      */
     public function AddDialogflowKey(\Voximplant\Resources\Params\AddDialogflowKeyParams $params);
 
     /**
-     * @method Edit Dialogflow key.
+     * @method Edits a Dialogflow key.
      */
     public function SetDialogflowKey(\Voximplant\Resources\Params\SetDialogflowKeyParams $params);
 
     /**
-     * @method Remove Dialogflow key.
+     * @method Removes a Dialogflow key.
      */
     public function DelDialogflowKey(\Voximplant\Resources\Params\DelDialogflowKeyParams $params);
 
     /**
-     * @method Get Dialogflow keys.
+     * @method Gets Dialogflow keys.
      */
     public function GetDialogflowKeys(\Voximplant\Resources\Params\GetDialogflowKeysParams $params);
 
     /**
-     * @method Bind a Dialogflow key to the specified applications.
+     * @method Binds a Dialogflow key to the specified applications.
      */
     public function BindDialogflowKeys(\Voximplant\Resources\Params\BindDialogflowKeysParams $params);
 }

@@ -22,9 +22,9 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * rule_id - The rule ID list or the 'all' value.
- * rule_name - Can be used instead of rule_id. The rule name list.
+ * rule_name - The rule name list. Can be used instead of rule_id.
  * application_id - The application ID list or the 'all' value.
- * application_name - Can be used instead of application_id. The application name list.
+ * application_name - The application name list. Can be used instead of application_id.
  */
 $params = new DelRuleParams();
 

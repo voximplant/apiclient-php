@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetHistoryReports Gets the list of history reports and their statuses. The method returns info about reports made via [GetCallHistory] with the specified __output=csv__ and **is_async=true** parameters.
+ * @method GetHistoryReports Gets the list of history reports and their statuses. The method returns info about reports made via [GetCallHistory] with the specified __output=csv__ and **is_async=true** parameters. Note that the **file_size** field in response is valid only for video calls.
  */
 
 // Path to your autoload.php
@@ -25,7 +25,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * history_type - The history report type list or the 'all' value. The following values are possible: calls, transactions, audit, call_list.
  * created_from - The UTC creation from date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * created_to - The UTC creation to date filter in 24-h format: YYYY-MM-DD HH:mm:ss
- * is_completed - Is report completed?
+ * is_completed - Report is completed.
  * desc_order - Set true to get records in the descent order.
  * count - The max returning record count.
  * offset - The first N records will be skipped in the output.

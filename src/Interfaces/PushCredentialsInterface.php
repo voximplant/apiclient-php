@@ -5,27 +5,27 @@ namespace Voximplant\Interfaces;
 interface PushCredentialsInterface
 {
     /**
-     * @method Add push credentials
+     * @method Adds push credentials
      */
     public function AddPushCredential(\Voximplant\Resources\Params\AddPushCredentialParams $params);
 
     /**
-     * @method Modify push credentials
+     * @method Modifies push credentials
      */
     public function SetPushCredential(\Voximplant\Resources\Params\SetPushCredentialParams $params);
 
     /**
-     * @method Remove push credentials
+     * @method Removes push credentials
      */
     public function DelPushCredential(\Voximplant\Resources\Params\DelPushCredentialParams $params);
 
     /**
-     * @method Get push credentials
+     * @method Gets push credentials
      */
     public function GetPushCredential(\Voximplant\Resources\Params\GetPushCredentialParams $params);
 
     /**
-     * @method Bind push credentials to applications
+     * @method Binds push credentials to applications
      */
     public function BindPushCredential(\Voximplant\Resources\Params\BindPushCredentialParams $params);
 }

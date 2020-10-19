@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method BindPushCredential Bind push credentials to applications
+ * @method BindPushCredential Binds push credentials to applications
  */
 
 // Path to your autoload.php

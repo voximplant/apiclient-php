@@ -29,7 +29,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 $params = new SetScenarioInfoParams();
 
 $params->scenario_id = 1;
-$params->scenario_name = 'scen11';
+$params->scenario_name = 'call_scenario';
 $params->scenario_script = 'var s="hello world";';
 
 // Add a new scenario: var s='hello';

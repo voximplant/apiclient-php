@@ -13,7 +13,6 @@ use Voximplant\Interfaces\GetResourcePriceReturn;
 use Voximplant\Interfaces\GetSubscriptionPriceReturn;
 use Voximplant\Interfaces\SetAccountInfoReturn;
 use Voximplant\Interfaces\SetChildAccountInfoReturn;
-use Voximplant\Interfaces\TransferMoneyToChildAccountReturn;
 
 class Accounts implements AccountsInterface
 {
@@ -40,9 +39,6 @@ class Accounts implements AccountsInterface
     /** @object GetChildrenAccounts */
     protected $GetChildrenAccountsReturn;
 
-    /** @object TransferMoneyToChildAccount */
-    protected $TransferMoneyToChildAccountReturn;
-
     /** @object GetMoneyAmountToCharge */
     protected $GetMoneyAmountToChargeReturn;
 
@@ -63,7 +59,6 @@ class Accounts implements AccountsInterface
         $this->GetResourcePriceReturn = new GetResourcePriceReturn();
         $this->GetSubscriptionPriceReturn = new GetSubscriptionPriceReturn();
         $this->GetChildrenAccountsReturn = new GetChildrenAccountsReturn();
-        $this->TransferMoneyToChildAccountReturn = new TransferMoneyToChildAccountReturn();
         $this->GetMoneyAmountToChargeReturn = new GetMoneyAmountToChargeReturn();
         $this->ChargeAccountReturn = new ChargeAccountReturn();
         $this->GetAccountDocumentsReturn = new GetAccountDocumentsReturn();
@@ -144,17 +139,6 @@ class Accounts implements AccountsInterface
             $this->GetChildrenAccountsReturn->$key = $value;
         }
         return $this->GetChildrenAccountsReturn;
-    }
-
-    /**
-     * @method Transfer the parent account's money to the child account or transfer the child's money to the parent account if the money amount is negative.
-     */
-    public function TransferMoneyToChildAccount(Params\TransferMoneyToChildAccountParams $params = null): TransferMoneyToChildAccountReturn
-    {
-        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-            $this->TransferMoneyToChildAccountReturn->$key = $value;
-        }
-        return $this->TransferMoneyToChildAccountReturn;
     }
 
     /**

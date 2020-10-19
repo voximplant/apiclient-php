@@ -35,6 +35,7 @@ class ResultType
                 'currency' => 'string',
                 'support_robokassa' => 'boolean',
                 'support_bank_card' => 'boolean',
+                'bank_card_provider' => 'string',
                 'support_invoice' => 'boolean',
                 'account_custom_data' => 'string',
                 'access_entries' => '[string]',
@@ -70,6 +71,7 @@ class ResultType
                     'currency' => 'string',
                     'support_robokassa' => 'boolean',
                     'support_bank_card' => 'boolean',
+                    'bank_card_provider' => 'string',
                     'support_invoice' => 'boolean',
                     'account_custom_data' => 'string',
                     'access_entries' => '[string]',
@@ -105,6 +107,7 @@ class ResultType
                         'currency' => 'string',
                         'support_robokassa' => 'boolean',
                         'support_bank_card' => 'boolean',
+                        'bank_card_provider' => 'string',
                         'support_invoice' => 'boolean',
                         'account_custom_data' => 'string',
                         'access_entries' => '[string]',
@@ -142,6 +145,7 @@ class ResultType
                         'currency' => 'string',
                         'support_robokassa' => 'boolean',
                         'support_bank_card' => 'boolean',
+                        'bank_card_provider' => 'string',
                         'support_invoice' => 'boolean',
                         'account_custom_data' => 'string',
                         'access_entries' => '[string]',
@@ -177,6 +181,7 @@ class ResultType
                             'currency' => 'string',
                             'support_robokassa' => 'boolean',
                             'support_bank_card' => 'boolean',
+                            'bank_card_provider' => 'string',
                             'support_invoice' => 'boolean',
                             'account_custom_data' => 'string',
                             'access_entries' => '[string]',
@@ -216,6 +221,7 @@ class ResultType
                         'currency' => 'string',
                         'support_robokassa' => 'boolean',
                         'support_bank_card' => 'boolean',
+                        'bank_card_provider' => 'string',
                         'support_invoice' => 'boolean',
                         'account_custom_data' => 'string',
                         'access_entries' => '[string]',
@@ -251,6 +257,7 @@ class ResultType
                             'currency' => 'string',
                             'support_robokassa' => 'boolean',
                             'support_bank_card' => 'boolean',
+                            'bank_card_provider' => 'string',
                             'support_invoice' => 'boolean',
                             'account_custom_data' => 'string',
                             'access_entries' => '[string]',
@@ -288,6 +295,7 @@ class ResultType
                             'currency' => 'string',
                             'support_robokassa' => 'boolean',
                             'support_bank_card' => 'boolean',
+                            'bank_card_provider' => 'string',
                             'support_invoice' => 'boolean',
                             'account_custom_data' => 'string',
                             'access_entries' => '[string]',
@@ -323,6 +331,7 @@ class ResultType
                                 'currency' => 'string',
                                 'support_robokassa' => 'boolean',
                                 'support_bank_card' => 'boolean',
+                                'bank_card_provider' => 'string',
                                 'support_invoice' => 'boolean',
                                 'account_custom_data' => 'string',
                                 'access_entries' => '[string]',
@@ -417,9 +426,12 @@ class ResultType
                 array (
                     'subscription_template_id' => 'number',
                     'installation_price' => 'decimal',
+                    'price' => 'string',
                     'period' => 'string',
                     'subscription_template_type' => 'string',
                     'subscription_template_name' => 'string',
+                    'required_verification' => 'string',
+                    'verification_status' => 'string',
                 ),
             ),
         );
@@ -458,6 +470,7 @@ class ResultType
                     'currency' => 'string',
                     'support_robokassa' => 'boolean',
                     'support_bank_card' => 'boolean',
+                    'bank_card_provider' => 'string',
                     'support_invoice' => 'boolean',
                     'account_custom_data' => 'string',
                     'access_entries' => '[string]',
@@ -495,6 +508,7 @@ class ResultType
                             'currency' => 'string',
                             'support_robokassa' => 'boolean',
                             'support_bank_card' => 'boolean',
+                            'bank_card_provider' => 'string',
                             'support_invoice' => 'boolean',
                             'account_custom_data' => 'string',
                             'access_entries' => '[string]',
@@ -533,6 +547,7 @@ class ResultType
                                 'currency' => 'string',
                                 'support_robokassa' => 'boolean',
                                 'support_bank_card' => 'boolean',
+                                'bank_card_provider' => 'string',
                                 'support_invoice' => 'boolean',
                                 'account_custom_data' => 'string',
                                 'access_entries' => '[string]',
@@ -574,6 +589,7 @@ class ResultType
                                 'currency' => 'string',
                                 'support_robokassa' => 'boolean',
                                 'support_bank_card' => 'boolean',
+                                'bank_card_provider' => 'string',
                                 'support_invoice' => 'boolean',
                                 'account_custom_data' => 'string',
                                 'access_entries' => '[string]',
@@ -612,6 +628,7 @@ class ResultType
                                     'currency' => 'string',
                                     'support_robokassa' => 'boolean',
                                     'support_bank_card' => 'boolean',
+                                    'bank_card_provider' => 'string',
                                     'support_invoice' => 'boolean',
                                     'account_custom_data' => 'string',
                                     'access_entries' => '[string]',
@@ -656,6 +673,7 @@ class ResultType
                                 'currency' => 'string',
                                 'support_robokassa' => 'boolean',
                                 'support_bank_card' => 'boolean',
+                                'bank_card_provider' => 'string',
                                 'support_invoice' => 'boolean',
                                 'account_custom_data' => 'string',
                                 'access_entries' => '[string]',
@@ -694,6 +712,7 @@ class ResultType
                                     'currency' => 'string',
                                     'support_robokassa' => 'boolean',
                                     'support_bank_card' => 'boolean',
+                                    'bank_card_provider' => 'string',
                                     'support_invoice' => 'boolean',
                                     'account_custom_data' => 'string',
                                     'access_entries' => '[string]',
@@ -735,6 +754,7 @@ class ResultType
                                     'currency' => 'string',
                                     'support_robokassa' => 'boolean',
                                     'support_bank_card' => 'boolean',
+                                    'bank_card_provider' => 'string',
                                     'support_invoice' => 'boolean',
                                     'account_custom_data' => 'string',
                                     'access_entries' => '[string]',
@@ -773,6 +793,7 @@ class ResultType
                                         'currency' => 'string',
                                         'support_robokassa' => 'boolean',
                                         'support_bank_card' => 'boolean',
+                                        'bank_card_provider' => 'string',
                                         'support_invoice' => 'boolean',
                                         'account_custom_data' => 'string',
                                         'access_entries' => '[string]',
@@ -795,14 +816,6 @@ class ResultType
             ),
             'total_count' => 'number',
             'count' => 'number',
-        );
-    }
-
-    public function TransferMoneyToChildAccount()
-    {
-        return array (
-            'result' => 'number',
-            'balance' => 'decimal',
         );
     }
 
@@ -1329,15 +1342,6 @@ class ResultType
         );
     }
 
-    public function CreateCallList()
-    {
-        return array (
-            'result' => 'boolean',
-            'count' => 'number',
-            'list_id' => 'number',
-        );
-    }
-
     public function CreateManualCallList()
     {
         return array (
@@ -1351,15 +1355,6 @@ class ResultType
     {
         return array (
             'result' => 'number',
-            'list_id' => 'number',
-        );
-    }
-
-    public function AppendToCallList()
-    {
-        return array (
-            'result' => 'boolean',
-            'count' => 'number',
             'list_id' => 'number',
         );
     }
@@ -2098,6 +2093,13 @@ class ResultType
         );
     }
 
+    public function SetPhoneNumberInfo()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
     public function GetPhoneNumbers()
     {
         return array (
@@ -2125,6 +2127,7 @@ class ResultType
                     'can_be_used' => 'boolean',
                     'is_sms_supported' => 'boolean',
                     'is_sms_enabled' => 'boolean',
+                    'incoming_sms_callback_url' => 'string',
                 ),
             ),
             'total_count' => 'number',
@@ -2173,6 +2176,9 @@ class ResultType
                             'can_list_phone_numbers' => 'boolean',
                             'phone_category_name' => 'string',
                             'country_has_states' => 'boolean',
+                            'localized_country_name' => 'string',
+                            'localized_phone_category_name' => 'string',
+                            'localized_phone_region_name' => 'string',
                         ),
                     ),
                 ),
@@ -2234,6 +2240,9 @@ class ResultType
                             'installation_price' => 'decimal',
                         ),
                     ),
+                    'localized_country_name' => 'string',
+                    'localized_phone_category_name' => 'string',
+                    'localized_phone_region_name' => 'string',
                 ),
             ),
         );
@@ -2277,6 +2286,9 @@ class ResultType
                         'installation_price' => 'decimal',
                     ),
                 ),
+                'localized_country_name' => 'string',
+                'localized_phone_category_name' => 'string',
+                'localized_phone_region_name' => 'string',
             ),
         );
     }
@@ -34842,6 +34854,30 @@ class ResultType
         );
     }
 
+    public function A2PSendSms()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'transaction_id' => 'number',
+                    'destination_number' => 'string',
+                ),
+            ),
+            'failed' =>
+            array (
+                '|array|' =>
+                array (
+                    'destination_number' => 'string',
+                    'error_description' => 'string',
+                    'error_code' => 'number',
+                ),
+            ),
+            'fragments_count' => 'number',
+        );
+    }
+
     public function ControlSms()
     {
         return array (
@@ -35107,68 +35143,6 @@ class ResultType
         );
     }
 
-    public function AddChildAccountSubscription()
-    {
-        return array (
-            'result' => 'number',
-            'subscriptions' =>
-            array (
-                '|array|' =>
-                array (
-                    'subscription_id' => 'number',
-                    'subscription_name' => 'string',
-                    'subscription_template_id' => 'number',
-                    'auto_charge' => 'boolean',
-                    'next_renewal' => 'date',
-                    'periodic_price' => 'decimal',
-                    'active' => 'boolean',
-                ),
-            ),
-        );
-    }
-
-    public function GetChildAccountSubscriptions()
-    {
-        return array (
-            'result' =>
-            array (
-                '|array|' =>
-                array (
-                    'subscription_id' => 'number',
-                    'subscription_name' => 'string',
-                    'subscription_template_id' => 'number',
-                    'auto_charge' => 'boolean',
-                    'next_renewal' => 'date',
-                    'periodic_price' => 'decimal',
-                    'active' => 'boolean',
-                ),
-            ),
-        );
-    }
-
-    public function GetChildAccountSubscriptionTemplates()
-    {
-        return array (
-            'result' =>
-            array (
-                '|array|' =>
-                array (
-                    'subscription_template_id' => 'number',
-                    'subscription_template_name' => 'string',
-                    'installation_price' => 'decimal',
-                    'periodic_price' => 'decimal',
-                ),
-            ),
-        );
-    }
-
-    public function DeactivateChildAccountSubscription()
-    {
-        return array (
-            'result' => 'number',
-        );
-    }
-
     public function GetSmsHistory()
     {
         return array (
@@ -35186,6 +35160,29 @@ class ResultType
                     'error_message' => 'string',
                     'processed_date' => 'date',
                     'transaction_id' => 'number',
+                ),
+            ),
+            'total_count' => 'number',
+        );
+    }
+
+    public function A2PGetSmsHistory()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'id' => 'number',
+                    'source_number' => 'number',
+                    'destination_number' => 'number',
+                    'fragments' => 'number',
+                    'cost' => 'decimal',
+                    'status_id' => 'number',
+                    'error_message' => 'string',
+                    'processing_date' => 'date',
+                    'transaction_id' => 'number',
+                    'delivery_status' => 'string',
                 ),
             ),
             'total_count' => 'number',

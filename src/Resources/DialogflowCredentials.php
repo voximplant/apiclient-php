@@ -40,7 +40,7 @@ class DialogflowCredentials implements DialogflowCredentialsInterface
     }
 
     /**
-     * @method Add Dialogflow key.
+     * @method Adds a Dialogflow key.
      */
     public function AddDialogflowKey(Params\AddDialogflowKeyParams $params = null): AddDialogflowKeyReturn
     {
@@ -51,7 +51,7 @@ class DialogflowCredentials implements DialogflowCredentialsInterface
     }
 
     /**
-     * @method Edit Dialogflow key.
+     * @method Edits a Dialogflow key.
      */
     public function SetDialogflowKey(Params\SetDialogflowKeyParams $params = null): SetDialogflowKeyReturn
     {
@@ -62,7 +62,7 @@ class DialogflowCredentials implements DialogflowCredentialsInterface
     }
 
     /**
-     * @method Remove Dialogflow key.
+     * @method Removes a Dialogflow key.
      */
     public function DelDialogflowKey(Params\DelDialogflowKeyParams $params = null): DelDialogflowKeyReturn
     {
@@ -73,7 +73,7 @@ class DialogflowCredentials implements DialogflowCredentialsInterface
     }
 
     /**
-     * @method Get Dialogflow keys.
+     * @method Gets Dialogflow keys.
      */
     public function GetDialogflowKeys(Params\GetDialogflowKeysParams $params = null): GetDialogflowKeysReturn
     {
@@ -84,7 +84,7 @@ class DialogflowCredentials implements DialogflowCredentialsInterface
     }
 
     /**
-     * @method Bind a Dialogflow key to the specified applications.
+     * @method Binds a Dialogflow key to the specified applications.
      */
     public function BindDialogflowKeys(Params\BindDialogflowKeysParams $params = null): BindDialogflowKeysReturn
     {

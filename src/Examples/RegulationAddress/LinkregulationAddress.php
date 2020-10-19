@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method LinkregulationAddress Link regulation address to phone
+ * @method LinkregulationAddress Links the regulation address to a phone
  */
 
 // Path to your autoload.php
@@ -30,7 +30,7 @@ $params = new LinkregulationAddressParams();
 $params->regulation_address_id = 1;
 $params->phone_id = 1;
 
-// Link regulation address to phone number
+// Link the regulation address to a phone number
 $result = $voxApi->RegulationAddress->LinkregulationAddress($params);
 
 // Show result

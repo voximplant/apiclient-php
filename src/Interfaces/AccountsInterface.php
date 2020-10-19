@@ -40,11 +40,6 @@ interface AccountsInterface
     public function GetChildrenAccounts(\Voximplant\Resources\Params\GetChildrenAccountsParams $params);
 
     /**
-     * @method Transfer the parent account's money to the child account or transfer the child's money to the parent account if the money amount is negative.
-     */
-    public function TransferMoneyToChildAccount(\Voximplant\Resources\Params\TransferMoneyToChildAccountParams $params);
-
-    /**
      * @method Get the recommended money amount to charge.
      */
     public function GetMoneyAmountToCharge(\Voximplant\Resources\Params\GetMoneyAmountToChargeParams $params);
@@ -138,20 +133,6 @@ interface AccountsInterface
 
     /** @var number The returned user count. */
     public $count;
-
-    /** @var array The returned error message. */
-    public $error;
-
-    /** @var array The returned error message. */
-    public $errors;
-}
-class TransferMoneyToChildAccountReturn
-{
-    /** @var number 1 */
-    public $result;
-
-    /** @var decimal The updated parent's account balance. */
-    public $balance;
 
     /** @var array The returned error message. */
     public $error;

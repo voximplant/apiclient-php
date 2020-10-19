@@ -16,6 +16,6 @@ class AddScenarioParams
     /** @var string The rule name that can be used instead of rule_id. */
     public $rule_name;
 
-    /** @var boolean Is the existing scenario rewrite? */
+    /** @var boolean Rewrite the existing scenario. */
     public $rewrite;
 }

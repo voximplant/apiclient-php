@@ -107,20 +107,6 @@ class RequestType
         );
     }
 
-    public function TransferMoneyToChildAccount()
-    {
-        return array (
-            'child_account_id' => 'intlist',
-            'amount' => 'decimal',
-            'currency' => 'string',
-            'strict_mode' => 'boolean',
-            'child_transaction_description' => 'string',
-            'parent_transaction_description' => 'string',
-            'payment_reference' => 'string',
-            'check_duplicate_reference_from' => 'timestamp',
-        );
-    }
-
     public function GetMoneyAmountToCharge()
     {
         return array (
@@ -259,25 +245,6 @@ class RequestType
         );
     }
 
-    public function CreateCallList()
-    {
-        return array (
-            'rule_id' => 'number',
-            'priority' => 'number',
-            'max_simultaneous' => 'number',
-            'num_attempts' => 'number',
-            'name' => 'string',
-            'file_content' => 'string',
-            'interval_seconds' => 'number',
-            'queue_id' => 'number',
-            'avg_waiting_sec' => 'number',
-            'encoding' => 'string',
-            'delimiter' => 'string',
-            'escape' => 'string',
-            'reference_ip' => 'string',
-        );
-    }
-
     public function CreateManualCallList()
     {
         return array (
@@ -298,20 +265,8 @@ class RequestType
     public function StartNextCallTask()
     {
         return array (
-            'list_id' => 'number',
+            'list_id' => 'intlist',
             'custom_params' => 'string',
-        );
-    }
-
-    public function AppendToCallList()
-    {
-        return array (
-            'list_id' => 'number',
-            'list_name' => 'string',
-            'file_content' => 'string',
-            'encoding' => 'string',
-            'escape' => 'string',
-            'delimiter' => 'string',
         );
     }
 
@@ -797,6 +752,16 @@ class RequestType
         );
     }
 
+    public function SetPhoneNumberInfo()
+    {
+        return array (
+            'phone_id' => 'intlist',
+            'phone_number' => 'stringlist',
+            'incoming_sms_callback_url' => 'string',
+            'auto_charge' => 'boolean',
+        );
+    }
+
     public function GetPhoneNumbers()
     {
         return array (
@@ -850,6 +815,7 @@ class RequestType
         return array (
             'country_code' => 'string',
             'sandbox' => 'string',
+            'locale' => 'string',
         );
     }
 
@@ -872,6 +838,7 @@ class RequestType
             'phone_region_id' => 'number',
             'phone_region_name' => 'string',
             'phone_region_code' => 'string',
+            'locale' => 'string',
         );
     }
 
@@ -881,6 +848,7 @@ class RequestType
             'country_code' => 'string',
             'phone_category_name' => 'string',
             'phone_region_id' => 'number',
+            'locale' => 'string',
         );
     }
 
@@ -1319,6 +1287,8 @@ class RequestType
         return array (
             'push_provider_name' => 'string',
             'push_provider_id' => 'number',
+            'application_id' => 'number',
+            'application_name' => 'string',
             'credential_bundle' => 'string',
             'cert_content' => 'string',
             'cert_file_name' => 'string',
@@ -1326,6 +1296,7 @@ class RequestType
             'is_dev_mode' => 'boolean',
             'sender_id' => 'string',
             'server_key' => 'string',
+            'service_account_file' => 'string',
         );
     }
 
@@ -1420,6 +1391,15 @@ class RequestType
             'source' => 'string',
             'destination' => 'string',
             'sms_body' => 'string',
+        );
+    }
+
+    public function A2PSendSms()
+    {
+        return array (
+            'src_number' => 'string',
+            'dst_numbers' => 'stringlist',
+            'text' => 'string',
         );
     }
 
@@ -1578,38 +1558,6 @@ class RequestType
         );
     }
 
-    public function AddChildAccountSubscription()
-    {
-        return array (
-            'child_account_id' => 'number',
-            'subscription_template_id' => 'number',
-            'subscription_name' => 'string',
-        );
-    }
-
-    public function GetChildAccountSubscriptions()
-    {
-        return array (
-            'child_account_id' => 'number',
-            'subscription_id' => 'number',
-        );
-    }
-
-    public function GetChildAccountSubscriptionTemplates()
-    {
-        return array (
-        );
-    }
-
-    public function DeactivateChildAccountSubscription()
-    {
-        return array (
-            'subscription_id' => 'number',
-            'child_account_id' => 'number',
-            'subscription_finish_date' => 'timestamp',
-        );
-    }
-
     public function GetSmsHistory()
     {
         return array (
@@ -1621,6 +1569,20 @@ class RequestType
             'from_date' => 'timestamp',
             'to_date' => 'timestamp',
             'output' => 'string',
+        );
+    }
+
+    public function A2PGetSmsHistory()
+    {
+        return array (
+            'source_number' => 'string',
+            'destination_number' => 'string',
+            'count' => 'number',
+            'offset' => 'number',
+            'from_date' => 'timestamp',
+            'to_date' => 'timestamp',
+            'output' => 'string',
+            'delivery_status' => 'number',
         );
     }
 }

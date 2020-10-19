@@ -25,7 +25,7 @@ interface CallerIDsInterface
     public function GetCallerIDs(\Voximplant\Resources\Params\GetCallerIDsParams $params);
 
     /**
-     * @method Gets a verification code by make call to the callerID number.
+     * @method Gets a verification code via phone call to the **callerid_number**.
      */
     public function VerifyCallerID(\Voximplant\Resources\Params\VerifyCallerIDParams $params);
 }

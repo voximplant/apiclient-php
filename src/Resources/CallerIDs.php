@@ -84,7 +84,7 @@ class CallerIDs implements CallerIDsInterface
     }
 
     /**
-     * @method Gets a verification code by make call to the callerID number.
+     * @method Gets a verification code via phone call to the **callerid_number**.
      */
     public function VerifyCallerID(Params\VerifyCallerIDParams $params = null): VerifyCallerIDReturn
     {

@@ -20,6 +20,11 @@ interface PhoneNumbersInterface
     public function DeactivatePhoneNumber(\Voximplant\Resources\Params\DeactivatePhoneNumberParams $params);
 
     /**
+     * @method Set the phone number information.
+     */
+    public function SetPhoneNumberInfo(\Voximplant\Resources\Params\SetPhoneNumberInfoParams $params);
+
+    /**
      * @method Gets the account phone numbers.
      */
     public function GetPhoneNumbers(\Voximplant\Resources\Params\GetPhoneNumbersParams $params);
@@ -45,7 +50,7 @@ interface PhoneNumbersInterface
     public function GetPhoneNumberRegions(\Voximplant\Resources\Params\GetPhoneNumberRegionsParams $params);
 
     /**
-     * @method Get actual info the country region of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
+     * @method Get actual info on the country region of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
      */
     public function GetActualPhoneNumberRegion(\Voximplant\Resources\Params\GetActualPhoneNumberRegionParams $params);
 }
@@ -75,6 +80,17 @@ interface PhoneNumbersInterface
     public $errors;
 }
 class DeactivatePhoneNumberReturn
+{
+    /** @var number 1 */
+    public $result;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
+class SetPhoneNumberInfoReturn
 {
     /** @var number 1 */
     public $result;

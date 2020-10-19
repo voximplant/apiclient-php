@@ -7,16 +7,16 @@ class GetPushCredentialParams
     /** @var number The push credentials id. */
     public $push_credential_id;
 
-    /** @var string The push provider name. Available values: APPLE, APPLE_VOIP, GOOGLE. */
+    /** @var string The push provider name. The possible values are: APPLE, APPLE_VOIP, GOOGLE. */
     public $push_provider_name;
 
     /** @var number The push provider id. */
     public $push_provider_id;
 
-    /** @var string The name of bound application. */
+    /** @var string The name of the bound application. */
     public $application_name;
 
-    /** @var number The id of bound application. */
+    /** @var number The id of the bound application. */
     public $application_id;
 
     /** @var boolean Set true to get the user's certificate. */

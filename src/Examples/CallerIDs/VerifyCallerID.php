@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method VerifyCallerID Gets a verification code by make call to the callerID number.
+ * @method VerifyCallerID Gets a verification code via phone call to the **callerid_number**.
  */
 
 // Path to your autoload.php

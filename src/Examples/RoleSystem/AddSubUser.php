@@ -29,8 +29,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  */
 $params = new AddSubUserParams();
 
-$params->new_subuser_name = 'test_login';
-$params->new_subuser_password = 'test_pass';
+$params->new_subuser_name = 'John_McClane';
+$params->new_subuser_password = 'pssw0rd';
 
 // Create a new subuser for account_id = 1
 $result = $voxApi->RoleSystem->AddSubUser($params);

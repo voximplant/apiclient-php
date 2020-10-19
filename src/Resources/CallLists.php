@@ -2,9 +2,7 @@
 
 namespace Voximplant\Resources;
 
-use Voximplant\Interfaces\AppendToCallListReturn;
 use Voximplant\Interfaces\CallListsInterface;
-use Voximplant\Interfaces\CreateCallListReturn;
 use Voximplant\Interfaces\CreateManualCallListReturn;
 use Voximplant\Interfaces\GetCallListDetailsReturn;
 use Voximplant\Interfaces\GetCallListsReturn;
@@ -16,17 +14,11 @@ class CallLists implements CallListsInterface
 {
     protected $client;
 
-    /** @object CreateCallList */
-    protected $CreateCallListReturn;
-
     /** @object CreateManualCallList */
     protected $CreateManualCallListReturn;
 
     /** @object StartNextCallTask */
     protected $StartNextCallTaskReturn;
-
-    /** @object AppendToCallList */
-    protected $AppendToCallListReturn;
 
     /** @object GetCallLists */
     protected $GetCallListsReturn;
@@ -44,10 +36,8 @@ class CallLists implements CallListsInterface
     {
         $this->client = $client;
 
-        $this->CreateCallListReturn = new CreateCallListReturn();
         $this->CreateManualCallListReturn = new CreateManualCallListReturn();
         $this->StartNextCallTaskReturn = new StartNextCallTaskReturn();
-        $this->AppendToCallListReturn = new AppendToCallListReturn();
         $this->GetCallListsReturn = new GetCallListsReturn();
         $this->GetCallListDetailsReturn = new GetCallListDetailsReturn();
         $this->StopCallListProcessingReturn = new StopCallListProcessingReturn();
@@ -55,18 +45,7 @@ class CallLists implements CallListsInterface
     }
 
     /**
-     * @method Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the following options in a CSV file: **__start_execution_time** – when the call list processing will start every day, UTC+0 24-h format: HH:mm:ss**__end_execution_time** – when the call list processing will stop every day,  UTC+0 24-h format: HH:mm:ss**__start_at** – when the call list processing will start, UNIX timestamp. If not specified, the processing will start immediately after a method callIMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active.
-     */
-    public function CreateCallList(Params\CreateCallListParams $params = null): CreateCallListReturn
-    {
-        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-            $this->CreateCallListReturn->$key = $value;
-        }
-        return $this->CreateCallListReturn;
-    }
-
-    /**
-     * @method Adds a new CSV file for manual call list processing and bind it with the specified rule. To send a file, use the request body. To start processing calls, use the function StartNextCallTask. IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active.
+     * @method Adds a new CSV file for manual call list processing and bind it with the specified rule. To send a file, use the request body. To start processing calls, use the function [StartNextCallTask]. IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active.
      */
     public function CreateManualCallList(Params\CreateManualCallListParams $params = null): CreateManualCallListReturn
     {
@@ -85,17 +64,6 @@ class CallLists implements CallListsInterface
             $this->StartNextCallTaskReturn->$key = $value;
         }
         return $this->StartNextCallTaskReturn;
-    }
-
-    /**
-     * @method Appending a new task to the existing call list.
-     */
-    public function AppendToCallList(Params\AppendToCallListParams $params = null): AppendToCallListReturn
-    {
-        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-            $this->AppendToCallListReturn->$key = $value;
-        }
-        return $this->AppendToCallListReturn;
     }
 
     /**

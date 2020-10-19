@@ -22,6 +22,6 @@ class BindPhoneNumberToApplicationParams
     /** @var string The rule name that can be used instead of rule_id. */
     public $rule_name;
 
-    /** @var boolean Bind or unbind? */
+    /** @var boolean Bind or unbind (set true or false respectively). */
     public $bind;
 }

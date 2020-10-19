@@ -22,7 +22,7 @@ class GetPhoneNumbersParams
     /** @var stringlist The country code list separated by the ';' symbol. */
     public $country_code;
 
-    /** @var string The phone category name. See the GetPhoneNumberCategories method. */
+    /** @var string The phone category name. See the [GetPhoneNumberCategories] method. */
     public $phone_category_name;
 
     /** @var boolean The flag of the canceled (deleted) subscription to filter. */
@@ -64,7 +64,7 @@ class GetPhoneNumbersParams
     /** @var date Unverified phone hold until the date (... to) in format: YYYY-MM-DD */
     public $to_unverified_hold_until;
 
-    /** @var boolean Can the unverified account use the phone? */
+    /** @var boolean Unverified account can use the phone. */
     public $can_be_used;
 
     /** @var string The following values are available: 'phone_number' (ascent order), 'phone_price' (ascent order), 'phone_country_code' (ascent order), 'deactivated' (deactivated first, active last), 'purchase_date' (descent order), 'phone_next_renewal' (ascent order), 'verification_status', 'unverified_hold_until' (ascent order), 'verification_name'. */
@@ -91,6 +91,6 @@ class GetPhoneNumbersParams
     /** @var stringlist The rule names list separated by the ';' symbol. Can be used only if __application_id__ or __application_name__ is specified. */
     public $rule_name;
 
-    /** @var boolean Is a number bound to any rule? */
+    /** @var boolean Number is bound to some rule. */
     public $is_bound_to_rule;
 }

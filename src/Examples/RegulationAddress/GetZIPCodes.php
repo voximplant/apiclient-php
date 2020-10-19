@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetZIPCodes Search available zip codes
+ * @method GetZIPCodes Searches for available zip codes
  */
 
 // Path to your autoload.php
@@ -31,7 +31,7 @@ $params = new GetZIPCodesParams();
 $params->country_code = 'DE';
 $params->count = 1;
 
-// Search zip codes in Germany
+// Search for zip codes in Germany
 $result = $voxApi->RegulationAddress->GetZIPCodes($params);
 
 // Show result

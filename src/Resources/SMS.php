@@ -2,6 +2,8 @@
 
 namespace Voximplant\Resources;
 
+use Voximplant\Interfaces\A2PGetSmsHistoryReturn;
+use Voximplant\Interfaces\A2PSendSmsReturn;
 use Voximplant\Interfaces\ControlSmsReturn;
 use Voximplant\Interfaces\GetSmsHistoryReturn;
 use Voximplant\Interfaces\SMSInterface;
@@ -14,23 +16,31 @@ class SMS implements SMSInterface
     /** @object SendSmsMessage */
     protected $SendSmsMessageReturn;
 
+    /** @object A2PSendSms */
+    protected $A2PSendSmsReturn;
+
     /** @object ControlSms */
     protected $ControlSmsReturn;
 
     /** @object GetSmsHistory */
     protected $GetSmsHistoryReturn;
 
+    /** @object A2PGetSmsHistory */
+    protected $A2PGetSmsHistoryReturn;
+
     public function __construct($client)
     {
         $this->client = $client;
 
         $this->SendSmsMessageReturn = new SendSmsMessageReturn();
+        $this->A2PSendSmsReturn = new A2PSendSmsReturn();
         $this->ControlSmsReturn = new ControlSmsReturn();
         $this->GetSmsHistoryReturn = new GetSmsHistoryReturn();
+        $this->A2PGetSmsHistoryReturn = new A2PGetSmsHistoryReturn();
     }
 
     /**
-     * @method Send SMS message between two phone numbers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the is_sms_supported property in the objects returned by the /GetPhoneNumbers HTTP API) and SMS should be enabled for it via the /ControlSms HTTP API. SMS messages can be received via HTTP callbacks, see this article for details.
+     * @method Sends an SMS message between two phone numbers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the is_sms_supported property in the objects returned by the [GetPhoneNumbers] HTTP API) and SMS should be enabled for it via the [ControlSms] HTTP API. SMS messages can be received via HTTP callbacks, see this article for details.
      */
     public function SendSmsMessage(Params\SendSmsMessageParams $params = null): SendSmsMessageReturn
     {
@@ -41,7 +51,18 @@ class SMS implements SMSInterface
     }
 
     /**
-     * @method Enable or disable SMS sending and receiving for the phone number. Can be used only for phone numbers with SMS support, which is indicated by the is_sms_supported property in the objects returned by the /GetPhoneNumbers HTTP API. Each inbound SMS message is billed according to the pricing. If enabled, SMS can be sent from this phone number using the /SendSmsMessage HTTP API and received using the [InboundSmsCallback] property of the HTTP callback. See this article for HTTP callback details.
+     * @method Sends an SMS message from the application to customers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the is_sms_supported property in the objects returned by the /GetPhoneNumbers HTTP API) and SMS should be enabled for it via the /ControlSms HTTP API.
+     */
+    public function A2PSendSms(Params\A2PSendSmsParams $params = null): A2PSendSmsReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->A2PSendSmsReturn->$key = $value;
+        }
+        return $this->A2PSendSmsReturn;
+    }
+
+    /**
+     * @method Enables or disables sending and receiving SMS for the phone number. Can be used only for phone numbers with SMS support, which is indicated by the is_sms_supported property in the objects returned by the [GetPhoneNumbers] HTTP API. Each inbound SMS message is billed according to the pricing. If enabled, SMS can be sent from this phone number using the [SendSmsMessage] HTTP API and received using the [InboundSmsCallback] property of the HTTP callback. See this article for HTTP callback details.
      */
     public function ControlSms(Params\ControlSmsParams $params = null): ControlSmsReturn
     {
@@ -52,7 +73,7 @@ class SMS implements SMSInterface
     }
 
     /**
-     * @method Get history of sent and/or received SMS.
+     * @method Gets the history of sent and/or received SMS.
      */
     public function GetSmsHistory(Params\GetSmsHistoryParams $params = null): GetSmsHistoryReturn
     {
@@ -60,5 +81,16 @@ class SMS implements SMSInterface
             $this->GetSmsHistoryReturn->$key = $value;
         }
         return $this->GetSmsHistoryReturn;
+    }
+
+    /**
+     * @method Gets the history of sent/or received A2P SMS.
+     */
+    public function A2PGetSmsHistory(Params\A2PGetSmsHistoryParams $params = null): A2PGetSmsHistoryReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->A2PGetSmsHistoryReturn->$key = $value;
+        }
+        return $this->A2PGetSmsHistoryReturn;
     }
 }

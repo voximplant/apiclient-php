@@ -5,32 +5,32 @@ namespace Voximplant\Interfaces;
 interface RegulationAddressInterface
 {
     /**
-     * @method Link regulation address to phone
+     * @method Links the regulation address to a phone
      */
     public function LinkregulationAddress(\Voximplant\Resources\Params\LinkregulationAddressParams $params);
 
     /**
-     * @method Search available zip codes
+     * @method Searches for available zip codes
      */
     public function GetZIPCodes(\Voximplant\Resources\Params\GetZIPCodesParams $params);
 
     /**
-     * @method Search user's regulation address
+     * @method Searches for the user's regulation address
      */
     public function GetRegulationsAddress(\Voximplant\Resources\Params\GetRegulationsAddressParams $params);
 
     /**
-     * @method Search available regulation for link
+     * @method Searches for the available regulation for a link
      */
     public function GetAvailableRegulations(\Voximplant\Resources\Params\GetAvailableRegulationsParams $params);
 
     /**
-     * @method Get all countries
+     * @method Gets all countries
      */
     public function GetCountries(\Voximplant\Resources\Params\GetCountriesParams $params);
 
     /**
-     * @method Get available regions in country
+     * @method Gets available regions in a country
      */
     public function GetRegions(\Voximplant\Resources\Params\GetRegionsParams $params);
 }

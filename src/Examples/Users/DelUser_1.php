@@ -24,7 +24,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * user_id - The user ID list or the 'all' value.
  * user_name - The user name list that can be used instead of user_id.
  * application_id - Delete the specified users bound to the application ID. It is required if the user_name is specified.
- * application_name - Delete the specified users bound to the application name. Could be used instead of the application_id parameter.
+ * application_name - Delete the specified users bound to the application name. Can be used instead of the application_id parameter.
  */
 $params = new DelUserParams();
 

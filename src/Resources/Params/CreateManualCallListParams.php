@@ -31,9 +31,9 @@ class CreateManualCallListParams
     /** @var string Separator values. The default is ';' */
     public $delimiter;
 
-    /** @var string Escape character. Used for parsing csv */
+    /** @var string Escape character for parsing csv. */
     public $escape;
 
-    /** @var string Specifies the IP from the geolocation of call list subscribers. It allows selecting the nearest server for serving subscribers. */
+    /** @var string Specifies the IP from the geolocation of the call list subscribers. It allows selecting the nearest server for serving subscribers. */
     public $reference_ip;
 }

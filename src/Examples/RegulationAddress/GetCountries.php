@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetCountries Get all countries
+ * @method GetCountries Gets all countries
  */
 
 // Path to your autoload.php

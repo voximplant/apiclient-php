@@ -45,7 +45,7 @@ class RegulationAddress implements RegulationAddressInterface
     }
 
     /**
-     * @method Link regulation address to phone
+     * @method Links the regulation address to a phone
      */
     public function LinkregulationAddress(Params\LinkregulationAddressParams $params = null): LinkregulationAddressReturn
     {
@@ -56,7 +56,7 @@ class RegulationAddress implements RegulationAddressInterface
     }
 
     /**
-     * @method Search available zip codes
+     * @method Searches for available zip codes
      */
     public function GetZIPCodes(Params\GetZIPCodesParams $params = null): GetZIPCodesReturn
     {
@@ -67,7 +67,7 @@ class RegulationAddress implements RegulationAddressInterface
     }
 
     /**
-     * @method Search user's regulation address
+     * @method Searches for the user's regulation address
      */
     public function GetRegulationsAddress(Params\GetRegulationsAddressParams $params = null): GetRegulationsAddressReturn
     {
@@ -78,7 +78,7 @@ class RegulationAddress implements RegulationAddressInterface
     }
 
     /**
-     * @method Search available regulation for link
+     * @method Searches for the available regulation for a link
      */
     public function GetAvailableRegulations(Params\GetAvailableRegulationsParams $params = null): GetAvailableRegulationsReturn
     {
@@ -89,7 +89,7 @@ class RegulationAddress implements RegulationAddressInterface
     }
 
     /**
-     * @method Get all countries
+     * @method Gets all countries
      */
     public function GetCountries(Params\GetCountriesParams $params = null): GetCountriesReturn
     {
@@ -100,7 +100,7 @@ class RegulationAddress implements RegulationAddressInterface
     }
 
     /**
-     * @method Get available regions in country
+     * @method Gets available regions in a country
      */
     public function GetRegions(Params\GetRegionsParams $params = null): GetRegionsReturn
     {

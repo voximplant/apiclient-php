@@ -20,7 +20,7 @@ interface AdminUsersInterface
     public function SetAdminUserInfo(\Voximplant\Resources\Params\SetAdminUserInfoParams $params);
 
     /**
-     * @method Gets the admin users of the specified account. Note that both account types - parent and child - could have its own admins.
+     * @method Gets the admin users of the specified account. Note that both account types - parent and child - can have its own admins.
      */
     public function GetAdminUsers(\Voximplant\Resources\Params\GetAdminUsersParams $params);
 
