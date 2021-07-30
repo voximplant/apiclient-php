@@ -53,8 +53,30 @@ class Curl
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $body = curl_exec($ch);
+        $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+        if ($body === false) {
+            throw new ClientException(curl_error($ch), curl_errno($ch));
+        }
+
         curl_close($ch);
 
-        return json_decode($body, true);
+        if ($code >= 400 && $code < 500) {
+            throw new ClientException($body, $code);
+        }
+
+        $response = json_decode($body, true);
+        if (json_last_error()) {
+            $err = [
+                'msg' => 'Failed to parse server response. Err: '.json_last_error_msg(),
+                'code' => json_last_error(),
+            ];
+            $response = [
+                'error' => $err,
+                'errors' => [$err],
+            ];
+        }
+
+        return $response;
     }
 }
