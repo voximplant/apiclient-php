@@ -17,7 +17,9 @@ class Token
     public function __construct()
     {
         if(!empty($_ENV['VOXIMPLANT_CREDENTIALS'])) {
-            $this->privateKey = json_decode($_ENV['VOXIMPLANT_CREDENTIALS']);
+            if (!($this->privateKey = json_decode($_ENV['VOXIMPLANT_CREDENTIALS']))) {
+                throw new Exception('VOXIMPLANT_CREDENTIALS import failed, check environment variable');
+            }
         }
     }
 
