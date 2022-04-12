@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetRegions Gets available regions in a country
+ * @method GetRegions Gets available regions in a country.
  */
 
 // Path to your autoload.php
@@ -21,11 +21,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * country_code - The country code according to the ISO 3166-1 alpha-2.
- * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method.
+ * country_code - The country code according to the ISO 3166-1 alpha-2
+ * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method
  * city_name - The pattern of city's name
- * count - The returned regions count.
- * offset - The first N records will be skipped in the output.
+ * count - The returned regions count
+ * offset - The first N records will be skipped in the output
  */
 $params = new GetRegionsParams();
 

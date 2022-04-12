@@ -34,10 +34,10 @@ interface SIPRegistrationInterface
     /** @var number 1 */
     public $result;
 
-    /** @var number The sip registration id. */
+    /** @var number The sip registration id */
     public $sip_registration_id;
 
-    /** @var ShortAccountInfoType The current account state. */
+    /** @var ShortAccountInfoType The current account state */
     public $account_info;
 
     /** @var array The returned error message. */

@@ -21,14 +21,14 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * phone_count - The phone count to attach.
- * phone_number - The phone number that can be used instead of phone_count. See the [GetNewPhoneNumbers] method.
- * country_code - The country code.
- * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method.
- * country_state - The country state. See the [GetPhoneNumberCategories] and [GetPhoneNumberCountryStates] methods.
- * phone_region_id - The phone region ID. See the [GetPhoneNumberRegions] method.
- * regulation_address_id - The phone regulation address ID.
- * force_verification - The force verification flag.
+ * phone_count - The phone count to attach
+ * phone_number - The phone number that can be used instead of phone_count. See the [GetNewPhoneNumbers] method
+ * country_code - The country code
+ * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method
+ * country_state - The country state. See the [GetPhoneNumberCategories] and [GetPhoneNumberCountryStates] methods
+ * phone_region_id - The phone region ID. See the [GetPhoneNumberRegions] method
+ * regulation_address_id - The phone regulation address ID
+ * force_verification - The force verification flag
  */
 $params = new AttachPhoneNumberParams();
 
@@ -38,7 +38,7 @@ $params->country_state = 'CA';
 $params->phone_region_id = 1100;
 $params->phone_count = 1;
 
-// Attach the one US phone number to the account 1.
+// Attach a US phone number to the account 1.
 $result = $voxApi->PhoneNumbers->AttachPhoneNumber($params);
 
 // Show result

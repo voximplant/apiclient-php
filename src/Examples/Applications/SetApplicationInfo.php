@@ -21,8 +21,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * application_id - The application ID.
- * required_application_name - The application name that can be used instead of application_id.
+ * application_id - The application ID
+ * required_application_name - The application name that can be used instead of application_id
  * application_name - The new short application name in format [a-z][a-z0-9-]{1,79}
  * secure_record_storage - Enable secure storage for all logs and records of the application
  */

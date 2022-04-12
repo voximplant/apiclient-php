@@ -21,10 +21,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * scenario_id - The scenario ID.
- * required_scenario_name - The name of the scenario to edit, can be used instead of scenario_id.
+ * scenario_id - The scenario ID
+ * required_scenario_name - The name of the scenario to edit, can be used instead of scenario_id
  * scenario_name - The new scenario name. The length must be less than 30
- * scenario_script - The new scenario text. The length must be less than 128 KB.
+ * scenario_script - The new scenario text. The length must be less than 128 KB
  */
 $params = new SetScenarioInfoParams();
 

@@ -22,7 +22,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * key_id - The key's ID
- * description - The key's description.
+ * description - The key's description
  */
 $params = new UpdateKeyParams();
 

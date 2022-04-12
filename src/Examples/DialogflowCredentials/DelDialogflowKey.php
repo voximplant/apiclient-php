@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * dialogflow_key_id - The Dialogflow key's ID.
+ * dialogflow_key_id - The Dialogflow key's ID
  */
 $params = new DelDialogflowKeyParams();
 

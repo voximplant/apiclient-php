@@ -21,17 +21,17 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * user_id - The user to edit.
- * user_name - The user name that can be used instead of user_id.
- * application_id - The application ID. It is required if the user_name is specified.
- * application_name - The application name that can be used instead of application_id.
+ * user_id - The user to edit
+ * user_name - The user name that can be used instead of user_id
+ * application_id - The application ID. It is required if the user_name is specified
+ * application_name - The application name that can be used instead of application_id
  * new_user_name - The new user name in format [a-z0-9][a-z0-9_-]{2,49}
- * user_display_name - The new user display name. The length must be less than 256.
- * user_password - The new user password. The length must be at least 6 symbols.
- * parent_accounting -  Set 'true' to use the parent account's money, 'false' to use a separate user balance.
+ * user_display_name - The new user display name. The length must be less than 256
+ * user_password - The new user password. Must be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character
+ * parent_accounting -  Set 'true' to use the parent account's money, 'false' to use a separate user balance
  * user_active - The user enable flag
  * user_custom_data - Any string
- * mobile_phone - The new user mobile phone. The length must be less than 50.
+ * mobile_phone - The new user mobile phone. The length must be less than 50
  */
 $params = new SetUserInfoParams();
 

@@ -40,7 +40,7 @@ class PushCredentials implements PushCredentialsInterface
     }
 
     /**
-     * @method Adds push credentials
+     * @method Adds push credentials.
      */
     public function AddPushCredential(Params\AddPushCredentialParams $params = null): AddPushCredentialReturn
     {
@@ -51,7 +51,7 @@ class PushCredentials implements PushCredentialsInterface
     }
 
     /**
-     * @method Modifies push credentials
+     * @method Modifies push credentials.
      */
     public function SetPushCredential(Params\SetPushCredentialParams $params = null): SetPushCredentialReturn
     {
@@ -62,7 +62,7 @@ class PushCredentials implements PushCredentialsInterface
     }
 
     /**
-     * @method Removes push credentials
+     * @method Removes push credentials.
      */
     public function DelPushCredential(Params\DelPushCredentialParams $params = null): DelPushCredentialReturn
     {
@@ -73,7 +73,7 @@ class PushCredentials implements PushCredentialsInterface
     }
 
     /**
-     * @method Gets push credentials
+     * @method Gets push credentials.
      */
     public function GetPushCredential(Params\GetPushCredentialParams $params = null): GetPushCredentialReturn
     {
@@ -84,7 +84,7 @@ class PushCredentials implements PushCredentialsInterface
     }
 
     /**
-     * @method Binds push credentials to applications
+     * @method Binds push credentials to applications.
      */
     public function BindPushCredential(Params\BindPushCredentialParams $params = null): BindPushCredentialReturn
     {

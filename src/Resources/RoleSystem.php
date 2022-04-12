@@ -95,7 +95,7 @@ class RoleSystem implements RoleSystemInterface
     }
 
     /**
-     * @method Creates a public/private key pair. You can optionally specify one or more roles for the key, see [this article](https://voximplant.com/blog/service-accounts-introduction) for details.
+     * @method Creates a public/private key pair. You can optionally specify one or more roles for the key, see [this article](https://voximplant.com/docs/introduction/introduction_to_voximplant/basic_concepts/service_accounts) for details.
      */
     public function CreateKey(Params\CreateKeyParams $params = null): CreateKeyReturn
     {

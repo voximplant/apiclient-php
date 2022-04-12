@@ -21,13 +21,13 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * list_id - The list Id.
+ * list_id - The list Id
  */
 $params = new StopCallListProcessingParams();
 
 $params->list_id = 1;
 
-// Cancel list with id = 1
+// Cancel list with id = 1.
 $result = $voxApi->CallLists->StopCallListProcessing($params);
 
 // Show result

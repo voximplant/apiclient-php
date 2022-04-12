@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method LinkregulationAddress Links the regulation address to a phone
+ * @method AddOutboundTestPhoneNumber Adds a personal phone number to test outbound calls. Only one personal phone number can be used. To replace it with another, delete the existing one first.
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\LinkregulationAddressParams;
+use Voximplant\Resources\Params\AddOutboundTestPhoneNumberParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -21,17 +21,14 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * regulation_address_id - The regulation address ID
- * phone_id - The phone ID for link
- * phone_number - The phone number for link
+ * phone_number - The personal phone number in the E.164 format
  */
-$params = new LinkregulationAddressParams();
+$params = new AddOutboundTestPhoneNumberParams();
 
-$params->regulation_address_id = 1;
-$params->phone_id = 1;
+$params->phone_number = '12223334444';
 
-// Link the regulation address to a phone number
-$result = $voxApi->RegulationAddress->LinkregulationAddress($params);
+// Add a personal phone number.
+$result = $voxApi->OutboundTestNumbers->AddOutboundTestPhoneNumber($params);
 
 // Show result
 var_dump($result);

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetZIPCodes Searches for available zip codes
+ * @method GetZIPCodes Searches for available zip codes.
  */
 
 // Path to your autoload.php
@@ -21,17 +21,17 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * country_code - The country code according to the ISO 3166-1 alpha-2.
+ * country_code - The country code according to the ISO 3166-1 alpha-2
  * phone_region_code - The phone region code
- * count - The max returning record count.
- * offset - The first N records will be skipped in the output.
+ * count - The max returning record count
+ * offset - The first N records will be skipped in the output
  */
 $params = new GetZIPCodesParams();
 
 $params->country_code = 'DE';
 $params->count = 1;
 
-// Search for zip codes in Germany
+// Search for zip codes in Germany.
 $result = $voxApi->RegulationAddress->GetZIPCodes($params);
 
 // Show result

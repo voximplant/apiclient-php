@@ -22,8 +22,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * dialogflow_key_id - The Dialogflow key's ID 
- * application_id - The application ID list or the 'all' value.
- * bind - Set to false to unbind. Default value is true.
+ * application_id - The application ID list. Use the 'all' value to select all applications
+ * bind - Set to false to unbind. Default value is true
  */
 $params = new BindDialogflowKeysParams();
 

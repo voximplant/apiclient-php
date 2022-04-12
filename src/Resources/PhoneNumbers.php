@@ -5,6 +5,7 @@ namespace Voximplant\Resources;
 use Voximplant\Interfaces\AttachPhoneNumberReturn;
 use Voximplant\Interfaces\BindPhoneNumberToApplicationReturn;
 use Voximplant\Interfaces\DeactivatePhoneNumberReturn;
+use Voximplant\Interfaces\GetAccountPhoneNumberCountriesReturn;
 use Voximplant\Interfaces\GetActualPhoneNumberRegionReturn;
 use Voximplant\Interfaces\GetNewPhoneNumbersReturn;
 use Voximplant\Interfaces\GetPhoneNumberCategoriesReturn;
@@ -48,6 +49,9 @@ class PhoneNumbers implements PhoneNumbersInterface
     /** @object GetActualPhoneNumberRegion */
     protected $GetActualPhoneNumberRegionReturn;
 
+    /** @object GetAccountPhoneNumberCountries */
+    protected $GetAccountPhoneNumberCountriesReturn;
+
     public function __construct($client)
     {
         $this->client = $client;
@@ -62,6 +66,7 @@ class PhoneNumbers implements PhoneNumbersInterface
         $this->GetPhoneNumberCountryStatesReturn = new GetPhoneNumberCountryStatesReturn();
         $this->GetPhoneNumberRegionsReturn = new GetPhoneNumberRegionsReturn();
         $this->GetActualPhoneNumberRegionReturn = new GetActualPhoneNumberRegionReturn();
+        $this->GetAccountPhoneNumberCountriesReturn = new GetAccountPhoneNumberCountriesReturn();
     }
 
     /**
@@ -172,5 +177,16 @@ class PhoneNumbers implements PhoneNumbersInterface
             $this->GetActualPhoneNumberRegionReturn->$key = $value;
         }
         return $this->GetActualPhoneNumberRegionReturn;
+    }
+
+    /**
+     * @method Gets all countries where the specific account has phone numbers.
+     */
+    public function GetAccountPhoneNumberCountries(Params\GetAccountPhoneNumberCountriesParams $params = null): GetAccountPhoneNumberCountriesReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetAccountPhoneNumberCountriesReturn->$key = $value;
+        }
+        return $this->GetAccountPhoneNumberCountriesReturn;
     }
 }

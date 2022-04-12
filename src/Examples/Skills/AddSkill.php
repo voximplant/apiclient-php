@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * skill_name - The ACD operator skill name. The length must be less than 512.
+ * skill_name - The ACD operator skill name. The length must be less than 512
  */
 $params = new AddSkillParams();
 

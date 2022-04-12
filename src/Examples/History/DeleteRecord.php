@@ -21,8 +21,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * record_url - Url to remove.
- * record_id - The record id for remove.
+ * record_url - Url to remove
+ * record_id - The record id for remove
  */
 $params = new DeleteRecordParams();
 

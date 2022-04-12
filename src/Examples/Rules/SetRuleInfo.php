@@ -21,11 +21,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * rule_id - The rule ID.
+ * rule_id - The rule ID
  * rule_name - The new rule name. The length must be less than 100
- * rule_pattern - The new rule pattern regex. The length must be less than 64 KB.
- * rule_pattern_exclude - The new exclude pattern regex. The length must be less than 64 KB.
- * video_conference - Video conference is required.
+ * rule_pattern - The new rule pattern regex. The length must be less than 64 KB
+ * rule_pattern_exclude - The new exclude pattern regex. The length must be less than 64 KB
+ * video_conference - Video conference is required
  */
 $params = new SetRuleInfoParams();
 

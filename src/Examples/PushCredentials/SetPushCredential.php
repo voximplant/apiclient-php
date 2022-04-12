@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method SetPushCredential Modifies push credentials
+ * @method SetPushCredential Modifies push credentials.
  */
 
 // Path to your autoload.php
@@ -21,12 +21,16 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * push_credential_id - The push credentials id.
- * cert_content - Public and private keys in PKCS12 format.
- * cert_password - The secret password for private key.
- * is_dev_mode - Set true for use this certificate in apple's sandbox environment
- * sender_id - The sender id, provided by Google.
- * server_key - The server key, provided by Google.
+ * push_credential_id - The push credentials id
+ * cert_content - Public and private keys in PKCS12 format. Credentials for APPLE push
+ * cert_password - The secret password for private key. Credentials for APPLE push
+ * is_dev_mode - Set true to use this certificate in apple's sandbox environment. Credentials for APPLE push
+ * sender_id - The sender id, provided by Google. Credentials for GOOGLE push
+ * server_key - The server key, provided by Google. Credentials for GOOGLE push
+ * service_account_file - The service account key file, provided by Google. Can be used instead of server_key. Credentials for GOOGLE push
+ * huawei_client_id - The client id, provided by Huawei. Credentials for HUAWEI push
+ * huawei_client_secret - The client secret, provided by Huawei. Credentials for HUAWEI push
+ * huawei_application_id - The application id, provided by Huawei. Credentials for HUAWEI push
  */
 $params = new SetPushCredentialParams();
 

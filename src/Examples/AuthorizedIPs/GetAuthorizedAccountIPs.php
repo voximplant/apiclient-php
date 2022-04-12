@@ -21,11 +21,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * authorized_ip - The authorized IP4 or network to filter.
- * allowed - The allowed flag to filter.
- * contains_ip - Specify the parameter to filter the networks that contains the particular IP4.
- * count - The max returning record count.
- * offset - The first N records will be skipped in the output.
+ * authorized_ip - The authorized IP4 or network to filter
+ * allowed - The allowed flag to filter
+ * contains_ip - Specify the parameter to filter the networks that contains the particular IP4
+ * count - The max returning record count
+ * offset - The first N records will be skipped in the output
  */
 $params = new GetAuthorizedAccountIPsParams();
 

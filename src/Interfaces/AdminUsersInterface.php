@@ -34,10 +34,10 @@ interface AdminUsersInterface
     /** @var number 1 */
     public $result;
 
-    /** @var number The new admin user ID. */
+    /** @var number The new admin user ID */
     public $admin_user_id;
 
-    /** @var string The admin user API key. */
+    /** @var string The admin user API key */
     public $admin_user_api_key;
 
     /** @var array The returned error message. */
@@ -73,10 +73,10 @@ interface AdminUsersInterface
     /** @var [AdminUserType] */
     public $result;
 
-    /** @var number The total found admin user count. */
+    /** @var number The total found admin user count */
     public $total_count;
 
-    /** @var number The returned admin user count. */
+    /** @var number The returned admin user count */
     public $count;
 
     /** @var array The returned error message. */

@@ -21,15 +21,15 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * subuser_id - The subuser's ID.
+ * subuser_id - The subuser's ID
  * with_roles - Show subuser's roles
- * offset - The first N records will be skipped in the output.
- * count - The max returning record count.
+ * offset - The first N records will be skipped in the output
+ * count - The max returning record count
  */
 $params = new GetSubUsersParams();
 
 
-// Get subusers info
+// Get subusers info.
 $result = $voxApi->RoleSystem->GetSubUsers($params);
 
 // Show result

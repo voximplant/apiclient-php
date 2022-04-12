@@ -14,6 +14,9 @@ use Voximplant\Resources\CallLists;
 use Voximplant\Resources\CallerIDs;
 use Voximplant\Resources\DialogflowCredentials;
 use Voximplant\Resources\History;
+use Voximplant\Resources\Invoices;
+use Voximplant\Resources\KeyValueStorage;
+use Voximplant\Resources\OutboundTestNumbers;
 use Voximplant\Resources\PSTNBlacklist;
 use Voximplant\Resources\PhoneNumbers;
 use Voximplant\Resources\PushCredentials;
@@ -27,6 +30,7 @@ use Voximplant\Resources\SIPWhiteList;
 use Voximplant\Resources\SMS;
 use Voximplant\Resources\Scenarios;
 use Voximplant\Resources\Skills;
+use Voximplant\Resources\SmartQueue;
 use Voximplant\Resources\Types\RequestType;
 use Voximplant\Resources\Types\ResultType;
 use Voximplant\Resources\Users;
@@ -96,8 +100,14 @@ class VoximplantApi
     /** @var object CallerIDs Adds a new caller ID. Caller ID is the phone that will be displayed to the called user. This number can be used for call back. */
     public $CallerIDs;
 
+    /** @var object OutboundTestNumbers Adds a personal phone number to test outbound calls. Only one personal phone number can be used. To replace it with another, delete the existing one first. */
+    public $OutboundTestNumbers;
+
     /** @var object Queues Adds a new ACD queue. */
     public $Queues;
+
+    /** @var object SmartQueue Gets the metrics for the specified smart queue for the last 30 minutes. */
+    public $SmartQueue;
 
     /** @var object Skills Adds a new ACD operator skill. */
     public $Skills;
@@ -111,23 +121,29 @@ class VoximplantApi
     /** @var object AuthorizedIPs Adds a new authorized IP4 or network to the white/black list. */
     public $AuthorizedIPs;
 
-    /** @var object RegulationAddress Links the regulation address to a phone */
+    /** @var object RegulationAddress Links the regulation address to a phone. */
     public $RegulationAddress;
 
-    /** @var object PushCredentials Adds push credentials */
+    /** @var object PushCredentials Adds push credentials. */
     public $PushCredentials;
 
     /** @var object DialogflowCredentials Adds a Dialogflow key. */
     public $DialogflowCredentials;
 
-    /** @var object SMS Sends an SMS message between two phone numbers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the is_sms_supported property in the objects returned by the [GetPhoneNumbers] HTTP API) and SMS should be enabled for it via the [ControlSms] HTTP API. SMS messages can be received via HTTP callbacks, see this article for details. */
+    /** @var object SMS Sends an SMS message between two phone numbers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the is_sms_supported property in the objects returned by the [GetPhoneNumbers] Management API) and SMS should be enabled for it via the [ControlSms] Management API. SMS messages can be received via HTTP callbacks, see this article for details. */
     public $SMS;
 
     /** @var object RecordStorages Gets the record storages. */
     public $RecordStorages;
 
-    /** @var object RoleSystem Creates a public/private key pair. You can optionally specify one or more roles for the key, see [this article](https://voximplant.com/blog/service-accounts-introduction) for details. */
+    /** @var object RoleSystem Creates a public/private key pair. You can optionally specify one or more roles for the key, see [this article](https://voximplant.com/docs/introduction/introduction_to_voximplant/basic_concepts/service_accounts) for details. */
     public $RoleSystem;
+
+    /** @var object KeyValueStorage Creates or updates a key-value pair. If an existing key is passed, the method will return the existing item and will change the value if needed. The keys should be unique within a Voximplant application. */
+    public $KeyValueStorage;
+
+    /** @var object Invoices Gets all invoices of the specified USD or EUR account. */
+    public $Invoices;
 
     /**
      * @param bool $tokenPath
@@ -162,7 +178,9 @@ class VoximplantApi
         $this->SIPRegistration = new SIPRegistration($this);
         $this->PhoneNumbers = new PhoneNumbers($this);
         $this->CallerIDs = new CallerIDs($this);
+        $this->OutboundTestNumbers = new OutboundTestNumbers($this);
         $this->Queues = new Queues($this);
+        $this->SmartQueue = new SmartQueue($this);
         $this->Skills = new Skills($this);
         $this->AdminUsers = new AdminUsers($this);
         $this->AdminRoles = new AdminRoles($this);
@@ -173,6 +191,8 @@ class VoximplantApi
         $this->SMS = new SMS($this);
         $this->RecordStorages = new RecordStorages($this);
         $this->RoleSystem = new RoleSystem($this);
+        $this->KeyValueStorage = new KeyValueStorage($this);
+        $this->Invoices = new Invoices($this);
     }
 
     /**

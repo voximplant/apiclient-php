@@ -21,8 +21,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * key_id - The key's ID.
- * with_expanded_roles - Show the roles' additional properties.
+ * key_id - The key's ID
+ * with_expanded_roles - Show the roles' additional properties
  */
 $params = new GetKeyRolesParams();
 

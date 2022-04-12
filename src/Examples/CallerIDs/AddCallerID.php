@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * callerid_number - The callerID number in E.164 format.
+ * callerid_number - The callerID number in E.164 format
  */
 $params = new AddCallerIDParams();
 

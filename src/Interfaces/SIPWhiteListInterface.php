@@ -29,7 +29,7 @@ interface SIPWhiteListInterface
     /** @var number 1 */
     public $result;
 
-    /** @var number The SIP white list item ID. */
+    /** @var number The SIP white list item ID */
     public $sip_whitelist_id;
 
     /** @var array The returned error message. */
@@ -65,10 +65,10 @@ interface SIPWhiteListInterface
     /** @var [SipWhiteListInfoType] */
     public $result;
 
-    /** @var number The total found networks count. */
+    /** @var number The total found networks count */
     public $total_count;
 
-    /** @var number The returned networks count. */
+    /** @var number The returned networks count */
     public $count;
 
     /** @var array The returned error message. */

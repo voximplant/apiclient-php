@@ -5,36 +5,36 @@ namespace Voximplant\Interfaces;
 interface RegulationAddressInterface
 {
     /**
-     * @method Links the regulation address to a phone
+     * @method Links the regulation address to a phone.
      */
-    public function LinkregulationAddress(\Voximplant\Resources\Params\LinkregulationAddressParams $params);
+    public function LinkRegulationAddress(\Voximplant\Resources\Params\LinkRegulationAddressParams $params);
 
     /**
-     * @method Searches for available zip codes
+     * @method Searches for available zip codes.
      */
     public function GetZIPCodes(\Voximplant\Resources\Params\GetZIPCodesParams $params);
 
     /**
-     * @method Searches for the user's regulation address
+     * @method Searches for the user's regulation address.
      */
     public function GetRegulationsAddress(\Voximplant\Resources\Params\GetRegulationsAddressParams $params);
 
     /**
-     * @method Searches for the available regulation for a link
+     * @method Searches for the available regulation for a link.
      */
     public function GetAvailableRegulations(\Voximplant\Resources\Params\GetAvailableRegulationsParams $params);
 
     /**
-     * @method Gets all countries
+     * @method Gets all countries.
      */
     public function GetCountries(\Voximplant\Resources\Params\GetCountriesParams $params);
 
     /**
-     * @method Gets available regions in a country
+     * @method Gets available regions in a country.
      */
     public function GetRegions(\Voximplant\Resources\Params\GetRegionsParams $params);
 }
-class LinkregulationAddressReturn
+class LinkRegulationAddressReturn
 {
     /** @var boolean */
     public $result;
@@ -47,10 +47,10 @@ interface RegulationAddressInterface
 }
 class GetZIPCodesReturn
 {
-    /** @var [ZipCode] The ZipCode records. */
+    /** @var [ZipCode] The ZipCode records */
     public $result;
 
-    /** @var number The returned zip codes count. */
+    /** @var number The returned zip codes count */
     public $count;
 
     /** @var array The returned error message. */
@@ -61,10 +61,10 @@ interface RegulationAddressInterface
 }
 class GetRegulationsAddressReturn
 {
-    /** @var [RegulationAddress] The RegulationAddress records. */
+    /** @var [RegulationAddress] The RegulationAddress records */
     public $result;
 
-    /** @var number The returned regulation address count. */
+    /** @var number The returned regulation address count */
     public $count;
 
     /** @var array The returned error message. */
@@ -75,13 +75,13 @@ interface RegulationAddressInterface
 }
 class GetAvailableRegulationsReturn
 {
-    /** @var boolean If result equals 1: 1) the user has at least one regulation address which is appropriate for verification or 2) the verification is not required. If result equals 0, the regulations address needs to be created. */
+    /** @var boolean If result equals 1: 1) the user has at least one regulation address which is appropriate for verification or 2) the verification is not required. If result equals 0, the regulations address needs to be created */
     public $result;
 
-    /** @var [RegulationAddress] The available RegulationAddress records. */
+    /** @var [RegulationAddress] The available RegulationAddress records */
     public $available_address;
 
-    /** @var number The count of RegulationAddress in progress status. */
+    /** @var number The count of RegulationAddress in progress status */
     public $count_in_progress;
 
     /** @var array The returned error message. */

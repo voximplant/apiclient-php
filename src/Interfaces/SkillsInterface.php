@@ -70,10 +70,10 @@ interface SkillsInterface
     /** @var [SkillInfoType] */
     public $result;
 
-    /** @var number The total found skill count. */
+    /** @var number The total found skill count */
     public $total_count;
 
-    /** @var number The returned skill count. */
+    /** @var number The returned skill count */
     public $count;
 
     /** @var array The returned error message. */

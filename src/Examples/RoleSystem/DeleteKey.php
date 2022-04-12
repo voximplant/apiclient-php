@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * key_id - The key's ID.
+ * key_id - The key's ID
  */
 $params = new DeleteKeyParams();
 

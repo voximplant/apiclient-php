@@ -54,7 +54,7 @@ interface QueuesInterface
     /** @var number 1 */
     public $result;
 
-    /** @var number The ACD queue ID. */
+    /** @var number The ACD queue ID */
     public $acd_queue_id;
 
     /** @var array The returned error message. */
@@ -101,10 +101,10 @@ interface QueuesInterface
     /** @var [QueueInfoType] */
     public $result;
 
-    /** @var number The total found queue count. */
+    /** @var number The total found queue count */
     public $total_count;
 
-    /** @var number The returned queue count. */
+    /** @var number The returned queue count */
     public $count;
 
     /** @var array The returned error message. */

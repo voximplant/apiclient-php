@@ -21,14 +21,14 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * country_code - The country code.
- * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method.
- * country_state - The country state code (example: AL, CA, ... ).
- * omit_empty - Set to 'false' to show all the regions (with and without phone numbers in stock).
- * phone_region_id - The phone region ID to filter.
- * phone_region_name - The phone region name to filter.
- * phone_region_code - The region phone prefix to filter.
- * locale - The 2-letter locale code. Supported values are EN, RU.
+ * country_code - The country code
+ * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method
+ * country_state - The country state code (example: AL, CA, ... )
+ * omit_empty - Set to 'false' to show all the regions (with and without phone numbers in stock)
+ * phone_region_id - The phone region ID to filter
+ * phone_region_name - The phone region name to filter
+ * phone_region_code - The region phone prefix to filter
+ * locale - The 2-letter locale code. Supported values are EN, RU
  */
 $params = new GetPhoneNumberRegionsParams();
 

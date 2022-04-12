@@ -4,13 +4,13 @@ namespace Voximplant\Resources\Params;
 
 class GetCallListDetailsParams
 {
-    /** @var number The list ID. */
+    /** @var number The list ID */
     public $list_id;
 
     /** @var number Maximum number of entries in the result */
     public $count;
 
-    /** @var number The first N records will be skipped in the output. */
+    /** @var number The first N records will be skipped in the output */
     public $offset;
 
     /** @var string Output format (CSV/JSON/XLS). Default CSV */

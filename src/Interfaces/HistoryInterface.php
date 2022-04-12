@@ -36,19 +36,19 @@ interface HistoryInterface
 }
 class GetCallHistoryReturn
 {
-    /** @var [CallSessionInfoType] The CallSessionInfoType records in sync mode or 1 in async mode. */
+    /** @var [CallSessionInfoType] The CallSessionInfoType records in sync mode or 1 in async mode */
     public $result;
 
-    /** @var number The total found call session count (sync mode). */
+    /** @var number The total found call session count (sync mode) */
     public $total_count;
 
-    /** @var number The returned call session count (sync mode). */
+    /** @var number The returned call session count (sync mode) */
     public $count;
 
-    /** @var string The used timezone. */
+    /** @var string The used timezone */
     public $timezone;
 
-    /** @var number The history report ID (async mode). */
+    /** @var number The history report ID (async mode) */
     public $history_report_id;
 
     /** @var array The returned error message. */
@@ -62,10 +62,10 @@ interface HistoryInterface
     /** @var [HistoryReportType] */
     public $result;
 
-    /** @var number The total found reports count. */
+    /** @var number The total found reports count */
     public $total_count;
 
-    /** @var number The returned reports count. */
+    /** @var number The returned reports count */
     public $count;
 
     /** @var array The returned error message. */
@@ -79,16 +79,16 @@ interface HistoryInterface
     /** @var [TransactionInfoType] */
     public $result;
 
-    /** @var number The total found transaction count. */
+    /** @var number The total found transaction count */
     public $total_count;
 
-    /** @var string The used timezone. 'Etc/GMT' for example. */
+    /** @var string The used timezone. 'Etc/GMT' for example */
     public $timezone;
 
-    /** @var number The returned transaction count. */
+    /** @var number The returned transaction count */
     public $count;
 
-    /** @var number The history report ID (async mode). */
+    /** @var number The history report ID (async mode) */
     public $history_report_id;
 
     /** @var array The returned error message. */
@@ -113,10 +113,10 @@ interface HistoryInterface
     /** @var [ACDSessionInfoType] */
     public $result;
 
-    /** @var number The total found ACD session count. */
+    /** @var number The total found ACD session count */
     public $total_count;
 
-    /** @var number The returned ACD session count. */
+    /** @var number The returned ACD session count */
     public $count;
 
     /** @var array The returned error message. */
@@ -130,16 +130,16 @@ interface HistoryInterface
     /** @var [AuditLogInfoType] */
     public $result;
 
-    /** @var number The total found item count. */
+    /** @var number The total found item count */
     public $total_count;
 
-    /** @var number The returned item count. */
+    /** @var number The returned item count */
     public $count;
 
-    /** @var string The used timezone. */
+    /** @var string The used timezone */
     public $timezone;
 
-    /** @var number The history report ID (async mode). */
+    /** @var number The history report ID (async mode) */
     public $history_report_id;
 
     /** @var array The returned error message. */

@@ -2,7 +2,7 @@
 
 namespace Voximplant\Resources\Params;
 
-class LinkregulationAddressParams
+class LinkRegulationAddressParams
 {
     /** @var number The regulation address ID */
     public $regulation_address_id;

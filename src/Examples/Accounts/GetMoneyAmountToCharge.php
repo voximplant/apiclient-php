@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * currency - The currency name. Examples: USD, RUR, EUR.
+ * currency - The currency name. Examples: USD, RUR, EUR
  * charge_date - The next charge date, format: YYYY-MM-DD
  */
 $params = new GetMoneyAmountToChargeParams();

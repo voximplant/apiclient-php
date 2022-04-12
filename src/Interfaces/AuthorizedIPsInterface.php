@@ -37,7 +37,7 @@ interface AuthorizedIPsInterface
 }
 class DelAuthorizedAccountIPReturn
 {
-    /** @var number The removed network count. */
+    /** @var number The removed network count */
     public $result;
 
     /** @var array The returned error message. */
@@ -51,10 +51,10 @@ interface AuthorizedIPsInterface
     /** @var [AuthorizedAccountIPType] */
     public $result;
 
-    /** @var number The total found network count. */
+    /** @var number The total found network count */
     public $total_count;
 
-    /** @var number The returned network count. */
+    /** @var number The returned network count */
     public $count;
 
     /** @var array The returned error message. */
@@ -65,10 +65,10 @@ interface AuthorizedIPsInterface
 }
 class CheckAuthorizedAccountIPReturn
 {
-    /** @var boolean True if IP is allowed. */
+    /** @var boolean True if IP is allowed */
     public $result;
 
-    /** @var string The matched authorized IP or network (if found). */
+    /** @var string The matched authorized IP or network (if found) */
     public $authorized_ip;
 
     /** @var array The returned error message. */

@@ -50,16 +50,31 @@ interface AccountsInterface
     public function ChargeAccount(\Voximplant\Resources\Params\ChargeAccountParams $params);
 
     /**
+     * @method Configures the account's plan.
+     */
+    public function ChangeAccountPlan(\Voximplant\Resources\Params\ChangeAccountPlanParams $params);
+
+    /**
+     * @method Gets the account plans with packages.
+     */
+    public function GetAccountPlans(\Voximplant\Resources\Params\GetAccountPlansParams $params);
+
+    /**
+     * @method Gets the allowed plans to change.
+     */
+    public function GetAvailablePlans(\Voximplant\Resources\Params\GetAvailablePlansParams $params);
+
+    /**
      * @method Gets the account documents and the verification states.
      */
     public function GetAccountDocuments(\Voximplant\Resources\Params\GetAccountDocumentsParams $params);
 }
 class GetAccountInfoReturn
 {
-    /** @var AccountInfoType Account's info as the [AccountInfoType] object instance. */
+    /** @var AccountInfoType Account's info as the [AccountInfoType] object instance */
     public $result;
 
-    /** @var string The preferred address for the http api requests. */
+    /** @var string The preferred address for the Management API requests */
     public $api_address;
 
     /** @var array The returned error message. */
@@ -92,7 +107,7 @@ interface AccountsInterface
 }
 class GetCurrencyRateReturn
 {
-    /** @var ExchangeRates The exchange rates. */
+    /** @var ExchangeRates The exchange rates */
     public $result;
 
     /** @var array The returned error message. */
@@ -103,7 +118,7 @@ interface AccountsInterface
 }
 class GetResourcePriceReturn
 {
-    /** @var [ResourcePrice] The resource prices. */
+    /** @var [ResourcePrice] The resource prices */
     public $result;
 
     /** @var array The returned error message. */
@@ -114,7 +129,7 @@ interface AccountsInterface
 }
 class GetSubscriptionPriceReturn
 {
-    /** @var [SubscriptionTemplateType] The subscription template prices. */
+    /** @var [SubscriptionTemplateType] The subscription template prices */
     public $result;
 
     /** @var array The returned error message. */
@@ -128,10 +143,10 @@ interface AccountsInterface
     /** @var [AccountInfoType] */
     public $result;
 
-    /** @var number The total found user count. */
+    /** @var number The total found user count */
     public $total_count;
 
-    /** @var number The returned user count. */
+    /** @var number The returned user count */
     public $count;
 
     /** @var array The returned error message. */
@@ -156,8 +171,44 @@ interface AccountsInterface
     /** @var ChargeAccountResult Result */
     public $result;
 
-    /** @var ShortAccountInfoType The current account state. */
+    /** @var ShortAccountInfoType The current account state */
     public $account_info;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
+class ChangeAccountPlanReturn
+{
+    /** @var number 1 */
+    public $result;
+
+    /** @var ShortAccountInfoType The current account state */
+    public $account_info;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
+class GetAccountPlansReturn
+{
+    /** @var [AccountPlanType] */
+    public $result;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
+class GetAvailablePlansReturn
+{
+    /** @var [PlanType] */
+    public $result;
 
     /** @var array The returned error message. */
     public $error;
@@ -167,7 +218,7 @@ interface AccountsInterface
 }
 class GetAccountDocumentsReturn
 {
-    /** @var [AccountVerifications] The account verifications. */
+    /** @var [AccountVerifications] The account verifications */
     public $result;
 
     /** @var array The returned error message. */

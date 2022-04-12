@@ -39,10 +39,10 @@ interface CallListsInterface
     /** @var boolean true */
     public $result;
 
-    /** @var number The number of stored records. */
+    /** @var number The number of stored records */
     public $count;
 
-    /** @var number The list ID. */
+    /** @var number The list ID */
     public $list_id;
 
     /** @var array The returned error message. */
@@ -56,7 +56,7 @@ interface CallListsInterface
     /** @var number true */
     public $result;
 
-    /** @var number The list id. */
+    /** @var number The list id */
     public $list_id;
 
     /** @var array The returned error message. */
@@ -67,13 +67,13 @@ interface CallListsInterface
 }
 class GetCallListsReturn
 {
-    /** @var [CallListType] Array of lists. */
+    /** @var [CallListType] Array of lists */
     public $result;
 
-    /** @var number The returned call list count. */
+    /** @var number The returned call list count */
     public $count;
 
-    /** @var number The total found call list count. */
+    /** @var number The total found call list count */
     public $total_count;
 
     /** @var array The returned error message. */
@@ -84,10 +84,10 @@ interface CallListsInterface
 }
 class GetCallListDetailsReturn
 {
-    /** @var [CallListDetailType] Array of tasks for the roll call. */
+    /** @var [CallListDetailType] Array of tasks for the roll call */
     public $result;
 
-    /** @var number The number of tasks. */
+    /** @var number The number of tasks */
     public $count;
 
     /** @var array The returned error message. */
@@ -101,7 +101,7 @@ interface CallListsInterface
     /** @var boolean true */
     public $result;
 
-    /** @var string Result message. */
+    /** @var string Result message */
     public $msg;
 
     /** @var array The returned error message. */

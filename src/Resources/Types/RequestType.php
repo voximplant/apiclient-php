@@ -123,6 +123,30 @@ class RequestType
         );
     }
 
+    public function ChangeAccountPlan()
+    {
+        return array (
+            'plan_type' => 'string',
+            'plan_subscription_template_id' => 'number',
+        );
+    }
+
+    public function GetAccountPlans()
+    {
+        return array (
+            'plan_type' => 'stringlist',
+            'plan_subscription_template_id' => 'intlist',
+        );
+    }
+
+    public function GetAvailablePlans()
+    {
+        return array (
+            'plan_type' => 'stringlist',
+            'plan_subscription_template_id' => 'intlist',
+        );
+    }
+
     public function AddApplication()
     {
         return array (
@@ -154,9 +178,6 @@ class RequestType
         return array (
             'application_id' => 'number',
             'application_name' => 'string',
-            'user_id' => 'number',
-            'excluded_user_id' => 'number',
-            'showing_user_id' => 'number',
             'with_rules' => 'boolean',
             'with_scenarios' => 'boolean',
             'count' => 'number',
@@ -520,6 +541,7 @@ class RequestType
             'offset' => 'number',
             'output' => 'string',
             'is_async' => 'boolean',
+            'is_uncommitted' => 'boolean',
         );
     }
 
@@ -813,7 +835,7 @@ class RequestType
     public function GetPhoneNumberCategories()
     {
         return array (
-            'country_code' => 'string',
+            'country_code' => 'stringlist',
             'sandbox' => 'string',
             'locale' => 'string',
         );
@@ -847,6 +869,7 @@ class RequestType
         return array (
             'country_code' => 'string',
             'phone_category_name' => 'string',
+            'country_state' => 'string',
             'phone_region_id' => 'number',
             'locale' => 'string',
         );
@@ -893,6 +916,38 @@ class RequestType
         return array (
             'callerid_id' => 'number',
             'callerid_number' => 'string',
+        );
+    }
+
+    public function AddOutboundTestPhoneNumber()
+    {
+        return array (
+            'phone_number' => 'string',
+        );
+    }
+
+    public function VerifyOutboundTestPhoneNumber()
+    {
+        return array (
+        );
+    }
+
+    public function ActivateOutboundTestPhoneNumber()
+    {
+        return array (
+            'verification_code' => 'string',
+        );
+    }
+
+    public function DelOutboundTestPhoneNumber()
+    {
+        return array (
+        );
+    }
+
+    public function GetOutboundTestPhoneNumbers()
+    {
+        return array (
         );
     }
 
@@ -1005,6 +1060,74 @@ class RequestType
             'user_id' => 'stringlist',
             'aggregation' => 'string',
             'group' => 'string',
+        );
+    }
+
+    public function GetSmartQueueRealtimeMetrics()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'user_id' => 'intlist',
+            'user_name' => 'stringlist',
+            'sq_queue_id' => 'intlist',
+            'sq_queue_name' => 'stringlist',
+            'from_date' => 'timestamp',
+            'to_date' => 'timestamp',
+            'timezone' => 'string',
+            'interval' => 'string',
+            'report_type' => 'stringlist',
+            'group_by' => 'string',
+            'max_waiting_sec' => 'number',
+        );
+    }
+
+    public function GetSmartQueueDayHistory()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'user_id' => 'intlist',
+            'user_name' => 'stringlist',
+            'sq_queue_id' => 'intlist',
+            'sq_queue_name' => 'stringlist',
+            'from_date' => 'timestamp',
+            'to_date' => 'timestamp',
+            'timezone' => 'string',
+            'interval' => 'string',
+            'report_type' => 'stringlist',
+            'group_by' => 'string',
+            'max_waiting_sec' => 'number',
+        );
+    }
+
+    public function RequestSmartQueueHistory()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'user_id' => 'intlist',
+            'user_name' => 'stringlist',
+            'sq_queue_id' => 'intlist',
+            'sq_queue_name' => 'stringlist',
+            'from_date' => 'timestamp',
+            'to_date' => 'timestamp',
+            'timezone' => 'string',
+            'interval' => 'string',
+            'report_type' => 'stringlist',
+            'group_by' => 'string',
+            'max_waiting_sec' => 'number',
+        );
+    }
+
+    public function GetSQState()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'sq_queue_id' => 'intlist',
+            'sq_queue_name' => 'stringlist',
+            'timezone' => 'string',
         );
     }
 
@@ -1222,7 +1345,7 @@ class RequestType
         );
     }
 
-    public function LinkregulationAddress()
+    public function LinkRegulationAddress()
     {
         return array (
             'regulation_address_id' => 'number',
@@ -1271,6 +1394,13 @@ class RequestType
         );
     }
 
+    public function GetAccountPhoneNumberCountries()
+    {
+        return array (
+            'application_id' => 'intlist',
+        );
+    }
+
     public function GetRegions()
     {
         return array (
@@ -1297,6 +1427,9 @@ class RequestType
             'sender_id' => 'string',
             'server_key' => 'string',
             'service_account_file' => 'string',
+            'huawei_client_id' => 'string',
+            'huawei_client_secret' => 'string',
+            'huawei_application_id' => 'string',
         );
     }
 
@@ -1309,6 +1442,10 @@ class RequestType
             'is_dev_mode' => 'boolean',
             'sender_id' => 'string',
             'server_key' => 'string',
+            'service_account_file' => 'string',
+            'huawei_client_id' => 'string',
+            'huawei_client_secret' => 'string',
+            'huawei_application_id' => 'string',
         );
     }
 
@@ -1558,6 +1695,67 @@ class RequestType
         );
     }
 
+    public function SetKeyValueItem()
+    {
+        return array (
+            'key' => 'string',
+            'value' => 'string',
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'ttl' => 'number',
+            'expires_at' => 'number',
+        );
+    }
+
+    public function DelKeyValueItem()
+    {
+        return array (
+            'key' => 'string',
+            'application_id' => 'number',
+            'application_name' => 'string',
+        );
+    }
+
+    public function GetKeyValueItem()
+    {
+        return array (
+            'key' => 'string',
+            'application_id' => 'number',
+            'application_name' => 'string',
+        );
+    }
+
+    public function GetKeyValueItems()
+    {
+        return array (
+            'key' => 'string',
+            'count' => 'number',
+            'offset' => 'number',
+            'application_id' => 'number',
+            'application_name' => 'string',
+        );
+    }
+
+    public function GetKeyValueKeys()
+    {
+        return array (
+            'key' => 'string',
+            'count' => 'number',
+            'offset' => 'number',
+            'application_id' => 'number',
+            'application_name' => 'string',
+        );
+    }
+
+    public function GetAccountInvoices()
+    {
+        return array (
+            'status' => 'string',
+            'count' => 'number',
+            'offset' => 'number',
+        );
+    }
+
     public function GetSmsHistory()
     {
         return array (
@@ -1583,6 +1781,205 @@ class RequestType
             'to_date' => 'timestamp',
             'output' => 'string',
             'delivery_status' => 'number',
+        );
+    }
+
+    public function SQ_AddQueue()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'sq_queue_name' => 'string',
+            'call_agent_selection' => '[SQAgentSelectionStrategies]',
+            'im_agent_selection' => '[SQAgentSelectionStrategies]',
+            'call_task_selection' => '[SQTaskSelectionStrategies]',
+            'im_task_selection' => '[SQTaskSelectionStrategies]',
+            'fallback_agent_selection' => 'string',
+            'description' => 'string',
+            'call_max_waiting_time' => 'number',
+            'im_max_waiting_time' => 'number',
+            'call_max_queue_size' => 'number',
+            'im_max_queue_size' => 'number',
+        );
+    }
+
+    public function SQ_SetQueueInfo()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'sq_queue_id' => 'number',
+            'sq_queue_name' => 'string',
+            'new_sq_queue_name' => 'string',
+            'call_agent_selection' => '[SQAgentSelectionStrategies]',
+            'im_agent_selection' => '[SQAgentSelectionStrategies]',
+            'call_task_selection' => '[SQTaskSelectionStrategies]',
+            'im_task_selection' => '[SQTaskSelectionStrategies]',
+            'fallback_agent_selection' => 'string',
+            'description' => 'string',
+            'call_max_waiting_time' => 'number',
+            'im_max_waiting_time' => 'number',
+            'call_max_queue_size' => 'number',
+            'im_max_queue_size' => 'number',
+        );
+    }
+
+    public function SQ_DelQueue()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'sq_queue_id' => 'intlist',
+            'sq_queue_name' => 'stringlist',
+        );
+    }
+
+    public function SQ_GetQueues()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'sq_queue_id' => 'intlist',
+            'sq_queue_name' => 'stringlist',
+            'sq_queue_name_template' => 'string',
+            'user_id' => 'number',
+            'user_name' => 'string',
+            'excluded_user_id' => 'number',
+            'excluded_user_name' => 'string',
+            'count' => 'number',
+            'offset' => 'number',
+        );
+    }
+
+    public function SQ_AddSkill()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'sq_skill_name' => 'string',
+            'description' => 'string',
+        );
+    }
+
+    public function SQ_DelSkill()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'sq_skill_id' => 'intlist',
+            'sq_skill_name' => 'stringlist',
+        );
+    }
+
+    public function SQ_SetSkillInfo()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'sq_skill_id' => 'number',
+            'sq_skill_name' => 'string',
+            'new_sq_skill_name' => 'string',
+            'description' => 'string',
+        );
+    }
+
+    public function SQ_BindSkill()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'user_id' => 'intlist',
+            'user_name' => 'stringlist',
+            'sq_skills' => 'Object',
+            'bind_mode' => '[SQSkillBindingModes]',
+        );
+    }
+
+    public function SQ_UnbindSkill()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'user_id' => 'intlist',
+            'user_name' => 'stringlist',
+            'sq_skill_id' => 'intlist',
+            'sq_skill_name' => 'stringlist',
+        );
+    }
+
+    public function SQ_GetSkills()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'user_id' => 'intlist',
+            'user_name' => 'stringlist',
+            'sq_skill_id' => 'intlist',
+            'sq_skill_name' => 'stringlist',
+            'sq_skill_name_template' => 'string',
+            'excluded_user_id' => 'number',
+            'excluded_user_name' => 'string',
+            'count' => 'number',
+            'offset' => 'number',
+        );
+    }
+
+    public function SQ_BindAgent()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'sq_queue_id' => 'number',
+            'sq_queue_name' => 'string',
+            'user_id' => 'intlist',
+            'user_name' => 'stringlist',
+            'bind_mode' => '[SQAgentBindingModes]',
+        );
+    }
+
+    public function SQ_UnbindAgent()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'sq_queue_id' => 'intlist',
+            'sq_queue_name' => 'stringlist',
+            'user_id' => 'intlist',
+            'user_name' => 'stringlist',
+        );
+    }
+
+    public function SQ_GetAgents()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'sq_queue_id' => 'intlist',
+            'sq_queue_name' => 'stringlist',
+            'excluded_sq_queue_id' => 'number',
+            'excluded_sq_queue_name' => 'string',
+            'sq_skills' => 'Object',
+            'user_id' => 'intlist',
+            'user_name' => 'stringlist',
+            'user_name_template' => 'string',
+            'sq_statuses' => 'Object',
+            'with_sq_skills' => 'boolean',
+            'with_sq_queues' => 'boolean',
+            'with_sq_statuses' => 'boolean',
+            'count' => 'number',
+            'offset' => 'number',
+        );
+    }
+
+    public function SQ_SetAgentInfo()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'user_id' => 'intlist',
+            'user_name' => 'stringlist',
+            'max_simultaneous_conversations' => 'number',
+            'handle_calls' => 'boolean',
         );
     }
 }

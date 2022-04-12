@@ -3,9 +3,12 @@
 namespace Voximplant\Resources;
 
 use Voximplant\Interfaces\AccountsInterface;
+use Voximplant\Interfaces\ChangeAccountPlanReturn;
 use Voximplant\Interfaces\ChargeAccountReturn;
 use Voximplant\Interfaces\GetAccountDocumentsReturn;
 use Voximplant\Interfaces\GetAccountInfoReturn;
+use Voximplant\Interfaces\GetAccountPlansReturn;
+use Voximplant\Interfaces\GetAvailablePlansReturn;
 use Voximplant\Interfaces\GetChildrenAccountsReturn;
 use Voximplant\Interfaces\GetCurrencyRateReturn;
 use Voximplant\Interfaces\GetMoneyAmountToChargeReturn;
@@ -45,6 +48,15 @@ class Accounts implements AccountsInterface
     /** @object ChargeAccount */
     protected $ChargeAccountReturn;
 
+    /** @object ChangeAccountPlan */
+    protected $ChangeAccountPlanReturn;
+
+    /** @object GetAccountPlans */
+    protected $GetAccountPlansReturn;
+
+    /** @object GetAvailablePlans */
+    protected $GetAvailablePlansReturn;
+
     /** @object GetAccountDocuments */
     protected $GetAccountDocumentsReturn;
 
@@ -61,6 +73,9 @@ class Accounts implements AccountsInterface
         $this->GetChildrenAccountsReturn = new GetChildrenAccountsReturn();
         $this->GetMoneyAmountToChargeReturn = new GetMoneyAmountToChargeReturn();
         $this->ChargeAccountReturn = new ChargeAccountReturn();
+        $this->ChangeAccountPlanReturn = new ChangeAccountPlanReturn();
+        $this->GetAccountPlansReturn = new GetAccountPlansReturn();
+        $this->GetAvailablePlansReturn = new GetAvailablePlansReturn();
         $this->GetAccountDocumentsReturn = new GetAccountDocumentsReturn();
     }
 
@@ -161,6 +176,39 @@ class Accounts implements AccountsInterface
             $this->ChargeAccountReturn->$key = $value;
         }
         return $this->ChargeAccountReturn;
+    }
+
+    /**
+     * @method Configures the account's plan.
+     */
+    public function ChangeAccountPlan(Params\ChangeAccountPlanParams $params = null): ChangeAccountPlanReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->ChangeAccountPlanReturn->$key = $value;
+        }
+        return $this->ChangeAccountPlanReturn;
+    }
+
+    /**
+     * @method Gets the account plans with packages.
+     */
+    public function GetAccountPlans(Params\GetAccountPlansParams $params = null): GetAccountPlansReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetAccountPlansReturn->$key = $value;
+        }
+        return $this->GetAccountPlansReturn;
+    }
+
+    /**
+     * @method Gets the allowed plans to change.
+     */
+    public function GetAvailablePlans(Params\GetAvailablePlansParams $params = null): GetAvailablePlansReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetAvailablePlansReturn->$key = $value;
+        }
+        return $this->GetAvailablePlansReturn;
     }
 
     /**

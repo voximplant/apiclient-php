@@ -29,7 +29,7 @@ interface PSTNBlacklistInterface
     /** @var number 1 */
     public $result;
 
-    /** @var number The PSTN black list item ID. */
+    /** @var number The PSTN black list item ID */
     public $pstn_blacklist_id;
 
     /** @var array The returned error message. */
@@ -65,10 +65,10 @@ interface PSTNBlacklistInterface
     /** @var [PstnBlackListInfoType] */
     public $result;
 
-    /** @var number The total found phone numbers count. */
+    /** @var number The total found phone numbers count */
     public $total_count;
 
-    /** @var number The returned phone numbers count. */
+    /** @var number The returned phone numbers count */
     public $count;
 
     /** @var array The returned error message. */

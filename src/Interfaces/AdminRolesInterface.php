@@ -34,7 +34,7 @@ interface AdminRolesInterface
     /** @var number 1 */
     public $result;
 
-    /** @var number The new admin role ID. */
+    /** @var number The new admin role ID */
     public $admin_role_id;
 
     /** @var array The returned error message. */
@@ -70,10 +70,10 @@ interface AdminRolesInterface
     /** @var [AdminRoleType] */
     public $result;
 
-    /** @var number The total found admin role count. */
+    /** @var number The total found admin role count */
     public $total_count;
 
-    /** @var number The returned admin role count. */
+    /** @var number The returned admin role count */
     public $count;
 
     /** @var array The returned error message. */
@@ -84,7 +84,7 @@ interface AdminRolesInterface
 }
 class GetAvailableAdminRoleEntriesReturn
 {
-    /** @var [string] Array of the admin role entries. */
+    /** @var [string] Array of the admin role entries */
     public $result;
 
     /** @var array The returned error message. */

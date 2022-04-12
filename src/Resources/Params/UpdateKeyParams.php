@@ -7,6 +7,6 @@ class UpdateKeyParams
     /** @var string The key's ID */
     public $key_id;
 
-    /** @var string The key's description. */
+    /** @var string The key's description */
     public $description;
 }

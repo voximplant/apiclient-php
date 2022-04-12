@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetAvailableRegulations Searches for the available regulation for a link
+ * @method GetAvailableRegulations Searches for the available regulation for a link.
  */
 
 // Path to your autoload.php
@@ -21,9 +21,9 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * country_code - The country code according to the ISO 3166-1 alpha-2.
- * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method.
- * phone_region_code - The phone region code. See the [GetRegions] method.
+ * country_code - The country code according to the ISO 3166-1 alpha-2
+ * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method
+ * phone_region_code - The phone region code. See the [GetRegions] method
  */
 $params = new GetAvailableRegulationsParams();
 
@@ -31,7 +31,7 @@ $params->country_code = 'DE';
 $params->phone_category_name = 'GEOGRAPHIC';
 $params->phone_region_code = '643';
 
-// Search available regulation address
+// Search available regulation address.
 $result = $voxApi->RegulationAddress->GetAvailableRegulations($params);
 
 // Show result

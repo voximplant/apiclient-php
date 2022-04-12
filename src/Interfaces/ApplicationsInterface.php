@@ -35,7 +35,7 @@ interface ApplicationsInterface
     /** @var string The full application name */
     public $application_name;
 
-    /** @var boolean This flag indicates whether a secure storage for logs and records is enabled or not. */
+    /** @var boolean This flag indicates whether a secure storage for logs and records is enabled or not */
     public $secure_record_storage;
 
     /** @var array The returned error message. */
@@ -63,7 +63,7 @@ interface ApplicationsInterface
     /** @var string The new full application name */
     public $application_name;
 
-    /** @var boolean This flag indicates whether a secure storage for logs and records is enabled or not. */
+    /** @var boolean This flag indicates whether a secure storage for logs and records is enabled or not */
     public $secure_record_storage;
 
     /** @var array The returned error message. */
@@ -77,10 +77,10 @@ interface ApplicationsInterface
     /** @var [ApplicationInfoType] */
     public $result;
 
-    /** @var number The total found application count. */
+    /** @var number The total found application count */
     public $total_count;
 
-    /** @var number The returned application count. */
+    /** @var number The returned application count */
     public $count;
 
     /** @var array The returned error message. */

@@ -34,7 +34,7 @@ interface UsersInterface
     /** @var number 1 */
     public $result;
 
-    /** @var number The new user ID. */
+    /** @var number The new user ID */
     public $user_id;
 
     /** @var array The returned error message. */
@@ -67,13 +67,13 @@ interface UsersInterface
 }
 class GetUsersReturn
 {
-    /** @var [UserInfoType] The UserInfoType records. */
+    /** @var [UserInfoType] The UserInfoType records */
     public $result;
 
-    /** @var number The total found user count. */
+    /** @var number The total found user count */
     public $total_count;
 
-    /** @var number The returned user count. */
+    /** @var number The returned user count */
     public $count;
 
     /** @var array The returned error message. */
@@ -87,7 +87,7 @@ interface UsersInterface
     /** @var number 1 */
     public $result;
 
-    /** @var decimal The new account balance. */
+    /** @var decimal The new account balance */
     public $balance;
 
     /** @var array The returned error message. */

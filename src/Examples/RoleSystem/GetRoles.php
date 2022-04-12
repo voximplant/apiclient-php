@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * group_name - The role group.
+ * group_name - The role group
  */
 $params = new GetRolesParams();
 

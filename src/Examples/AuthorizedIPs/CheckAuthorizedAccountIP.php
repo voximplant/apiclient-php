@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * authorized_ip - The IP4 to test.
+ * authorized_ip - The IP4 to test
  */
 $params = new CheckAuthorizedAccountIPParams();
 

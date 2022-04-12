@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * pstn_blacklist_id - The PSTN black list item ID.
+ * pstn_blacklist_id - The PSTN black list item ID
  */
 $params = new DelPstnBlackListItemParams();
 

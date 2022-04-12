@@ -53,13 +53,18 @@ interface PhoneNumbersInterface
      * @method Get actual info on the country region of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
      */
     public function GetActualPhoneNumberRegion(\Voximplant\Resources\Params\GetActualPhoneNumberRegionParams $params);
+
+    /**
+     * @method Gets all countries where the specific account has phone numbers.
+     */
+    public function GetAccountPhoneNumberCountries(\Voximplant\Resources\Params\GetAccountPhoneNumberCountriesParams $params);
 }
 class AttachPhoneNumberReturn
 {
     /** @var number 1 */
     public $result;
 
-    /** @var [NewAttachedPhoneInfoType] The attached phone numbers. */
+    /** @var [NewAttachedPhoneInfoType] The attached phone numbers */
     public $phone_numbers;
 
     /** @var array The returned error message. */
@@ -106,10 +111,10 @@ interface PhoneNumbersInterface
     /** @var [AttachedPhoneInfoType] */
     public $result;
 
-    /** @var number The total found phone count. */
+    /** @var number The total found phone count */
     public $total_count;
 
-    /** @var number The returned phone count. */
+    /** @var number The returned phone count */
     public $count;
 
     /** @var array The returned error message. */
@@ -123,10 +128,10 @@ interface PhoneNumbersInterface
     /** @var [NewPhoneInfoType] */
     public $result;
 
-    /** @var number The total found phone count. */
+    /** @var number The total found phone count */
     public $total_count;
 
-    /** @var number The returned phone count. */
+    /** @var number The returned phone count */
     public $count;
 
     /** @var array The returned error message. */
@@ -171,6 +176,17 @@ interface PhoneNumbersInterface
 class GetActualPhoneNumberRegionReturn
 {
     /** @var PhoneNumberCountryRegionInfoType */
+    public $result;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
+class GetAccountPhoneNumberCountriesReturn
+{
+    /** @var [string] Array of country codes */
     public $result;
 
     /** @var array The returned error message. */

@@ -34,7 +34,7 @@ interface CallerIDsInterface
     /** @var number 1 */
     public $result;
 
-    /** @var number The id of the callerID object. */
+    /** @var number The id of the callerID object */
     public $callerid_id;
 
     /** @var array The returned error message. */
@@ -70,10 +70,10 @@ interface CallerIDsInterface
     /** @var [CallerIDInfoType] */
     public $result;
 
-    /** @var number The total found record count. */
+    /** @var number The total found record count */
     public $total_count;
 
-    /** @var number The returned record count. */
+    /** @var number The returned record count */
     public $count;
 
     /** @var array The returned error message. */

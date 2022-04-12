@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * rule_id - The rule ID list.
+ * rule_id - The rule ID list
  */
 $params = new ReorderRulesParams();
 
@@ -31,7 +31,7 @@ $params->rule_id = array (
     2 => 3,
 );
 
-// Set the rule selection order: 1, 7, 3
+// Set the rule selection order: 1, 7, 3.
 $result = $voxApi->Rules->ReorderRules($params);
 
 // Show result

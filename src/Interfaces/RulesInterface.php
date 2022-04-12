@@ -34,7 +34,7 @@ interface RulesInterface
     /** @var number 1 */
     public $result;
 
-    /** @var number The new rule ID. */
+    /** @var number The new rule ID */
     public $rule_id;
 
     /** @var array The returned error message. */
@@ -70,10 +70,10 @@ interface RulesInterface
     /** @var [RuleInfoType] */
     public $result;
 
-    /** @var number The total found rule count. */
+    /** @var number The total found rule count */
     public $total_count;
 
-    /** @var number The returned rule count. */
+    /** @var number The returned rule count */
     public $count;
 
     /** @var array The returned error message. */

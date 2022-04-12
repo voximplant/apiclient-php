@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method DelPushCredential Removes push credentials
+ * @method DelPushCredential Removes push credentials.
  */
 
 // Path to your autoload.php
@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * push_credential_id - The push credentials id.
+ * push_credential_id - The push credentials id
  */
 $params = new DelPushCredentialParams();
 

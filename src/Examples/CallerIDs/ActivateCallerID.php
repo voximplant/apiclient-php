@@ -21,9 +21,9 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * callerid_id - The id of the callerID object.
- * callerid_number - The callerID number that can be used instead of callerid_id.
- * verification_code - The verification code, see the VerifyCallerID function.
+ * callerid_id - The id of the callerID object
+ * callerid_number - The callerID number that can be used instead of callerid_id
+ * verification_code - The verification code, see the VerifyCallerID function
  */
 $params = new ActivateCallerIDParams();
 

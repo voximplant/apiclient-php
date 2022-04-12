@@ -21,8 +21,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * phone_id - The phone ID list or the 'all' value.
- * phone_number - The phone number list that can be used instead of phone_id.
+ * phone_id - The phone ID list. Use the 'all' value to select all phone ids
+ * phone_number - The phone number list that can be used instead of phone_id
  */
 $params = new DeactivatePhoneNumberParams();
 

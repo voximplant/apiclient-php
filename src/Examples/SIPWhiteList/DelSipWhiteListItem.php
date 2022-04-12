@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * sip_whitelist_id - The SIP white list item ID to delete.
+ * sip_whitelist_id - The SIP white list item ID to delete
  */
 $params = new DelSipWhiteListItemParams();
 

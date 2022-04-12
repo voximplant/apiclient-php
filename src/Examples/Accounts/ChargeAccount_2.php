@@ -21,8 +21,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * phone_id - The phone ID list or the 'all' value. You should specify the phones having the auto_charge=false.
- * phone_number - The phone number list or the 'all' value. Can be used instead of phone_id. You should specify the phones having the auto_charge=false.
+ * phone_id - The phone ID list. Use the 'all' value to select all phone ids. You should specify the phones having the auto_charge=false
+ * phone_number - The phone number list. Use the 'all' value to select all phone numbers. Can be used instead of phone_id. You should specify the phones having the auto_charge=false
  */
 $params = new ChargeAccountParams();
 

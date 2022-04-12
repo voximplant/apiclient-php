@@ -115,7 +115,7 @@ class ResultType
                         'callback_url' => 'string',
                         'callback_salt' => 'string',
                         'send_js_error' => 'boolean',
-                        'min_amount' => 'number',
+                        'min_amount' => 'decimal',
                     ),
                     'bank_card' =>
                     array (
@@ -189,9 +189,9 @@ class ResultType
                             'callback_url' => 'string',
                             'callback_salt' => 'string',
                             'send_js_error' => 'boolean',
-                            'min_amount' => 'number',
+                            'min_amount' => 'decimal',
                         ),
-                        'min_amount' => 'number',
+                        'min_amount' => 'decimal',
                     ),
                     'invoice' =>
                     array (
@@ -265,7 +265,7 @@ class ResultType
                             'callback_url' => 'string',
                             'callback_salt' => 'string',
                             'send_js_error' => 'boolean',
-                            'min_amount' => 'number',
+                            'min_amount' => 'decimal',
                         ),
                         'bank_card' =>
                         array (
@@ -339,13 +339,14 @@ class ResultType
                                 'callback_url' => 'string',
                                 'callback_salt' => 'string',
                                 'send_js_error' => 'boolean',
-                                'min_amount' => 'number',
+                                'min_amount' => 'decimal',
                             ),
-                            'min_amount' => 'number',
+                            'min_amount' => 'decimal',
                         ),
-                        'min_amount' => 'number',
+                        'min_amount' => 'decimal',
                     ),
                 ),
+                'a2p_sms_enabled' => 'boolean',
             ),
             'api_address' => 'string',
         );
@@ -425,8 +426,11 @@ class ResultType
                 '|array|' =>
                 array (
                     'subscription_template_id' => 'number',
+                    'currency_id' => 'number',
                     'installation_price' => 'decimal',
-                    'price' => 'string',
+                    'installation_price_in_currency' => 'number',
+                    'price' => 'number',
+                    'price_in_currency' => 'number',
                     'period' => 'string',
                     'subscription_template_type' => 'string',
                     'subscription_template_name' => 'string',
@@ -556,7 +560,7 @@ class ResultType
                                 'callback_salt' => 'string',
                                 'send_js_error' => 'boolean',
                             ),
-                            'min_amount' => 'number',
+                            'min_amount' => 'decimal',
                             'currency' => 'string',
                         ),
                         'bank_card' =>
@@ -637,10 +641,10 @@ class ResultType
                                     'callback_salt' => 'string',
                                     'send_js_error' => 'boolean',
                                 ),
-                                'min_amount' => 'number',
+                                'min_amount' => 'decimal',
                                 'currency' => 'string',
                             ),
-                            'min_amount' => 'number',
+                            'min_amount' => 'decimal',
                             'currency' => 'string',
                         ),
                         'invoice' =>
@@ -721,7 +725,7 @@ class ResultType
                                     'callback_salt' => 'string',
                                     'send_js_error' => 'boolean',
                                 ),
-                                'min_amount' => 'number',
+                                'min_amount' => 'decimal',
                                 'currency' => 'string',
                             ),
                             'bank_card' =>
@@ -802,16 +806,17 @@ class ResultType
                                         'callback_salt' => 'string',
                                         'send_js_error' => 'boolean',
                                     ),
-                                    'min_amount' => 'number',
+                                    'min_amount' => 'decimal',
                                     'currency' => 'string',
                                 ),
-                                'min_amount' => 'number',
+                                'min_amount' => 'decimal',
                                 'currency' => 'string',
                             ),
-                            'min_amount' => 'number',
+                            'min_amount' => 'decimal',
                             'currency' => 'string',
                         ),
                     ),
+                    'a2p_sms_enabled' => 'boolean',
                 ),
             ),
             'total_count' => 'number',
@@ -879,6 +884,88 @@ class ResultType
         );
     }
 
+    public function ChangeAccountPlan()
+    {
+        return array (
+            'result' => 'number',
+            'account_info' =>
+            array (
+                'account_id' => 'number',
+                'frozen' => 'boolean',
+                'balance' => 'decimal',
+                'currency' => 'string',
+            ),
+        );
+    }
+
+    public function GetAccountPlans()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'plan_subscription_template_id' => 'number',
+                    'next_charge' => 'date',
+                    'plan_type' => 'string',
+                    'plan_name' => 'string',
+                    'periodic_charge' => 'decimal',
+                    'packages' =>
+                    array (
+                        '|array|' =>
+                        array (
+                            'plan_subscription_template_id' => 'number',
+                            'next_charge' => 'date',
+                            'plan_type' => 'string',
+                            'plan_name' => 'string',
+                            'periodic_charge' => 'decimal',
+                            'price_group_id' => '[number]',
+                            'package_name' => 'string',
+                            'may_overrun' => 'boolean',
+                            'overrun_price' => 'decimal',
+                            'overrun_resources' => 'number',
+                            'resource_left' => 'number',
+                            'package_size' => 'number',
+                            'orig_package_size' => 'number',
+                        ),
+                    ),
+                ),
+            ),
+        );
+    }
+
+    public function GetAvailablePlans()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'plan_subscription_template_id' => 'number',
+                    'plan_type' => 'string',
+                    'plan_name' => 'string',
+                    'periodic_charge' => 'decimal',
+                    'packages' =>
+                    array (
+                        '|array|' =>
+                        array (
+                            'plan_subscription_template_id' => 'number',
+                            'plan_type' => 'string',
+                            'plan_name' => 'string',
+                            'periodic_charge' => 'decimal',
+                            'price_group_id' => '[number]',
+                            'package_name' => 'string',
+                            'may_overrun' => 'boolean',
+                            'overrun_price' => 'decimal',
+                            'overrun_resources' => 'number',
+                            'package_size' => 'number',
+                        ),
+                    ),
+                ),
+            ),
+        );
+    }
+
     public function AddApplication()
     {
         return array (
@@ -916,140 +1003,6 @@ class ResultType
                     'application_name' => 'string',
                     'modified' => 'timestamp',
                     'secure_record_storage' => 'boolean',
-                    'users' =>
-                    array (
-                        '|array|' =>
-                        array (
-                            'application_id' => 'number',
-                            'application_name' => 'string',
-                            'modified' => 'timestamp',
-                            'secure_record_storage' => 'boolean',
-                            'user_id' => 'number',
-                            'user_name' => 'string',
-                            'user_display_name' => 'string',
-                            'user_active' => 'boolean',
-                            'parent_accounting' => 'boolean',
-                            'mobile_phone' => 'string',
-                            'live_balance' => 'decimal',
-                            'balance' => 'decimal',
-                            'fixed_balance' => 'decimal',
-                            'user_custom_data' => 'string',
-                            'applications' =>
-                            array (
-                                '|array|' =>
-                                array (
-                                    'application_id' => 'number',
-                                    'application_name' => 'string',
-                                    'modified' => 'timestamp',
-                                    'secure_record_storage' => 'boolean',
-                                    'users' => '[UserInfoType]',
-                                ),
-                            ),
-                            'skills' =>
-                            array (
-                                '|array|' =>
-                                array (
-                                    'application_id' => 'number',
-                                    'application_name' => 'string',
-                                    'modified' => 'timestamp',
-                                    'secure_record_storage' => 'boolean',
-                                    'user_id' => 'number',
-                                    'user_name' => 'string',
-                                    'user_display_name' => 'string',
-                                    'user_active' => 'boolean',
-                                    'parent_accounting' => 'boolean',
-                                    'mobile_phone' => 'string',
-                                    'live_balance' => 'decimal',
-                                    'balance' => 'decimal',
-                                    'fixed_balance' => 'decimal',
-                                    'user_custom_data' => 'string',
-                                    'applications' =>
-                                    array (
-                                        '|array|' =>
-                                        array (
-                                            'application_id' => 'number',
-                                            'application_name' => 'string',
-                                            'modified' => 'timestamp',
-                                            'secure_record_storage' => 'boolean',
-                                            'users' => '[UserInfoType]',
-                                        ),
-                                    ),
-                                    'skill_id' => 'number',
-                                    'skill_name' => 'string',
-                                ),
-                            ),
-                            'acd_queues' =>
-                            array (
-                                '|array|' =>
-                                array (
-                                    'application_id' => 'number',
-                                    'application_name' => 'string',
-                                    'modified' => 'timestamp',
-                                    'secure_record_storage' => 'boolean',
-                                    'user_id' => 'number',
-                                    'user_name' => 'string',
-                                    'user_display_name' => 'string',
-                                    'user_active' => 'boolean',
-                                    'parent_accounting' => 'boolean',
-                                    'mobile_phone' => 'string',
-                                    'live_balance' => 'decimal',
-                                    'balance' => 'decimal',
-                                    'fixed_balance' => 'decimal',
-                                    'user_custom_data' => 'string',
-                                    'applications' =>
-                                    array (
-                                        '|array|' =>
-                                        array (
-                                            'application_id' => 'number',
-                                            'application_name' => 'string',
-                                            'modified' => 'timestamp',
-                                            'secure_record_storage' => 'boolean',
-                                            'users' => '[UserInfoType]',
-                                        ),
-                                    ),
-                                    'skills' =>
-                                    array (
-                                        '|array|' =>
-                                        array (
-                                            'application_id' => 'number',
-                                            'application_name' => 'string',
-                                            'modified' => 'timestamp',
-                                            'secure_record_storage' => 'boolean',
-                                            'user_id' => 'number',
-                                            'user_name' => 'string',
-                                            'user_display_name' => 'string',
-                                            'user_active' => 'boolean',
-                                            'parent_accounting' => 'boolean',
-                                            'mobile_phone' => 'string',
-                                            'live_balance' => 'decimal',
-                                            'balance' => 'decimal',
-                                            'fixed_balance' => 'decimal',
-                                            'user_custom_data' => 'string',
-                                            'applications' =>
-                                            array (
-                                                '|array|' =>
-                                                array (
-                                                    'application_id' => 'number',
-                                                    'application_name' => 'string',
-                                                    'modified' => 'timestamp',
-                                                    'secure_record_storage' => 'boolean',
-                                                    'users' => '[UserInfoType]',
-                                                ),
-                                            ),
-                                            'skill_id' => 'number',
-                                            'skill_name' => 'string',
-                                        ),
-                                    ),
-                                    'acd_queue_id' => 'number',
-                                    'acd_queue_name' => 'string',
-                                    'auto_link' => 'boolean',
-                                ),
-                            ),
-                            'acd_status' => 'string',
-                            'acd_status_change_time' => 'timestamp',
-                            'created' => 'timestamp',
-                        ),
-                    ),
                 ),
             ),
             'total_count' => 'number',
@@ -1114,29 +1067,6 @@ class ResultType
                             'application_name' => 'string',
                             'modified' => 'timestamp',
                             'secure_record_storage' => 'boolean',
-                            'users' =>
-                            array (
-                                '|array|' =>
-                                array (
-                                    'user_id' => 'number',
-                                    'user_name' => 'string',
-                                    'user_display_name' => 'string',
-                                    'user_active' => 'boolean',
-                                    'parent_accounting' => 'boolean',
-                                    'mobile_phone' => 'string',
-                                    'live_balance' => 'decimal',
-                                    'balance' => 'decimal',
-                                    'fixed_balance' => 'decimal',
-                                    'user_custom_data' => 'string',
-                                    'applications' => '[ApplicationInfoType]',
-                                    'skills' => '[SkillInfoType]',
-                                    'acd_queues' => '[ACDQueueOperatorInfoType]',
-                                    'acd_status' => 'string',
-                                    'acd_status_change_time' => 'timestamp',
-                                    'created' => 'timestamp',
-                                    'modified' => 'timestamp',
-                                ),
-                            ),
                         ),
                     ),
                     'skills' =>
@@ -1171,29 +1101,6 @@ class ResultType
                                     'application_name' => 'string',
                                     'modified' => 'timestamp',
                                     'secure_record_storage' => 'boolean',
-                                    'users' =>
-                                    array (
-                                        '|array|' =>
-                                        array (
-                                            'user_id' => 'number',
-                                            'user_name' => 'string',
-                                            'user_display_name' => 'string',
-                                            'user_active' => 'boolean',
-                                            'parent_accounting' => 'boolean',
-                                            'mobile_phone' => 'string',
-                                            'live_balance' => 'decimal',
-                                            'balance' => 'decimal',
-                                            'fixed_balance' => 'decimal',
-                                            'user_custom_data' => 'string',
-                                            'applications' => '[ApplicationInfoType]',
-                                            'skills' => '[SkillInfoType]',
-                                            'acd_queues' => '[ACDQueueOperatorInfoType]',
-                                            'acd_status' => 'string',
-                                            'acd_status_change_time' => 'timestamp',
-                                            'created' => 'timestamp',
-                                            'modified' => 'timestamp',
-                                        ),
-                                    ),
                                 ),
                             ),
                             'skill_id' => 'number',
@@ -1232,29 +1139,6 @@ class ResultType
                                     'application_name' => 'string',
                                     'modified' => 'timestamp',
                                     'secure_record_storage' => 'boolean',
-                                    'users' =>
-                                    array (
-                                        '|array|' =>
-                                        array (
-                                            'user_id' => 'number',
-                                            'user_name' => 'string',
-                                            'user_display_name' => 'string',
-                                            'user_active' => 'boolean',
-                                            'parent_accounting' => 'boolean',
-                                            'mobile_phone' => 'string',
-                                            'live_balance' => 'decimal',
-                                            'balance' => 'decimal',
-                                            'fixed_balance' => 'decimal',
-                                            'user_custom_data' => 'string',
-                                            'applications' => '[ApplicationInfoType]',
-                                            'skills' => '[SkillInfoType]',
-                                            'acd_queues' => '[ACDQueueOperatorInfoType]',
-                                            'acd_status' => 'string',
-                                            'acd_status_change_time' => 'timestamp',
-                                            'created' => 'timestamp',
-                                            'modified' => 'timestamp',
-                                        ),
-                                    ),
                                 ),
                             ),
                             'skills' =>
@@ -1289,29 +1173,6 @@ class ResultType
                                             'application_name' => 'string',
                                             'modified' => 'timestamp',
                                             'secure_record_storage' => 'boolean',
-                                            'users' =>
-                                            array (
-                                                '|array|' =>
-                                                array (
-                                                    'user_id' => 'number',
-                                                    'user_name' => 'string',
-                                                    'user_display_name' => 'string',
-                                                    'user_active' => 'boolean',
-                                                    'parent_accounting' => 'boolean',
-                                                    'mobile_phone' => 'string',
-                                                    'live_balance' => 'decimal',
-                                                    'balance' => 'decimal',
-                                                    'fixed_balance' => 'decimal',
-                                                    'user_custom_data' => 'string',
-                                                    'applications' => '[ApplicationInfoType]',
-                                                    'skills' => '[SkillInfoType]',
-                                                    'acd_queues' => '[ACDQueueOperatorInfoType]',
-                                                    'acd_status' => 'string',
-                                                    'acd_status_change_time' => 'timestamp',
-                                                    'created' => 'timestamp',
-                                                    'modified' => 'timestamp',
-                                                ),
-                                            ),
                                         ),
                                     ),
                                     'skill_id' => 'number',
@@ -1392,8 +1253,8 @@ class ResultType
                 array (
                     'list_id' => 'number',
                     'custom_data' => 'string',
-                    'start_execution_time' => 'string',
-                    'finish_execution_time' => 'string',
+                    'start_execution_time' => 'timestamp',
+                    'finish_execution_time' => 'timestamp',
                     'result_data' => 'string',
                     'last_attempt' => 'string',
                     'attempts_left' => 'number',
@@ -2128,6 +1989,8 @@ class ResultType
                     'is_sms_supported' => 'boolean',
                     'is_sms_enabled' => 'boolean',
                     'incoming_sms_callback_url' => 'string',
+                    'emergency_calls_to_be_enabled' => 'boolean',
+                    'emergency_calls_enabled' => 'boolean',
                 ),
             ),
             'total_count' => 'number',
@@ -2181,6 +2044,7 @@ class ResultType
                             'localized_phone_region_name' => 'string',
                         ),
                     ),
+                    'emergency_calls_to_be_enabled' => 'boolean',
                 ),
             ),
         );
@@ -2339,6 +2203,49 @@ class ResultType
     {
         return array (
             'result' => 'number',
+        );
+    }
+
+    public function AddOutboundTestPhoneNumber()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function VerifyOutboundTestPhoneNumber()
+    {
+        return array (
+            'daily_attempts_left' => 'number',
+        );
+    }
+
+    public function ActivateOutboundTestPhoneNumber()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function DelOutboundTestPhoneNumber()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function GetOutboundTestPhoneNumbers()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'phone_number' => 'string',
+                    'is_verified' => 'boolean',
+                    'country_code' => 'string',
+                ),
+            ),
         );
     }
 
@@ -33940,6 +33847,530 @@ class ResultType
         );
     }
 
+    public function GetSmartQueueRealtimeMetrics()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'report_type' => 'string',
+                    'groups' =>
+                    array (
+                        '|array|' =>
+                        array (
+                            'report_type' => 'string',
+                            'sq_queue_id' => 'number',
+                            'sq_queue_name' => 'string',
+                            'user_id' => 'number',
+                            'user_name' => 'string',
+                            'user_display_name' => 'string',
+                            'values' =>
+                            array (
+                                '|array|' =>
+                                array (
+                                    'report_type' => 'string',
+                                    'sq_queue_id' => 'number',
+                                    'sq_queue_name' => 'string',
+                                    'user_id' => 'number',
+                                    'user_name' => 'string',
+                                    'user_display_name' => 'string',
+                                    'from_date' => 'timestamp',
+                                    'to_date' => 'timestamp',
+                                    'value' => 'number',
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+            'timezone' => 'string',
+        );
+    }
+
+    public function GetSmartQueueDayHistory()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'report_type' => 'string',
+                    'groups' =>
+                    array (
+                        '|array|' =>
+                        array (
+                            'report_type' => 'string',
+                            'sq_queue_id' => 'number',
+                            'sq_queue_name' => 'string',
+                            'user_id' => 'number',
+                            'user_name' => 'string',
+                            'user_display_name' => 'string',
+                            'values' =>
+                            array (
+                                '|array|' =>
+                                array (
+                                    'report_type' => 'string',
+                                    'sq_queue_id' => 'number',
+                                    'sq_queue_name' => 'string',
+                                    'user_id' => 'number',
+                                    'user_name' => 'string',
+                                    'user_display_name' => 'string',
+                                    'from_date' => 'timestamp',
+                                    'to_date' => 'timestamp',
+                                    'value' => 'number',
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+            'timezone' => 'string',
+        );
+    }
+
+    public function RequestSmartQueueHistory()
+    {
+        return array (
+            'result' => 'number',
+            'history_report_id' => 'number',
+        );
+    }
+
+    public function GetSQState()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'sq_queue_id' => 'number',
+                    'sq_queue_name' => 'string',
+                    'sq_agents' =>
+                    array (
+                        '|array|' =>
+                        array (
+                            'sq_queue_id' => 'number',
+                            'sq_queue_name' => 'string',
+                            'user_id' => 'number',
+                            'user_name' => 'string',
+                            'user_display_name' => 'string',
+                            'sq_skills' =>
+                            array (
+                                '|array|' =>
+                                array (
+                                    'sq_queue_id' => 'number',
+                                    'sq_queue_name' => 'string',
+                                    'user_id' => 'number',
+                                    'user_name' => 'string',
+                                    'user_display_name' => 'string',
+                                    'sq_skill_id' => 'number',
+                                    'sq_skill_name' => 'string',
+                                    'sq_skill_level' => 'number',
+                                ),
+                            ),
+                            'sq_statuses' =>
+                            array (
+                                '|array|' =>
+                                array (
+                                    'sq_queue_id' => 'number',
+                                    'sq_queue_name' => 'string',
+                                    'user_id' => 'number',
+                                    'user_name' => 'string',
+                                    'user_display_name' => 'string',
+                                    'sq_skills' =>
+                                    array (
+                                        '|array|' =>
+                                        array (
+                                            'sq_queue_id' => 'number',
+                                            'sq_queue_name' => 'string',
+                                            'user_id' => 'number',
+                                            'user_name' => 'string',
+                                            'user_display_name' => 'string',
+                                            'sq_skill_id' => 'number',
+                                            'sq_skill_name' => 'string',
+                                            'sq_skill_level' => 'number',
+                                        ),
+                                    ),
+                                    'IM' =>
+                                    array (
+                                        '|array|' =>
+                                        array (
+                                            'sq_queue_id' => 'number',
+                                            'sq_queue_name' => 'string',
+                                            'user_id' => 'number',
+                                            'user_name' => 'string',
+                                            'user_display_name' => 'string',
+                                            'sq_skills' =>
+                                            array (
+                                                '|array|' =>
+                                                array (
+                                                    'sq_queue_id' => 'number',
+                                                    'sq_queue_name' => 'string',
+                                                    'user_id' => 'number',
+                                                    'user_name' => 'string',
+                                                    'user_display_name' => 'string',
+                                                    'sq_skill_id' => 'number',
+                                                    'sq_skill_name' => 'string',
+                                                    'sq_skill_level' => 'number',
+                                                ),
+                                            ),
+                                        ),
+                                        'sq_status_name' => 'string',
+                                        'from_date' => 'timestamp',
+                                    ),
+                                    'CALL' =>
+                                    array (
+                                        '|array|' =>
+                                        array (
+                                            'sq_queue_id' => 'number',
+                                            'sq_queue_name' => 'string',
+                                            'user_id' => 'number',
+                                            'user_name' => 'string',
+                                            'user_display_name' => 'string',
+                                            'sq_skills' =>
+                                            array (
+                                                '|array|' =>
+                                                array (
+                                                    'sq_queue_id' => 'number',
+                                                    'sq_queue_name' => 'string',
+                                                    'user_id' => 'number',
+                                                    'user_name' => 'string',
+                                                    'user_display_name' => 'string',
+                                                    'sq_skill_id' => 'number',
+                                                    'sq_skill_name' => 'string',
+                                                    'sq_skill_level' => 'number',
+                                                ),
+                                            ),
+                                            'IM' =>
+                                            array (
+                                                '|array|' =>
+                                                array (
+                                                    'sq_queue_id' => 'number',
+                                                    'sq_queue_name' => 'string',
+                                                    'user_id' => 'number',
+                                                    'user_name' => 'string',
+                                                    'user_display_name' => 'string',
+                                                    'sq_skills' =>
+                                                    array (
+                                                        '|array|' =>
+                                                        array (
+                                                            'sq_queue_id' => 'number',
+                                                            'sq_queue_name' => 'string',
+                                                            'user_id' => 'number',
+                                                            'user_name' => 'string',
+                                                            'user_display_name' => 'string',
+                                                            'sq_skill_id' => 'number',
+                                                            'sq_skill_name' => 'string',
+                                                            'sq_skill_level' => 'number',
+                                                        ),
+                                                    ),
+                                                ),
+                                                'sq_status_name' => 'string',
+                                                'from_date' => 'timestamp',
+                                            ),
+                                        ),
+                                        'sq_status_name' => 'string',
+                                        'from_date' => 'timestamp',
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                    'tasks' =>
+                    array (
+                        '|array|' =>
+                        array (
+                            'sq_queue_id' => 'number',
+                            'sq_queue_name' => 'string',
+                            'sq_agents' =>
+                            array (
+                                '|array|' =>
+                                array (
+                                    'sq_queue_id' => 'number',
+                                    'sq_queue_name' => 'string',
+                                    'user_id' => 'number',
+                                    'user_name' => 'string',
+                                    'user_display_name' => 'string',
+                                    'sq_skills' =>
+                                    array (
+                                        '|array|' =>
+                                        array (
+                                            'sq_queue_id' => 'number',
+                                            'sq_queue_name' => 'string',
+                                            'user_id' => 'number',
+                                            'user_name' => 'string',
+                                            'user_display_name' => 'string',
+                                            'sq_skill_id' => 'number',
+                                            'sq_skill_name' => 'string',
+                                            'sq_skill_level' => 'number',
+                                        ),
+                                    ),
+                                    'sq_statuses' =>
+                                    array (
+                                        '|array|' =>
+                                        array (
+                                            'sq_queue_id' => 'number',
+                                            'sq_queue_name' => 'string',
+                                            'user_id' => 'number',
+                                            'user_name' => 'string',
+                                            'user_display_name' => 'string',
+                                            'sq_skills' =>
+                                            array (
+                                                '|array|' =>
+                                                array (
+                                                    'sq_queue_id' => 'number',
+                                                    'sq_queue_name' => 'string',
+                                                    'user_id' => 'number',
+                                                    'user_name' => 'string',
+                                                    'user_display_name' => 'string',
+                                                    'sq_skill_id' => 'number',
+                                                    'sq_skill_name' => 'string',
+                                                    'sq_skill_level' => 'number',
+                                                ),
+                                            ),
+                                            'IM' =>
+                                            array (
+                                                '|array|' =>
+                                                array (
+                                                    'sq_queue_id' => 'number',
+                                                    'sq_queue_name' => 'string',
+                                                    'user_id' => 'number',
+                                                    'user_name' => 'string',
+                                                    'user_display_name' => 'string',
+                                                    'sq_skills' =>
+                                                    array (
+                                                        '|array|' =>
+                                                        array (
+                                                            'sq_queue_id' => 'number',
+                                                            'sq_queue_name' => 'string',
+                                                            'user_id' => 'number',
+                                                            'user_name' => 'string',
+                                                            'user_display_name' => 'string',
+                                                            'sq_skill_id' => 'number',
+                                                            'sq_skill_name' => 'string',
+                                                            'sq_skill_level' => 'number',
+                                                        ),
+                                                    ),
+                                                ),
+                                                'sq_status_name' => 'string',
+                                                'from_date' => 'timestamp',
+                                            ),
+                                            'CALL' =>
+                                            array (
+                                                '|array|' =>
+                                                array (
+                                                    'sq_queue_id' => 'number',
+                                                    'sq_queue_name' => 'string',
+                                                    'user_id' => 'number',
+                                                    'user_name' => 'string',
+                                                    'user_display_name' => 'string',
+                                                    'sq_skills' =>
+                                                    array (
+                                                        '|array|' =>
+                                                        array (
+                                                            'sq_queue_id' => 'number',
+                                                            'sq_queue_name' => 'string',
+                                                            'user_id' => 'number',
+                                                            'user_name' => 'string',
+                                                            'user_display_name' => 'string',
+                                                            'sq_skill_id' => 'number',
+                                                            'sq_skill_name' => 'string',
+                                                            'sq_skill_level' => 'number',
+                                                        ),
+                                                    ),
+                                                    'IM' =>
+                                                    array (
+                                                        '|array|' =>
+                                                        array (
+                                                            'sq_queue_id' => 'number',
+                                                            'sq_queue_name' => 'string',
+                                                            'user_id' => 'number',
+                                                            'user_name' => 'string',
+                                                            'user_display_name' => 'string',
+                                                            'sq_skills' =>
+                                                            array (
+                                                                '|array|' =>
+                                                                array (
+                                                                    'sq_queue_id' => 'number',
+                                                                    'sq_queue_name' => 'string',
+                                                                    'user_id' => 'number',
+                                                                    'user_name' => 'string',
+                                                                    'user_display_name' => 'string',
+                                                                    'sq_skill_id' => 'number',
+                                                                    'sq_skill_name' => 'string',
+                                                                    'sq_skill_level' => 'number',
+                                                                ),
+                                                            ),
+                                                        ),
+                                                        'sq_status_name' => 'string',
+                                                        'from_date' => 'timestamp',
+                                                    ),
+                                                ),
+                                                'sq_status_name' => 'string',
+                                                'from_date' => 'timestamp',
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                            'task_type' => 'string',
+                            'status' => 'string',
+                            'user_id' => 'number',
+                            'sq_skills' =>
+                            array (
+                                '|array|' =>
+                                array (
+                                    'sq_queue_id' => 'number',
+                                    'sq_queue_name' => 'string',
+                                    'sq_agents' =>
+                                    array (
+                                        '|array|' =>
+                                        array (
+                                            'sq_queue_id' => 'number',
+                                            'sq_queue_name' => 'string',
+                                            'user_id' => 'number',
+                                            'user_name' => 'string',
+                                            'user_display_name' => 'string',
+                                            'sq_skills' =>
+                                            array (
+                                                '|array|' =>
+                                                array (
+                                                    'sq_queue_id' => 'number',
+                                                    'sq_queue_name' => 'string',
+                                                    'user_id' => 'number',
+                                                    'user_name' => 'string',
+                                                    'user_display_name' => 'string',
+                                                    'sq_skill_id' => 'number',
+                                                    'sq_skill_name' => 'string',
+                                                    'sq_skill_level' => 'number',
+                                                ),
+                                            ),
+                                            'sq_statuses' =>
+                                            array (
+                                                '|array|' =>
+                                                array (
+                                                    'sq_queue_id' => 'number',
+                                                    'sq_queue_name' => 'string',
+                                                    'user_id' => 'number',
+                                                    'user_name' => 'string',
+                                                    'user_display_name' => 'string',
+                                                    'sq_skills' =>
+                                                    array (
+                                                        '|array|' =>
+                                                        array (
+                                                            'sq_queue_id' => 'number',
+                                                            'sq_queue_name' => 'string',
+                                                            'user_id' => 'number',
+                                                            'user_name' => 'string',
+                                                            'user_display_name' => 'string',
+                                                            'sq_skill_id' => 'number',
+                                                            'sq_skill_name' => 'string',
+                                                            'sq_skill_level' => 'number',
+                                                        ),
+                                                    ),
+                                                    'IM' =>
+                                                    array (
+                                                        '|array|' =>
+                                                        array (
+                                                            'sq_queue_id' => 'number',
+                                                            'sq_queue_name' => 'string',
+                                                            'user_id' => 'number',
+                                                            'user_name' => 'string',
+                                                            'user_display_name' => 'string',
+                                                            'sq_skills' =>
+                                                            array (
+                                                                '|array|' =>
+                                                                array (
+                                                                    'sq_queue_id' => 'number',
+                                                                    'sq_queue_name' => 'string',
+                                                                    'user_id' => 'number',
+                                                                    'user_name' => 'string',
+                                                                    'user_display_name' => 'string',
+                                                                    'sq_skill_id' => 'number',
+                                                                    'sq_skill_name' => 'string',
+                                                                    'sq_skill_level' => 'number',
+                                                                ),
+                                                            ),
+                                                        ),
+                                                        'sq_status_name' => 'string',
+                                                        'from_date' => 'timestamp',
+                                                    ),
+                                                    'CALL' =>
+                                                    array (
+                                                        '|array|' =>
+                                                        array (
+                                                            'sq_queue_id' => 'number',
+                                                            'sq_queue_name' => 'string',
+                                                            'user_id' => 'number',
+                                                            'user_name' => 'string',
+                                                            'user_display_name' => 'string',
+                                                            'sq_skills' =>
+                                                            array (
+                                                                '|array|' =>
+                                                                array (
+                                                                    'sq_queue_id' => 'number',
+                                                                    'sq_queue_name' => 'string',
+                                                                    'user_id' => 'number',
+                                                                    'user_name' => 'string',
+                                                                    'user_display_name' => 'string',
+                                                                    'sq_skill_id' => 'number',
+                                                                    'sq_skill_name' => 'string',
+                                                                    'sq_skill_level' => 'number',
+                                                                ),
+                                                            ),
+                                                            'IM' =>
+                                                            array (
+                                                                '|array|' =>
+                                                                array (
+                                                                    'sq_queue_id' => 'number',
+                                                                    'sq_queue_name' => 'string',
+                                                                    'user_id' => 'number',
+                                                                    'user_name' => 'string',
+                                                                    'user_display_name' => 'string',
+                                                                    'sq_skills' =>
+                                                                    array (
+                                                                        '|array|' =>
+                                                                        array (
+                                                                            'sq_queue_id' => 'number',
+                                                                            'sq_queue_name' => 'string',
+                                                                            'user_id' => 'number',
+                                                                            'user_name' => 'string',
+                                                                            'user_display_name' => 'string',
+                                                                            'sq_skill_id' => 'number',
+                                                                            'sq_skill_name' => 'string',
+                                                                            'sq_skill_level' => 'number',
+                                                                        ),
+                                                                    ),
+                                                                ),
+                                                                'sq_status_name' => 'string',
+                                                                'from_date' => 'timestamp',
+                                                            ),
+                                                        ),
+                                                        'sq_status_name' => 'string',
+                                                        'from_date' => 'timestamp',
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                    'task_type' => 'string',
+                                    'status' => 'string',
+                                    'user_id' => 'number',
+                                    'sq_skill_name' => 'string',
+                                    'sq_skill_level' => 'number',
+                                ),
+                            ),
+                            'waiting_time' => 'number',
+                            'processing_time' => 'number',
+                            'custom_data' => 'Object',
+                        ),
+                    ),
+                ),
+            ),
+        );
+    }
+
     public function AddSkill()
     {
         return array (
@@ -34180,7 +34611,7 @@ class ResultType
         );
     }
 
-    public function LinkregulationAddress()
+    public function LinkRegulationAddress()
     {
         return array (
             'result' => 'boolean',
@@ -34278,6 +34709,13 @@ class ResultType
         );
     }
 
+    public function GetAccountPhoneNumberCountries()
+    {
+        return array (
+            'result' => '[string]',
+        );
+    }
+
     public function GetRegions()
     {
         return array (
@@ -34337,13 +34775,15 @@ class ResultType
                             'push_provider_id' => 'number',
                             'push_provider_name' => 'string',
                             'credential_bundle' => 'string',
+                            'cert_file_name' => 'string',
+                            'cert_password' => 'string',
+                            'cert_content' => 'string',
+                            'is_dev_mode' => 'boolean',
+                            'sender_id' => 'string',
+                            'server_key' => 'string',
+                            'huawei_client_id' => 'string',
+                            'huawei_application_id' => 'string',
                         ),
-                        'cert_file_name' => 'string',
-                        'cert_password' => 'string',
-                        'cert_content' => 'string',
-                        'is_dev_mode' => 'boolean',
-                        'sender_id' => 'string',
-                        'server_key' => 'string',
                     ),
                     'applications' =>
                     array (
@@ -34361,232 +34801,20 @@ class ResultType
                                     'push_provider_id' => 'number',
                                     'push_provider_name' => 'string',
                                     'credential_bundle' => 'string',
+                                    'cert_file_name' => 'string',
+                                    'cert_password' => 'string',
+                                    'cert_content' => 'string',
+                                    'is_dev_mode' => 'boolean',
+                                    'sender_id' => 'string',
+                                    'server_key' => 'string',
+                                    'huawei_client_id' => 'string',
+                                    'huawei_application_id' => 'string',
                                 ),
-                                'cert_file_name' => 'string',
-                                'cert_password' => 'string',
-                                'cert_content' => 'string',
-                                'is_dev_mode' => 'boolean',
-                                'sender_id' => 'string',
-                                'server_key' => 'string',
                             ),
                             'application_id' => 'number',
                             'application_name' => 'string',
                             'modified' => 'timestamp',
                             'secure_record_storage' => 'boolean',
-                            'users' =>
-                            array (
-                                '|array|' =>
-                                array (
-                                    'push_credential_id' => 'number',
-                                    'push_provider_id' => 'number',
-                                    'push_provider_name' => 'string',
-                                    'credential_bundle' => 'string',
-                                    'content' =>
-                                    array (
-                                        '|array|' =>
-                                        array (
-                                            'push_credential_id' => 'number',
-                                            'push_provider_id' => 'number',
-                                            'push_provider_name' => 'string',
-                                            'credential_bundle' => 'string',
-                                        ),
-                                        'cert_file_name' => 'string',
-                                        'cert_password' => 'string',
-                                        'cert_content' => 'string',
-                                        'is_dev_mode' => 'boolean',
-                                        'sender_id' => 'string',
-                                        'server_key' => 'string',
-                                    ),
-                                    'application_id' => 'number',
-                                    'application_name' => 'string',
-                                    'modified' => 'timestamp',
-                                    'secure_record_storage' => 'boolean',
-                                    'user_id' => 'number',
-                                    'user_name' => 'string',
-                                    'user_display_name' => 'string',
-                                    'user_active' => 'boolean',
-                                    'parent_accounting' => 'boolean',
-                                    'mobile_phone' => 'string',
-                                    'live_balance' => 'decimal',
-                                    'balance' => 'decimal',
-                                    'fixed_balance' => 'decimal',
-                                    'user_custom_data' => 'string',
-                                    'applications' =>
-                                    array (
-                                        '|array|' =>
-                                        array (
-                                            'application_id' => 'number',
-                                            'application_name' => 'string',
-                                            'modified' => 'timestamp',
-                                            'secure_record_storage' => 'boolean',
-                                            'users' => '[UserInfoType]',
-                                        ),
-                                    ),
-                                    'skills' =>
-                                    array (
-                                        '|array|' =>
-                                        array (
-                                            'push_credential_id' => 'number',
-                                            'push_provider_id' => 'number',
-                                            'push_provider_name' => 'string',
-                                            'credential_bundle' => 'string',
-                                            'content' =>
-                                            array (
-                                                '|array|' =>
-                                                array (
-                                                    'push_credential_id' => 'number',
-                                                    'push_provider_id' => 'number',
-                                                    'push_provider_name' => 'string',
-                                                    'credential_bundle' => 'string',
-                                                ),
-                                                'cert_file_name' => 'string',
-                                                'cert_password' => 'string',
-                                                'cert_content' => 'string',
-                                                'is_dev_mode' => 'boolean',
-                                                'sender_id' => 'string',
-                                                'server_key' => 'string',
-                                            ),
-                                            'application_id' => 'number',
-                                            'application_name' => 'string',
-                                            'modified' => 'timestamp',
-                                            'secure_record_storage' => 'boolean',
-                                            'user_id' => 'number',
-                                            'user_name' => 'string',
-                                            'user_display_name' => 'string',
-                                            'user_active' => 'boolean',
-                                            'parent_accounting' => 'boolean',
-                                            'mobile_phone' => 'string',
-                                            'live_balance' => 'decimal',
-                                            'balance' => 'decimal',
-                                            'fixed_balance' => 'decimal',
-                                            'user_custom_data' => 'string',
-                                            'applications' =>
-                                            array (
-                                                '|array|' =>
-                                                array (
-                                                    'application_id' => 'number',
-                                                    'application_name' => 'string',
-                                                    'modified' => 'timestamp',
-                                                    'secure_record_storage' => 'boolean',
-                                                    'users' => '[UserInfoType]',
-                                                ),
-                                            ),
-                                            'skill_id' => 'number',
-                                            'skill_name' => 'string',
-                                        ),
-                                    ),
-                                    'acd_queues' =>
-                                    array (
-                                        '|array|' =>
-                                        array (
-                                            'push_credential_id' => 'number',
-                                            'push_provider_id' => 'number',
-                                            'push_provider_name' => 'string',
-                                            'credential_bundle' => 'string',
-                                            'content' =>
-                                            array (
-                                                '|array|' =>
-                                                array (
-                                                    'push_credential_id' => 'number',
-                                                    'push_provider_id' => 'number',
-                                                    'push_provider_name' => 'string',
-                                                    'credential_bundle' => 'string',
-                                                ),
-                                                'cert_file_name' => 'string',
-                                                'cert_password' => 'string',
-                                                'cert_content' => 'string',
-                                                'is_dev_mode' => 'boolean',
-                                                'sender_id' => 'string',
-                                                'server_key' => 'string',
-                                            ),
-                                            'application_id' => 'number',
-                                            'application_name' => 'string',
-                                            'modified' => 'timestamp',
-                                            'secure_record_storage' => 'boolean',
-                                            'user_id' => 'number',
-                                            'user_name' => 'string',
-                                            'user_display_name' => 'string',
-                                            'user_active' => 'boolean',
-                                            'parent_accounting' => 'boolean',
-                                            'mobile_phone' => 'string',
-                                            'live_balance' => 'decimal',
-                                            'balance' => 'decimal',
-                                            'fixed_balance' => 'decimal',
-                                            'user_custom_data' => 'string',
-                                            'applications' =>
-                                            array (
-                                                '|array|' =>
-                                                array (
-                                                    'application_id' => 'number',
-                                                    'application_name' => 'string',
-                                                    'modified' => 'timestamp',
-                                                    'secure_record_storage' => 'boolean',
-                                                    'users' => '[UserInfoType]',
-                                                ),
-                                            ),
-                                            'skills' =>
-                                            array (
-                                                '|array|' =>
-                                                array (
-                                                    'push_credential_id' => 'number',
-                                                    'push_provider_id' => 'number',
-                                                    'push_provider_name' => 'string',
-                                                    'credential_bundle' => 'string',
-                                                    'content' =>
-                                                    array (
-                                                        '|array|' =>
-                                                        array (
-                                                            'push_credential_id' => 'number',
-                                                            'push_provider_id' => 'number',
-                                                            'push_provider_name' => 'string',
-                                                            'credential_bundle' => 'string',
-                                                        ),
-                                                        'cert_file_name' => 'string',
-                                                        'cert_password' => 'string',
-                                                        'cert_content' => 'string',
-                                                        'is_dev_mode' => 'boolean',
-                                                        'sender_id' => 'string',
-                                                        'server_key' => 'string',
-                                                    ),
-                                                    'application_id' => 'number',
-                                                    'application_name' => 'string',
-                                                    'modified' => 'timestamp',
-                                                    'secure_record_storage' => 'boolean',
-                                                    'user_id' => 'number',
-                                                    'user_name' => 'string',
-                                                    'user_display_name' => 'string',
-                                                    'user_active' => 'boolean',
-                                                    'parent_accounting' => 'boolean',
-                                                    'mobile_phone' => 'string',
-                                                    'live_balance' => 'decimal',
-                                                    'balance' => 'decimal',
-                                                    'fixed_balance' => 'decimal',
-                                                    'user_custom_data' => 'string',
-                                                    'applications' =>
-                                                    array (
-                                                        '|array|' =>
-                                                        array (
-                                                            'application_id' => 'number',
-                                                            'application_name' => 'string',
-                                                            'modified' => 'timestamp',
-                                                            'secure_record_storage' => 'boolean',
-                                                            'users' => '[UserInfoType]',
-                                                        ),
-                                                    ),
-                                                    'skill_id' => 'number',
-                                                    'skill_name' => 'string',
-                                                ),
-                                            ),
-                                            'acd_queue_id' => 'number',
-                                            'acd_queue_name' => 'string',
-                                            'auto_link' => 'boolean',
-                                        ),
-                                    ),
-                                    'acd_status' => 'string',
-                                    'acd_status_change_time' => 'timestamp',
-                                    'created' => 'timestamp',
-                                ),
-                            ),
                         ),
                     ),
                 ),
@@ -34658,180 +34886,6 @@ class ResultType
                             'application_name' => 'string',
                             'modified' => 'timestamp',
                             'secure_record_storage' => 'boolean',
-                            'users' =>
-                            array (
-                                '|array|' =>
-                                array (
-                                    'dialogflow_key_id' => 'number',
-                                    'content' =>
-                                    array (
-                                        '|array|' =>
-                                        array (
-                                            'dialogflow_key_id' => 'number',
-                                        ),
-                                        'project_id' => 'string',
-                                        'json_file' => 'string',
-                                    ),
-                                    'application_id' => 'number',
-                                    'application_name' => 'string',
-                                    'modified' => 'timestamp',
-                                    'secure_record_storage' => 'boolean',
-                                    'user_id' => 'number',
-                                    'user_name' => 'string',
-                                    'user_display_name' => 'string',
-                                    'user_active' => 'boolean',
-                                    'parent_accounting' => 'boolean',
-                                    'mobile_phone' => 'string',
-                                    'live_balance' => 'decimal',
-                                    'balance' => 'decimal',
-                                    'fixed_balance' => 'decimal',
-                                    'user_custom_data' => 'string',
-                                    'applications' =>
-                                    array (
-                                        '|array|' =>
-                                        array (
-                                            'application_id' => 'number',
-                                            'application_name' => 'string',
-                                            'modified' => 'timestamp',
-                                            'secure_record_storage' => 'boolean',
-                                            'users' => '[UserInfoType]',
-                                        ),
-                                    ),
-                                    'skills' =>
-                                    array (
-                                        '|array|' =>
-                                        array (
-                                            'dialogflow_key_id' => 'number',
-                                            'content' =>
-                                            array (
-                                                '|array|' =>
-                                                array (
-                                                    'dialogflow_key_id' => 'number',
-                                                ),
-                                                'project_id' => 'string',
-                                                'json_file' => 'string',
-                                            ),
-                                            'application_id' => 'number',
-                                            'application_name' => 'string',
-                                            'modified' => 'timestamp',
-                                            'secure_record_storage' => 'boolean',
-                                            'user_id' => 'number',
-                                            'user_name' => 'string',
-                                            'user_display_name' => 'string',
-                                            'user_active' => 'boolean',
-                                            'parent_accounting' => 'boolean',
-                                            'mobile_phone' => 'string',
-                                            'live_balance' => 'decimal',
-                                            'balance' => 'decimal',
-                                            'fixed_balance' => 'decimal',
-                                            'user_custom_data' => 'string',
-                                            'applications' =>
-                                            array (
-                                                '|array|' =>
-                                                array (
-                                                    'application_id' => 'number',
-                                                    'application_name' => 'string',
-                                                    'modified' => 'timestamp',
-                                                    'secure_record_storage' => 'boolean',
-                                                    'users' => '[UserInfoType]',
-                                                ),
-                                            ),
-                                            'skill_id' => 'number',
-                                            'skill_name' => 'string',
-                                        ),
-                                    ),
-                                    'acd_queues' =>
-                                    array (
-                                        '|array|' =>
-                                        array (
-                                            'dialogflow_key_id' => 'number',
-                                            'content' =>
-                                            array (
-                                                '|array|' =>
-                                                array (
-                                                    'dialogflow_key_id' => 'number',
-                                                ),
-                                                'project_id' => 'string',
-                                                'json_file' => 'string',
-                                            ),
-                                            'application_id' => 'number',
-                                            'application_name' => 'string',
-                                            'modified' => 'timestamp',
-                                            'secure_record_storage' => 'boolean',
-                                            'user_id' => 'number',
-                                            'user_name' => 'string',
-                                            'user_display_name' => 'string',
-                                            'user_active' => 'boolean',
-                                            'parent_accounting' => 'boolean',
-                                            'mobile_phone' => 'string',
-                                            'live_balance' => 'decimal',
-                                            'balance' => 'decimal',
-                                            'fixed_balance' => 'decimal',
-                                            'user_custom_data' => 'string',
-                                            'applications' =>
-                                            array (
-                                                '|array|' =>
-                                                array (
-                                                    'application_id' => 'number',
-                                                    'application_name' => 'string',
-                                                    'modified' => 'timestamp',
-                                                    'secure_record_storage' => 'boolean',
-                                                    'users' => '[UserInfoType]',
-                                                ),
-                                            ),
-                                            'skills' =>
-                                            array (
-                                                '|array|' =>
-                                                array (
-                                                    'dialogflow_key_id' => 'number',
-                                                    'content' =>
-                                                    array (
-                                                        '|array|' =>
-                                                        array (
-                                                            'dialogflow_key_id' => 'number',
-                                                        ),
-                                                        'project_id' => 'string',
-                                                        'json_file' => 'string',
-                                                    ),
-                                                    'application_id' => 'number',
-                                                    'application_name' => 'string',
-                                                    'modified' => 'timestamp',
-                                                    'secure_record_storage' => 'boolean',
-                                                    'user_id' => 'number',
-                                                    'user_name' => 'string',
-                                                    'user_display_name' => 'string',
-                                                    'user_active' => 'boolean',
-                                                    'parent_accounting' => 'boolean',
-                                                    'mobile_phone' => 'string',
-                                                    'live_balance' => 'decimal',
-                                                    'balance' => 'decimal',
-                                                    'fixed_balance' => 'decimal',
-                                                    'user_custom_data' => 'string',
-                                                    'applications' =>
-                                                    array (
-                                                        '|array|' =>
-                                                        array (
-                                                            'application_id' => 'number',
-                                                            'application_name' => 'string',
-                                                            'modified' => 'timestamp',
-                                                            'secure_record_storage' => 'boolean',
-                                                            'users' => '[UserInfoType]',
-                                                        ),
-                                                    ),
-                                                    'skill_id' => 'number',
-                                                    'skill_name' => 'string',
-                                                ),
-                                            ),
-                                            'acd_queue_id' => 'number',
-                                            'acd_queue_name' => 'string',
-                                            'auto_link' => 'boolean',
-                                        ),
-                                    ),
-                                    'acd_status' => 'string',
-                                    'acd_status_change_time' => 'timestamp',
-                                    'created' => 'timestamp',
-                                ),
-                            ),
                         ),
                     ),
                 ),
@@ -35143,6 +35197,147 @@ class ResultType
         );
     }
 
+    public function SetKeyValueItem()
+    {
+        return array (
+            'result' =>
+            array (
+                'key' => 'string',
+                'value' => 'string',
+                'expires_at' => 'number',
+            ),
+        );
+    }
+
+    public function DelKeyValueItem()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function GetKeyValueItem()
+    {
+        return array (
+            'result' =>
+            array (
+                'key' => 'string',
+                'value' => 'string',
+                'expires_at' => 'number',
+            ),
+        );
+    }
+
+    public function GetKeyValueItems()
+    {
+        return array (
+            'result' =>
+            array (
+                'key' => 'string',
+                'value' => 'string',
+                'expires_at' => 'number',
+            ),
+        );
+    }
+
+    public function GetKeyValueKeys()
+    {
+        return array (
+            'result' =>
+            array (
+                'key' => 'string',
+                'expires_at' => 'number',
+            ),
+        );
+    }
+
+    public function GetAccountInvoices()
+    {
+        return array (
+            'result' =>
+            array (
+                'period' =>
+                array (
+                    'from' => 'date',
+                    'to' => 'date',
+                ),
+                'amount' =>
+                array (
+                    'period' =>
+                    array (
+                        'from' => 'date',
+                        'to' => 'date',
+                    ),
+                    'tax_amount' => 'decimal',
+                    'total_amount' => 'decimal',
+                    'amount_to_pay' => 'decimal',
+                    'discount_amount' => 'decimal',
+                    'currency' => 'string',
+                ),
+                'invoice_id' => 'number',
+                'rows' =>
+                array (
+                    'period' =>
+                    array (
+                        'from' => 'date',
+                        'to' => 'date',
+                    ),
+                    'amount' =>
+                    array (
+                        'period' =>
+                        array (
+                            'from' => 'date',
+                            'to' => 'date',
+                        ),
+                        'amount' =>
+                        array (
+                            'period' =>
+                            array (
+                                'from' => 'date',
+                                'to' => 'date',
+                            ),
+                            'tax_amount' => 'decimal',
+                            'total_amount' => 'decimal',
+                            'amount_to_pay' => 'decimal',
+                            'discount_amount' => 'decimal',
+                            'currency' => 'string',
+                        ),
+                        'invoice_id' => 'number',
+                        'tax_amount' => 'decimal',
+                        'total_amount' => 'decimal',
+                        'amount_to_pay' => 'decimal',
+                        'discount_amount' => 'decimal',
+                        'currency' => 'string',
+                    ),
+                    'invoice_id' => 'number',
+                    'service_name' => 'string',
+                    'taxes' =>
+                    array (
+                        'period' =>
+                        array (
+                            'from' => 'date',
+                            'to' => 'date',
+                        ),
+                        'amount' => 'decimal',
+                        'invoice_id' => 'number',
+                        'service_name' => 'string',
+                        'taxable_measure' => 'decimal',
+                        'level' => 'string',
+                        'rate' => 'decimal',
+                        'name' => 'string',
+                        'currency' => 'string',
+                        'category' => 'string',
+                    ),
+                ),
+                'invoice_number' => 'string',
+                'invoice_date' => 'date',
+                'status' => 'string',
+            ),
+            'total_count' => 'number',
+            'count' => 'number',
+        );
+    }
+
     public function GetSmsHistory()
     {
         return array (
@@ -35156,7 +35351,7 @@ class ResultType
                     'direction' => 'string',
                     'fragments' => 'number',
                     'cost' => 'decimal',
-                    'status_id' => 'number',
+                    'status_id' => 'string',
                     'error_message' => 'string',
                     'processed_date' => 'date',
                     'transaction_id' => 'number',
@@ -35178,7 +35373,7 @@ class ResultType
                     'destination_number' => 'number',
                     'fragments' => 'number',
                     'cost' => 'decimal',
-                    'status_id' => 'number',
+                    'status_id' => 'string',
                     'error_message' => 'string',
                     'processing_date' => 'date',
                     'transaction_id' => 'number',
@@ -35186,6 +35381,134 @@ class ResultType
                 ),
             ),
             'total_count' => 'number',
+        );
+    }
+
+    public function SQ_AddQueue()
+    {
+        return array (
+            'sq_queue_id' => 'number',
+        );
+    }
+
+    public function SQ_SetQueueInfo()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function SQ_DelQueue()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function SQ_GetQueues()
+    {
+        return array (
+            'result' =>
+            array (
+                'sq_queue_id' => 'number',
+                'sq_queue_name' => 'string',
+                'agent_selection' => 'string',
+                'fallback_agent_selection' => 'string',
+                'task_selection' => 'string',
+                'description' => 'string',
+                'created' => 'timestamp',
+                'modified' => 'timestamp',
+                'call_max_waiting_time' => 'number',
+                'im_max_waiting_time' => 'number',
+                'call_max_queue_size' => 'number',
+                'im_max_queue_size' => 'number',
+            ),
+        );
+    }
+
+    public function SQ_AddSkill()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function SQ_DelSkill()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function SQ_SetSkillInfo()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function SQ_BindSkill()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function SQ_UnbindSkill()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function SQ_GetSkills()
+    {
+        return array (
+            'result' =>
+            array (
+                'sq_skill_id' => 'number',
+                'sq_skill_name' => 'string',
+                'description' => 'string',
+                'created' => 'timestamp',
+                'modified' => 'timestamp',
+            ),
+        );
+    }
+
+    public function SQ_BindAgent()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function SQ_UnbindAgent()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function SQ_GetAgents()
+    {
+        return array (
+            'result' =>
+            array (
+                'user_id' => 'number',
+                'user_name' => 'string',
+                'user_display_name' => 'string',
+                'max_simultaneous_conversations' => 'number',
+                'sq_statuses' => 'Object',
+                'sq_queues' => 'Object',
+                'sq_skills' => 'Object',
+            ),
+        );
+    }
+
+    public function SQ_SetAgentInfo()
+    {
+        return array (
+            'result' => 'number',
         );
     }
 }

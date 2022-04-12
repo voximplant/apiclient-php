@@ -40,7 +40,7 @@ class SMS implements SMSInterface
     }
 
     /**
-     * @method Sends an SMS message between two phone numbers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the is_sms_supported property in the objects returned by the [GetPhoneNumbers] HTTP API) and SMS should be enabled for it via the [ControlSms] HTTP API. SMS messages can be received via HTTP callbacks, see this article for details.
+     * @method Sends an SMS message between two phone numbers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the is_sms_supported property in the objects returned by the [GetPhoneNumbers] Management API) and SMS should be enabled for it via the [ControlSms] Management API. SMS messages can be received via HTTP callbacks, see this article for details.
      */
     public function SendSmsMessage(Params\SendSmsMessageParams $params = null): SendSmsMessageReturn
     {
@@ -51,7 +51,7 @@ class SMS implements SMSInterface
     }
 
     /**
-     * @method Sends an SMS message from the application to customers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the is_sms_supported property in the objects returned by the /GetPhoneNumbers HTTP API) and SMS should be enabled for it via the /ControlSms HTTP API.
+     * @method Sends an SMS message from the application to customers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the is_sms_supported property in the objects returned by the /GetPhoneNumbers Management API) and SMS should be enabled for it via the /ControlSms Management API.
      */
     public function A2PSendSms(Params\A2PSendSmsParams $params = null): A2PSendSmsReturn
     {
@@ -62,7 +62,7 @@ class SMS implements SMSInterface
     }
 
     /**
-     * @method Enables or disables sending and receiving SMS for the phone number. Can be used only for phone numbers with SMS support, which is indicated by the is_sms_supported property in the objects returned by the [GetPhoneNumbers] HTTP API. Each inbound SMS message is billed according to the pricing. If enabled, SMS can be sent from this phone number using the [SendSmsMessage] HTTP API and received using the [InboundSmsCallback] property of the HTTP callback. See this article for HTTP callback details.
+     * @method Enables or disables sending and receiving SMS for the phone number. Can be used only for phone numbers with SMS support, which is indicated by the is_sms_supported property in the objects returned by the [GetPhoneNumbers] Management API. Each inbound SMS message is charged according to the pricing. If enabled, SMS can be sent from this phone number using the [SendSmsMessage] Management API and received using the [InboundSmsCallback] property of the HTTP callback. See this article for HTTP callback details.
      */
     public function ControlSms(Params\ControlSmsParams $params = null): ControlSmsReturn
     {
