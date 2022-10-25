@@ -206,7 +206,12 @@ class VoximplantApi
      */
     public function request(string $method, $params, bool $filterArray = true): array
     {
+        if (is_object($params) && method_exists($params, 'toArray')) {
+        $params = ($filterArray) ? array_filter($params->toArray()) : $params->toArray();
+        } else {
         $params = ($filterArray) ? array_filter((array) $params) : (array) $params;
+        }
+
         $params = $this->dateRequestModifier($method, $params);
         $result = $this->curl->send($this->baseUrl.$method, $this->functionHelpers->generateArrayParams($params));
 

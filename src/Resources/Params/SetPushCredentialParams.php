@@ -33,4 +33,20 @@ class SetPushCredentialParams
 
     /** @var string The application id, provided by Huawei. Credentials for HUAWEI push */
     public $huawei_application_id;
+
+    public function toArray()
+    {
+        return [
+                'push_credential_id' => $this->push_credential_id,
+                    'cert_content' => new \CURLFile($this->cert_content),
+                    'cert_password' => $this->cert_password,
+                    'is_dev_mode' => $this->is_dev_mode,
+                    'sender_id' => $this->sender_id,
+                    'server_key' => $this->server_key,
+                    'service_account_file' => $this->service_account_file,
+                    'huawei_client_id' => $this->huawei_client_id,
+                    'huawei_client_secret' => $this->huawei_client_secret,
+                    'huawei_application_id' => $this->huawei_application_id,
+            ];
+    }
 }
