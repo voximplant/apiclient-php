@@ -207,9 +207,13 @@ class VoximplantApi
     public function request(string $method, $params, bool $filterArray = true): array
     {
         if (is_object($params) && method_exists($params, 'toArray')) {
-        $params = ($filterArray) ? array_filter($params->toArray()) : $params->toArray();
+            $params = ($filterArray) ? array_filter($params->toArray(), function ($i) {
+            return $i !== null;
+            }) : $params->toArray();
         } else {
-        $params = ($filterArray) ? array_filter((array) $params) : (array) $params;
+            $params = ($filterArray) ? array_filter((array) $params, function ($i) {
+            return $i !== null;
+            }) : (array) $params;
         }
 
         $params = $this->dateRequestModifier($method, $params);
