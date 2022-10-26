@@ -18,4 +18,15 @@ class SetRuleInfoParams
 
     /** @var boolean Video conference is required */
     public $video_conference;
+
+    public function toArray()
+    {
+        return [
+                'rule_id' => $this->rule_id,
+                    'rule_name' => $this->rule_name,
+                    'rule_pattern' => $this->rule_pattern,
+                    'rule_pattern_exclude' => $this->rule_pattern_exclude,
+                    'video_conference' => $this->video_conference !== null ? (filter_var($this->video_conference, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

@@ -30,4 +30,19 @@ class GetCallListsParams
 
     /** @var intlist The application ID to filter. Can be a list separated by the ';' symbol. Use the 'all' value to select all applications */
     public $application_id;
+
+    public function toArray()
+    {
+        return [
+                'list_id' => $this->list_id,
+                    'name' => $this->name,
+                    'is_active' => $this->is_active !== null ? (filter_var($this->is_active, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'from_date' => $this->from_date,
+                    'to_date' => $this->to_date,
+                    'type_list' => $this->type_list,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+                    'application_id' => $this->application_id,
+            ];
+    }
 }

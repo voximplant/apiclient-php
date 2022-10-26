@@ -21,4 +21,16 @@ class GetACDQueueStatisticsParams
 
     /** @var string Specifies how records are grouped by date and time. If set to 'day', the criteria is a day number. If set to 'hour_of_day', the criteria is a 60-minute interval within a day. If set to 'hour', the criteria is both day number and 60-minute interval within that day. If set to 'none', records are not grouped by date and time */
     public $aggregation;
+
+    public function toArray()
+    {
+        return [
+                'from_date' => $this->from_date,
+                    'to_date' => $this->to_date,
+                    'abbreviation' => $this->abbreviation !== null ? (filter_var($this->abbreviation, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'acd_queue_id' => $this->acd_queue_id,
+                    'report' => $this->report,
+                    'aggregation' => $this->aggregation,
+            ];
+    }
 }

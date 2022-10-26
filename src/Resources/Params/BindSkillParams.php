@@ -30,4 +30,19 @@ class BindSkillParams
 
     /** @var boolean Bind or unbind (set true or false respectively) */
     public $bind;
+
+    public function toArray()
+    {
+        return [
+                'skill_id' => $this->skill_id,
+                    'skill_name' => $this->skill_name,
+                    'user_id' => $this->user_id,
+                    'user_name' => $this->user_name,
+                    'acd_queue_id' => $this->acd_queue_id,
+                    'acd_queue_name' => $this->acd_queue_name,
+                    'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'bind' => $this->bind !== null ? (filter_var($this->bind, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

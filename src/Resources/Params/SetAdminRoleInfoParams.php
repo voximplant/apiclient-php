@@ -30,4 +30,19 @@ class SetAdminRoleInfoParams
 
     /** @var stringlist The admin role name, can be used instead of like_admin_role_id. The name specifies a role from which the allowed_entries and denied_entries will be merged */
     public $like_admin_role_name;
+
+    public function toArray()
+    {
+        return [
+                'admin_role_id' => $this->admin_role_id,
+                    'admin_role_name' => $this->admin_role_name,
+                    'new_admin_role_name' => $this->new_admin_role_name,
+                    'admin_role_active' => $this->admin_role_active !== null ? (filter_var($this->admin_role_active, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'entry_modification_mode' => $this->entry_modification_mode,
+                    'allowed_entries' => $this->allowed_entries,
+                    'denied_entries' => $this->denied_entries,
+                    'like_admin_role_id' => $this->like_admin_role_id,
+                    'like_admin_role_name' => $this->like_admin_role_name,
+            ];
+    }
 }

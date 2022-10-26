@@ -30,4 +30,19 @@ class TransferMoneyToUserParams
 
     /** @var string The account transaction description. The following macro available: ${user_id}, ${user_name} */
     public $account_transaction_description;
+
+    public function toArray()
+    {
+        return [
+                'user_id' => $this->user_id,
+                    'user_name' => $this->user_name,
+                    'amount' => $this->amount,
+                    'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'currency' => $this->currency,
+                    'strict_mode' => $this->strict_mode !== null ? (filter_var($this->strict_mode, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'user_transaction_description' => $this->user_transaction_description,
+                    'account_transaction_description' => $this->account_transaction_description,
+            ];
+    }
 }

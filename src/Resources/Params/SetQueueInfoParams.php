@@ -33,4 +33,20 @@ class SetQueueInfoParams
 
     /** @var number The new application ID */
     public $application_id;
+
+    public function toArray()
+    {
+        return [
+                'acd_queue_id' => $this->acd_queue_id,
+                    'acd_queue_name' => $this->acd_queue_name,
+                    'new_acd_queue_name' => $this->new_acd_queue_name,
+                    'acd_queue_priority' => $this->acd_queue_priority,
+                    'auto_binding' => $this->auto_binding !== null ? (filter_var($this->auto_binding, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'service_probability' => $this->service_probability,
+                    'max_queue_size' => $this->max_queue_size,
+                    'max_waiting_time' => $this->max_waiting_time,
+                    'average_service_time' => $this->average_service_time,
+                    'application_id' => $this->application_id,
+            ];
+    }
 }

@@ -39,4 +39,22 @@ class CreateSipRegistrationParams
 
     /** @var string The user name which a new SIP registration will be bound to. Can be used instead of the user_id parameter */
     public $user_name;
+
+    public function toArray()
+    {
+        return [
+                'sip_username' => $this->sip_username,
+                    'proxy' => $this->proxy,
+                    'auth_user' => $this->auth_user,
+                    'outbound_proxy' => $this->outbound_proxy,
+                    'password' => $this->password,
+                    'is_persistent' => $this->is_persistent !== null ? (filter_var($this->is_persistent, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'rule_id' => $this->rule_id,
+                    'rule_name' => $this->rule_name,
+                    'user_id' => $this->user_id,
+                    'user_name' => $this->user_name,
+            ];
+    }
 }

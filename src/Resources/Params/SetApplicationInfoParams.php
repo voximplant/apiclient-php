@@ -15,4 +15,14 @@ class SetApplicationInfoParams
 
     /** @var boolean Enable secure storage for all logs and records of the application */
     public $secure_record_storage;
+
+    public function toArray()
+    {
+        return [
+                'application_id' => $this->application_id,
+                    'required_application_name' => $this->required_application_name,
+                    'application_name' => $this->application_name,
+                    'secure_record_storage' => $this->secure_record_storage !== null ? (filter_var($this->secure_record_storage, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

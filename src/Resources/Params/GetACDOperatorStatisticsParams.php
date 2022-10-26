@@ -27,4 +27,18 @@ class GetACDOperatorStatisticsParams
 
     /** @var string If set to 'user', first-level array in the resulting JSON will group records by the user ID, and second-level array will group them by date according to the 'aggregation' parameter. If set to 'aggregation', first-level array in the resulting JSON will group records according to the 'aggregation' parameter, and second-level array will group them by the user ID */
     public $group;
+
+    public function toArray()
+    {
+        return [
+                'from_date' => $this->from_date,
+                    'to_date' => $this->to_date,
+                    'acd_queue_id' => $this->acd_queue_id,
+                    'user_id' => $this->user_id,
+                    'abbreviation' => $this->abbreviation !== null ? (filter_var($this->abbreviation, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'report' => $this->report,
+                    'aggregation' => $this->aggregation,
+                    'group' => $this->group,
+            ];
+    }
 }

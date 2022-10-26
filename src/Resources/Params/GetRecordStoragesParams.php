@@ -12,4 +12,13 @@ class GetRecordStoragesParams
 
     /** @var boolean Set true to get the private record storages. If set to true, there is the __is_public : bool__ parameter in a response */
     public $with_private;
+
+    public function toArray()
+    {
+        return [
+                'record_storage_id' => $this->record_storage_id,
+                    'record_storage_name' => $this->record_storage_name,
+                    'with_private' => $this->with_private !== null ? (filter_var($this->with_private, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

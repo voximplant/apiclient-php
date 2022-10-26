@@ -57,4 +57,28 @@ class GetUsersParams
 
     /** @var boolean Set true to get the user live balance */
     public $return_live_balance;
+
+    public function toArray()
+    {
+        return [
+                'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'skill_id' => $this->skill_id,
+                    'excluded_skill_id' => $this->excluded_skill_id,
+                    'acd_queue_id' => $this->acd_queue_id,
+                    'excluded_acd_queue_id' => $this->excluded_acd_queue_id,
+                    'user_id' => $this->user_id,
+                    'user_name' => $this->user_name,
+                    'user_active' => $this->user_active !== null ? (filter_var($this->user_active, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'user_display_name' => $this->user_display_name,
+                    'with_skills' => $this->with_skills !== null ? (filter_var($this->with_skills, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_queues' => $this->with_queues !== null ? (filter_var($this->with_queues, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'acd_status' => $this->acd_status,
+                    'showing_skill_id' => $this->showing_skill_id,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+                    'order_by' => $this->order_by,
+                    'return_live_balance' => $this->return_live_balance !== null ? (filter_var($this->return_live_balance, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

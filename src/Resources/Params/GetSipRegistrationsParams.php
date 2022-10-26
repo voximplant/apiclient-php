@@ -54,4 +54,27 @@ class GetSipRegistrationsParams
 
     /** @var number The first N records will be skipped in the output */
     public $offset;
+
+    public function toArray()
+    {
+        return [
+                'sip_registration_id' => $this->sip_registration_id,
+                    'sip_username' => $this->sip_username,
+                    'deactivated' => $this->deactivated !== null ? (filter_var($this->deactivated, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'successful' => $this->successful !== null ? (filter_var($this->successful, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'is_persistent' => $this->is_persistent !== null ? (filter_var($this->is_persistent, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'is_bound_to_application' => $this->is_bound_to_application !== null ? (filter_var($this->is_bound_to_application, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'rule_id' => $this->rule_id,
+                    'rule_name' => $this->rule_name,
+                    'user_id' => $this->user_id,
+                    'user_name' => $this->user_name,
+                    'proxy' => $this->proxy,
+                    'in_progress' => $this->in_progress !== null ? (filter_var($this->in_progress, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'status_code' => $this->status_code,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+            ];
+    }
 }

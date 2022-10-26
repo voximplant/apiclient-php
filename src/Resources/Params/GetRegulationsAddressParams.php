@@ -27,4 +27,18 @@ class GetRegulationsAddressParams
 
     /** @var boolean Return with phone_region_code parameters */
     public $with_region_code;
+
+    public function toArray()
+    {
+        return [
+                'country_code' => $this->country_code,
+                    'phone_category_name' => $this->phone_category_name,
+                    'phone_region_code' => $this->phone_region_code,
+                    'regulation_address_id' => $this->regulation_address_id,
+                    'verification_id' => $this->verification_id,
+                    'verified' => $this->verified !== null ? (filter_var($this->verified, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'in_progress' => $this->in_progress !== null ? (filter_var($this->in_progress, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_region_code' => $this->with_region_code !== null ? (filter_var($this->with_region_code, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

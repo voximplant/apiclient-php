@@ -40,7 +40,7 @@ class SetPushCredentialParams
                 'push_credential_id' => $this->push_credential_id,
                     'cert_content' => $this->cert_content ? new \CURLFile($this->cert_content, null, basename($this->cert_content)) : null,
                     'cert_password' => $this->cert_password,
-                    'is_dev_mode' => $this->is_dev_mode,
+                    'is_dev_mode' => $this->is_dev_mode !== null ? (filter_var($this->is_dev_mode, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
                     'sender_id' => $this->sender_id,
                     'server_key' => $this->server_key,
                     'service_account_file' => $this->service_account_file ? new \CURLFile($this->service_account_file, null, basename($this->service_account_file)) : null,

@@ -21,4 +21,16 @@ class SetAdminUserInfoParams
 
     /** @var boolean The admin user enable flag */
     public $admin_user_active;
+
+    public function toArray()
+    {
+        return [
+                'required_admin_user_id' => $this->required_admin_user_id,
+                    'required_admin_user_name' => $this->required_admin_user_name,
+                    'new_admin_user_name' => $this->new_admin_user_name,
+                    'admin_user_display_name' => $this->admin_user_display_name,
+                    'new_admin_user_password' => $this->new_admin_user_password,
+                    'admin_user_active' => $this->admin_user_active !== null ? (filter_var($this->admin_user_active, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

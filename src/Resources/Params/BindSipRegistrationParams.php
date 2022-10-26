@@ -27,4 +27,18 @@ class BindSipRegistrationParams
 
     /** @var boolean Bind or unbind (set true or false respectively) */
     public $bind;
+
+    public function toArray()
+    {
+        return [
+                'sip_registration_id' => $this->sip_registration_id,
+                    'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'rule_id' => $this->rule_id,
+                    'rule_name' => $this->rule_name,
+                    'user_id' => $this->user_id,
+                    'user_name' => $this->user_name,
+                    'bind' => $this->bind !== null ? (filter_var($this->bind, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

@@ -30,4 +30,19 @@ class GetQueuesParams
 
     /** @var number The first N records will be skipped in the output */
     public $offset;
+
+    public function toArray()
+    {
+        return [
+                'acd_queue_id' => $this->acd_queue_id,
+                    'acd_queue_name' => $this->acd_queue_name,
+                    'application_id' => $this->application_id,
+                    'skill_id' => $this->skill_id,
+                    'excluded_skill_id' => $this->excluded_skill_id,
+                    'with_skills' => $this->with_skills !== null ? (filter_var($this->with_skills, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'showing_skill_id' => $this->showing_skill_id,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+            ];
+    }
 }

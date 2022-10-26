@@ -24,4 +24,17 @@ class GetPushCredentialParams
 
     /** @var boolean Set true to get the certificate's password */
     public $with_secret_info;
+
+    public function toArray()
+    {
+        return [
+                'push_credential_id' => $this->push_credential_id,
+                    'push_provider_name' => $this->push_provider_name,
+                    'push_provider_id' => $this->push_provider_id,
+                    'application_name' => $this->application_name,
+                    'application_id' => $this->application_id,
+                    'with_cert' => $this->with_cert !== null ? (filter_var($this->with_cert, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_secret_info' => $this->with_secret_info !== null ? (filter_var($this->with_secret_info, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

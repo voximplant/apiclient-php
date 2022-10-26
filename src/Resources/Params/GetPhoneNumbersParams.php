@@ -93,4 +93,40 @@ class GetPhoneNumbersParams
 
     /** @var boolean Number is bound to some rule */
     public $is_bound_to_rule;
+
+    public function toArray()
+    {
+        return [
+                'phone_id' => $this->phone_id,
+                    'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'is_bound_to_application' => $this->is_bound_to_application !== null ? (filter_var($this->is_bound_to_application, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'phone_template' => $this->phone_template,
+                    'country_code' => $this->country_code,
+                    'phone_category_name' => $this->phone_category_name,
+                    'canceled' => $this->canceled !== null ? (filter_var($this->canceled, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'deactivated' => $this->deactivated !== null ? (filter_var($this->deactivated, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'auto_charge' => $this->auto_charge !== null ? (filter_var($this->auto_charge, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'from_phone_next_renewal' => $this->from_phone_next_renewal,
+                    'to_phone_next_renewal' => $this->to_phone_next_renewal,
+                    'from_phone_purchase_date' => $this->from_phone_purchase_date,
+                    'to_phone_purchase_date' => $this->to_phone_purchase_date,
+                    'child_account_id' => $this->child_account_id,
+                    'children_phones_only' => $this->children_phones_only !== null ? (filter_var($this->children_phones_only, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'verification_name' => $this->verification_name,
+                    'verification_status' => $this->verification_status,
+                    'from_unverified_hold_until' => $this->from_unverified_hold_until,
+                    'to_unverified_hold_until' => $this->to_unverified_hold_until,
+                    'can_be_used' => $this->can_be_used !== null ? (filter_var($this->can_be_used, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'order_by' => $this->order_by,
+                    'sandbox' => $this->sandbox,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+                    'sms_supported' => $this->sms_supported !== null ? (filter_var($this->sms_supported, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'phone_region_name' => $this->phone_region_name,
+                    'rule_id' => $this->rule_id,
+                    'rule_name' => $this->rule_name,
+                    'is_bound_to_rule' => $this->is_bound_to_rule !== null ? (filter_var($this->is_bound_to_rule, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

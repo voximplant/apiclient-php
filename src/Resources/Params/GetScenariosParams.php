@@ -18,4 +18,15 @@ class GetScenariosParams
 
     /** @var number The first N records will be skipped in the output */
     public $offset;
+
+    public function toArray()
+    {
+        return [
+                'scenario_id' => $this->scenario_id,
+                    'scenario_name' => $this->scenario_name,
+                    'with_script' => $this->with_script !== null ? (filter_var($this->with_script, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+            ];
+    }
 }

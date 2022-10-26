@@ -15,4 +15,14 @@ class GetDialogflowKeysParams
 
     /** @var boolean Set true to get the json web key */
     public $with_secret_info;
+
+    public function toArray()
+    {
+        return [
+                'dialogflow_key_id' => $this->dialogflow_key_id,
+                    'application_name' => $this->application_name,
+                    'application_id' => $this->application_id,
+                    'with_secret_info' => $this->with_secret_info !== null ? (filter_var($this->with_secret_info, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

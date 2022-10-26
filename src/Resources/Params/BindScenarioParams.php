@@ -24,4 +24,17 @@ class BindScenarioParams
 
     /** @var boolean Bind or unbind (set true or false respectively) */
     public $bind;
+
+    public function toArray()
+    {
+        return [
+                'scenario_id' => $this->scenario_id,
+                    'scenario_name' => $this->scenario_name,
+                    'rule_id' => $this->rule_id,
+                    'rule_name' => $this->rule_name,
+                    'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'bind' => $this->bind !== null ? (filter_var($this->bind, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

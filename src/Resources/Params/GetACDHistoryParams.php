@@ -51,4 +51,26 @@ class GetACDHistoryParams
 
     /** @var string The output format. The following values available: json, csv */
     public $output;
+
+    public function toArray()
+    {
+        return [
+                'from_date' => $this->from_date,
+                    'to_date' => $this->to_date,
+                    'acd_session_history_id' => $this->acd_session_history_id,
+                    'acd_request_id' => $this->acd_request_id,
+                    'acd_queue_id' => $this->acd_queue_id,
+                    'user_id' => $this->user_id,
+                    'operator_hangup' => $this->operator_hangup !== null ? (filter_var($this->operator_hangup, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'unserviced' => $this->unserviced !== null ? (filter_var($this->unserviced, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'min_waiting_time' => $this->min_waiting_time,
+                    'rejected' => $this->rejected !== null ? (filter_var($this->rejected, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_events' => $this->with_events !== null ? (filter_var($this->with_events, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_header' => $this->with_header !== null ? (filter_var($this->with_header, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'desc_order' => $this->desc_order !== null ? (filter_var($this->desc_order, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+                    'output' => $this->output,
+            ];
+    }
 }

@@ -27,4 +27,18 @@ class AddRuleParams
 
     /** @var stringlist The scenario name list separated by the ';' symbol. Can be used instead of scenario_id */
     public $scenario_name;
+
+    public function toArray()
+    {
+        return [
+                'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'rule_name' => $this->rule_name,
+                    'rule_pattern' => $this->rule_pattern,
+                    'rule_pattern_exclude' => $this->rule_pattern_exclude,
+                    'video_conference' => $this->video_conference !== null ? (filter_var($this->video_conference, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'scenario_id' => $this->scenario_id,
+                    'scenario_name' => $this->scenario_name,
+            ];
+    }
 }

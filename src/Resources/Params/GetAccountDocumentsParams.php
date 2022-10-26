@@ -24,4 +24,17 @@ class GetAccountDocumentsParams
 
     /** @var boolean Set true to get the children account verifications only */
     public $children_verifications_only;
+
+    public function toArray()
+    {
+        return [
+                'with_details' => $this->with_details !== null ? (filter_var($this->with_details, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'verification_name' => $this->verification_name,
+                    'verification_status' => $this->verification_status,
+                    'from_unverified_hold_until' => $this->from_unverified_hold_until,
+                    'to_unverified_hold_until' => $this->to_unverified_hold_until,
+                    'child_account_id' => $this->child_account_id,
+                    'children_verifications_only' => $this->children_verifications_only !== null ? (filter_var($this->children_verifications_only, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

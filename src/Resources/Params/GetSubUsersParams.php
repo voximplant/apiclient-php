@@ -15,4 +15,14 @@ class GetSubUsersParams
 
     /** @var number The max returning record count */
     public $count;
+
+    public function toArray()
+    {
+        return [
+                'subuser_id' => $this->subuser_id,
+                    'with_roles' => $this->with_roles !== null ? (filter_var($this->with_roles, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'offset' => $this->offset,
+                    'count' => $this->count,
+            ];
+    }
 }

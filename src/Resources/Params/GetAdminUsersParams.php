@@ -27,4 +27,18 @@ class GetAdminUsersParams
 
     /** @var number The first N records will be skipped in the output */
     public $offset;
+
+    public function toArray()
+    {
+        return [
+                'required_admin_user_id' => $this->required_admin_user_id,
+                    'required_admin_user_name' => $this->required_admin_user_name,
+                    'admin_user_display_name' => $this->admin_user_display_name,
+                    'admin_user_active' => $this->admin_user_active !== null ? (filter_var($this->admin_user_active, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_roles' => $this->with_roles !== null ? (filter_var($this->with_roles, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_access_entries' => $this->with_access_entries !== null ? (filter_var($this->with_access_entries, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+            ];
+    }
 }

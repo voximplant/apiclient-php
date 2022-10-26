@@ -54,4 +54,27 @@ class SetChildAccountInfoParams
 
     /** @var number The minimum payment amount */
     public $min_payment_amount;
+
+    public function toArray()
+    {
+        return [
+                'child_account_id' => $this->child_account_id,
+                    'child_account_name' => $this->child_account_name,
+                    'child_account_email' => $this->child_account_email,
+                    'new_child_account_email' => $this->new_child_account_email,
+                    'new_child_account_password' => $this->new_child_account_password,
+                    'account_notifications' => $this->account_notifications !== null ? (filter_var($this->account_notifications, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'tariff_changing_notifications' => $this->tariff_changing_notifications !== null ? (filter_var($this->tariff_changing_notifications, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'news_notifications' => $this->news_notifications !== null ? (filter_var($this->news_notifications, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'active' => $this->active !== null ? (filter_var($this->active, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'language_code' => $this->language_code,
+                    'location' => $this->location,
+                    'min_balance_to_notify' => $this->min_balance_to_notify,
+                    'support_robokassa' => $this->support_robokassa !== null ? (filter_var($this->support_robokassa, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'support_bank_card' => $this->support_bank_card !== null ? (filter_var($this->support_bank_card, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'support_invoice' => $this->support_invoice !== null ? (filter_var($this->support_invoice, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'can_use_restricted' => $this->can_use_restricted !== null ? (filter_var($this->can_use_restricted, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'min_payment_amount' => $this->min_payment_amount,
+            ];
+    }
 }

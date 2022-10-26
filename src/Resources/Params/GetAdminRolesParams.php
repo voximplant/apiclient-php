@@ -42,4 +42,23 @@ class GetAdminRolesParams
 
     /** @var number The first N records will be skipped in the output */
     public $offset;
+
+    public function toArray()
+    {
+        return [
+                'admin_role_id' => $this->admin_role_id,
+                    'admin_role_name' => $this->admin_role_name,
+                    'admin_role_active' => $this->admin_role_active !== null ? (filter_var($this->admin_role_active, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_entries' => $this->with_entries !== null ? (filter_var($this->with_entries, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_account_roles' => $this->with_account_roles !== null ? (filter_var($this->with_account_roles, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_parent_roles' => $this->with_parent_roles !== null ? (filter_var($this->with_parent_roles, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_system_roles' => $this->with_system_roles !== null ? (filter_var($this->with_system_roles, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'included_admin_user_id' => $this->included_admin_user_id,
+                    'excluded_admin_user_id' => $this->excluded_admin_user_id,
+                    'full_admin_users_matching' => $this->full_admin_users_matching,
+                    'showing_admin_user_id' => $this->showing_admin_user_id,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+            ];
+    }
 }

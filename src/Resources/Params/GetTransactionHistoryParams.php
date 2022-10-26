@@ -48,4 +48,25 @@ class GetTransactionHistoryParams
 
     /** @var boolean Set true to get transactions on hold (transactions for which money is reserved but not yet withdrawn from the account) */
     public $is_uncommitted;
+
+    public function toArray()
+    {
+        return [
+                'from_date' => $this->from_date,
+                    'to_date' => $this->to_date,
+                    'transaction_id' => $this->transaction_id,
+                    'payment_reference' => $this->payment_reference,
+                    'transaction_type' => $this->transaction_type,
+                    'user_id' => $this->user_id,
+                    'child_account_id' => $this->child_account_id,
+                    'children_transactions_only' => $this->children_transactions_only !== null ? (filter_var($this->children_transactions_only, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'users_transactions_only' => $this->users_transactions_only !== null ? (filter_var($this->users_transactions_only, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'desc_order' => $this->desc_order !== null ? (filter_var($this->desc_order, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+                    'output' => $this->output,
+                    'is_async' => $this->is_async !== null ? (filter_var($this->is_async, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'is_uncommitted' => $this->is_uncommitted !== null ? (filter_var($this->is_uncommitted, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

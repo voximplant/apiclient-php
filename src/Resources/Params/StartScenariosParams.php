@@ -27,4 +27,18 @@ class StartScenariosParams
 
     /** @var boolean Set true to get media server session lists url */
     public $with_check_url;
+
+    public function toArray()
+    {
+        return [
+                'user_id' => $this->user_id,
+                    'user_name' => $this->user_name,
+                    'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'rule_id' => $this->rule_id,
+                    'script_custom_data' => $this->script_custom_data,
+                    'reference_ip' => $this->reference_ip,
+                    'with_check_url' => $this->with_check_url !== null ? (filter_var($this->with_check_url, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

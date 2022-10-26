@@ -51,4 +51,26 @@ class SQ_GetAgentsParams
 
     /** @var number Number of items to skip in the output */
     public $offset;
+
+    public function toArray()
+    {
+        return [
+                'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'sq_queue_id' => $this->sq_queue_id,
+                    'sq_queue_name' => $this->sq_queue_name,
+                    'excluded_sq_queue_id' => $this->excluded_sq_queue_id,
+                    'excluded_sq_queue_name' => $this->excluded_sq_queue_name,
+                    'sq_skills' => $this->sq_skills,
+                    'user_id' => $this->user_id,
+                    'user_name' => $this->user_name,
+                    'user_name_template' => $this->user_name_template,
+                    'sq_statuses' => $this->sq_statuses,
+                    'with_sq_skills' => $this->with_sq_skills !== null ? (filter_var($this->with_sq_skills, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_sq_queues' => $this->with_sq_queues !== null ? (filter_var($this->with_sq_queues, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_sq_statuses' => $this->with_sq_statuses !== null ? (filter_var($this->with_sq_statuses, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+            ];
+    }
 }

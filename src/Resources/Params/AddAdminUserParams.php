@@ -21,4 +21,16 @@ class AddAdminUserParams
 
     /** @var stringlist The role(s) name(s) created via Managing Admin Roles methods. The attaching admin role name that can be used instead of admin_role_id */
     public $admin_role_name;
+
+    public function toArray()
+    {
+        return [
+                'new_admin_user_name' => $this->new_admin_user_name,
+                    'admin_user_display_name' => $this->admin_user_display_name,
+                    'new_admin_user_password' => $this->new_admin_user_password,
+                    'admin_user_active' => $this->admin_user_active !== null ? (filter_var($this->admin_user_active, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'admin_role_id' => $this->admin_role_id,
+                    'admin_role_name' => $this->admin_role_name,
+            ];
+    }
 }

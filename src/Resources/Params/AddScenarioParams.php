@@ -18,4 +18,15 @@ class AddScenarioParams
 
     /** @var boolean Rewrite the existing scenario */
     public $rewrite;
+
+    public function toArray()
+    {
+        return [
+                'scenario_name' => $this->scenario_name,
+                    'scenario_script' => $this->scenario_script,
+                    'rule_id' => $this->rule_id,
+                    'rule_name' => $this->rule_name,
+                    'rewrite' => $this->rewrite !== null ? (filter_var($this->rewrite, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

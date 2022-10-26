@@ -30,4 +30,19 @@ class AddQueueParams
 
     /** @var number The average service time in seconds. Specify the parameter to correct or initialize the waiting time prediction */
     public $average_service_time;
+
+    public function toArray()
+    {
+        return [
+                'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'acd_queue_name' => $this->acd_queue_name,
+                    'acd_queue_priority' => $this->acd_queue_priority,
+                    'auto_binding' => $this->auto_binding !== null ? (filter_var($this->auto_binding, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'service_probability' => $this->service_probability,
+                    'max_queue_size' => $this->max_queue_size,
+                    'max_waiting_time' => $this->max_waiting_time,
+                    'average_service_time' => $this->average_service_time,
+            ];
+    }
 }

@@ -21,4 +21,16 @@ class GetCallerIDsParams
 
     /** @var number The first N records will be skipped in the output */
     public $offset;
+
+    public function toArray()
+    {
+        return [
+                'callerid_id' => $this->callerid_id,
+                    'callerid_number' => $this->callerid_number,
+                    'active' => $this->active !== null ? (filter_var($this->active, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'order_by' => $this->order_by,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+            ];
+    }
 }

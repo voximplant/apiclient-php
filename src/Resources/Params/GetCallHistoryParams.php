@@ -69,4 +69,32 @@ class GetCallHistoryParams
 
     /** @var boolean Set true to get records in the asynchronous mode (for csv output only). Use this mode to download large amounts of data. See the [GetHistoryReports], [DownloadHistoryReport] functions for details */
     public $is_async;
+
+    public function toArray()
+    {
+        return [
+                'from_date' => $this->from_date,
+                    'to_date' => $this->to_date,
+                    'call_session_history_id' => $this->call_session_history_id,
+                    'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'user_id' => $this->user_id,
+                    'rule_name' => $this->rule_name,
+                    'remote_number' => $this->remote_number,
+                    'local_number' => $this->local_number,
+                    'call_session_history_custom_data' => $this->call_session_history_custom_data,
+                    'with_calls' => $this->with_calls !== null ? (filter_var($this->with_calls, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_records' => $this->with_records !== null ? (filter_var($this->with_records, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_other_resources' => $this->with_other_resources !== null ? (filter_var($this->with_other_resources, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'child_account_id' => $this->child_account_id,
+                    'children_calls_only' => $this->children_calls_only !== null ? (filter_var($this->children_calls_only, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_header' => $this->with_header !== null ? (filter_var($this->with_header, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'desc_order' => $this->desc_order !== null ? (filter_var($this->desc_order, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_total_count' => $this->with_total_count !== null ? (filter_var($this->with_total_count, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+                    'output' => $this->output,
+                    'is_async' => $this->is_async !== null ? (filter_var($this->is_async, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

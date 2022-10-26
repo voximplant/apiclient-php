@@ -63,4 +63,30 @@ class SetAccountInfoParams
 
     /** @var string If salt string is specified, each HTTP request made by the Voximplant cloud toward the callback_url will have a salt field set to MD5 hash of account information and salt. That hash can be used be a developer to ensure that HTTP request is made by the Voximplant cloud */
     public $callback_salt;
+
+    public function toArray()
+    {
+        return [
+                'new_account_email' => $this->new_account_email,
+                    'new_account_password' => $this->new_account_password,
+                    'language_code' => $this->language_code,
+                    'location' => $this->location,
+                    'account_first_name' => $this->account_first_name,
+                    'account_last_name' => $this->account_last_name,
+                    'mobile_phone' => $this->mobile_phone,
+                    'min_balance_to_notify' => $this->min_balance_to_notify,
+                    'account_notifications' => $this->account_notifications !== null ? (filter_var($this->account_notifications, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'tariff_changing_notifications' => $this->tariff_changing_notifications !== null ? (filter_var($this->tariff_changing_notifications, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'news_notifications' => $this->news_notifications !== null ? (filter_var($this->news_notifications, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'send_js_error' => $this->send_js_error !== null ? (filter_var($this->send_js_error, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'billing_address_name' => $this->billing_address_name,
+                    'billing_address_country_code' => $this->billing_address_country_code,
+                    'billing_address_address' => $this->billing_address_address,
+                    'billing_address_zip' => $this->billing_address_zip,
+                    'billing_address_phone' => $this->billing_address_phone,
+                    'account_custom_data' => $this->account_custom_data,
+                    'callback_url' => $this->callback_url,
+                    'callback_salt' => $this->callback_salt,
+            ];
+    }
 }

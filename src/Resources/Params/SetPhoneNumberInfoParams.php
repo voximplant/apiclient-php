@@ -15,4 +15,14 @@ class SetPhoneNumberInfoParams
 
     /** @var boolean Set true to enable the auto charging */
     public $auto_charge;
+
+    public function toArray()
+    {
+        return [
+                'phone_id' => $this->phone_id,
+                    'phone_number' => $this->phone_number,
+                    'incoming_sms_callback_url' => $this->incoming_sms_callback_url,
+                    'auto_charge' => $this->auto_charge !== null ? (filter_var($this->auto_charge, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

@@ -12,4 +12,13 @@ class DelAuthorizedAccountIPParams
 
     /** @var boolean Set true to remove the network from the white list. Set false to remove the network from the black list. Omit the parameter to remove the network from all lists */
     public $allowed;
+
+    public function toArray()
+    {
+        return [
+                'authorized_ip' => $this->authorized_ip,
+                    'contains_ip' => $this->contains_ip,
+                    'allowed' => $this->allowed !== null ? (filter_var($this->allowed, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

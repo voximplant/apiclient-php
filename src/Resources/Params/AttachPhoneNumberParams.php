@@ -27,4 +27,18 @@ class AttachPhoneNumberParams
 
     /** @var boolean The force verification flag */
     public $force_verification;
+
+    public function toArray()
+    {
+        return [
+                'phone_count' => $this->phone_count,
+                    'phone_number' => $this->phone_number,
+                    'country_code' => $this->country_code,
+                    'phone_category_name' => $this->phone_category_name,
+                    'country_state' => $this->country_state,
+                    'phone_region_id' => $this->phone_region_id,
+                    'regulation_address_id' => $this->regulation_address_id,
+                    'force_verification' => $this->force_verification !== null ? (filter_var($this->force_verification, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

@@ -36,4 +36,21 @@ class SetUserInfoParams
 
     /** @var string The new user mobile phone. The length must be less than 50 */
     public $mobile_phone;
+
+    public function toArray()
+    {
+        return [
+                'user_id' => $this->user_id,
+                    'user_name' => $this->user_name,
+                    'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'new_user_name' => $this->new_user_name,
+                    'user_display_name' => $this->user_display_name,
+                    'user_password' => $this->user_password,
+                    'parent_accounting' => $this->parent_accounting !== null ? (filter_var($this->parent_accounting, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'user_active' => $this->user_active !== null ? (filter_var($this->user_active, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'user_custom_data' => $this->user_custom_data,
+                    'mobile_phone' => $this->mobile_phone,
+            ];
+    }
 }

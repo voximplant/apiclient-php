@@ -12,4 +12,13 @@ class BindDialogflowKeysParams
 
     /** @var boolean Set to false to unbind. Default value is true */
     public $bind;
+
+    public function toArray()
+    {
+        return [
+                'dialogflow_key_id' => $this->dialogflow_key_id,
+                    'application_id' => $this->application_id,
+                    'bind' => $this->bind !== null ? (filter_var($this->bind, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

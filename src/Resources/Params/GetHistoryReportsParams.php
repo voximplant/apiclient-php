@@ -30,4 +30,19 @@ class GetHistoryReportsParams
 
     /** @var intlist The application ID to filter. Can be a list separated by the ';' symbol. Use the 'all' value to select all applications */
     public $application_id;
+
+    public function toArray()
+    {
+        return [
+                'history_report_id' => $this->history_report_id,
+                    'history_type' => $this->history_type,
+                    'created_from' => $this->created_from,
+                    'created_to' => $this->created_to,
+                    'is_completed' => $this->is_completed !== null ? (filter_var($this->is_completed, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'desc_order' => $this->desc_order !== null ? (filter_var($this->desc_order, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
+                    'application_id' => $this->application_id,
+            ];
+    }
 }

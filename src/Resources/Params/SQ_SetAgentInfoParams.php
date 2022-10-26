@@ -21,4 +21,16 @@ class SQ_SetAgentInfoParams
 
     /** @var boolean The agent can handle calls. When set to false, the agent is excluded from the CALL-request distribution */
     public $handle_calls;
+
+    public function toArray()
+    {
+        return [
+                'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'user_id' => $this->user_id,
+                    'user_name' => $this->user_name,
+                    'max_simultaneous_conversations' => $this->max_simultaneous_conversations,
+                    'handle_calls' => $this->handle_calls !== null ? (filter_var($this->handle_calls, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+            ];
+    }
 }

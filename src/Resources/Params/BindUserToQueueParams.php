@@ -24,4 +24,17 @@ class BindUserToQueueParams
 
     /** @var stringlist The queue name that can be used instead of acd_queue_id. The queue name list separated by the ';' symbol */
     public $acd_queue_name;
+
+    public function toArray()
+    {
+        return [
+                'bind' => $this->bind !== null ? (filter_var($this->bind, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'user_id' => $this->user_id,
+                    'user_name' => $this->user_name,
+                    'acd_queue_id' => $this->acd_queue_id,
+                    'acd_queue_name' => $this->acd_queue_name,
+            ];
+    }
 }

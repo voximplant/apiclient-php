@@ -21,4 +21,16 @@ class AddAdminRoleParams
 
     /** @var stringlist The list of denied access entries separated by the ';' symbol (the API function names) */
     public $denied_entries;
+
+    public function toArray()
+    {
+        return [
+                'admin_role_name' => $this->admin_role_name,
+                    'admin_role_active' => $this->admin_role_active !== null ? (filter_var($this->admin_role_active, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'like_admin_role_id' => $this->like_admin_role_id,
+                    'like_admin_role_name' => $this->like_admin_role_name,
+                    'allowed_entries' => $this->allowed_entries,
+                    'denied_entries' => $this->denied_entries,
+            ];
+    }
 }
