@@ -25,10 +25,10 @@ class GetAdminRolesParams
     /** @var boolean Set false to omit the system roles */
     public $with_system_roles;
 
-    /** @var intlist The attached admin user ID list separated by the ';' symbol. Use the 'all' value to select all admin users */
+    /** @var intlist The attached admin user ID list separated by semicolon (;). Use the 'all' value to select all admin users */
     public $included_admin_user_id;
 
-    /** @var intlist Not attached admin user ID list separated by the ';' symbol. Use the 'all' value to select all admin users */
+    /** @var intlist Not attached admin user ID list separated by semicolon (;). Use the 'all' value to select all admin users */
     public $excluded_admin_user_id;
 
     /** @var string Set false to get roles with partial admin user list matching */

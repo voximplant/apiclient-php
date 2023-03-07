@@ -23,10 +23,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * from_date - The UTC 'from' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * to_date - The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
- * acd_session_history_id - The ACD session history ID list
- * acd_request_id - The ACD request ID list
- * acd_queue_id - The ACD queue ID list to filter
- * user_id - The user ID list to filter
+ * acd_session_history_id - The ACD session history ID list separated by semicolon (;)
+ * acd_request_id - The ACD request ID list separated by semicolon (;)
+ * acd_queue_id - The ACD queue ID list to filter separated by semicolon (;)
+ * user_id - The user ID list to filter separated by semicolon (;)
  * operator_hangup - Set true to get the calls terminated by the operator
  * unserviced - The unserviced calls by the operator
  * min_waiting_time - The min waiting time filter

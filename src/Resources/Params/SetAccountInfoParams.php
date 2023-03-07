@@ -64,6 +64,12 @@ class SetAccountInfoParams
     /** @var string If salt string is specified, each HTTP request made by the Voximplant cloud toward the callback_url will have a salt field set to MD5 hash of account information and salt. That hash can be used be a developer to ensure that HTTP request is made by the Voximplant cloud */
     public $callback_salt;
 
+    /** @var boolean Set to true to store outbound message texts. Default value is false */
+    public $store_outbound_sms;
+
+    /** @var boolean Set to true to store inbound message texts. Default value is false */
+    public $store_inbound_sms;
+
     public function toArray()
     {
         return [
@@ -87,6 +93,8 @@ class SetAccountInfoParams
                     'account_custom_data' => $this->account_custom_data,
                     'callback_url' => $this->callback_url,
                     'callback_salt' => $this->callback_salt,
+                    'store_outbound_sms' => $this->store_outbound_sms !== null ? (filter_var($this->store_outbound_sms, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'store_inbound_sms' => $this->store_inbound_sms !== null ? (filter_var($this->store_inbound_sms, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
             ];
     }
 }

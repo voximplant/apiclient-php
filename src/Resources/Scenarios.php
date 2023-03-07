@@ -55,7 +55,7 @@ class Scenarios implements ScenariosInterface
     }
 
     /**
-     * @method Adds a new scenario. Please use the POST method.
+     * @method Adds a new scenario to the Shared folder, so the scenario is available in all the existing applications. Please use the POST method.
      */
     public function AddScenario(Params\AddScenarioParams $params = null): AddScenarioReturn
     {
@@ -77,7 +77,7 @@ class Scenarios implements ScenariosInterface
     }
 
     /**
-     * @method Bind the scenario list to the rule. You should specify the application_id or application_name if you specify the rule_name.
+     * @method Bind the scenario list to the rule. You should specify the application_id or application_name if you specify the rule_name. Please note, the scenario and the routing rule need to be within the same application.
      */
     public function BindScenario(Params\BindScenarioParams $params = null): BindScenarioReturn
     {
@@ -99,7 +99,7 @@ class Scenarios implements ScenariosInterface
     }
 
     /**
-     * @method Edits the scenario. Please use the POST method.
+     * @method Edits the scenario. You can edit the scenario's name and body. Please use the POST method.
      */
     public function SetScenarioInfo(Params\SetScenarioInfoParams $params = null): SetScenarioInfoReturn
     {
@@ -121,7 +121,7 @@ class Scenarios implements ScenariosInterface
     }
 
     /**
-     * @method Runs JavaScript scenarios on a Voximplant server. The scenarios run in a new media session.
+     * @method Runs JavaScript scenarios on a Voximplant server. The scenarios run in a new media session. To start a scenario, pass the routing rule ID associated with the necessary scenario. You can use both GET and POST requests, but we recommend using the POST mode if you pass some data in the custom_data field. The maximum number of simultaneous requests is 200. If you exceed this number, you get the 429 error code.
      */
     public function StartScenarios(Params\StartScenariosParams $params = null): StartScenariosReturn
     {
@@ -132,7 +132,7 @@ class Scenarios implements ScenariosInterface
     }
 
     /**
-     * @method Runs a session for video conferencing or joins the existing video conference session.When a session is created by calling this method, a scenario assigned to the specified **rule_id** will run on one of the servers dedicated to video conferencing. All further method calls with the same **rule_id** won't create a new video conference session, but join the already existing one.Use the [StartScenarios] method for creating audio conferences.
+     * @method Runs a session for video conferencing or joins the existing video conference session.When you create a session by calling this method, a scenario runs on one of the servers dedicated to video conferencing. All further method calls with the same **conference_name** won't create a new video conference session but join the existing one.Use the [StartScenarios] method for creating audio conferences.
      */
     public function StartConference(Params\StartConferenceParams $params = null): StartConferenceReturn
     {

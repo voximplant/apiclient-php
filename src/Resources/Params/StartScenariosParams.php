@@ -16,10 +16,10 @@ class StartScenariosParams
     /** @var string The application name that can be used instead of application_id */
     public $application_name;
 
-    /** @var number The rule ID */
+    /** @var number The rule ID that needs to be launched. Please note, the necessary scenario needs to be attached to the rule */
     public $rule_id;
 
-    /** @var string The script custom data (like a script argument). Can be accessed in JS scenario via the VoxEngine.customData() method */
+    /** @var string The script custom data, that can be accessed in the scenario via the VoxEngine.customData() method. Use the application/x-www-form-urlencoded content type with UTF-8 encoding. */
     public $script_custom_data;
 
     /** @var string Specifies the IP from the geolocation of predicted subscribers. It allows selecting the nearest server for serving subscribers */

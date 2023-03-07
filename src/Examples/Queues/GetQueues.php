@@ -30,6 +30,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * showing_skill_id - The skill to show in the 'skills' field output
  * count - The max returning record count
  * offset - The first N records will be skipped in the output
+ * with_operatorcount - Number of agents bound to the queue
  */
 $params = new GetQueuesParams();
 

@@ -31,6 +31,9 @@ class GetQueuesParams
     /** @var number The first N records will be skipped in the output */
     public $offset;
 
+    /** @var boolean Number of agents bound to the queue */
+    public $with_operatorcount;
+
     public function toArray()
     {
         return [
@@ -43,6 +46,7 @@ class GetQueuesParams
                     'showing_skill_id' => $this->showing_skill_id,
                     'count' => $this->count,
                     'offset' => $this->offset,
+                    'with_operatorcount' => $this->with_operatorcount !== null ? (filter_var($this->with_operatorcount, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
             ];
     }
 }

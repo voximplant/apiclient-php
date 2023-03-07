@@ -434,8 +434,10 @@ class ResultType
                     'period' => 'string',
                     'subscription_template_type' => 'string',
                     'subscription_template_name' => 'string',
-                    'required_verification' => 'string',
+                    'required_verification' => 'boolean',
                     'verification_status' => 'string',
+                    'installation_tax_reserve' => 'number',
+                    'tax_reserve' => 'number',
                 ),
             ),
         );
@@ -1344,6 +1346,7 @@ class ResultType
             'media_session_access_url' => 'string',
             'media_session_access_secure_url' => 'string',
             'media_session_check_url' => 'string',
+            'call_session_history_id' => 'number',
         );
     }
 
@@ -1353,6 +1356,7 @@ class ResultType
             'result' => 'number',
             'media_session_access_url' => 'string',
             'media_session_access_secure_url' => 'string',
+            'call_session_history_id' => 'number',
         );
     }
 
@@ -1430,6 +1434,8 @@ class ResultType
             array (
                 '|array|' =>
                 array (
+                    'rule_name' => 'string',
+                    'application_name' => 'string',
                     'call_session_history_id' => 'number',
                     'account_id' => 'number',
                     'application_id' => 'number',
@@ -1444,6 +1450,8 @@ class ResultType
                     array (
                         '|array|' =>
                         array (
+                            'rule_name' => 'string',
+                            'application_name' => 'string',
                             'call_session_history_id' => 'number',
                             'account_id' => 'number',
                             'application_id' => 'number',
@@ -1471,6 +1479,8 @@ class ResultType
                     array (
                         '|array|' =>
                         array (
+                            'rule_name' => 'string',
+                            'application_name' => 'string',
                             'call_session_history_id' => 'number',
                             'account_id' => 'number',
                             'application_id' => 'number',
@@ -1485,6 +1495,8 @@ class ResultType
                             array (
                                 '|array|' =>
                                 array (
+                                    'rule_name' => 'string',
+                                    'application_name' => 'string',
                                     'call_session_history_id' => 'number',
                                     'account_id' => 'number',
                                     'application_id' => 'number',
@@ -1523,6 +1535,8 @@ class ResultType
                     array (
                         '|array|' =>
                         array (
+                            'rule_name' => 'string',
+                            'application_name' => 'string',
                             'call_session_history_id' => 'number',
                             'account_id' => 'number',
                             'application_id' => 'number',
@@ -1537,6 +1551,8 @@ class ResultType
                             array (
                                 '|array|' =>
                                 array (
+                                    'rule_name' => 'string',
+                                    'application_name' => 'string',
                                     'call_session_history_id' => 'number',
                                     'account_id' => 'number',
                                     'application_id' => 'number',
@@ -1564,6 +1580,8 @@ class ResultType
                             array (
                                 '|array|' =>
                                 array (
+                                    'rule_name' => 'string',
+                                    'application_name' => 'string',
                                     'call_session_history_id' => 'number',
                                     'account_id' => 'number',
                                     'application_id' => 'number',
@@ -1578,6 +1596,8 @@ class ResultType
                                     array (
                                         '|array|' =>
                                         array (
+                                            'rule_name' => 'string',
+                                            'application_name' => 'string',
                                             'call_session_history_id' => 'number',
                                             'account_id' => 'number',
                                             'application_id' => 'number',
@@ -1846,6 +1866,7 @@ class ResultType
                 array (
                     'sip_whitelist_id' => 'number',
                     'sip_whitelist_network' => 'string',
+                    'description' => 'string',
                 ),
             ),
             'total_count' => 'number',
@@ -1932,7 +1953,7 @@ class ResultType
                 array (
                     'phone_id' => 'number',
                     'phone_number' => 'string',
-                    'required_verification' => 'string',
+                    'required_verification' => 'boolean',
                     'verification_status' => 'string',
                     'unverified_hold_until' => 'date',
                 ),
@@ -1982,7 +2003,7 @@ class ResultType
                     'rule_id' => 'number',
                     'rule_name' => 'string',
                     'category_name' => 'string',
-                    'required_verification' => 'string',
+                    'required_verification' => 'boolean',
                     'verification_status' => 'string',
                     'unverified_hold_until' => 'date',
                     'can_be_used' => 'boolean',
@@ -1991,6 +2012,10 @@ class ResultType
                     'incoming_sms_callback_url' => 'string',
                     'emergency_calls_to_be_enabled' => 'boolean',
                     'emergency_calls_enabled' => 'boolean',
+                    'subscription_id' => 'number',
+                    'extended_application_name' => 'string',
+                    'phone_region_name' => 'string',
+                    'modified' => 'timestamp',
                 ),
             ),
             'total_count' => 'number',
@@ -2013,6 +2038,8 @@ class ResultType
                     'phone_period' => 'string',
                     'phone_category_name' => 'string',
                     'phone_region_name' => 'string',
+                    'phone_installation_tax_reserve' => 'number',
+                    'phone_tax_reserve' => 'number',
                 ),
             ),
             'total_count' => 'number',
@@ -2076,7 +2103,7 @@ class ResultType
                     'phone_region_code' => 'string',
                     'phone_count' => 'number',
                     'verification_status' => 'string',
-                    'required_verification' => 'string',
+                    'required_verification' => 'boolean',
                     'phone_price' => 'decimal',
                     'phone_installation_price' => 'decimal',
                     'phone_period' => 'string',
@@ -2092,7 +2119,7 @@ class ResultType
                             'phone_region_code' => 'string',
                             'phone_count' => 'number',
                             'verification_status' => 'string',
-                            'required_verification' => 'string',
+                            'required_verification' => 'boolean',
                             'phone_price' => 'decimal',
                             'phone_installation_price' => 'decimal',
                             'phone_period' => 'string',
@@ -2102,11 +2129,15 @@ class ResultType
                             'count' => 'number',
                             'price' => 'decimal',
                             'installation_price' => 'decimal',
+                            'installation_tax_reserve' => 'number',
+                            'tax_reserve' => 'number',
                         ),
                     ),
                     'localized_country_name' => 'string',
                     'localized_phone_category_name' => 'string',
                     'localized_phone_region_name' => 'string',
+                    'phone_installation_tax_reserve' => 'number',
+                    'phone_tax_reserve' => 'number',
                 ),
             ),
         );
@@ -2122,7 +2153,7 @@ class ResultType
                 'phone_region_code' => 'string',
                 'phone_count' => 'number',
                 'verification_status' => 'string',
-                'required_verification' => 'string',
+                'required_verification' => 'boolean',
                 'phone_price' => 'decimal',
                 'phone_installation_price' => 'decimal',
                 'phone_period' => 'string',
@@ -2136,7 +2167,7 @@ class ResultType
                     'phone_region_code' => 'string',
                     'phone_count' => 'number',
                     'verification_status' => 'string',
-                    'required_verification' => 'string',
+                    'required_verification' => 'boolean',
                     'phone_price' => 'decimal',
                     'phone_installation_price' => 'decimal',
                     'phone_period' => 'string',
@@ -2148,11 +2179,15 @@ class ResultType
                         'count' => 'number',
                         'price' => 'decimal',
                         'installation_price' => 'decimal',
+                        'installation_tax_reserve' => 'number',
+                        'tax_reserve' => 'number',
                     ),
                 ),
                 'localized_country_name' => 'string',
                 'localized_phone_category_name' => 'string',
                 'localized_phone_region_name' => 'string',
+                'phone_installation_tax_reserve' => 'number',
+                'phone_tax_reserve' => 'number',
             ),
         );
     }
@@ -2356,6 +2391,7 @@ class ResultType
                         ),
                     ),
                     'sl_thresholds' => '[number]',
+                    'operatorcount' => 'number',
                 ),
             ),
             'total_count' => 'number',
@@ -34371,6 +34407,28 @@ class ResultType
         );
     }
 
+    public function SQ_SetAgentCustomStatusMapping()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function SQ_GetAgentCustomStatusMapping()
+    {
+        return array (
+            'sq_status_name' => 'string',
+            'custom_status_name' => 'string',
+        );
+    }
+
+    public function SQ_DeleteAgentCustomStatusMapping()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
     public function AddSkill()
     {
         return array (
@@ -34904,6 +34962,7 @@ class ResultType
     {
         return array (
             'result' => 'number',
+            'message_id' => 'number',
             'fragments_count' => 'number',
         );
     }
@@ -34915,7 +34974,7 @@ class ResultType
             array (
                 '|array|' =>
                 array (
-                    'transaction_id' => 'number',
+                    'message_id' => 'number',
                     'destination_number' => 'string',
                 ),
             ),
@@ -35345,7 +35404,7 @@ class ResultType
             array (
                 '|array|' =>
                 array (
-                    'sms_id' => 'number',
+                    'message_id' => 'number',
                     'source_number' => 'number',
                     'destination_number' => 'number',
                     'direction' => 'string',
@@ -35355,6 +35414,7 @@ class ResultType
                     'error_message' => 'string',
                     'processed_date' => 'date',
                     'transaction_id' => 'number',
+                    'text' => 'string',
                 ),
             ),
             'total_count' => 'number',
@@ -35368,7 +35428,7 @@ class ResultType
             array (
                 '|array|' =>
                 array (
-                    'id' => 'number',
+                    'message_id' => 'number',
                     'source_number' => 'number',
                     'destination_number' => 'number',
                     'fragments' => 'number',
@@ -35378,6 +35438,7 @@ class ResultType
                     'processing_date' => 'date',
                     'transaction_id' => 'number',
                     'delivery_status' => 'string',
+                    'text' => 'string',
                 ),
             ),
             'total_count' => 'number',
@@ -35422,6 +35483,7 @@ class ResultType
                 'im_max_waiting_time' => 'number',
                 'call_max_queue_size' => 'number',
                 'im_max_queue_size' => 'number',
+                'agentcount' => 'number',
             ),
         );
     }
@@ -35498,7 +35560,46 @@ class ResultType
                 'user_name' => 'string',
                 'user_display_name' => 'string',
                 'max_simultaneous_conversations' => 'number',
-                'sq_statuses' => 'Object',
+                'sq_statuses' =>
+                array (
+                    'user_id' => 'number',
+                    'user_name' => 'string',
+                    'user_display_name' => 'string',
+                    'max_simultaneous_conversations' => 'number',
+                    '|array|' =>
+                    array (
+                        'IM' =>
+                        array (
+                            'user_id' => 'number',
+                            'user_name' => 'string',
+                            'user_display_name' => 'string',
+                            'max_simultaneous_conversations' => 'number',
+                            'sq_status_name' => 'string',
+                            'from_date' => 'timestamp',
+                        ),
+                        'CALL' =>
+                        array (
+                            'user_id' => 'number',
+                            'user_name' => 'string',
+                            'user_display_name' => 'string',
+                            'max_simultaneous_conversations' => 'number',
+                            '|array|' =>
+                            array (
+                                'IM' =>
+                                array (
+                                    'user_id' => 'number',
+                                    'user_name' => 'string',
+                                    'user_display_name' => 'string',
+                                    'max_simultaneous_conversations' => 'number',
+                                    'sq_status_name' => 'string',
+                                    'from_date' => 'timestamp',
+                                ),
+                            ),
+                            'sq_status_name' => 'string',
+                            'from_date' => 'timestamp',
+                        ),
+                    ),
+                ),
                 'sq_queues' => 'Object',
                 'sq_skills' => 'Object',
             ),

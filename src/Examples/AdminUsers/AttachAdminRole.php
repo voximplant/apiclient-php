@@ -21,9 +21,9 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * required_admin_user_id - The admin user ID list. Use the 'all' value to select all admin users
+ * required_admin_user_id - The admin user ID list separated by semicolon (;). Use the 'all' value to select all admin users
  * required_admin_user_name - The admin user name to bind, can be used instead of required_admin_user_id
- * admin_role_id - The role(s) ID created via Managing Admin Roles methods. The attached admin role ID list. Use the 'all' value to select alladmin roles
+ * admin_role_id - The role(s) ID created via Managing Admin Roles methods. The attached admin role ID list separated by semicolon (;). Use the 'all' value to select alladmin roles
  * admin_role_name - The role(s) name(s) created via Managing Admin Roles methods. The admin role name to attach, can be used instead of admin_role_id
  * mode - The merge mode. The following values are possible: add, del, set
  */

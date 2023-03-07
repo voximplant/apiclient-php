@@ -19,6 +19,9 @@ class GetAuthorizedAccountIPsParams
     /** @var number The first N records will be skipped in the output */
     public $offset;
 
+    /** @var string The IP address description */
+    public $description;
+
     public function toArray()
     {
         return [
@@ -27,6 +30,7 @@ class GetAuthorizedAccountIPsParams
                     'contains_ip' => $this->contains_ip,
                     'count' => $this->count,
                     'offset' => $this->offset,
+                    'description' => $this->description,
             ];
     }
 }

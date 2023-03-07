@@ -10,16 +10,16 @@ class GetACDHistoryParams
     /** @var timestamp The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss */
     public $to_date;
 
-    /** @var intlist The ACD session history ID list separated by the ';' symbol */
+    /** @var intlist The ACD session history ID list separated by semicolon (;) */
     public $acd_session_history_id;
 
-    /** @var stringlist The ACD request ID list separated by the ';' symbol */
+    /** @var stringlist The ACD request ID list separated by semicolon (;) */
     public $acd_request_id;
 
-    /** @var intlist The ACD queue ID list to filter separated by the ';' symbol */
+    /** @var intlist The ACD queue ID list to filter separated by semicolon (;) */
     public $acd_queue_id;
 
-    /** @var intlist The user ID list to filter separated by the ';' symbol */
+    /** @var intlist The user ID list to filter separated by semicolon (;) */
     public $user_id;
 
     /** @var boolean Set true to get the calls terminated by the operator */

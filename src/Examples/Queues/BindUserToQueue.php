@@ -24,10 +24,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * bind - Bind or unbind users
  * application_id - The application ID
  * application_name - The application name that can be used instead of application_id
- * user_id - The user ID list. Use the 'all' value to specify all users bound to the application
- * user_name - The user name list. user_name can be used instead of user_id
- * acd_queue_id - The ACD queue ID list. Use the 'all' value to specify all queues bound to the application
- * acd_queue_name - The queue name that can be used instead of acd_queue_id. The queue name list
+ * user_id - The user ID list separated by semicolon (;). Use the 'all' value to specify all users bound to the application
+ * user_name - The user name list separated by semicolon (;). user_name can be used instead of user_id
+ * acd_queue_id - The ACD queue ID list separated by semicolon (;). Use the 'all' value to specify all queues bound to the application
+ * acd_queue_name - The queue name that can be used instead of acd_queue_id. The queue name list separated by semicolon (;)
  */
 $params = new BindUserToQueueParams();
 

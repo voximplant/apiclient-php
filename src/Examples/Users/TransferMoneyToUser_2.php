@@ -21,8 +21,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * user_id - The user ID list. Use the 'all' value to select all users
- * user_name - The user name list that can be used instead of user_id
+ * user_id - The user ID list separated by semicolon (;). Use the 'all' value to select all users
+ * user_name - The user name list separated by semicolon (;) that can be used instead of user_id
  * amount - The money amount, $. The absolute amount value must be equal or greater than 0.01
  * application_id - The application ID. It is required if the user_name is specified
  * application_name - The application name that can be used instead of application_id

@@ -12,9 +12,12 @@ use Voximplant\Interfaces\SQ_BindAgentReturn;
 use Voximplant\Interfaces\SQ_BindSkillReturn;
 use Voximplant\Interfaces\SQ_DelQueueReturn;
 use Voximplant\Interfaces\SQ_DelSkillReturn;
+use Voximplant\Interfaces\SQ_DeleteAgentCustomStatusMappingReturn;
+use Voximplant\Interfaces\SQ_GetAgentCustomStatusMappingReturn;
 use Voximplant\Interfaces\SQ_GetAgentsReturn;
 use Voximplant\Interfaces\SQ_GetQueuesReturn;
 use Voximplant\Interfaces\SQ_GetSkillsReturn;
+use Voximplant\Interfaces\SQ_SetAgentCustomStatusMappingReturn;
 use Voximplant\Interfaces\SQ_SetAgentInfoReturn;
 use Voximplant\Interfaces\SQ_SetQueueInfoReturn;
 use Voximplant\Interfaces\SQ_SetSkillInfoReturn;
@@ -37,6 +40,15 @@ class SmartQueue implements SmartQueueInterface
 
     /** @object GetSQState */
     protected $GetSQStateReturn;
+
+    /** @object SQ_SetAgentCustomStatusMapping */
+    protected $SQ_SetAgentCustomStatusMappingReturn;
+
+    /** @object SQ_GetAgentCustomStatusMapping */
+    protected $SQ_GetAgentCustomStatusMappingReturn;
+
+    /** @object SQ_DeleteAgentCustomStatusMapping */
+    protected $SQ_DeleteAgentCustomStatusMappingReturn;
 
     /** @object SQ_AddQueue */
     protected $SQ_AddQueueReturn;
@@ -88,6 +100,9 @@ class SmartQueue implements SmartQueueInterface
         $this->GetSmartQueueDayHistoryReturn = new GetSmartQueueDayHistoryReturn();
         $this->RequestSmartQueueHistoryReturn = new RequestSmartQueueHistoryReturn();
         $this->GetSQStateReturn = new GetSQStateReturn();
+        $this->SQ_SetAgentCustomStatusMappingReturn = new SQ_SetAgentCustomStatusMappingReturn();
+        $this->SQ_GetAgentCustomStatusMappingReturn = new SQ_GetAgentCustomStatusMappingReturn();
+        $this->SQ_DeleteAgentCustomStatusMappingReturn = new SQ_DeleteAgentCustomStatusMappingReturn();
         $this->SQ_AddQueueReturn = new SQ_AddQueueReturn();
         $this->SQ_SetQueueInfoReturn = new SQ_SetQueueInfoReturn();
         $this->SQ_DelQueueReturn = new SQ_DelQueueReturn();
@@ -146,6 +161,39 @@ class SmartQueue implements SmartQueueInterface
             $this->GetSQStateReturn->$key = $value;
         }
         return $this->GetSQStateReturn;
+    }
+
+    /**
+     * @method Adds a status if there is no match for the given internal status and renames it if there is a match. It means that if the passed **sq_status_name** parameter is not in the mapping table, a new entry is created in there; if it is, the **name** field in its mapping is replaced with **custom_status_name**.
+     */
+    public function SQ_SetAgentCustomStatusMapping(Params\SQ_SetAgentCustomStatusMappingParams $params = null): SQ_SetAgentCustomStatusMappingReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->SQ_SetAgentCustomStatusMappingReturn->$key = $value;
+        }
+        return $this->SQ_SetAgentCustomStatusMappingReturn;
+    }
+
+    /**
+     * @method Returns the mapping list of SQ statuses and custom statuses. SQ statuses are returned whether or not they have mappings to custom statuses.
+     */
+    public function SQ_GetAgentCustomStatusMapping(Params\SQ_GetAgentCustomStatusMappingParams $params = null): SQ_GetAgentCustomStatusMappingReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->SQ_GetAgentCustomStatusMappingReturn->$key = $value;
+        }
+        return $this->SQ_GetAgentCustomStatusMappingReturn;
+    }
+
+    /**
+     * @method Removes a mapping from the mapping table. If there is no such mapping, does nothing.
+     */
+    public function SQ_DeleteAgentCustomStatusMapping(Params\SQ_DeleteAgentCustomStatusMappingParams $params = null): SQ_DeleteAgentCustomStatusMappingReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->SQ_DeleteAgentCustomStatusMappingReturn->$key = $value;
+        }
+        return $this->SQ_DeleteAgentCustomStatusMappingReturn;
     }
 
     /**

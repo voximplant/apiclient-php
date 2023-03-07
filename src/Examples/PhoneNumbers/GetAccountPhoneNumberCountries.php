@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * application_id - The application ID list to filter
+ * application_id - The application ID list separated by semicolon (;) to filter
  */
 $params = new GetAccountPhoneNumberCountriesParams();
 

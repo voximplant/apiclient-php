@@ -27,8 +27,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * rule_pattern - The rule pattern regex. The length must be less than 64 KB
  * rule_pattern_exclude - The exclude pattern regex. The length must be less than 64 KB
  * video_conference - Video conference is required
- * scenario_id - The scenario ID list
- * scenario_name - The scenario name list. Can be used instead of scenario_id
+ * scenario_id - The scenario ID list separated by semicolon (;)
+ * scenario_name - The scenario name list separated by semicolon (;). Can be used instead of scenario_id
  */
 $params = new AddRuleParams();
 

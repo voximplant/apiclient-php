@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method A2PSendSms Sends an SMS message from the application to customers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the <b>is_sms_supported</b> property in the objects returned by the <a href='//voximplant.com/docs/references/httpapi/managing_phone_numbers#getphonenumbers'>/GetPhoneNumbers</a> Management API) and SMS should be enabled for it via the <a href='//voximplant.com/docs/references/httpapi/managing_sms#controlsms'>/ControlSms</a> Management API.
+ * @method A2PSendSms Sends an SMS message from the application to customers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the <b>is_sms_supported</b> property in the objects returned by the <a href='/docs/references/httpapi/managing_phone_numbers#getphonenumbers'>/GetPhoneNumbers</a> Management API) and SMS should be enabled for it via the <a href='/docs/references/httpapi/managing_sms#controlsms'>/ControlSms</a> Management API.
  */
 
 // Path to your autoload.php
@@ -21,9 +21,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * src_number - The source phone number
- * dst_numbers - The destination phone numbers. The maximum number of these phone numbers is 100
+ * src_number - The SenderID for outbound SMS. Please contact support for installing a SenderID
+ * dst_numbers - The destination phone numbers separated by semicolon (;). The maximum number of these phone numbers is 100
  * text - The message text, up to 1600 characters. We split long messages greater than 160 GSM-7 characters or 70 UTF-16 characters into multiple segments. Each segment is charged as one message
+ * store_body - Set to true to store outbound message texts. Default value is false
  */
 $params = new A2PSendSmsParams();
 

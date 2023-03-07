@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * child_account_id - The account ID list. Use the 'all' value to select all accounts
+ * child_account_id - The account ID list separated by semicolon (;). Use the 'all' value to select all accounts
  * child_account_name - The child account name part to filter
  * child_account_email - The child ccount email to filter
  * active - The active flag to filter

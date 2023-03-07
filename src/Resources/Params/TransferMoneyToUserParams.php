@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class TransferMoneyToUserParams
 {
-    /** @var intlist The user ID list separated by the ';' symbol. Use the 'all' value to select all users */
+    /** @var intlist The user ID list separated by semicolon (;). Use the 'all' value to select all users */
     public $user_id;
 
-    /** @var stringlist The user name list separated by the ';' symbol that can be used instead of user_id */
+    /** @var stringlist The user name list separated by semicolon (;) that can be used instead of user_id */
     public $user_name;
 
     /** @var decimal The money amount, $. The absolute amount value must be equal or greater than 0.01 */

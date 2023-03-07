@@ -33,7 +33,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * user_display_name - The user display name part to filter
  * with_skills - Set true to get the bound skills
  * with_queues - Set true to get the bound queues
- * acd_status - The ACD status list to filter. The following values are possible: OFFLINE, ONLINE, READY, BANNED, IN_SERVICE, AFTER_SERVICE, TIMEOUT, DND
+ * acd_status - The ACD status list separated by semicolon (;) to filter. The following values are possible: OFFLINE, ONLINE, READY, BANNED, IN_SERVICE, AFTER_SERVICE, TIMEOUT, DND
  * showing_skill_id - The skill to show in the 'skills' field output
  * count - The max returning record count
  * offset - The first N records will be skipped in the output

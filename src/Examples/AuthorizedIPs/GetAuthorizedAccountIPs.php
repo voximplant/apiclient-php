@@ -26,6 +26,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * contains_ip - Specify the parameter to filter the networks that contains the particular IP4
  * count - The max returning record count
  * offset - The first N records will be skipped in the output
+ * description - The IP address description
  */
 $params = new GetAuthorizedAccountIPsParams();
 

@@ -108,7 +108,7 @@ interface PhoneNumbersInterface
 }
 class GetPhoneNumbersReturn
 {
-    /** @var [AttachedPhoneInfoType] */
+    /** @var [AttachedPhoneInfoType] Phone numbers info */
     public $result;
 
     /** @var number The total found phone count */

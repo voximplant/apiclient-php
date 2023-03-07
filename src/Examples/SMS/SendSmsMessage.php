@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method SendSmsMessage Sends an SMS message between two phone numbers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the <b>is_sms_supported</b> property in the objects returned by the [GetPhoneNumbers] Management API) and SMS should be enabled for it via the [ControlSms] Management API. SMS messages can be received via HTTP callbacks, see <a href='/docs/howtos/integration/httpapi/callbacks'>this article</a> for details.
+ * @method SendSmsMessage Sends an SMS message between two phone numbers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the <b>is_sms_supported</b> property in the objects returned by the [GetPhoneNumbers] Management API) and SMS should be enabled for it via the [ControlSms] Management API. SMS messages can be received via HTTP callbacks, see <a href='/docs/guides/managementapi/callbacks'>this article</a> for details.
  */
 
 // Path to your autoload.php
@@ -24,6 +24,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * source - The source phone number
  * destination - The destination phone number
  * sms_body - The message text, up to 765 characters. We split long messages greater than 160 GSM-7 characters or 70 UTF-16 characters into multiple segments. Each segment is charged as one message
+ * store_body - Set to true to store outbound message texts. Default value is false
  */
 $params = new SendSmsMessageParams();
 

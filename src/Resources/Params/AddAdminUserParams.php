@@ -16,7 +16,7 @@ class AddAdminUserParams
     /** @var boolean The admin user enable flag */
     public $admin_user_active;
 
-    /** @var string The role(s) ID created via Managing Admin Roles methods. The attaching admin role ID list separated by the ';' symbol. Use the 'all' value to select all admin roles */
+    /** @var string The role(s) ID created via Managing Admin Roles methods. The attaching admin role ID list separated by semicolon (;). Use the 'all' value to select all admin roles */
     public $admin_role_id;
 
     /** @var stringlist The role(s) name(s) created via Managing Admin Roles methods. The attaching admin role name that can be used instead of admin_role_id */

@@ -22,10 +22,10 @@ class AddRuleParams
     /** @var boolean Video conference is required */
     public $video_conference;
 
-    /** @var intlist The scenario ID list separated by the ';' symbol */
+    /** @var intlist The scenario ID list separated by semicolon (;) */
     public $scenario_id;
 
-    /** @var stringlist The scenario name list separated by the ';' symbol. Can be used instead of scenario_id */
+    /** @var stringlist The scenario name list separated by semicolon (;). Can be used instead of scenario_id */
     public $scenario_name;
 
     public function toArray()

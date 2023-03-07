@@ -10,40 +10,40 @@ class GetCallHistoryParams
     /** @var timestamp The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss */
     public $to_date;
 
-    /** @var intlist The call session history ID list separated by the ';' symbol. The sessions IDs can be accessed in JS scenario via the sessionID property of the AppEvents.Started event */
+    /** @var intlist To get the call history for the specific sessions, pass the session IDs to this parameter separated by a semicolon (;). You can find the session ID in the AppEvents.Started event's sessionID property in a scenario, or retrieve it from the call_session_history_id value returned from the StartScenarios or StartConference methods */
     public $call_session_history_id;
 
-    /** @var number The application ID */
+    /** @var number To receive the call history for a specific application, pass the application ID to this parameter */
     public $application_id;
 
     /** @var string The application name, can be used instead of application_id */
     public $application_name;
 
-    /** @var intlist The user ID list separated by the ';' symbol. If it's specified, the output will contain the calls from the listed users only */
+    /** @var intlist To receive the call history for a specific users, pass the user ID list separated by semicolon (;). If it's specified, the output contains the calls from the listed users only */
     public $user_id;
 
-    /** @var string The rule name to filter. Will be applied only if you set application_id or application_name */
+    /** @var string To receive the call history for a specific routing rule, pass the rule name to this parameter. Applies only if you set application_id or application_name */
     public $rule_name;
 
-    /** @var stringlist The remote number list separated by the ';' symbol */
+    /** @var stringlist To receive a call history for a specific remote numbers, pass the number list separated by semicolon (;). A remote number is a number on the client side */
     public $remote_number;
 
-    /** @var stringlist The local number list separated by the ';' symbol */
+    /** @var stringlist To receive a call history for a specific local numbers, pass the number list separated by semicolon (;). A local number is a number on the platform side */
     public $local_number;
 
-    /** @var string The custom_data to filter sessions */
+    /** @var string To filter the call history by the custom_data passed to the call sessions, pass the custom data to this parameter */
     public $call_session_history_custom_data;
 
-    /** @var boolean Set true to get the bound calls */
+    /** @var boolean Specifies whether to receive a list of sessions with all calls within the sessions, including phone numbers, call cost and other information */
     public $with_calls;
 
-    /** @var boolean Set true to get the bound records */
+    /** @var boolean Specifies whether to get the calls' records */
     public $with_records;
 
     /** @var boolean Set true to get other resources usage (see [ResourceUsageType]) */
     public $with_other_resources;
 
-    /** @var intlist The child account ID list separated by the ';' symbol. Use the 'all' value to select all child accounts */
+    /** @var intlist The child account ID list separated by semicolon (;). Use the 'all' value to select all child accounts */
     public $child_account_id;
 
     /** @var boolean Set true to get the children account calls only */

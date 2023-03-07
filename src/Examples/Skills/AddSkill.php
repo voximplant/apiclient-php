@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method AddSkill Adds a new ACD operator skill.
+ * @method AddSkill Adds a new operator's skill. Works only for ACDv1. For SmartQueue/ACDv2, use <a href="#how-auth-works">this reference</a>.
  */
 
 // Path to your autoload.php

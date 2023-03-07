@@ -10,16 +10,16 @@ class SQ_GetSkillsParams
     /** @var string Name of the application to search by. Can be used instead of application_id */
     public $application_name;
 
-    /** @var intlist List of user IDs separated by the ';' symbol */
+    /** @var intlist List of user IDs separated by semicolon (;) */
     public $user_id;
 
-    /** @var stringlist List of user names separated by the ';' symbol. Can be used instead of user_id */
+    /** @var stringlist List of user names separated by semicolon (;). Can be used instead of user_id */
     public $user_name;
 
-    /** @var intlist List of skill IDs separated by the ';' symbol */
+    /** @var intlist List of skill IDs separated by semicolon (;) */
     public $sq_skill_id;
 
-    /** @var stringlist List of skill names separated by the ';' symbol. Can be used instead of sq_skill_id */
+    /** @var stringlist List of skill names separated by semicolon (;). Can be used instead of sq_skill_id */
     public $sq_skill_name;
 
     /** @var string Substring of the skill name to filter, case-insensitive */

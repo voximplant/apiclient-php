@@ -41,6 +41,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * account_custom_data - The custom data
  * callback_url - If URL is specified, Voximplant cloud will make HTTP POST requests to it when something happens. For a full list of reasons see the type field of the [AccountCallback] structure. The HTTP request will have a JSON-encoded body that conforms to the [AccountCallbacks] structure
  * callback_salt - If salt string is specified, each HTTP request made by the Voximplant cloud toward the callback_url will have a salt field set to MD5 hash of account information and salt. That hash can be used be a developer to ensure that HTTP request is made by the Voximplant cloud
+ * store_outbound_sms - Set to true to store outbound message texts. Default value is false
+ * store_inbound_sms - Set to true to store inbound message texts. Default value is false
  */
 $params = new SetAccountInfoParams();
 

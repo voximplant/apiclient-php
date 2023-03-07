@@ -5,7 +5,7 @@ namespace Voximplant\Interfaces;
 interface HistoryInterface
 {
     /**
-     * @method Gets the call history.
+     * @method Gets the account's call history, including call duration, cost, logs and other call information. You can filter the call history by a certain date
      */
     public function GetCallHistory(\Voximplant\Resources\Params\GetCallHistoryParams $params);
 
@@ -20,7 +20,7 @@ interface HistoryInterface
     public function GetTransactionHistory(\Voximplant\Resources\Params\GetTransactionHistoryParams $params);
 
     /**
-     * @method Try to remove record and transcription files.
+     * @method Try to remove a record and transcription files.
      */
     public function DeleteRecord(\Voximplant\Resources\Params\DeleteRecordParams $params);
 

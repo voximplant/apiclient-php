@@ -4,13 +4,13 @@ namespace Voximplant\Resources\Params;
 
 class BindScenarioParams
 {
-    /** @var intlist The scenario ID list separated by the ';' symbol */
+    /** @var intlist The scenario ID list separated by semicolon (;) */
     public $scenario_id;
 
-    /** @var stringlist The scenario name list separated by the ';' symbol. Can be used instead of scenario_id */
+    /** @var stringlist The scenario name list separated by semicolon (;). Can be used instead of scenario_id */
     public $scenario_name;
 
-    /** @var number The rule ID */
+    /** @var number The rule ID to bind the scenario. The rule and the scenario need to be in the same application */
     public $rule_id;
 
     /** @var string The rule name that can be used instead of rule_id */

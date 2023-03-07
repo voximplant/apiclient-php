@@ -7,10 +7,10 @@ class AddScenarioParams
     /** @var string The scenario name. The length must be less than 30 */
     public $scenario_name;
 
-    /** @var string The scenario text. The length must be less than 128 KB */
+    /** @var string The scenario text. Use the application/x-www-form-urlencoded content type with UTF-8 encoding. The length must be less than 128 KB */
     public $scenario_script;
 
-    /** @var number The rule ID */
+    /** @var number The rule ID. The new scenario binds to the specified rule. Please note, if you do not bind the scenario to any rule, you cannot execute the scenario */
     public $rule_id;
 
     /** @var string The rule name that can be used instead of rule_id */

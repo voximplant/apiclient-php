@@ -40,7 +40,7 @@ class GetUsersParams
     /** @var boolean Set true to get the bound queues */
     public $with_queues;
 
-    /** @var stringlist The ACD status list separated by the ';' symbol to filter. The following values are possible: OFFLINE, ONLINE, READY, BANNED, IN_SERVICE, AFTER_SERVICE, TIMEOUT, DND */
+    /** @var stringlist The ACD status list separated by semicolon (;) to filter. The following values are possible: OFFLINE, ONLINE, READY, BANNED, IN_SERVICE, AFTER_SERVICE, TIMEOUT, DND */
     public $acd_status;
 
     /** @var number The skill to show in the 'skills' field output */

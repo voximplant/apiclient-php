@@ -25,6 +25,21 @@ interface SmartQueueInterface
     public function GetSQState(\Voximplant\Resources\Params\GetSQStateParams $params);
 
     /**
+     * @method Adds a status if there is no match for the given internal status and renames it if there is a match. It means that if the passed **sq_status_name** parameter is not in the mapping table, a new entry is created in there; if it is, the **name** field in its mapping is replaced with **custom_status_name**.
+     */
+    public function SQ_SetAgentCustomStatusMapping(\Voximplant\Resources\Params\SQ_SetAgentCustomStatusMappingParams $params);
+
+    /**
+     * @method Returns the mapping list of SQ statuses and custom statuses. SQ statuses are returned whether or not they have mappings to custom statuses.
+     */
+    public function SQ_GetAgentCustomStatusMapping(\Voximplant\Resources\Params\SQ_GetAgentCustomStatusMappingParams $params);
+
+    /**
+     * @method Removes a mapping from the mapping table. If there is no such mapping, does nothing.
+     */
+    public function SQ_DeleteAgentCustomStatusMapping(\Voximplant\Resources\Params\SQ_DeleteAgentCustomStatusMappingParams $params);
+
+    /**
      * @method Adds a new queue.
      */
     public function SQ_AddQueue(\Voximplant\Resources\Params\SQ_AddQueueParams $params);
@@ -147,6 +162,42 @@ interface SmartQueueInterface
     /** @var array The returned error message. */
     public $errors;
 }
+class SQ_SetAgentCustomStatusMappingReturn
+{
+    /** @var number 1 */
+    public $result;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
+class SQ_GetAgentCustomStatusMappingReturn
+{
+    /** @var string Status name */
+    public $sq_status_name;
+
+    /** @var string Custom status name */
+    public $custom_status_name;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
+class SQ_DeleteAgentCustomStatusMappingReturn
+{
+    /** @var number 1 */
+    public $result;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
 class SQ_AddQueueReturn
 {
     /** @var number ID of the added queue */
@@ -182,7 +233,7 @@ interface SmartQueueInterface
 }
 class SQ_GetQueuesReturn
 {
-    /** @var GetSQQueuesResult The found skill(s) */
+    /** @var GetSQQueuesResult The found queue(s) */
     public $result;
 
     /** @var array The returned error message. */

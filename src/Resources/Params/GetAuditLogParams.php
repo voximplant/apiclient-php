@@ -10,16 +10,16 @@ class GetAuditLogParams
     /** @var timestamp The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss */
     public $to_date;
 
-    /** @var intlist The audit history ID list separated by the ';' symbol */
+    /** @var intlist The audit history ID list separated by semicolon (;) */
     public $audit_log_id;
 
     /** @var string The admin user ID to filter */
     public $filtered_admin_user_id;
 
-    /** @var stringlist The IP list separated by the ';' symbol to filter */
+    /** @var stringlist The IP list separated by semicolon (;) to filter */
     public $filtered_ip;
 
-    /** @var stringlist The function list separated by the ';' symbol to filter */
+    /** @var stringlist The function list separated by semicolon (;) to filter */
     public $filtered_cmd;
 
     /** @var string A relation ID to filter (for example: a phone_number value, a user_id value, an application_id value) */

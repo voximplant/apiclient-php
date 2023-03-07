@@ -10,10 +10,10 @@ class SQ_SetAgentInfoParams
     /** @var string Name of the application to search by. Can be used instead of application_id */
     public $application_name;
 
-    /** @var intlist List of user IDs separated by the ';' symbol. Use 'all' to select all the users */
+    /** @var intlist List of user IDs separated by semicolon (;). Use 'all' to select all the users */
     public $user_id;
 
-    /** @var stringlist List of user names separated by the ';' symbol. Can be used instead of user_id */
+    /** @var stringlist List of user names separated by semicolon (;). Can be used instead of user_id */
     public $user_name;
 
     /** @var number Maximum number of chats that the user processes simultaneously */

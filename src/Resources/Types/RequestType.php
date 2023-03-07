@@ -34,6 +34,8 @@ class RequestType
             'account_custom_data' => 'string',
             'callback_url' => 'string',
             'callback_salt' => 'string',
+            'store_outbound_sms' => 'boolean',
+            'store_inbound_sms' => 'boolean',
         );
     }
 
@@ -632,6 +634,7 @@ class RequestType
     {
         return array (
             'sip_whitelist_network' => 'string',
+            'description' => 'string',
         );
     }
 
@@ -647,6 +650,7 @@ class RequestType
         return array (
             'sip_whitelist_id' => 'number',
             'sip_whitelist_network' => 'string',
+            'description' => 'string',
         );
     }
 
@@ -787,7 +791,8 @@ class RequestType
     public function GetPhoneNumbers()
     {
         return array (
-            'phone_id' => 'number',
+            'phone_id' => 'intlist',
+            'phone_number' => 'stringlist',
             'application_id' => 'number',
             'application_name' => 'string',
             'is_bound_to_application' => 'boolean',
@@ -1015,6 +1020,7 @@ class RequestType
             'showing_skill_id' => 'number',
             'count' => 'number',
             'offset' => 'number',
+            'with_operatorcount' => 'boolean',
         );
     }
 
@@ -1128,6 +1134,30 @@ class RequestType
             'sq_queue_id' => 'intlist',
             'sq_queue_name' => 'stringlist',
             'timezone' => 'string',
+        );
+    }
+
+    public function SQ_SetAgentCustomStatusMapping()
+    {
+        return array (
+            'sq_status_name' => 'string',
+            'custom_status_name' => 'string',
+            'application_id' => 'number',
+        );
+    }
+
+    public function SQ_GetAgentCustomStatusMapping()
+    {
+        return array (
+            'application_id' => 'number',
+        );
+    }
+
+    public function SQ_DeleteAgentCustomStatusMapping()
+    {
+        return array (
+            'sq_status_name' => 'string',
+            'application_id' => 'number',
         );
     }
 
@@ -1315,6 +1345,7 @@ class RequestType
         return array (
             'authorized_ip' => 'string',
             'allowed' => 'boolean',
+            'description' => 'string',
         );
     }
 
@@ -1335,6 +1366,7 @@ class RequestType
             'contains_ip' => 'string',
             'count' => 'number',
             'offset' => 'number',
+            'description' => 'string',
         );
     }
 
@@ -1528,6 +1560,7 @@ class RequestType
             'source' => 'string',
             'destination' => 'string',
             'sms_body' => 'string',
+            'store_body' => 'boolean',
         );
     }
 
@@ -1537,6 +1570,7 @@ class RequestType
             'src_number' => 'string',
             'dst_numbers' => 'stringlist',
             'text' => 'string',
+            'store_body' => 'boolean',
         );
     }
 
@@ -1790,16 +1824,17 @@ class RequestType
             'application_id' => 'number',
             'application_name' => 'string',
             'sq_queue_name' => 'string',
-            'call_agent_selection' => '[SQAgentSelectionStrategies]',
-            'im_agent_selection' => '[SQAgentSelectionStrategies]',
-            'call_task_selection' => '[SQTaskSelectionStrategies]',
-            'im_task_selection' => '[SQTaskSelectionStrategies]',
+            'call_agent_selection' => 'string',
+            'im_agent_selection' => 'string',
+            'call_task_selection' => 'string',
+            'im_task_selection' => 'string',
             'fallback_agent_selection' => 'string',
             'description' => 'string',
             'call_max_waiting_time' => 'number',
             'im_max_waiting_time' => 'number',
             'call_max_queue_size' => 'number',
             'im_max_queue_size' => 'number',
+            'priority' => 'number',
         );
     }
 
@@ -1811,16 +1846,17 @@ class RequestType
             'sq_queue_id' => 'number',
             'sq_queue_name' => 'string',
             'new_sq_queue_name' => 'string',
-            'call_agent_selection' => '[SQAgentSelectionStrategies]',
-            'im_agent_selection' => '[SQAgentSelectionStrategies]',
-            'call_task_selection' => '[SQTaskSelectionStrategies]',
-            'im_task_selection' => '[SQTaskSelectionStrategies]',
+            'call_agent_selection' => 'string',
+            'im_agent_selection' => 'string',
+            'call_task_selection' => 'string',
+            'im_task_selection' => 'string',
             'fallback_agent_selection' => 'string',
             'description' => 'string',
             'call_max_waiting_time' => 'number',
             'im_max_waiting_time' => 'number',
             'call_max_queue_size' => 'number',
             'im_max_queue_size' => 'number',
+            'priority' => 'number',
         );
     }
 
@@ -1848,6 +1884,7 @@ class RequestType
             'excluded_user_name' => 'string',
             'count' => 'number',
             'offset' => 'number',
+            'with_agentcount' => 'boolean',
         );
     }
 
@@ -1929,7 +1966,7 @@ class RequestType
         return array (
             'application_id' => 'number',
             'application_name' => 'string',
-            'sq_queue_id' => 'number',
+            'sq_queue_id' => 'string',
             'sq_queue_name' => 'string',
             'user_id' => 'intlist',
             'user_name' => 'stringlist',
@@ -1968,6 +2005,7 @@ class RequestType
             'with_sq_statuses' => 'boolean',
             'count' => 'number',
             'offset' => 'number',
+            'handle_calls' => 'boolean',
         );
     }
 

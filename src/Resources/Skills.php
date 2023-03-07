@@ -40,7 +40,7 @@ class Skills implements SkillsInterface
     }
 
     /**
-     * @method Adds a new ACD operator skill.
+     * @method Adds a new operator's skill. Works only for ACDv1. For SmartQueue/ACDv2, use this reference.
      */
     public function AddSkill(Params\AddSkillParams $params = null): AddSkillReturn
     {
@@ -51,7 +51,7 @@ class Skills implements SkillsInterface
     }
 
     /**
-     * @method Deletes the skill.
+     * @method Deletes an operator's skill. Works only for ACDv1. For SmartQueue/ACDv2, use this reference.
      */
     public function DelSkill(Params\DelSkillParams $params = null): DelSkillReturn
     {
@@ -62,7 +62,7 @@ class Skills implements SkillsInterface
     }
 
     /**
-     * @method Edits the skill.
+     * @method Edits an operator's skill. Works only for ACDv1. For SmartQueue/ACDv2, use this reference.
      */
     public function SetSkillInfo(Params\SetSkillInfoParams $params = null): SetSkillInfoReturn
     {
@@ -73,7 +73,7 @@ class Skills implements SkillsInterface
     }
 
     /**
-     * @method Gets the skills.
+     * @method Gets the skills of an operator. Works only for ACDv1. For SmartQueue/ACDv2, use this reference.
      */
     public function GetSkills(Params\GetSkillsParams $params = null): GetSkillsReturn
     {
@@ -84,7 +84,7 @@ class Skills implements SkillsInterface
     }
 
     /**
-     * @method Binds the specified skills to the users (ACD operators) and/or the ACD queues.
+     * @method Binds the specified skills to the users (ACD operators) and/or the ACD queues. Works only for ACDv1. For SmartQueue/ACDv2, use this reference.
      */
     public function BindSkill(Params\BindSkillParams $params = null): BindSkillReturn
     {

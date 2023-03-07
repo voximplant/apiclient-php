@@ -4,7 +4,7 @@ namespace Voximplant\Resources\Params;
 
 class GetCallListsParams
 {
-    /** @var intlist The list ID to filter. Can be a list separated by the ';' symbol. Use the 'all' value to select all lists */
+    /** @var intlist The list ID to filter. Can be a list separated by semicolon (;). Use the 'all' value to select all lists */
     public $list_id;
 
     /** @var string Find call lists by name */
@@ -28,7 +28,7 @@ class GetCallListsParams
     /** @var number The first N records will be skipped in the output */
     public $offset;
 
-    /** @var intlist The application ID to filter. Can be a list separated by the ';' symbol. Use the 'all' value to select all applications */
+    /** @var intlist The application ID to filter. Can be a list separated by semicolon (;). Use the 'all' value to select all applications */
     public $application_id;
 
     public function toArray()

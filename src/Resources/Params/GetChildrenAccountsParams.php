@@ -4,7 +4,7 @@ namespace Voximplant\Resources\Params;
 
 class GetChildrenAccountsParams
 {
-    /** @var intlist The account ID list separated by the ';' symbol. Use the 'all' value to select all accounts */
+    /** @var intlist The account ID list separated by semicolon (;). Use the 'all' value to select all accounts */
     public $child_account_id;
 
     /** @var string The child account name part to filter */

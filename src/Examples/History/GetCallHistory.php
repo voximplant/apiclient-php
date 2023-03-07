@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetCallHistory Gets the call history.
+ * @method GetCallHistory Gets the account's call history, including call duration, cost, logs and other call information. You can filter the call history by a certain date
  */
 
 // Path to your autoload.php
@@ -24,18 +24,18 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * from_date - The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss
  * to_date - The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss
  * timezone - The selected timezone or the 'auto' value (the account location)
- * call_session_history_id - The call session history ID list. The sessions IDs can be accessed in JS scenario via the sessionID property of the AppEvents.Started event
- * application_id - The application ID
+ * call_session_history_id - To get the call history for the specific sessions, pass the session IDs to this parameter separated by a semicolon (;). You can find the session ID in the AppEvents.Started event's sessionID property in a scenario, or retrieve it from the call_session_history_id value returned from the StartScenarios or StartConference methods
+ * application_id - To receive the call history for a specific application, pass the application ID to this parameter
  * application_name - The application name, can be used instead of application_id
- * user_id - The user ID list. If it's specified, the output will contain the calls from the listed users only
- * rule_name - The rule name to filter. Will be applied only if you set application_id or application_name
- * remote_number - The remote number list
- * local_number - The local number list
- * call_session_history_custom_data - The custom_data to filter sessions
- * with_calls - Set true to get the bound calls
- * with_records - Set true to get the bound records
+ * user_id - To receive the call history for a specific users, pass the user ID list separated by semicolon (;). If it's specified, the output contains the calls from the listed users only
+ * rule_name - To receive the call history for a specific routing rule, pass the rule name to this parameter. Applies only if you set application_id or application_name
+ * remote_number - To receive a call history for a specific remote numbers, pass the number list separated by semicolon (;). A remote number is a number on the client side
+ * local_number - To receive a call history for a specific local numbers, pass the number list separated by semicolon (;). A local number is a number on the platform side
+ * call_session_history_custom_data - To filter the call history by the custom_data passed to the call sessions, pass the custom data to this parameter
+ * with_calls - Specifies whether to receive a list of sessions with all calls within the sessions, including phone numbers, call cost and other information
+ * with_records - Specifies whether to get the calls' records
  * with_other_resources - Set true to get other resources usage (see [ResourceUsageType])
- * child_account_id - The child account ID list. Use the 'all' value to select all child accounts
+ * child_account_id - The child account ID list separated by semicolon (;). Use the 'all' value to select all child accounts
  * children_calls_only - Set true to get the children account calls only
  * with_header - Set false to get a CSV file without the column names if the output=csv
  * desc_order - Set true to get records in the descent order

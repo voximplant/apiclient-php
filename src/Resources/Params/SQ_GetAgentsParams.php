@@ -10,10 +10,10 @@ class SQ_GetAgentsParams
     /** @var string Name of the application to search by. Can be used instead of application_id */
     public $application_name;
 
-    /** @var intlist List of smart queue IDs separated by the ';' symbol. Use 'all' to select all the queues */
+    /** @var intlist List of smart queue IDs separated by semicolon (;). Use 'all' to select all the queues */
     public $sq_queue_id;
 
-    /** @var stringlist List of smart queue names separated by the ';' symbol. Can be used instead of sq_queue_id */
+    /** @var stringlist List of smart queue names separated by semicolon (;). Can be used instead of sq_queue_id */
     public $sq_queue_name;
 
     /** @var number ID of the smart queue to exclude */
@@ -25,10 +25,10 @@ class SQ_GetAgentsParams
     /** @var Object Skills to filter in the json array format. The array should contain objects with the sq_skill_id/sq_skill_name, min_sq_skill_level, and max_sq_skill_level keys where skill levels range from 1 to 5 */
     public $sq_skills;
 
-    /** @var intlist List of user IDs separated by the ';' symbol */
+    /** @var intlist List of user IDs separated by semicolon (;) */
     public $user_id;
 
-    /** @var stringlist List of user names separated by the ';' symbol. Can be used instead of user_id */
+    /** @var stringlist List of user names separated by semicolon (;). Can be used instead of user_id */
     public $user_name;
 
     /** @var string Substring of the user name to filter */
@@ -52,6 +52,9 @@ class SQ_GetAgentsParams
     /** @var number Number of items to skip in the output */
     public $offset;
 
+    /** @var boolean The agent can handle calls. When set to false, the agent is excluded from the CALL-request distribution */
+    public $handle_calls;
+
     public function toArray()
     {
         return [
@@ -71,6 +74,7 @@ class SQ_GetAgentsParams
                     'with_sq_statuses' => $this->with_sq_statuses !== null ? (filter_var($this->with_sq_statuses, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
                     'count' => $this->count,
                     'offset' => $this->offset,
+                    'handle_calls' => $this->handle_calls !== null ? (filter_var($this->handle_calls, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
             ];
     }
 }

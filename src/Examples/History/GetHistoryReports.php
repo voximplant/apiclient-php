@@ -22,14 +22,14 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * history_report_id - The history report ID to filter
- * history_type - The history report type list. Use the 'all' value to select all history report types. The following values are possible: calls, transactions, audit, call_list
+ * history_type - The history report type list separated by semicolon (;). Use the 'all' value to select all history report types. The following values are possible: calls, transactions, audit, call_list
  * created_from - The UTC creation from date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * created_to - The UTC creation to date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * is_completed - Report is completed
  * desc_order - Set true to get records in the descent order
  * count - The max returning record count
  * offset - The first N records will be skipped in the output
- * application_id - The application ID to filter. Can be a list. Use the 'all' value to select all applications
+ * application_id - The application ID to filter. Can be a list separated by semicolon (;). Use the 'all' value to select all applications
  */
 $params = new GetHistoryReportsParams();
 

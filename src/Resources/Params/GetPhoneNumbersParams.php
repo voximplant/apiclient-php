@@ -4,8 +4,11 @@ namespace Voximplant\Resources\Params;
 
 class GetPhoneNumbersParams
 {
-    /** @var number The particular phone ID to filter */
+    /** @var intlist The particular phone ID to filter */
     public $phone_id;
+
+    /** @var stringlist The phone number list separated by semicolon (;) that can be used instead of phone_id */
+    public $phone_number;
 
     /** @var number The application ID */
     public $application_id;
@@ -19,7 +22,7 @@ class GetPhoneNumbersParams
     /** @var string The phone number start to filter */
     public $phone_template;
 
-    /** @var stringlist The country code list separated by the ';' symbol */
+    /** @var stringlist The country code list separated by semicolon (;) */
     public $country_code;
 
     /** @var string The phone category name. See the [GetPhoneNumberCategories] method */
@@ -46,7 +49,7 @@ class GetPhoneNumbersParams
     /** @var timestamp The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss */
     public $to_phone_purchase_date;
 
-    /** @var intlist The child account ID list separated by the ';' symbol. Use the 'all' value to select all child accounts */
+    /** @var intlist The child account ID list separated by semicolon (;). Use the 'all' value to select all child accounts */
     public $child_account_id;
 
     /** @var boolean Set true to get the children phones only */
@@ -55,7 +58,7 @@ class GetPhoneNumbersParams
     /** @var string The required account verification name to filter */
     public $verification_name;
 
-    /** @var stringlist The account verification status list separated by the ';' symbol. The following values are possible: REQUIRED, IN_PROGRESS, VERIFIED */
+    /** @var stringlist The account verification status list separated by semicolon (;). The following values are possible: REQUIRED, IN_PROGRESS, VERIFIED */
     public $verification_status;
 
     /** @var date Unverified phone hold until the date (from ...) in format: YYYY-MM-DD */
@@ -82,13 +85,13 @@ class GetPhoneNumbersParams
     /** @var boolean The flag of the SMS support */
     public $sms_supported;
 
-    /** @var stringlist The region names list separated by the ';' symbol */
+    /** @var stringlist The region names list separated by semicolon (;) */
     public $phone_region_name;
 
-    /** @var intlist The rule ID list separated by the ';' symbol */
+    /** @var intlist The rule ID list separated by semicolon (;) */
     public $rule_id;
 
-    /** @var stringlist The rule names list separated by the ';' symbol. Can be used only if __application_id__ or __application_name__ is specified */
+    /** @var stringlist The rule names list separated by semicolon (;). Can be used only if __application_id__ or __application_name__ is specified */
     public $rule_name;
 
     /** @var boolean Number is bound to some rule */
@@ -98,6 +101,7 @@ class GetPhoneNumbersParams
     {
         return [
                 'phone_id' => $this->phone_id,
+                    'phone_number' => $this->phone_number,
                     'application_id' => $this->application_id,
                     'application_name' => $this->application_name,
                     'is_bound_to_application' => $this->is_bound_to_application !== null ? (filter_var($this->is_bound_to_application, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,

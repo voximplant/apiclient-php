@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method DeleteRecord Try to remove record and transcription files.
+ * @method DeleteRecord Try to remove a record and transcription files.
  */
 
 // Path to your autoload.php
@@ -21,8 +21,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * record_url - Url to remove
- * record_id - The record id for remove
+ * record_url - The record URL to remove. You can retrieve the record URL via the CallSessionInfoType.records method
+ * record_id - The record ID to remove. You can retrieve the record ID via the CallSessionInfoType.records method
  */
 $params = new DeleteRecordParams();
 

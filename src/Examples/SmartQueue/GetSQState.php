@@ -23,8 +23,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * application_id - The application ID to search by
  * application_name - The application name to search by. Can be used instead of the application_id parameter
- * sq_queue_id - The smart queue ID list. Use the 'all' value to select all smart queues
- * sq_queue_name - The smart queue name list. Can be used instead of sq_queue_id
+ * sq_queue_id - The smart queue ID list separated by semicolon (;). Use the 'all' value to select all smart queues
+ * sq_queue_name - The smart queue name list separated by semicolon (;). Can be used instead of sq_queue_id
  * timezone - The selected timezone or the 'auto' value (the account location)
  */
 $params = new GetSQStateParams();
@@ -32,7 +32,7 @@ $params = new GetSQStateParams();
 $params->application_id = 1;
 $params->sq_queue_id = 1;
 
-// Gets the current state of the smart queue with id = 1.
+// Get the current state of the smart queue with id = 1.
 $result = $voxApi->SmartQueue->GetSQState($params);
 
 // Show result

@@ -76,13 +76,13 @@ class VoximplantApi
     /** @var object CallLists Adds a new CSV file for manual call list processing and bind it with the specified rule. To send a file, use the request body. To start processing calls, use the function [StartNextCallTask]. IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active. */
     public $CallLists;
 
-    /** @var object Scenarios Adds a new scenario. Please use the POST method. */
+    /** @var object Scenarios Adds a new scenario to the Shared folder, so the scenario is available in all the existing applications. Please use the POST method. */
     public $Scenarios;
 
     /** @var object Rules Adds a new rule for the application. */
     public $Rules;
 
-    /** @var object History Gets the call history. */
+    /** @var object History Gets the account's call history, including call duration, cost, logs and other call information. You can filter the call history by a certain date */
     public $History;
 
     /** @var object PSTNBlacklist Add a new phone number to the PSTN blacklist. BlackList works for numbers that are purchased from Voximplant only. Since we have no control over exact phone number format for calls from SIP integrations, blacklisting such numbers should be done via JavaScript scenarios. */
@@ -109,7 +109,7 @@ class VoximplantApi
     /** @var object SmartQueue Gets the metrics for the specified smart queue for the last 30 minutes. */
     public $SmartQueue;
 
-    /** @var object Skills Adds a new ACD operator skill. */
+    /** @var object Skills Adds a new operator's skill. Works only for ACDv1. For SmartQueue/ACDv2, use this reference. */
     public $Skills;
 
     /** @var object AdminUsers Adds a new admin user into the specified parent or child account. */
@@ -136,7 +136,7 @@ class VoximplantApi
     /** @var object RecordStorages Gets the record storages. */
     public $RecordStorages;
 
-    /** @var object RoleSystem Creates a public/private key pair. You can optionally specify one or more roles for the key, see [this article](https://voximplant.com/docs/introduction/introduction_to_voximplant/basic_concepts/service_accounts) for details. */
+    /** @var object RoleSystem Creates a public/private key pair. You can optionally specify one or more roles for the key. */
     public $RoleSystem;
 
     /** @var object KeyValueStorage Creates or updates a key-value pair. If an existing key is passed, the method will return the existing item and will change the value if needed. The keys should be unique within a Voximplant application. */

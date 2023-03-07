@@ -19,13 +19,13 @@ class SetAdminRoleInfoParams
     /** @var string The modification mode of the permission lists (allowed_entries and denied_entries). The following values are possible: add, del, set */
     public $entry_modification_mode;
 
-    /** @var stringlist The list of allowed access entry changes separated by the ';' symbol (the API function names) */
+    /** @var stringlist The list of allowed access entry changes separated by semicolon (;) (the API function names) */
     public $allowed_entries;
 
-    /** @var stringlist The list of denied access entry changes separated by the ';' symbol (the API function names) */
+    /** @var stringlist The list of denied access entry changes separated by semicolon (;) (the API function names) */
     public $denied_entries;
 
-    /** @var intlist The admin role ID list separated by the ';' symbol. Use the 'all' value to select all admin roles. The list specifies the roles from which the allowed_entries and denied_entries will be merged */
+    /** @var intlist The admin role ID list separated by semicolon (;). Use the 'all' value to select all admin roles. The list specifies the roles from which the allowed_entries and denied_entries will be merged */
     public $like_admin_role_id;
 
     /** @var stringlist The admin role name, can be used instead of like_admin_role_id. The name specifies a role from which the allowed_entries and denied_entries will be merged */

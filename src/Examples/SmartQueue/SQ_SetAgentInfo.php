@@ -23,8 +23,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * application_id - ID of the application to search by
  * application_name - Name of the application to search by. Can be used instead of application_id
- * user_id - List of user IDs. Use 'all' to select all the users
- * user_name - List of user names. Can be used instead of user_id
+ * user_id - List of user IDs separated by semicolon (;). Use 'all' to select all the users
+ * user_name - List of user names separated by semicolon (;). Can be used instead of user_id
  * max_simultaneous_conversations - Maximum number of chats that the user processes simultaneously
  * handle_calls - The agent can handle calls. When set to false, the agent is excluded from the CALL-request distribution
  */

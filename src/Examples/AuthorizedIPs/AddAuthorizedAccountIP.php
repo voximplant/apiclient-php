@@ -23,6 +23,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * authorized_ip - The authorized IP4 or network
  * allowed - Set false to add the IP to the blacklist
+ * description - The IP address description
  */
 $params = new AddAuthorizedAccountIPParams();
 

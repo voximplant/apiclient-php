@@ -23,6 +23,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * sip_whitelist_id - The SIP white list item ID
  * sip_whitelist_network - The new network address in format A.B.C.D/L or A.B.C.D/a.b.c.d (example 192.168.1.5/16)
+ * description - The network address description
  */
 $params = new SetSipWhiteListItemParams();
 

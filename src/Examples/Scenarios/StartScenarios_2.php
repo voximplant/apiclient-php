@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method StartScenarios Runs JavaScript scenarios on a Voximplant server. The scenarios run in a new media session.
+ * @method StartScenarios Runs JavaScript scenarios on a Voximplant server. The scenarios run in a new media session. To start a scenario, pass the routing rule ID associated with the necessary scenario. You can use both GET and POST requests, but we recommend using the POST mode if you pass some data in the custom_data field. The maximum number of simultaneous requests is 200. If you exceed this number, you get the 429 error code.
  */
 
 // Path to your autoload.php
@@ -25,8 +25,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * user_name - The user name that can be used instead of user_id. Run the scripts from the user if set
  * application_id - The application ID
  * application_name - The application name that can be used instead of application_id
- * rule_id - The rule ID
- * script_custom_data - The script custom data (like a script argument). Can be accessed in JS scenario via the VoxEngine.customData() method
+ * rule_id - The rule ID that needs to be launched. Please note, the necessary scenario needs to be attached to the rule
+ * script_custom_data - The script custom data, that can be accessed in the scenario via the VoxEngine.customData() method. Use the application/x-www-form-urlencoded content type with UTF-8 encoding.
  * reference_ip - Specifies the IP from the geolocation of predicted subscribers. It allows selecting the nearest server for serving subscribers
  * with_check_url - Set true to get media server session lists url
  */

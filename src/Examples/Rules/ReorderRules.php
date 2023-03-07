@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * rule_id - The rule ID list
+ * rule_id - The rule ID list separated by semicolon (;)
  */
 $params = new ReorderRulesParams();
 

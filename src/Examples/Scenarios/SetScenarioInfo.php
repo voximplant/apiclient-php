@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method SetScenarioInfo Edits the scenario. Please use the POST method.
+ * @method SetScenarioInfo Edits the scenario. You can edit the scenario's name and body. Please use the POST method.
  */
 
 // Path to your autoload.php
@@ -24,7 +24,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * scenario_id - The scenario ID
  * required_scenario_name - The name of the scenario to edit, can be used instead of scenario_id
  * scenario_name - The new scenario name. The length must be less than 30
- * scenario_script - The new scenario text. The length must be less than 128 KB
+ * scenario_script - The new scenario text. Use the application/x-www-form-urlencoded content type with UTF-8 encoding. The length must be less than 128 KB
  */
 $params = new SetScenarioInfoParams();
 

@@ -19,16 +19,16 @@ class SQ_SetQueueInfoParams
     /** @var string New smart queue name within the application, up to 100 characters */
     public $new_sq_queue_name;
 
-    /** @var [SQAgentSelectionStrategies] Agent selection strategy for calls */
+    /** @var string Agent selection strategy for calls. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME" */
     public $call_agent_selection;
 
-    /** @var [SQAgentSelectionStrategies] Agent selection strategy for messages. Equals to the **call_agent_selection** value by default */
+    /** @var string Agent selection strategy for messages. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME". Equals to the **call_agent_selection** value by default */
     public $im_agent_selection;
 
-    /** @var [SQTaskSelectionStrategies] Strategy of prioritizing CALL-type requests for service */
+    /** @var string Strategy of prioritizing CALL-type requests for service. Accepts one of the following values: "MAX_PRIORITY", "MAX_WAITING_TIME" */
     public $call_task_selection;
 
-    /** @var [SQTaskSelectionStrategies] Strategy of prioritizing IM-type requests for service. Equals to the **call_task_selection** value by default */
+    /** @var string Strategy of prioritizing IM-type requests for service. Accepts one of the following values: "MAX_PRIORITY", "MAX_WAITING_TIME". Equals to the **call_task_selection** value by default */
     public $im_task_selection;
 
     /** @var string Agent selection strategy, applied when it is not possible to wait for a suitable free agent. Currently not used */
@@ -48,4 +48,7 @@ class SQ_SetQueueInfoParams
 
     /** @var number Maximum size of the queue with IM-type requests */
     public $im_max_queue_size;
+
+    /** @var number The queue's priority from 1 to 100 */
+    public $priority;
 }

@@ -28,8 +28,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * with_account_roles - Set false to omit the account roles
  * with_parent_roles - Set false to omit the parent roles
  * with_system_roles - Set false to omit the system roles
- * included_admin_user_id - The attached admin user ID list. Use the 'all' value to select all admin users
- * excluded_admin_user_id - Not attached admin user ID list. Use the 'all' value to select all admin users
+ * included_admin_user_id - The attached admin user ID list separated by semicolon (;). Use the 'all' value to select all admin users
+ * excluded_admin_user_id - Not attached admin user ID list separated by semicolon (;). Use the 'all' value to select all admin users
  * full_admin_users_matching - Set false to get roles with partial admin user list matching
  * showing_admin_user_id - The admin user to show in the 'admin_users' field output
  * count - The max returning record count

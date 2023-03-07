@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method AddScenario Adds a new scenario. Please use the POST method.
+ * @method AddScenario Adds a new scenario to the <a href="https://voximplant.com/docs/gettingstarted/basicconcepts/scenarios#shared-scenarios">Shared</a> folder, so the scenario is available in all the existing applications. Please use the POST method.
  */
 
 // Path to your autoload.php
@@ -22,8 +22,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * scenario_name - The scenario name. The length must be less than 30
- * scenario_script - The scenario text. The length must be less than 128 KB
- * rule_id - The rule ID
+ * scenario_script - The scenario text. Use the application/x-www-form-urlencoded content type with UTF-8 encoding. The length must be less than 128 KB
+ * rule_id - The rule ID. The new scenario binds to the specified rule. Please note, if you do not bind the scenario to any rule, you cannot execute the scenario
  * rule_name - The rule name that can be used instead of rule_id
  * rewrite - Rewrite the existing scenario
  */

@@ -21,8 +21,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * application_id - The application ID list. Use the 'all' value to select all applications
- * application_name - The application name list. Can be used instead of application_id
+ * application_id - The application ID list separated by semicolon (;). Use the 'all' value to select all applications
+ * application_name - The application name list separated by semicolon (;). Can be used instead of application_id
  */
 $params = new DelApplicationParams();
 

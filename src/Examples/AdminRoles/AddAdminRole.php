@@ -23,10 +23,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * admin_role_name - The admin role name. The length must be less than 50
  * admin_role_active - The admin role enable flag. If false the allowed and denied entries have no affect
- * like_admin_role_id - The admin role ID list. Use the 'all' value to select all admin roles. The list specifies the roles from which the new role automatically copies all permissions (allowed_entries and denied_entries)
+ * like_admin_role_id - The admin role ID list separated by semicolon (;). Use the 'all' value to select all admin roles. The list specifies the roles from which the new role automatically copies all permissions (allowed_entries and denied_entries)
  * like_admin_role_name - The admin role name that can be used instead of like_admin_role_id. The name specifies a role from which the new role automatically copies all permissions (allowed_entries and denied_entries)
- * allowed_entries - The list of allowed access entries (the API function names)
- * denied_entries - The list of denied access entries (the API function names)
+ * allowed_entries - The list of allowed access entries separated by semicolon (;) (the API function names)
+ * denied_entries - The list of denied access entries separated by semicolon (;) (the API function names)
  */
 $params = new AddAdminRoleParams();
 

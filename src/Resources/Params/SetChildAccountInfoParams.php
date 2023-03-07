@@ -4,13 +4,13 @@ namespace Voximplant\Resources\Params;
 
 class SetChildAccountInfoParams
 {
-    /** @var intlist The child account ID list separated by the ';' symbol. Use the 'all' value to select all child accounts */
+    /** @var intlist The child account ID list separated by semicolon (;). Use the 'all' value to select all child accounts */
     public $child_account_id;
 
-    /** @var stringlist The child account name list separated by the ';' symbol. Can be used instead of child_account_id */
+    /** @var stringlist The child account name list separated by semicolon (;). Can be used instead of child_account_id */
     public $child_account_name;
 
-    /** @var stringlist The child account email list separated by the ';' symbol. Can be used instead of child_account_id */
+    /** @var stringlist The child account email list separated by semicolon (;). Can be used instead of child_account_id */
     public $child_account_email;
 
     /** @var string The new child account email */

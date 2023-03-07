@@ -4,7 +4,7 @@ namespace Voximplant\Resources\Params;
 
 class GetSubscriptionPriceParams
 {
-    /** @var intlist The subscription template ID list separated by the ';' symbol */
+    /** @var intlist The subscription template ID list separated by semicolon (;) */
     public $subscription_template_id;
 
     /** @var string The subscription template type. The following values are possible: PHONE_NUM, SIP_REGISTRATION */

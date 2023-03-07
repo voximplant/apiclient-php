@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method DelSkill Deletes the skill.
+ * @method DelSkill Deletes an operator's skill. Works only for ACDv1. For SmartQueue/ACDv2, use <a href="#how-auth-works">this reference</a>.
  */
 
 // Path to your autoload.php

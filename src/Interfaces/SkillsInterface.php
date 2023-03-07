@@ -5,27 +5,27 @@ namespace Voximplant\Interfaces;
 interface SkillsInterface
 {
     /**
-     * @method Adds a new ACD operator skill.
+     * @method Adds a new operator's skill. Works only for ACDv1. For SmartQueue/ACDv2, use <a href="#how-auth-works">this reference</a>.
      */
     public function AddSkill(\Voximplant\Resources\Params\AddSkillParams $params);
 
     /**
-     * @method Deletes the skill.
+     * @method Deletes an operator's skill. Works only for ACDv1. For SmartQueue/ACDv2, use <a href="#how-auth-works">this reference</a>.
      */
     public function DelSkill(\Voximplant\Resources\Params\DelSkillParams $params);
 
     /**
-     * @method Edits the skill.
+     * @method Edits an operator's skill. Works only for ACDv1. For SmartQueue/ACDv2, use <a href="#how-auth-works">this reference</a>.
      */
     public function SetSkillInfo(\Voximplant\Resources\Params\SetSkillInfoParams $params);
 
     /**
-     * @method Gets the skills.
+     * @method Gets the skills of an operator. Works only for ACDv1. For SmartQueue/ACDv2, use <a href="#how-auth-works">this reference</a>.
      */
     public function GetSkills(\Voximplant\Resources\Params\GetSkillsParams $params);
 
     /**
-     * @method Binds the specified skills to the users (ACD operators) and/or the ACD queues.
+     * @method Binds the specified skills to the users (ACD operators) and/or the ACD queues. Works only for ACDv1. For SmartQueue/ACDv2, use <a href="#how-auth-works">this reference</a>.
      */
     public function BindSkill(\Voximplant\Resources\Params\BindSkillParams $params);
 }
