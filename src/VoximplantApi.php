@@ -85,7 +85,7 @@ class VoximplantApi
     /** @var object History Gets the account's call history, including call duration, cost, logs and other call information. You can filter the call history by a certain date */
     public $History;
 
-    /** @var object PSTNBlacklist Add a new phone number to the PSTN blacklist. BlackList works for numbers that are purchased from Voximplant only. Since we have no control over exact phone number format for calls from SIP integrations, blacklisting such numbers should be done via JavaScript scenarios. */
+    /** @var object PSTNBlacklist Add a new phone number to the PSTN blacklist. Blacklist is used to block inbound calls from specified phone numbers to numbers purchased from Voximplant. Since we have no control over exact phone number format for calls from SIP integrations, blacklisting such numbers should be done via JavaScript scenarios. */
     public $PSTNBlacklist;
 
     /** @var object SIPWhiteList Adds a new network address to the SIP white list. */
