@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method ChangeAccountPlan Configures the account's plan.
+ * @method ChangeAccountPlan Configures the account's plan.<br><br>Please note that when you change the billing plan, we reserve the subscription fee and taxes for the upcoming month. Read more in the <a href='/docs/gettingstarted/billing'>Billing</a> page.
  */
 
 // Path to your autoload.php

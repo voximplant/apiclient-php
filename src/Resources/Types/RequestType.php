@@ -58,7 +58,6 @@ class RequestType
             'support_bank_card' => 'boolean',
             'support_invoice' => 'boolean',
             'can_use_restricted' => 'boolean',
-            'min_payment_amount' => 'number',
         );
     }
 
@@ -268,7 +267,7 @@ class RequestType
         );
     }
 
-    public function CreateManualCallList()
+    public function CreateCallList()
     {
         return array (
             'rule_id' => 'number',
@@ -276,20 +275,12 @@ class RequestType
             'max_simultaneous' => 'number',
             'num_attempts' => 'number',
             'name' => 'string',
-            'file_content' => 'string',
+            'file_content' => 'file',
             'interval_seconds' => 'number',
             'encoding' => 'string',
             'delimiter' => 'string',
             'escape' => 'string',
             'reference_ip' => 'string',
-        );
-    }
-
-    public function StartNextCallTask()
-    {
-        return array (
-            'list_id' => 'intlist',
-            'custom_params' => 'string',
         );
     }
 
@@ -505,6 +496,26 @@ class RequestType
             'with_total_count' => 'boolean',
             'count' => 'number',
             'offset' => 'number',
+            'output' => 'string',
+            'is_async' => 'boolean',
+        );
+    }
+
+    public function GetBriefCallHistory()
+    {
+        return array (
+            'from_date' => 'timestamp',
+            'to_date' => 'timestamp',
+            'timezone' => 'string',
+            'call_session_history_id' => 'intlist',
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'rule_name' => 'string',
+            'remote_number' => 'stringlist',
+            'local_number' => 'stringlist',
+            'call_session_history_custom_data' => 'string',
+            'with_header' => 'boolean',
+            'desc_order' => 'boolean',
             'output' => 'string',
             'is_async' => 'boolean',
         );

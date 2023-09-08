@@ -5,6 +5,7 @@ namespace Voximplant\Resources;
 use Voximplant\Interfaces\DeleteRecordReturn;
 use Voximplant\Interfaces\GetACDHistoryReturn;
 use Voximplant\Interfaces\GetAuditLogReturn;
+use Voximplant\Interfaces\GetBriefCallHistoryReturn;
 use Voximplant\Interfaces\GetCallHistoryReturn;
 use Voximplant\Interfaces\GetHistoryReportsReturn;
 use Voximplant\Interfaces\GetTransactionHistoryReturn;
@@ -16,6 +17,9 @@ class History implements HistoryInterface
 
     /** @object GetCallHistory */
     protected $GetCallHistoryReturn;
+
+    /** @object GetBriefCallHistory */
+    protected $GetBriefCallHistoryReturn;
 
     /** @object GetHistoryReports */
     protected $GetHistoryReportsReturn;
@@ -37,6 +41,7 @@ class History implements HistoryInterface
         $this->client = $client;
 
         $this->GetCallHistoryReturn = new GetCallHistoryReturn();
+        $this->GetBriefCallHistoryReturn = new GetBriefCallHistoryReturn();
         $this->GetHistoryReportsReturn = new GetHistoryReportsReturn();
         $this->GetTransactionHistoryReturn = new GetTransactionHistoryReturn();
         $this->DeleteRecordReturn = new DeleteRecordReturn();
@@ -53,6 +58,17 @@ class History implements HistoryInterface
             $this->GetCallHistoryReturn->$key = $value;
         }
         return $this->GetCallHistoryReturn;
+    }
+
+    /**
+     * @method Gets the account's brief call history. Use the [GetHistoryReports], [DownloadHistoryReport] methods to download the report.
+     */
+    public function GetBriefCallHistory(Params\GetBriefCallHistoryParams $params = null): GetBriefCallHistoryReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetBriefCallHistoryReturn->$key = $value;
+        }
+        return $this->GetBriefCallHistoryReturn;
     }
 
     /**

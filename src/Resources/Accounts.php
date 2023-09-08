@@ -179,7 +179,7 @@ class Accounts implements AccountsInterface
     }
 
     /**
-     * @method Configures the account's plan.
+     * @method Configures the account's plan.Please note that when you change the billing plan, we reserve the subscription fee and taxes for the upcoming month. Read more in the Billing page.
      */
     public function ChangeAccountPlan(Params\ChangeAccountPlanParams $params = null): ChangeAccountPlanReturn
     {

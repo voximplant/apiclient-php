@@ -1205,19 +1205,11 @@ class ResultType
         );
     }
 
-    public function CreateManualCallList()
+    public function CreateCallList()
     {
         return array (
             'result' => 'boolean',
             'count' => 'number',
-            'list_id' => 'number',
-        );
-    }
-
-    public function StartNextCallTask()
-    {
-        return array (
-            'result' => 'number',
             'list_id' => 'number',
         );
     }
@@ -1649,6 +1641,14 @@ class ResultType
             'total_count' => 'number',
             'count' => 'number',
             'timezone' => 'string',
+            'history_report_id' => 'number',
+        );
+    }
+
+    public function GetBriefCallHistory()
+    {
+        return array (
+            'result' => 'number',
             'history_report_id' => 'number',
         );
     }

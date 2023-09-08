@@ -3,22 +3,18 @@
 namespace Voximplant\Resources;
 
 use Voximplant\Interfaces\CallListsInterface;
-use Voximplant\Interfaces\CreateManualCallListReturn;
+use Voximplant\Interfaces\CreateCallListReturn;
 use Voximplant\Interfaces\GetCallListDetailsReturn;
 use Voximplant\Interfaces\GetCallListsReturn;
 use Voximplant\Interfaces\RecoverCallListReturn;
-use Voximplant\Interfaces\StartNextCallTaskReturn;
 use Voximplant\Interfaces\StopCallListProcessingReturn;
 
 class CallLists implements CallListsInterface
 {
     protected $client;
 
-    /** @object CreateManualCallList */
-    protected $CreateManualCallListReturn;
-
-    /** @object StartNextCallTask */
-    protected $StartNextCallTaskReturn;
+    /** @object CreateCallList */
+    protected $CreateCallListReturn;
 
     /** @object GetCallLists */
     protected $GetCallListsReturn;
@@ -36,8 +32,7 @@ class CallLists implements CallListsInterface
     {
         $this->client = $client;
 
-        $this->CreateManualCallListReturn = new CreateManualCallListReturn();
-        $this->StartNextCallTaskReturn = new StartNextCallTaskReturn();
+        $this->CreateCallListReturn = new CreateCallListReturn();
         $this->GetCallListsReturn = new GetCallListsReturn();
         $this->GetCallListDetailsReturn = new GetCallListDetailsReturn();
         $this->StopCallListProcessingReturn = new StopCallListProcessingReturn();
@@ -45,25 +40,14 @@ class CallLists implements CallListsInterface
     }
 
     /**
-     * @method Adds a new CSV file for manual call list processing and bind it with the specified rule. To send a file, use the request body. To start processing calls, use the function [StartNextCallTask]. IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active.
+     * @method Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the following options in a CSV file: **__start_execution_time** – when the call list processing will start every day, UTC+0 24-h format: HH:mm:ss**__end_execution_time** – when the call list processing will stop every day,  UTC+0 24-h format: HH:mm:ss**__start_at** – when the call list processing will start, UNIX timestamp. If not specified, the processing will start immediately after a method callThis method accepts CSV files with custom delimiters, such a commas (,), semicolons (;) and other. To specify a delimiter, pass it to the delimiter parameter.IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active.
      */
-    public function CreateManualCallList(Params\CreateManualCallListParams $params = null): CreateManualCallListReturn
+    public function CreateCallList(Params\CreateCallListParams $params = null): CreateCallListReturn
     {
         foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-            $this->CreateManualCallListReturn->$key = $value;
+            $this->CreateCallListReturn->$key = $value;
         }
-        return $this->CreateManualCallListReturn;
-    }
-
-    /**
-     * @method Start processing the next task.
-     */
-    public function StartNextCallTask(Params\StartNextCallTaskParams $params = null): StartNextCallTaskReturn
-    {
-        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-            $this->StartNextCallTaskReturn->$key = $value;
-        }
-        return $this->StartNextCallTaskReturn;
+        return $this->CreateCallListReturn;
     }
 
     /**

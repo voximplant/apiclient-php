@@ -52,9 +52,6 @@ class SetChildAccountInfoParams
     /** @var boolean Set to true to allow use restricted directions */
     public $can_use_restricted;
 
-    /** @var number The minimum payment amount */
-    public $min_payment_amount;
-
     public function toArray()
     {
         return [
@@ -74,7 +71,6 @@ class SetChildAccountInfoParams
                     'support_bank_card' => $this->support_bank_card !== null ? (filter_var($this->support_bank_card, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
                     'support_invoice' => $this->support_invoice !== null ? (filter_var($this->support_invoice, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
                     'can_use_restricted' => $this->can_use_restricted !== null ? (filter_var($this->can_use_restricted, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
-                    'min_payment_amount' => $this->min_payment_amount,
             ];
     }
 }

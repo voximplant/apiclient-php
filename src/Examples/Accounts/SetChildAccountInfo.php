@@ -37,7 +37,6 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * support_bank_card - Set to true to allow the bank card payments
  * support_invoice - Set to true to allow the bank invoices
  * can_use_restricted - Set to true to allow use restricted directions
- * min_payment_amount - The minimum payment amount
  */
 $params = new SetChildAccountInfoParams();
 

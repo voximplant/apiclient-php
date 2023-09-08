@@ -73,7 +73,7 @@ class VoximplantApi
     /** @var object Users Adds a new user. */
     public $Users;
 
-    /** @var object CallLists Adds a new CSV file for manual call list processing and bind it with the specified rule. To send a file, use the request body. To start processing calls, use the function [StartNextCallTask]. IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active. */
+    /** @var object CallLists Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the following options in a CSV file: **__start_execution_time** – when the call list processing will start every day, UTC+0 24-h format: HH:mm:ss**__end_execution_time** – when the call list processing will stop every day,  UTC+0 24-h format: HH:mm:ss**__start_at** – when the call list processing will start, UNIX timestamp. If not specified, the processing will start immediately after a method callThis method accepts CSV files with custom delimiters, such a commas (,), semicolons (;) and other. To specify a delimiter, pass it to the delimiter parameter.IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing won't start, or it stops immediately if it was active. */
     public $CallLists;
 
     /** @var object Scenarios Adds a new scenario to the Shared folder, so the scenario is available in all the existing applications. Please use the POST method. */
@@ -85,16 +85,16 @@ class VoximplantApi
     /** @var object History Gets the account's call history, including call duration, cost, logs and other call information. You can filter the call history by a certain date */
     public $History;
 
-    /** @var object PSTNBlacklist Add a new phone number to the PSTN blacklist. BlackList works for numbers that are purchased from Voximplant only. Since we have no control over exact phone number format for calls from SIP integrations, blacklisting such numbers should be done via JavaScript scenarios. */
+    /** @var object PSTNBlacklist Add a new phone number to the PSTN blacklist. Blacklist is used to block inbound calls from specified phone numbers to numbers purchased from Voximplant. Since we have no control over exact phone number format for calls from SIP integrations, blacklisting such numbers should be done via JavaScript scenarios. */
     public $PSTNBlacklist;
 
     /** @var object SIPWhiteList Adds a new network address to the SIP white list. */
     public $SIPWhiteList;
 
-    /** @var object SIPRegistration Create a new SIP registration. You should specify the application_id or application_name if you specify the rule_name or user_id, or user_name. You should set is_persistent=true if you specify the user_id or user_name. You can bind only one SIP registration to the user (the previous SIP registration will be auto unbound). */
+    /** @var object SIPRegistration Create a new SIP registration. You should specify the application_id or application_name if you specify the rule_name or user_id, or user_name. You should set is_persistent=true if you specify the user_id or user_name. You can bind only one SIP registration to the user (the previous SIP registration will be auto unbound).Please note that when you create a SIP registration, we reserve the subscription fee and taxes for the upcoming month. Read more in the Billing page. */
     public $SIPRegistration;
 
-    /** @var object PhoneNumbers Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps. */
+    /** @var object PhoneNumbers Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps.Please note that when you purchase a phone number, we reserve the subscription fee and taxes for the upcoming month. Read more in the Billing page. */
     public $PhoneNumbers;
 
     /** @var object CallerIDs Adds a new caller ID. Caller ID is the phone that will be displayed to the called user. This number can be used for call back. */

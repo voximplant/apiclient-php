@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method AttachPhoneNumber Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps.
+ * @method AttachPhoneNumber Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps.<br><br>Please note that when you purchase a phone number, we reserve the subscription fee and taxes for the upcoming month. Read more in the <a href='/docs/gettingstarted/billing'>Billing</a> page.
  */
 
 // Path to your autoload.php

@@ -5,7 +5,7 @@ namespace Voximplant\Interfaces;
 interface PhoneNumbersInterface
 {
     /**
-     * @method Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps.
+     * @method Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps.<br><br>Please note that when you purchase a phone number, we reserve the subscription fee and taxes for the upcoming month. Read more in the <a href='/docs/gettingstarted/billing'>Billing</a> page.
      */
     public function AttachPhoneNumber(\Voximplant\Resources\Params\AttachPhoneNumberParams $params);
 
