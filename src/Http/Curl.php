@@ -70,6 +70,7 @@ class Curl
             $err = [
                 'msg' => 'Failed to parse server response. Err: '.json_last_error_msg(),
                 'code' => json_last_error(),
+                'body' => $body,
             ];
             $response = [
                 'error' => $err,
