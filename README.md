@@ -1,32 +1,36 @@
 # Voximplant API client library
-#### Version 1.0
+
+#### Version 2.1.0
 
 ## Prerequisites
 
 In order to use the Voximplant PHP SDK, you need the following:
+
 1. A developer account. If you don't have one, [sign up here](https://manage.voximplant.com/auth/sign_up).
-1. A private API key. There are 2 options to obtain it: 
+1. A private API key. There are 2 options to obtain it:
     1. Either generate it in the [Voximplant Control panel](https://manage.voximplant.com/settings/service_accounts)
-    1. Or call the [CreateKey](https://voximplant.com/docs/references/httpapi/rolesystem#createkey) HTTP API method with the specified [authentication parameters](https://voximplant.com/docs/howtos/integration/httpapi/auth). You'll receive a response with the __result__ field in it. Save the __result__ value in a file (since we don't store the keys, save it securely on your side).
+    1. Or call the [CreateKey](https://voximplant.com/docs/references/httpapi/rolesystem#createkey) HTTP API method with
+       the specified [authentication parameters](https://voximplant.com/docs/howtos/integration/httpapi/auth). You'll
+       receive a response with the __result__ field in it. Save the __result__ value in a file (since we don't store the
+       keys, save it securely on your side).
 
 ## How to use
-To install the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:
 
+To install the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:
 
 ```json 
 {
-    "require": {
-        "voximplant/apiclient-php": "*@dev"
-    }
+  "require": {
+    "voximplant/apiclient-php": "*@dev"
+  }
 }
 ```
 
-Then run 
+Then run
 
 ```bash
 composer install
 ```
-
 
 Next, specify the path to the file with the __result__ value either in the constructor or using the environment.
 
@@ -37,14 +41,15 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 ```
 
 __env__:
+
 ```php
 $_ENV['VOXIMPLANT_CREDENTIALS_PATH'] = 'path/to/private/api/key.json';
 ```
 
 From now on you have access to the SDK methods.
 
-
 ## Examples
+
 ### Start a scenario
 
 ```php
@@ -72,6 +77,7 @@ print_r($result);
 ```
 
 ### Send an SMS
+
 ```php
 use Voximplant\VoximplantApi;
 use Voximplant\Resources\Params\SendSmsMessageParams;
@@ -97,6 +103,7 @@ $result = $voxApi->SMS->SendSmsMessage($params);
 // Show result
 print_r($result);
 ```
+
 ### Get a call history item
 
 ```php
