@@ -22,8 +22,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * key_id - The key's ID
- * role_id - The role id list separated by semicolon (;)
- * role_name - The role name list separated by semicolon (;)
+ * role_id - The role id list separated by semicolons (;)
+ * role_name - The role name list separated by semicolons (;)
  */
 $params = new SetKeyRolesParams();
 

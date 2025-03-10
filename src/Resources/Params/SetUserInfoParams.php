@@ -25,10 +25,10 @@ class SetUserInfoParams
     /** @var string The new user password. Must be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character */
     public $user_password;
 
-    /** @var boolean  Set 'true' to use the parent account's money, 'false' to use a separate user balance */
+    /** @var boolean Whether to use the parent account's money, 'false' to use a separate user balance */
     public $parent_accounting;
 
-    /** @var boolean The user enable flag */
+    /** @var boolean Whether the user is active. Inactive users cannot log in to applications */
     public $user_active;
 
     /** @var string Any string */

@@ -40,7 +40,7 @@ class SIPRegistration implements SIPRegistrationInterface
     }
 
     /**
-     * @method Create a new SIP registration. You should specify the application_id or application_name if you specify the rule_name or user_id, or user_name. You should set is_persistent=true if you specify the user_id or user_name. You can bind only one SIP registration to the user (the previous SIP registration will be auto unbound).Please note that when you create a SIP registration, we reserve the subscription fee and taxes for the upcoming month. Read more in the Billing page.
+     * @method Create a new SIP registration. You should specify the application_id or application_name if you specify the rule_name or user_id, or user_name. You should set is_persistent=true if you specify the user_id or user_name. You can bind only one SIP registration to the user (the previous SIP registration are automatically unbound).Please note that when you create a SIP registration, we reserve the subscription fee and taxes for the upcoming month. Read more in the Billing page.
      */
     public function CreateSipRegistration(Params\CreateSipRegistrationParams $params = null): CreateSipRegistrationReturn
     {
@@ -51,7 +51,7 @@ class SIPRegistration implements SIPRegistrationInterface
     }
 
     /**
-     * @method Update SIP registration. You should specify the application_id or application_name if you specify the rule_name or user_id, or user_name. You can bind only one SIP registration to the user (the previous SIP registration will be auto unbound).
+     * @method Update SIP registration. You should specify the application_id or application_name if you specify the rule_name or user_id, or user_name. You can bind only one SIP registration to the user (the previous SIP registration is automatically unbound).
      */
     public function UpdateSipRegistration(Params\UpdateSipRegistrationParams $params = null): UpdateSipRegistrationReturn
     {
@@ -62,7 +62,7 @@ class SIPRegistration implements SIPRegistrationInterface
     }
 
     /**
-     * @method Bind the SIP registration to the application/user or unbind the SIP registration from the application/user. You should specify the application_id or application_name if you specify the rule_name or user_id, or user_name. You should specify the sip_registration_id if you set bind=true. You can bind only one SIP registration to the user (the previous SIP registration will be auto unbound).
+     * @method Bind the SIP registration to the application/user or unbind the SIP registration from the application/user. You should specify the application_id or application_name if you specify the rule_name or user_id, or user_name. You should specify the sip_registration_id if you set bind=true. You can bind only one SIP registration to the user (the previous SIP registration is automatically unbound).
      */
     public function BindSipRegistration(Params\BindSipRegistrationParams $params = null): BindSipRegistrationReturn
     {

@@ -10,7 +10,7 @@ class GetCallerIDsParams
     /** @var string The phone number to filter */
     public $callerid_number;
 
-    /** @var boolean The active flag to filter */
+    /** @var boolean Whether the account is active to filter */
     public $active;
 
     /** @var string The following values are available: 'caller_number' (ascent order), 'verified_until' (ascent order) */
@@ -19,7 +19,7 @@ class GetCallerIDsParams
     /** @var number The max returning record count */
     public $count;
 
-    /** @var number The first N records will be skipped in the output */
+    /** @var number The first N records are skipped in the output */
     public $offset;
 
     public function toArray()

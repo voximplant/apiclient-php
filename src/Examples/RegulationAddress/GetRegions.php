@@ -25,7 +25,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method
  * city_name - The pattern of city's name
  * count - The returned regions count
- * offset - The first N records will be skipped in the output
+ * offset - The first N records are skipped in the output
  */
 $params = new GetRegionsParams();
 

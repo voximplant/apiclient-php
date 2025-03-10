@@ -27,4 +27,7 @@ class StartConferenceParams
 
     /** @var string Specifies the IP from the geolocation of predicted subscribers. It allows selecting the nearest server for serving subscribers */
     public $reference_ip;
+
+    /** @var string Specifies the location of the server where the scenario needs to be executed. Has higher priority than `reference_ip`. Request [getServerLocations](https://api.voximplant.com/getServerLocations) for possible values */
+    public $server_location;
 }

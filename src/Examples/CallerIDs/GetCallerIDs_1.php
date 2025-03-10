@@ -23,10 +23,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * callerid_id - The id of the callerID object to filter
  * callerid_number - The phone number to filter
- * active - The active flag to filter
+ * active - Whether the account is active to filter
  * order_by - The following values are available: 'caller_number' (ascent order), 'verified_until' (ascent order)
  * count - The max returning record count
- * offset - The first N records will be skipped in the output
+ * offset - The first N records are skipped in the output
  */
 $params = new GetCallerIDsParams();
 

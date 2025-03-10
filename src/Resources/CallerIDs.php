@@ -40,7 +40,7 @@ class CallerIDs implements CallerIDsInterface
     }
 
     /**
-     * @method Adds a new caller ID. Caller ID is the phone that will be displayed to the called user. This number can be used for call back.
+     * @method Adds a new caller ID. Caller ID is the phone that is displayed to the called user. This number can be used for call back.
      */
     public function AddCallerID(Params\AddCallerIDParams $params = null): AddCallerIDReturn
     {
@@ -62,7 +62,7 @@ class CallerIDs implements CallerIDsInterface
     }
 
     /**
-     * @method Deletes the CallerID. Note: you can't delete a CID permanently (the antispam defence).
+     * @method Deletes the CallerID. Note: you cannot delete a CID permanently (the antispam defence).
      */
     public function DelCallerID(Params\DelCallerIDParams $params = null): DelCallerIDReturn
     {

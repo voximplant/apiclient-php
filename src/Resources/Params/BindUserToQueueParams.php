@@ -4,7 +4,7 @@ namespace Voximplant\Resources\Params;
 
 class BindUserToQueueParams
 {
-    /** @var boolean Bind or unbind users */
+    /** @var boolean Whether to bind or unbind users */
     public $bind;
 
     /** @var number The application ID */
@@ -13,16 +13,16 @@ class BindUserToQueueParams
     /** @var string The application name that can be used instead of application_id */
     public $application_name;
 
-    /** @var intlist The user ID list separated by semicolon (;). Use the 'all' value to specify all users bound to the application */
+    /** @var intlist The user ID list separated by semicolons (;). Use the 'all' value to specify all users bound to the application */
     public $user_id;
 
-    /** @var stringlist The user name list separated by semicolon (;). user_name can be used instead of user_id */
+    /** @var stringlist The user name list separated by semicolons (;). user_name can be used instead of user_id */
     public $user_name;
 
-    /** @var intlist The ACD queue ID list separated by semicolon (;). Use the 'all' value to specify all queues bound to the application */
+    /** @var intlist The ACD queue ID list separated by semicolons (;). Use the 'all' value to specify all queues bound to the application */
     public $acd_queue_id;
 
-    /** @var stringlist The queue name that can be used instead of acd_queue_id. The queue name list separated by semicolon (;) */
+    /** @var stringlist The queue name that can be used instead of acd_queue_id. The queue name list separated by semicolons (;) */
     public $acd_queue_name;
 
     public function toArray()

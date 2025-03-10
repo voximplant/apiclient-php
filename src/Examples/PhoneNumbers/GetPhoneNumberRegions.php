@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetPhoneNumberRegions Get the country regions of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
+ * @method GetPhoneNumberRegions Get the country regions of the phone numbers. The response also contains the info about multiple numbers subscription for the child accounts.
  */
 
 // Path to your autoload.php
@@ -24,7 +24,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * country_code - The country code
  * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method
  * country_state - The country state code (example: AL, CA, ... )
- * omit_empty - Set to 'false' to show all the regions (with and without phone numbers in stock)
+ * omit_empty - Whether not to show all the regions (with and without phone numbers in stock)
  * phone_region_id - The phone region ID to filter
  * phone_region_name - The phone region name to filter
  * phone_region_code - The region phone prefix to filter

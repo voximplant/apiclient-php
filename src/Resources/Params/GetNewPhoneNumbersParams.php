@@ -19,6 +19,9 @@ class GetNewPhoneNumbersParams
     /** @var number The max returning record count */
     public $count;
 
-    /** @var number The first N records will be skipped in the output */
+    /** @var number The first N records are skipped in the output */
     public $offset;
+
+    /** @var string The phone number searching mask. Asterisk represents zero or more occurrences of any character */
+    public $phone_number_mask;
 }

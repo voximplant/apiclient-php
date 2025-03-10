@@ -13,7 +13,7 @@ class GetPhoneNumberRegionsParams
     /** @var string The country state code (example: AL, CA, ... ) */
     public $country_state;
 
-    /** @var boolean Set to 'false' to show all the regions (with and without phone numbers in stock) */
+    /** @var boolean Whether not to show all the regions (with and without phone numbers in stock) */
     public $omit_empty;
 
     /** @var number The phone region ID to filter */

@@ -4,7 +4,7 @@ namespace Voximplant\Resources\Params;
 
 class GetAccountInfoParams
 {
-    /** @var boolean Set true to get the account's live balance */
+    /** @var boolean Whether to get the account's live balance */
     public $return_live_balance;
 
     public function toArray()

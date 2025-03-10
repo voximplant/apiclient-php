@@ -26,9 +26,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * application_id - The application ID
  * application_name - The application name that can be used instead of application_id
  * rule_id - The rule ID that needs to be launched. Please note, the necessary scenario needs to be attached to the rule
- * script_custom_data - The script custom data, that can be accessed in the scenario via the VoxEngine.customData() method. Use the application/x-www-form-urlencoded content type with UTF-8 encoding.
+ * script_custom_data - The script custom data, that can be accessed in the scenario via the VoxEngine.customData() method. Use the application/x-www-form-urlencoded content type with UTF-8 encoding
  * reference_ip - Specifies the IP from the geolocation of predicted subscribers. It allows selecting the nearest server for serving subscribers
- * with_check_url - Set true to get media server session lists url
+ * server_location - Specifies the location of the server where the scenario needs to be executed. Has higher priority than `reference_ip`. Request [getServerLocations](https://api.voximplant.com/getServerLocations) for possible values
+ * with_check_url - Whether to get media server session lists url
  */
 $params = new StartScenariosParams();
 

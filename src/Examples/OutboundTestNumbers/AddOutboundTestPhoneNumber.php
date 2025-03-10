@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method AddOutboundTestPhoneNumber Adds a personal phone number to test outbound calls. Only one personal phone number can be used. To replace it with another, delete the existing one first.
+ * @method AddOutboundTestPhoneNumber Adds a personal phone number to test outgoing calls. Only one personal phone number can be used. To replace it with another, delete the existing one first.
  */
 
 // Path to your autoload.php

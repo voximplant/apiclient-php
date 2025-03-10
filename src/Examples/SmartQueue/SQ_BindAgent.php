@@ -23,11 +23,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * application_id - ID of the application to search by
  * application_name - Name of the application to search by. Can be used instead of application_id
- * sq_queue_id - ID of the smart queue. Pass a list of values divided by ; or the "all" keyword
- * sq_queue_name - Name of the smart queue. Pass a list of names divided by ; or the "all" keyword
- * user_id - List of user IDs separated by semicolon (;). Use 'all' to select all the users
- * user_name - List of user names separated by semicolon (;). Can be used instead of user_id
- * bind_mode - Binding mode
+ * sq_queue_id - ID of the SmartQueue. Pass a list of values divided by ; or the "all" keyword
+ * sq_queue_name - Name of the SmartQueue. Pass a list of names divided by ; or the "all" keyword
+ * user_id - List of user IDs separated by semicolons (;). Use 'all' to select all the users
+ * user_name - List of user names separated by semicolons (;). Can be used instead of user_id
+ * bind_mode - Binding mode. Accepts one of the [SQAgentBindingModes] enum values
  */
 $params = new SQ_BindAgentParams();
 

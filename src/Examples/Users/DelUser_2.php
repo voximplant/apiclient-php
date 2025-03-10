@@ -21,8 +21,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * user_id - The user ID list separated by semicolon (;). Use the 'all' value to select all users
- * user_name - The user name list separated by semicolon (;) that can be used instead of user_id
+ * user_id - The user ID list separated by semicolons (;). Use the 'all' value to select all users
+ * user_name - The user name list separated by semicolons (;) that can be used instead of user_id
  * application_id - Delete the specified users bound to the application ID. It is required if the user_name is specified
  * application_name - Delete the specified users bound to the application name. Can be used instead of the application_id parameter
  */

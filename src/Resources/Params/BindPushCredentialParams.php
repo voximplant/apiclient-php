@@ -4,13 +4,13 @@ namespace Voximplant\Resources\Params;
 
 class BindPushCredentialParams
 {
-    /** @var intlist The push credentials ID list separated by semicolon (;) */
+    /** @var intlist The push credentials ID list separated by semicolons (;) */
     public $push_credential_id;
 
-    /** @var intlist The application ID list separated by semicolon (;). Use the 'all' value to select all applications */
+    /** @var intlist The application ID list separated by semicolons (;). Use the 'all' value to select all applications */
     public $application_id;
 
-    /** @var boolean Set to false for unbind. Default value is true */
+    /** @var boolean Whether to bind or unbind (set true or false respectively) */
     public $bind;
 
     public function toArray()

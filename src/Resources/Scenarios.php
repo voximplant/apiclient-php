@@ -132,7 +132,7 @@ class Scenarios implements ScenariosInterface
     }
 
     /**
-     * @method Runs a session for video conferencing or joins the existing video conference session.When you create a session by calling this method, a scenario runs on one of the servers dedicated to video conferencing. All further method calls with the same **conference_name** won't create a new video conference session but join the existing one.Use the [StartScenarios] method for creating audio conferences.
+     * @method Runs a session for video conferencing or joins the existing video conference session.When you create a session by calling this method, a scenario runs on one of the servers dedicated to video conferencing. All further method calls with the same **conference_name** do not create a new video conference session but join the existing one.Use the [StartScenarios] method for creating audio conferences.
      */
     public function StartConference(Params\StartConferenceParams $params = null): StartConferenceReturn
     {

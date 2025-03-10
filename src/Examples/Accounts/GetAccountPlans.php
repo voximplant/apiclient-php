@@ -21,8 +21,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * plan_type - The plan type list separated by semicolon (;). The possible values are IM, MAU
- * plan_subscription_template_id - The plan ID list separated by semicolon (;)
+ * plan_type - The plan type list separated by semicolons (;). The possible values are IM, MAU
+ * plan_subscription_template_id - The plan ID list separated by semicolons (;)
  */
 $params = new GetAccountPlansParams();
 

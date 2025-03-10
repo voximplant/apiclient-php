@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method StopCallListProcessing Stop processing the specified call list.
+ * @method StopCallListProcessing Stops processing the specified call list.
  */
 
 // Path to your autoload.php

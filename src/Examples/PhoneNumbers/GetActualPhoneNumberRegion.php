@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetActualPhoneNumberRegion Get actual info on the country region of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
+ * @method GetActualPhoneNumberRegion Get actual info on the country region of the phone numbers. The response also contains the info about multiple numbers subscription for the child accounts.
  */
 
 // Path to your autoload.php

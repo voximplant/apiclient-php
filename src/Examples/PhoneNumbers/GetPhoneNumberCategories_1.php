@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * country_code - Country code list separated by semicolon (;)
+ * country_code - Country code list separated by semicolons (;)
  * sandbox - Flag allows you to display phone number categories only of the sandbox, real or all .The following values are possible: 'all', 'true', 'false'
  * locale - The 2-letter locale code. Supported values are EN, RU
  */

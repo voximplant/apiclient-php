@@ -16,7 +16,7 @@ class SetQueueInfoParams
     /** @var number The integer queue priority. The highest priority is 0 */
     public $acd_queue_priority;
 
-    /** @var boolean Set false to disable the auto binding of operators to a queue by skills comparing */
+    /** @var boolean Whether to enable the auto binding of operators to a queue by skills comparing */
     public $auto_binding;
 
     /** @var number The value in the range of [0.5 ... 1.0]. The value 1.0 means the service probability 100% in challenge with a lower priority queue */

@@ -75,7 +75,7 @@ interface RegulationAddressInterface
 }
 class GetAvailableRegulationsReturn
 {
-    /** @var boolean If result equals 1: 1) the user has at least one regulation address which is appropriate for verification or 2) the verification is not required. If result equals 0, the regulations address needs to be created */
+    /** @var boolean Whether the user has at least one regulation address which is appropriate for verification or the verification is not required. If result is false, the regulations address needs to be created */
     public $result;
 
     /** @var [RegulationAddress] The available RegulationAddress records */

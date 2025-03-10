@@ -19,13 +19,16 @@ class AddRuleParams
     /** @var string The exclude pattern regex. The length must be less than 64 KB */
     public $rule_pattern_exclude;
 
-    /** @var boolean Video conference is required */
+    /** @var boolean Whether video conference is required */
     public $video_conference;
 
-    /** @var intlist The scenario ID list separated by semicolon (;) */
+    /** @var string The service account ID to bind to the rule. Read more in the [guide](/docs/guides/voxengine/management-api) */
+    public $bind_key_id;
+
+    /** @var intlist The scenario ID list separated by semicolons (;) */
     public $scenario_id;
 
-    /** @var stringlist The scenario name list separated by semicolon (;). Can be used instead of scenario_id */
+    /** @var stringlist The scenario name list separated by semicolons (;). Can be used instead of scenario_id */
     public $scenario_name;
 
     public function toArray()
@@ -37,6 +40,7 @@ class AddRuleParams
                     'rule_pattern' => $this->rule_pattern,
                     'rule_pattern_exclude' => $this->rule_pattern_exclude,
                     'video_conference' => $this->video_conference !== null ? (filter_var($this->video_conference, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'bind_key_id' => $this->bind_key_id,
                     'scenario_id' => $this->scenario_id,
                     'scenario_name' => $this->scenario_name,
             ];

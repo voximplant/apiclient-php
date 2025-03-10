@@ -10,25 +10,25 @@ class SQ_SetQueueInfoParams
     /** @var string Name of the application to search by. Can be used instead of application_id */
     public $application_name;
 
-    /** @var number ID of the smart queue to search for */
+    /** @var number ID of the SmartQueue to search for */
     public $sq_queue_id;
 
-    /** @var string Name of the smart queue to search for. Can be used instead of sq_queue_id */
+    /** @var string Name of the SmartQueue to search for. Can be used instead of sq_queue_id */
     public $sq_queue_name;
 
-    /** @var string New smart queue name within the application, up to 100 characters */
+    /** @var string New SmartQueue name within the application, up to 100 characters */
     public $new_sq_queue_name;
 
     /** @var string Agent selection strategy for calls. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME" */
     public $call_agent_selection;
 
-    /** @var string Agent selection strategy for messages. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME". Equals to the **call_agent_selection** value by default */
+    /** @var string Agent selection strategy for messages. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME". The default value is **call_agent_selection** */
     public $im_agent_selection;
 
     /** @var string Strategy of prioritizing CALL-type requests for service. Accepts one of the following values: "MAX_PRIORITY", "MAX_WAITING_TIME" */
     public $call_task_selection;
 
-    /** @var string Strategy of prioritizing IM-type requests for service. Accepts one of the following values: "MAX_PRIORITY", "MAX_WAITING_TIME". Equals to the **call_task_selection** value by default */
+    /** @var string Strategy of prioritizing IM-type requests for service. Accepts one of the following values: "MAX_PRIORITY", "MAX_WAITING_TIME". The default value is **call_task_selection** */
     public $im_task_selection;
 
     /** @var string Agent selection strategy, applied when it is not possible to wait for a suitable free agent. Currently not used */

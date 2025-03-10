@@ -23,20 +23,20 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * from_date - The UTC 'from' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * to_date - The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
- * acd_session_history_id - The ACD session history ID list separated by semicolon (;)
- * acd_request_id - The ACD request ID list separated by semicolon (;)
- * acd_queue_id - The ACD queue ID list to filter separated by semicolon (;)
- * user_id - The user ID list to filter separated by semicolon (;)
- * operator_hangup - Set true to get the calls terminated by the operator
- * unserviced - The unserviced calls by the operator
+ * acd_session_history_id - The ACD session history ID list separated by semicolons (;)
+ * acd_request_id - The ACD request ID list separated by semicolons (;)
+ * acd_queue_id - The ACD queue ID list to filter separated by semicolons (;)
+ * user_id - The user ID list to filter separated by semicolons (;)
+ * operator_hangup - Whether to get the calls terminated by the operator
+ * unserviced - Whether the call is unserviced by the operator
  * min_waiting_time - The min waiting time filter
- * rejected - The rejected calls by the 'max_queue_size', 'max_waiting_time' threshold
- * with_events - Set true to get the bound events
- * with_header - Set false to get a CSV file without the column names if the output=csv
- * desc_order - Set true to get records in the descent order
+ * rejected - Whether the call is rejected calls by the 'max_queue_size', 'max_waiting_time' threshold
+ * with_events - Whether to get the bound events
+ * with_header - Whether to get a CSV file with the column names if the output=csv
+ * desc_order - Whether to get records in the descent order
  * count - The max returning record count
- * offset - The first N records will be skipped in the output
- * output - The output format. The following values available: json, csv
+ * offset - The first N records are skipped in the output
+ * output - The output format. The following values available: **json**, **csv**, **xls**. The default value is **json**
  */
 $params = new GetACDHistoryParams();
 

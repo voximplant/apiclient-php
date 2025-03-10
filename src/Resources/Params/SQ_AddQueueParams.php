@@ -10,19 +10,19 @@ class SQ_AddQueueParams
     /** @var string Name of the application to bind to. Can be used instead of application_id */
     public $application_name;
 
-    /** @var string Unique smart queue name within the application, up to 100 characters */
+    /** @var string Unique SmartQueue name within the application, up to 100 characters */
     public $sq_queue_name;
 
     /** @var string Agent selection strategy for calls. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME" */
     public $call_agent_selection;
 
-    /** @var string Agent selection strategy for messages. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME". Equals to the **call_agent_selection** value by default */
+    /** @var string Agent selection strategy for messages. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME". The default value is **call_agent_selection** */
     public $im_agent_selection;
 
-    /** @var string Strategy of prioritizing CALL-type requests for service. Accepts one of the following values: "MAX_PRIORITY", "MAX_WAITING_TIME" */
+    /** @var string Call type requests prioritizing strategy. Accepts one of the [SQTaskSelectionStrategies] enum values */
     public $call_task_selection;
 
-    /** @var string Strategy of prioritizing IM-type requests for service. Accepts one of the following values: "MAX_PRIORITY", "MAX_WAITING_TIME". Equals to the **call_task_selection** value by default */
+    /** @var string IM type requests prioritizing strategy. Accepts one of the [SQTaskSelectionStrategies] enum values. The default value is **call_task_selection** */
     public $im_task_selection;
 
     /** @var string Agent selection strategy, applied when it is not possible to wait for a suitable free agent. Currently not used */

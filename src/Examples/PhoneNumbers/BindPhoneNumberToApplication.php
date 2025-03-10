@@ -21,13 +21,13 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * phone_id - The phone ID list separated by semicolon (;). Use the 'all' value to select all phone ids
- * phone_number - The phone number list separated by semicolon (;) that can be used instead of phone_id
+ * phone_id - The phone ID list separated by semicolons (;). Use the 'all' value to select all phone ids
+ * phone_number - The phone number list separated by semicolons (;) that can be used instead of phone_id
  * application_id - The application ID
  * application_name - The application name that can be used instead of application_id
  * rule_id - The rule ID
  * rule_name - The rule name that can be used instead of rule_id
- * bind - Bind or unbind (set true or false respectively)
+ * bind - Whether to bind or unbind (set true or false respectively)
  */
 $params = new BindPhoneNumberToApplicationParams();
 

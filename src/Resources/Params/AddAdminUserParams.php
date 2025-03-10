@@ -13,10 +13,10 @@ class AddAdminUserParams
     /** @var string The admin user password. The length must be at least 6 symbols */
     public $new_admin_user_password;
 
-    /** @var boolean The admin user enable flag */
+    /** @var boolean Whether the admin user is active */
     public $admin_user_active;
 
-    /** @var string The role(s) ID created via Managing Admin Roles methods. The attaching admin role ID list separated by semicolon (;). Use the 'all' value to select all admin roles */
+    /** @var string The role(s) ID created via Managing Admin Roles methods. The attaching admin role ID list separated by semicolons (;). Use the 'all' value to select all admin roles */
     public $admin_role_id;
 
     /** @var stringlist The role(s) name(s) created via Managing Admin Roles methods. The attaching admin role name that can be used instead of admin_role_id */

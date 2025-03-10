@@ -10,25 +10,25 @@ class GetAdminRolesParams
     /** @var string The admin role name part to filter */
     public $admin_role_name;
 
-    /** @var boolean The admin role active flag to filter */
+    /** @var boolean Whether the admin role is enabled to filter */
     public $admin_role_active;
 
-    /** @var boolean Set true to get the permissions */
+    /** @var boolean Whether to get the permissions */
     public $with_entries;
 
-    /** @var boolean Set false to omit the account roles */
+    /** @var boolean Whether to include the account roles */
     public $with_account_roles;
 
-    /** @var boolean Set false to omit the parent roles */
+    /** @var boolean Whether to include the parent roles */
     public $with_parent_roles;
 
-    /** @var boolean Set false to omit the system roles */
+    /** @var boolean Whether to include the system roles */
     public $with_system_roles;
 
-    /** @var intlist The attached admin user ID list separated by semicolon (;). Use the 'all' value to select all admin users */
+    /** @var intlist The attached admin user ID list separated by semicolons (;). Use the 'all' value to select all admin users */
     public $included_admin_user_id;
 
-    /** @var intlist Not attached admin user ID list separated by semicolon (;). Use the 'all' value to select all admin users */
+    /** @var intlist Not attached admin user ID list separated by semicolons (;). Use the 'all' value to select all admin users */
     public $excluded_admin_user_id;
 
     /** @var string Set false to get roles with partial admin user list matching */
@@ -40,7 +40,7 @@ class GetAdminRolesParams
     /** @var number The max returning record count */
     public $count;
 
-    /** @var number The first N records will be skipped in the output */
+    /** @var number The first N records are skipped in the output */
     public $offset;
 
     public function toArray()

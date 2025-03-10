@@ -13,7 +13,7 @@ class GetDialogflowKeysParams
     /** @var number The id of the bound application */
     public $application_id;
 
-    /** @var boolean Set true to get the json web key */
+    /** @var boolean Whether to get the json web key */
     public $with_secret_info;
 
     public function toArray()

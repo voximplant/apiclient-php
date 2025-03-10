@@ -22,7 +22,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * status - Status to filter invoices. Possible values: new, taxed, accepted, committed, cancelled, numbered
- * count - Number of invooces to show per page. Default value is 20
+ * count - Number of invoices to show per page. Default value is 20
  * offset - Number of invoices to skip (e.g. if you set count = 20 and offset = 0 the first time, the next time, offset has to be equal to 20 to skip the items shown earlier). Default value is 0
  */
 $params = new GetAccountInvoicesParams();

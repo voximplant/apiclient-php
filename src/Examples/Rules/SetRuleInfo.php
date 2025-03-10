@@ -25,7 +25,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * rule_name - The new rule name. The length must be less than 100
  * rule_pattern - The new rule pattern regex. The length must be less than 64 KB
  * rule_pattern_exclude - The new exclude pattern regex. The length must be less than 64 KB
- * video_conference - Video conference is required
+ * video_conference - Whether video conference is required
+ * bind_key_id - The service account ID to bind to the rule. Read more in the [guide](/docs/guides/voxengine/management-api)
  */
 $params = new SetRuleInfoParams();
 

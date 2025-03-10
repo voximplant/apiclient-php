@@ -24,11 +24,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * required_admin_user_id - The admin user ID to filter
  * required_admin_user_name - The admin user name part to filter
  * admin_user_display_name - The admin user display name part to filter
- * admin_user_active - The admin user active flag to filter
- * with_roles - Set true to get the attached admin roles
- * with_access_entries - Set true to get the admin user permissions
+ * admin_user_active - Whether the admin user is active to filter
+ * with_roles - Whether to get the attached admin roles
+ * with_access_entries - Whether to get the admin user permissions
  * count - The max returning record count
- * offset - The first N records will be skipped in the output
+ * offset - The first N records are skipped in the output
  */
 $params = new GetAdminUsersParams();
 

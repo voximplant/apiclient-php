@@ -24,7 +24,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * pstn_blacklist_id - The PSTN black list item ID for filter
  * pstn_blacklist_phone - The phone number in format e164 for filter
  * count - The max returning record count
- * offset - The first N records will be skipped in the output
+ * offset - The first N records are skipped in the output
  */
 $params = new GetPstnBlackListParams();
 

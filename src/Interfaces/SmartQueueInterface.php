@@ -5,22 +5,22 @@ namespace Voximplant\Interfaces;
 interface SmartQueueInterface
 {
     /**
-     * @method Gets the metrics for the specified smart queue for the last 30 minutes.
+     * @method Gets the metrics for the specified SmartQueue for the last 30 minutes. Refer to the <a href="/docs/guides/contact-center/reporting">SmartQueue reporting guide</a> to learn more.
      */
     public function GetSmartQueueRealtimeMetrics(\Voximplant\Resources\Params\GetSmartQueueRealtimeMetricsParams $params);
 
     /**
-     * @method Gets the metrics for the specified smart queue for the last 2 days.
+     * @method Gets the metrics for the specified SmartQueue for the last 2 days. Refer to the <a href="/docs/guides/contact-center/reporting">SmartQueue reporting guide</a> to learn more.
      */
     public function GetSmartQueueDayHistory(\Voximplant\Resources\Params\GetSmartQueueDayHistoryParams $params);
 
     /**
-     * @method Gets history for the specified smart queue.
+     * @method Gets history for the specified SmartQueue. Refer to the <a href="/docs/guides/contact-center/reporting">SmartQueue reporting guide</a> to learn more.
      */
     public function RequestSmartQueueHistory(\Voximplant\Resources\Params\RequestSmartQueueHistoryParams $params);
 
     /**
-     * @method Gets the current state of the specified smart queue.
+     * @method Gets the current state of the specified SmartQueue.
      */
     public function GetSQState(\Voximplant\Resources\Params\GetSQStateParams $params);
 
@@ -200,8 +200,8 @@ interface SmartQueueInterface
 }
 class SQ_AddQueueReturn
 {
-    /** @var number ID of the added queue */
-    public $sq_queue_id;
+    /** @var SQAddQueueResult Result with ID of the added queue */
+    public $result;
 
     /** @var array The returned error message. */
     public $error;
@@ -244,7 +244,7 @@ interface SmartQueueInterface
 }
 class SQ_AddSkillReturn
 {
-    /** @var number 1 */
+    /** @var SQAddSkillResult Result with ID of the added skill */
     public $result;
 
     /** @var array The returned error message. */

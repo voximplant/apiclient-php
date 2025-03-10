@@ -24,7 +24,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * source - The source phone number
  * destination - The destination phone number
  * sms_body - The message text, up to 765 characters. We split long messages greater than 160 GSM-7 characters or 70 UTF-16 characters into multiple segments. Each segment is charged as one message
- * store_body - Set to true to store outbound message texts. Default value is false
+ * store_body - Whether to store outgoing message texts. Default value is false
  */
 $params = new SendSmsMessageParams();
 

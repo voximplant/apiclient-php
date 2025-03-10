@@ -7,7 +7,7 @@ class GetAuthorizedAccountIPsParams
     /** @var string The authorized IP4 or network to filter */
     public $authorized_ip;
 
-    /** @var boolean The allowed flag to filter */
+    /** @var boolean Whether the IP is allowed */
     public $allowed;
 
     /** @var string Specify the parameter to filter the networks that contains the particular IP4 */
@@ -16,7 +16,7 @@ class GetAuthorizedAccountIPsParams
     /** @var number The max returning record count */
     public $count;
 
-    /** @var number The first N records will be skipped in the output */
+    /** @var number The first N records are skipped in the output */
     public $offset;
 
     /** @var string The IP address description */

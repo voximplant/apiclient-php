@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method AddCallerID Adds a new caller ID. Caller ID is the phone that will be displayed to the called user. This number can be used for call back.
+ * @method AddCallerID Adds a new caller ID. Caller ID is the phone that is displayed to the called user. This number can be used for call back.
  */
 
 // Path to your autoload.php

@@ -23,6 +23,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * key_id - The key's ID
  * description - The key's description
+ * key_name - The key's name, up to 50 characters. Cannot be empty
  */
 $params = new UpdateKeyParams();
 

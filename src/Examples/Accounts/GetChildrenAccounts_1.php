@@ -21,18 +21,18 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * child_account_id - The account ID list separated by semicolon (;). Use the 'all' value to select all accounts
- * child_account_name - The child account name part to filter
- * child_account_email - The child ccount email to filter
- * active - The active flag to filter
- * frozen - The frozen flag to filter
- * ignore_invalid_accounts - Set true to ignore the invalid 'child_account_id' items
- * brief_output - Set true to output the account_id only
- * medium_output - Set true to output the account_id, account_name, account_email only
+ * child_account_id - The account ID list separated by semicolons (;). You need to specify at least one of the following parameters: `child_account_id`, `child_account_name`, `child_account_email`
+ * child_account_name - The child account name to filter. You need to specify at least one of the following parameters: `child_account_id`, `child_account_name`, `child_account_email`
+ * child_account_email - The child account email to filter. You need to specify at least one of the following parameters: `child_account_id`, `child_account_name`, `child_account_email`
+ * active - Whether the filter is active
+ * frozen - Whether the filter is frozen
+ * ignore_invalid_accounts - Whether to ignore the invalid 'child_account_id' items
+ * brief_output - Whether to output the account_id only
+ * medium_output - Whether to output the account_id, account_name, account_email only
  * count - The max returning record count
- * offset - The first N records will be skipped in the output
+ * offset - The first N records are skipped in the output
  * order_by - The following values are available: 'child_account_id', 'child_account_name' and 'child_account_email'
- * return_live_balance - Set true to get the user live balance
+ * return_live_balance - Whether to get the user live balance
  */
 $params = new GetChildrenAccountsParams();
 

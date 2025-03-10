@@ -5,7 +5,7 @@ namespace Voximplant\Interfaces;
 interface OutboundTestNumbersInterface
 {
     /**
-     * @method Adds a personal phone number to test outbound calls. Only one personal phone number can be used. To replace it with another, delete the existing one first.
+     * @method Adds a personal phone number to test outgoing calls. Only one personal phone number can be used. To replace it with another, delete the existing one first.
      */
     public function AddOutboundTestPhoneNumber(\Voximplant\Resources\Params\AddOutboundTestPhoneNumberParams $params);
 

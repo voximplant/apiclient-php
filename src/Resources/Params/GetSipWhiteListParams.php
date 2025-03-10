@@ -10,6 +10,6 @@ class GetSipWhiteListParams
     /** @var number The max returning record count */
     public $count;
 
-    /** @var number The first N records will be skipped in the output */
+    /** @var number The first N records are skipped in the output */
     public $offset;
 }

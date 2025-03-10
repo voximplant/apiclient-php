@@ -23,7 +23,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * rule_id - The rule ID
  * rule_name - The rule name that can be used instead of rule_id
- * scenario_id - The scenario ID list separated by semicolon (;)
+ * scenario_id - The scenario ID list separated by semicolons (;)
  */
 $params = new ReorderScenariosParams();
 

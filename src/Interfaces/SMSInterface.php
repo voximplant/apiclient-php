@@ -15,7 +15,7 @@ interface SMSInterface
     public function A2PSendSms(\Voximplant\Resources\Params\A2PSendSmsParams $params);
 
     /**
-     * @method Enables or disables sending and receiving SMS for the phone number. Can be used only for phone numbers with SMS support, which is indicated by the <b>is_sms_supported</b> property in the objects returned by the [GetPhoneNumbers] Management API. Each inbound SMS message is charged according to the <a href='//voximplant.com/pricing'>pricing</a>. If enabled, SMS can be sent from this phone number using the [SendSmsMessage] Management API and received using the [InboundSmsCallback] property of the HTTP callback. See <a href='/docs/guides/managementapi/callbacks'>this article</a> for HTTP callback details.
+     * @method Enables or disables sending and receiving SMS for the phone number. Can be used only for phone numbers with SMS support, which is indicated by the <b>is_sms_supported</b> property in the objects returned by the [GetPhoneNumbers] Management API. Each incoming SMS message is charged according to the <a href='//voximplant.com/pricing'>pricing</a>. If enabled, SMS can be sent from this phone number via the [SendSmsMessage] Management API and received via the [InboundSmsCallback] property of the HTTP callback. See <a href='/docs/guides/managementapi/callbacks'>this article</a> for HTTP callback details.
      */
     public function ControlSms(\Voximplant\Resources\Params\ControlSmsParams $params);
 
@@ -37,7 +37,7 @@ interface SMSInterface
     /** @var number Message ID */
     public $message_id;
 
-    /** @var number The number of fragments the message was divided into */
+    /** @var number The number of fragments the message is divided into */
     public $fragments_count;
 
     /** @var array The returned error message. */

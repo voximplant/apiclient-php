@@ -28,7 +28,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * country_state - The country state. See the [GetPhoneNumberCategories] and [GetPhoneNumberCountryStates] methods
  * phone_region_id - The phone region ID. See the [GetPhoneNumberRegions] method
  * regulation_address_id - The phone regulation address ID
- * force_verification - The force verification flag
+ * force_verification - Whether the force verification is enabled
  */
 $params = new AttachPhoneNumberParams();
 

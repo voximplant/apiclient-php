@@ -23,11 +23,6 @@ interface UsersInterface
      * @method Shows the users of the specified account.
      */
     public function GetUsers(\Voximplant\Resources\Params\GetUsersParams $params);
-
-    /**
-     * @method Transfer the account's money to the user or transfer the user's money to the account if the money amount is negative.
-     */
-    public function TransferMoneyToUser(\Voximplant\Resources\Params\TransferMoneyToUserParams $params);
 }
 class AddUserReturn
 {
@@ -75,20 +70,6 @@ interface UsersInterface
 
     /** @var number The returned user count */
     public $count;
-
-    /** @var array The returned error message. */
-    public $error;
-
-    /** @var array The returned error message. */
-    public $errors;
-}
-class TransferMoneyToUserReturn
-{
-    /** @var number 1 */
-    public $result;
-
-    /** @var decimal The new account balance */
-    public $balance;
 
     /** @var array The returned error message. */
     public $error;

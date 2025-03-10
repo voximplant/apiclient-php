@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class BindPhoneNumberToApplicationParams
 {
-    /** @var intlist The phone ID list separated by semicolon (;). Use the 'all' value to select all phone ids */
+    /** @var intlist The phone ID list separated by semicolons (;). Use the 'all' value to select all phone ids */
     public $phone_id;
 
-    /** @var stringlist The phone number list separated by semicolon (;) that can be used instead of phone_id */
+    /** @var stringlist The phone number list separated by semicolons (;) that can be used instead of phone_id */
     public $phone_number;
 
     /** @var number The application ID */
@@ -22,7 +22,7 @@ class BindPhoneNumberToApplicationParams
     /** @var string The rule name that can be used instead of rule_id */
     public $rule_name;
 
-    /** @var boolean Bind or unbind (set true or false respectively) */
+    /** @var boolean Whether to bind or unbind (set true or false respectively) */
     public $bind;
 
     public function toArray()

@@ -13,19 +13,19 @@ class GetAdminUsersParams
     /** @var string The admin user display name part to filter */
     public $admin_user_display_name;
 
-    /** @var boolean The admin user active flag to filter */
+    /** @var boolean Whether the admin user is active to filter */
     public $admin_user_active;
 
-    /** @var boolean Set true to get the attached admin roles */
+    /** @var boolean Whether to get the attached admin roles */
     public $with_roles;
 
-    /** @var boolean Set true to get the admin user permissions */
+    /** @var boolean Whether to get the admin user permissions */
     public $with_access_entries;
 
     /** @var number The max returning record count */
     public $count;
 
-    /** @var number The first N records will be skipped in the output */
+    /** @var number The first N records are skipped in the output */
     public $offset;
 
     public function toArray()

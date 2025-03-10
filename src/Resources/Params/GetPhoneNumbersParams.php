@@ -7,7 +7,7 @@ class GetPhoneNumbersParams
     /** @var intlist The particular phone ID to filter */
     public $phone_id;
 
-    /** @var stringlist The phone number list separated by semicolon (;) that can be used instead of phone_id */
+    /** @var stringlist The phone number list separated by semicolons (;) that can be used instead of phone_id */
     public $phone_number;
 
     /** @var number The application ID */
@@ -16,25 +16,25 @@ class GetPhoneNumbersParams
     /** @var string The application name that can be used instead of application_id */
     public $application_name;
 
-    /** @var boolean Is a phone bound to an application */
+    /** @var boolean Whether the phone number bound to an application */
     public $is_bound_to_application;
 
     /** @var string The phone number start to filter */
     public $phone_template;
 
-    /** @var stringlist The country code list separated by semicolon (;) */
+    /** @var stringlist The country code list separated by semicolons (;) */
     public $country_code;
 
     /** @var string The phone category name. See the [GetPhoneNumberCategories] method */
     public $phone_category_name;
 
-    /** @var boolean The flag of the canceled (deleted) subscription to filter */
+    /** @var boolean Whether the subscription is cancelled to filter */
     public $canceled;
 
-    /** @var boolean The flag of the deactivated (frozen) subscription to filter */
+    /** @var boolean Whether the subscription is frozen to filter */
     public $deactivated;
 
-    /** @var boolean The auto_charge flag to filter */
+    /** @var boolean Whether the auto_charge flag is enabled */
     public $auto_charge;
 
     /** @var date The UTC 'from' date filter in format: YYYY-MM-DD */
@@ -49,16 +49,16 @@ class GetPhoneNumbersParams
     /** @var timestamp The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss */
     public $to_phone_purchase_date;
 
-    /** @var intlist The child account ID list separated by semicolon (;). Use the 'all' value to select all child accounts */
+    /** @var intlist The child account ID list separated by semicolons (;). Use the 'all' value to select all child accounts */
     public $child_account_id;
 
-    /** @var boolean Set true to get the children phones only */
+    /** @var boolean Whether to get the children phones only */
     public $children_phones_only;
 
     /** @var string The required account verification name to filter */
     public $verification_name;
 
-    /** @var stringlist The account verification status list separated by semicolon (;). The following values are possible: REQUIRED, IN_PROGRESS, VERIFIED */
+    /** @var stringlist The account verification status list separated by semicolons (;). The following values are possible: REQUIRED, IN_PROGRESS, VERIFIED */
     public $verification_status;
 
     /** @var date Unverified phone hold until the date (from ...) in format: YYYY-MM-DD */
@@ -67,7 +67,7 @@ class GetPhoneNumbersParams
     /** @var date Unverified phone hold until the date (... to) in format: YYYY-MM-DD */
     public $to_unverified_hold_until;
 
-    /** @var boolean Unverified account can use the phone */
+    /** @var boolean Whether a not verified account can use the phone */
     public $can_be_used;
 
     /** @var string The following values are available: 'phone_number' (ascent order), 'phone_price' (ascent order), 'phone_country_code' (ascent order), 'deactivated' (deactivated first, active last), 'purchase_date' (descent order), 'phone_next_renewal' (ascent order), 'verification_status', 'unverified_hold_until' (ascent order), 'verification_name' */
@@ -79,22 +79,22 @@ class GetPhoneNumbersParams
     /** @var number The max returning record count */
     public $count;
 
-    /** @var number The first N records will be skipped in the output */
+    /** @var number The first N records are skipped in the output */
     public $offset;
 
-    /** @var boolean The flag of the SMS support */
+    /** @var boolean Whether the SMS support is enabled */
     public $sms_supported;
 
-    /** @var stringlist The region names list separated by semicolon (;) */
+    /** @var stringlist The region names list separated by semicolons (;) */
     public $phone_region_name;
 
-    /** @var intlist The rule ID list separated by semicolon (;) */
+    /** @var intlist The rule ID list separated by semicolons (;) */
     public $rule_id;
 
-    /** @var stringlist The rule names list separated by semicolon (;). Can be used only if __application_id__ or __application_name__ is specified */
+    /** @var stringlist The rule names list separated by semicolons (;). Can be used only if __application_id__ or __application_name__ is specified */
     public $rule_name;
 
-    /** @var boolean Number is bound to some rule */
+    /** @var boolean Whether the phone number is bound to some rule */
     public $is_bound_to_rule;
 
     public function toArray()

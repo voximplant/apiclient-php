@@ -23,10 +23,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * application_id - The application ID to filter
  * application_name - The application name part to filter
- * with_rules - Set true to get bound rules info
- * with_scenarios - Set true to get bound rules and scenarios info
+ * with_rules - Whether to get bound rules info
+ * with_scenarios - Whether to get bound rules and scenarios info
  * count - The max returning record count
- * offset - The first N records will be skipped in the output
+ * offset - The first N records are skipped in the output
  */
 $params = new GetApplicationsParams();
 

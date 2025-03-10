@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method DelCallerID Deletes the CallerID. Note: you can't delete a CID permanently (the antispam defence).
+ * @method DelCallerID Deletes the CallerID. Note: you cannot delete a CID permanently (the antispam defence).
  */
 
 // Path to your autoload.php

@@ -13,19 +13,19 @@ class AddUserParams
     /** @var string The user password. Must be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character */
     public $user_password;
 
-    /** @var number The application ID which a new user will be bound to. Can be used instead of the application_name parameter */
+    /** @var number The application ID which a new user is to be bound to. Can be used instead of the application_name parameter */
     public $application_id;
 
-    /** @var string The application name which a new user will be bound to. Can be used instead of the application_id parameter */
+    /** @var string The application name which a new user is to be bound to. Can be used instead of the application_id parameter */
     public $application_name;
 
-    /** @var boolean 'True' if the user will use the parent account's money, 'false' if the user will have a separate balance */
+    /** @var boolean Whether the user uses the parent account's money, 'false' if the user has a separate balance */
     public $parent_accounting;
 
     /** @var string The user mobile phone. The length must be less than 50 */
     public $mobile_phone;
 
-    /** @var boolean The user enable flag */
+    /** @var boolean Whether the user is active. Inactive users cannot log in to applications */
     public $user_active;
 
     /** @var string Any string */

@@ -23,8 +23,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * application_id - ID of the application to search by
  * application_name - Name of the application to search by. Can be used instead of application_id
- * sq_skill_id - List of skill IDs separated by semicolon (;). Use 'all' to delete all the skills
- * sq_skill_name - List of skill names separated by semicolon (;). Can be used instead of sq_skill_id
+ * sq_skill_id - List of skill IDs separated by semicolons (;). Use 'all' to delete all the skills
+ * sq_skill_name - List of skill names separated by semicolons (;). Can be used instead of sq_skill_id
  */
 $params = new SQ_DelSkillParams();
 

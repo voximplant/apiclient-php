@@ -7,10 +7,10 @@ class GetSubUsersParams
     /** @var number The subuser's ID */
     public $subuser_id;
 
-    /** @var boolean Show subuser's roles */
+    /** @var boolean Whether to show subuser's roles */
     public $with_roles;
 
-    /** @var number The first N records will be skipped in the output */
+    /** @var number The first N records are skipped in the output */
     public $offset;
 
     /** @var number The max returning record count */

@@ -21,10 +21,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * rule_id - The rule ID list separated by semicolon (;). Use the 'all' value to select all rules
- * rule_name - The rule name list separated by semicolon (;). Can be used instead of rule_id
- * application_id - The application ID list separated by semicolon (;). Use the 'all' value to select all applications
- * application_name - The application name list separated by semicolon (;). Can be used instead of application_id
+ * rule_id - The rule ID list separated by semicolons (;). Use the 'all' value to select all rules
+ * rule_name - The rule name list separated by semicolons (;). Can be used instead of rule_id
+ * application_id - The application ID list separated by semicolons (;). Use the 'all' value to select all applications
+ * application_name - The application name list separated by semicolons (;). Can be used instead of application_id
  */
 $params = new DelRuleParams();
 

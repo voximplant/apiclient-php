@@ -22,7 +22,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * application_name - The short application name in format \[a-z\]\[a-z0-9-\]{1,64}
- * secure_record_storage - Enable secure storage for all logs and records of the application
+ * secure_record_storage - Whether to enable secure storage for all logs and records of the application
  */
 $params = new AddApplicationParams();
 

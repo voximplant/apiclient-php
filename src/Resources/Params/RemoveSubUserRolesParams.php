@@ -7,13 +7,13 @@ class RemoveSubUserRolesParams
     /** @var number The subuser's ID */
     public $subuser_id;
 
-    /** @var intlist The role id list separated by semicolon (;) */
+    /** @var intlist The role id list separated by semicolons (;) */
     public $role_id;
 
-    /** @var stringlist The role name list separated by semicolon (;) */
+    /** @var stringlist The role name list separated by semicolons (;) */
     public $role_name;
 
-    /** @var boolean Remove roles from all subuser keys */
+    /** @var boolean Whether to remove roles from all subuser keys */
     public $force;
 
     public function toArray()

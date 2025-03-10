@@ -4,7 +4,7 @@ namespace Voximplant\Resources\Params;
 
 class GetSubscriptionPriceParams
 {
-    /** @var intlist The subscription template ID list separated by semicolon (;) */
+    /** @var intlist The subscription template ID list separated by semicolons (;) */
     public $subscription_template_id;
 
     /** @var string The subscription template type. The following values are possible: PHONE_NUM, SIP_REGISTRATION */
@@ -16,6 +16,6 @@ class GetSubscriptionPriceParams
     /** @var number The max returning record count */
     public $count;
 
-    /** @var number The first N records will be skipped in the output */
+    /** @var number The first N records are skipped in the output */
     public $offset;
 }

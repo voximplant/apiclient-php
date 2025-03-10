@@ -372,6 +372,7 @@ class ResultType
             'result' =>
             array (
                 'RUR' => 'decimal',
+                'KZT' => 'decimal',
                 'EUR' => 'decimal',
                 'USD' => 'decimal',
             ),
@@ -434,7 +435,7 @@ class ResultType
                     'period' => 'string',
                     'subscription_template_type' => 'string',
                     'subscription_template_name' => 'string',
-                    'required_verification' => 'boolean',
+                    'required_verification' => 'string',
                     'verification_status' => 'string',
                     'installation_tax_reserve' => 'number',
                     'tax_reserve' => 'number',
@@ -1197,20 +1198,29 @@ class ResultType
         );
     }
 
-    public function TransferMoneyToUser()
-    {
-        return array (
-            'result' => 'number',
-            'balance' => 'decimal',
-        );
-    }
-
     public function CreateCallList()
     {
         return array (
             'result' => 'boolean',
             'count' => 'number',
             'list_id' => 'number',
+        );
+    }
+
+    public function AppendToCallList()
+    {
+        return array (
+            'result' => 'boolean',
+            'count' => 'number',
+            'list_id' => 'number',
+        );
+    }
+
+    public function DeleteCallList()
+    {
+        return array (
+            'result' => 'boolean',
+            'msg' => 'string',
         );
     }
 
@@ -1254,9 +1264,28 @@ class ResultType
                     'attempts_left' => 'number',
                     'status_id' => 'number',
                     'status' => 'string',
+                    'task_id' => 'number',
+                    'task_uuid' => 'string',
                 ),
             ),
             'count' => 'number',
+        );
+    }
+
+    public function EditCallListTask()
+    {
+        return array (
+            'result' => 'boolean',
+        );
+    }
+
+    public function CancelCallListTask()
+    {
+        return array (
+            'task_id' => 'number',
+            'task_uuid' => 'string',
+            'result' => 'boolean',
+            'error_msg' => 'string',
         );
     }
 
@@ -1314,6 +1343,9 @@ class ResultType
             ),
             'total_count' => 'number',
             'count' => 'number',
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'extended_application_name' => 'string',
         );
     }
 
@@ -1465,6 +1497,7 @@ class ResultType
                             'record_url' => 'string',
                             'cost' => 'decimal',
                             'custom_data' => 'string',
+                            'end_reason' => 'object',
                         ),
                     ),
                     'other_resource_usage' =>
@@ -1510,6 +1543,7 @@ class ResultType
                                     'record_url' => 'string',
                                     'cost' => 'decimal',
                                     'custom_data' => 'string',
+                                    'end_reason' => 'object',
                                 ),
                             ),
                             'resource_usage_id' => 'number',
@@ -1566,6 +1600,7 @@ class ResultType
                                     'record_url' => 'string',
                                     'cost' => 'decimal',
                                     'custom_data' => 'string',
+                                    'end_reason' => 'object',
                                 ),
                             ),
                             'other_resource_usage' =>
@@ -1611,6 +1646,7 @@ class ResultType
                                             'record_url' => 'string',
                                             'cost' => 'decimal',
                                             'custom_data' => 'string',
+                                            'end_reason' => 'object',
                                         ),
                                     ),
                                     'resource_usage_id' => 'number',
@@ -1641,6 +1677,13 @@ class ResultType
             'total_count' => 'number',
             'count' => 'number',
             'timezone' => 'string',
+        );
+    }
+
+    public function GetCallHistoryAsync()
+    {
+        return array (
+            'result' => 'number',
             'history_report_id' => 'number',
         );
     }
@@ -1670,32 +1713,47 @@ class ResultType
                     'download_size' => 'decimal',
                     'download_count' => 'number',
                     'last_downloaded' => 'timestamp',
-                    'store_until' => 'timestamp',
-                    'error' =>
-                    array (
-                        '|array|' =>
-                        array (
-                            'history_report_id' => 'number',
-                            'history_type' => 'string',
-                            'created' => 'timestamp',
-                            'format' => 'string',
-                            'completed' => 'timestamp',
-                            'file_name' => 'string',
-                            'file_size' => 'decimal',
-                            'download_size' => 'decimal',
-                            'download_count' => 'number',
-                            'last_downloaded' => 'timestamp',
-                            'store_until' => 'timestamp',
-                        ),
-                        'code' => 'number',
-                        'msg' => 'string',
-                    ),
+                    'store_until' => 'date',
                     'filters' => 'Object',
                     'calculated_data' => 'Object',
                 ),
             ),
             'total_count' => 'number',
             'count' => 'number',
+        );
+    }
+
+    public function GetPhoneNumberReports()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'report_id' => 'number',
+                    'type' => 'string',
+                    'created' => 'timestamp',
+                    'format' => 'string',
+                    'completed' => 'timestamp',
+                    'file_name' => 'string',
+                    'file_size' => 'decimal',
+                    'download_size' => 'decimal',
+                    'download_count' => 'number',
+                    'last_downloaded' => 'timestamp',
+                    'store_until' => 'date',
+                    'filters' => 'Object',
+                    'calculated_data' => 'Object',
+                ),
+            ),
+            'total_count' => 'number',
+            'count' => 'number',
+        );
+    }
+
+    public function DownloadHistoryReport()
+    {
+        return array (
+            'file_content' => 'file',
         );
     }
 
@@ -1719,6 +1777,13 @@ class ResultType
             'total_count' => 'number',
             'timezone' => 'string',
             'count' => 'number',
+        );
+    }
+
+    public function GetTransactionHistoryAsync()
+    {
+        return array (
+            'result' => 'number',
             'history_report_id' => 'number',
         );
     }
@@ -1782,6 +1847,8 @@ class ResultType
                 '|array|' =>
                 array (
                     'audit_log_id' => 'number',
+                    'subuser_id' => 'number',
+                    'subuser_name' => 'string',
                     'account_id' => 'number',
                     'requested' => 'timestamp',
                     'ip' => 'string',
@@ -1793,6 +1860,13 @@ class ResultType
             'total_count' => 'number',
             'count' => 'number',
             'timezone' => 'string',
+        );
+    }
+
+    public function GetAuditLogAsync()
+    {
+        return array (
+            'result' => 'number',
             'history_report_id' => 'number',
         );
     }
@@ -1953,7 +2027,7 @@ class ResultType
                 array (
                     'phone_id' => 'number',
                     'phone_number' => 'string',
-                    'required_verification' => 'boolean',
+                    'required_verification' => 'string',
                     'verification_status' => 'string',
                     'unverified_hold_until' => 'date',
                 ),
@@ -2003,7 +2077,7 @@ class ResultType
                     'rule_id' => 'number',
                     'rule_name' => 'string',
                     'category_name' => 'string',
-                    'required_verification' => 'boolean',
+                    'required_verification' => 'string',
                     'verification_status' => 'string',
                     'unverified_hold_until' => 'date',
                     'can_be_used' => 'boolean',
@@ -2020,6 +2094,13 @@ class ResultType
             ),
             'total_count' => 'number',
             'count' => 'number',
+        );
+    }
+
+    public function GetPhoneNumbersAsync()
+    {
+        return array (
+            'result' => 'number',
         );
     }
 
@@ -2055,6 +2136,7 @@ class ResultType
                 '|array|' =>
                 array (
                     'country_code' => 'string',
+                    'localized_country_name' => 'string',
                     'phone_prefix' => 'string',
                     'can_list_phone_numbers' => 'boolean',
                     'phone_categories' =>
@@ -2062,11 +2144,11 @@ class ResultType
                         '|array|' =>
                         array (
                             'country_code' => 'string',
+                            'localized_country_name' => 'string',
                             'phone_prefix' => 'string',
                             'can_list_phone_numbers' => 'boolean',
                             'phone_category_name' => 'string',
                             'country_has_states' => 'boolean',
-                            'localized_country_name' => 'string',
                             'localized_phone_category_name' => 'string',
                             'localized_phone_region_name' => 'string',
                         ),
@@ -2103,9 +2185,7 @@ class ResultType
                     'phone_region_code' => 'string',
                     'phone_count' => 'number',
                     'verification_status' => 'string',
-                    'required_verification' => 'boolean',
-                    'phone_price' => 'decimal',
-                    'phone_installation_price' => 'decimal',
+                    'required_verification' => 'string',
                     'phone_period' => 'string',
                     'is_need_regulation_address' => 'boolean',
                     'regulation_address_type' => 'string',
@@ -2119,18 +2199,20 @@ class ResultType
                             'phone_region_code' => 'string',
                             'phone_count' => 'number',
                             'verification_status' => 'string',
-                            'required_verification' => 'boolean',
-                            'phone_price' => 'decimal',
-                            'phone_installation_price' => 'decimal',
+                            'required_verification' => 'string',
                             'phone_period' => 'string',
                             'is_need_regulation_address' => 'boolean',
                             'regulation_address_type' => 'string',
                             'is_sms_supported' => 'boolean',
                             'count' => 'number',
-                            'price' => 'decimal',
-                            'installation_price' => 'decimal',
                             'installation_tax_reserve' => 'number',
                             'tax_reserve' => 'number',
+                            'local_price' => 'number',
+                            'local_installation_price' => 'number',
+                            'local_currency' => 'string',
+                            'account_price' => 'number',
+                            'account_installation_price' => 'number',
+                            'account_currency' => 'string',
                         ),
                     ),
                     'localized_country_name' => 'string',
@@ -2138,6 +2220,12 @@ class ResultType
                     'localized_phone_region_name' => 'string',
                     'phone_installation_tax_reserve' => 'number',
                     'phone_tax_reserve' => 'number',
+                    'local_price' => 'number',
+                    'local_installation_price' => 'number',
+                    'local_currency' => 'string',
+                    'account_price' => 'number',
+                    'account_installation_price' => 'number',
+                    'account_currency' => 'string',
                 ),
             ),
         );
@@ -2153,9 +2241,7 @@ class ResultType
                 'phone_region_code' => 'string',
                 'phone_count' => 'number',
                 'verification_status' => 'string',
-                'required_verification' => 'boolean',
-                'phone_price' => 'decimal',
-                'phone_installation_price' => 'decimal',
+                'required_verification' => 'string',
                 'phone_period' => 'string',
                 'is_need_regulation_address' => 'boolean',
                 'regulation_address_type' => 'string',
@@ -2167,9 +2253,7 @@ class ResultType
                     'phone_region_code' => 'string',
                     'phone_count' => 'number',
                     'verification_status' => 'string',
-                    'required_verification' => 'boolean',
-                    'phone_price' => 'decimal',
-                    'phone_installation_price' => 'decimal',
+                    'required_verification' => 'string',
                     'phone_period' => 'string',
                     'is_need_regulation_address' => 'boolean',
                     'regulation_address_type' => 'string',
@@ -2177,10 +2261,14 @@ class ResultType
                     '|array|' =>
                     array (
                         'count' => 'number',
-                        'price' => 'decimal',
-                        'installation_price' => 'decimal',
                         'installation_tax_reserve' => 'number',
                         'tax_reserve' => 'number',
+                        'local_price' => 'number',
+                        'local_installation_price' => 'number',
+                        'local_currency' => 'string',
+                        'account_price' => 'number',
+                        'account_installation_price' => 'number',
+                        'account_currency' => 'string',
                     ),
                 ),
                 'localized_country_name' => 'string',
@@ -2188,6 +2276,12 @@ class ResultType
                 'localized_phone_region_name' => 'string',
                 'phone_installation_tax_reserve' => 'number',
                 'phone_tax_reserve' => 'number',
+                'local_price' => 'number',
+                'local_installation_price' => 'number',
+                'local_currency' => 'string',
+                'account_price' => 'number',
+                'account_installation_price' => 'number',
+                'account_currency' => 'string',
             ),
         );
     }
@@ -34824,6 +34918,7 @@ class ResultType
                     'push_credential_id' => 'number',
                     'push_provider_id' => 'number',
                     'push_provider_name' => 'string',
+                    'expiration_date' => 'string',
                     'credential_bundle' => 'string',
                     'content' =>
                     array (
@@ -34832,6 +34927,7 @@ class ResultType
                             'push_credential_id' => 'number',
                             'push_provider_id' => 'number',
                             'push_provider_name' => 'string',
+                            'expiration_date' => 'string',
                             'credential_bundle' => 'string',
                             'cert_file_name' => 'string',
                             'cert_password' => 'string',
@@ -34850,6 +34946,7 @@ class ResultType
                             'push_credential_id' => 'number',
                             'push_provider_id' => 'number',
                             'push_provider_name' => 'string',
+                            'expiration_date' => 'string',
                             'credential_bundle' => 'string',
                             'content' =>
                             array (
@@ -34858,6 +34955,7 @@ class ResultType
                                     'push_credential_id' => 'number',
                                     'push_provider_id' => 'number',
                                     'push_provider_name' => 'string',
+                                    'expiration_date' => 'string',
                                     'credential_bundle' => 'string',
                                     'cert_file_name' => 'string',
                                     'cert_password' => 'string',
@@ -35087,6 +35185,7 @@ class ResultType
                             'subuser_name' => 'string',
                         ),
                     ),
+                    'key_name' => 'string',
                 ),
             ),
         );
@@ -35397,6 +35496,13 @@ class ResultType
         );
     }
 
+    public function DownloadInvoice()
+    {
+        return array (
+            'file_content' => 'file',
+        );
+    }
+
     public function GetSmsHistory()
     {
         return array (
@@ -35448,7 +35554,10 @@ class ResultType
     public function SQ_AddQueue()
     {
         return array (
-            'sq_queue_id' => 'number',
+            'result' =>
+            array (
+                'sq_queue_id' => 'number',
+            ),
         );
     }
 
@@ -35491,7 +35600,10 @@ class ResultType
     public function SQ_AddSkill()
     {
         return array (
-            'result' => 'number',
+            'result' =>
+            array (
+                'sq_skill_id' => 'number',
+            ),
         );
     }
 

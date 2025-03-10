@@ -24,7 +24,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * push_credential_id - The push credentials id
  * cert_content - Public and private keys in PKCS12 format. Credentials for APPLE push
  * cert_password - The secret password for private key. Credentials for APPLE push
- * is_dev_mode - Set true to use this certificate in apple's sandbox environment. Credentials for APPLE push
+ * is_dev_mode - Whether to use this certificate in apple's sandbox environment. Credentials for APPLE push
  * sender_id - The sender id, provided by Google. Credentials for GOOGLE push
  * server_key - The server key, provided by Google. Credentials for GOOGLE push
  * service_account_file - The service account key file, provided by Google. Can be used instead of server_key. Credentials for GOOGLE push

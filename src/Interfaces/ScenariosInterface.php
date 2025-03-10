@@ -40,7 +40,7 @@ interface ScenariosInterface
     public function StartScenarios(\Voximplant\Resources\Params\StartScenariosParams $params);
 
     /**
-     * @method Runs a session for video conferencing or joins the existing video conference session.<br/><br/>When you create a session by calling this method, a scenario runs on one of the servers dedicated to video conferencing. All further method calls with the same **conference_name** won't create a new video conference session but join the existing one.<br/><br/>Use the [StartScenarios] method for creating audio conferences.
+     * @method Runs a session for video conferencing or joins the existing video conference session.<br/><br/>When you create a session by calling this method, a scenario runs on one of the servers dedicated to video conferencing. All further method calls with the same **conference_name** do not create a new video conference session but join the existing one.<br/><br/>Use the [StartScenarios] method for creating audio conferences.
      */
     public function StartConference(\Voximplant\Resources\Params\StartConferenceParams $params);
 }
@@ -91,6 +91,15 @@ interface ScenariosInterface
     /** @var number The returned scenario count */
     public $count;
 
+    /** @var number ID of the scenario's application */
+    public $application_id;
+
+    /** @var string Name of the scenario's application */
+    public $application_name;
+
+    /** @var string Application name including the node name */
+    public $extended_application_name;
+
     /** @var array The returned error message. */
     public $error;
 
@@ -124,10 +133,10 @@ interface ScenariosInterface
     /** @var number 1 */
     public $result;
 
-    /** @var string The URL to control a created media session. You can use it for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTP request on this URL will result in the [AppEvents.HttpRequest](/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for scenario, with HTTP request data passed to it */
+    /** @var string The URL to control a created media session. You can use it for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTP request on this URL results in the [AppEvents.HttpRequest](/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for scenario, with HTTP request data passed to it */
     public $media_session_access_url;
 
-    /** @var string The URL to control a created media session. You can use it for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTPS request on this URL will result in the [AppEvents.HttpRequest](/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for scenario, with HTTP request data passed to it */
+    /** @var string The URL to control a created media session. You can use it for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTPS request on this URL results in the [AppEvents.HttpRequest](/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for scenario, with HTTP request data passed to it */
     public $media_session_access_secure_url;
 
     /** @var string The URL to check media session */
@@ -147,10 +156,10 @@ interface ScenariosInterface
     /** @var number 1 */
     public $result;
 
-    /** @var string The URL to control a created media session. It can be used for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTP request on this URL will result in the [AppEvents.HttpRequest](/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for a scenario, with an HTTP request data passed to it */
+    /** @var string The URL to control a created media session. It can be used for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTP request on this URL results in the [AppEvents.HttpRequest](/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for a scenario, with an HTTP request data passed to it */
     public $media_session_access_url;
 
-    /** @var string The URL to control a created media session. It can be used for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTPS request on this URL will result in the [AppEvents.HttpRequest](/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for a scenario, with an HTTP request data passed to it */
+    /** @var string The URL to control a created media session. It can be used for arbitrary tasks such as stopping scenario or passing additional data to it. Making HTTPS request on this URL results in the [AppEvents.HttpRequest](/docs/references/voxengine/appevents#httprequest) VoxEngine event being triggered for a scenario, with an HTTP request data passed to it */
     public $media_session_access_secure_url;
 
     /** @var number The call session history ID. To search a call session result, paste the ID to the GetCallHistory method's call_session_history_id parameter */

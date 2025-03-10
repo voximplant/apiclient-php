@@ -21,10 +21,10 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * new_subuser_name - The new subuser login for managent api authentication, should be unique within the Voximplant account. The login specified is always converted to lowercase
+ * new_subuser_name - The new subuser login for management api authentication, should be unique within the Voximplant account. The login specified is always converted to lowercase
  * new_subuser_password - The new subuser password. Must be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character
- * role_id - The role id list separated by semicolon (;)
- * role_name - The role name list separated by semicolon (;)
+ * role_id - The role id list separated by semicolons (;)
+ * role_name - The role name list separated by semicolons (;)
  * description - Description of a new subuser
  */
 $params = new AddSubUserParams();

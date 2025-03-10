@@ -10,40 +10,40 @@ class SQ_GetAgentsParams
     /** @var string Name of the application to search by. Can be used instead of application_id */
     public $application_name;
 
-    /** @var intlist List of smart queue IDs separated by semicolon (;). Use 'all' to select all the queues */
+    /** @var intlist List of SmartQueue IDs separated by semicolons (;). Use 'all' to select all the queues */
     public $sq_queue_id;
 
-    /** @var stringlist List of smart queue names separated by semicolon (;). Can be used instead of sq_queue_id */
+    /** @var stringlist List of SmartQueue names separated by semicolons (;). Can be used instead of sq_queue_id */
     public $sq_queue_name;
 
-    /** @var number ID of the smart queue to exclude */
+    /** @var number ID of the SmartQueue to exclude */
     public $excluded_sq_queue_id;
 
-    /** @var string Name of the smart queue to exclude. Can be used instead of excluded_sq_queue_id */
+    /** @var string Name of the SmartQueue to exclude. Can be used instead of excluded_sq_queue_id */
     public $excluded_sq_queue_name;
 
     /** @var Object Skills to filter in the json array format. The array should contain objects with the sq_skill_id/sq_skill_name, min_sq_skill_level, and max_sq_skill_level keys where skill levels range from 1 to 5 */
     public $sq_skills;
 
-    /** @var intlist List of user IDs separated by semicolon (;) */
+    /** @var intlist List of user IDs separated by semicolons (;) */
     public $user_id;
 
-    /** @var stringlist List of user names separated by semicolon (;). Can be used instead of user_id */
+    /** @var stringlist List of user names separated by semicolons (;). Can be used instead of user_id */
     public $user_name;
 
     /** @var string Substring of the user name to filter */
     public $user_name_template;
 
-    /** @var Object Filter statuses in the json array format. The array should contain objects with the sq_status_type and sq_status_name keys. Possible values for sq_status_type are 'CALL' and'IM'. Possible values for sq_status_name are 'OFFLINE', 'ONLINE', 'READY', 'IN_SERVICE', 'AFTER_SERVICE', 'DND' */
+    /** @var Object Filter statuses in the json array format. The array should contain objects with the sq_status_type and sq_status_name keys. Possible values for sq_status_type are 'CALL' and 'IM'. Possible values for sq_status_name are 'OFFLINE', 'ONLINE', 'READY', 'IN_SERVICE', 'AFTER_SERVICE', 'DND' */
     public $sq_statuses;
 
-    /** @var boolean Display agent skills */
+    /** @var boolean Whether to display agent skills */
     public $with_sq_skills;
 
-    /** @var boolean Display agent queues */
+    /** @var boolean Whether to display agent queues */
     public $with_sq_queues;
 
-    /** @var boolean Display agent current statuses */
+    /** @var boolean Whether to display agent current statuses */
     public $with_sq_statuses;
 
     /** @var number Number of items to show in the output */
@@ -52,7 +52,7 @@ class SQ_GetAgentsParams
     /** @var number Number of items to skip in the output */
     public $offset;
 
-    /** @var boolean The agent can handle calls. When set to false, the agent is excluded from the CALL-request distribution */
+    /** @var boolean Whether the agent can handle calls. When set to false, the agent is excluded from the CALL-request distribution */
     public $handle_calls;
 
     public function toArray()

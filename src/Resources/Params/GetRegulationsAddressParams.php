@@ -19,13 +19,13 @@ class GetRegulationsAddressParams
     /** @var number The regulation address type ID */
     public $verification_id;
 
-    /** @var boolean Show only verified regulation address */
+    /** @var boolean Whether to show only verified regulation address */
     public $verified;
 
-    /** @var boolean Show only in progress regulation address */
+    /** @var boolean Whether to show only in progress regulation address */
     public $in_progress;
 
-    /** @var boolean Return with phone_region_code parameters */
+    /** @var boolean Whether to return with phone_region_code parameters */
     public $with_region_code;
 
     public function toArray()

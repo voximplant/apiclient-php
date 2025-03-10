@@ -13,6 +13,6 @@ class AddDialogflowKeyParams
     /** @var string Dialogflow credentials, provided by JWK (Json web key) */
     public $json_credentials;
 
-    /** @var string The Dialogflow keys's description */
+    /** @var string The Dialogflow key's description */
     public $description;
 }

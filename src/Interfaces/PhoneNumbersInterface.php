@@ -30,6 +30,11 @@ interface PhoneNumbersInterface
     public function GetPhoneNumbers(\Voximplant\Resources\Params\GetPhoneNumbersParams $params);
 
     /**
+     * @method Gets the asyncronous report regarding purchaced phone numbers.
+     */
+    public function GetPhoneNumbersAsync(\Voximplant\Resources\Params\GetPhoneNumbersAsyncParams $params);
+
+    /**
      * @method Gets the new phone numbers.
      */
     public function GetNewPhoneNumbers(\Voximplant\Resources\Params\GetNewPhoneNumbersParams $params);
@@ -45,12 +50,12 @@ interface PhoneNumbersInterface
     public function GetPhoneNumberCountryStates(\Voximplant\Resources\Params\GetPhoneNumberCountryStatesParams $params);
 
     /**
-     * @method Get the country regions of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
+     * @method Get the country regions of the phone numbers. The response also contains the info about multiple numbers subscription for the child accounts.
      */
     public function GetPhoneNumberRegions(\Voximplant\Resources\Params\GetPhoneNumberRegionsParams $params);
 
     /**
-     * @method Get actual info on the country region of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
+     * @method Get actual info on the country region of the phone numbers. The response also contains the info about multiple numbers subscription for the child accounts.
      */
     public function GetActualPhoneNumberRegion(\Voximplant\Resources\Params\GetActualPhoneNumberRegionParams $params);
 
@@ -116,6 +121,17 @@ interface PhoneNumbersInterface
 
     /** @var number The returned phone count */
     public $count;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
+class GetPhoneNumbersAsyncReturn
+{
+    /** @var number The report ID (async mode) */
+    public $result;
 
     /** @var array The returned error message. */
     public $error;

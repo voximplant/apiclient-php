@@ -62,7 +62,7 @@ class SMS implements SMSInterface
     }
 
     /**
-     * @method Enables or disables sending and receiving SMS for the phone number. Can be used only for phone numbers with SMS support, which is indicated by the is_sms_supported property in the objects returned by the [GetPhoneNumbers] Management API. Each inbound SMS message is charged according to the pricing. If enabled, SMS can be sent from this phone number using the [SendSmsMessage] Management API and received using the [InboundSmsCallback] property of the HTTP callback. See this article for HTTP callback details.
+     * @method Enables or disables sending and receiving SMS for the phone number. Can be used only for phone numbers with SMS support, which is indicated by the is_sms_supported property in the objects returned by the [GetPhoneNumbers] Management API. Each incoming SMS message is charged according to the pricing. If enabled, SMS can be sent from this phone number via the [SendSmsMessage] Management API and received via the [InboundSmsCallback] property of the HTTP callback. See this article for HTTP callback details.
      */
     public function ControlSms(Params\ControlSmsParams $params = null): ControlSmsReturn
     {

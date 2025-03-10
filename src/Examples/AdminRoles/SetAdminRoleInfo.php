@@ -24,12 +24,12 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * admin_role_id - The admin role to edit
  * admin_role_name - The admin role to edit, can be used instead of admin_role_id
  * new_admin_role_name - The new admin role name. The length must be less than 50
- * admin_role_active - The admin role enable flag. If false the allowed and denied entries have no affect
+ * admin_role_active - Whether the admin role is enabled. If false the allowed and denied entries have no affect
  * entry_modification_mode - The modification mode of the permission lists (allowed_entries and denied_entries). The following values are possible: add, del, set
- * allowed_entries - The list of allowed access entry changes separated by semicolon (;) (the API function names)
- * denied_entries - The list of denied access entry changes separated by semicolon (;) (the API function names)
- * like_admin_role_id - The admin role ID list separated by semicolon (;). Use the 'all' value to select all admin roles. The list specifies the roles from which the allowed_entries and denied_entries will be merged
- * like_admin_role_name - The admin role name, can be used instead of like_admin_role_id. The name specifies a role from which the allowed_entries and denied_entries will be merged
+ * allowed_entries - The list of allowed access entry changes separated by semicolons (;) (the API function names)
+ * denied_entries - The list of denied access entry changes separated by semicolons (;) (the API function names)
+ * like_admin_role_id - The admin role ID list separated by semicolons (;). Use the 'all' value to select all admin roles. The list specifies the roles from which the allowed_entries and denied_entries are merged
+ * like_admin_role_name - The admin role name, can be used instead of like_admin_role_id. The name specifies a role from which the allowed_entries and denied_entries are merged
  */
 $params = new SetAdminRoleInfoParams();
 

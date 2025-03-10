@@ -4,13 +4,13 @@ namespace Voximplant\Resources\Params;
 
 class GetCallListsParams
 {
-    /** @var intlist The list ID to filter. Can be a list separated by semicolon (;). Use the 'all' value to select all lists */
+    /** @var intlist The list ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all lists */
     public $list_id;
 
     /** @var string Find call lists by name */
     public $name;
 
-    /** @var boolean Find only active call lists */
+    /** @var boolean Whether to find only active call lists */
     public $is_active;
 
     /** @var timestamp The UTC 'from' date filter in 24-h format: YYYY-MM-DD HH:mm:ss */
@@ -25,10 +25,10 @@ class GetCallListsParams
     /** @var number The max returning record count */
     public $count;
 
-    /** @var number The first N records will be skipped in the output */
+    /** @var number The first N records are skipped in the output */
     public $offset;
 
-    /** @var intlist The application ID to filter. Can be a list separated by semicolon (;). Use the 'all' value to select all applications */
+    /** @var intlist The application ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all applications */
     public $application_id;
 
     public function toArray()

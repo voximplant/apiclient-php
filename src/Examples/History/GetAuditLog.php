@@ -24,18 +24,15 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * from_date - The UTC 'from' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * to_date - The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * timezone - The selected timezone or the 'auto' value (the account location)
- * audit_log_id - The audit history ID list separated by semicolon (;)
+ * audit_log_id - The audit history ID list separated by semicolons (;)
  * filtered_admin_user_id - The admin user ID to filter
- * filtered_ip - The IP list separated by semicolon (;) to filter
- * filtered_cmd - The function list separated by semicolon (;) to filter
+ * filtered_ip - The IP list separated by semicolons (;) to filter
+ * filtered_cmd - The function list separated by semicolons (;) to filter
  * advanced_filters - A relation ID to filter (for example: a phone_number value, a user_id value, an application_id value)
- * with_header - Set false to get a CSV file without the column names if the output=csv
- * desc_order - Set true to get records in the descent order
- * with_total_count - Set false to omit the 'total_count' and increase performance
+ * desc_order - Whether to get records in the descent order
+ * with_total_count - Whether to include the 'total_count' and increase performance
  * count - The max returning record count
- * offset - The first N records will be skipped in the output
- * output - The output format. The following values available: json, csv
- * is_async - Set true to get records in the asynchronous mode (for csv output only). If it's true, the request is available via [GetHistoryReports] and [DownloadHistoryReport] methods
+ * offset - The first N records are skipped in the output
  */
 $params = new GetAuditLogParams();
 

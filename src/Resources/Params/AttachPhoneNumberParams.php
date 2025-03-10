@@ -25,7 +25,7 @@ class AttachPhoneNumberParams
     /** @var number The phone regulation address ID */
     public $regulation_address_id;
 
-    /** @var boolean The force verification flag */
+    /** @var boolean Whether the force verification is enabled */
     public $force_verification;
 
     public function toArray()

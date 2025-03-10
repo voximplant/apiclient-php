@@ -10,10 +10,10 @@ class GetCallListDetailsParams
     /** @var number Maximum number of entries in the result */
     public $count;
 
-    /** @var number The first N records will be skipped in the output */
+    /** @var number The first N records are skipped in the output */
     public $offset;
 
-    /** @var string Output format (CSV/JSON/XLS). Default CSV */
+    /** @var string The output format. The following values available: **json**, **csv**, **xls**. The default value is **csv** */
     public $output;
 
     /** @var string Encoding of the output file. Default UTF-8 */

@@ -23,17 +23,17 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * admin_role_id - The admin role ID to filter
  * admin_role_name - The admin role name part to filter
- * admin_role_active - The admin role active flag to filter
- * with_entries - Set true to get the permissions
- * with_account_roles - Set false to omit the account roles
- * with_parent_roles - Set false to omit the parent roles
- * with_system_roles - Set false to omit the system roles
- * included_admin_user_id - The attached admin user ID list separated by semicolon (;). Use the 'all' value to select all admin users
- * excluded_admin_user_id - Not attached admin user ID list separated by semicolon (;). Use the 'all' value to select all admin users
+ * admin_role_active - Whether the admin role is enabled to filter
+ * with_entries - Whether to get the permissions
+ * with_account_roles - Whether to include the account roles
+ * with_parent_roles - Whether to include the parent roles
+ * with_system_roles - Whether to include the system roles
+ * included_admin_user_id - The attached admin user ID list separated by semicolons (;). Use the 'all' value to select all admin users
+ * excluded_admin_user_id - Not attached admin user ID list separated by semicolons (;). Use the 'all' value to select all admin users
  * full_admin_users_matching - Set false to get roles with partial admin user list matching
  * showing_admin_user_id - The admin user to show in the 'admin_users' field output
  * count - The max returning record count
- * offset - The first N records will be skipped in the output
+ * offset - The first N records are skipped in the output
  */
 $params = new GetAdminRolesParams();
 

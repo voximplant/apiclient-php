@@ -10,13 +10,13 @@ class SQ_GetQueuesParams
     /** @var string Name of the application to search by. Can be used instead of application_id */
     public $application_name;
 
-    /** @var intlist List of smart queue IDs separated by semicolon (;) */
+    /** @var intlist List of SmartQueue IDs separated by semicolons (;) */
     public $sq_queue_id;
 
-    /** @var stringlist List of smart queue names separated by semicolon (;). Can be used instead of sq_queue_id */
+    /** @var stringlist List of SmartQueue names separated by semicolons (;). Can be used instead of sq_queue_id */
     public $sq_queue_name;
 
-    /** @var string Substring of the smart queue name to filter */
+    /** @var string Substring of the SmartQueue name to filter */
     public $sq_queue_name_template;
 
     /** @var number ID of the user that is bound to the queue */
@@ -37,7 +37,7 @@ class SQ_GetQueuesParams
     /** @var number Number of items to skip in the output */
     public $offset;
 
-    /** @var boolean Number of agents bound to the queue */
+    /** @var boolean Whether to include the number of agents bound to the queue */
     public $with_agentcount;
 
     public function toArray()

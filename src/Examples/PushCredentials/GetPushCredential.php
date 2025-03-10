@@ -23,11 +23,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * push_credential_id - The push credentials id
  * push_provider_name - The push provider name. The possible values are APPLE, APPLE_VOIP, GOOGLE, HUAWEI
- * push_provider_id - The push provider id. Can be used instead of push_provider_name
+ * push_provider_id - The push provider id. Can be used instead of push_provider_name. The possible values are: 1 — APPLE, 2 — GOOGLE, 3 — APPLE_VOIP, 5 — HUAWEI.
  * application_name - The name of the bound application
  * application_id - The id of the bound application
- * with_cert - Set true to get the user's certificate
- * with_secret_info - Set true to get the certificate's password
+ * with_cert - Whether to get the user's certificate
+ * with_secret_info - Whether to get the certificate's password
  */
 $params = new GetPushCredentialParams();
 

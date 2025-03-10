@@ -25,11 +25,12 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * application_name - The application name that can be used instead of application_id
  * rule_id - The rule ID to filter
  * rule_name - The rule name part to filter
- * video_conference - The video conference flag to filter
+ * video_conference - Whether it is a video conference to filter
+ * attached_key_id - The service account ID bound to the rule. Read more in the [guide](/docs/guides/voxengine/management-api)
  * template - Search for template matching
- * with_scenarios - Set true to get bound scenarios info
+ * with_scenarios - Whether to get bound scenarios info
  * count - The max returning record count
- * offset - The first N records will be skipped in the output
+ * offset - The first N records are skipped in the output
  */
 $params = new GetRulesParams();
 

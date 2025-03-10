@@ -19,7 +19,7 @@ class GetQueuesParams
     /** @var number The excluded skill ID to filter */
     public $excluded_skill_id;
 
-    /** @var boolean Set true to get the bound skills */
+    /** @var boolean Whether to get the bound skills */
     public $with_skills;
 
     /** @var number The skill to show in the 'skills' field output */
@@ -28,10 +28,10 @@ class GetQueuesParams
     /** @var number The max returning record count */
     public $count;
 
-    /** @var number The first N records will be skipped in the output */
+    /** @var number The first N records are skipped in the output */
     public $offset;
 
-    /** @var boolean Number of agents bound to the queue */
+    /** @var boolean Whether to include the number of agents bound to the queue */
     public $with_operatorcount;
 
     public function toArray()

@@ -7,7 +7,7 @@ class GetKeyRolesParams
     /** @var string The key's ID */
     public $key_id;
 
-    /** @var boolean Show the roles' additional properties */
+    /** @var boolean Whether to show the roles' additional properties */
     public $with_expanded_roles;
 
     public function toArray()

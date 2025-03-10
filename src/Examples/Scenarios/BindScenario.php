@@ -21,13 +21,13 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * scenario_id - The scenario ID list separated by semicolon (;)
- * scenario_name - The scenario name list separated by semicolon (;). Can be used instead of scenario_id
+ * scenario_id - The scenario ID list separated by semicolons (;)
+ * scenario_name - The scenario name list separated by semicolons (;). Can be used instead of scenario_id
  * rule_id - The rule ID to bind the scenario. The rule and the scenario need to be in the same application
  * rule_name - The rule name that can be used instead of rule_id
  * application_id - The application ID
  * application_name - The application name that can be used instead of application_id
- * bind - Bind or unbind (set true or false respectively)
+ * bind - Whether to bind or unbind (set true or false respectively)
  */
 $params = new BindScenarioParams();
 

@@ -120,7 +120,7 @@ class SmartQueue implements SmartQueueInterface
     }
 
     /**
-     * @method Gets the metrics for the specified smart queue for the last 30 minutes.
+     * @method Gets the metrics for the specified SmartQueue for the last 30 minutes. Refer to the SmartQueue reporting guide to learn more.
      */
     public function GetSmartQueueRealtimeMetrics(Params\GetSmartQueueRealtimeMetricsParams $params = null): GetSmartQueueRealtimeMetricsReturn
     {
@@ -131,7 +131,7 @@ class SmartQueue implements SmartQueueInterface
     }
 
     /**
-     * @method Gets the metrics for the specified smart queue for the last 2 days.
+     * @method Gets the metrics for the specified SmartQueue for the last 2 days. Refer to the SmartQueue reporting guide to learn more.
      */
     public function GetSmartQueueDayHistory(Params\GetSmartQueueDayHistoryParams $params = null): GetSmartQueueDayHistoryReturn
     {
@@ -142,7 +142,7 @@ class SmartQueue implements SmartQueueInterface
     }
 
     /**
-     * @method Gets history for the specified smart queue.
+     * @method Gets history for the specified SmartQueue. Refer to the SmartQueue reporting guide to learn more.
      */
     public function RequestSmartQueueHistory(Params\RequestSmartQueueHistoryParams $params = null): RequestSmartQueueHistoryReturn
     {
@@ -153,7 +153,7 @@ class SmartQueue implements SmartQueueInterface
     }
 
     /**
-     * @method Gets the current state of the specified smart queue.
+     * @method Gets the current state of the specified SmartQueue.
      */
     public function GetSQState(Params\GetSQStateParams $params = null): GetSQStateReturn
     {

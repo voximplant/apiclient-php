@@ -22,9 +22,9 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 /**
  * @param array $params (See below)
  * subuser_id - The subuser's ID
- * role_id - The role id list separated by semicolon (;)
- * role_name - The role name list separated by semicolon (;)
- * force - Remove roles from all subuser keys
+ * role_id - The role id list separated by semicolons (;)
+ * role_name - The role name list separated by semicolons (;)
+ * force - Whether to remove roles from all subuser keys
  */
 $params = new RemoveSubUserRolesParams();
 

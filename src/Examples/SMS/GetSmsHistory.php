@@ -24,11 +24,11 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * source_number - The source phone number
  * destination_number - The destination phone number
  * direction - Sent or received SMS. Possible values: 'IN', 'OUT', 'in, 'out'. Leave blank to get both incoming and outgoing messages
- * count - Maximum number of resulting rows fetched. Must be not bigger than 1000. If left blank, then the default value of 1000 will be used
- * offset - The first N records will be skipped in the output
- * from_date - Date from which to perform search. Format is 'yyyy-MM-dd HH:mm:ss'
- * to_date - Date until which to perform search. Format is 'yyyy-MM-dd HH:mm:ss'
- * output - The output format. The following values available: json, csv
+ * count - Maximum number of resulting rows fetched. Must be not bigger than 1000. If left blank, then the default value of 1000 is used
+ * offset - The first N records are skipped in the output
+ * from_date - Date from which to perform search. Format is 'yyyy-MM-dd HH:mm:ss', time zone is UTC
+ * to_date - Date until which to perform search. Format is 'yyyy-MM-dd HH:mm:ss', time zone is UTC
+ * output - The output format. The following values available: **json**, **csv**, **xls**. The default value is **json**
  */
 $params = new GetSmsHistoryParams();
 

@@ -23,8 +23,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * application_id - ID of the application to search by
  * application_name - Name of the application to search by. Can be used instead of application_id
- * sq_queue_id - List of smart queue IDs separated by semicolon (;). Use 'all' to delete all the queues
- * sq_queue_name - List of smart queue names separated by semicolon (;). Can be used instead of sq_queue_id
+ * sq_queue_id - List of SmartQueue IDs separated by semicolons (;). Use 'all' to delete all the queues
+ * sq_queue_name - List of SmartQueue names separated by semicolons (;). Can be used instead of sq_queue_id
  */
 $params = new SQ_DelQueueParams();
 

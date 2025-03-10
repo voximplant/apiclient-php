@@ -28,19 +28,19 @@ class GetUsersParams
     /** @var string The user name part to filter */
     public $user_name;
 
-    /** @var boolean The user active flag to filter */
+    /** @var boolean Whether the user is active to filter. Inactive users cannot log in to applications */
     public $user_active;
 
     /** @var string The user display name part to filter */
     public $user_display_name;
 
-    /** @var boolean Set true to get the bound skills */
+    /** @var boolean Whether to get the bound skills */
     public $with_skills;
 
-    /** @var boolean Set true to get the bound queues */
+    /** @var boolean Whether to get the bound queues */
     public $with_queues;
 
-    /** @var stringlist The ACD status list separated by semicolon (;) to filter. The following values are possible: OFFLINE, ONLINE, READY, BANNED, IN_SERVICE, AFTER_SERVICE, TIMEOUT, DND */
+    /** @var stringlist The ACD status list separated by semicolons (;) to filter. The following values are possible: OFFLINE, ONLINE, READY, BANNED, IN_SERVICE, AFTER_SERVICE, TIMEOUT, DND */
     public $acd_status;
 
     /** @var number The skill to show in the 'skills' field output */
@@ -49,13 +49,13 @@ class GetUsersParams
     /** @var number The max returning record count */
     public $count;
 
-    /** @var number The first N records will be skipped in the output */
+    /** @var number The first N records are skipped in the output */
     public $offset;
 
     /** @var string The following values are available: 'user_id', 'user_name' and 'user_display_name' */
     public $order_by;
 
-    /** @var boolean Set true to get the user live balance */
+    /** @var boolean Whether to get the user live balance */
     public $return_live_balance;
 
     public function toArray()

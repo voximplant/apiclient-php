@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method SetKeyValueItem Creates or updates a key-value pair. If an existing key is passed, the method will return the existing item and will change the value if needed. The keys should be unique within a Voximplant application.
+ * @method SetKeyValueItem Creates or updates a key-value pair. If an existing key is passed, the method returns the existing item and changes the value if needed. The keys should be unique within a Voximplant application.
  */
 
 // Path to your autoload.php

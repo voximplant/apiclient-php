@@ -11,6 +11,7 @@ use Voximplant\Interfaces\GetNewPhoneNumbersReturn;
 use Voximplant\Interfaces\GetPhoneNumberCategoriesReturn;
 use Voximplant\Interfaces\GetPhoneNumberCountryStatesReturn;
 use Voximplant\Interfaces\GetPhoneNumberRegionsReturn;
+use Voximplant\Interfaces\GetPhoneNumbersAsyncReturn;
 use Voximplant\Interfaces\GetPhoneNumbersReturn;
 use Voximplant\Interfaces\PhoneNumbersInterface;
 use Voximplant\Interfaces\SetPhoneNumberInfoReturn;
@@ -33,6 +34,9 @@ class PhoneNumbers implements PhoneNumbersInterface
 
     /** @object GetPhoneNumbers */
     protected $GetPhoneNumbersReturn;
+
+    /** @object GetPhoneNumbersAsync */
+    protected $GetPhoneNumbersAsyncReturn;
 
     /** @object GetNewPhoneNumbers */
     protected $GetNewPhoneNumbersReturn;
@@ -61,6 +65,7 @@ class PhoneNumbers implements PhoneNumbersInterface
         $this->DeactivatePhoneNumberReturn = new DeactivatePhoneNumberReturn();
         $this->SetPhoneNumberInfoReturn = new SetPhoneNumberInfoReturn();
         $this->GetPhoneNumbersReturn = new GetPhoneNumbersReturn();
+        $this->GetPhoneNumbersAsyncReturn = new GetPhoneNumbersAsyncReturn();
         $this->GetNewPhoneNumbersReturn = new GetNewPhoneNumbersReturn();
         $this->GetPhoneNumberCategoriesReturn = new GetPhoneNumberCategoriesReturn();
         $this->GetPhoneNumberCountryStatesReturn = new GetPhoneNumberCountryStatesReturn();
@@ -125,6 +130,17 @@ class PhoneNumbers implements PhoneNumbersInterface
     }
 
     /**
+     * @method Gets the asyncronous report regarding purchaced phone numbers.
+     */
+    public function GetPhoneNumbersAsync(Params\GetPhoneNumbersAsyncParams $params = null): GetPhoneNumbersAsyncReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetPhoneNumbersAsyncReturn->$key = $value;
+        }
+        return $this->GetPhoneNumbersAsyncReturn;
+    }
+
+    /**
      * @method Gets the new phone numbers.
      */
     public function GetNewPhoneNumbers(Params\GetNewPhoneNumbersParams $params = null): GetNewPhoneNumbersReturn
@@ -158,7 +174,7 @@ class PhoneNumbers implements PhoneNumbersInterface
     }
 
     /**
-     * @method Get the country regions of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
+     * @method Get the country regions of the phone numbers. The response also contains the info about multiple numbers subscription for the child accounts.
      */
     public function GetPhoneNumberRegions(Params\GetPhoneNumberRegionsParams $params = null): GetPhoneNumberRegionsReturn
     {
@@ -169,7 +185,7 @@ class PhoneNumbers implements PhoneNumbersInterface
     }
 
     /**
-     * @method Get actual info on the country region of the phone numbers. The response will also contain the info about multiple numbers subscription for the child accounts.
+     * @method Get actual info on the country region of the phone numbers. The response also contains the info about multiple numbers subscription for the child accounts.
      */
     public function GetActualPhoneNumberRegion(Params\GetActualPhoneNumberRegionParams $params = null): GetActualPhoneNumberRegionReturn
     {

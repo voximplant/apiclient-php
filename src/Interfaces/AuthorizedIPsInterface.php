@@ -65,7 +65,7 @@ interface AuthorizedIPsInterface
 }
 class CheckAuthorizedAccountIPReturn
 {
-    /** @var boolean True if IP is allowed */
+    /** @var boolean Whether the IP is allowed */
     public $result;
 
     /** @var string The matched authorized IP or network (if found) */

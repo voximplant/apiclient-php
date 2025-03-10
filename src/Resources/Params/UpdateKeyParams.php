@@ -9,4 +9,7 @@ class UpdateKeyParams
 
     /** @var string The key's description */
     public $description;
+
+    /** @var string The key's name, up to 50 characters. Cannot be empty */
+    public $key_name;
 }

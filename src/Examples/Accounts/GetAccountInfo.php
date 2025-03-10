@@ -21,7 +21,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * return_live_balance - Set true to get the account's live balance
+ * return_live_balance - Whether to get the account's live balance
  */
 $params = new GetAccountInfoParams();
 

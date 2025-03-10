@@ -19,7 +19,7 @@ class SetAdminUserInfoParams
     /** @var string The new admin user password. The length must be at least 6 symbols */
     public $new_admin_user_password;
 
-    /** @var boolean The admin user enable flag */
+    /** @var boolean Whether the admin user is active */
     public $admin_user_active;
 
     public function toArray()

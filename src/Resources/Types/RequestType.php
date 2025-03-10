@@ -252,21 +252,6 @@ class RequestType
         );
     }
 
-    public function TransferMoneyToUser()
-    {
-        return array (
-            'user_id' => 'intlist',
-            'user_name' => 'stringlist',
-            'amount' => 'decimal',
-            'application_id' => 'number',
-            'application_name' => 'string',
-            'currency' => 'string',
-            'strict_mode' => 'boolean',
-            'user_transaction_description' => 'string',
-            'account_transaction_description' => 'string',
-        );
-    }
-
     public function CreateCallList()
     {
         return array (
@@ -281,6 +266,27 @@ class RequestType
             'delimiter' => 'string',
             'escape' => 'string',
             'reference_ip' => 'string',
+            'server_location' => 'string',
+        );
+    }
+
+    public function AppendToCallList()
+    {
+        return array (
+            'list_id' => 'number',
+            'list_name' => 'string',
+            'file_content' => 'file',
+            'encoding' => 'string',
+            'escape' => 'string',
+            'delimiter' => 'string',
+        );
+    }
+
+    public function DeleteCallList()
+    {
+        return array (
+            'account_id' => 'number',
+            'list_id' => 'number',
         );
     }
 
@@ -311,6 +317,29 @@ class RequestType
         );
     }
 
+    public function EditCallListTask()
+    {
+        return array (
+            'list_id' => 'number',
+            'task_id' => 'number',
+            'task_uuid' => 'string',
+            'start_at' => 'timestamp',
+            'attempts_left' => 'number',
+            'custom_data' => 'string',
+            'min_execution_time' => 'timestamp',
+        );
+    }
+
+    public function CancelCallListTask()
+    {
+        return array (
+            'account_id' => 'string',
+            'list_id' => 'string',
+            'tasks_ids' => 'string',
+            'tasks_uuids' => 'string',
+        );
+    }
+
     public function StopCallListProcessing()
     {
         return array (
@@ -333,6 +362,8 @@ class RequestType
             'rule_id' => 'number',
             'rule_name' => 'string',
             'rewrite' => 'boolean',
+            'application_id' => 'number',
+            'application_name' => 'string',
         );
     }
 
@@ -365,6 +396,8 @@ class RequestType
             'with_script' => 'boolean',
             'count' => 'number',
             'offset' => 'number',
+            'application_id' => 'number',
+            'application_name' => 'string',
         );
     }
 
@@ -397,6 +430,7 @@ class RequestType
             'rule_id' => 'number',
             'script_custom_data' => 'string',
             'reference_ip' => 'string',
+            'server_location' => 'string',
             'with_check_url' => 'boolean',
         );
     }
@@ -412,6 +446,7 @@ class RequestType
             'application_name' => 'string',
             'script_custom_data' => 'string',
             'reference_ip' => 'string',
+            'server_location' => 'string',
         );
     }
 
@@ -424,6 +459,7 @@ class RequestType
             'rule_pattern' => 'string',
             'rule_pattern_exclude' => 'string',
             'video_conference' => 'boolean',
+            'bind_key_id' => 'string',
             'scenario_id' => 'intlist',
             'scenario_name' => 'stringlist',
         );
@@ -447,6 +483,7 @@ class RequestType
             'rule_pattern' => 'string',
             'rule_pattern_exclude' => 'string',
             'video_conference' => 'boolean',
+            'bind_key_id' => 'string',
         );
     }
 
@@ -458,6 +495,7 @@ class RequestType
             'rule_id' => 'number',
             'rule_name' => 'string',
             'video_conference' => 'boolean',
+            'attached_key_id' => 'string',
             'template' => 'string',
             'with_scenarios' => 'boolean',
             'count' => 'number',
@@ -484,6 +522,7 @@ class RequestType
             'user_id' => 'intlist',
             'rule_name' => 'string',
             'remote_number' => 'stringlist',
+            'remote_number_list' => 'object',
             'local_number' => 'stringlist',
             'call_session_history_custom_data' => 'string',
             'with_calls' => 'boolean',
@@ -491,13 +530,35 @@ class RequestType
             'with_other_resources' => 'boolean',
             'child_account_id' => 'intlist',
             'children_calls_only' => 'boolean',
-            'with_header' => 'boolean',
             'desc_order' => 'boolean',
             'with_total_count' => 'boolean',
             'count' => 'number',
             'offset' => 'number',
+        );
+    }
+
+    public function GetCallHistoryAsync()
+    {
+        return array (
+            'from_date' => 'timestamp',
+            'to_date' => 'timestamp',
+            'timezone' => 'string',
+            'call_session_history_id' => 'intlist',
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'user_id' => 'intlist',
+            'rule_name' => 'string',
+            'remote_number' => 'stringlist',
+            'local_number' => 'stringlist',
+            'call_session_history_custom_data' => 'string',
+            'with_calls' => 'boolean',
+            'with_records' => 'boolean',
+            'with_other_resources' => 'boolean',
+            'child_account_id' => 'intlist',
+            'children_calls_only' => 'boolean',
+            'desc_order' => 'boolean',
+            'with_header' => 'boolean',
             'output' => 'string',
-            'is_async' => 'boolean',
         );
     }
 
@@ -514,10 +575,9 @@ class RequestType
             'remote_number' => 'stringlist',
             'local_number' => 'stringlist',
             'call_session_history_custom_data' => 'string',
-            'with_header' => 'boolean',
             'desc_order' => 'boolean',
+            'with_header' => 'boolean',
             'output' => 'string',
-            'is_async' => 'boolean',
         );
     }
 
@@ -536,6 +596,27 @@ class RequestType
         );
     }
 
+    public function GetPhoneNumberReports()
+    {
+        return array (
+            'report_id' => 'number',
+            'report_type' => 'stringlist',
+            'created_from' => 'timestamp',
+            'created_to' => 'timestamp',
+            'is_completed' => 'boolean',
+            'desc_order' => 'boolean',
+            'count' => 'number',
+            'offset' => 'number',
+        );
+    }
+
+    public function DownloadHistoryReport()
+    {
+        return array (
+            'history_report_id' => 'number',
+        );
+    }
+
     public function GetTransactionHistory()
     {
         return array (
@@ -550,11 +631,30 @@ class RequestType
             'children_transactions_only' => 'boolean',
             'users_transactions_only' => 'boolean',
             'desc_order' => 'boolean',
+            'with_total_count' => 'boolean',
             'count' => 'number',
             'offset' => 'number',
-            'output' => 'string',
-            'is_async' => 'boolean',
             'is_uncommitted' => 'boolean',
+        );
+    }
+
+    public function GetTransactionHistoryAsync()
+    {
+        return array (
+            'from_date' => 'timestamp',
+            'to_date' => 'timestamp',
+            'timezone' => 'string',
+            'transaction_id' => 'intlist',
+            'payment_reference' => 'string',
+            'transaction_type' => 'stringlist',
+            'user_id' => 'intlist',
+            'child_account_id' => 'intlist',
+            'children_transactions_only' => 'boolean',
+            'users_transactions_only' => 'boolean',
+            'desc_order' => 'boolean',
+            'is_uncommitted' => 'boolean',
+            'with_header' => 'boolean',
+            'output' => 'string',
         );
     }
 
@@ -599,13 +699,27 @@ class RequestType
             'filtered_ip' => 'stringlist',
             'filtered_cmd' => 'stringlist',
             'advanced_filters' => 'string',
-            'with_header' => 'boolean',
             'desc_order' => 'boolean',
             'with_total_count' => 'boolean',
             'count' => 'number',
             'offset' => 'number',
+        );
+    }
+
+    public function GetAuditLogAsync()
+    {
+        return array (
+            'from_date' => 'timestamp',
+            'to_date' => 'timestamp',
+            'timezone' => 'string',
+            'audit_log_id' => 'intlist',
+            'filtered_admin_user_id' => 'string',
+            'filtered_ip' => 'stringlist',
+            'filtered_cmd' => 'stringlist',
+            'advanced_filters' => 'string',
+            'desc_order' => 'boolean',
+            'with_header' => 'boolean',
             'output' => 'string',
-            'is_async' => 'boolean',
         );
     }
 
@@ -836,6 +950,13 @@ class RequestType
         );
     }
 
+    public function GetPhoneNumbersAsync()
+    {
+        return array (
+            'with_header' => 'boolean',
+        );
+    }
+
     public function GetNewPhoneNumbers()
     {
         return array (
@@ -845,6 +966,7 @@ class RequestType
             'phone_region_id' => 'number',
             'count' => 'number',
             'offset' => 'number',
+            'phone_number_mask' => 'string',
         );
     }
 
@@ -1087,7 +1209,6 @@ class RequestType
             'application_name' => 'string',
             'user_id' => 'intlist',
             'user_name' => 'stringlist',
-            'sq_queue_id' => 'intlist',
             'sq_queue_name' => 'stringlist',
             'from_date' => 'timestamp',
             'to_date' => 'timestamp',
@@ -1463,13 +1584,13 @@ class RequestType
             'application_id' => 'number',
             'application_name' => 'string',
             'credential_bundle' => 'string',
-            'cert_content' => 'string',
+            'cert_content' => 'file',
             'cert_file_name' => 'string',
             'cert_password' => 'string',
             'is_dev_mode' => 'boolean',
             'sender_id' => 'string',
             'server_key' => 'string',
-            'service_account_file' => 'string',
+            'service_account_file' => 'file',
             'huawei_client_id' => 'string',
             'huawei_client_secret' => 'string',
             'huawei_application_id' => 'string',
@@ -1480,12 +1601,12 @@ class RequestType
     {
         return array (
             'push_credential_id' => 'number',
-            'cert_content' => 'string',
+            'cert_content' => 'file',
             'cert_password' => 'string',
             'is_dev_mode' => 'boolean',
             'sender_id' => 'string',
             'server_key' => 'string',
-            'service_account_file' => 'string',
+            'service_account_file' => 'file',
             'huawei_client_id' => 'string',
             'huawei_client_secret' => 'string',
             'huawei_application_id' => 'string',
@@ -1606,6 +1727,7 @@ class RequestType
     {
         return array (
             'description' => 'string',
+            'key_name' => 'string',
             'role_id' => 'intlist',
             'role_name' => 'stringlist',
         );
@@ -1626,6 +1748,7 @@ class RequestType
         return array (
             'key_id' => 'string',
             'description' => 'string',
+            'key_name' => 'string',
         );
     }
 
@@ -1801,6 +1924,13 @@ class RequestType
         );
     }
 
+    public function DownloadInvoice()
+    {
+        return array (
+            'invoice_id' => 'number',
+        );
+    }
+
     public function GetSmsHistory()
     {
         return array (
@@ -1939,7 +2069,7 @@ class RequestType
             'user_id' => 'intlist',
             'user_name' => 'stringlist',
             'sq_skills' => 'Object',
-            'bind_mode' => '[SQSkillBindingModes]',
+            'bind_mode' => 'string',
         );
     }
 
@@ -1981,7 +2111,7 @@ class RequestType
             'sq_queue_name' => 'string',
             'user_id' => 'intlist',
             'user_name' => 'stringlist',
-            'bind_mode' => '[SQAgentBindingModes]',
+            'bind_mode' => 'string',
         );
     }
 

@@ -16,8 +16,14 @@ class AddScenarioParams
     /** @var string The rule name that can be used instead of rule_id */
     public $rule_name;
 
-    /** @var boolean Rewrite the existing scenario */
+    /** @var boolean Whether to rewrite the existing scenario */
     public $rewrite;
+
+    /** @var number ID of the application to bind the scenario to */
+    public $application_id;
+
+    /** @var string Name of the application to bind the scenario to */
+    public $application_name;
 
     public function toArray()
     {
@@ -27,6 +33,8 @@ class AddScenarioParams
                     'rule_id' => $this->rule_id,
                     'rule_name' => $this->rule_name,
                     'rewrite' => $this->rewrite !== null ? (filter_var($this->rewrite, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
             ];
     }
 }

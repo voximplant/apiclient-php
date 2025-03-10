@@ -10,6 +10,6 @@ class ReorderScenariosParams
     /** @var string The rule name that can be used instead of rule_id */
     public $rule_name;
 
-    /** @var intlist The scenario ID list separated by semicolon (;) */
+    /** @var intlist The scenario ID list separated by semicolons (;) */
     public $scenario_id;
 }

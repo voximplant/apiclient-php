@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetCallListDetails Get details of the specified call list. Returns a CSV file by default.
+ * @method GetCallListDetails Gets details of the specified call list. Returns a CSV file by default.
  */
 
 // Path to your autoload.php
@@ -23,8 +23,8 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * @param array $params (See below)
  * list_id - The list ID
  * count - Maximum number of entries in the result
- * offset - The first N records will be skipped in the output
- * output - Output format (CSV/JSON/XLS). Default CSV
+ * offset - The first N records are skipped in the output
+ * output - The output format. The following values available: **json**, **csv**, **xls**. The default value is **csv**
  * encoding - Encoding of the output file. Default UTF-8
  * delimiter - Separator values. The default is ';'
  */
