@@ -950,6 +950,13 @@ class RequestType
         );
     }
 
+    public function IsAccountPhoneNumber()
+    {
+        return array (
+            'phone_number' => 'string',
+        );
+    }
+
     public function GetPhoneNumbersAsync()
     {
         return array (
@@ -1976,6 +1983,8 @@ class RequestType
             'call_max_queue_size' => 'number',
             'im_max_queue_size' => 'number',
             'priority' => 'number',
+            'call_max_waiting_time_in_seconds' => 'number',
+            'im_max_waiting_time_in_seconds' => 'number',
         );
     }
 
@@ -1998,6 +2007,8 @@ class RequestType
             'call_max_queue_size' => 'number',
             'im_max_queue_size' => 'number',
             'priority' => 'number',
+            'call_max_waiting_time_in_seconds' => 'number',
+            'im_max_waiting_time_in_seconds' => 'number',
         );
     }
 

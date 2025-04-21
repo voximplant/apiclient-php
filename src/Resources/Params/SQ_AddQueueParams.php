@@ -31,10 +31,10 @@ class SQ_AddQueueParams
     /** @var string Comment, up to 200 characters */
     public $description;
 
-    /** @var number Maximum time in minutes that a CALL-type request can remain in the queue without being assigned to an agent */
+    /** @var number Maximum time in minutes that a CALL-type request can remain in the queue without being assigned to an agent. Specify either this parameter or `call_max_waiting_time_in_seconds`. Specifying both parameters simultaniously leads to an error */
     public $call_max_waiting_time;
 
-    /** @var number Maximum time in minutes that an IM-type request can remain in the queue without being assigned to an agent */
+    /** @var number Maximum time in minutes that an IM-type request can remain in the queue without being assigned to an agent. Specify either this parameter or `im_max_waiting_time_in_seconds`. Specifying both parameters simultaniously leads to an error */
     public $im_max_waiting_time;
 
     /** @var number Maximum size of the queue with CALL-type requests */
@@ -45,4 +45,10 @@ class SQ_AddQueueParams
 
     /** @var number The queue's priority from 1 to 100 */
     public $priority;
+
+    /** @var number Maximum call waiting time in seconds. Specify either this parameter or `call_max_waiting_time`. Specifying both parameters simultaniously leads to an error */
+    public $call_max_waiting_time_in_seconds;
+
+    /** @var number Maximum chat message waiting time in seconds. Specify either this parameter or `im_max_waiting_time`. Specifying both parameters simultaniously leads to an error */
+    public $im_max_waiting_time_in_seconds;
 }

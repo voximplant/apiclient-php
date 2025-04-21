@@ -30,6 +30,11 @@ interface PhoneNumbersInterface
     public function GetPhoneNumbers(\Voximplant\Resources\Params\GetPhoneNumbersParams $params);
 
     /**
+     * @method Checks if the phone number belongs to the authorized account.
+     */
+    public function IsAccountPhoneNumber(\Voximplant\Resources\Params\IsAccountPhoneNumberParams $params);
+
+    /**
      * @method Gets the asyncronous report regarding purchaced phone numbers.
      */
     public function GetPhoneNumbersAsync(\Voximplant\Resources\Params\GetPhoneNumbersAsyncParams $params);
@@ -121,6 +126,17 @@ interface PhoneNumbersInterface
 
     /** @var number The returned phone count */
     public $count;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
+class IsAccountPhoneNumberReturn
+{
+    /** @var boolean Whether the number belongs to the account */
+    public $result;
 
     /** @var array The returned error message. */
     public $error;

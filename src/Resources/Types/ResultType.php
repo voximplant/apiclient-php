@@ -2097,6 +2097,13 @@ class ResultType
         );
     }
 
+    public function IsAccountPhoneNumber()
+    {
+        return array (
+            'result' => 'boolean',
+        );
+    }
+
     public function GetPhoneNumbersAsync()
     {
         return array (
@@ -35589,7 +35596,9 @@ class ResultType
                 'created' => 'timestamp',
                 'modified' => 'timestamp',
                 'call_max_waiting_time' => 'number',
+                'call_max_waiting_time_in_seconds' => 'number',
                 'im_max_waiting_time' => 'number',
+                'im_max_waiting_time_in_seconds' => 'number',
                 'call_max_queue_size' => 'number',
                 'im_max_queue_size' => 'number',
                 'agentcount' => 'number',

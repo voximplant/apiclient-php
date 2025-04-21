@@ -13,6 +13,7 @@ use Voximplant\Interfaces\GetPhoneNumberCountryStatesReturn;
 use Voximplant\Interfaces\GetPhoneNumberRegionsReturn;
 use Voximplant\Interfaces\GetPhoneNumbersAsyncReturn;
 use Voximplant\Interfaces\GetPhoneNumbersReturn;
+use Voximplant\Interfaces\IsAccountPhoneNumberReturn;
 use Voximplant\Interfaces\PhoneNumbersInterface;
 use Voximplant\Interfaces\SetPhoneNumberInfoReturn;
 
@@ -34,6 +35,9 @@ class PhoneNumbers implements PhoneNumbersInterface
 
     /** @object GetPhoneNumbers */
     protected $GetPhoneNumbersReturn;
+
+    /** @object IsAccountPhoneNumber */
+    protected $IsAccountPhoneNumberReturn;
 
     /** @object GetPhoneNumbersAsync */
     protected $GetPhoneNumbersAsyncReturn;
@@ -65,6 +69,7 @@ class PhoneNumbers implements PhoneNumbersInterface
         $this->DeactivatePhoneNumberReturn = new DeactivatePhoneNumberReturn();
         $this->SetPhoneNumberInfoReturn = new SetPhoneNumberInfoReturn();
         $this->GetPhoneNumbersReturn = new GetPhoneNumbersReturn();
+        $this->IsAccountPhoneNumberReturn = new IsAccountPhoneNumberReturn();
         $this->GetPhoneNumbersAsyncReturn = new GetPhoneNumbersAsyncReturn();
         $this->GetNewPhoneNumbersReturn = new GetNewPhoneNumbersReturn();
         $this->GetPhoneNumberCategoriesReturn = new GetPhoneNumberCategoriesReturn();
@@ -127,6 +132,17 @@ class PhoneNumbers implements PhoneNumbersInterface
             $this->GetPhoneNumbersReturn->$key = $value;
         }
         return $this->GetPhoneNumbersReturn;
+    }
+
+    /**
+     * @method Checks if the phone number belongs to the authorized account.
+     */
+    public function IsAccountPhoneNumber(Params\IsAccountPhoneNumberParams $params = null): IsAccountPhoneNumberReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->IsAccountPhoneNumberReturn->$key = $value;
+        }
+        return $this->IsAccountPhoneNumberReturn;
     }
 
     /**

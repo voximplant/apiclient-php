@@ -32,11 +32,13 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * im_task_selection - Strategy of prioritizing IM-type requests for service. Accepts one of the following values: "MAX_PRIORITY", "MAX_WAITING_TIME". The default value is **call_task_selection**
  * fallback_agent_selection - Agent selection strategy, applied when it is not possible to wait for a suitable free agent. Currently not used
  * description - Comment, up to 200 characters
- * call_max_waiting_time - Maximum time in minutes that a CALL-type request can remain in the queue without being assigned to an agent
- * im_max_waiting_time - Maximum time in minutes that an IM-type request can remain in the queue without being assigned to an agent
+ * call_max_waiting_time - Maximum time in minutes that a CALL-type request can remain in the queue without being assigned to an agent. Specify either this parameter or `call_max_waiting_time_in_seconds`. Specifying both parameters simultaniously leads to an error
+ * im_max_waiting_time - Maximum time in minutes that an IM-type request can remain in the queue without being assigned to an agent. Specify either this parameter or `im_max_waiting_time_in_seconds`. Specifying both parameters simultaniously leads to an error
  * call_max_queue_size - Maximum size of the queue with CALL-type requests
  * im_max_queue_size - Maximum size of the queue with IM-type requests
  * priority - The queue's priority from 1 to 100
+ * call_max_waiting_time_in_seconds - Maximum call waiting time in seconds. Specify either this parameter or `call_max_waiting_time`. Specifying both parameters simultaniously leads to an error
+ * im_max_waiting_time_in_seconds - Maximum chat message waiting time in seconds. Specify either this parameter or `im_max_waiting_time`. Specifying both parameters simultaniously leads to an error
  */
 $params = new SQ_SetQueueInfoParams();
 
