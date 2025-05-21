@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method SQ_GetAgentCustomStatusMapping Returns the mapping list of SQ statuses and custom statuses. SQ statuses are returned whether or not they have mappings to custom statuses.
+ * @method SQ_GetAgentCustomStatusMapping Returns the mapping list of SQ statuses and custom statuses. SQ statuses are returned whether they have mappings to custom statuses.
  */
 
 // Path to your autoload.php

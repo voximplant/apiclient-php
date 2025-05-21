@@ -26,7 +26,7 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
  * offset - The first N records are skipped in the output
  * output - The output format. The following values available: **json**, **csv**, **xls**. The default value is **csv**
  * encoding - Encoding of the output file. Default UTF-8
- * delimiter - Separator values. The default is ';'
+ * delimiter - Separator values. The default value is ';'
  */
 $params = new GetCallListDetailsParams();
 

@@ -5,7 +5,7 @@ namespace Voximplant\Interfaces;
 interface InvoicesInterface
 {
     /**
-     * @method Gets all invoices of the specified USD or EUR account.
+     * @method Gets all invoices for the specified USD or EUR account.
      */
     public function GetAccountInvoices(\Voximplant\Resources\Params\GetAccountInvoicesParams $params);
 

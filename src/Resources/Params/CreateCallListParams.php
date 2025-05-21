@@ -22,13 +22,13 @@ class CreateCallListParams
     /** @var file Send as "body" part of the HTTP request or as multiform. The sending "file_content" via URL is at its own risk because the network devices tend to drop HTTP requests with large headers */
     public $file_content;
 
-    /** @var number Interval between call attempts in seconds. The default is 0 */
+    /** @var number Interval between call attempts in seconds. The default value is 0 */
     public $interval_seconds;
 
-    /** @var string Encoding file. The default is UTF-8 */
+    /** @var string Encoding file. The default value is UTF-8 */
     public $encoding;
 
-    /** @var string Separator values. The default is ';' */
+    /** @var string Separator values. The default value is ';' */
     public $delimiter;
 
     /** @var string Escape character for parsing csv */

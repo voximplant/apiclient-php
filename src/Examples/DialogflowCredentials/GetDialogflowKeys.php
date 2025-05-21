@@ -21,9 +21,9 @@ $voxApi = new VoximplantApi('path/to/private/api/key.json');
 
 /**
  * @param array $params (See below)
- * dialogflow_key_id - The Dialogflow key's ID
- * application_name - The name of the bound application
- * application_id - The id of the bound application
+ * dialogflow_key_id - Dialogflow key's ID
+ * application_name - Name of the bound application
+ * application_id - ID of the bound application
  * with_secret_info - Whether to get the json web key
  */
 $params = new GetDialogflowKeysParams();

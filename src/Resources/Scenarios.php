@@ -55,7 +55,7 @@ class Scenarios implements ScenariosInterface
     }
 
     /**
-     * @method Adds a new scenario to the Shared folder, so the scenario is available in all the existing applications. Please use the POST method.
+     * @method Adds a new scenario to the Shared folder, so the scenario is available in all the existing applications. Please use the POST method.When adding a scenario to the Shared folder, the `application_id` and `application_name` parameters should not be provided.
      */
     public function AddScenario(Params\AddScenarioParams $params = null): AddScenarioReturn
     {

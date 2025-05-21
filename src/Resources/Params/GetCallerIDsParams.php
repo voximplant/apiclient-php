@@ -4,7 +4,7 @@ namespace Voximplant\Resources\Params;
 
 class GetCallerIDsParams
 {
-    /** @var number The id of the callerID object to filter */
+    /** @var number ID of the callerID object to filter */
     public $callerid_id;
 
     /** @var string The phone number to filter */

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetPhoneNumbersAsync Gets the asyncronous report regarding purchaced phone numbers.
+ * @method GetPhoneNumbersAsync Gets the asynchronous report regarding purchased phone numbers.
  */
 
 // Path to your autoload.php

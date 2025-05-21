@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetAccountInvoices Gets all invoices of the specified USD or EUR account.
+ * @method GetAccountInvoices Gets all invoices for the specified USD or EUR account.
  */
 
 // Path to your autoload.php

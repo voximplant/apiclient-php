@@ -34,7 +34,7 @@ interface CallerIDsInterface
     /** @var number 1 */
     public $result;
 
-    /** @var number The id of the callerID object */
+    /** @var number ID of the callerID object */
     public $callerid_id;
 
     /** @var array The returned error message. */

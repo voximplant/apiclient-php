@@ -282,6 +282,21 @@ class RequestType
         );
     }
 
+    public function EditCallList()
+    {
+        return array (
+            'list_id' => 'number',
+            'interval_seconds' => 'number',
+            'num_attempts' => 'number',
+            'max_simultaneous' => 'number',
+            'ip_address' => 'string',
+            'name' => 'string',
+            'priority' => 'number',
+            'start_at' => 'string',
+            'server_location' => 'string',
+        );
+    }
+
     public function DeleteCallList()
     {
         return array (

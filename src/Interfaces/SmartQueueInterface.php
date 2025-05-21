@@ -30,7 +30,7 @@ interface SmartQueueInterface
     public function SQ_SetAgentCustomStatusMapping(\Voximplant\Resources\Params\SQ_SetAgentCustomStatusMappingParams $params);
 
     /**
-     * @method Returns the mapping list of SQ statuses and custom statuses. SQ statuses are returned whether or not they have mappings to custom statuses.
+     * @method Returns the mapping list of SQ statuses and custom statuses. SQ statuses are returned whether they have mappings to custom statuses.
      */
     public function SQ_GetAgentCustomStatusMapping(\Voximplant\Resources\Params\SQ_GetAgentCustomStatusMappingParams $params);
 

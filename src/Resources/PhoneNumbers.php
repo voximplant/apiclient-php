@@ -146,7 +146,7 @@ class PhoneNumbers implements PhoneNumbersInterface
     }
 
     /**
-     * @method Gets the asyncronous report regarding purchaced phone numbers.
+     * @method Gets the asynchronous report regarding purchased phone numbers.
      */
     public function GetPhoneNumbersAsync(Params\GetPhoneNumbersAsyncParams $params = null): GetPhoneNumbersAsyncReturn
     {

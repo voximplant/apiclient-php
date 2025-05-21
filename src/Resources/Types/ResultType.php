@@ -1216,6 +1216,13 @@ class ResultType
         );
     }
 
+    public function EditCallList()
+    {
+        return array (
+            'result' => 'boolean',
+        );
+    }
+
     public function DeleteCallList()
     {
         return array (
@@ -1458,6 +1465,7 @@ class ResultType
             array (
                 '|array|' =>
                 array (
+                    'audio_quality' => 'string',
                     'rule_name' => 'string',
                     'application_name' => 'string',
                     'call_session_history_id' => 'number',
@@ -1474,6 +1482,7 @@ class ResultType
                     array (
                         '|array|' =>
                         array (
+                            'audio_quality' => 'string',
                             'rule_name' => 'string',
                             'application_name' => 'string',
                             'call_session_history_id' => 'number',
@@ -1504,6 +1513,7 @@ class ResultType
                     array (
                         '|array|' =>
                         array (
+                            'audio_quality' => 'string',
                             'rule_name' => 'string',
                             'application_name' => 'string',
                             'call_session_history_id' => 'number',
@@ -1520,6 +1530,7 @@ class ResultType
                             array (
                                 '|array|' =>
                                 array (
+                                    'audio_quality' => 'string',
                                     'rule_name' => 'string',
                                     'application_name' => 'string',
                                     'call_session_history_id' => 'number',
@@ -1561,6 +1572,7 @@ class ResultType
                     array (
                         '|array|' =>
                         array (
+                            'audio_quality' => 'string',
                             'rule_name' => 'string',
                             'application_name' => 'string',
                             'call_session_history_id' => 'number',
@@ -1577,6 +1589,7 @@ class ResultType
                             array (
                                 '|array|' =>
                                 array (
+                                    'audio_quality' => 'string',
                                     'rule_name' => 'string',
                                     'application_name' => 'string',
                                     'call_session_history_id' => 'number',
@@ -1607,6 +1620,7 @@ class ResultType
                             array (
                                 '|array|' =>
                                 array (
+                                    'audio_quality' => 'string',
                                     'rule_name' => 'string',
                                     'application_name' => 'string',
                                     'call_session_history_id' => 'number',
@@ -1623,6 +1637,7 @@ class ResultType
                                     array (
                                         '|array|' =>
                                         array (
+                                            'audio_quality' => 'string',
                                             'rule_name' => 'string',
                                             'application_name' => 'string',
                                             'call_session_history_id' => 'number',

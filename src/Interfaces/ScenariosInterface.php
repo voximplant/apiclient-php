@@ -5,7 +5,7 @@ namespace Voximplant\Interfaces;
 interface ScenariosInterface
 {
     /**
-     * @method Adds a new scenario to the <a href="https://voximplant.com/docs/gettingstarted/basicconcepts/scenarios#shared-scenarios">Shared</a> folder, so the scenario is available in all the existing applications. Please use the POST method.
+     * @method Adds a new scenario to the <a href="https://voximplant.com/docs/gettingstarted/basicconcepts/scenarios#shared-scenarios">Shared</a> folder, so the scenario is available in all the existing applications. Please use the POST method.<br><br>When adding a scenario to the Shared folder, the `application_id` and `application_name` parameters should not be provided.
      */
     public function AddScenario(\Voximplant\Resources\Params\AddScenarioParams $params);
 

@@ -76,7 +76,7 @@ class VoximplantApi
     /** @var object CallLists Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the following options in a CSV file: **__start_execution_time** – when the call list processing starts every day, UTC+0 24-h format: HH:mm:ss**__end_execution_time** – when the call list processing stops every day,  UTC+0 24-h format: HH:mm:ss**__start_at** – when the call list processing starts, UNIX timestamp. If not specified, the processing starts immediately after a method call**__task_uuid** – call list UUID. A string up to 40 characters, can contain latin letters, digits, hyphens (-) and colons (:). Unique within the call listThis method accepts CSV files with custom delimiters, such a commas (,), semicolons (;) and other. To specify a delimiter, pass it to the delimiter parameter.IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing does not start, or it stops immediately if it is active. */
     public $CallLists;
 
-    /** @var object Scenarios Adds a new scenario to the Shared folder, so the scenario is available in all the existing applications. Please use the POST method. */
+    /** @var object Scenarios Adds a new scenario to the Shared folder, so the scenario is available in all the existing applications. Please use the POST method.When adding a scenario to the Shared folder, the `application_id` and `application_name` parameters should not be provided. */
     public $Scenarios;
 
     /** @var object Rules Adds a new rule for the application. */
@@ -142,7 +142,7 @@ class VoximplantApi
     /** @var object KeyValueStorage Creates or updates a key-value pair. If an existing key is passed, the method returns the existing item and changes the value if needed. The keys should be unique within a Voximplant application. */
     public $KeyValueStorage;
 
-    /** @var object Invoices Gets all invoices of the specified USD or EUR account. */
+    /** @var object Invoices Gets all invoices for the specified USD or EUR account. */
     public $Invoices;
 
     /**

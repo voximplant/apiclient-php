@@ -13,12 +13,12 @@ class AppendToCallListParams
     /** @var file Send as request body or multiform */
     public $file_content;
 
-    /** @var string Encoding file. The default is UTF-8 */
+    /** @var string Encoding file. The default value is UTF-8 */
     public $encoding;
 
     /** @var string Escape character for parsing csv */
     public $escape;
 
-    /** @var string Separator values. The default is ';' */
+    /** @var string Separator values. The default value is ';' */
     public $delimiter;
 }

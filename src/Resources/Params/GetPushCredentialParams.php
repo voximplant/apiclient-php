@@ -13,10 +13,10 @@ class GetPushCredentialParams
     /** @var number The push provider id. Can be used instead of push_provider_name. The possible values are: 1 — APPLE, 2 — GOOGLE, 3 — APPLE_VOIP, 5 — HUAWEI. */
     public $push_provider_id;
 
-    /** @var string The name of the bound application */
+    /** @var string Name of the bound application */
     public $application_name;
 
-    /** @var number The id of the bound application */
+    /** @var number ID of the bound application */
     public $application_id;
 
     /** @var boolean Whether to get the user's certificate */

@@ -15,6 +15,11 @@ interface CallListsInterface
     public function AppendToCallList(\Voximplant\Resources\Params\AppendToCallListParams $params);
 
     /**
+     * @method Edits the specified call list by its ID.
+     */
+    public function EditCallList(\Voximplant\Resources\Params\EditCallListParams $params);
+
+    /**
      * @method Deletes an existing call list by its ID.
      */
     public function DeleteCallList(\Voximplant\Resources\Params\DeleteCallListParams $params);
@@ -76,6 +81,17 @@ interface CallListsInterface
 
     /** @var number The list ID */
     public $list_id;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
+class EditCallListReturn
+{
+    /** @var boolean true */
+    public $result;
 
     /** @var array The returned error message. */
     public $error;

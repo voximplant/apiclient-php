@@ -4,13 +4,13 @@ namespace Voximplant\Resources\Params;
 
 class GetDialogflowKeysParams
 {
-    /** @var number The Dialogflow key's ID */
+    /** @var number Dialogflow key's ID */
     public $dialogflow_key_id;
 
-    /** @var string The name of the bound application */
+    /** @var string Name of the bound application */
     public $application_name;
 
-    /** @var number The id of the bound application */
+    /** @var number ID of the bound application */
     public $application_id;
 
     /** @var boolean Whether to get the json web key */

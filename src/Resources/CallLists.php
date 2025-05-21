@@ -7,6 +7,7 @@ use Voximplant\Interfaces\CallListsInterface;
 use Voximplant\Interfaces\CancelCallListTaskReturn;
 use Voximplant\Interfaces\CreateCallListReturn;
 use Voximplant\Interfaces\DeleteCallListReturn;
+use Voximplant\Interfaces\EditCallListReturn;
 use Voximplant\Interfaces\EditCallListTaskReturn;
 use Voximplant\Interfaces\GetCallListDetailsReturn;
 use Voximplant\Interfaces\GetCallListsReturn;
@@ -22,6 +23,9 @@ class CallLists implements CallListsInterface
 
     /** @object AppendToCallList */
     protected $AppendToCallListReturn;
+
+    /** @object EditCallList */
+    protected $EditCallListReturn;
 
     /** @object DeleteCallList */
     protected $DeleteCallListReturn;
@@ -50,6 +54,7 @@ class CallLists implements CallListsInterface
 
         $this->CreateCallListReturn = new CreateCallListReturn();
         $this->AppendToCallListReturn = new AppendToCallListReturn();
+        $this->EditCallListReturn = new EditCallListReturn();
         $this->DeleteCallListReturn = new DeleteCallListReturn();
         $this->GetCallListsReturn = new GetCallListsReturn();
         $this->GetCallListDetailsReturn = new GetCallListDetailsReturn();
@@ -79,6 +84,17 @@ class CallLists implements CallListsInterface
             $this->AppendToCallListReturn->$key = $value;
         }
         return $this->AppendToCallListReturn;
+    }
+
+    /**
+     * @method Edits the specified call list by its ID.
+     */
+    public function EditCallList(Params\EditCallListParams $params = null): EditCallListReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->EditCallListReturn->$key = $value;
+        }
+        return $this->EditCallListReturn;
     }
 
     /**

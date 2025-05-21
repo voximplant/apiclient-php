@@ -19,6 +19,6 @@ class GetCallListDetailsParams
     /** @var string Encoding of the output file. Default UTF-8 */
     public $encoding;
 
-    /** @var string Separator values. The default is ';' */
+    /** @var string Separator values. The default value is ';' */
     public $delimiter;
 }
