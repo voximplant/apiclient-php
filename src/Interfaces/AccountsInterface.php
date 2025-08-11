@@ -45,11 +45,6 @@ interface AccountsInterface
     public function GetMoneyAmountToCharge(\Voximplant\Resources\Params\GetMoneyAmountToChargeParams $params);
 
     /**
-     * @method Charges the account in the manual mode. You should call the ChargeAccount function to charge the subscriptions having the auto_charge=false.
-     */
-    public function ChargeAccount(\Voximplant\Resources\Params\ChargeAccountParams $params);
-
-    /**
      * @method Configures the account's plan.<br><br>Please note that when you change the billing plan, we reserve the subscription fee and taxes for the upcoming month. Read more in the <a href='/docs/gettingstarted/billing'>Billing</a> page.
      */
     public function ChangeAccountPlan(\Voximplant\Resources\Params\ChangeAccountPlanParams $params);
@@ -65,9 +60,14 @@ interface AccountsInterface
     public function GetAvailablePlans(\Voximplant\Resources\Params\GetAvailablePlansParams $params);
 
     /**
-     * @method Gets the account documents and the verification states.
+     * @method Gets the account documents and the verification states.<br><br>This method will be deprecated in the next versions. We recommend to use the [GetAccountVerifications](/docs/references/httpapi/accounts#getaccountverifications) method to get all the verifications and statuses for the account.
      */
     public function GetAccountDocuments(\Voximplant\Resources\Params\GetAccountDocumentsParams $params);
+
+    /**
+     * @method Gets all RU verifications for the specified account.
+     */
+    public function GetAccountVerifications(\Voximplant\Resources\Params\GetAccountVerificationsParams $params);
 }
 class GetAccountInfoReturn
 {
@@ -107,7 +107,7 @@ interface AccountsInterface
 }
 class GetCurrencyRateReturn
 {
-    /** @var ExchangeRates The exchange rates */
+    /** @var ExchangeRatesType The exchange rates */
     public $result;
 
     /** @var array The returned error message. */
@@ -166,20 +166,6 @@ interface AccountsInterface
     /** @var array The returned error message. */
     public $errors;
 }
-class ChargeAccountReturn
-{
-    /** @var ChargeAccountResult Result */
-    public $result;
-
-    /** @var ShortAccountInfoType The current account state */
-    public $account_info;
-
-    /** @var array The returned error message. */
-    public $error;
-
-    /** @var array The returned error message. */
-    public $errors;
-}
 class ChangeAccountPlanReturn
 {
     /** @var number 1 */
@@ -218,7 +204,18 @@ interface AccountsInterface
 }
 class GetAccountDocumentsReturn
 {
-    /** @var [AccountVerifications] The account verifications */
+    /** @var [AccountDocumentsType] The account documents with verification states */
+    public $result;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
+class GetAccountVerificationsReturn
+{
+    /** @var [AccountVerificationsType] Account verifications */
     public $result;
 
     /** @var array The returned error message. */

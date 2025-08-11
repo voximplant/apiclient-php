@@ -16,15 +16,20 @@ use Voximplant\Resources\Params\SetKeyValueItemParams;
  * 2. A private API key. To create it, call the [CreateKey] method. Save the result value in a file.
  */
 
+// Create options
+$options = (object)[
+  'tokenPath' => 'path/to/private/api/key.json',
+];
+
 // Create API Object
-$voxApi = new VoximplantApi('path/to/private/api/key.json');
+$voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * key - Key, up to 200 characters. A key can contain a namespace that is written before the ':' symbol, for example, test:1234. Thus, namespace 'test' can be used as a pattern in the [GetKeyValueItems](/docs/references/httpapi/keyvaluestorage#getkeyvalueitems) and [GetKeyValueKeys](/docs/references/httpapi/keyvaluestorage#getkeyvaluekeys) methods to find the keys with the same namespace
+ * key - Key, up to 200 characters. A key can contain a namespace that is written before the ':' symbol, for example, test:1234. Thus, namespace 'test' can be used as a pattern in the [GetKeyValueItems](/docs/references/httpapi/keyvaluestorage#getkeyvalueitems) and [GetKeyValueKeys](/docs/references/httpapi/keyvaluestorage#getkeyvaluekeys) methods to find the keys with the same namespace.The key should match the following regular expression: `^[a-zA-Z0-9а-яА-ЯёЁ_\-:;.#+]*$`
  * value - Value for the specified key, up to 2000 characters
- * application_id - The application ID
- * application_name - The application name
+ * application_id - Application ID
+ * application_name - Application name
  * ttl - Key expiry time in seconds. The value is in range of 0..7,776,000 (90 days), the default value is 30 days (2,592,000 seconds). The TTL is converted to an **expires_at** Unix timestamp field as part of the storage object. Note that one of the two parameters (ttl or expires_at) must be set
  * expires_at - Expiration date based on **ttl** (timestamp without milliseconds). Note that one of the two parameters (ttl or expires_at) must be set
  */

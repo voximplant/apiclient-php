@@ -5,6 +5,11 @@ namespace Voximplant\Interfaces;
 interface PhoneNumbersInterface
 {
     /**
+     * @method Receives information about the created phone numbers report or list of reports.
+     */
+    public function GetPhoneNumberReports(\Voximplant\Resources\Params\GetPhoneNumberReportsParams $params);
+
+    /**
      * @method Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps.<br><br>Please note that when you purchase a phone number, we reserve the subscription fee and taxes for the upcoming month. Read more in the <a href='/docs/gettingstarted/billing'>Billing</a> page.
      */
     public function AttachPhoneNumber(\Voximplant\Resources\Params\AttachPhoneNumberParams $params);
@@ -68,6 +73,23 @@ interface PhoneNumbersInterface
      * @method Gets all countries where the specific account has phone numbers.
      */
     public function GetAccountPhoneNumberCountries(\Voximplant\Resources\Params\GetAccountPhoneNumberCountriesParams $params);
+}
+class GetPhoneNumberReportsReturn
+{
+    /** @var [CommonReportType] */
+    public $result;
+
+    /** @var number The total found reports count */
+    public $total_count;
+
+    /** @var number The returned reports count */
+    public $count;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
 }
 class AttachPhoneNumberReturn
 {

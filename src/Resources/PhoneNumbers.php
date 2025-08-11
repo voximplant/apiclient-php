@@ -11,6 +11,7 @@ use Voximplant\Interfaces\GetNewPhoneNumbersReturn;
 use Voximplant\Interfaces\GetPhoneNumberCategoriesReturn;
 use Voximplant\Interfaces\GetPhoneNumberCountryStatesReturn;
 use Voximplant\Interfaces\GetPhoneNumberRegionsReturn;
+use Voximplant\Interfaces\GetPhoneNumberReportsReturn;
 use Voximplant\Interfaces\GetPhoneNumbersAsyncReturn;
 use Voximplant\Interfaces\GetPhoneNumbersReturn;
 use Voximplant\Interfaces\IsAccountPhoneNumberReturn;
@@ -20,6 +21,9 @@ use Voximplant\Interfaces\SetPhoneNumberInfoReturn;
 class PhoneNumbers implements PhoneNumbersInterface
 {
     protected $client;
+
+    /** @object GetPhoneNumberReports */
+    protected $GetPhoneNumberReportsReturn;
 
     /** @object AttachPhoneNumber */
     protected $AttachPhoneNumberReturn;
@@ -64,6 +68,7 @@ class PhoneNumbers implements PhoneNumbersInterface
     {
         $this->client = $client;
 
+        $this->GetPhoneNumberReportsReturn = new GetPhoneNumberReportsReturn();
         $this->AttachPhoneNumberReturn = new AttachPhoneNumberReturn();
         $this->BindPhoneNumberToApplicationReturn = new BindPhoneNumberToApplicationReturn();
         $this->DeactivatePhoneNumberReturn = new DeactivatePhoneNumberReturn();
@@ -77,6 +82,17 @@ class PhoneNumbers implements PhoneNumbersInterface
         $this->GetPhoneNumberRegionsReturn = new GetPhoneNumberRegionsReturn();
         $this->GetActualPhoneNumberRegionReturn = new GetActualPhoneNumberRegionReturn();
         $this->GetAccountPhoneNumberCountriesReturn = new GetAccountPhoneNumberCountriesReturn();
+    }
+
+    /**
+     * @method Receives information about the created phone numbers report or list of reports.
+     */
+    public function GetPhoneNumberReports(Params\GetPhoneNumberReportsParams $params = null): GetPhoneNumberReportsReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetPhoneNumberReportsReturn->$key = $value;
+        }
+        return $this->GetPhoneNumberReportsReturn;
     }
 
     /**

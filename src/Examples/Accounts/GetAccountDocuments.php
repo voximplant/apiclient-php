@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetAccountDocuments Gets the account documents and the verification states.
+ * @method GetAccountDocuments Gets the account documents and the verification states.<br><br>This method will be deprecated in the next versions. We recommend to use the [GetAccountVerifications](/docs/references/httpapi/accounts#getaccountverifications) method to get all the verifications and statuses for the account.
  */
 
 // Path to your autoload.php
@@ -16,8 +16,13 @@ use Voximplant\Resources\Params\GetAccountDocumentsParams;
  * 2. A private API key. To create it, call the [CreateKey] method. Save the result value in a file.
  */
 
+// Create options
+$options = (object)[
+  'tokenPath' => 'path/to/private/api/key.json',
+];
+
 // Create API Object
-$voxApi = new VoximplantApi('path/to/private/api/key.json');
+$voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)

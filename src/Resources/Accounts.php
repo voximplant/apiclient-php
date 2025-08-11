@@ -4,10 +4,10 @@ namespace Voximplant\Resources;
 
 use Voximplant\Interfaces\AccountsInterface;
 use Voximplant\Interfaces\ChangeAccountPlanReturn;
-use Voximplant\Interfaces\ChargeAccountReturn;
 use Voximplant\Interfaces\GetAccountDocumentsReturn;
 use Voximplant\Interfaces\GetAccountInfoReturn;
 use Voximplant\Interfaces\GetAccountPlansReturn;
+use Voximplant\Interfaces\GetAccountVerificationsReturn;
 use Voximplant\Interfaces\GetAvailablePlansReturn;
 use Voximplant\Interfaces\GetChildrenAccountsReturn;
 use Voximplant\Interfaces\GetCurrencyRateReturn;
@@ -45,9 +45,6 @@ class Accounts implements AccountsInterface
     /** @object GetMoneyAmountToCharge */
     protected $GetMoneyAmountToChargeReturn;
 
-    /** @object ChargeAccount */
-    protected $ChargeAccountReturn;
-
     /** @object ChangeAccountPlan */
     protected $ChangeAccountPlanReturn;
 
@@ -59,6 +56,9 @@ class Accounts implements AccountsInterface
 
     /** @object GetAccountDocuments */
     protected $GetAccountDocumentsReturn;
+
+    /** @object GetAccountVerifications */
+    protected $GetAccountVerificationsReturn;
 
     public function __construct($client)
     {
@@ -72,11 +72,11 @@ class Accounts implements AccountsInterface
         $this->GetSubscriptionPriceReturn = new GetSubscriptionPriceReturn();
         $this->GetChildrenAccountsReturn = new GetChildrenAccountsReturn();
         $this->GetMoneyAmountToChargeReturn = new GetMoneyAmountToChargeReturn();
-        $this->ChargeAccountReturn = new ChargeAccountReturn();
         $this->ChangeAccountPlanReturn = new ChangeAccountPlanReturn();
         $this->GetAccountPlansReturn = new GetAccountPlansReturn();
         $this->GetAvailablePlansReturn = new GetAvailablePlansReturn();
         $this->GetAccountDocumentsReturn = new GetAccountDocumentsReturn();
+        $this->GetAccountVerificationsReturn = new GetAccountVerificationsReturn();
     }
 
     /**
@@ -168,17 +168,6 @@ class Accounts implements AccountsInterface
     }
 
     /**
-     * @method Charges the account in the manual mode. You should call the ChargeAccount function to charge the subscriptions having the auto_charge=false.
-     */
-    public function ChargeAccount(Params\ChargeAccountParams $params = null): ChargeAccountReturn
-    {
-        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-            $this->ChargeAccountReturn->$key = $value;
-        }
-        return $this->ChargeAccountReturn;
-    }
-
-    /**
      * @method Configures the account's plan.Please note that when you change the billing plan, we reserve the subscription fee and taxes for the upcoming month. Read more in the Billing page.
      */
     public function ChangeAccountPlan(Params\ChangeAccountPlanParams $params = null): ChangeAccountPlanReturn
@@ -212,7 +201,7 @@ class Accounts implements AccountsInterface
     }
 
     /**
-     * @method Gets the account documents and the verification states.
+     * @method Gets the account documents and the verification states.This method will be deprecated in the next versions. We recommend to use the [GetAccountVerifications](/docs/references/httpapi/accounts#getaccountverifications) method to get all the verifications and statuses for the account.
      */
     public function GetAccountDocuments(Params\GetAccountDocumentsParams $params = null): GetAccountDocumentsReturn
     {
@@ -220,5 +209,16 @@ class Accounts implements AccountsInterface
             $this->GetAccountDocumentsReturn->$key = $value;
         }
         return $this->GetAccountDocumentsReturn;
+    }
+
+    /**
+     * @method Gets all RU verifications for the specified account.
+     */
+    public function GetAccountVerifications(Params\GetAccountVerificationsParams $params = null): GetAccountVerificationsReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->GetAccountVerificationsReturn->$key = $value;
+        }
+        return $this->GetAccountVerificationsReturn;
     }
 }

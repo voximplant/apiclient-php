@@ -116,14 +116,6 @@ class RequestType
         );
     }
 
-    public function ChargeAccount()
-    {
-        return array (
-            'phone_id' => 'intlist',
-            'phone_number' => 'stringlist',
-        );
-    }
-
     public function ChangeAccountPlan()
     {
         return array (
@@ -1377,6 +1369,13 @@ class RequestType
         );
     }
 
+    public function GetAccountVerifications()
+    {
+        return array (
+            'account_id' => 'number',
+        );
+    }
+
     public function AddAdminUser()
     {
         return array (
@@ -1991,6 +1990,7 @@ class RequestType
             'im_agent_selection' => 'string',
             'call_task_selection' => 'string',
             'im_task_selection' => 'string',
+            'hold_calls_if_inactive_agents' => 'boolean',
             'fallback_agent_selection' => 'string',
             'description' => 'string',
             'call_max_waiting_time' => 'number',
@@ -2010,6 +2010,7 @@ class RequestType
             'application_name' => 'string',
             'sq_queue_id' => 'number',
             'sq_queue_name' => 'string',
+            'hold_calls_if_inactive_agents' => 'boolean',
             'new_sq_queue_name' => 'string',
             'call_agent_selection' => 'string',
             'im_agent_selection' => 'string',

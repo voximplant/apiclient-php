@@ -25,11 +25,6 @@ interface HistoryInterface
     public function GetHistoryReports(\Voximplant\Resources\Params\GetHistoryReportsParams $params);
 
     /**
-     * @method Receives information about the created phone numbers report or list of reports.
-     */
-    public function GetPhoneNumberReports(\Voximplant\Resources\Params\GetPhoneNumberReportsParams $params);
-
-    /**
      * @method Downloads the required history report.<br><br>Please note, that the history report can return in a compressed state (*.gzip). In order for CURL to process a compressed file correctly, add the **--compressed** key.
      */
     public function DownloadHistoryReport(\Voximplant\Resources\Params\DownloadHistoryReportParams $params);
@@ -115,23 +110,6 @@ interface HistoryInterface
 class GetHistoryReportsReturn
 {
     /** @var [HistoryReportType] */
-    public $result;
-
-    /** @var number The total found reports count */
-    public $total_count;
-
-    /** @var number The returned reports count */
-    public $count;
-
-    /** @var array The returned error message. */
-    public $error;
-
-    /** @var array The returned error message. */
-    public $errors;
-}
-class GetPhoneNumberReportsReturn
-{
-    /** @var [CommonReportType] */
     public $result;
 
     /** @var number The total found reports count */

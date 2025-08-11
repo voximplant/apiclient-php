@@ -64,6 +64,12 @@ class VoximplantApi
     /** @var string Path to file with result CreateKey method. */
     public $tokenPath = false;
 
+    /** @var string Voximplant API host. */
+    public $host = 'api.voximplant.com';
+
+    /** @var int Account ID. */
+    public $accountId = 0;
+
     /** @var object Accounts Gets the account's info such as account_id, account_name, account_email etc. */
     public $Accounts;
 
@@ -85,6 +91,9 @@ class VoximplantApi
     /** @var object History Gets the account's call history (including call duration, cost, logs and other call information). You can filter the call history by a certain date. */
     public $History;
 
+    /** @var object PhoneNumbers Receives information about the created phone numbers report or list of reports. */
+    public $PhoneNumbers;
+
     /** @var object PSTNBlacklist Add a new phone number to the PSTN blacklist. Use blacklist to block incoming calls from specified phone numbers to numbers purchased from Voximplant. Since we have no control over exact phone number format for calls from SIP integrations, blacklisting such numbers should be done via JavaScript scenarios. */
     public $PSTNBlacklist;
 
@@ -93,9 +102,6 @@ class VoximplantApi
 
     /** @var object SIPRegistration Create a new SIP registration. You should specify the application_id or application_name if you specify the rule_name or user_id, or user_name. You should set is_persistent=true if you specify the user_id or user_name. You can bind only one SIP registration to the user (the previous SIP registration are automatically unbound).Please note that when you create a SIP registration, we reserve the subscription fee and taxes for the upcoming month. Read more in the Billing page. */
     public $SIPRegistration;
-
-    /** @var object PhoneNumbers Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps.Please note that when you purchase a phone number, we reserve the subscription fee and taxes for the upcoming month. Read more in the Billing page. */
-    public $PhoneNumbers;
 
     /** @var object CallerIDs Adds a new caller ID. Caller ID is the phone that is displayed to the called user. This number can be used for call back. */
     public $CallerIDs;
@@ -146,20 +152,30 @@ class VoximplantApi
     public $Invoices;
 
     /**
-     * @param bool $tokenPath
-     * @param bool $host
+     * @param mixed $arg1 Either string $tokenPath or object $options
+     * @param mixed $host Optional string $host
      */
-    public function __construct($tokenPath = false, $host = false)
+    public function __construct($arg1 = false, $host = false)
     {
-        if (!empty($tokenPath)) {
-            $this->tokenPath = $tokenPath;
+        if (!empty($arg1)) {
+            if (is_object($arg1)) {
+                $this->tokenPath = $arg1->tokenPath ?? false;
+                $this->host = $arg1->host ?? 'api.voximplant.com';
+                $this->accountId = $arg1->accountId ?? 0;
+            } else {
+                $this->tokenPath = $arg1 ?? false;
+                $this->host = $host ?? 'api.voximplant.com';
+                $this->accountId = 0;
+            }
         } elseif (!empty($_ENV['VOXIMPLANT_CREDENTIALS_PATH'])) {
             $this->tokenPath = $_ENV['VOXIMPLANT_CREDENTIALS_PATH'];
         }
 
         if (!empty($host)) {
-            $this->baseUrl = 'https://'.$host.'/platform_api/';
+            $this->host = $host;
         }
+
+        $this->baseUrl = 'https://'.$this->host.'/platform_api/';
 
         $this->dateHelpers = new DateHelpers();
         $this->functionHelpers = new FunctionHelpers();
@@ -173,10 +189,10 @@ class VoximplantApi
         $this->Scenarios = new Scenarios($this);
         $this->Rules = new Rules($this);
         $this->History = new History($this);
+        $this->PhoneNumbers = new PhoneNumbers($this);
         $this->PSTNBlacklist = new PSTNBlacklist($this);
         $this->SIPWhiteList = new SIPWhiteList($this);
         $this->SIPRegistration = new SIPRegistration($this);
-        $this->PhoneNumbers = new PhoneNumbers($this);
         $this->CallerIDs = new CallerIDs($this);
         $this->OutboundTestNumbers = new OutboundTestNumbers($this);
         $this->Queues = new Queues($this);
@@ -243,7 +259,7 @@ class VoximplantApi
 
     /**
      * @param string $method
-     * @param array  $result
+     * @param array $result
      *
      * @throws \Exception
      *

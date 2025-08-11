@@ -16,8 +16,13 @@ use Voximplant\Resources\Params\ChangeAccountPlanParams;
  * 2. A private API key. To create it, call the [CreateKey] method. Save the result value in a file.
  */
 
+// Create options
+$options = (object)[
+  'tokenPath' => 'path/to/private/api/key.json',
+];
+
 // Create API Object
-$voxApi = new VoximplantApi('path/to/private/api/key.json');
+$voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)

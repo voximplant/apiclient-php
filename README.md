@@ -1,6 +1,6 @@
 # Voximplant API client library
 
-#### Version 3.2.0
+#### Version 3.3.0
 
 ## Prerequisites
 
@@ -37,7 +37,10 @@ Next, specify the path to the file with the __result__ value either in the const
 __constructor__:
 
 ```php
-$voxApi = new VoximplantApi('path/to/private/api/key.json');
+$options = (object)[
+  'tokenPath' => 'path/to/private/api/key.json',
+];
+$voxApi = new VoximplantApi($options);
 ```
 
 __env__:
@@ -56,8 +59,13 @@ From now on you have access to the SDK methods.
 use Voximplant\VoximplantApi;
 use Voximplant\Resources\Params\StartScenariosParams;
 
+// Create options
+$options = (object)[
+  'tokenPath' => 'path/to/private/api/key.json',
+];
+
 // Create API Object
-$voxApi = new VoximplantApi('path/to/private/api/key.json');
+$voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
@@ -82,8 +90,13 @@ print_r($result);
 use Voximplant\VoximplantApi;
 use Voximplant\Resources\Params\SendSmsMessageParams;
 
+// Create options
+$options = (object)[
+  'tokenPath' => 'path/to/private/api/key.json',
+];
+
 // Create API Object
-$voxApi = new VoximplantApi('path/to/private/api/key.json');
+$voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
@@ -110,8 +123,13 @@ print_r($result);
 use Voximplant\VoximplantApi;
 use Voximplant\Resources\Params\GetCallHistoryParams;
 
+// Create options
+$options = (object)[
+  'tokenPath' => 'path/to/private/api/key.json',
+];
+
 // Create API Object
-$voxApi = new VoximplantApi('path/to/private/api/key.json');
+$voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
@@ -140,8 +158,13 @@ print_r($result);
 use Voximplant\VoximplantApi;
 use Voximplant\Resources\Params\GetTransactionHistoryParams;
 
+// Create options
+$options = (object)[
+  'tokenPath' => 'path/to/private/api/key.json',
+];
+
 // Create API Object
-$voxApi = new VoximplantApi('path/to/private/api/key.json');
+$voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)

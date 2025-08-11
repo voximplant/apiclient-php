@@ -25,6 +25,9 @@ class SQ_AddQueueParams
     /** @var string IM type requests prioritizing strategy. Accepts one of the [SQTaskSelectionStrategies] enum values. The default value is **call_task_selection** */
     public $im_task_selection;
 
+    /** @var boolean Whether to keep the call task in the queue if all agents are in the DND/BANNED/OFFLINE statuses. */
+    public $hold_calls_if_inactive_agents;
+
     /** @var string Agent selection strategy, applied when it is not possible to wait for a suitable free agent. Currently not used */
     public $fallback_agent_selection;
 
@@ -51,4 +54,27 @@ class SQ_AddQueueParams
 
     /** @var number Maximum chat message waiting time in seconds. Specify either this parameter or `im_max_waiting_time`. Specifying both parameters simultaniously leads to an error */
     public $im_max_waiting_time_in_seconds;
+
+    public function toArray()
+    {
+        return [
+                'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'sq_queue_name' => $this->sq_queue_name,
+                    'call_agent_selection' => $this->call_agent_selection,
+                    'im_agent_selection' => $this->im_agent_selection,
+                    'call_task_selection' => $this->call_task_selection,
+                    'im_task_selection' => $this->im_task_selection,
+                    'hold_calls_if_inactive_agents' => $this->hold_calls_if_inactive_agents !== null ? (filter_var($this->hold_calls_if_inactive_agents, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'fallback_agent_selection' => $this->fallback_agent_selection,
+                    'description' => $this->description,
+                    'call_max_waiting_time' => $this->call_max_waiting_time,
+                    'im_max_waiting_time' => $this->im_max_waiting_time,
+                    'call_max_queue_size' => $this->call_max_queue_size,
+                    'im_max_queue_size' => $this->im_max_queue_size,
+                    'priority' => $this->priority,
+                    'call_max_waiting_time_in_seconds' => $this->call_max_waiting_time_in_seconds,
+                    'im_max_waiting_time_in_seconds' => $this->im_max_waiting_time_in_seconds,
+            ];
+    }
 }

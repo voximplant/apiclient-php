@@ -11,7 +11,6 @@ use Voximplant\Interfaces\GetBriefCallHistoryReturn;
 use Voximplant\Interfaces\GetCallHistoryAsyncReturn;
 use Voximplant\Interfaces\GetCallHistoryReturn;
 use Voximplant\Interfaces\GetHistoryReportsReturn;
-use Voximplant\Interfaces\GetPhoneNumberReportsReturn;
 use Voximplant\Interfaces\GetTransactionHistoryAsyncReturn;
 use Voximplant\Interfaces\GetTransactionHistoryReturn;
 use Voximplant\Interfaces\HistoryInterface;
@@ -31,9 +30,6 @@ class History implements HistoryInterface
 
     /** @object GetHistoryReports */
     protected $GetHistoryReportsReturn;
-
-    /** @object GetPhoneNumberReports */
-    protected $GetPhoneNumberReportsReturn;
 
     /** @object DownloadHistoryReport */
     protected $DownloadHistoryReportReturn;
@@ -64,7 +60,6 @@ class History implements HistoryInterface
         $this->GetCallHistoryAsyncReturn = new GetCallHistoryAsyncReturn();
         $this->GetBriefCallHistoryReturn = new GetBriefCallHistoryReturn();
         $this->GetHistoryReportsReturn = new GetHistoryReportsReturn();
-        $this->GetPhoneNumberReportsReturn = new GetPhoneNumberReportsReturn();
         $this->DownloadHistoryReportReturn = new DownloadHistoryReportReturn();
         $this->GetTransactionHistoryReturn = new GetTransactionHistoryReturn();
         $this->GetTransactionHistoryAsyncReturn = new GetTransactionHistoryAsyncReturn();
@@ -116,17 +111,6 @@ class History implements HistoryInterface
             $this->GetHistoryReportsReturn->$key = $value;
         }
         return $this->GetHistoryReportsReturn;
-    }
-
-    /**
-     * @method Receives information about the created phone numbers report or list of reports.
-     */
-    public function GetPhoneNumberReports(Params\GetPhoneNumberReportsParams $params = null): GetPhoneNumberReportsReturn
-    {
-        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-            $this->GetPhoneNumberReportsReturn->$key = $value;
-        }
-        return $this->GetPhoneNumberReportsReturn;
     }
 
     /**

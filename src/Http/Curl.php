@@ -58,7 +58,7 @@ class Curl
         }
 
         // Get JWT token
-        if (!($token = $this->jwt->generateAuthorizationHeader($this->client->tokenPath))) {
+        if (!($token = $this->jwt->generateAuthorizationHeader($this->client->tokenPath, $this->client->accountId))) {
             throw new Exception('JWT authorization error: Token not found!');
         }
 

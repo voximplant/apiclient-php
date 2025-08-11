@@ -859,34 +859,6 @@ class ResultType
         );
     }
 
-    public function ChargeAccount()
-    {
-        return array (
-            'result' =>
-            array (
-                'charged_amount' => 'decimal',
-                'phones' =>
-                array (
-                    'charged_amount' => 'decimal',
-                    '|array|' =>
-                    array (
-                        'phone_id' => 'number',
-                        'phone_number' => 'string',
-                        'deactivated' => 'boolean',
-                        'is_charged' => 'boolean',
-                    ),
-                ),
-            ),
-            'account_info' =>
-            array (
-                'account_id' => 'number',
-                'frozen' => 'boolean',
-                'balance' => 'decimal',
-                'currency' => 'string',
-            ),
-        );
-    }
-
     public function ChangeAccountPlan()
     {
         return array (
@@ -34628,6 +34600,101 @@ class ResultType
         );
     }
 
+    public function GetAccountVerifications()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'verification_id' => 'number',
+                    'status' => 'string',
+                    'status_scheme' => 'string',
+                    'creation_type' => 'string',
+                    'created' => 'string',
+                    'comments' => 'number',
+                    'credentials' =>
+                    array (
+                        '|array|' =>
+                        array (
+                            'verification_id' => 'number',
+                            'status' => 'string',
+                            'status_scheme' => 'string',
+                            'creation_type' => 'string',
+                            'created' => 'string',
+                            'comments' => 'number',
+                            'individual' => 'Object',
+                            'legal_entity' => 'Object',
+                            'entrepreneur' => 'Object',
+                            'legal_status' => 'string',
+                        ),
+                    ),
+                    'default_end_user' =>
+                    array (
+                        '|array|' =>
+                        array (
+                            'verification_id' => 'number',
+                            'status' => 'string',
+                            'status_scheme' => 'string',
+                            'creation_type' => 'string',
+                            'created' => 'string',
+                            'comments' => 'number',
+                            'credentials' => 'Object',
+                            'end_user_uuid' => 'number',
+                        ),
+                    ),
+                    'agreements' =>
+                    array (
+                        '|array|' =>
+                        array (
+                            'verification_id' => 'number',
+                            'status' => 'string',
+                            'status_scheme' => 'string',
+                            'creation_type' => 'string',
+                            'created' => 'string',
+                            'comments' => 'string',
+                            'credentials' =>
+                            array (
+                                '|array|' =>
+                                array (
+                                    'verification_id' => 'number',
+                                    'status' => 'string',
+                                    'status_scheme' => 'string',
+                                    'creation_type' => 'string',
+                                    'created' => 'string',
+                                    'comments' => 'number',
+                                    'individual' => 'Object',
+                                    'legal_entity' => 'Object',
+                                    'entrepreneur' => 'Object',
+                                    'legal_status' => 'string',
+                                ),
+                            ),
+                            'default_end_user' =>
+                            array (
+                                '|array|' =>
+                                array (
+                                    'verification_id' => 'number',
+                                    'status' => 'string',
+                                    'status_scheme' => 'string',
+                                    'creation_type' => 'string',
+                                    'created' => 'string',
+                                    'comments' => 'number',
+                                    'credentials' => 'Object',
+                                    'end_user_uuid' => 'number',
+                                ),
+                            ),
+                            'agreement_id' => 'number',
+                            'type' => 'string',
+                            'agreement_number' => 'string',
+                            'agreement_date' => 'string',
+                            'signing_type' => 'string',
+                        ),
+                    ),
+                ),
+            ),
+        );
+    }
+
     public function AddAdminUser()
     {
         return array (
@@ -35607,6 +35674,7 @@ class ResultType
                 'agent_selection' => 'string',
                 'fallback_agent_selection' => 'string',
                 'task_selection' => 'string',
+                'hold_calls_if_inactive_agents' => 'boolean',
                 'description' => 'string',
                 'created' => 'timestamp',
                 'modified' => 'timestamp',

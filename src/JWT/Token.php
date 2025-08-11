@@ -10,14 +10,18 @@ class Token
     /** @var int Min 30 sec, max 3600 sec. */
     public $expTime = 60;
 
+    /** @var int Account ID. */
+    public $accountId;
+
     /**
      * @param string $tokenPath
+     * @param int $accountId
      *
      * @return string
      *
      * @throws Exception
      */
-    public function generateAuthorizationHeader($tokenPath): string
+    public function generateAuthorizationHeader(string $tokenPath, int $accountId = 0): string
     {
         if (!file_exists($tokenPath)) {
             throw new Exception('Token file not found!');
@@ -29,9 +33,15 @@ class Token
             throw new Exception('JWT authorization error: Token not found!');
         }
 
+        $this->accountId = $privateKey->account_id;
+
+        if ($accountId !== 0) {
+            $this->accountId = $accountId;
+        }
+
         $payload = [
             'iat' => time(),
-            'iss' => $privateKey->account_id,
+            'iss' => $this->accountId,
             'exp' => time() + $this->expTime,
         ];
 
