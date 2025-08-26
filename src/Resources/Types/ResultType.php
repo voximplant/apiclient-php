@@ -2280,6 +2280,51 @@ class ResultType
         );
     }
 
+    public function AddWABPhoneNumber()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function DeleteWABPhoneNumber()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function SetWABPhoneNumberInfo()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function GetWABPhoneNumbers()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'wab_phone_number' => 'string',
+                    'country_code' => 'string',
+                    'application_id' => 'number',
+                    'application_name' => 'string',
+                    'rule_id' => 'number',
+                    'rule_name' => 'string',
+                    'extended_application_name' => 'string',
+                    'description' => 'string',
+                    'created' => 'timestamp',
+                    'modified' => 'timestamp',
+                ),
+            ),
+            'total_count' => 'number',
+            'count' => 'number',
+        );
+    }
+
     public function AddCallerID()
     {
         return array (
@@ -34612,7 +34657,7 @@ class ResultType
                     'status_scheme' => 'string',
                     'creation_type' => 'string',
                     'created' => 'string',
-                    'comments' => 'number',
+                    'comments' => 'string',
                     'credentials' =>
                     array (
                         '|array|' =>
@@ -34622,7 +34667,7 @@ class ResultType
                             'status_scheme' => 'string',
                             'creation_type' => 'string',
                             'created' => 'string',
-                            'comments' => 'number',
+                            'comments' => 'string',
                             'individual' => 'Object',
                             'legal_entity' => 'Object',
                             'entrepreneur' => 'Object',
@@ -34638,7 +34683,7 @@ class ResultType
                             'status_scheme' => 'string',
                             'creation_type' => 'string',
                             'created' => 'string',
-                            'comments' => 'number',
+                            'comments' => 'string',
                             'credentials' => 'Object',
                             'end_user_uuid' => 'number',
                         ),
@@ -34662,7 +34707,7 @@ class ResultType
                                     'status_scheme' => 'string',
                                     'creation_type' => 'string',
                                     'created' => 'string',
-                                    'comments' => 'number',
+                                    'comments' => 'string',
                                     'individual' => 'Object',
                                     'legal_entity' => 'Object',
                                     'entrepreneur' => 'Object',
@@ -34678,7 +34723,7 @@ class ResultType
                                     'status_scheme' => 'string',
                                     'creation_type' => 'string',
                                     'created' => 'string',
-                                    'comments' => 'number',
+                                    'comments' => 'string',
                                     'credentials' => 'Object',
                                     'end_user_uuid' => 'number',
                                 ),

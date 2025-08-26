@@ -34,6 +34,7 @@ use Voximplant\Resources\SmartQueue;
 use Voximplant\Resources\Types\RequestType;
 use Voximplant\Resources\Types\ResultType;
 use Voximplant\Resources\Users;
+use Voximplant\Resources\WABPhoneNumbers;
 
 class VoximplantApi
 {
@@ -102,6 +103,9 @@ class VoximplantApi
 
     /** @var object SIPRegistration Create a new SIP registration. You should specify the application_id or application_name if you specify the rule_name or user_id, or user_name. You should set is_persistent=true if you specify the user_id or user_name. You can bind only one SIP registration to the user (the previous SIP registration are automatically unbound).Please note that when you create a SIP registration, we reserve the subscription fee and taxes for the upcoming month. Read more in the Billing page. */
     public $SIPRegistration;
+
+    /** @var object WABPhoneNumbers Adds a new WhatsApp Business phone number. */
+    public $WABPhoneNumbers;
 
     /** @var object CallerIDs Adds a new caller ID. Caller ID is the phone that is displayed to the called user. This number can be used for call back. */
     public $CallerIDs;
@@ -193,6 +197,7 @@ class VoximplantApi
         $this->PSTNBlacklist = new PSTNBlacklist($this);
         $this->SIPWhiteList = new SIPWhiteList($this);
         $this->SIPRegistration = new SIPRegistration($this);
+        $this->WABPhoneNumbers = new WABPhoneNumbers($this);
         $this->CallerIDs = new CallerIDs($this);
         $this->OutboundTestNumbers = new OutboundTestNumbers($this);
         $this->Queues = new Queues($this);

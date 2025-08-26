@@ -1027,6 +1027,51 @@ class RequestType
         );
     }
 
+    public function AddWABPhoneNumber()
+    {
+        return array (
+            'wab_phone_number' => 'string',
+            'voice_password' => 'string',
+            'description' => 'string',
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'rule_id' => 'number',
+            'rule_name' => 'string',
+        );
+    }
+
+    public function DeleteWABPhoneNumber()
+    {
+        return array (
+            'wab_phone_number' => 'string',
+        );
+    }
+
+    public function SetWABPhoneNumberInfo()
+    {
+        return array (
+            'wab_phone_number' => 'string',
+            'voice_password' => 'string',
+            'description' => 'string',
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'rule_id' => 'number',
+            'rule_name' => 'string',
+        );
+    }
+
+    public function GetWABPhoneNumbers()
+    {
+        return array (
+            'wab_phone_number' => 'string',
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'country_code' => 'string',
+            'count' => 'number',
+            'offset' => 'number',
+        );
+    }
+
     public function AddCallerID()
     {
         return array (
