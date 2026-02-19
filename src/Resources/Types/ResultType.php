@@ -427,7 +427,7 @@ class ResultType
                 '|array|' =>
                 array (
                     'subscription_template_id' => 'number',
-                    'currency_id' => 'number',
+                    'currency' => 'number',
                     'installation_price' => 'decimal',
                     'installation_price_in_currency' => 'number',
                     'price' => 'number',
@@ -1176,6 +1176,7 @@ class ResultType
             'result' => 'boolean',
             'count' => 'number',
             'list_id' => 'number',
+            'batch_id' => 'string',
         );
     }
 
@@ -1185,6 +1186,14 @@ class ResultType
             'result' => 'boolean',
             'count' => 'number',
             'list_id' => 'number',
+            'batch_id' => 'number',
+        );
+    }
+
+    public function CancelCallListBatch()
+    {
+        return array (
+            'result' => 'boolean',
         );
     }
 
@@ -1192,6 +1201,13 @@ class ResultType
     {
         return array (
             'result' => 'boolean',
+        );
+    }
+
+    public function EditCallListTasksPriority()
+    {
+        return array (
+            'results' => 'string',
         );
     }
 
@@ -1220,6 +1236,7 @@ class ResultType
                     'dt_complete' => 'timestamp',
                     'interval_seconds' => 'number',
                     'status' => 'string',
+                    'task_priority_strategy' => 'string',
                 ),
             ),
             'count' => 'number',
@@ -2058,6 +2075,7 @@ class ResultType
                     'phone_number' => 'string',
                     'phone_price' => 'decimal',
                     'phone_country_code' => 'string',
+                    'activation_status' => 'stringlist',
                     'phone_next_renewal' => 'date',
                     'phone_purchase_date' => 'timestamp',
                     'deactivated' => 'boolean',
@@ -35720,6 +35738,7 @@ class ResultType
             array (
                 'sq_queue_id' => 'number',
                 'sq_queue_name' => 'string',
+                'hold_im_if_inactive_agents' => 'boolean',
                 'agent_selection' => 'string',
                 'fallback_agent_selection' => 'string',
                 'task_selection' => 'string',

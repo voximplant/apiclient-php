@@ -31,7 +31,7 @@ interface AdminUsersInterface
 }
 class AddAdminUserReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var number The new admin user ID */
@@ -48,7 +48,7 @@ interface AdminUsersInterface
 }
 class DelAdminUserReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -59,7 +59,7 @@ interface AdminUsersInterface
 }
 class SetAdminUserInfoReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -87,7 +87,7 @@ interface AdminUsersInterface
 }
 class AttachAdminRoleReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */

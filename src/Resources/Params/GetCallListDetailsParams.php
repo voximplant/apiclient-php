@@ -21,4 +21,7 @@ class GetCallListDetailsParams
 
     /** @var string Separator values. The default value is ';' */
     public $delimiter;
+
+    /** @var string Batch UUID to filter the tasks */
+    public $batch_id;
 }

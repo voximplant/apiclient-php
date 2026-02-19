@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method CreateKey Creates a public/private key pair. You can optionally specify one or more roles for the key.
+ * @method CreateKey Creates a public/private key pair. You can optionally specify one or more roles for the key. You can find all available service account roles [here](/docs/getting-started/basic-concepts/management-api#service-account-roles).
  */
 
 // Path to your autoload.php

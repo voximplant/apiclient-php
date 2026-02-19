@@ -29,8 +29,8 @@ $voxApi = new VoximplantApi($options);
  * with_details - Whether to view the uploaded document statuses. (The flag is ignored with the child_account_id=all)
  * verification_name - The required account verification name to filter
  * verification_status - The account verification status list separated by semicolons (;). The following values are possible: REQUIRED, IN_PROGRESS, VERIFIED
- * from_unverified_hold_until - Unverified subscriptions hold until the date (from ...) in format: YYYY-MM-DD
- * to_unverified_hold_until - Unverified subscriptions hold until the date (... to) in format: YYYY-MM-DD
+ * from_unverified_hold_until - Unverified subscriptions hold until the date (from ...) in the following format: YYYY-MM-DD
+ * to_unverified_hold_until - Unverified subscriptions hold until the date (... to) in the following format: YYYY-MM-DD
  * child_account_id - The child account ID list separated by semicolons (;). Use the 'all' value to select all child accounts
  * children_verifications_only - Whether to get the children account verifications only
  */

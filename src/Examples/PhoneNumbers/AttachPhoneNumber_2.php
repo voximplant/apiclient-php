@@ -26,7 +26,7 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * phone_count - The phone count to attach
+ * phone_count - Quantity of phone numbers you want to attach
  * phone_number - The phone number that can be used instead of phone_count. See the [GetNewPhoneNumbers] method
  * country_code - The country code
  * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method

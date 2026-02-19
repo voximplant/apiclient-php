@@ -15,9 +15,19 @@ interface CallListsInterface
     public function AppendToCallList(\Voximplant\Resources\Params\AppendToCallListParams $params);
 
     /**
+     * @method Cancels all tasks in the call list with the specified batch UUID.
+     */
+    public function CancelCallListBatch(\Voximplant\Resources\Params\CancelCallListBatchParams $params);
+
+    /**
      * @method Edits the specified call list by its ID.
      */
     public function EditCallList(\Voximplant\Resources\Params\EditCallListParams $params);
+
+    /**
+     * @method Edits priorities of existing tasks in the specified call list.
+     */
+    public function EditCallListTasksPriority(\Voximplant\Resources\Params\EditCallListTasksPriorityParams $params);
 
     /**
      * @method Deletes an existing call list by its ID.
@@ -40,7 +50,7 @@ interface CallListsInterface
     public function EditCallListTask(\Voximplant\Resources\Params\EditCallListTaskParams $params);
 
     /**
-     * @method Cancels the specified tasks in the call list by their IDs or UUIDs.
+     * @method Cancels the specified tasks in the call list by their IDs or UUIDs. The maximum number of tasks to cancel is 1000.
      */
     public function CancelCallListTask(\Voximplant\Resources\Params\CancelCallListTaskParams $params);
 
@@ -56,14 +66,17 @@ interface CallListsInterface
 }
 class CreateCallListReturn
 {
-    /** @var boolean true */
+    /** @var boolean Whether the request completed successfully */
     public $result;
 
-    /** @var number The number of stored records */
+    /** @var number Number of stored records */
     public $count;
 
-    /** @var number The list ID */
+    /** @var number List ID */
     public $list_id;
+
+    /** @var string Batch UUID */
+    public $batch_id;
 
     /** @var array The returned error message. */
     public $error;
@@ -73,14 +86,28 @@ interface CallListsInterface
 }
 class AppendToCallListReturn
 {
-    /** @var boolean true */
+    /** @var boolean Whether the request completed successfully */
     public $result;
 
-    /** @var number The number of stored records */
+    /** @var number Number of stored records */
     public $count;
 
-    /** @var number The list ID */
+    /** @var number List ID */
     public $list_id;
+
+    /** @var number Batch UUID */
+    public $batch_id;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
+class CancelCallListBatchReturn
+{
+    /** @var boolean Whether the request completed successfully */
+    public $result;
 
     /** @var array The returned error message. */
     public $error;
@@ -90,8 +117,19 @@ interface CallListsInterface
 }
 class EditCallListReturn
 {
-    /** @var boolean true */
+    /** @var boolean Whether the request completed successfully */
     public $result;
+
+    /** @var array The returned error message. */
+    public $error;
+
+    /** @var array The returned error message. */
+    public $errors;
+}
+class EditCallListTasksPriorityReturn
+{
+    /** @var string JSON-encoded array of each task update. */
+    public $results;
 
     /** @var array The returned error message. */
     public $error;
@@ -118,10 +156,10 @@ interface CallListsInterface
     /** @var [CallListType] Array of lists */
     public $result;
 
-    /** @var number The returned call list count */
+    /** @var number Returned call list count */
     public $count;
 
-    /** @var number The total found call list count */
+    /** @var number Total found call list count */
     public $total_count;
 
     /** @var array The returned error message. */
@@ -146,7 +184,7 @@ interface CallListsInterface
 }
 class EditCallListTaskReturn
 {
-    /** @var boolean true */
+    /** @var boolean Whether the request completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -177,7 +215,7 @@ interface CallListsInterface
 }
 class StopCallListProcessingReturn
 {
-    /** @var boolean true */
+    /** @var boolean Whether the request completed successfully */
     public $result;
 
     /** @var string Result message */
@@ -191,7 +229,7 @@ interface CallListsInterface
 }
 class RecoverCallListReturn
 {
-    /** @var boolean true */
+    /** @var boolean Whether the request completed successfully */
     public $result;
 
     /** @var number Number restored tasks */

@@ -10,6 +10,9 @@ class SQ_SetQueueInfoParams
     /** @var string Name of the application to search by. Can be used instead of application_id */
     public $application_name;
 
+    /** @var boolean Whether to add the task to the queue if there are no available agents */
+    public $hold_im_if_inactive_agents;
+
     /** @var number ID of the SmartQueue to search for */
     public $sq_queue_id;
 
@@ -66,6 +69,7 @@ class SQ_SetQueueInfoParams
         return [
                 'application_id' => $this->application_id,
                     'application_name' => $this->application_name,
+                    'hold_im_if_inactive_agents' => $this->hold_im_if_inactive_agents !== null ? (filter_var($this->hold_im_if_inactive_agents, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
                     'sq_queue_id' => $this->sq_queue_id,
                     'sq_queue_name' => $this->sq_queue_name,
                     'hold_calls_if_inactive_agents' => $this->hold_calls_if_inactive_agents !== null ? (filter_var($this->hold_calls_if_inactive_agents, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,

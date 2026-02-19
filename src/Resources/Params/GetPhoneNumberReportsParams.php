@@ -7,7 +7,7 @@ class GetPhoneNumberReportsParams
     /** @var number The phone number report ID to filter */
     public $report_id;
 
-    /** @var stringlist The phone number report type list separated by semicolons (;). Use the 'all' value to select all history report types. The following values are possible: calls, calls_brief, transactions, audit, call_list, transactions_on_hold */
+    /** @var stringlist The phone number report type list separated by semicolons (;). The possible values are: phone_numbers, phone_numbers_awaiting_configuration */
     public $report_type;
 
     /** @var timestamp The UTC creation from date filter in 24-h format: YYYY-MM-DD HH:mm:ss */

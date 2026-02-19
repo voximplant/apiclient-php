@@ -41,8 +41,12 @@ $voxApi = new VoximplantApi($options);
  */
 $params = new GetChildrenAccountsParams();
 
+$params->child_account_id = array (
+    0 => 414877,
+    1 => 464478,
+);
 
-// Get the all children.
+// Get the specified children.
 $result = $voxApi->Accounts->GetChildrenAccounts($params);
 
 // Show result

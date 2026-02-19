@@ -259,6 +259,7 @@ class RequestType
             'escape' => 'string',
             'reference_ip' => 'string',
             'server_location' => 'string',
+            'task_priority_strategy' => 'string',
         );
     }
 
@@ -274,6 +275,15 @@ class RequestType
         );
     }
 
+    public function CancelCallListBatch()
+    {
+        return array (
+            'list_id' => 'number',
+            'list_name' => 'string',
+            'batch_ids' => 'string',
+        );
+    }
+
     public function EditCallList()
     {
         return array (
@@ -285,7 +295,16 @@ class RequestType
             'name' => 'string',
             'priority' => 'number',
             'start_at' => 'string',
+            'task_priority_strategy' => 'string',
             'server_location' => 'string',
+        );
+    }
+
+    public function EditCallListTasksPriority()
+    {
+        return array (
+            'list_id' => 'number',
+            'tasks' => 'string',
         );
     }
 
@@ -321,6 +340,7 @@ class RequestType
             'output' => 'string',
             'encoding' => 'string',
             'delimiter' => 'string',
+            'batch_id' => 'string',
         );
     }
 
@@ -925,6 +945,7 @@ class RequestType
         return array (
             'phone_id' => 'intlist',
             'phone_number' => 'stringlist',
+            'activation_status' => 'stringlist',
             'application_id' => 'number',
             'application_name' => 'string',
             'is_bound_to_application' => 'boolean',
@@ -2003,6 +2024,7 @@ class RequestType
             'source_number' => 'string',
             'destination_number' => 'string',
             'direction' => 'string',
+            'timezone' => 'string',
             'count' => 'number',
             'offset' => 'number',
             'from_date' => 'timestamp',
@@ -2031,6 +2053,7 @@ class RequestType
             'application_id' => 'number',
             'application_name' => 'string',
             'sq_queue_name' => 'string',
+            'hold_im_if_inactive_agents' => 'boolean',
             'call_agent_selection' => 'string',
             'im_agent_selection' => 'string',
             'call_task_selection' => 'string',
@@ -2053,6 +2076,7 @@ class RequestType
         return array (
             'application_id' => 'number',
             'application_name' => 'string',
+            'hold_im_if_inactive_agents' => 'boolean',
             'sq_queue_id' => 'number',
             'sq_queue_name' => 'string',
             'hold_calls_if_inactive_agents' => 'boolean',

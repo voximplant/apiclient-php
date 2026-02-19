@@ -4,13 +4,13 @@ namespace Voximplant\Resources\Params;
 
 class AppendToCallListParams
 {
-    /** @var number The call list ID */
+    /** @var number Call list ID */
     public $list_id;
 
     /** @var string The unique name of the call list. Can be used instead of list_id */
     public $list_name;
 
-    /** @var file Send as request body or multiform */
+    /** @var file Send as the request body or multiform */
     public $file_content;
 
     /** @var string Encoding file. The default value is UTF-8 */

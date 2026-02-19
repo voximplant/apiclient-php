@@ -4,28 +4,31 @@ namespace Voximplant\Resources\Params;
 
 class GetPhoneNumbersParams
 {
-    /** @var intlist The particular phone ID to filter */
+    /** @var intlist Particular phone ID to filter */
     public $phone_id;
 
-    /** @var stringlist The phone number list separated by semicolons (;) that can be used instead of phone_id */
+    /** @var stringlist Phone number list separated by semicolons (;) that can be used instead of phone_id */
     public $phone_number;
 
-    /** @var number The application ID */
+    /** @var stringlist Phone number activation statuses to filter, separated by semicolons (;).The possible values are: ACTIVE, ACTIVATING, DEACTIVATED, PROVISIONING, AWAITING_BUSINESS_PHONE_NUMBER_CONFIGURATION, LEGAL_OWNERSHIP_LIMIT_REACHED, GOSUSLUGI_DECLINED, SELF_BAN_ENABLED */
+    public $activation_status;
+
+    /** @var number Application ID */
     public $application_id;
 
-    /** @var string The application name that can be used instead of application_id */
+    /** @var string Application name that can be used instead of application_id */
     public $application_name;
 
     /** @var boolean Whether the phone number bound to an application */
     public $is_bound_to_application;
 
-    /** @var string The phone number start to filter */
+    /** @var string Phone number start to filter */
     public $phone_template;
 
-    /** @var stringlist The country code list separated by semicolons (;) */
+    /** @var stringlist Country code list separated by semicolons (;) */
     public $country_code;
 
-    /** @var string The phone category name. See the [GetPhoneNumberCategories] method */
+    /** @var string Phone category name. See the [GetPhoneNumberCategories] method */
     public $phone_category_name;
 
     /** @var boolean Whether the subscription is cancelled to filter */
@@ -37,61 +40,61 @@ class GetPhoneNumbersParams
     /** @var boolean Whether the auto_charge flag is enabled */
     public $auto_charge;
 
-    /** @var date The UTC 'from' date filter in format: YYYY-MM-DD */
+    /** @var date UTC 'from' date filter in the following format: YYYY-MM-DD */
     public $from_phone_next_renewal;
 
-    /** @var date The UTC 'to' date filter in format: YYYY-MM-DD */
+    /** @var date UTC 'to' date filter in the following format: YYYY-MM-DD */
     public $to_phone_next_renewal;
 
-    /** @var timestamp The UTC 'from' date filter in 24-h format: YYYY-MM-DD HH:mm:ss */
+    /** @var timestamp UTC 'from' date filter in 24-h format: YYYY-MM-DD HH:mm:ss */
     public $from_phone_purchase_date;
 
-    /** @var timestamp The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss */
+    /** @var timestamp UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss */
     public $to_phone_purchase_date;
 
-    /** @var intlist The child account ID list separated by semicolons (;). Use the 'all' value to select all child accounts */
+    /** @var intlist Child account ID list separated by semicolons (;). Use the 'all' value to select all child accounts */
     public $child_account_id;
 
     /** @var boolean Whether to get the children phones only */
     public $children_phones_only;
 
-    /** @var string The required account verification name to filter */
+    /** @var string Required account verification name to filter */
     public $verification_name;
 
-    /** @var stringlist The account verification status list separated by semicolons (;). The following values are possible: REQUIRED, IN_PROGRESS, VERIFIED */
+    /** @var stringlist Account verification status list separated by semicolons (;). The following values are possible: REQUIRED, IN_PROGRESS, VERIFIED */
     public $verification_status;
 
-    /** @var date Unverified phone hold until the date (from ...) in format: YYYY-MM-DD */
+    /** @var date Unverified phone hold until the date (from ...) in the following format: YYYY-MM-DD */
     public $from_unverified_hold_until;
 
-    /** @var date Unverified phone hold until the date (... to) in format: YYYY-MM-DD */
+    /** @var date Unverified phone hold until the date (... to) in the following format: YYYY-MM-DD */
     public $to_unverified_hold_until;
 
     /** @var boolean Whether a not verified account can use the phone */
     public $can_be_used;
 
-    /** @var string The following values are available: 'phone_number' (ascent order), 'phone_price' (ascent order), 'phone_country_code' (ascent order), 'deactivated' (deactivated first, active last), 'purchase_date' (descent order), 'phone_next_renewal' (ascent order), 'verification_status', 'unverified_hold_until' (ascent order), 'verification_name' */
+    /** @var string Following values are available: 'phone_number' (ascent order), 'phone_price' (ascent order), 'phone_country_code' (ascent order), 'deactivated' (deactivated first, active last), 'purchase_date' (descent order), 'phone_next_renewal' (ascent order), 'verification_status', 'unverified_hold_until' (ascent order), 'verification_name' */
     public $order_by;
 
     /** @var string Flag allows you to display only the numbers of the sandbox, real numbers, or all numbers. The following values are possible: 'all', 'true', 'false' */
     public $sandbox;
 
-    /** @var number The max returning record count */
+    /** @var number Maximum returning record count */
     public $count;
 
-    /** @var number The first N records are skipped in the output */
+    /** @var number First N records are skipped in the output */
     public $offset;
 
     /** @var boolean Whether the SMS support is enabled */
     public $sms_supported;
 
-    /** @var stringlist The region names list separated by semicolons (;) */
+    /** @var stringlist Region names list separated by semicolons (;) */
     public $phone_region_name;
 
-    /** @var intlist The rule ID list separated by semicolons (;) */
+    /** @var intlist Rule ID list separated by semicolons (;) */
     public $rule_id;
 
-    /** @var stringlist The rule names list separated by semicolons (;). Can be used only if __application_id__ or __application_name__ is specified */
+    /** @var stringlist Rule names list separated by semicolons (;). Can be used only if __application_id__ or __application_name__ is specified */
     public $rule_name;
 
     /** @var boolean Whether the phone number is bound to some rule */
@@ -102,6 +105,7 @@ class GetPhoneNumbersParams
         return [
                 'phone_id' => $this->phone_id,
                     'phone_number' => $this->phone_number,
+                    'activation_status' => $this->activation_status,
                     'application_id' => $this->application_id,
                     'application_name' => $this->application_name,
                     'is_bound_to_application' => $this->is_bound_to_application !== null ? (filter_var($this->is_bound_to_application, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,

@@ -31,7 +31,7 @@ interface RulesInterface
 }
 class AddRuleReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var number The new rule ID */
@@ -45,7 +45,7 @@ interface RulesInterface
 }
 class DelRuleReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -56,7 +56,7 @@ interface RulesInterface
 }
 class SetRuleInfoReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -84,7 +84,7 @@ interface RulesInterface
 }
 class ReorderRulesReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */

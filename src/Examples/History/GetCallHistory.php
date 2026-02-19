@@ -29,7 +29,7 @@ $voxApi = new VoximplantApi($options);
  * from_date - The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss
  * to_date - The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss
  * timezone - The selected timezone or the 'auto' value (the account location)
- * call_session_history_id - To get the call history for the specific sessions, pass the session IDs to this parameter separated by a semicolon (;). You can find the session ID in the AppEvents.Started event's sessionID property in a scenario, or retrieve it from the call_session_history_id value returned from the StartScenarios or StartConference methods
+ * call_session_history_id - To get the call history for the specific sessions, pass the session IDs to this parameter separated by a semicolon (;). The maximum number of records is 1000. You can find the session ID in the AppEvents.Started event's sessionID property in a scenario, or retrieve it from the call_session_history_id value returned from the StartScenarios or StartConference methods
  * application_id - To receive the call history for a specific application, pass the application ID to this parameter
  * application_name - The application name, can be used instead of application_id
  * user_id - To receive the call history for a specific users, pass the user ID list separated by semicolons (;). If it is specified, the output contains the calls from the listed users only

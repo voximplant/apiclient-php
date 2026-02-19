@@ -27,7 +27,7 @@ $voxApi = new VoximplantApi($options);
 /**
  * @param array $params (See below)
  * report_id - The phone number report ID to filter
- * report_type - The phone number report type list separated by semicolons (;). Use the 'all' value to select all history report types. The following values are possible: calls, calls_brief, transactions, audit, call_list, transactions_on_hold
+ * report_type - The phone number report type list separated by semicolons (;). The possible values are: phone_numbers, phone_numbers_awaiting_configuration
  * created_from - The UTC creation from date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * created_to - The UTC creation to date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * is_completed - Whether the report is completed

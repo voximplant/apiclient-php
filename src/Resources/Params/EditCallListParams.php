@@ -28,6 +28,9 @@ class EditCallListParams
     /** @var string Time when the call list should start in the `yyyy-MM-dd HH:mm:ss` format */
     public $start_at;
 
+    /** @var string Optional. Whether to prioritize first calling attempts or repeated ones. The possible values are: first_attempts, repeated_attempts. The default values is first_attempts */
+    public $task_priority_strategy;
+
     /** @var string Location of the server processing the call list. If the ID is non existing, the 496 error returns: The 'server_location' parameter is invalid. */
     public $server_location;
 }

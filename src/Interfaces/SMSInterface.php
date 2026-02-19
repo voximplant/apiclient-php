@@ -10,7 +10,7 @@ interface SMSInterface
     public function SendSmsMessage(\Voximplant\Resources\Params\SendSmsMessageParams $params);
 
     /**
-     * @method Sends an SMS message from the application to customers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the <b>is_sms_supported</b> property in the objects returned by the <a href='/docs/references/httpapi/managing_phone_numbers#getphonenumbers'>/GetPhoneNumbers</a> Management API) and SMS should be enabled for it via the <a href='/docs/references/httpapi/managing_sms#controlsms'>/ControlSms</a> Management API.
+     * @method Sends an A2P SMS message from the application to customers. A SenderID is required for A2P messages. Please contact support for installing a SenderID.
      */
     public function A2PSendSms(\Voximplant\Resources\Params\A2PSendSmsParams $params);
 

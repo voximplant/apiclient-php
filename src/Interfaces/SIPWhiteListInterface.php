@@ -26,7 +26,7 @@ interface SIPWhiteListInterface
 }
 class AddSipWhiteListItemReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var number The SIP white list item ID */
@@ -40,7 +40,7 @@ interface SIPWhiteListInterface
 }
 class DelSipWhiteListItemReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -51,7 +51,7 @@ interface SIPWhiteListInterface
 }
 class SetSipWhiteListItemReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */

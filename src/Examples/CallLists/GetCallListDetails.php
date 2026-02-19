@@ -32,6 +32,7 @@ $voxApi = new VoximplantApi($options);
  * output - The output format. The following values available: **json**, **csv**, **xls**. The default value is **csv**
  * encoding - Encoding of the output file. Default UTF-8
  * delimiter - Separator values. The default value is ';'
+ * batch_id - Batch UUID to filter the tasks
  */
 $params = new GetCallListDetailsParams();
 

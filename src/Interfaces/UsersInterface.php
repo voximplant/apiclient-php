@@ -26,7 +26,7 @@ interface UsersInterface
 }
 class AddUserReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var number The new user ID */
@@ -40,7 +40,7 @@ interface UsersInterface
 }
 class DelUserReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -51,7 +51,7 @@ interface UsersInterface
 }
 class SetUserInfoReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */

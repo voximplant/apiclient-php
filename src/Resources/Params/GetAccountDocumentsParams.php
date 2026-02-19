@@ -13,10 +13,10 @@ class GetAccountDocumentsParams
     /** @var stringlist The account verification status list separated by semicolons (;). The following values are possible: REQUIRED, IN_PROGRESS, VERIFIED */
     public $verification_status;
 
-    /** @var date Unverified subscriptions hold until the date (from ...) in format: YYYY-MM-DD */
+    /** @var date Unverified subscriptions hold until the date (from ...) in the following format: YYYY-MM-DD */
     public $from_unverified_hold_until;
 
-    /** @var date Unverified subscriptions hold until the date (... to) in format: YYYY-MM-DD */
+    /** @var date Unverified subscriptions hold until the date (... to) in the following format: YYYY-MM-DD */
     public $to_unverified_hold_until;
 
     /** @var intlist The child account ID list separated by semicolons (;). Use the 'all' value to select all child accounts */

@@ -31,7 +31,7 @@ interface AdminRolesInterface
 }
 class AddAdminRoleReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var number The new admin role ID */
@@ -45,7 +45,7 @@ interface AdminRolesInterface
 }
 class DelAdminRoleReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -56,7 +56,7 @@ interface AdminRolesInterface
 }
 class SetAdminRoleInfoReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */

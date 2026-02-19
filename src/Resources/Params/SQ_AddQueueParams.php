@@ -13,6 +13,9 @@ class SQ_AddQueueParams
     /** @var string Unique SmartQueue name within the application, up to 100 characters */
     public $sq_queue_name;
 
+    /** @var boolean Whether to add the task to the queue if there are no available agents */
+    public $hold_im_if_inactive_agents;
+
     /** @var string Agent selection strategy for calls. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME" */
     public $call_agent_selection;
 
@@ -61,6 +64,7 @@ class SQ_AddQueueParams
                 'application_id' => $this->application_id,
                     'application_name' => $this->application_name,
                     'sq_queue_name' => $this->sq_queue_name,
+                    'hold_im_if_inactive_agents' => $this->hold_im_if_inactive_agents !== null ? (filter_var($this->hold_im_if_inactive_agents, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
                     'call_agent_selection' => $this->call_agent_selection,
                     'im_agent_selection' => $this->im_agent_selection,
                     'call_task_selection' => $this->call_task_selection,

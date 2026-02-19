@@ -29,6 +29,7 @@ $voxApi = new VoximplantApi($options);
  * application_id - ID of the application to bind to
  * application_name - Name of the application to bind to. Can be used instead of application_id
  * sq_queue_name - Unique SmartQueue name within the application, up to 100 characters
+ * hold_im_if_inactive_agents - Whether to add the task to the queue if there are no available agents
  * call_agent_selection - Agent selection strategy for calls. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME"
  * im_agent_selection - Agent selection strategy for messages. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME". The default value is **call_agent_selection**
  * call_task_selection - Call type requests prioritizing strategy. Accepts one of the [SQTaskSelectionStrategies] enum values

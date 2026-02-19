@@ -29,6 +29,7 @@ $voxApi = new VoximplantApi($options);
  * source_number - The source phone number
  * destination_number - The destination phone number
  * direction - Sent or received SMS. Possible values: 'IN', 'OUT', 'in, 'out'. Leave blank to get both incoming and outgoing messages
+ * timezone - The selected timezone or the 'auto' value (the account location)
  * count - Maximum number of resulting rows fetched. Must be not bigger than 1000. If left blank, then the default value of 1000 is used
  * offset - The first N records are skipped in the output
  * from_date - Date from which to perform search. Format is 'yyyy-MM-dd HH:mm:ss', time zone is UTC

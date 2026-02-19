@@ -4,11 +4,13 @@ namespace Voximplant\Resources;
 
 use Voximplant\Interfaces\AppendToCallListReturn;
 use Voximplant\Interfaces\CallListsInterface;
+use Voximplant\Interfaces\CancelCallListBatchReturn;
 use Voximplant\Interfaces\CancelCallListTaskReturn;
 use Voximplant\Interfaces\CreateCallListReturn;
 use Voximplant\Interfaces\DeleteCallListReturn;
 use Voximplant\Interfaces\EditCallListReturn;
 use Voximplant\Interfaces\EditCallListTaskReturn;
+use Voximplant\Interfaces\EditCallListTasksPriorityReturn;
 use Voximplant\Interfaces\GetCallListDetailsReturn;
 use Voximplant\Interfaces\GetCallListsReturn;
 use Voximplant\Interfaces\RecoverCallListReturn;
@@ -24,8 +26,14 @@ class CallLists implements CallListsInterface
     /** @object AppendToCallList */
     protected $AppendToCallListReturn;
 
+    /** @object CancelCallListBatch */
+    protected $CancelCallListBatchReturn;
+
     /** @object EditCallList */
     protected $EditCallListReturn;
+
+    /** @object EditCallListTasksPriority */
+    protected $EditCallListTasksPriorityReturn;
 
     /** @object DeleteCallList */
     protected $DeleteCallListReturn;
@@ -54,7 +62,9 @@ class CallLists implements CallListsInterface
 
         $this->CreateCallListReturn = new CreateCallListReturn();
         $this->AppendToCallListReturn = new AppendToCallListReturn();
+        $this->CancelCallListBatchReturn = new CancelCallListBatchReturn();
         $this->EditCallListReturn = new EditCallListReturn();
+        $this->EditCallListTasksPriorityReturn = new EditCallListTasksPriorityReturn();
         $this->DeleteCallListReturn = new DeleteCallListReturn();
         $this->GetCallListsReturn = new GetCallListsReturn();
         $this->GetCallListDetailsReturn = new GetCallListDetailsReturn();
@@ -87,6 +97,17 @@ class CallLists implements CallListsInterface
     }
 
     /**
+     * @method Cancels all tasks in the call list with the specified batch UUID.
+     */
+    public function CancelCallListBatch(Params\CancelCallListBatchParams $params = null): CancelCallListBatchReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->CancelCallListBatchReturn->$key = $value;
+        }
+        return $this->CancelCallListBatchReturn;
+    }
+
+    /**
      * @method Edits the specified call list by its ID.
      */
     public function EditCallList(Params\EditCallListParams $params = null): EditCallListReturn
@@ -95,6 +116,17 @@ class CallLists implements CallListsInterface
             $this->EditCallListReturn->$key = $value;
         }
         return $this->EditCallListReturn;
+    }
+
+    /**
+     * @method Edits priorities of existing tasks in the specified call list.
+     */
+    public function EditCallListTasksPriority(Params\EditCallListTasksPriorityParams $params = null): EditCallListTasksPriorityReturn
+    {
+        foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
+            $this->EditCallListTasksPriorityReturn->$key = $value;
+        }
+        return $this->EditCallListTasksPriorityReturn;
     }
 
     /**
@@ -142,7 +174,7 @@ class CallLists implements CallListsInterface
     }
 
     /**
-     * @method Cancels the specified tasks in the call list by their IDs or UUIDs.
+     * @method Cancels the specified tasks in the call list by their IDs or UUIDs. The maximum number of tasks to cancel is 1000.
      */
     public function CancelCallListTask(Params\CancelCallListTaskParams $params = null): CancelCallListTaskReturn
     {

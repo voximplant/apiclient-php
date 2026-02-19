@@ -26,7 +26,7 @@ interface ApplicationsInterface
 }
 class AddApplicationReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var number The application ID */
@@ -46,7 +46,7 @@ interface ApplicationsInterface
 }
 class DelApplicationReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -57,7 +57,7 @@ interface ApplicationsInterface
 }
 class SetApplicationInfoReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var string The new full application name */

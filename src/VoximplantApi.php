@@ -101,7 +101,7 @@ class VoximplantApi
     /** @var object SIPWhiteList Adds a new network address to the SIP white list. */
     public $SIPWhiteList;
 
-    /** @var object SIPRegistration Create a new SIP registration. You should specify the application_id or application_name if you specify the rule_name or user_id, or user_name. You should set is_persistent=true if you specify the user_id or user_name. You can bind only one SIP registration to the user (the previous SIP registration are automatically unbound).Please note that when you create a SIP registration, we reserve the subscription fee and taxes for the upcoming month. Read more in the Billing page. */
+    /** @var object SIPRegistration Creates a new SIP registration (the platform registers as a user on a 3rd party SIP server).There are two modes of SIP registration:Persistent registration, when the platform registers on a 3rd party SIP server as a user and the registration lasts until deleted (or there are network/technical issues with it — see the corresponding callback)Non-persistent registration (set `is_persistent` to false) which is initiated only when the specificed user (with `user_id` or `user_name`) logs in via one of Voximplant SDKs. As soon the user logs off, the registration goes offline. This mode helps to implement SIP softphone-like apps using Voximplant’s SDKs.Please note that when you create a SIP registration, we reserve the subscription fee and taxes for the upcoming month. Read more in the Billing page. */
     public $SIPRegistration;
 
     /** @var object WABPhoneNumbers Adds a new WhatsApp Business phone number. */
@@ -146,7 +146,7 @@ class VoximplantApi
     /** @var object RecordStorages Gets the record storages. */
     public $RecordStorages;
 
-    /** @var object RoleSystem Creates a public/private key pair. You can optionally specify one or more roles for the key. */
+    /** @var object RoleSystem Creates a public/private key pair. You can optionally specify one or more roles for the key. You can find all available service account roles [here](/docs/getting-started/basic-concepts/management-api#service-account-roles). */
     public $RoleSystem;
 
     /** @var object KeyValueStorage Creates or updates a key-value pair. If an existing key is passed, the method returns the existing item and changes the value if needed. The keys should be unique within a Voximplant application. */

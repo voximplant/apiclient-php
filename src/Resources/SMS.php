@@ -51,7 +51,7 @@ class SMS implements SMSInterface
     }
 
     /**
-     * @method Sends an SMS message from the application to customers. The source phone number should be purchased from Voximplant and support SMS (which is indicated by the is_sms_supported property in the objects returned by the /GetPhoneNumbers Management API) and SMS should be enabled for it via the /ControlSms Management API.
+     * @method Sends an A2P SMS message from the application to customers. A SenderID is required for A2P messages. Please contact support for installing a SenderID.
      */
     public function A2PSendSms(Params\A2PSendSmsParams $params = null): A2PSendSmsReturn
     {

@@ -31,7 +31,7 @@ interface SkillsInterface
 }
 class AddSkillReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var number The skill ID */
@@ -45,7 +45,7 @@ interface SkillsInterface
 }
 class DelSkillReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -56,7 +56,7 @@ interface SkillsInterface
 }
 class SetSkillInfoReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -84,7 +84,7 @@ interface SkillsInterface
 }
 class BindSkillReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */

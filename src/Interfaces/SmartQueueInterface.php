@@ -139,7 +139,7 @@ interface SmartQueueInterface
 }
 class RequestSmartQueueHistoryReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var number History report ID */
@@ -164,7 +164,7 @@ interface SmartQueueInterface
 }
 class SQ_SetAgentCustomStatusMappingReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -189,7 +189,7 @@ interface SmartQueueInterface
 }
 class SQ_DeleteAgentCustomStatusMappingReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -211,7 +211,7 @@ interface SmartQueueInterface
 }
 class SQ_SetQueueInfoReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -222,7 +222,7 @@ interface SmartQueueInterface
 }
 class SQ_DelQueueReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -255,7 +255,7 @@ interface SmartQueueInterface
 }
 class SQ_DelSkillReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -266,7 +266,7 @@ interface SmartQueueInterface
 }
 class SQ_SetSkillInfoReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -277,7 +277,7 @@ interface SmartQueueInterface
 }
 class SQ_BindSkillReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -288,7 +288,7 @@ interface SmartQueueInterface
 }
 class SQ_UnbindSkillReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -310,7 +310,7 @@ interface SmartQueueInterface
 }
 class SQ_BindAgentReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -321,7 +321,7 @@ interface SmartQueueInterface
 }
 class SQ_UnbindAgentReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -343,7 +343,7 @@ interface SmartQueueInterface
 }
 class SQ_SetAgentInfoReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */

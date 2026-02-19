@@ -81,7 +81,7 @@ interface HistoryInterface
 }
 class GetCallHistoryAsyncReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var number The history report ID */
@@ -95,7 +95,7 @@ interface HistoryInterface
 }
 class GetBriefCallHistoryReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var number The history report ID */
@@ -157,7 +157,7 @@ interface HistoryInterface
 }
 class GetTransactionHistoryAsyncReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var number The history report ID */
@@ -219,7 +219,7 @@ interface HistoryInterface
 }
 class GetAuditLogAsyncReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var number The history report ID */

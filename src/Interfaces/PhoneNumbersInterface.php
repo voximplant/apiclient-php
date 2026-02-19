@@ -93,7 +93,7 @@ interface PhoneNumbersInterface
 }
 class AttachPhoneNumberReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var [NewAttachedPhoneInfoType] The attached phone numbers */
@@ -107,7 +107,7 @@ interface PhoneNumbersInterface
 }
 class BindPhoneNumberToApplicationReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -118,7 +118,7 @@ interface PhoneNumbersInterface
 }
 class DeactivatePhoneNumberReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -129,7 +129,7 @@ interface PhoneNumbersInterface
 }
 class SetPhoneNumberInfoReturn
 {
-    /** @var number 1 */
+    /** @var number Returns 1 if the request has been completed successfully */
     public $result;
 
     /** @var array The returned error message. */
@@ -143,10 +143,10 @@ interface PhoneNumbersInterface
     /** @var [AttachedPhoneInfoType] Phone numbers info */
     public $result;
 
-    /** @var number The total found phone count */
+    /** @var number Total found phone count */
     public $total_count;
 
-    /** @var number The returned phone count */
+    /** @var number Returned phone count */
     public $count;
 
     /** @var array The returned error message. */
