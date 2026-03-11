@@ -427,7 +427,7 @@ class ResultType
                 '|array|' =>
                 array (
                     'subscription_template_id' => 'number',
-                    'currency' => 'number',
+                    'currency' => 'string',
                     'installation_price' => 'decimal',
                     'installation_price_in_currency' => 'number',
                     'price' => 'number',

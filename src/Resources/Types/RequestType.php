@@ -354,6 +354,7 @@ class RequestType
             'attempts_left' => 'number',
             'custom_data' => 'string',
             'min_execution_time' => 'timestamp',
+            'max_execution_time' => 'timestamp',
         );
     }
 

@@ -28,11 +28,12 @@ $voxApi = new VoximplantApi($options);
  * @param array $params (See below)
  * list_id - Call list's ID
  * task_id - Call list's task ID. Please specify either the task's ID or the task's UUID to edit the task
- * task_uuid - Call list's task ID. Please specify either the task's ID or the task's UUID to edit the task
+ * task_uuid - Call list's task ID. Please specify either the task's ID or the task's UUID to edit the task. The UUID is unique within the call list
  * start_at - Next calling attempts timestamp in the yyyy-MM-dd HH:mm:ss format
  * attempts_left - Number of remaining calling attempts
  * custom_data - Custom data string
- * min_execution_time - Start time for the daily calling attempts in the UTC+0 24-h format: HH:mm:ss format
+ * min_execution_time - Optional. Start time for the daily calling attempts in the UTC+0 24-h format: HH:mm:ss format. If spefied, please specify `max_execution_time` as well
+ * max_execution_time - Optional. End time for the daily calling attempts in the UTC+0 24-h format: HH:mm:ss format. If spefied, please specify `min_execution_time` as well
  */
 $params = new EditCallListTaskParams();
 
