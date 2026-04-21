@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method AddCallerID Adds a new caller ID. Caller ID is the phone that is displayed to the called user. This number can be used for call back.
+ * @method DelSecret Deletes an existing secret.
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\AddCallerIDParams;
+use Voximplant\Resources\Params\DelSecretParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -26,13 +26,18 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * callerid_number - The callerID number in E.164 format
+ * application_id - Application ID
+ * application_name - Application name. Can be used instead of application_id
+ * secret_id - IDs to delete. A list separated by semicolons (;). Use the 'all' value to delete all secrets
+ * secret_name - Secret names to delete. List separated by semicolons (;)
  */
-$params = new AddCallerIDParams();
+$params = new DelSecretParams();
 
-$params->callerid_number = '74953331122';
+$params->application_id = 1;
+$params->secret_id = 10;
 
-$result = $voxApi->CallerIDs->AddCallerID($params);
+// Delete secret with ID 10.
+$result = $voxApi->Secrets->DelSecret($params);
 
 // Show result
 var_dump($result);

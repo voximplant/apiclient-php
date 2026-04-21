@@ -1094,22 +1094,6 @@ class RequestType
         );
     }
 
-    public function AddCallerID()
-    {
-        return array (
-            'callerid_number' => 'string',
-        );
-    }
-
-    public function ActivateCallerID()
-    {
-        return array (
-            'callerid_id' => 'number',
-            'callerid_number' => 'string',
-            'verification_code' => 'string',
-        );
-    }
-
     public function DelCallerID()
     {
         return array (
@@ -1127,14 +1111,6 @@ class RequestType
             'order_by' => 'string',
             'count' => 'number',
             'offset' => 'number',
-        );
-    }
-
-    public function VerifyCallerID()
-    {
-        return array (
-            'callerid_id' => 'number',
-            'callerid_number' => 'string',
         );
     }
 
@@ -2256,6 +2232,61 @@ class RequestType
             'user_name' => 'stringlist',
             'max_simultaneous_conversations' => 'number',
             'handle_calls' => 'boolean',
+        );
+    }
+
+    public function AddSecret()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'secret_name' => 'string',
+            'secret_value' => 'string',
+            'description' => 'string',
+        );
+    }
+
+    public function DelSecret()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'secret_id' => 'intlist',
+            'secret_name' => 'stringlist',
+        );
+    }
+
+    public function GetSecretValue()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'secret_id' => 'number',
+            'secret_name' => 'string',
+        );
+    }
+
+    public function GetSecrets()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'secret_name_part' => 'string',
+            'count' => 'number',
+            'offset' => 'number',
+        );
+    }
+
+    public function SetSecretInfo()
+    {
+        return array (
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'secret_id' => 'number',
+            'secret_name' => 'string',
+            'new_secret_name' => 'string',
+            'secret_value' => 'string',
+            'description' => 'string',
         );
     }
 }

@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class SQ_SetQueueInfoParams
 {
-    /** @var number ID of the application to search by */
+    /** @var number Application ID to search by */
     public $application_id;
 
-    /** @var string Name of the application to search by. Can be used instead of application_id */
+    /** @var string Application name to search by. Can be used instead of application_id */
     public $application_name;
 
     /** @var boolean Whether to add the task to the queue if there are no available agents */

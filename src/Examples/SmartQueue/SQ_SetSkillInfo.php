@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - ID of the application to search by
- * application_name - Name of the application to search by. Can be used instead of application_id
+ * application_id - Application ID to search by
+ * application_name - Application name to search by. Can be used instead of application_id
  * sq_skill_id - ID of the skill
  * sq_skill_name - Name of the skill. Can be used instead of sq_skill_id
  * new_sq_skill_name - New unique skill name within the application

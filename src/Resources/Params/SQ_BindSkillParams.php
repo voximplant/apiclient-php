@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class SQ_BindSkillParams
 {
-    /** @var number ID of the application to search by */
+    /** @var number Application ID to search by */
     public $application_id;
 
-    /** @var string Name of the application to search by. Can be used instead of application_id */
+    /** @var string Application name to search by. Can be used instead of application_id */
     public $application_name;
 
     /** @var intlist List of user IDs separated by semicolons (;). Use 'all' to select all the users */

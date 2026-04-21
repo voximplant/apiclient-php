@@ -2075,7 +2075,7 @@ class ResultType
                     'phone_number' => 'string',
                     'phone_price' => 'decimal',
                     'phone_country_code' => 'string',
-                    'activation_status' => 'stringlist',
+                    'activation_status' => 'string',
                     'phone_next_renewal' => 'date',
                     'phone_purchase_date' => 'timestamp',
                     'deactivated' => 'boolean',
@@ -2347,21 +2347,6 @@ class ResultType
         );
     }
 
-    public function AddCallerID()
-    {
-        return array (
-            'result' => 'number',
-            'callerid_id' => 'number',
-        );
-    }
-
-    public function ActivateCallerID()
-    {
-        return array (
-            'result' => 'number',
-        );
-    }
-
     public function DelCallerID()
     {
         return array (
@@ -2386,13 +2371,6 @@ class ResultType
             ),
             'total_count' => 'number',
             'count' => 'number',
-        );
-    }
-
-    public function VerifyCallerID()
-    {
-        return array (
-            'result' => 'number',
         );
     }
 
@@ -35879,6 +35857,70 @@ class ResultType
     }
 
     public function SQ_SetAgentInfo()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function AddSecret()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'secret_id' => 'number',
+                ),
+            ),
+        );
+    }
+
+    public function DelSecret()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
+    public function GetSecretValue()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'secret_id' => 'number',
+                    'secret_name' => 'string',
+                    'secret_value' => 'string',
+                    'description' => 'string',
+                    'created' => 'timestamp',
+                    'modified' => 'timestamp',
+                ),
+            ),
+        );
+    }
+
+    public function GetSecrets()
+    {
+        return array (
+            'result' =>
+            array (
+                '|array|' =>
+                array (
+                    'secret_id' => 'number',
+                    'secret_name' => 'string',
+                    'description' => 'string',
+                    'created' => 'timestamp',
+                    'modified' => 'timestamp',
+                ),
+            ),
+            'count' => 'number',
+            'total_count' => 'number',
+        );
+    }
+
+    public function SetSecretInfo()
     {
         return array (
             'result' => 'number',

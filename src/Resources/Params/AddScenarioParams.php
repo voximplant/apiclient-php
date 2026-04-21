@@ -19,10 +19,10 @@ class AddScenarioParams
     /** @var boolean Whether to rewrite the existing scenario */
     public $rewrite;
 
-    /** @var number ID of the application to bind the scenario to */
+    /** @var number Application ID to bind the scenario to */
     public $application_id;
 
-    /** @var string Name of the application to bind the scenario to */
+    /** @var string Application name to bind the scenario to */
     public $application_name;
 
     public function toArray()

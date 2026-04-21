@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method VerifyCallerID Gets a verification code via phone call to the **callerid_number**.
+ * @method GetSecrets Gets the list of an application's secrets.
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\VerifyCallerIDParams;
+use Voximplant\Resources\Params\GetSecretsParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -26,15 +26,19 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * callerid_id - ID of the callerID object
- * callerid_number - The callerID number that can be used instead of callerid_id
+ * application_id - Application ID
+ * application_name - Application name. Can be used instead of application_id
+ * secret_name_part - Filter by the secret name part
+ * count - Maximum returning record number
+ * offset - First N records to be skipped in the output
  */
-$params = new VerifyCallerIDParams();
+$params = new GetSecretsParams();
 
-$params->callerid_id = 1;
+$params->application_id = 1;
+$params->count = 2;
 
-// Verify the callerID 1.
-$result = $voxApi->CallerIDs->VerifyCallerID($params);
+// Get secrets of application 1.
+$result = $voxApi->Secrets->GetSecrets($params);
 
 // Show result
 var_dump($result);

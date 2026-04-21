@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method ActivateCallerID Activates the CallerID by the verification code.
+ * @method GetSecretValue Gets the value of a specific secret.
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\ActivateCallerIDParams;
+use Voximplant\Resources\Params\GetSecretValueParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -26,17 +26,18 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * callerid_id - ID of the callerID object
- * callerid_number - The callerID number that can be used instead of callerid_id
- * verification_code - The verification code, see the VerifyCallerID function
+ * application_id - Application ID
+ * application_name - Application name. Can be used instead of application_id
+ * secret_id - Secret ID
+ * secret_name - Secret name. Can be used instead of secret_id
  */
-$params = new ActivateCallerIDParams();
+$params = new GetSecretValueParams();
 
-$params->callerid_id = 1;
-$params->verification_code = '12345';
+$params->application_id = 1;
+$params->secret_id = 10;
 
-// Activate the callerID by the verification code.
-$result = $voxApi->CallerIDs->ActivateCallerID($params);
+// Get the value of secret 10.
+$result = $voxApi->Secrets->GetSecretValue($params);
 
 // Show result
 var_dump($result);

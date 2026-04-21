@@ -4,7 +4,7 @@ namespace Voximplant\Resources\Params;
 
 class AddApplicationParams
 {
-    /** @var string The short application name in format \[a-z\]\[a-z0-9-\]{1,64} */
+    /** @var string Short application name in the \[a-z\]\[a-z0-9-\]{1,64} format */
     public $application_name;
 
     /** @var boolean Whether to enable secure storage for all logs and records of the application */

@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - ID of the application to search by
- * application_name - Name of the application to search by. Can be used instead of application_id
+ * application_id - Application ID to search by
+ * application_name - Application name to search by. Can be used instead of application_id
  * sq_queue_id - ID of the SmartQueue. Pass a list of values divided by ; or the "all" keyword
  * sq_queue_name - Name of the SmartQueue. Pass a list of names divided by ; or the "all" keyword
  * user_id - List of user IDs separated by semicolons (;). Use 'all' to select all the users

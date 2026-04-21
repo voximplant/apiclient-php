@@ -29,6 +29,7 @@ use Voximplant\Resources\SIPRegistration;
 use Voximplant\Resources\SIPWhiteList;
 use Voximplant\Resources\SMS;
 use Voximplant\Resources\Scenarios;
+use Voximplant\Resources\Secrets;
 use Voximplant\Resources\Skills;
 use Voximplant\Resources\SmartQueue;
 use Voximplant\Resources\Types\RequestType;
@@ -107,7 +108,7 @@ class VoximplantApi
     /** @var object WABPhoneNumbers Adds a new WhatsApp Business phone number. */
     public $WABPhoneNumbers;
 
-    /** @var object CallerIDs Adds a new caller ID. Caller ID is the phone that is displayed to the called user. This number can be used for call back. */
+    /** @var object CallerIDs Deletes the CallerID. Note: you cannot delete a CID permanently (the antispam defence). */
     public $CallerIDs;
 
     /** @var object OutboundTestNumbers Adds a personal phone number to test outgoing calls. Only one personal phone number can be used. To replace it with another, delete the existing one first. */
@@ -154,6 +155,9 @@ class VoximplantApi
 
     /** @var object Invoices Gets all invoices for the specified USD or EUR account. */
     public $Invoices;
+
+    /** @var object Secrets Adds a new secret. */
+    public $Secrets;
 
     /**
      * @param mixed $arg1 Either string $tokenPath or object $options
@@ -214,6 +218,7 @@ class VoximplantApi
         $this->RoleSystem = new RoleSystem($this);
         $this->KeyValueStorage = new KeyValueStorage($this);
         $this->Invoices = new Invoices($this);
+        $this->Secrets = new Secrets($this);
     }
 
     /**

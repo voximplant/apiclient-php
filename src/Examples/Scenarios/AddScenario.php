@@ -31,8 +31,8 @@ $voxApi = new VoximplantApi($options);
  * rule_id - The rule ID. The new scenario binds to the specified rule. Please note, if you do not bind the scenario to any rule, you cannot execute the scenario
  * rule_name - The rule name that can be used instead of rule_id
  * rewrite - Whether to rewrite the existing scenario
- * application_id - ID of the application to bind the scenario to
- * application_name - Name of the application to bind the scenario to
+ * application_id - Application ID to bind the scenario to
+ * application_name - Application name to bind the scenario to
  */
 $params = new AddScenarioParams();
 

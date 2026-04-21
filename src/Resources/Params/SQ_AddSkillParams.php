@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class SQ_AddSkillParams
 {
-    /** @var number ID of the application to bind to */
+    /** @var number Application ID to bind to */
     public $application_id;
 
-    /** @var string Name of the application to bind to. Can be used instead of application_id */
+    /** @var string Application name to bind to. Can be used instead of application_id */
     public $application_name;
 
     /** @var string Unique skill name within the application */
