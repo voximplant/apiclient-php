@@ -26,10 +26,10 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - Application ID
- * application_name - Application name. Can be used instead of application_id
- * secret_id - Secret ID to edit
- * secret_name - Secret name. Can be used instead of secret_id
+ * application_id - Application ID. Required unless application_name is provided.
+ * application_name - Application name. Required unless application_id is provided.
+ * secret_id - Secret ID to edit. Required unless secret_name is provided.
+ * secret_name - Secret name. Required unless secret_id is provided.
  * new_secret_name - New secret name. The name must start with a Latin letter and can contain up to 64 characters, including Latin letters, digits and underscores
  * secret_value - Secret value. Maximum length is 8192 characters
  * description - Secret description. When processing, the length is truncated to the first 200 characters

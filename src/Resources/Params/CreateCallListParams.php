@@ -7,6 +7,9 @@ class CreateCallListParams
     /** @var number Rule ID. It is specified in the Applications section of the Control Panel */
     public $rule_id;
 
+    /** @var string Custom data string for the call list */
+    public $list_custom_data;
+
     /** @var number Call list priority. The value is in the range of [0 ... 2^31] where zero is the highest priority */
     public $priority;
 
@@ -19,7 +22,7 @@ class CreateCallListParams
     /** @var string File name, up to 255 characters and cannot contain the '/' and '\' symbols */
     public $name;
 
-    /** @var file Send as the "body" part of the HTTP request or as multiform. The sending "file_content" via URL is at its own risk because the network devices tend to drop HTTP requests with large headers */
+    /** @var file Send as the "body" part of the HTTP request or as multiform. The sending "file_content" via URL is at its own risk because the network devices tend to drop HTTP requests with large headers. Refer to the Call lists guide to learn about file syntax */
     public $file_content;
 
     /** @var number Interval between call attempts in seconds. The default value is 0 */

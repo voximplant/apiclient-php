@@ -26,9 +26,9 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * child_account_id - The child account ID list separated by semicolons (;). Use the 'all' value to select all child accounts
- * child_account_name - The child account name list separated by semicolons (;). Can be used instead of child_account_id
- * child_account_email - The child account email list separated by semicolons (;). Can be used instead of child_account_id
+ * child_account_id - The child account ID list separated by semicolons (;). Use the 'all' value to select all child accounts. Required unless child_account_name or child_account_email is provided.
+ * child_account_name - The child account name list separated by semicolons (;). Required unless child_account_id or child_account_email is provided.
+ * child_account_email - The child account email list separated by semicolons (;). Required unless child_account_id or child_account_name is provided.
  * new_child_account_email - The new child account email
  * new_child_account_password - The new child account password. Must be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character
  * account_notifications - Whether Voximplant notifications are required

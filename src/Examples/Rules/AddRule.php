@@ -26,15 +26,15 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - The application ID
- * application_name - The application name, can be used instead of application_id
+ * application_id - The application ID. Required unless application_name is provided.
+ * application_name - The application name. Required unless application_id is provided.
  * rule_name - The rule name. The length must be less than 100
  * rule_pattern - The rule pattern regex. The length must be less than 64 KB
  * rule_pattern_exclude - The exclude pattern regex. The length must be less than 64 KB
  * video_conference - Whether video conference is required
  * bind_key_id - The service account ID to bind to the rule. Read more in the [guide](/docs/guides/voxengine/management-api)
- * scenario_id - The scenario ID list separated by semicolons (;)
- * scenario_name - The scenario name list separated by semicolons (;). Can be used instead of scenario_id
+ * scenario_id - The scenario ID list separated by semicolons (;). Required unless scenario_name is provided.
+ * scenario_name - The scenario name list separated by semicolons (;). Required unless scenario_id is provided.
  */
 $params = new AddRuleParams();
 

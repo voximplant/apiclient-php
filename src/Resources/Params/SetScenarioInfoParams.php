@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class SetScenarioInfoParams
 {
-    /** @var number Scenario ID */
+    /** @var number Scenario ID. Required unless required_scenario_name is provided. */
     public $scenario_id;
 
-    /** @var string Name of the scenario to edit, can be used instead of scenario_id */
+    /** @var string Name of the scenario to edit. Required unless scenario_id is provided. */
     public $required_scenario_name;
 
     /** @var string New scenario name. The length must be less than 30 */

@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class GetRulesParams
 {
-    /** @var number The application ID */
+    /** @var number The application ID. Required unless application_name is provided. */
     public $application_id;
 
-    /** @var string The application name that can be used instead of application_id */
+    /** @var string The application name. Required unless application_id is provided. */
     public $application_name;
 
     /** @var number The rule ID to filter */

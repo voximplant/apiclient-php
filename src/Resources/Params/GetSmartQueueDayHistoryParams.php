@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class GetSmartQueueDayHistoryParams
 {
-    /** @var number The application ID to search by */
+    /** @var number The application ID to search by. Required unless application_name is provided. */
     public $application_id;
 
-    /** @var string The application name to search by. Can be used instead of the application_id parameter */
+    /** @var string The application name to search by. Required unless application_id is provided. */
     public $application_name;
 
     /** @var intlist The user ID list with a maximum of 5 values separated by semicolons (;). Use the 'all' value to select all users. Can operate as a filter for the **occupancy_rate**, **sum_agents_online_time**, **sum_agents_ready_time**, **sum_agents_dialing_time**, **sum_agents_in_service_time**, **sum_agents_afterservice_time**, **sum_agents_dnd_time**, **sum_agents_banned_time**, **min_handle_time**, **max_handle_time**, **average_handle_time**, **count_handled_calls**, **min_after_call_worktime**, **max_after_call_worktime**, **average_after_call_worktime** report types */

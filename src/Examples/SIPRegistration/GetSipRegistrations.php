@@ -34,10 +34,10 @@ $voxApi = new VoximplantApi($options);
  * application_id - The application ID list separated by semicolons (;) to filter. Can be used instead of application_name
  * application_name - The application name list separated by semicolons (;) to filter. Can be used instead of application_id
  * is_bound_to_application - Whether SIP registration bound to an application
- * rule_id - The rule ID list separated by semicolons (;) to filter. Can be used instead of rule_name
- * rule_name - The rule name list separated by semicolons (;) to filter. Can be used instead of rule_id
- * user_id - The user ID list separated by semicolons (;) to filter. Can be used instead of user_name
- * user_name - The user name list separated by semicolons (;) to filter. Can be used instead of user_id
+ * rule_id - The rule ID list separated by semicolons (;) to filter. Required unless rule_name is provided.
+ * rule_name - The rule name list separated by semicolons (;) to filter. Required unless rule_id is provided.
+ * user_id - The user ID list separated by semicolons (;) to filter. Required unless user_name is provided.
+ * user_name - The user name list separated by semicolons (;) to filter. Required unless user_id is provided.
  * proxy - The list of proxy servers to use, divided by semicolon (;)
  * in_progress - Whether SIP registration is still in progress
  * status_code - The list of SIP response codes. The __code1:code2__ means a range from __code1__ to __code2__ including; the __code1;code2__ meanse either __code1__ or __code2__. You can combine ranges, e.g., __code1;code2:code3__

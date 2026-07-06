@@ -26,10 +26,10 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * phone_id - The phone ID list separated by semicolons (;). Use the 'all' value to select all phone ids
- * phone_number - The phone number list separated by semicolons (;) that can be used instead of phone_id
- * application_id - The application ID
- * application_name - The application name that can be used instead of application_id
+ * phone_id - The phone ID list separated by semicolons (;). Use the 'all' value to select all phone ids. Required unless phone_number is provided.
+ * phone_number - The phone number list separated by semicolons (;). Required unless phone_id is provided.
+ * application_id - The application ID. Required unless application_name is provided.
+ * application_name - The application name. Required unless application_id is provided.
  * rule_id - The rule ID
  * rule_name - The rule name that can be used instead of rule_id
  * bind - Whether to bind or unbind (set true or false respectively)

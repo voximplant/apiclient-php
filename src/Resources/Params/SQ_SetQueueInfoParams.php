@@ -19,7 +19,7 @@ class SQ_SetQueueInfoParams
     /** @var string Name of the SmartQueue to search for. Can be used instead of sq_queue_id */
     public $sq_queue_name;
 
-    /** @var boolean Whether to keep the call task in the queue if all agents are in the DND/BANNED/OFFLINE statuses. */
+    /** @var boolean Whether to keep the call task in the queue if all agents are in the DND/BANNED statuses. */
     public $hold_calls_if_inactive_agents;
 
     /** @var string New SmartQueue name within the application, up to 100 characters */

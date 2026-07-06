@@ -75,7 +75,7 @@ class CallLists implements CallListsInterface
     }
 
     /**
-     * @method Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the following options in a CSV file: **__start_execution_time** – when the call list processing starts every day, UTC+0 24-h format: HH:mm:ss**__end_execution_time** – when the call list processing stops every day,  UTC+0 24-h format: HH:mm:ss**__start_at** – when the call list processing starts, UNIX timestamp. If not specified, the processing starts immediately after a method call**__task_uuid** – call list UUID. A string up to 40 characters, can contain latin letters, digits, hyphens (-) and colons (:). Unique within the call listThis method accepts CSV files with custom delimiters, such a commas (,), semicolons (;) and other. To specify a delimiter, pass it to the delimiter parameter.IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing does not start, or it stops immediately if it is active.
+     * @method Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the following options in a CSV file: **__start_execution_time** – when the call list processing starts every day, UTC+0 24-h format: HH:mm:ss**__end_execution_time** – when the call list processing stops every day,  UTC+0 24-h format: HH:mm:ss**__start_at** – when the call list processing starts, UNIX timestamp. If not specified, the processing starts immediately after a method call**__task_uuid** – call list UUID. A string up to 40 characters, can contain latin letters, digits, hyphens (-) and colons (:). Unique within the call listThis method accepts CSV files with custom delimiters, such a commas (,), semicolons (;) and other. To specify a delimiter, pass it to the delimiter parameter.IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing does not start, or it stops immediately if it is active.You can specify a custom call schedule for every record. Refer to the Call lists guide for more information.
      */
     public function CreateCallList(Params\CreateCallListParams $params = null): CreateCallListReturn
     {
@@ -86,7 +86,7 @@ class CallLists implements CallListsInterface
     }
 
     /**
-     * @method Appends a new task to the existing call list.This method accepts CSV files with custom delimiters, such a commas (,), semicolons (;) and other. To specify a delimiter, pass it to the delimiter parameter.
+     * @method Appends a new task to the existing call list.This method accepts CSV files with custom delimiters, such a commas (,), semicolons (;) and other. To specify a delimiter, pass it to the delimiter parameter.You can specify a custom call schedule for every record. Refer to the Call lists guide for more information.
      */
     public function AppendToCallList(Params\AppendToCallListParams $params = null): AppendToCallListReturn
     {

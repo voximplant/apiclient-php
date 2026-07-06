@@ -26,6 +26,7 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
+ * message_id - Message id list separated by semicolons (;)
  * source_number - The source phone number
  * destination_number - The destination phone number
  * direction - Sent or received SMS. Possible values: 'IN', 'OUT', 'in, 'out'. Leave blank to get both incoming and outgoing messages

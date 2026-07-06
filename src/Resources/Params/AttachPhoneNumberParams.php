@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class AttachPhoneNumberParams
 {
-    /** @var number Quantity of phone numbers you want to attach */
+    /** @var number Quantity of phone numbers you want to attach. Required unless phone_number is provided. */
     public $phone_count;
 
-    /** @var stringlist The phone number that can be used instead of phone_count. See the [GetNewPhoneNumbers] method */
+    /** @var stringlist The phone number. See the [GetNewPhoneNumbers] method. Required unless phone_count is provided. */
     public $phone_number;
 
     /** @var string The country code */

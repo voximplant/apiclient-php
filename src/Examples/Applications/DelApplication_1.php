@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - The application ID list separated by semicolons (;). Use the 'all' value to select all applications
- * application_name - The application name list separated by semicolons (;). Can be used instead of application_id
+ * application_id - The application ID list separated by semicolons (;). Use the 'all' value to select all applications. Required unless application_name is provided.
+ * application_name - The application name list separated by semicolons (;). Required unless application_id is provided.
  */
 $params = new DelApplicationParams();
 

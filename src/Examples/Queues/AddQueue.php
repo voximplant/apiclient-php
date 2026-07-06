@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - The application ID
- * application_name - The application name that can be used instead of application_id
+ * application_id - The application ID. Required unless application_name is provided.
+ * application_name - The application name. Required unless application_id is provided.
  * acd_queue_name - The queue name. The length must be less than 100
  * acd_queue_priority - The integer queue priority. The highest priority is 0
  * auto_binding - Whether to enable the auto binding of operators to a queue by skills comparing

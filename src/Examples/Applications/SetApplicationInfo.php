@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - The application ID
- * required_application_name - The application name that can be used instead of application_id
+ * application_id - The application ID. Required unless required_application_name is provided.
+ * required_application_name - The application name. Required unless application_id is provided.
  * application_name - The new short application name in format [a-z][a-z0-9-]{1,79}
  * secure_record_storage - Whether to enable secure storage for all logs and records of the application
  */

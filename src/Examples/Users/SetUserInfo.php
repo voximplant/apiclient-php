@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * user_id - The user to edit
- * user_name - The user name that can be used instead of user_id
+ * user_id - The user to edit. Required unless user_name is provided.
+ * user_name - The user name. Required unless user_id is provided.
  * application_id - The application ID. It is required if the user_name is specified
  * application_name - The application name that can be used instead of application_id
  * new_user_name - The new user name in format [a-z0-9][a-z0-9_-]{2,49}

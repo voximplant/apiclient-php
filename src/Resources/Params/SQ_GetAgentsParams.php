@@ -22,7 +22,7 @@ class SQ_GetAgentsParams
     /** @var string Name of the SmartQueue to exclude. Can be used instead of excluded_sq_queue_id */
     public $excluded_sq_queue_name;
 
-    /** @var Object Skills to filter in the json array format. The array should contain objects with the sq_skill_id/sq_skill_name, min_sq_skill_level, and max_sq_skill_level keys where skill levels range from 1 to 5 */
+    /** @var string Skills to filter in the JSON array format. The array should contain objects with the sq_skill_id/sq_skill_name, min_sq_skill_level, and max_sq_skill_level keys where skill levels range from 1 to 5 */
     public $sq_skills;
 
     /** @var intlist List of user IDs separated by semicolons (;) */
@@ -34,7 +34,7 @@ class SQ_GetAgentsParams
     /** @var string Substring of the user name to filter */
     public $user_name_template;
 
-    /** @var Object Filter statuses in the json array format. The array should contain objects with the sq_status_type and sq_status_name keys. Possible values for sq_status_type are 'CALL' and 'IM'. Possible values for sq_status_name are 'OFFLINE', 'ONLINE', 'READY', 'IN_SERVICE', 'AFTER_SERVICE', 'DND' */
+    /** @var string Filter statuses in the JSON array format. The array should contain objects with the sq_status_type and sq_status_name keys. Possible values for sq_status_type are 'CALL' and 'IM'. Possible values for sq_status_name are 'OFFLINE', 'ONLINE', 'READY', 'IN_SERVICE', 'AFTER_SERVICE', 'DND' */
     public $sq_statuses;
 
     /** @var boolean Whether to display agent skills */

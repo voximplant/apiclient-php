@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class SetQueueInfoParams
 {
-    /** @var number The ACD queue ID */
+    /** @var number The ACD queue ID. Required unless acd_queue_name is provided. */
     public $acd_queue_id;
 
-    /** @var string The ACD queue name that can be used instead of acd_queue_id */
+    /** @var string The ACD queue name. Required unless acd_queue_id is provided. */
     public $acd_queue_name;
 
     /** @var string The new queue name. The length must be less than 100 */

@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class SetUserInfoParams
 {
-    /** @var number The user to edit */
+    /** @var number The user to edit. Required unless user_name is provided. */
     public $user_id;
 
-    /** @var string The user name that can be used instead of user_id */
+    /** @var string The user name. Required unless user_id is provided. */
     public $user_name;
 
     /** @var number The application ID. It is required if the user_name is specified */

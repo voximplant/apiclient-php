@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class SetPhoneNumberInfoParams
 {
-    /** @var intlist The phone ID list separated by semicolons (;). Use the 'all' value to select all phone ids */
+    /** @var intlist The phone ID list separated by semicolons (;). Use the 'all' value to select all phone ids. Required unless phone_number is provided. */
     public $phone_id;
 
-    /** @var stringlist The phone number list separated by semicolons (;) that can be used instead of phone_id */
+    /** @var stringlist The phone number list separated by semicolons (;). Required unless phone_id is provided. */
     public $phone_number;
 
     /** @var string If set, the callback of an incoming SMS is sent to this url, otherwise, it is sent to the general account URL */

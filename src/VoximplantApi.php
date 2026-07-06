@@ -6,8 +6,6 @@ use Voximplant\Helpers\DateHelpers;
 use Voximplant\Helpers\FunctionHelpers;
 use Voximplant\Http\Curl;
 use Voximplant\Resources\Accounts;
-use Voximplant\Resources\AdminRoles;
-use Voximplant\Resources\AdminUsers;
 use Voximplant\Resources\Applications;
 use Voximplant\Resources\AuthorizedIPs;
 use Voximplant\Resources\CallLists;
@@ -81,7 +79,7 @@ class VoximplantApi
     /** @var object Users Adds a new user. */
     public $Users;
 
-    /** @var object CallLists Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the following options in a CSV file: **__start_execution_time** – when the call list processing starts every day, UTC+0 24-h format: HH:mm:ss**__end_execution_time** – when the call list processing stops every day,  UTC+0 24-h format: HH:mm:ss**__start_at** – when the call list processing starts, UNIX timestamp. If not specified, the processing starts immediately after a method call**__task_uuid** – call list UUID. A string up to 40 characters, can contain latin letters, digits, hyphens (-) and colons (:). Unique within the call listThis method accepts CSV files with custom delimiters, such a commas (,), semicolons (;) and other. To specify a delimiter, pass it to the delimiter parameter.IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing does not start, or it stops immediately if it is active. */
+    /** @var object CallLists Adds a new CSV file for call list processing and starts the specified rule immediately. To send a file, use the request body. To set the call time constraints, use the following options in a CSV file: **__start_execution_time** – when the call list processing starts every day, UTC+0 24-h format: HH:mm:ss**__end_execution_time** – when the call list processing stops every day,  UTC+0 24-h format: HH:mm:ss**__start_at** – when the call list processing starts, UNIX timestamp. If not specified, the processing starts immediately after a method call**__task_uuid** – call list UUID. A string up to 40 characters, can contain latin letters, digits, hyphens (-) and colons (:). Unique within the call listThis method accepts CSV files with custom delimiters, such a commas (,), semicolons (;) and other. To specify a delimiter, pass it to the delimiter parameter.IMPORTANT: the account's balance should be equal or greater than 1 USD. If the balance is lower than 1 USD, the call list processing does not start, or it stops immediately if it is active.You can specify a custom call schedule for every record. Refer to the Call lists guide for more information. */
     public $CallLists;
 
     /** @var object Scenarios Adds a new scenario to the Shared folder, so the scenario is available in all the existing applications. Please use the POST method.When adding a scenario to the Shared folder, the `application_id` and `application_name` parameters should not be provided. */
@@ -122,12 +120,6 @@ class VoximplantApi
 
     /** @var object Skills Adds a new operator's skill. Works only for ACDv1. For SmartQueue/ACDv2, use this reference. */
     public $Skills;
-
-    /** @var object AdminUsers Adds a new admin user into the specified parent or child account. */
-    public $AdminUsers;
-
-    /** @var object AdminRoles Adds a new admin role. */
-    public $AdminRoles;
 
     /** @var object AuthorizedIPs Adds a new authorized IP4 or network to the white/black list. */
     public $AuthorizedIPs;
@@ -207,8 +199,6 @@ class VoximplantApi
         $this->Queues = new Queues($this);
         $this->SmartQueue = new SmartQueue($this);
         $this->Skills = new Skills($this);
-        $this->AdminUsers = new AdminUsers($this);
-        $this->AdminRoles = new AdminRoles($this);
         $this->AuthorizedIPs = new AuthorizedIPs($this);
         $this->RegulationAddress = new RegulationAddress($this);
         $this->PushCredentials = new PushCredentials($this);

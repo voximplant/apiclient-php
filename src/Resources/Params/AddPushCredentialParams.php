@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class AddPushCredentialParams
 {
-    /** @var string The push provider name. The possible values are APPLE, APPLE_VOIP, GOOGLE, HUAWEI */
+    /** @var string The push provider name. The possible values are APPLE, APPLE_VOIP, GOOGLE, HUAWEI. Required unless push_provider_id is provided. */
     public $push_provider_name;
 
-    /** @var number The push provider id. Can be used instead of push_provider_name. The possible values are: 1 — APPLE, 2 — GOOGLE, 3 — APPLE_VOIP, 5 — HUAWEI. */
+    /** @var number The push provider id. The possible values are: 1 — APPLE, 2 — GOOGLE, 3 — APPLE_VOIP, 5 — HUAWEI. Required unless push_provider_name is provided. */
     public $push_provider_id;
 
     /** @var number The application id */

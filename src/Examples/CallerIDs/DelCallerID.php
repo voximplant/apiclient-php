@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * callerid_id - ID of the callerID object
- * callerid_number - The callerID number that can be used instead of callerid_id
+ * callerid_id - ID of the callerID object. Required unless callerid_number is provided.
+ * callerid_number - The callerID number. Required unless callerid_id is provided.
  */
 $params = new DelCallerIDParams();
 

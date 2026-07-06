@@ -248,6 +248,7 @@ class RequestType
     {
         return array (
             'rule_id' => 'number',
+            'list_custom_data' => 'string',
             'priority' => 'number',
             'max_simultaneous' => 'number',
             'num_attempts' => 'number',
@@ -288,6 +289,7 @@ class RequestType
     {
         return array (
             'list_id' => 'number',
+            'list_custom_data' => 'string',
             'interval_seconds' => 'number',
             'num_attempts' => 'number',
             'max_simultaneous' => 'number',
@@ -349,6 +351,7 @@ class RequestType
         return array (
             'list_id' => 'number',
             'task_id' => 'number',
+            'call_schedule' => 'string',
             'task_uuid' => 'string',
             'start_at' => 'timestamp',
             'attempts_left' => 'number',
@@ -550,7 +553,7 @@ class RequestType
             'user_id' => 'intlist',
             'rule_name' => 'string',
             'remote_number' => 'stringlist',
-            'remote_number_list' => 'object',
+            'remote_number_list' => 'string',
             'local_number' => 'stringlist',
             'call_session_history_custom_data' => 'string',
             'with_calls' => 'boolean',
@@ -1419,123 +1422,6 @@ class RequestType
         );
     }
 
-    public function AddAdminUser()
-    {
-        return array (
-            'new_admin_user_name' => 'string',
-            'admin_user_display_name' => 'string',
-            'new_admin_user_password' => 'string',
-            'admin_user_active' => 'boolean',
-            'admin_role_id' => 'string',
-            'admin_role_name' => 'stringlist',
-        );
-    }
-
-    public function DelAdminUser()
-    {
-        return array (
-            'required_admin_user_id' => 'intlist',
-            'required_admin_user_name' => 'stringlist',
-        );
-    }
-
-    public function SetAdminUserInfo()
-    {
-        return array (
-            'required_admin_user_id' => 'number',
-            'required_admin_user_name' => 'string',
-            'new_admin_user_name' => 'string',
-            'admin_user_display_name' => 'string',
-            'new_admin_user_password' => 'string',
-            'admin_user_active' => 'boolean',
-        );
-    }
-
-    public function GetAdminUsers()
-    {
-        return array (
-            'required_admin_user_id' => 'number',
-            'required_admin_user_name' => 'string',
-            'admin_user_display_name' => 'string',
-            'admin_user_active' => 'boolean',
-            'with_roles' => 'boolean',
-            'with_access_entries' => 'boolean',
-            'count' => 'number',
-            'offset' => 'number',
-        );
-    }
-
-    public function AddAdminRole()
-    {
-        return array (
-            'admin_role_name' => 'string',
-            'admin_role_active' => 'boolean',
-            'like_admin_role_id' => 'intlist',
-            'like_admin_role_name' => 'stringlist',
-            'allowed_entries' => 'stringlist',
-            'denied_entries' => 'stringlist',
-        );
-    }
-
-    public function DelAdminRole()
-    {
-        return array (
-            'admin_role_id' => 'intlist',
-            'admin_role_name' => 'stringlist',
-        );
-    }
-
-    public function SetAdminRoleInfo()
-    {
-        return array (
-            'admin_role_id' => 'number',
-            'admin_role_name' => 'string',
-            'new_admin_role_name' => 'string',
-            'admin_role_active' => 'boolean',
-            'entry_modification_mode' => 'string',
-            'allowed_entries' => 'stringlist',
-            'denied_entries' => 'stringlist',
-            'like_admin_role_id' => 'intlist',
-            'like_admin_role_name' => 'stringlist',
-        );
-    }
-
-    public function GetAdminRoles()
-    {
-        return array (
-            'admin_role_id' => 'number',
-            'admin_role_name' => 'string',
-            'admin_role_active' => 'boolean',
-            'with_entries' => 'boolean',
-            'with_account_roles' => 'boolean',
-            'with_parent_roles' => 'boolean',
-            'with_system_roles' => 'boolean',
-            'included_admin_user_id' => 'intlist',
-            'excluded_admin_user_id' => 'intlist',
-            'full_admin_users_matching' => 'string',
-            'showing_admin_user_id' => 'number',
-            'count' => 'number',
-            'offset' => 'number',
-        );
-    }
-
-    public function AttachAdminRole()
-    {
-        return array (
-            'required_admin_user_id' => 'intlist',
-            'required_admin_user_name' => 'stringlist',
-            'admin_role_id' => 'intlist',
-            'admin_role_name' => 'stringlist',
-            'mode' => 'string',
-        );
-    }
-
-    public function GetAvailableAdminRoleEntries()
-    {
-        return array (
-        );
-    }
-
     public function AddAuthorizedAccountIP()
     {
         return array (
@@ -1998,6 +1884,7 @@ class RequestType
     public function GetSmsHistory()
     {
         return array (
+            'message_id' => 'intlist',
             'source_number' => 'string',
             'destination_number' => 'string',
             'direction' => 'string',
@@ -2013,6 +1900,7 @@ class RequestType
     public function A2PGetSmsHistory()
     {
         return array (
+            'message_id' => 'intlist',
             'source_number' => 'string',
             'destination_number' => 'string',
             'count' => 'number',
@@ -2141,7 +2029,7 @@ class RequestType
             'application_name' => 'string',
             'user_id' => 'intlist',
             'user_name' => 'stringlist',
-            'sq_skills' => 'Object',
+            'sq_skills' => 'string',
             'bind_mode' => 'string',
         );
     }
@@ -2209,11 +2097,11 @@ class RequestType
             'sq_queue_name' => 'stringlist',
             'excluded_sq_queue_id' => 'number',
             'excluded_sq_queue_name' => 'string',
-            'sq_skills' => 'Object',
+            'sq_skills' => 'string',
             'user_id' => 'intlist',
             'user_name' => 'stringlist',
             'user_name_template' => 'string',
-            'sq_statuses' => 'Object',
+            'sq_statuses' => 'string',
             'with_sq_skills' => 'boolean',
             'with_sq_queues' => 'boolean',
             'with_sq_statuses' => 'boolean',

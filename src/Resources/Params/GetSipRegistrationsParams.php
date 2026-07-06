@@ -28,16 +28,16 @@ class GetSipRegistrationsParams
     /** @var boolean Whether SIP registration bound to an application */
     public $is_bound_to_application;
 
-    /** @var intlist The rule ID list separated by semicolons (;) to filter. Can be used instead of rule_name */
+    /** @var intlist The rule ID list separated by semicolons (;) to filter. Required unless rule_name is provided. */
     public $rule_id;
 
-    /** @var stringlist The rule name list separated by semicolons (;) to filter. Can be used instead of rule_id */
+    /** @var stringlist The rule name list separated by semicolons (;) to filter. Required unless rule_id is provided. */
     public $rule_name;
 
-    /** @var intlist The user ID list separated by semicolons (;) to filter. Can be used instead of user_name */
+    /** @var intlist The user ID list separated by semicolons (;) to filter. Required unless user_name is provided. */
     public $user_id;
 
-    /** @var stringlist The user name list separated by semicolons (;) to filter. Can be used instead of user_id */
+    /** @var stringlist The user name list separated by semicolons (;) to filter. Required unless user_id is provided. */
     public $user_name;
 
     /** @var stringlist The list of proxy servers to use, divided by semicolon (;) */

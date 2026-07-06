@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - The application ID
- * application_name - The application name that can be used instead of application_id
+ * application_id - The application ID. Required unless application_name is provided.
+ * application_name - The application name. Required unless application_id is provided.
  * rule_id - The rule ID to filter
  * rule_name - The rule name part to filter
  * video_conference - Whether it is a video conference to filter

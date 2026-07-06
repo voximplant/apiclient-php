@@ -4,22 +4,22 @@ namespace Voximplant\Resources\Params;
 
 class BindScenarioParams
 {
-    /** @var intlist The scenario ID list separated by semicolons (;) */
+    /** @var intlist The scenario ID list separated by semicolons (;). Required unless scenario_name is provided. */
     public $scenario_id;
 
-    /** @var stringlist The scenario name list separated by semicolons (;). Can be used instead of scenario_id */
+    /** @var stringlist The scenario name list separated by semicolons (;). Required unless scenario_id is provided. */
     public $scenario_name;
 
-    /** @var number The rule ID to bind the scenario. The rule and the scenario need to be in the same application */
+    /** @var number The rule ID to bind the scenario. The rule and the scenario need to be in the same application. Required unless rule_name is provided. */
     public $rule_id;
 
-    /** @var string The rule name that can be used instead of rule_id */
+    /** @var string The rule name. Required unless rule_id is provided. */
     public $rule_name;
 
-    /** @var number The application ID */
+    /** @var number The application ID. Required unless application_name is provided. */
     public $application_id;
 
-    /** @var string The application name that can be used instead of application_id */
+    /** @var string The application name. Required unless application_id is provided. */
     public $application_name;
 
     /** @var boolean Whether to bind or unbind (set true or false respectively) */

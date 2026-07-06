@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * rule_id - The rule ID
- * rule_name - The rule name that can be used instead of rule_id
+ * rule_id - The rule ID. Required unless rule_name is provided.
+ * rule_name - The rule name. Required unless rule_id is provided.
  * scenario_id - The scenario ID list separated by semicolons (;)
  */
 $params = new ReorderScenariosParams();

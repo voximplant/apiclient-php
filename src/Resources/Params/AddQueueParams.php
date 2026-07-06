@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class AddQueueParams
 {
-    /** @var number The application ID */
+    /** @var number The application ID. Required unless application_name is provided. */
     public $application_id;
 
-    /** @var string The application name that can be used instead of application_id */
+    /** @var string The application name. Required unless application_id is provided. */
     public $application_name;
 
     /** @var string The queue name. The length must be less than 100 */

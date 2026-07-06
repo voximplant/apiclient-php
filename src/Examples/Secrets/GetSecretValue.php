@@ -26,10 +26,10 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - Application ID
- * application_name - Application name. Can be used instead of application_id
- * secret_id - Secret ID
- * secret_name - Secret name. Can be used instead of secret_id
+ * application_id - Application ID. Required unless application_name is provided.
+ * application_name - Application name. Required unless application_id is provided.
+ * secret_id - Secret ID. Required unless secret_name is provided.
+ * secret_name - Secret name. Required unless secret_id is provided.
  */
 $params = new GetSecretValueParams();
 

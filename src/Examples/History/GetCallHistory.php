@@ -35,7 +35,7 @@ $voxApi = new VoximplantApi($options);
  * user_id - To receive the call history for a specific users, pass the user ID list separated by semicolons (;). If it is specified, the output contains the calls from the listed users only
  * rule_name - To receive the call history for a specific routing rule, pass the rule name to this parameter. Applies only if you set application_id or application_name
  * remote_number - To receive a call history for a specific remote numbers, pass the number list separated by semicolons (;). A remote number is a number on the client side. Ignored if the `remote_number_list` parameter is not empty
- * remote_number_list - A JS array of strings of specific remote phone numbers to sort the call history. Has higher priority than the `remote_number` parameter. If the array is empty, the `remote_number` parameter is used instead
+ * remote_number_list - A JSON array of strings of specific remote phone numbers to sort the call history. Has higher priority than the `remote_number` parameter. If the array is empty, the `remote_number` parameter is used instead
  * local_number - To receive a call history for a specific local numbers, pass the number list separated by semicolons (;). A local number is a number on the platform side
  * call_session_history_custom_data - To filter the call history by the custom_data passed to the call sessions, pass the custom data to this parameter
  * with_calls - Whether to receive a list of sessions with all calls within the sessions, including phone numbers, call cost and other information

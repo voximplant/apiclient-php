@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * scenario_id - The scenario ID list separated by semicolons (;). Use the 'all' value to delete all scenarios in all applications
- * scenario_name - The scenario name list separated by semicolons (;). Can be used instead of scenario_id
+ * scenario_id - The scenario ID list separated by semicolons (;). Use the 'all' value to delete all scenarios in all applications. Required unless scenario_name is provided.
+ * scenario_name - The scenario name list separated by semicolons (;). Required unless scenario_id is provided.
  */
 $params = new DelScenarioParams();
 

@@ -1822,11 +1822,6 @@ class Errors extends Enum
     public const HTTP_REQUEST_REJECTED = 484;
 
     /**
-     * Specify the '%s' parameter
-     */
-    public const PARAMETER_CANT_BE_EMPTY = 485;
-
-    /**
      * Specify the '%1$s' parameter.
      */
     public const PARAMETER_CANT_BE_EMPTY_EX = 485;

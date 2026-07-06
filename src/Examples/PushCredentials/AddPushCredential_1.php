@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * push_provider_name - The push provider name. The possible values are APPLE, APPLE_VOIP, GOOGLE, HUAWEI
- * push_provider_id - The push provider id. Can be used instead of push_provider_name. The possible values are: 1 — APPLE, 2 — GOOGLE, 3 — APPLE_VOIP, 5 — HUAWEI.
+ * push_provider_name - The push provider name. The possible values are APPLE, APPLE_VOIP, GOOGLE, HUAWEI. Required unless push_provider_id is provided.
+ * push_provider_id - The push provider id. The possible values are: 1 — APPLE, 2 — GOOGLE, 3 — APPLE_VOIP, 5 — HUAWEI. Required unless push_provider_name is provided.
  * application_id - The application id
  * application_name - The application name that can be used instead of application_id
  * credential_bundle - The bundle of Android/iOS/Huawei application

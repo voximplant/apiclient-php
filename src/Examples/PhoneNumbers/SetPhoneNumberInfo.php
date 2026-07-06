@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * phone_id - The phone ID list separated by semicolons (;). Use the 'all' value to select all phone ids
- * phone_number - The phone number list separated by semicolons (;) that can be used instead of phone_id
+ * phone_id - The phone ID list separated by semicolons (;). Use the 'all' value to select all phone ids. Required unless phone_number is provided.
+ * phone_number - The phone number list separated by semicolons (;). Required unless phone_id is provided.
  * incoming_sms_callback_url - If set, the callback of an incoming SMS is sent to this url, otherwise, it is sent to the general account URL
  * auto_charge - Whether to enable the auto charging
  */

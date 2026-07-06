@@ -26,6 +26,7 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
+ * message_id - Message id list separated by semicolons (;)
  * source_number - The source phone number
  * destination_number - The destination phone number
  * count - Maximum number of resulting rows fetched. Must be not bigger than 1000. If left blank, then the default value of 1000 is used

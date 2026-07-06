@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class DelSecretParams
 {
-    /** @var number Application ID */
+    /** @var number Application ID. Required unless application_name is provided. */
     public $application_id;
 
-    /** @var string Application name. Can be used instead of application_id */
+    /** @var string Application name. Required unless application_id is provided. */
     public $application_name;
 
     /** @var intlist IDs to delete. A list separated by semicolons (;). Use the 'all' value to delete all secrets */

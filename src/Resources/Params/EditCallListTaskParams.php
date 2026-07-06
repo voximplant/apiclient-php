@@ -10,6 +10,9 @@ class EditCallListTaskParams
     /** @var number Call list's task ID. Please specify either the task's ID or the task's UUID to edit the task */
     public $task_id;
 
+    /** @var string Call list schedule in the JSON format. Refer to the Call lists guide for more information. */
+    public $call_schedule;
+
     /** @var string Call list's task ID. Please specify either the task's ID or the task's UUID to edit the task. The UUID is unique within the call list */
     public $task_uuid;
 

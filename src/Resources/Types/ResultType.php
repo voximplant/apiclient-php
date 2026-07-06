@@ -1254,6 +1254,7 @@ class ResultType
                     'list_id' => 'number',
                     'custom_data' => 'string',
                     'start_execution_time' => 'timestamp',
+                    'call_schedule' => 'string',
                     'finish_execution_time' => 'timestamp',
                     'result_data' => 'string',
                     'last_attempt' => 'string',
@@ -1496,7 +1497,7 @@ class ResultType
                             'record_url' => 'string',
                             'cost' => 'decimal',
                             'custom_data' => 'string',
-                            'end_reason' => 'object',
+                            'end_reason' => 'string',
                         ),
                     ),
                     'other_resource_usage' =>
@@ -1545,7 +1546,7 @@ class ResultType
                                     'record_url' => 'string',
                                     'cost' => 'decimal',
                                     'custom_data' => 'string',
-                                    'end_reason' => 'object',
+                                    'end_reason' => 'string',
                                 ),
                             ),
                             'resource_usage_id' => 'number',
@@ -1605,7 +1606,7 @@ class ResultType
                                     'record_url' => 'string',
                                     'cost' => 'decimal',
                                     'custom_data' => 'string',
-                                    'end_reason' => 'object',
+                                    'end_reason' => 'string',
                                 ),
                             ),
                             'other_resource_usage' =>
@@ -1654,7 +1655,7 @@ class ResultType
                                             'record_url' => 'string',
                                             'cost' => 'decimal',
                                             'custom_data' => 'string',
-                                            'end_reason' => 'object',
+                                            'end_reason' => 'string',
                                         ),
                                     ),
                                     'resource_usage_id' => 'number',
@@ -1722,8 +1723,8 @@ class ResultType
                     'download_count' => 'number',
                     'last_downloaded' => 'timestamp',
                     'store_until' => 'date',
-                    'filters' => 'Object',
-                    'calculated_data' => 'Object',
+                    'filters' => 'string',
+                    'calculated_data' => 'string',
                 ),
             ),
             'total_count' => 'number',
@@ -1749,8 +1750,8 @@ class ResultType
                     'download_count' => 'number',
                     'last_downloaded' => 'timestamp',
                     'store_until' => 'date',
-                    'filters' => 'Object',
-                    'calculated_data' => 'Object',
+                    'filters' => 'string',
+                    'calculated_data' => 'string',
                 ),
             ),
             'total_count' => 'number',
@@ -1861,8 +1862,8 @@ class ResultType
                     'requested' => 'timestamp',
                     'ip' => 'string',
                     'cmd_name' => 'string',
-                    'cmd_args' => 'object',
-                    'cmd_result' => 'object',
+                    'cmd_args' => 'string',
+                    'cmd_result' => 'string',
                 ),
             ),
             'total_count' => 'number',
@@ -34532,7 +34533,7 @@ class ResultType
                             ),
                             'waiting_time' => 'number',
                             'processing_time' => 'number',
-                            'custom_data' => 'Object',
+                            'custom_data' => 'string',
                         ),
                     ),
                 ),
@@ -34669,9 +34670,9 @@ class ResultType
                             'created' => 'string',
                             'comments' => 'string',
                         ),
-                        'individual' => 'Object',
-                        'legal_entity' => 'Object',
-                        'entrepreneur' => 'Object',
+                        'individual' => 'string',
+                        'legal_entity' => 'string',
+                        'entrepreneur' => 'string',
                         'legal_status' => 'string',
                     ),
                     'default_end_user' =>
@@ -34684,7 +34685,7 @@ class ResultType
                             'creation_type' => 'string',
                             'created' => 'string',
                             'comments' => 'string',
-                            'credentials' => 'Object',
+                            'credentials' => 'string',
                             'end_user_uuid' => 'number',
                         ),
                     ),
@@ -34709,9 +34710,9 @@ class ResultType
                                     'created' => 'string',
                                     'comments' => 'string',
                                 ),
-                                'individual' => 'Object',
-                                'legal_entity' => 'Object',
-                                'entrepreneur' => 'Object',
+                                'individual' => 'string',
+                                'legal_entity' => 'string',
+                                'entrepreneur' => 'string',
                                 'legal_status' => 'string',
                             ),
                             'default_end_user' =>
@@ -34724,7 +34725,7 @@ class ResultType
                                     'creation_type' => 'string',
                                     'created' => 'string',
                                     'comments' => 'string',
-                                    'credentials' => 'Object',
+                                    'credentials' => 'string',
                                     'end_user_uuid' => 'number',
                                 ),
                             ),
@@ -34737,124 +34738,6 @@ class ResultType
                     ),
                 ),
             ),
-        );
-    }
-
-    public function AddAdminUser()
-    {
-        return array (
-            'result' => 'number',
-            'admin_user_id' => 'number',
-            'admin_user_api_key' => 'string',
-        );
-    }
-
-    public function DelAdminUser()
-    {
-        return array (
-            'result' => 'number',
-        );
-    }
-
-    public function SetAdminUserInfo()
-    {
-        return array (
-            'result' => 'number',
-        );
-    }
-
-    public function GetAdminUsers()
-    {
-        return array (
-            'result' =>
-            array (
-                '|array|' =>
-                array (
-                    'admin_user_id' => 'number',
-                    'admin_user_name' => 'string',
-                    'admin_user_display_name' => 'string',
-                    'admin_user_active' => 'boolean',
-                    'modified' => 'timestamp',
-                    'access_entries' => '[string]',
-                    'admin_roles' =>
-                    array (
-                        '|array|' =>
-                        array (
-                            'admin_user_id' => 'number',
-                            'admin_user_name' => 'string',
-                            'admin_user_display_name' => 'string',
-                            'admin_user_active' => 'boolean',
-                            'modified' => 'timestamp',
-                            'access_entries' => '[string]',
-                            'admin_role_id' => 'number',
-                            'admin_role_name' => 'string',
-                            'admin_role_active' => 'boolean',
-                            'system_role' => 'boolean',
-                            'allowed_entries' => '[string]',
-                            'denied_entries' => '[string]',
-                        ),
-                    ),
-                ),
-            ),
-            'total_count' => 'number',
-            'count' => 'number',
-        );
-    }
-
-    public function AddAdminRole()
-    {
-        return array (
-            'result' => 'number',
-            'admin_role_id' => 'number',
-        );
-    }
-
-    public function DelAdminRole()
-    {
-        return array (
-            'result' => 'number',
-        );
-    }
-
-    public function SetAdminRoleInfo()
-    {
-        return array (
-            'result' => 'number',
-        );
-    }
-
-    public function GetAdminRoles()
-    {
-        return array (
-            'result' =>
-            array (
-                '|array|' =>
-                array (
-                    'admin_role_id' => 'number',
-                    'admin_role_name' => 'string',
-                    'admin_role_active' => 'boolean',
-                    'system_role' => 'boolean',
-                    'modified' => 'timestamp',
-                    'allowed_entries' => '[string]',
-                    'denied_entries' => '[string]',
-                ),
-            ),
-            'total_count' => 'number',
-            'count' => 'number',
-        );
-    }
-
-    public function AttachAdminRole()
-    {
-        return array (
-            'result' => 'number',
-        );
-    }
-
-    public function GetAvailableAdminRoleEntries()
-    {
-        return array (
-            'result' => '[string]',
         );
     }
 
@@ -35850,8 +35733,8 @@ class ResultType
                         ),
                     ),
                 ),
-                'sq_queues' => 'Object',
-                'sq_skills' => 'Object',
+                'sq_queues' => 'string',
+                'sq_skills' => 'string',
             ),
         );
     }

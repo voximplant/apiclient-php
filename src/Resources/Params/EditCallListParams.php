@@ -7,6 +7,9 @@ class EditCallListParams
     /** @var number Call list ID. If the ID is non existing, the 251 error returns */
     public $list_id;
 
+    /** @var string Custom data string for the call list */
+    public $list_custom_data;
+
     /** @var number Minimum interval between call attempts. Cannot be a negative value */
     public $interval_seconds;
 

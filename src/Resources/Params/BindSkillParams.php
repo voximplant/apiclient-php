@@ -4,22 +4,22 @@ namespace Voximplant\Resources\Params;
 
 class BindSkillParams
 {
-    /** @var intlist The skill ID list separated by semicolons (;). Use the 'all' value to select all skills */
+    /** @var intlist The skill ID list separated by semicolons (;). Use the 'all' value to select all skills. Required unless skill_name is provided. */
     public $skill_id;
 
-    /** @var stringlist The skill name list separated by semicolons (;). Can be used instead of skill_id */
+    /** @var stringlist The skill name list separated by semicolons (;). Required unless skill_id is provided. */
     public $skill_name;
 
-    /** @var intlist The user ID list separated by semicolons (;). Use the 'all' value to select all users */
+    /** @var intlist The user ID list separated by semicolons (;). Use the 'all' value to select all users. Required unless user_name is provided. */
     public $user_id;
 
-    /** @var stringlist The user name list separated by semicolons (;). user_name can be used instead of user_id */
+    /** @var stringlist The user name list separated by semicolons (;). Required unless user_id is provided. */
     public $user_name;
 
-    /** @var intlist The ACD queue ID list separated by semicolons (;). Use the 'all' value to select all ACD queues */
+    /** @var intlist The ACD queue ID list separated by semicolons (;). Use the 'all' value to select all ACD queues. Required unless acd_queue_name is provided. */
     public $acd_queue_id;
 
-    /** @var stringlist The ACD queue name that can be used instead of acd_queue_id. The ACD queue name list separated by semicolons (;) */
+    /** @var stringlist The ACD queue name. The ACD queue name list separated by semicolons (;). Required unless acd_queue_id is provided. */
     public $acd_queue_name;
 
     /** @var number The application ID. It is required if the user_name is specified */

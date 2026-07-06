@@ -4,16 +4,16 @@ namespace Voximplant\Resources\Params;
 
 class BindPhoneNumberToApplicationParams
 {
-    /** @var intlist The phone ID list separated by semicolons (;). Use the 'all' value to select all phone ids */
+    /** @var intlist The phone ID list separated by semicolons (;). Use the 'all' value to select all phone ids. Required unless phone_number is provided. */
     public $phone_id;
 
-    /** @var stringlist The phone number list separated by semicolons (;) that can be used instead of phone_id */
+    /** @var stringlist The phone number list separated by semicolons (;). Required unless phone_id is provided. */
     public $phone_number;
 
-    /** @var number The application ID */
+    /** @var number The application ID. Required unless application_name is provided. */
     public $application_id;
 
-    /** @var string The application name that can be used instead of application_id */
+    /** @var string The application name. Required unless application_id is provided. */
     public $application_name;
 
     /** @var number The rule ID */

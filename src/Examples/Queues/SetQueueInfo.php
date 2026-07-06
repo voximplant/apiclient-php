@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * acd_queue_id - The ACD queue ID
- * acd_queue_name - The ACD queue name that can be used instead of acd_queue_id
+ * acd_queue_id - The ACD queue ID. Required unless acd_queue_name is provided.
+ * acd_queue_name - The ACD queue name. Required unless acd_queue_id is provided.
  * new_acd_queue_name - The new queue name. The length must be less than 100
  * acd_queue_priority - The integer queue priority. The highest priority is 0
  * auto_binding - Whether to enable the auto binding of operators to a queue by skills comparing

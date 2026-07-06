@@ -28,6 +28,7 @@ $voxApi = new VoximplantApi($options);
  * @param array $params (See below)
  * list_id - Call list's ID
  * task_id - Call list's task ID. Please specify either the task's ID or the task's UUID to edit the task
+ * call_schedule - Call list schedule in the JSON format. Refer to the Call lists guide for more information.
  * task_uuid - Call list's task ID. Please specify either the task's ID or the task's UUID to edit the task. The UUID is unique within the call list
  * start_at - Next calling attempts timestamp in the yyyy-MM-dd HH:mm:ss format
  * attempts_left - Number of remaining calling attempts

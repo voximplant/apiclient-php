@@ -31,7 +31,7 @@ $voxApi = new VoximplantApi($options);
  * hold_im_if_inactive_agents - Whether to add the task to the queue if there are no available agents
  * sq_queue_id - ID of the SmartQueue to search for
  * sq_queue_name - Name of the SmartQueue to search for. Can be used instead of sq_queue_id
- * hold_calls_if_inactive_agents - Whether to keep the call task in the queue if all agents are in the DND/BANNED/OFFLINE statuses.
+ * hold_calls_if_inactive_agents - Whether to keep the call task in the queue if all agents are in the DND/BANNED statuses.
  * new_sq_queue_name - New SmartQueue name within the application, up to 100 characters
  * call_agent_selection - Agent selection strategy for calls. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME"
  * im_agent_selection - Agent selection strategy for messages. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME". The default value is **call_agent_selection**

@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class AddRuleParams
 {
-    /** @var number The application ID */
+    /** @var number The application ID. Required unless application_name is provided. */
     public $application_id;
 
-    /** @var string The application name, can be used instead of application_id */
+    /** @var string The application name. Required unless application_id is provided. */
     public $application_name;
 
     /** @var string The rule name. The length must be less than 100 */
@@ -25,10 +25,10 @@ class AddRuleParams
     /** @var string The service account ID to bind to the rule. Read more in the [guide](/docs/guides/voxengine/management-api) */
     public $bind_key_id;
 
-    /** @var intlist The scenario ID list separated by semicolons (;) */
+    /** @var intlist The scenario ID list separated by semicolons (;). Required unless scenario_name is provided. */
     public $scenario_id;
 
-    /** @var stringlist The scenario name list separated by semicolons (;). Can be used instead of scenario_id */
+    /** @var stringlist The scenario name list separated by semicolons (;). Required unless scenario_id is provided. */
     public $scenario_name;
 
     public function toArray()

@@ -4,6 +4,9 @@ namespace Voximplant\Resources\Params;
 
 class GetSmsHistoryParams
 {
+    /** @var intlist Message id list separated by semicolons (;) */
+    public $message_id;
+
     /** @var string The source phone number */
     public $source_number;
 

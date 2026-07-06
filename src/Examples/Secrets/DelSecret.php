@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - Application ID
- * application_name - Application name. Can be used instead of application_id
+ * application_id - Application ID. Required unless application_name is provided.
+ * application_name - Application name. Required unless application_id is provided.
  * secret_id - IDs to delete. A list separated by semicolons (;). Use the 'all' value to delete all secrets
  * secret_name - Secret names to delete. List separated by semicolons (;)
  */

@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class AddSecretParams
 {
-    /** @var number Application ID to add the secret to */
+    /** @var number Application ID to add the secret to. Required unless application_name is provided. */
     public $application_id;
 
-    /** @var string Application name. Can be used instead of application_id */
+    /** @var string Application name. Required unless application_id is provided. */
     public $application_name;
 
     /** @var string Secret name. The name must start with a Latin letter and can contain up to 64 characters, including Latin letters, digits and underscores */

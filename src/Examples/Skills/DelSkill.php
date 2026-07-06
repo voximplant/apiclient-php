@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * skill_id - The skill ID
- * skill_name - The skill name that can be used instead of skill_id
+ * skill_id - The skill ID. Required unless skill_name is provided.
+ * skill_name - The skill name. Required unless skill_id is provided.
  */
 $params = new DelSkillParams();
 
