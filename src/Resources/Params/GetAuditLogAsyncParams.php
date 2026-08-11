@@ -13,8 +13,14 @@ class GetAuditLogAsyncParams
     /** @var intlist The audit history ID list separated by semicolons (;) */
     public $audit_log_id;
 
-    /** @var string The admin user ID to filter */
+    /** @var intlist The admin user ID list separated by semicolons (;) to filter */
     public $filtered_admin_user_id;
+
+    /** @var number The maximum record number to include in the report. If omitted, the report service applies its own limit */
+    public $count;
+
+    /** @var number The first N records are skipped in the output */
+    public $offset;
 
     /** @var stringlist The IP list separated by semicolons (;) to filter */
     public $filtered_ip;
@@ -41,6 +47,8 @@ class GetAuditLogAsyncParams
                     'to_date' => $this->to_date,
                     'audit_log_id' => $this->audit_log_id,
                     'filtered_admin_user_id' => $this->filtered_admin_user_id,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
                     'filtered_ip' => $this->filtered_ip,
                     'filtered_cmd' => $this->filtered_cmd,
                     'advanced_filters' => $this->advanced_filters,

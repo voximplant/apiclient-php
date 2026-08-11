@@ -13,7 +13,7 @@ class GetKeysParams
     /** @var number The first N records are skipped in the output */
     public $offset;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count */
     public $count;
 
     public function toArray()

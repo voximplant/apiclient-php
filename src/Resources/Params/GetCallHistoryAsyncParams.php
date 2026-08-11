@@ -4,11 +4,26 @@ namespace Voximplant\Resources\Params;
 
 class GetCallHistoryAsyncParams
 {
-    /** @var timestamp The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss */
+    /** @var timestamp The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss. If both dates are omitted, a server-configured default interval is used (default is one month) */
     public $from_date;
 
-    /** @var timestamp The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss */
+    /** @var timestamp The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss. If both dates are omitted, a server-configured default interval is used (default is one month) */
     public $to_date;
+
+    /** @var number The minimum call duration in seconds to filter. You can restrict the allowed date range via duration filters */
+    public $min_duration;
+
+    /** @var number The maximum call duration in seconds to filter. You can restrict the allowed date range via duration filters */
+    public $max_duration;
+
+    /** @var string A JSON-formatted list of strings containing phone numbers for history filtering. Has a higher priority than the remote_number parameter. If the array is empty, the remote_number parameter is used instead */
+    public $remote_number_list;
+
+    /** @var number The maximum record number to include in the report. If omitted, the report service applies its own limit. Unlike GetCallHistory, there is no default of 20 and no cap of 1000 on the Management API side */
+    public $count;
+
+    /** @var number The number of records to skip in the output */
+    public $offset;
 
     /** @var intlist To get the call history for the specific sessions, pass the session IDs to this parameter separated by a semicolon (;). You can find the session ID in the AppEvents.Started event's sessionID property in a scenario, or retrieve it from the call_session_history_id value returned from the StartScenarios or StartConference methods */
     public $call_session_history_id;
@@ -63,6 +78,11 @@ class GetCallHistoryAsyncParams
         return [
                 'from_date' => $this->from_date,
                     'to_date' => $this->to_date,
+                    'min_duration' => $this->min_duration,
+                    'max_duration' => $this->max_duration,
+                    'remote_number_list' => $this->remote_number_list,
+                    'count' => $this->count,
+                    'offset' => $this->offset,
                     'call_session_history_id' => $this->call_session_history_id,
                     'application_id' => $this->application_id,
                     'application_name' => $this->application_name,

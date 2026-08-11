@@ -16,7 +16,7 @@ class GetApplicationsParams
     /** @var boolean Whether to get bound rules and scenarios info */
     public $with_scenarios;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count */
     public $count;
 
     /** @var number The first N records are skipped in the output */

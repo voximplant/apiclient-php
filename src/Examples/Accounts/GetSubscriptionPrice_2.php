@@ -29,7 +29,7 @@ $voxApi = new VoximplantApi($options);
  * subscription_template_id - The subscription template ID list separated by semicolons (;)
  * subscription_template_type - The subscription template type. The following values are possible: PHONE_NUM, SIP_REGISTRATION
  * subscription_template_name - The subscription template name  (example: SIP registration, Phone GB, Phone RU 495, ...)
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  */
 $params = new GetSubscriptionPriceParams();

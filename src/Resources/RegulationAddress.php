@@ -7,15 +7,15 @@ use Voximplant\Interfaces\GetCountriesReturn;
 use Voximplant\Interfaces\GetRegionsReturn;
 use Voximplant\Interfaces\GetRegulationsAddressReturn;
 use Voximplant\Interfaces\GetZIPCodesReturn;
-use Voximplant\Interfaces\LinkRegulationAddressReturn;
+use Voximplant\Interfaces\LinkregulationAddressReturn;
 use Voximplant\Interfaces\RegulationAddressInterface;
 
 class RegulationAddress implements RegulationAddressInterface
 {
     protected $client;
 
-    /** @object LinkRegulationAddress */
-    protected $LinkRegulationAddressReturn;
+    /** @object LinkregulationAddress */
+    protected $LinkregulationAddressReturn;
 
     /** @object GetZIPCodes */
     protected $GetZIPCodesReturn;
@@ -36,7 +36,7 @@ class RegulationAddress implements RegulationAddressInterface
     {
         $this->client = $client;
 
-        $this->LinkRegulationAddressReturn = new LinkRegulationAddressReturn();
+        $this->LinkregulationAddressReturn = new LinkregulationAddressReturn();
         $this->GetZIPCodesReturn = new GetZIPCodesReturn();
         $this->GetRegulationsAddressReturn = new GetRegulationsAddressReturn();
         $this->GetAvailableRegulationsReturn = new GetAvailableRegulationsReturn();
@@ -47,12 +47,12 @@ class RegulationAddress implements RegulationAddressInterface
     /**
      * @method Links the regulation address to a phone.
      */
-    public function LinkRegulationAddress(Params\LinkRegulationAddressParams $params = null): LinkRegulationAddressReturn
+    public function LinkregulationAddress(Params\LinkregulationAddressParams $params = null): LinkregulationAddressReturn
     {
         foreach ($this->client->request(__FUNCTION__, $params) as $key => $value) {
-            $this->LinkRegulationAddressReturn->$key = $value;
+            $this->LinkregulationAddressReturn->$key = $value;
         }
-        return $this->LinkRegulationAddressReturn;
+        return $this->LinkregulationAddressReturn;
     }
 
     /**

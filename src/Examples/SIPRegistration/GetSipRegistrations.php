@@ -41,7 +41,7 @@ $voxApi = new VoximplantApi($options);
  * proxy - The list of proxy servers to use, divided by semicolon (;)
  * in_progress - Whether SIP registration is still in progress
  * status_code - The list of SIP response codes. The __code1:code2__ means a range from __code1__ to __code2__ including; the __code1;code2__ meanse either __code1__ or __code2__. You can combine ranges, e.g., __code1;code2:code3__
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  */
 $params = new GetSipRegistrationsParams();

@@ -10,7 +10,7 @@ class GetSkillsParams
     /** @var string The skill name part to filter */
     public $skill_name;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count */
     public $count;
 
     /** @var number The first N records are skipped in the output */

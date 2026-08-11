@@ -10,7 +10,7 @@ class AddSecretParams
     /** @var string Application name. Required unless application_id is provided. */
     public $application_name;
 
-    /** @var string Secret name. The name must start with a Latin letter and can contain up to 64 characters, including Latin letters, digits and underscores */
+    /** @var string Secret name. The name should start with a Latin letter and can contain up to 64 characters, including Latin letters, digits and underscores */
     public $secret_name;
 
     /** @var string Secret value. Maximum length is 8192 characters */

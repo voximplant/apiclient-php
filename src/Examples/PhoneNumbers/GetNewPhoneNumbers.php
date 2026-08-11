@@ -30,7 +30,7 @@ $voxApi = new VoximplantApi($options);
  * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] function
  * country_state - The country state. See the GetPhoneNumberCategories and GetPhoneNumberCountryStates functions
  * phone_region_id - The phone region ID. See the [GetPhoneNumberRegions] method
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  * phone_number_mask - The phone number searching mask. Asterisk represents zero or more occurrences of any character
  */

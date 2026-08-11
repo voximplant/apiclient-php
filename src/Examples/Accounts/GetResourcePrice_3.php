@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method GetResourcePrice Gets the resource price.
+ * @method GetResourcePrice Gets the resource price. If the resource is not specified, returns all available resources with prices.
  */
 
 // Path to your autoload.php

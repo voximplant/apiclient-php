@@ -16,7 +16,7 @@ class GetSmsHistoryParams
     /** @var string Sent or received SMS. Possible values: 'IN', 'OUT', 'in, 'out'. Leave blank to get both incoming and outgoing messages */
     public $direction;
 
-    /** @var number Maximum number of resulting rows fetched. Must be not bigger than 1000. If left blank, then the default value of 1000 is used */
+    /** @var number Maximum number of resulting rows fetched. Should be not bigger than 1000. If left blank, then the default value of 1000 is used */
     public $count;
 
     /** @var number The first N records are skipped in the output */

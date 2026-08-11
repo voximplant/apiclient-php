@@ -32,9 +32,13 @@ $voxApi = new VoximplantApi($options);
  * from_date - The UTC 'from' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * to_date - The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * type_list - The type of the call list. The possible values are AUTOMATIC and MANUAL
- * count - The max returning record count
+ * count - The maximum returning record count. The maximum value is 1000
  * offset - The first N records are skipped in the output
  * application_id - The application ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all applications
+ * application_name - The application name list separated by semicolons (;). Can be used instead of application_id
+ * rule_id - The rule ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all rules
+ * rule_name - The rule name list separated by semicolons (;). Can be used instead of rule_id
+ * status - The call list status to filter. The possible values are: In progress, Canceled, Completed, Suspended
  */
 $params = new GetCallListsParams();
 

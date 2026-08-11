@@ -28,7 +28,7 @@ $voxApi = new VoximplantApi($options);
  * @param array $params (See below)
  * country_code - The country code according to the ISO 3166-1 alpha-2
  * phone_region_code - The phone region code
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  */
 $params = new GetZIPCodesParams();

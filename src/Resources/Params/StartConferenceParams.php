@@ -4,7 +4,7 @@ namespace Voximplant\Resources\Params;
 
 class StartConferenceParams
 {
-    /** @var string The conference name. The name length must be less than 50 symbols */
+    /** @var string The conference name. The name length should be less than 50 symbols */
     public $conference_name;
 
     /** @var number The rule ID that needs to be launched. Please note, the necessary scenario needs to be attached to the rule */

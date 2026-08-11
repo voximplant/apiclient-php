@@ -84,7 +84,7 @@ class Rules implements RulesInterface
     }
 
     /**
-     * @method Configures the rules' order in the Applications section of Control panel. Note: the rules must belong to the same application!
+     * @method Configures the rules' order in the Applications section of Control panel. Note: the rules should belong to the same application!
      */
     public function ReorderRules(Params\ReorderRulesParams $params = null): ReorderRulesReturn
     {

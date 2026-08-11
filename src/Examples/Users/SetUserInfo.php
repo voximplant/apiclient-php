@@ -31,12 +31,12 @@ $voxApi = new VoximplantApi($options);
  * application_id - The application ID. It is required if the user_name is specified
  * application_name - The application name that can be used instead of application_id
  * new_user_name - The new user name in format [a-z0-9][a-z0-9_-]{2,49}
- * user_display_name - The new user display name. The length must be less than 256
- * user_password - The new user password. Must be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character
+ * user_display_name - The new user display name. The length should be less than 256
+ * user_password - The new user password. Should be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character
  * parent_accounting - Whether to use the parent account's money, 'false' to use a separate user balance
  * user_active - Whether the user is active. Inactive users cannot log in to applications
  * user_custom_data - Any string
- * mobile_phone - The new user mobile phone. The length must be less than 50
+ * mobile_phone - The new user mobile phone. The length should be less than 50
  */
 $params = new SetUserInfoParams();
 

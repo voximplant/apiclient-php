@@ -16,7 +16,7 @@ class GetNewPhoneNumbersParams
     /** @var number The phone region ID. See the [GetPhoneNumberRegions] method */
     public $phone_region_id;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count */
     public $count;
 
     /** @var number The first N records are skipped in the output */

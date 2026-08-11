@@ -7,7 +7,7 @@ class GetSipWhiteListParams
     /** @var number The SIP white list item ID to filter */
     public $sip_whitelist_id;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count */
     public $count;
 
     /** @var number The first N records are skipped in the output */

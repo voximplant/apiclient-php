@@ -19,10 +19,10 @@ class SetUserInfoParams
     /** @var string The new user name in format [a-z0-9][a-z0-9_-]{2,49} */
     public $new_user_name;
 
-    /** @var string The new user display name. The length must be less than 256 */
+    /** @var string The new user display name. The length should be less than 256 */
     public $user_display_name;
 
-    /** @var string The new user password. Must be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character */
+    /** @var string The new user password. Should be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character */
     public $user_password;
 
     /** @var boolean Whether to use the parent account's money, 'false' to use a separate user balance */
@@ -34,7 +34,7 @@ class SetUserInfoParams
     /** @var string Any string */
     public $user_custom_data;
 
-    /** @var string The new user mobile phone. The length must be less than 50 */
+    /** @var string The new user mobile phone. The length should be less than 50 */
     public $mobile_phone;
 
     public function toArray()

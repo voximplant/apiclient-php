@@ -28,12 +28,12 @@ $voxApi = new VoximplantApi($options);
  * @param array $params (See below)
  * application_id - The application ID. Required unless application_name is provided.
  * application_name - The application name. Required unless application_id is provided.
- * acd_queue_name - The queue name. The length must be less than 100
+ * acd_queue_name - The queue name. The length should be less than 100
  * acd_queue_priority - The integer queue priority. The highest priority is 0
  * auto_binding - Whether to enable the auto binding of operators to a queue by skills comparing
  * service_probability - The value in the range of [0.5 ... 1.0]. The value 1.0 means the service probability 100% in challenge with a lower priority queue
- * max_queue_size - The max queue size
- * max_waiting_time - The max predicted waiting time in minutes. The client is rejected if the predicted waiting time is greater than the max predicted waiting time
+ * max_queue_size - The maximum queue size
+ * max_waiting_time - The maximum predicted waiting time in minutes. The client is rejected if the predicted waiting time is greater than the maximum predicted waiting time
  * average_service_time - The average service time in seconds. Specify the parameter to correct or initialize the waiting time prediction
  */
 $params = new AddQueueParams();

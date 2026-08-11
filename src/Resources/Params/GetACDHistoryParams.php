@@ -10,6 +10,15 @@ class GetACDHistoryParams
     /** @var timestamp The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss */
     public $to_date;
 
+    /** @var string The caller phone number to filter */
+    public $callerid;
+
+    /** @var string The ACD session custom data to filter. The match is exact */
+    public $custom_data;
+
+    /** @var string The decimal mark for the CSV numbers if the output=csv. If omitted, the account locale setting is used */
+    public $decimal_separator;
+
     /** @var intlist The ACD session history ID list separated by semicolons (;) */
     public $acd_session_history_id;
 
@@ -28,7 +37,7 @@ class GetACDHistoryParams
     /** @var boolean Whether the call is unserviced by the operator */
     public $unserviced;
 
-    /** @var number The min waiting time filter */
+    /** @var number The minimum waiting time filter */
     public $min_waiting_time;
 
     /** @var boolean Whether the call is rejected calls by the 'max_queue_size', 'max_waiting_time' threshold */
@@ -43,7 +52,7 @@ class GetACDHistoryParams
     /** @var boolean Whether to get records in the descent order */
     public $desc_order;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count */
     public $count;
 
     /** @var number The first N records are skipped in the output */
@@ -57,6 +66,9 @@ class GetACDHistoryParams
         return [
                 'from_date' => $this->from_date,
                     'to_date' => $this->to_date,
+                    'callerid' => $this->callerid,
+                    'custom_data' => $this->custom_data,
+                    'decimal_separator' => $this->decimal_separator,
                     'acd_session_history_id' => $this->acd_session_history_id,
                     'acd_request_id' => $this->acd_request_id,
                     'acd_queue_id' => $this->acd_queue_id,

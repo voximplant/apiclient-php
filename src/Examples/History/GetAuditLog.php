@@ -30,13 +30,16 @@ $voxApi = new VoximplantApi($options);
  * to_date - The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * timezone - The selected timezone or the 'auto' value (the account location)
  * audit_log_id - The audit history ID list separated by semicolons (;)
- * filtered_admin_user_id - The admin user ID to filter
+ * filtered_admin_user_id - The admin user ID list separated by semicolons (;) to filter
+ * is_async - Whether to create an asynchronous history report instead of returning the data immediately. Has the same effect as calling GetAuditLogAsync and requires the output=csv
+ * with_header - Whether to get a CSV file with the column names if the output=csv
+ * decimal_separator - The decimal mark for the CSV numbers if the output=csv. If omitted, the account locale setting is used
  * filtered_ip - The IP list separated by semicolons (;) to filter
  * filtered_cmd - The function list separated by semicolons (;) to filter
  * advanced_filters - A relation ID to filter (for example: a phone_number value, a user_id value, an application_id value)
  * desc_order - Whether to get records in the descent order
  * with_total_count - Whether to include the 'total_count' and increase performance
- * count - The max returning record count
+ * count - The maximum returning record number. If omitted, the report service applies its own limit
  * offset - The first N records are skipped in the output
  */
 $params = new GetAuditLogParams();

@@ -258,9 +258,28 @@ class RequestType
             'encoding' => 'string',
             'delimiter' => 'string',
             'escape' => 'string',
-            'reference_ip' => 'string',
             'server_location' => 'string',
             'task_priority_strategy' => 'string',
+            'ip_address' => 'string',
+            'call_list_type' => 'string',
+            'queue_id' => 'number',
+            'start_at' => 'number',
+            'is_cancelled' => 'boolean',
+            'quote' => 'string',
+            'acd_version' => 'string',
+            'predictive_type' => 'string',
+            'maximum_error_rate' => 'number',
+            'minimum_busy_factor' => 'number',
+            'task_multiplier' => 'number',
+            'is_personal_campaign' => 'boolean',
+            'personal_campaign_type' => 'string',
+            'buffer_size_target' => 'string',
+            'buffer_size_value' => 'number',
+            'buffer_threshold_factor' => 'number',
+            'avg_dial_time_sec' => 'number',
+            'avg_time_talk_sec' => 'number',
+            'avg_total_time_sec' => 'number',
+            'percent_successful' => 'number',
         );
     }
 
@@ -273,6 +292,7 @@ class RequestType
             'encoding' => 'string',
             'escape' => 'string',
             'delimiter' => 'string',
+            'quote' => 'string',
         );
     }
 
@@ -280,7 +300,6 @@ class RequestType
     {
         return array (
             'list_id' => 'number',
-            'list_name' => 'string',
             'batch_ids' => 'string',
         );
     }
@@ -296,9 +315,21 @@ class RequestType
             'ip_address' => 'string',
             'name' => 'string',
             'priority' => 'number',
-            'start_at' => 'string',
+            'start_at' => 'number',
             'task_priority_strategy' => 'string',
             'server_location' => 'string',
+            'call_list_type' => 'string',
+            'call_type' => 'string',
+            'predictive_type' => 'string',
+            'maximum_error_rate' => 'number',
+            'minimum_busy_factor' => 'number',
+            'task_multiplier' => 'number',
+            'is_personal_campaign' => 'boolean',
+            'personal_campaign_type' => 'string',
+            'avg_dial_time_sec' => 'number',
+            'avg_time_talk_sec' => 'number',
+            'avg_total_time_sec' => 'number',
+            'percent_successful' => 'number',
         );
     }
 
@@ -330,6 +361,10 @@ class RequestType
             'count' => 'number',
             'offset' => 'number',
             'application_id' => 'intlist',
+            'application_name' => 'stringlist',
+            'rule_id' => 'intlist',
+            'rule_name' => 'stringlist',
+            'status' => 'string',
         );
     }
 
@@ -343,6 +378,8 @@ class RequestType
             'encoding' => 'string',
             'delimiter' => 'string',
             'batch_id' => 'string',
+            'is_async' => 'boolean',
+            'new_csv_style' => 'boolean',
         );
     }
 
@@ -358,6 +395,9 @@ class RequestType
             'custom_data' => 'string',
             'min_execution_time' => 'timestamp',
             'max_execution_time' => 'timestamp',
+            'next_attempt_time' => 'string',
+            'user_id' => 'number',
+            'skill_id' => 'intlist',
         );
     }
 
@@ -365,9 +405,9 @@ class RequestType
     {
         return array (
             'account_id' => 'string',
-            'list_id' => 'string',
-            'tasks_ids' => 'string',
-            'tasks_uuids' => 'string',
+            'list_id' => 'number',
+            'tasks_ids' => 'intlist',
+            'tasks_uuids' => 'stringlist',
         );
     }
 
@@ -546,6 +586,10 @@ class RequestType
         return array (
             'from_date' => 'timestamp',
             'to_date' => 'timestamp',
+            'min_duration' => 'number',
+            'max_duration' => 'number',
+            'is_async' => 'boolean',
+            'with_header' => 'boolean',
             'timezone' => 'string',
             'call_session_history_id' => 'intlist',
             'application_id' => 'number',
@@ -573,6 +617,11 @@ class RequestType
         return array (
             'from_date' => 'timestamp',
             'to_date' => 'timestamp',
+            'min_duration' => 'number',
+            'max_duration' => 'number',
+            'remote_number_list' => 'string',
+            'count' => 'number',
+            'offset' => 'number',
             'timezone' => 'string',
             'call_session_history_id' => 'intlist',
             'application_id' => 'number',
@@ -624,6 +673,7 @@ class RequestType
             'count' => 'number',
             'offset' => 'number',
             'application_id' => 'intlist',
+            'application_name' => 'stringlist',
         );
     }
 
@@ -653,6 +703,17 @@ class RequestType
         return array (
             'from_date' => 'timestamp',
             'to_date' => 'timestamp',
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'subscription_id' => 'intlist',
+            'subscription_name' => 'stringlist',
+            'resource_type' => 'stringlist',
+            'price_group_name' => 'stringlist',
+            'use_accounting_dates' => 'boolean',
+            'with_extended_info' => 'boolean',
+            'is_async' => 'boolean',
+            'with_header' => 'boolean',
+            'decimal_separator' => 'string',
             'timezone' => 'string',
             'transaction_id' => 'intlist',
             'payment_reference' => 'string',
@@ -674,6 +735,15 @@ class RequestType
         return array (
             'from_date' => 'timestamp',
             'to_date' => 'timestamp',
+            'application_id' => 'number',
+            'application_name' => 'string',
+            'subscription_id' => 'intlist',
+            'subscription_name' => 'stringlist',
+            'resource_type' => 'stringlist',
+            'price_group_name' => 'stringlist',
+            'use_accounting_dates' => 'boolean',
+            'count' => 'number',
+            'offset' => 'number',
             'timezone' => 'string',
             'transaction_id' => 'intlist',
             'payment_reference' => 'string',
@@ -702,6 +772,9 @@ class RequestType
         return array (
             'from_date' => 'timestamp',
             'to_date' => 'timestamp',
+            'callerid' => 'string',
+            'custom_data' => 'string',
+            'decimal_separator' => 'string',
             'acd_session_history_id' => 'intlist',
             'acd_request_id' => 'stringlist',
             'acd_queue_id' => 'intlist',
@@ -726,7 +799,10 @@ class RequestType
             'to_date' => 'timestamp',
             'timezone' => 'string',
             'audit_log_id' => 'intlist',
-            'filtered_admin_user_id' => 'string',
+            'filtered_admin_user_id' => 'intlist',
+            'is_async' => 'boolean',
+            'with_header' => 'boolean',
+            'decimal_separator' => 'string',
             'filtered_ip' => 'stringlist',
             'filtered_cmd' => 'stringlist',
             'advanced_filters' => 'string',
@@ -744,7 +820,9 @@ class RequestType
             'to_date' => 'timestamp',
             'timezone' => 'string',
             'audit_log_id' => 'intlist',
-            'filtered_admin_user_id' => 'string',
+            'filtered_admin_user_id' => 'intlist',
+            'count' => 'number',
+            'offset' => 'number',
             'filtered_ip' => 'stringlist',
             'filtered_cmd' => 'stringlist',
             'advanced_filters' => 'string',
@@ -1459,7 +1537,7 @@ class RequestType
         );
     }
 
-    public function LinkRegulationAddress()
+    public function LinkregulationAddress()
     {
         return array (
             'regulation_address_id' => 'number',

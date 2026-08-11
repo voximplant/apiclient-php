@@ -13,7 +13,7 @@ class GetSubscriptionPriceParams
     /** @var string The subscription template name  (example: SIP registration, Phone GB, Phone RU 495, ...) */
     public $subscription_template_name;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count */
     public $count;
 
     /** @var number The first N records are skipped in the output */

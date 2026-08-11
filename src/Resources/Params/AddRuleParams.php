@@ -10,13 +10,13 @@ class AddRuleParams
     /** @var string The application name. Required unless application_id is provided. */
     public $application_name;
 
-    /** @var string The rule name. The length must be less than 100 */
+    /** @var string The rule name. The length should be less than 100 */
     public $rule_name;
 
-    /** @var string The rule pattern regex. The length must be less than 64 KB */
+    /** @var string The rule pattern regex. The length should be less than 64 KB */
     public $rule_pattern;
 
-    /** @var string The exclude pattern regex. The length must be less than 64 KB */
+    /** @var string The exclude pattern regex. The length should be less than 64 KB */
     public $rule_pattern_exclude;
 
     /** @var boolean Whether video conference is required */

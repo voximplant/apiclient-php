@@ -30,7 +30,9 @@ $voxApi = new VoximplantApi($options);
  * to_date - The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * timezone - The selected timezone or the 'auto' value (the account location)
  * audit_log_id - The audit history ID list separated by semicolons (;)
- * filtered_admin_user_id - The admin user ID to filter
+ * filtered_admin_user_id - The admin user ID list separated by semicolons (;) to filter
+ * count - The maximum record number to include in the report. If omitted, the report service applies its own limit
+ * offset - The first N records are skipped in the output
  * filtered_ip - The IP list separated by semicolons (;) to filter
  * filtered_cmd - The function list separated by semicolons (;) to filter
  * advanced_filters - A relation ID to filter (for example: a phone_number value, a user_id value, an application_id value)

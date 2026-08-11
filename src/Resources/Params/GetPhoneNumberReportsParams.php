@@ -22,7 +22,7 @@ class GetPhoneNumberReportsParams
     /** @var boolean Whether to get records in the descent order */
     public $desc_order;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count */
     public $count;
 
     /** @var number The first N records are skipped in the output */

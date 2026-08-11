@@ -26,8 +26,13 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * from_date - The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss
- * to_date - The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss
+ * from_date - The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss. If both dates are omitted, a server-configured default interval is used (default is one month)
+ * to_date - The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss. If both dates are omitted, a server-configured default interval is used (default is one month)
+ * min_duration - The minimum call duration in seconds to filter. You can restrict the allowed date range via duration filters
+ * max_duration - The maximum call duration in seconds to filter. You can restrict the allowed date range via duration filters
+ * remote_number_list - A JSON-formatted list of strings containing phone numbers for history filtering. Has a higher priority than the remote_number parameter. If the array is empty, the remote_number parameter is used instead
+ * count - The maximum record number to include in the report. If omitted, the report service applies its own limit. Unlike GetCallHistory, there is no default of 20 and no cap of 1000 on the Management API side
+ * offset - The number of records to skip in the output
  * timezone - The selected timezone or the 'auto' value (the account location)
  * call_session_history_id - To get the call history for the specific sessions, pass the session IDs to this parameter separated by a semicolon (;). You can find the session ID in the AppEvents.Started event's sessionID property in a scenario, or retrieve it from the call_session_history_id value returned from the StartScenarios or StartConference methods
  * application_id - To receive the call history for a specific application, pass the application ID to this parameter

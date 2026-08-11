@@ -32,9 +32,10 @@ $voxApi = new VoximplantApi($options);
  * created_to - The UTC creation to date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * is_completed - Whether the report is completed
  * desc_order - Whether to get records in the descent order
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  * application_id - The application ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all applications
+ * application_name - The application name list separated by semicolons (;). Can be used instead of the application_id parameter
  */
 $params = new GetHistoryReportsParams();
 

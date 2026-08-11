@@ -40,7 +40,7 @@ $voxApi = new VoximplantApi($options);
  * with_queues - Whether to get the bound queues
  * acd_status - The ACD status list separated by semicolons (;) to filter. The following values are possible: OFFLINE, ONLINE, READY, BANNED, IN_SERVICE, AFTER_SERVICE, TIMEOUT, DND
  * showing_skill_id - The skill to show in the 'skills' field output
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  * order_by - The following values are available: 'user_id', 'user_name' and 'user_display_name'
  * return_live_balance - Whether to get the user live balance

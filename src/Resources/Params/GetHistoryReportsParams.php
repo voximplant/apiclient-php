@@ -22,7 +22,7 @@ class GetHistoryReportsParams
     /** @var boolean Whether to get records in the descent order */
     public $desc_order;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count */
     public $count;
 
     /** @var number The first N records are skipped in the output */
@@ -30,6 +30,9 @@ class GetHistoryReportsParams
 
     /** @var intlist The application ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all applications */
     public $application_id;
+
+    /** @var stringlist The application name list separated by semicolons (;). Can be used instead of the application_id parameter */
+    public $application_name;
 
     public function toArray()
     {
@@ -43,6 +46,7 @@ class GetHistoryReportsParams
                     'count' => $this->count,
                     'offset' => $this->offset,
                     'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
             ];
     }
 }

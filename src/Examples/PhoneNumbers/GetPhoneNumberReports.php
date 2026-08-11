@@ -32,7 +32,7 @@ $voxApi = new VoximplantApi($options);
  * created_to - The UTC creation to date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * is_completed - Whether the report is completed
  * desc_order - Whether to get records in the descent order
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  */
 $params = new GetPhoneNumberReportsParams();

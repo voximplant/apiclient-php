@@ -124,7 +124,7 @@ class Accounts implements AccountsInterface
     }
 
     /**
-     * @method Gets the resource price.
+     * @method Gets the resource price. If the resource is not specified, returns all available resources with prices.
      */
     public function GetResourcePrice(Params\GetResourcePriceParams $params = null): GetResourcePriceReturn
     {

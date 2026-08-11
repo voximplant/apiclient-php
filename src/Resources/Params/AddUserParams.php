@@ -7,10 +7,10 @@ class AddUserParams
     /** @var string The user name in format [a-z0-9][a-z0-9_-]{2,49} */
     public $user_name;
 
-    /** @var string The user display name. The length must be less than 256 */
+    /** @var string The user display name. The length should be less than 256 */
     public $user_display_name;
 
-    /** @var string The user password. Must be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character */
+    /** @var string The user password. Should be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character */
     public $user_password;
 
     /** @var number The application ID which a new user is to be bound to. Required unless application_name is provided. */
@@ -22,7 +22,7 @@ class AddUserParams
     /** @var boolean Whether the user uses the parent account's money, 'false' if the user has a separate balance */
     public $parent_accounting;
 
-    /** @var string The user mobile phone. The length must be less than 50 */
+    /** @var string The user mobile phone. The length should be less than 50 */
     public $mobile_phone;
 
     /** @var boolean Whether the user is active. Inactive users cannot log in to applications */

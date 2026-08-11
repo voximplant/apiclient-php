@@ -10,7 +10,7 @@ class GetZIPCodesParams
     /** @var string The phone region code */
     public $phone_region_code;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count */
     public $count;
 
     /** @var number The first N records are skipped in the output */

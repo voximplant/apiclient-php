@@ -34780,7 +34780,7 @@ class ResultType
         );
     }
 
-    public function LinkRegulationAddress()
+    public function LinkregulationAddress()
     {
         return array (
             'result' => 'boolean',

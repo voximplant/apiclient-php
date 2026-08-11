@@ -30,8 +30,8 @@ $voxApi = new VoximplantApi($options);
  * value - Value for the specified key, up to 2000 characters
  * application_id - Application ID
  * application_name - Application name
- * ttl - Key expiry time in seconds. The value is in range of 0..7,776,000 (90 days), the default value is 30 days (2,592,000 seconds). The TTL is converted to an **expires_at** Unix timestamp field as part of the storage object. Note that one of the two parameters (ttl or expires_at) must be set
- * expires_at - Expiration date based on **ttl** (timestamp without milliseconds). Note that one of the two parameters (ttl or expires_at) must be set
+ * ttl - Key expiry time in seconds. The value is in range of 0..7,776,000 (90 days), the default value is 30 days (2,592,000 seconds). The TTL is converted to an **expires_at** Unix timestamp field as part of the storage object. Note that one of the two parameters (ttl or expires_at) should be set
+ * expires_at - Expiration date based on **ttl** (timestamp without milliseconds). Note that one of the two parameters (ttl or expires_at) should be set
  */
 $params = new SetKeyValueItemParams();
 

@@ -26,8 +26,17 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * from_date - The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss
- * to_date - The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss
+ * from_date - The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss. If both dates are omitted and is_uncommitted is false, a server-configured default interval is used (default is one month)
+ * to_date - The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss. If both dates are omitted and is_uncommitted is false, a server-configured default interval is used (default is one month)
+ * application_id - The application ID to filter. Can be used together with or instead of the application_name parameter
+ * application_name - The application name to filter. Can be used instead of the application_id parameter
+ * subscription_id - The subscription ID list separated by semicolons (;) to filter
+ * subscription_name - The subscription name list separated by semicolons (;) to filter
+ * resource_type - The resource type list separated by semicolons (;) to filter
+ * price_group_name - The price group name list separated by semicolons (;) to filter
+ * use_accounting_dates - Whether to filter by the accounting dates instead of the transaction's `performed_at` timestamps
+ * count - The maximum record number to include in the report. If omitted, the report service applies its own limit. Unlike GetTransactionHistory, there is no default of 20 and no cap of 1000 on the Management API side
+ * offset - The number of records to skip in the output
  * timezone - The selected timezone or the 'auto' value (the account location)
  * transaction_id - The transaction ID list separated by semicolons (;)
  * payment_reference - The external payment reference to filter

@@ -22,7 +22,7 @@ class GetCallListsParams
     /** @var string The type of the call list. The possible values are AUTOMATIC and MANUAL */
     public $type_list;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count. The maximum value is 1000 */
     public $count;
 
     /** @var number The first N records are skipped in the output */
@@ -30,6 +30,18 @@ class GetCallListsParams
 
     /** @var intlist The application ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all applications */
     public $application_id;
+
+    /** @var stringlist The application name list separated by semicolons (;). Can be used instead of application_id */
+    public $application_name;
+
+    /** @var intlist The rule ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all rules */
+    public $rule_id;
+
+    /** @var stringlist The rule name list separated by semicolons (;). Can be used instead of rule_id */
+    public $rule_name;
+
+    /** @var string The call list status to filter. The possible values are: In progress, Canceled, Completed, Suspended */
+    public $status;
 
     public function toArray()
     {
@@ -43,6 +55,10 @@ class GetCallListsParams
                     'count' => $this->count,
                     'offset' => $this->offset,
                     'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'rule_id' => $this->rule_id,
+                    'rule_name' => $this->rule_name,
+                    'status' => $this->status,
             ];
     }
 }

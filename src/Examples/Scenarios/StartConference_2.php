@@ -26,7 +26,7 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * conference_name - The conference name. The name length must be less than 50 symbols
+ * conference_name - The conference name. The name length should be less than 50 symbols
  * rule_id - The rule ID that needs to be launched. Please note, the necessary scenario needs to be attached to the rule
  * user_id - The user ID. Run the scripts from the user if set
  * user_name - The user name that can be used instead of user_id. Run the scripts from the user if set

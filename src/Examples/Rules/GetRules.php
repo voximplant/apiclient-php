@@ -34,7 +34,7 @@ $voxApi = new VoximplantApi($options);
  * attached_key_id - The service account ID bound to the rule. Read more in the [guide](/docs/guides/voxengine/management-api)
  * template - Search for template matching
  * with_scenarios - Whether to get bound scenarios info
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  */
 $params = new GetRulesParams();

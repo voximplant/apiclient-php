@@ -25,7 +25,7 @@ interface AccountsInterface
     public function GetCurrencyRate(\Voximplant\Resources\Params\GetCurrencyRateParams $params);
 
     /**
-     * @method Gets the resource price.
+     * @method Gets the resource price. If the resource is not specified, returns all available resources with prices.
      */
     public function GetResourcePrice(\Voximplant\Resources\Params\GetResourcePriceParams $params);
 

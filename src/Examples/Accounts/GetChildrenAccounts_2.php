@@ -34,7 +34,7 @@ $voxApi = new VoximplantApi($options);
  * ignore_invalid_accounts - Whether to ignore the invalid 'child_account_id' items
  * brief_output - Whether to output the account_id only
  * medium_output - Whether to output the account_id, account_name, account_email only
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  * order_by - The following values are available: 'child_account_id', 'child_account_name' and 'child_account_email'
  * return_live_balance - Whether to get the user live balance

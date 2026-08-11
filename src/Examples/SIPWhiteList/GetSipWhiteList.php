@@ -27,7 +27,7 @@ $voxApi = new VoximplantApi($options);
 /**
  * @param array $params (See below)
  * sip_whitelist_id - The SIP white list item ID to filter
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  */
 $params = new GetSipWhiteListParams();

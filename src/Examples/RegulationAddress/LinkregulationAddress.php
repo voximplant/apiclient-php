@@ -1,14 +1,14 @@
 <?php
 
 /**
- * @method LinkRegulationAddress Links the regulation address to a phone.
+ * @method LinkregulationAddress Links the regulation address to a phone.
  */
 
 // Path to your autoload.php
 require_once '/path/to/vendor/autoload.php';
 
 use Voximplant\VoximplantApi;
-use Voximplant\Resources\Params\LinkRegulationAddressParams;
+use Voximplant\Resources\Params\LinkregulationAddressParams;
 
 /**
  * In order to use Voximplant PHP SDK, you need the following:
@@ -30,13 +30,13 @@ $voxApi = new VoximplantApi($options);
  * phone_id - The phone ID for link
  * phone_number - The phone number for link
  */
-$params = new LinkRegulationAddressParams();
+$params = new LinkregulationAddressParams();
 
 $params->regulation_address_id = 1;
 $params->phone_id = 1;
 
 // Link the regulation address to a phone number.
-$result = $voxApi->RegulationAddress->LinkRegulationAddress($params);
+$result = $voxApi->RegulationAddress->LinkregulationAddress($params);
 
 // Show result
 var_dump($result);

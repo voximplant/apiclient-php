@@ -28,8 +28,8 @@ $voxApi = new VoximplantApi($options);
  * @param array $params (See below)
  * scenario_id - Scenario ID. Required unless required_scenario_name is provided.
  * required_scenario_name - Name of the scenario to edit. Required unless scenario_id is provided.
- * scenario_name - New scenario name. The length must be less than 30
- * scenario_script - New scenario text. Use the application/x-www-form-urlencoded content type with UTF-8 encoding. The length must be less than 128 KB
+ * scenario_name - New scenario name. The length should be less than 30
+ * scenario_script - New scenario text. Use the application/x-www-form-urlencoded content type with UTF-8 encoding. The length should be less than 128 KB
  */
 $params = new SetScenarioInfoParams();
 

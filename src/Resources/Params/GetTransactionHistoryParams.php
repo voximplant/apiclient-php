@@ -4,11 +4,44 @@ namespace Voximplant\Resources\Params;
 
 class GetTransactionHistoryParams
 {
-    /** @var timestamp The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss */
+    /** @var timestamp The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss. If both dates are omitted and is_uncommitted is false, a server-configured default interval is used (default is one month) */
     public $from_date;
 
-    /** @var timestamp The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss */
+    /** @var timestamp The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss. If both dates are omitted and is_uncommitted is false, a server-configured default interval is used (default is one month) */
     public $to_date;
+
+    /** @var number The application ID to filter. Can be used together with or instead of the application_name parameter */
+    public $application_id;
+
+    /** @var string The application name to filter. Can be used instead of the application_id parameter */
+    public $application_name;
+
+    /** @var intlist The subscription ID list separated by semicolons (;) to filter */
+    public $subscription_id;
+
+    /** @var stringlist The subscription name list separated by semicolons (;) to filter */
+    public $subscription_name;
+
+    /** @var stringlist The resource type list separated by semicolons (;) to filter */
+    public $resource_type;
+
+    /** @var stringlist The price group name list separated by semicolons (;) to filter */
+    public $price_group_name;
+
+    /** @var boolean Whether to filter by the accounting dates instead of the transaction's `performed_at` timestamps */
+    public $use_accounting_dates;
+
+    /** @var boolean Whether to include the extended transaction fields, such as the application, subscription, resource type and price group, in the response */
+    public $with_extended_info;
+
+    /** @var boolean Whether to create an asynchronous history report instead of returning the data immediately. Has the same effect as calling `GetTransactionHistoryAsync` and requires the output=csv */
+    public $is_async;
+
+    /** @var boolean Whether to get a CSV file with the column names if the output=csv */
+    public $with_header;
+
+    /** @var string The decimal mark for the CSV numbers if the output=csv. If omitted, the account locale setting is used */
+    public $decimal_separator;
 
     /** @var intlist The transaction ID list separated by semicolons (;) */
     public $transaction_id;
@@ -51,6 +84,17 @@ class GetTransactionHistoryParams
         return [
                 'from_date' => $this->from_date,
                     'to_date' => $this->to_date,
+                    'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
+                    'subscription_id' => $this->subscription_id,
+                    'subscription_name' => $this->subscription_name,
+                    'resource_type' => $this->resource_type,
+                    'price_group_name' => $this->price_group_name,
+                    'use_accounting_dates' => $this->use_accounting_dates !== null ? (filter_var($this->use_accounting_dates, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_extended_info' => $this->with_extended_info !== null ? (filter_var($this->with_extended_info, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'is_async' => $this->is_async !== null ? (filter_var($this->is_async, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_header' => $this->with_header !== null ? (filter_var($this->with_header, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'decimal_separator' => $this->decimal_separator,
                     'transaction_id' => $this->transaction_id,
                     'payment_reference' => $this->payment_reference,
                     'transaction_type' => $this->transaction_type,

@@ -29,7 +29,7 @@ $voxApi = new VoximplantApi($options);
  * authorized_ip - The authorized IP4 or network to filter
  * allowed - Whether the IP is allowed
  * contains_ip - Specify the parameter to filter the networks that contains the particular IP4
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  * description - The IP address description
  */

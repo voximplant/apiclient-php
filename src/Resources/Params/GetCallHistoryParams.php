@@ -4,11 +4,23 @@ namespace Voximplant\Resources\Params;
 
 class GetCallHistoryParams
 {
-    /** @var timestamp The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss */
+    /** @var timestamp The from date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss. If both dates are omitted, a server-configured default interval is used (default is one month) */
     public $from_date;
 
-    /** @var timestamp The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss */
+    /** @var timestamp The to date in the selected timezone in 24-h format: YYYY-MM-DD HH:mm:ss. If both dates are omitted, a server-configured default interval is used (default is one month) */
     public $to_date;
+
+    /** @var number The minimum call duration in seconds to filter. You can restrict the allowed date range via duration filters */
+    public $min_duration;
+
+    /** @var number The maximum call duration in seconds to filter. You can restrict the allowed date range via duration filters */
+    public $max_duration;
+
+    /** @var boolean Whether to create an asynchronous history report instead of returning the data immediately. Has the same effect as calling GetCallHistoryAsync and requires the output=csv */
+    public $is_async;
+
+    /** @var boolean Whether to get a CSV file with the column names if the output=csv */
+    public $with_header;
 
     /** @var intlist To get the call history for the specific sessions, pass the session IDs to this parameter separated by a semicolon (;). The maximum number of records is 1000. You can find the session ID in the AppEvents.Started event's sessionID property in a scenario, or retrieve it from the call_session_history_id value returned from the StartScenarios or StartConference methods */
     public $call_session_history_id;
@@ -69,6 +81,10 @@ class GetCallHistoryParams
         return [
                 'from_date' => $this->from_date,
                     'to_date' => $this->to_date,
+                    'min_duration' => $this->min_duration,
+                    'max_duration' => $this->max_duration,
+                    'is_async' => $this->is_async !== null ? (filter_var($this->is_async, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'with_header' => $this->with_header !== null ? (filter_var($this->with_header, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
                     'call_session_history_id' => $this->call_session_history_id,
                     'application_id' => $this->application_id,
                     'application_name' => $this->application_name,

@@ -27,12 +27,14 @@ $voxApi = new VoximplantApi($options);
 /**
  * @param array $params (See below)
  * list_id - The list ID
- * count - Maximum number of entries in the result
+ * count - Maximum number of entries in the result. If output is json, the default and maximum value is 1000; for csv and xls no limit is applied unless the parameter is specified
  * offset - The first N records are skipped in the output
  * output - The output format. The following values available: **json**, **csv**, **xls**. The default value is **csv**
  * encoding - Encoding of the output file. Default UTF-8
  * delimiter - Separator values. The default value is ';'
  * batch_id - Batch UUID to filter the tasks
+ * is_async - Whether to create an asynchronous report instead of returning the data immediately. Requires output to be csv or xls
+ * new_csv_style - Whether to use the new csv layout. Applies to asynchronous reports; for xls the value is always true
  */
 $params = new GetCallListDetailsParams();
 

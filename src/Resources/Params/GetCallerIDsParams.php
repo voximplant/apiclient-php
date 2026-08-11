@@ -16,7 +16,7 @@ class GetCallerIDsParams
     /** @var string The following values are available: 'caller_number' (ascent order), 'verified_until' (ascent order) */
     public $order_by;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count */
     public $count;
 
     /** @var number The first N records are skipped in the output */

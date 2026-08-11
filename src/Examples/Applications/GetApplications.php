@@ -30,7 +30,7 @@ $voxApi = new VoximplantApi($options);
  * application_name - The application name part to filter
  * with_rules - Whether to get bound rules info
  * with_scenarios - Whether to get bound rules and scenarios info
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  */
 $params = new GetApplicationsParams();

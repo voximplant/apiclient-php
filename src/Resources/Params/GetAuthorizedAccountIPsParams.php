@@ -13,7 +13,7 @@ class GetAuthorizedAccountIPsParams
     /** @var string Specify the parameter to filter the networks that contains the particular IP4 */
     public $contains_ip;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count */
     public $count;
 
     /** @var number The first N records are skipped in the output */

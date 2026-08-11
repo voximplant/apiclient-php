@@ -28,7 +28,7 @@ class GetChildrenAccountsParams
     /** @var boolean Whether to output the account_id, account_name, account_email only */
     public $medium_output;
 
-    /** @var number The max returning record count */
+    /** @var number The maximum returning record count */
     public $count;
 
     /** @var number The first N records are skipped in the output */

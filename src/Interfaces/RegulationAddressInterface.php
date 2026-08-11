@@ -7,7 +7,7 @@ interface RegulationAddressInterface
     /**
      * @method Links the regulation address to a phone.
      */
-    public function LinkRegulationAddress(\Voximplant\Resources\Params\LinkRegulationAddressParams $params);
+    public function LinkregulationAddress(\Voximplant\Resources\Params\LinkregulationAddressParams $params);
 
     /**
      * @method Searches for available zip codes.
@@ -34,7 +34,7 @@ interface RegulationAddressInterface
      */
     public function GetRegions(\Voximplant\Resources\Params\GetRegionsParams $params);
 }
-class LinkRegulationAddressReturn
+class LinkregulationAddressReturn
 {
     /** @var boolean */
     public $result;
@@ -81,7 +81,7 @@ interface RegulationAddressInterface
     /** @var [RegulationAddress] The available RegulationAddress records */
     public $available_address;
 
-    /** @var number The count of RegulationAddress in progress status */
+    /** @var number The number of RegulationAddress in progress status */
     public $count_in_progress;
 
     /** @var array The returned error message. */

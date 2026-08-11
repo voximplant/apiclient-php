@@ -35,6 +35,9 @@ $voxApi = new VoximplantApi($options);
  * custom_data - Custom data string
  * min_execution_time - Optional. Start time for the daily calling attempts in the UTC+0 24-h format: HH:mm:ss format. If spefied, please specify `max_execution_time` as well
  * max_execution_time - Optional. End time for the daily calling attempts in the UTC+0 24-h format: HH:mm:ss format. If spefied, please specify `min_execution_time` as well
+ * next_attempt_time - Time of the next calling attempt. One of the editable fields: at least one of them should be specified
+ * user_id - The user ID to bind to the task. One of the editable fields: at least one of them should be specified
+ * skill_id - The skill ID list separated by semicolons (;). Up to 5 IDs. One of the editable fields: at least one of them should be specified
  */
 $params = new EditCallListTaskParams();
 

@@ -16,7 +16,7 @@ class SetChildAccountInfoParams
     /** @var string The new child account email */
     public $new_child_account_email;
 
-    /** @var string The new child account password. Must be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character */
+    /** @var string The new child account password. Should be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character */
     public $new_child_account_password;
 
     /** @var boolean Whether Voximplant notifications are required */
@@ -37,7 +37,7 @@ class SetChildAccountInfoParams
     /** @var string The child account location (timezone). Examples: America/Los_Angeles, Etc/GMT-8, Etc/GMT+10 */
     public $location;
 
-    /** @var decimal The min balance value to notify by email or SMS */
+    /** @var decimal The minimum balance value to notify by email or SMS */
     public $min_balance_to_notify;
 
     /** @var boolean Whether to allow the robokassa payments */

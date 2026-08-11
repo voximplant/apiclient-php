@@ -28,7 +28,7 @@ $voxApi = new VoximplantApi($options);
  * @param array $params (See below)
  * subuser_id - The subuser's ID
  * old_subuser_password - The subuser old password. It is required if __new_subuser_password__ is specified
- * new_subuser_password - The new user password. Must be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character
+ * new_subuser_password - The new user password. Should be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character
  * description - The new subuser description
  */
 $params = new SetSubUserInfoParams();

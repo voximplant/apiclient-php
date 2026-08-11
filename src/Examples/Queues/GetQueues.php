@@ -33,7 +33,7 @@ $voxApi = new VoximplantApi($options);
  * excluded_skill_id - The excluded skill ID to filter
  * with_skills - Whether to get the bound skills
  * showing_skill_id - The skill to show in the 'skills' field output
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  * with_operatorcount - Whether to include the number of agents bound to the queue
  */

@@ -30,7 +30,7 @@ $voxApi = new VoximplantApi($options);
  * callerid_number - The phone number to filter
  * active - Whether the account is active to filter
  * order_by - The following values are available: 'caller_number' (ascent order), 'verified_until' (ascent order)
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  */
 $params = new GetCallerIDsParams();

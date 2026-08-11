@@ -28,18 +28,21 @@ $voxApi = new VoximplantApi($options);
  * @param array $params (See below)
  * from_date - The UTC 'from' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
  * to_date - The UTC 'to' date filter in 24-h format: YYYY-MM-DD HH:mm:ss
+ * callerid - The caller phone number to filter
+ * custom_data - The ACD session custom data to filter. The match is exact
+ * decimal_separator - The decimal mark for the CSV numbers if the output=csv. If omitted, the account locale setting is used
  * acd_session_history_id - The ACD session history ID list separated by semicolons (;)
  * acd_request_id - The ACD request ID list separated by semicolons (;)
  * acd_queue_id - The ACD queue ID list to filter separated by semicolons (;)
  * user_id - The user ID list to filter separated by semicolons (;)
  * operator_hangup - Whether to get the calls terminated by the operator
  * unserviced - Whether the call is unserviced by the operator
- * min_waiting_time - The min waiting time filter
+ * min_waiting_time - The minimum waiting time filter
  * rejected - Whether the call is rejected calls by the 'max_queue_size', 'max_waiting_time' threshold
  * with_events - Whether to get the bound events
  * with_header - Whether to get a CSV file with the column names if the output=csv
  * desc_order - Whether to get records in the descent order
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  * output - The output format. The following values available: **json**, **csv**, **xls**. The default value is **json**
  */

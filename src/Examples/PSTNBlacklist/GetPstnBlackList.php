@@ -28,7 +28,7 @@ $voxApi = new VoximplantApi($options);
  * @param array $params (See below)
  * pstn_blacklist_id - The PSTN black list item ID for filter
  * pstn_blacklist_phone - The phone number in format e164 for filter
- * count - The max returning record count
+ * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  */
 $params = new GetPstnBlackListParams();

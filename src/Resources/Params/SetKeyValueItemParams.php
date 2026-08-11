@@ -16,9 +16,9 @@ class SetKeyValueItemParams
     /** @var string Application name */
     public $application_name;
 
-    /** @var number Key expiry time in seconds. The value is in range of 0..7,776,000 (90 days), the default value is 30 days (2,592,000 seconds). The TTL is converted to an **expires_at** Unix timestamp field as part of the storage object. Note that one of the two parameters (ttl or expires_at) must be set */
+    /** @var number Key expiry time in seconds. The value is in range of 0..7,776,000 (90 days), the default value is 30 days (2,592,000 seconds). The TTL is converted to an **expires_at** Unix timestamp field as part of the storage object. Note that one of the two parameters (ttl or expires_at) should be set */
     public $ttl;
 
-    /** @var number Expiration date based on **ttl** (timestamp without milliseconds). Note that one of the two parameters (ttl or expires_at) must be set */
+    /** @var number Expiration date based on **ttl** (timestamp without milliseconds). Note that one of the two parameters (ttl or expires_at) should be set */
     public $expires_at;
 }

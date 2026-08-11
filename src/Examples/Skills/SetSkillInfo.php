@@ -28,7 +28,7 @@ $voxApi = new VoximplantApi($options);
  * @param array $params (See below)
  * skill_id - The skill ID. Required unless skill_name is provided.
  * skill_name - The skill name. Required unless skill_id is provided.
- * new_skill_name - The new skill name. The length must be less than 512
+ * new_skill_name - The new skill name. The length should be less than 512
  */
 $params = new SetSkillInfoParams();
 

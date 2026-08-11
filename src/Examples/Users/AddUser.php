@@ -27,12 +27,12 @@ $voxApi = new VoximplantApi($options);
 /**
  * @param array $params (See below)
  * user_name - The user name in format [a-z0-9][a-z0-9_-]{2,49}
- * user_display_name - The user display name. The length must be less than 256
- * user_password - The user password. Must be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character
+ * user_display_name - The user display name. The length should be less than 256
+ * user_password - The user password. Should be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character
  * application_id - The application ID which a new user is to be bound to. Required unless application_name is provided.
  * application_name - The application name which a new user is to be bound to. Required unless application_id is provided.
  * parent_accounting - Whether the user uses the parent account's money, 'false' if the user has a separate balance
- * mobile_phone - The user mobile phone. The length must be less than 50
+ * mobile_phone - The user mobile phone. The length should be less than 50
  * user_active - Whether the user is active. Inactive users cannot log in to applications
  * user_custom_data - Any string
  */

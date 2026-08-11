@@ -10,6 +10,6 @@ class SetSkillInfoParams
     /** @var string The skill name. Required unless skill_id is provided. */
     public $skill_name;
 
-    /** @var string The new skill name. The length must be less than 512 */
+    /** @var string The new skill name. The length should be less than 512 */
     public $new_skill_name;
 }
