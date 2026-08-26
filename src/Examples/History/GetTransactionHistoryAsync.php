@@ -35,7 +35,7 @@ $voxApi = new VoximplantApi($options);
  * resource_type - The resource type list separated by semicolons (;) to filter
  * price_group_name - The price group name list separated by semicolons (;) to filter
  * use_accounting_dates - Whether to filter by the accounting dates instead of the transaction's `performed_at` timestamps
- * count - The maximum record number to include in the report. If omitted, the report service applies its own limit. Unlike GetTransactionHistory, there is no default of 20 and no cap of 1000 on the Management API side
+ * count - The maximum number of records to include in the report. If omitted, the report service applies its own limit. Unlike GetTransactionHistory, there is no default of 20 and no cap of 1000 on the Management API side
  * offset - The number of records to skip in the output
  * timezone - The selected timezone or the 'auto' value (the account location)
  * transaction_id - The transaction ID list separated by semicolons (;)

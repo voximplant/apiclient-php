@@ -29,7 +29,7 @@ $voxApi = new VoximplantApi($options);
  * application_id - Application ID. Required unless application_name is provided.
  * application_name - Application name. Required unless application_id is provided.
  * secret_name_part - Filter by the secret name part
- * count - Maximum returning record number
+ * count - Maximum returning number of records
  * offset - First N records to be skipped in the output
  */
 $params = new GetSecretsParams();

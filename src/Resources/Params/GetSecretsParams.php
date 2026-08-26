@@ -13,7 +13,7 @@ class GetSecretsParams
     /** @var string Filter by the secret name part */
     public $secret_name_part;
 
-    /** @var number Maximum returning record number */
+    /** @var number Maximum returning number of records */
     public $count;
 
     /** @var number First N records to be skipped in the output */

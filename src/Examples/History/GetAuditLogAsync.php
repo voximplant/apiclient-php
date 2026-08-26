@@ -31,7 +31,7 @@ $voxApi = new VoximplantApi($options);
  * timezone - The selected timezone or the 'auto' value (the account location)
  * audit_log_id - The audit history ID list separated by semicolons (;)
  * filtered_admin_user_id - The admin user ID list separated by semicolons (;) to filter
- * count - The maximum record number to include in the report. If omitted, the report service applies its own limit
+ * count - The maximum number of records to include in the report. If omitted, the report service applies its own limit
  * offset - The first N records are skipped in the output
  * filtered_ip - The IP list separated by semicolons (;) to filter
  * filtered_cmd - The function list separated by semicolons (;) to filter

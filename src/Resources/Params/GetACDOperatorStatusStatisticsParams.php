@@ -10,7 +10,7 @@ class GetACDOperatorStatusStatisticsParams
     /** @var timestamp Date and time of statistics interval begin. Time zone is UTC, format is 24-h 'YYYY-MM-DD HH:mm:ss' */
     public $to_date;
 
-    /** @var stringlist The ACD status list separated by semicolons (;). The following values are possible: OFFLINE, ONLINE, READY, BANNED, IN_SERVICE, AFTER_SERVICE, TIMEOUT, DND */
+    /** @var stringlist The ACD status list separated by semicolons (;). The following values are possible: OFFLINE, ONLINE, READY, BANNED, IN_SERVICE, AFTER_SERVICE, TIMEOUT, DND. If omitted, the statistics include all the statuses */
     public $acd_status;
 
     /** @var stringlist The user ID list separated by semicolons (;). Use the 'all' value to select all users */

@@ -39,7 +39,7 @@ $voxApi = new VoximplantApi($options);
  * advanced_filters - A relation ID to filter (for example: a phone_number value, a user_id value, an application_id value)
  * desc_order - Whether to get records in the descent order
  * with_total_count - Whether to include the 'total_count' and increase performance
- * count - The maximum returning record number. If omitted, the report service applies its own limit
+ * count - The maximum returning number of records. If omitted, the report service applies its own limit
  * offset - The first N records are skipped in the output
  */
 $params = new GetAuditLogParams();

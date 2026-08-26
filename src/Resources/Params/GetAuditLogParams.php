@@ -40,7 +40,7 @@ class GetAuditLogParams
     /** @var boolean Whether to include the 'total_count' and increase performance */
     public $with_total_count;
 
-    /** @var number The maximum returning record number. If omitted, the report service applies its own limit */
+    /** @var number The maximum returning number of records. If omitted, the report service applies its own limit */
     public $count;
 
     /** @var number The first N records are skipped in the output */

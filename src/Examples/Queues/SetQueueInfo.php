@@ -35,7 +35,8 @@ $voxApi = new VoximplantApi($options);
  * max_queue_size - The maximum queue size
  * max_waiting_time - The maximum predicted waiting time in minutes. The client is rejected if the predicted waiting time is greater than the maximum predicted waiting time
  * average_service_time - The average service time in seconds. Specify the parameter to correct or initialize the waiting time prediction
- * application_id - The new application ID
+ * application_id - The new application ID. Can be used instead of the application_name parameter
+ * application_name - The new application name. Can be used instead of the application_id parameter
  */
 $params = new SetQueueInfoParams();
 

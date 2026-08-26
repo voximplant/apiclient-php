@@ -1276,6 +1276,7 @@ class RequestType
             'max_waiting_time' => 'number',
             'average_service_time' => 'number',
             'application_id' => 'number',
+            'application_name' => 'string',
         );
     }
 
@@ -1285,13 +1286,17 @@ class RequestType
             'acd_queue_id' => 'number',
             'acd_queue_name' => 'string',
             'application_id' => 'number',
+            'application_name' => 'string',
             'skill_id' => 'number',
+            'skill_name' => 'string',
             'excluded_skill_id' => 'number',
+            'excluded_skill_name' => 'string',
             'with_skills' => 'boolean',
             'showing_skill_id' => 'number',
             'count' => 'number',
             'offset' => 'number',
             'with_operatorcount' => 'boolean',
+            'show_deleted' => 'boolean',
         );
     }
 

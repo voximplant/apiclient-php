@@ -31,8 +31,11 @@ class SetQueueInfoParams
     /** @var number The average service time in seconds. Specify the parameter to correct or initialize the waiting time prediction */
     public $average_service_time;
 
-    /** @var number The new application ID */
+    /** @var number The new application ID. Can be used instead of the application_name parameter */
     public $application_id;
+
+    /** @var string The new application name. Can be used instead of the application_id parameter */
+    public $application_name;
 
     public function toArray()
     {
@@ -47,6 +50,7 @@ class SetQueueInfoParams
                     'max_waiting_time' => $this->max_waiting_time,
                     'average_service_time' => $this->average_service_time,
                     'application_id' => $this->application_id,
+                    'application_name' => $this->application_name,
             ];
     }
 }

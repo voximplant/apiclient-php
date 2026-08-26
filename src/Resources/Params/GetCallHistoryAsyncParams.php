@@ -19,7 +19,7 @@ class GetCallHistoryAsyncParams
     /** @var string A JSON-formatted list of strings containing phone numbers for history filtering. Has a higher priority than the remote_number parameter. If the array is empty, the remote_number parameter is used instead */
     public $remote_number_list;
 
-    /** @var number The maximum record number to include in the report. If omitted, the report service applies its own limit. Unlike GetCallHistory, there is no default of 20 and no cap of 1000 on the Management API side */
+    /** @var number The maximum number of records to include in the report. If omitted, the report service applies its own limit. Unlike GetCallHistory, there is no default of 20 and no cap of 1000 on the Management API side */
     public $count;
 
     /** @var number The number of records to skip in the output */

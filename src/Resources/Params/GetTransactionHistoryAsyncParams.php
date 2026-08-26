@@ -31,7 +31,7 @@ class GetTransactionHistoryAsyncParams
     /** @var boolean Whether to filter by the accounting dates instead of the transaction's `performed_at` timestamps */
     public $use_accounting_dates;
 
-    /** @var number The maximum record number to include in the report. If omitted, the report service applies its own limit. Unlike GetTransactionHistory, there is no default of 20 and no cap of 1000 on the Management API side */
+    /** @var number The maximum number of records to include in the report. If omitted, the report service applies its own limit. Unlike GetTransactionHistory, there is no default of 20 and no cap of 1000 on the Management API side */
     public $count;
 
     /** @var number The number of records to skip in the output */

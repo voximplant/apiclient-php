@@ -16,7 +16,7 @@ class GetAuditLogAsyncParams
     /** @var intlist The admin user ID list separated by semicolons (;) to filter */
     public $filtered_admin_user_id;
 
-    /** @var number The maximum record number to include in the report. If omitted, the report service applies its own limit */
+    /** @var number The maximum number of records to include in the report. If omitted, the report service applies its own limit */
     public $count;
 
     /** @var number The first N records are skipped in the output */
