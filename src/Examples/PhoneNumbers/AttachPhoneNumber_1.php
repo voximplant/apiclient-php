@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @method AttachPhoneNumber Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps.<br><br>Please note that when you purchase a phone number, we reserve the subscription fee and taxes for the upcoming month. Read more in the <a href='/docs/gettingstarted/billing'>Billing</a> page.
+ * @method AttachPhoneNumber Attach the phone number to the account. There are two modes:<br><ol><li>Purchase from the catalog — specify <b>country_code</b>, <b>phone_category_name</b> and <b>phone_region_id</b> together; the platform picks the number. The [GetNewPhoneNumbers] method with the same three locators lists the numbers available for purchase.</li><li>Attach a specific phone number — pass <b>phone_number</b>; the three locators are not required. The [GetNewPhoneNumbers] method without the locators returns the numbers already available to the account, which are the ones this mode accepts.</li></ol>Note that phone numbers of some countries may require additional verification steps.<br><br>Please note that when you purchase a phone number, we reserve the subscription fee and taxes for the upcoming month. Read more in the <a href='/docs/gettingstarted/billing'>Billing</a> page.
  */
 
 // Path to your autoload.php
@@ -26,14 +26,13 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * phone_count - Quantity of phone numbers you want to attach. Required unless phone_number is provided.
- * phone_number - The phone number. See the [GetNewPhoneNumbers] method. Required unless phone_count is provided.
- * country_code - The country code
- * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method
+ * phone_count - Quantity of phone numbers you want to attach. If neither this parameter nor phone_number is specified, one phone number is attached from the catalog
+ * phone_number - The phone numbers to attach, separated by semicolons (;). See the [GetNewPhoneNumbers] method. If neither this parameter nor phone_count is specified, one phone number is attached from the catalog
+ * country_code - The country code. Required together with phone_category_name and phone_region_id to purchase from the catalog; not needed when attaching a specific phone number via phone_number
+ * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] method. Required together with country_code and phone_region_id to purchase from the catalog; not needed when attaching a specific phone number via phone_number
  * country_state - The country state. See the [GetPhoneNumberCategories] and [GetPhoneNumberCountryStates] methods
- * phone_region_id - The phone region ID. See the [GetPhoneNumberRegions] method
+ * phone_region_id - The phone region ID. See the [GetPhoneNumberRegions] method. Required together with country_code and phone_category_name to purchase from the catalog; not needed when attaching a specific phone number via phone_number
  * regulation_address_id - The phone regulation address ID
- * force_verification - Whether the force verification is enabled
  */
 $params = new AttachPhoneNumberParams();
 

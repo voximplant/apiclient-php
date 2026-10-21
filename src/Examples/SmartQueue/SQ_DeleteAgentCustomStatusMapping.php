@@ -27,7 +27,8 @@ $voxApi = new VoximplantApi($options);
 /**
  * @param array $params (See below)
  * sq_status_name - Status name
- * application_id - Application ID
+ * application_id - Application ID. Required unless application_name is provided.
+ * application_name - Application name. Required unless application_id is provided.
  */
 $params = new SQ_DeleteAgentCustomStatusMappingParams();
 

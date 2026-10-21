@@ -13,7 +13,7 @@ class GetTransactionHistoryAsyncParams
     /** @var number The application ID to filter. Can be used together with or instead of the application_name parameter */
     public $application_id;
 
-    /** @var string The application name to filter. Can be used instead of the application_id parameter */
+    /** @var string The application name to filter. Can be used together with or instead of the application_id parameter */
     public $application_name;
 
     /** @var intlist The subscription ID list separated by semicolons (;) to filter */

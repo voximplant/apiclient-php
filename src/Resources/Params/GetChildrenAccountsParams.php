@@ -28,7 +28,7 @@ class GetChildrenAccountsParams
     /** @var boolean Whether to output the account_id, account_name, account_email only */
     public $medium_output;
 
-    /** @var number The maximum returning record count */
+    /** @var number The maximum returning record count. The default value applies to the full output only and is capped at 1000; with brief_output or medium_output all the records are returned unless this parameter is set */
     public $count;
 
     /** @var number The first N records are skipped in the output */

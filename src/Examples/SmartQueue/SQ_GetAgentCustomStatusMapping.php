@@ -26,7 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - Application ID
+ * application_id - Application ID. Can be used instead of the application_name parameter
+ * application_name - Application name. Can be used instead of the application_id parameter
  */
 $params = new SQ_GetAgentCustomStatusMappingParams();
 

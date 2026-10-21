@@ -16,10 +16,10 @@ class BindPhoneNumberToApplicationParams
     /** @var string The application name. Required unless application_id is provided. */
     public $application_name;
 
-    /** @var number The rule ID */
+    /** @var number The rule ID. Can be used instead of the rule_name parameter */
     public $rule_id;
 
-    /** @var string The rule name that can be used instead of rule_id */
+    /** @var string The rule name. Can be used instead of the rule_id parameter */
     public $rule_name;
 
     /** @var boolean Whether to bind or unbind (set true or false respectively) */

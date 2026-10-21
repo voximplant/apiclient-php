@@ -96,7 +96,7 @@ class PhoneNumbers implements PhoneNumbersInterface
     }
 
     /**
-     * @method Attach the phone number to the account. Note that phone numbers of some countries may require additional verification steps.Please note that when you purchase a phone number, we reserve the subscription fee and taxes for the upcoming month. Read more in the Billing page.
+     * @method Attach the phone number to the account. There are two modes:Purchase from the catalog — specify country_code, phone_category_name and phone_region_id together; the platform picks the number. The [GetNewPhoneNumbers] method with the same three locators lists the numbers available for purchase.Attach a specific phone number — pass phone_number; the three locators are not required. The [GetNewPhoneNumbers] method without the locators returns the numbers already available to the account, which are the ones this mode accepts.Note that phone numbers of some countries may require additional verification steps.Please note that when you purchase a phone number, we reserve the subscription fee and taxes for the upcoming month. Read more in the Billing page.
      */
     public function AttachPhoneNumber(Params\AttachPhoneNumberParams $params = null): AttachPhoneNumberReturn
     {

@@ -8,6 +8,15 @@ use Voximplant\VoximplantApi;
 
 class Curl
 {
+    /**
+     * Synthetic error code used when the response is not valid JSON.
+     * Negative so it cannot collide with platform API error codes.
+     */
+    public const PARSE_ERROR_CODE = -1;
+
+    /** Maximum number of raw response bytes kept on a JSON parse error. */
+    public const RESPONSE_BODY_LIMIT = 8192;
+
     /** @var Token */
     private $jwt;
 
@@ -164,26 +173,55 @@ class Curl
 
         curl_close($ch);
 
+        return $this->interpretResponse($body, (int) $code, is_string($type) ? $type : '');
+    }
+
+    /**
+     * Turn an HTTP response into a decoded payload, a file download, or a parse error.
+     *
+     * @param string $body
+     * @param int    $code
+     * @param string $contentType
+     *
+     * @throws ClientException
+     *
+     * @return array
+     */
+    private function interpretResponse(string $body, int $code, string $contentType): array
+    {
         if ($code >= 400 && $code < 500) {
             throw new ClientException($body, $code);
         }
 
-        if ($type === "application/octet-stream") {
-            $response = ['file_content' => $body];
-        } else {
-            $response = json_decode($body, true);
-            if (json_last_error()) {
-                $err = [
-                    'msg' => 'Failed to parse server response. Err: '.json_last_error_msg(),
-                    'code' => json_last_error(),
-                ];
-                $response = [
-                    'error' => $err,
-                    'errors' => [$err],
-                ];
-            }
+        $mediaType = strtolower(trim(explode(';', $contentType, 2)[0]));
+        if ($mediaType === 'application/octet-stream') {
+            return ['file_content' => $body];
         }
 
-        return $response;
+        $response = json_decode($body, true);
+        if (!json_last_error()) {
+            return $response;
+        }
+
+        $jsonError = json_last_error_msg();
+        $truncated = strlen($body) > self::RESPONSE_BODY_LIMIT;
+        $snippet = $truncated ? substr($body, 0, self::RESPONSE_BODY_LIMIT) : $body;
+        // Keep the snippet JSON-encodable: invalid UTF-8 becomes U+FFFD, and quotes round-trip.
+        $snippet = htmlspecialchars_decode(htmlspecialchars($snippet, ENT_SUBSTITUTE | ENT_QUOTES, 'UTF-8'), ENT_QUOTES);
+
+        $summary = [
+            'msg' => 'Failed to parse server response. Err: '.$jsonError,
+            'code' => self::PARSE_ERROR_CODE,
+        ];
+        $error = $summary;
+        $error['body'] = $snippet;
+        if ($truncated) {
+            $error['truncated'] = true;
+        }
+
+        return [
+            'error' => $error,
+            'errors' => [$summary],
+        ];
     }
 }

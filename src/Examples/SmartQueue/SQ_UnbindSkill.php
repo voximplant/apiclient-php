@@ -26,12 +26,12 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - Application ID to search by
- * application_name - Application name to search by. Can be used instead of application_id
- * user_id - List of user IDs separated by semicolons (;). Use 'all' to select all the users
- * user_name - List of user names separated by semicolons (;). Can be used instead of user_id
- * sq_skill_id - List of skill IDs separated by semicolons (;). Use 'all' to unbind all the skills
- * sq_skill_name - List of skill names separated by semicolons (;). Can be used instead of sq_skill_id
+ * application_id - Application ID to search by. Required unless application_name is provided.
+ * application_name - Application name to search by. Required unless application_id is provided.
+ * user_id - List of user IDs separated by semicolons (;). Use 'all' to select all the users. Required unless user_name is provided.
+ * user_name - List of user names separated by semicolons (;). Required unless user_id is provided.
+ * sq_skill_id - List of skill IDs separated by semicolons (;). Use 'all' to unbind all the skills. Required unless sq_skill_name is provided.
+ * sq_skill_name - List of skill names separated by semicolons (;). Required unless sq_skill_id is provided.
  */
 $params = new SQ_UnbindSkillParams();
 

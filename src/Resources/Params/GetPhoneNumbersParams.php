@@ -13,10 +13,10 @@ class GetPhoneNumbersParams
     /** @var stringlist Phone number activation statuses to filter, separated by semicolons (;).The possible values are: ACTIVE, ACTIVATING, DEACTIVATED, PROVISIONING, AWAITING_BUSINESS_PHONE_NUMBER_CONFIGURATION, LEGAL_OWNERSHIP_LIMIT_REACHED, GOSUSLUGI_DECLINED, SELF_BAN_ENABLED */
     public $activation_status;
 
-    /** @var number Application ID */
+    /** @var intlist Application ID. Can be used instead of the application_name parameter */
     public $application_id;
 
-    /** @var string Application name that can be used instead of application_id */
+    /** @var stringlist Application name. Can be used instead of the application_id parameter */
     public $application_name;
 
     /** @var boolean Whether the phone number bound to an application */
@@ -28,7 +28,7 @@ class GetPhoneNumbersParams
     /** @var stringlist Country code list separated by semicolons (;) */
     public $country_code;
 
-    /** @var string Phone category name. See the [GetPhoneNumberCategories] method */
+    /** @var stringlist Phone category name. See the [GetPhoneNumberCategories] method */
     public $phone_category_name;
 
     /** @var boolean Whether the subscription is cancelled to filter */
@@ -86,7 +86,7 @@ class GetPhoneNumbersParams
     public $offset;
 
     /** @var boolean Whether the SMS support is enabled */
-    public $sms_supported;
+    public $is_sms_supported;
 
     /** @var stringlist Region names list separated by semicolons (;) */
     public $phone_region_name;
@@ -130,7 +130,7 @@ class GetPhoneNumbersParams
                     'sandbox' => $this->sandbox,
                     'count' => $this->count,
                     'offset' => $this->offset,
-                    'sms_supported' => $this->sms_supported !== null ? (filter_var($this->sms_supported, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
+                    'is_sms_supported' => $this->is_sms_supported !== null ? (filter_var($this->is_sms_supported, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
                     'phone_region_name' => $this->phone_region_name,
                     'rule_id' => $this->rule_id,
                     'rule_name' => $this->rule_name,

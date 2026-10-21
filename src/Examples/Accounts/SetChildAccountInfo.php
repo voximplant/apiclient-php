@@ -30,6 +30,8 @@ $voxApi = new VoximplantApi($options);
  * child_account_name - The child account name list separated by semicolons (;). Required unless child_account_id or child_account_email is provided.
  * child_account_email - The child account email list separated by semicolons (;). Required unless child_account_id or child_account_name is provided.
  * new_child_account_email - The new child account email
+ * callback_url - Custom URL to send callbacks from this child account
+ * callback_salt - If salt string is specified, each HTTP request made by the Voximplant cloud toward the callback_url has a salt field set to MD5 hash of account information and salt. That hash can be used be a developer to ensure that HTTP request is made by the Voximplant cloud
  * new_child_account_password - The new child account password. Should be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character
  * account_notifications - Whether Voximplant notifications are required
  * tariff_changing_notifications - Whether to receive the emails about the Voximplant plan changing

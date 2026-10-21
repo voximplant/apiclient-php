@@ -34,8 +34,8 @@ $voxApi = new VoximplantApi($options);
  * with_header - Whether to get a CSV file with the column names if the output=csv
  * timezone - The selected timezone or the 'auto' value (the account location)
  * call_session_history_id - To get the call history for the specific sessions, pass the session IDs to this parameter separated by a semicolon (;). The maximum number of records is 1000. You can find the session ID in the AppEvents.Started event's sessionID property in a scenario, or retrieve it from the call_session_history_id value returned from the StartScenarios or StartConference methods
- * application_id - To receive the call history for a specific application, pass the application ID to this parameter
- * application_name - The application name, can be used instead of application_id
+ * application_id - To receive the call history for a specific application, pass the application ID to this parameter. Can be used instead of the application_name parameter
+ * application_name - The application name. Can be used instead of the application_id parameter
  * user_id - To receive the call history for a specific users, pass the user ID list separated by semicolons (;). If it is specified, the output contains the calls from the listed users only
  * rule_name - To receive the call history for a specific routing rule, pass the rule name to this parameter. Applies only if you set application_id or application_name
  * remote_number - To receive a call history for a specific remote numbers, pass the number list separated by semicolons (;). A remote number is a number on the client side. Ignored if the `remote_number_list` parameter is not empty

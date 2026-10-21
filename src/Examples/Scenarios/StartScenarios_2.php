@@ -26,13 +26,14 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * user_id - The user ID. Run the scripts from the user if set
- * user_name - The user name that can be used instead of user_id. Run the scripts from the user if set
- * application_id - The application ID
- * application_name - The application name that can be used instead of application_id
- * rule_id - The rule ID that needs to be launched. Please note, the necessary scenario needs to be attached to the rule
+ * user_id - The user ID. Run the scripts from the user if set. Can be used instead of the user_name parameter
+ * user_name - The user name. Run the scripts from the user if set. Can be used instead of the user_id parameter
+ * application_id - The application ID. Can be used instead of the application_name parameter
+ * application_name - The application name. Can be used instead of the application_id parameter
+ * rule_id - The rule ID that needs to be launched. Please note, the necessary scenario needs to be attached to the rule. Required unless rule_name is provided.
+ * rule_name - The rule name. Required unless rule_id is provided.
  * script_custom_data - The script custom data, that can be accessed in the scenario via the VoxEngine.customData() method. Use the application/x-www-form-urlencoded content type with UTF-8 encoding
- * reference_ip - Specifies the IP from the geolocation of predicted subscribers. It allows selecting the nearest server for serving subscribers
+ * reference_ip - Specifies the IP from the geolocation of predicted subscribers. It allows selecting the nearest server for serving subscribers. If not specified, the IP address of the HTTP request is used
  * server_location - Specifies the location of the server where the scenario needs to be executed. Has higher priority than `reference_ip`. Request [getServerLocations](https://api.voximplant.com/getServerLocations) for possible values
  * with_check_url - Whether to get media server session lists url
  */

@@ -4,31 +4,31 @@ namespace Voximplant\Resources\Params;
 
 class SQ_GetAgentsParams
 {
-    /** @var number Application ID to search by */
+    /** @var number Application ID to search by. Required unless application_name is provided. */
     public $application_id;
 
-    /** @var string Application name to search by. Can be used instead of application_id */
+    /** @var string Application name to search by. Required unless application_id is provided. */
     public $application_name;
 
-    /** @var intlist List of SmartQueue IDs separated by semicolons (;). Use 'all' to select all the queues */
+    /** @var intlist List of SmartQueue IDs separated by semicolons (;). Use 'all' to select all the queues. Can be used instead of the sq_queue_name parameter */
     public $sq_queue_id;
 
-    /** @var stringlist List of SmartQueue names separated by semicolons (;). Can be used instead of sq_queue_id */
+    /** @var stringlist List of SmartQueue names separated by semicolons (;). Can be used instead of the sq_queue_id parameter */
     public $sq_queue_name;
 
-    /** @var number ID of the SmartQueue to exclude */
+    /** @var intlist List of SmartQueue IDs separated by semicolons (;). Agents bound to these queues are excluded. Use 'all' to select all the queues. Can be used instead of the excluded_sq_queue_name parameter */
     public $excluded_sq_queue_id;
 
-    /** @var string Name of the SmartQueue to exclude. Can be used instead of excluded_sq_queue_id */
+    /** @var stringlist List of SmartQueue names separated by semicolons (;). Can be used instead of the excluded_sq_queue_id parameter */
     public $excluded_sq_queue_name;
 
     /** @var string Skills to filter in the JSON array format. The array should contain objects with the sq_skill_id/sq_skill_name, min_sq_skill_level, and max_sq_skill_level keys where skill levels range from 1 to 5 */
     public $sq_skills;
 
-    /** @var intlist List of user IDs separated by semicolons (;) */
+    /** @var intlist List of user IDs separated by semicolons (;). Can be used instead of the user_name parameter */
     public $user_id;
 
-    /** @var stringlist List of user names separated by semicolons (;). Can be used instead of user_id */
+    /** @var stringlist List of user names separated by semicolons (;). Can be used instead of the user_id parameter */
     public $user_name;
 
     /** @var string Substring of the user name to filter */
@@ -52,9 +52,6 @@ class SQ_GetAgentsParams
     /** @var number Number of items to skip in the output */
     public $offset;
 
-    /** @var boolean Whether the agent can handle calls. When set to false, the agent is excluded from the CALL-request distribution */
-    public $handle_calls;
-
     public function toArray()
     {
         return [
@@ -74,7 +71,6 @@ class SQ_GetAgentsParams
                     'with_sq_statuses' => $this->with_sq_statuses !== null ? (filter_var($this->with_sq_statuses, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
                     'count' => $this->count,
                     'offset' => $this->offset,
-                    'handle_calls' => $this->handle_calls !== null ? (filter_var($this->handle_calls, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
             ];
     }
 }

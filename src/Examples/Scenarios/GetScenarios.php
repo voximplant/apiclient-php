@@ -27,7 +27,7 @@ $voxApi = new VoximplantApi($options);
 /**
  * @param array $params (See below)
  * scenario_id - The scenario ID to filter
- * scenario_name - The scenario name to filter. Can be used instead of scenario_id. All scenarios containing this param in their names are returned. The parameter is case insensitive
+ * scenario_name - The scenario name to filter. Exact match. Combines with scenario_id when both are passed. Use with application_id or application_name to limit the result to one application
  * with_script - Whether to get the scenario text. You should specify the 'scenario_id' too!
  * count - The maximum returning record count
  * offset - The first N records are skipped in the output

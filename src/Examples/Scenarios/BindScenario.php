@@ -30,8 +30,8 @@ $voxApi = new VoximplantApi($options);
  * scenario_name - The scenario name list separated by semicolons (;). Required unless scenario_id is provided.
  * rule_id - The rule ID to bind the scenario. The rule and the scenario need to be in the same application. Required unless rule_name is provided.
  * rule_name - The rule name. Required unless rule_id is provided.
- * application_id - The application ID. Required unless application_name is provided.
- * application_name - The application name. Required unless application_id is provided.
+ * application_id - The application ID. Can be used instead of the application_name parameter
+ * application_name - The application name. Can be used instead of the application_id parameter
  * bind - Whether to bind or unbind (set true or false respectively)
  */
 $params = new BindScenarioParams();

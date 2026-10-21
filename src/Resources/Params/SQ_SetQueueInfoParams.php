@@ -4,19 +4,19 @@ namespace Voximplant\Resources\Params;
 
 class SQ_SetQueueInfoParams
 {
-    /** @var number Application ID to search by */
+    /** @var number Application ID to search by. Required unless application_name is provided. */
     public $application_id;
 
-    /** @var string Application name to search by. Can be used instead of application_id */
+    /** @var string Application name to search by. Required unless application_id is provided. */
     public $application_name;
 
     /** @var boolean Whether to add the task to the queue if there are no available agents */
     public $hold_im_if_inactive_agents;
 
-    /** @var number ID of the SmartQueue to search for */
+    /** @var number ID of the SmartQueue to search for. Required unless sq_queue_name is provided. */
     public $sq_queue_id;
 
-    /** @var string Name of the SmartQueue to search for. Can be used instead of sq_queue_id */
+    /** @var string Name of the SmartQueue to search for. Required unless sq_queue_id is provided. */
     public $sq_queue_name;
 
     /** @var boolean Whether to keep the call task in the queue if all agents are in the DND/BANNED statuses. */
@@ -36,9 +36,6 @@ class SQ_SetQueueInfoParams
 
     /** @var string Strategy of prioritizing IM-type requests for service. Accepts one of the following values: "MAX_PRIORITY", "MAX_WAITING_TIME". The default value is **call_task_selection** */
     public $im_task_selection;
-
-    /** @var string Agent selection strategy, applied when it is not possible to wait for a suitable free agent. Currently not used */
-    public $fallback_agent_selection;
 
     /** @var string Comment, up to 200 characters */
     public $description;
@@ -78,7 +75,6 @@ class SQ_SetQueueInfoParams
                     'im_agent_selection' => $this->im_agent_selection,
                     'call_task_selection' => $this->call_task_selection,
                     'im_task_selection' => $this->im_task_selection,
-                    'fallback_agent_selection' => $this->fallback_agent_selection,
                     'description' => $this->description,
                     'call_max_waiting_time' => $this->call_max_waiting_time,
                     'im_max_waiting_time' => $this->im_max_waiting_time,

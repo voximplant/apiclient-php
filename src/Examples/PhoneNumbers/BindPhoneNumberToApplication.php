@@ -30,8 +30,8 @@ $voxApi = new VoximplantApi($options);
  * phone_number - The phone number list separated by semicolons (;). Required unless phone_id is provided.
  * application_id - The application ID. Required unless application_name is provided.
  * application_name - The application name. Required unless application_id is provided.
- * rule_id - The rule ID
- * rule_name - The rule name that can be used instead of rule_id
+ * rule_id - The rule ID. Can be used instead of the rule_name parameter
+ * rule_name - The rule name. Can be used instead of the rule_id parameter
  * bind - Whether to bind or unbind (set true or false respectively)
  */
 $params = new BindPhoneNumberToApplicationParams();

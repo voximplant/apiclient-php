@@ -28,7 +28,7 @@ class GetHistoryReportsParams
     /** @var number The first N records are skipped in the output */
     public $offset;
 
-    /** @var intlist The application ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all applications */
+    /** @var intlist The application ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all applications. Can be used instead of the application_name parameter */
     public $application_id;
 
     /** @var stringlist The application name list separated by semicolons (;). Can be used instead of the application_id parameter */

@@ -26,10 +26,10 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - The application ID to search by
- * application_name - The application name to search by. Can be used instead of the application_id parameter
- * sq_queue_id - The SmartQueue ID list separated by semicolons (;). Use the 'all' value to select all SmartQueues
- * sq_queue_name - The SmartQueue name list separated by semicolons (;). Can be used instead of sq_queue_id
+ * application_id - The application ID to search by. Required unless application_name is provided.
+ * application_name - The application name to search by. Required unless application_id is provided.
+ * sq_queue_id - The SmartQueue ID list separated by semicolons (;). Use the 'all' value to select all SmartQueues. Required unless sq_queue_name is provided.
+ * sq_queue_name - The SmartQueue name list separated by semicolons (;). Required unless sq_queue_id is provided.
  * timezone - The selected timezone or the 'auto' value (the account location)
  */
 $params = new GetSQStateParams();

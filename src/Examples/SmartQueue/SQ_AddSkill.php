@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - Application ID to bind to
- * application_name - Application name to bind to. Can be used instead of application_id
+ * application_id - Application ID to bind to. Required unless application_name is provided.
+ * application_name - Application name to bind to. Required unless application_id is provided.
  * sq_skill_name - Unique skill name within the application
  * description - Comment, up to 200 characters
  */

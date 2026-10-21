@@ -46,6 +46,8 @@ class RequestType
             'child_account_name' => 'stringlist',
             'child_account_email' => 'stringlist',
             'new_child_account_email' => 'string',
+            'callback_url' => 'string',
+            'callback_salt' => 'string',
             'new_child_account_password' => 'string',
             'account_notifications' => 'boolean',
             'tariff_changing_notifications' => 'boolean',
@@ -499,6 +501,7 @@ class RequestType
             'application_id' => 'number',
             'application_name' => 'string',
             'rule_id' => 'number',
+            'rule_name' => 'string',
             'script_custom_data' => 'string',
             'reference_ip' => 'string',
             'server_location' => 'string',
@@ -511,6 +514,7 @@ class RequestType
         return array (
             'conference_name' => 'string',
             'rule_id' => 'number',
+            'rule_name' => 'string',
             'user_id' => 'number',
             'user_name' => 'string',
             'application_id' => 'number',
@@ -987,7 +991,6 @@ class RequestType
             'country_state' => 'string',
             'phone_region_id' => 'number',
             'regulation_address_id' => 'number',
-            'force_verification' => 'boolean',
         );
     }
 
@@ -1028,12 +1031,12 @@ class RequestType
             'phone_id' => 'intlist',
             'phone_number' => 'stringlist',
             'activation_status' => 'stringlist',
-            'application_id' => 'number',
-            'application_name' => 'string',
+            'application_id' => 'intlist',
+            'application_name' => 'stringlist',
             'is_bound_to_application' => 'boolean',
             'phone_template' => 'string',
             'country_code' => 'stringlist',
-            'phone_category_name' => 'string',
+            'phone_category_name' => 'stringlist',
             'canceled' => 'boolean',
             'deactivated' => 'boolean',
             'auto_charge' => 'boolean',
@@ -1052,7 +1055,7 @@ class RequestType
             'sandbox' => 'string',
             'count' => 'number',
             'offset' => 'number',
-            'sms_supported' => 'boolean',
+            'is_sms_supported' => 'boolean',
             'phone_region_name' => 'stringlist',
             'rule_id' => 'intlist',
             'rule_name' => 'stringlist',
@@ -1352,6 +1355,7 @@ class RequestType
             'application_name' => 'string',
             'user_id' => 'intlist',
             'user_name' => 'stringlist',
+            'sq_queue_id' => 'intlist',
             'sq_queue_name' => 'stringlist',
             'from_date' => 'timestamp',
             'to_date' => 'timestamp',
@@ -1360,6 +1364,10 @@ class RequestType
             'report_type' => 'stringlist',
             'group_by' => 'string',
             'max_waiting_sec' => 'number',
+            'desc_order' => 'boolean',
+            'with_header' => 'boolean',
+            'decimal_separator' => 'string',
+            'omit_empty' => 'boolean',
         );
     }
 
@@ -1379,6 +1387,10 @@ class RequestType
             'report_type' => 'stringlist',
             'group_by' => 'string',
             'max_waiting_sec' => 'number',
+            'desc_order' => 'boolean',
+            'with_header' => 'boolean',
+            'decimal_separator' => 'string',
+            'omit_empty' => 'boolean',
         );
     }
 
@@ -1398,6 +1410,10 @@ class RequestType
             'report_type' => 'stringlist',
             'group_by' => 'string',
             'max_waiting_sec' => 'number',
+            'desc_order' => 'boolean',
+            'with_header' => 'boolean',
+            'decimal_separator' => 'string',
+            'omit_empty' => 'boolean',
         );
     }
 
@@ -1418,6 +1434,7 @@ class RequestType
             'sq_status_name' => 'string',
             'custom_status_name' => 'string',
             'application_id' => 'number',
+            'application_name' => 'string',
         );
     }
 
@@ -1425,6 +1442,7 @@ class RequestType
     {
         return array (
             'application_id' => 'number',
+            'application_name' => 'string',
         );
     }
 
@@ -1433,6 +1451,7 @@ class RequestType
         return array (
             'sq_status_name' => 'string',
             'application_id' => 'number',
+            'application_name' => 'string',
         );
     }
 
@@ -1502,6 +1521,7 @@ class RequestType
     {
         return array (
             'account_id' => 'number',
+            'active_verification_only' => 'boolean',
         );
     }
 
@@ -2007,7 +2027,6 @@ class RequestType
             'call_task_selection' => 'string',
             'im_task_selection' => 'string',
             'hold_calls_if_inactive_agents' => 'boolean',
-            'fallback_agent_selection' => 'string',
             'description' => 'string',
             'call_max_waiting_time' => 'number',
             'im_max_waiting_time' => 'number',
@@ -2033,7 +2052,6 @@ class RequestType
             'im_agent_selection' => 'string',
             'call_task_selection' => 'string',
             'im_task_selection' => 'string',
-            'fallback_agent_selection' => 'string',
             'description' => 'string',
             'call_max_waiting_time' => 'number',
             'im_max_waiting_time' => 'number',
@@ -2063,10 +2081,10 @@ class RequestType
             'sq_queue_id' => 'intlist',
             'sq_queue_name' => 'stringlist',
             'sq_queue_name_template' => 'string',
-            'user_id' => 'number',
-            'user_name' => 'string',
-            'excluded_user_id' => 'number',
-            'excluded_user_name' => 'string',
+            'user_id' => 'intlist',
+            'user_name' => 'stringlist',
+            'excluded_user_id' => 'intlist',
+            'excluded_user_name' => 'stringlist',
             'count' => 'number',
             'offset' => 'number',
             'with_agentcount' => 'boolean',
@@ -2139,8 +2157,8 @@ class RequestType
             'sq_skill_id' => 'intlist',
             'sq_skill_name' => 'stringlist',
             'sq_skill_name_template' => 'string',
-            'excluded_user_id' => 'number',
-            'excluded_user_name' => 'string',
+            'excluded_user_id' => 'intlist',
+            'excluded_user_name' => 'stringlist',
             'count' => 'number',
             'offset' => 'number',
         );
@@ -2151,8 +2169,8 @@ class RequestType
         return array (
             'application_id' => 'number',
             'application_name' => 'string',
-            'sq_queue_id' => 'string',
-            'sq_queue_name' => 'string',
+            'sq_queue_id' => 'intlist',
+            'sq_queue_name' => 'stringlist',
             'user_id' => 'intlist',
             'user_name' => 'stringlist',
             'bind_mode' => 'string',
@@ -2178,8 +2196,8 @@ class RequestType
             'application_name' => 'string',
             'sq_queue_id' => 'intlist',
             'sq_queue_name' => 'stringlist',
-            'excluded_sq_queue_id' => 'number',
-            'excluded_sq_queue_name' => 'string',
+            'excluded_sq_queue_id' => 'intlist',
+            'excluded_sq_queue_name' => 'stringlist',
             'sq_skills' => 'string',
             'user_id' => 'intlist',
             'user_name' => 'stringlist',
@@ -2190,7 +2208,6 @@ class RequestType
             'with_sq_statuses' => 'boolean',
             'count' => 'number',
             'offset' => 'number',
-            'handle_calls' => 'boolean',
         );
     }
 

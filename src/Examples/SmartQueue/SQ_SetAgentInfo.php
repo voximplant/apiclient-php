@@ -26,12 +26,12 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - Application ID to search by
- * application_name - Application name to search by. Can be used instead of application_id
- * user_id - List of user IDs separated by semicolons (;). Use 'all' to select all the users
- * user_name - List of user names separated by semicolons (;). Can be used instead of user_id
- * max_simultaneous_conversations - Maximum number of chats that the user processes simultaneously
- * handle_calls - Whether the agent can handle calls. When set to false, the agent is excluded from the CALL-request distribution
+ * application_id - Application ID to search by. Required unless application_name is provided.
+ * application_name - Application name to search by. Required unless application_id is provided.
+ * user_id - List of user IDs separated by semicolons (;). Use 'all' to select all the users. Required unless user_name is provided.
+ * user_name - List of user names separated by semicolons (;). Required unless user_id is provided.
+ * max_simultaneous_conversations - Maximum number of chats that the user processes simultaneously. Required unless handle_calls is provided.
+ * handle_calls - Whether the agent can handle calls. When set to false, the agent is excluded from the CALL-request distribution. Required unless max_simultaneous_conversations is provided.
  */
 $params = new SQ_SetAgentInfoParams();
 

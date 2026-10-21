@@ -26,10 +26,10 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * country_code - The country code
- * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] function
+ * country_code - The country code. Required together with phone_category_name and phone_region_id to search the catalog; omit all three to get the phone numbers available locally
+ * phone_category_name - The phone category name. See the [GetPhoneNumberCategories] function. Required together with country_code and phone_region_id to search the catalog; omit all three to get the phone numbers available locally
  * country_state - The country state. See the GetPhoneNumberCategories and GetPhoneNumberCountryStates functions
- * phone_region_id - The phone region ID. See the [GetPhoneNumberRegions] method
+ * phone_region_id - The phone region ID. See the [GetPhoneNumberRegions] method. Required together with country_code and phone_category_name to search the catalog; omit all three to get the phone numbers available locally
  * count - The maximum returning record count
  * offset - The first N records are skipped in the output
  * phone_number_mask - The phone number searching mask. Asterisk represents zero or more occurrences of any character

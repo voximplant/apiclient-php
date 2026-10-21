@@ -16,6 +16,12 @@ class SetChildAccountInfoParams
     /** @var string The new child account email */
     public $new_child_account_email;
 
+    /** @var string Custom URL to send callbacks from this child account */
+    public $callback_url;
+
+    /** @var string If salt string is specified, each HTTP request made by the Voximplant cloud toward the callback_url has a salt field set to MD5 hash of account information and salt. That hash can be used be a developer to ensure that HTTP request is made by the Voximplant cloud */
+    public $callback_salt;
+
     /** @var string The new child account password. Should be at least 8 characters long and contain at least one uppercase and lowercase letter, one number, and one special character */
     public $new_child_account_password;
 
@@ -59,6 +65,8 @@ class SetChildAccountInfoParams
                     'child_account_name' => $this->child_account_name,
                     'child_account_email' => $this->child_account_email,
                     'new_child_account_email' => $this->new_child_account_email,
+                    'callback_url' => $this->callback_url,
+                    'callback_salt' => $this->callback_salt,
                     'new_child_account_password' => $this->new_child_account_password,
                     'account_notifications' => $this->account_notifications !== null ? (filter_var($this->account_notifications, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
                     'tariff_changing_notifications' => $this->tariff_changing_notifications !== null ? (filter_var($this->tariff_changing_notifications, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,

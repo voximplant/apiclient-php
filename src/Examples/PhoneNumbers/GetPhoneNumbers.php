@@ -29,8 +29,8 @@ $voxApi = new VoximplantApi($options);
  * phone_id - Particular phone ID to filter
  * phone_number - Phone number list separated by semicolons (;) that can be used instead of phone_id
  * activation_status - Phone number activation statuses to filter, separated by semicolons (;).The possible values are: ACTIVE, ACTIVATING, DEACTIVATED, PROVISIONING, AWAITING_BUSINESS_PHONE_NUMBER_CONFIGURATION, LEGAL_OWNERSHIP_LIMIT_REACHED, GOSUSLUGI_DECLINED, SELF_BAN_ENABLED
- * application_id - Application ID
- * application_name - Application name that can be used instead of application_id
+ * application_id - Application ID. Can be used instead of the application_name parameter
+ * application_name - Application name. Can be used instead of the application_id parameter
  * is_bound_to_application - Whether the phone number bound to an application
  * phone_template - Phone number start to filter
  * country_code - Country code list separated by semicolons (;)
@@ -53,7 +53,7 @@ $voxApi = new VoximplantApi($options);
  * sandbox - Flag allows you to display only the numbers of the sandbox, real numbers, or all numbers. The following values are possible: 'all', 'true', 'false'
  * count - Maximum returning record count
  * offset - First N records are skipped in the output
- * sms_supported - Whether the SMS support is enabled
+ * is_sms_supported - Whether the SMS support is enabled
  * phone_region_name - Region names list separated by semicolons (;)
  * rule_id - Rule ID list separated by semicolons (;)
  * rule_name - Rule names list separated by semicolons (;). Can be used only if __application_id__ or __application_name__ is specified

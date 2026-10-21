@@ -34,10 +34,10 @@ $voxApi = new VoximplantApi($options);
  * type_list - The type of the call list. The possible values are AUTOMATIC and MANUAL
  * count - The maximum returning record count. The maximum value is 1000
  * offset - The first N records are skipped in the output
- * application_id - The application ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all applications
- * application_name - The application name list separated by semicolons (;). Can be used instead of application_id
- * rule_id - The rule ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all rules
- * rule_name - The rule name list separated by semicolons (;). Can be used instead of rule_id
+ * application_id - The application ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all applications. Can be used instead of the application_name parameter
+ * application_name - The application name list separated by semicolons (;). Can be used instead of the application_id parameter
+ * rule_id - The rule ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all rules. Can be used instead of the rule_name parameter
+ * rule_name - The rule name list separated by semicolons (;). Can be used instead of the rule_id parameter
  * status - The call list status to filter. The possible values are: In progress, Canceled, Completed, Suspended
  */
 $params = new GetCallListsParams();

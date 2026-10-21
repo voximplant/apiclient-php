@@ -26,8 +26,8 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - Application ID to bind to
- * application_name - Application name to bind to. Can be used instead of application_id
+ * application_id - Application ID to bind to. Required unless application_name is provided.
+ * application_name - Application name to bind to. Required unless application_id is provided.
  * sq_queue_name - Unique SmartQueue name within the application, up to 100 characters
  * hold_im_if_inactive_agents - Whether to add the task to the queue if there are no available agents
  * call_agent_selection - Agent selection strategy for calls. Accepts one of the following values: "MOST_QUALIFIED", "LEAST_QUALIFIED", "MAX_WAITING_TIME"
@@ -35,7 +35,6 @@ $voxApi = new VoximplantApi($options);
  * call_task_selection - Call type requests prioritizing strategy. Accepts one of the [SQTaskSelectionStrategies] enum values
  * im_task_selection - IM type requests prioritizing strategy. Accepts one of the [SQTaskSelectionStrategies] enum values. The default value is **call_task_selection**
  * hold_calls_if_inactive_agents - Whether to keep the call task in the queue if all agents are in the DND/BANNED/OFFLINE statuses.
- * fallback_agent_selection - Agent selection strategy, applied when it is not possible to wait for a suitable free agent. Currently not used
  * description - Comment, up to 200 characters
  * call_max_waiting_time - Maximum time in minutes that a CALL-type request can remain in the queue without being assigned to an agent. Specify either this parameter or `call_max_waiting_time_in_seconds`. Specifying both parameters simultaniously leads to an error
  * im_max_waiting_time - Maximum time in minutes that an IM-type request can remain in the queue without being assigned to an agent. Specify either this parameter or `im_max_waiting_time_in_seconds`. Specifying both parameters simultaniously leads to an error

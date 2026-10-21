@@ -4,10 +4,10 @@ namespace Voximplant\Resources\Params;
 
 class SQ_AddQueueParams
 {
-    /** @var number Application ID to bind to */
+    /** @var number Application ID to bind to. Required unless application_name is provided. */
     public $application_id;
 
-    /** @var string Application name to bind to. Can be used instead of application_id */
+    /** @var string Application name to bind to. Required unless application_id is provided. */
     public $application_name;
 
     /** @var string Unique SmartQueue name within the application, up to 100 characters */
@@ -30,9 +30,6 @@ class SQ_AddQueueParams
 
     /** @var boolean Whether to keep the call task in the queue if all agents are in the DND/BANNED/OFFLINE statuses. */
     public $hold_calls_if_inactive_agents;
-
-    /** @var string Agent selection strategy, applied when it is not possible to wait for a suitable free agent. Currently not used */
-    public $fallback_agent_selection;
 
     /** @var string Comment, up to 200 characters */
     public $description;
@@ -70,7 +67,6 @@ class SQ_AddQueueParams
                     'call_task_selection' => $this->call_task_selection,
                     'im_task_selection' => $this->im_task_selection,
                     'hold_calls_if_inactive_agents' => $this->hold_calls_if_inactive_agents !== null ? (filter_var($this->hold_calls_if_inactive_agents, FILTER_VALIDATE_BOOLEAN) ? 'true' : 'false') : null,
-                    'fallback_agent_selection' => $this->fallback_agent_selection,
                     'description' => $this->description,
                     'call_max_waiting_time' => $this->call_max_waiting_time,
                     'im_max_waiting_time' => $this->im_max_waiting_time,

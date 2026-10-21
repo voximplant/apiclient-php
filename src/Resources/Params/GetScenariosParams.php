@@ -7,7 +7,7 @@ class GetScenariosParams
     /** @var number The scenario ID to filter */
     public $scenario_id;
 
-    /** @var string The scenario name to filter. Can be used instead of scenario_id. All scenarios containing this param in their names are returned. The parameter is case insensitive */
+    /** @var string The scenario name to filter. Exact match. Combines with scenario_id when both are passed. Use with application_id or application_name to limit the result to one application */
     public $scenario_name;
 
     /** @var boolean Whether to get the scenario text. You should specify the 'scenario_id' too! */

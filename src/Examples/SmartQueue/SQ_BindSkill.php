@@ -26,10 +26,10 @@ $voxApi = new VoximplantApi($options);
 
 /**
  * @param array $params (See below)
- * application_id - Application ID to search by
- * application_name - Application name to search by. Can be used instead of application_id
- * user_id - List of user IDs separated by semicolons (;). Use 'all' to select all the users
- * user_name - List of user names separated by semicolons (;). Can be used instead of user_id
+ * application_id - Application ID to search by. Required unless application_name is provided.
+ * application_name - Application name to search by. Required unless application_id is provided.
+ * user_id - List of user IDs separated by semicolons (;). Use 'all' to select all the users. Required unless user_name is provided.
+ * user_name - List of user names separated by semicolons (;). Required unless user_id is provided.
  * sq_skills - Skills to be bound to agents in the JSON array format. The array should contain objects with the sq_skill_id/sq_skill_name and sq_skill_level keys where skill levels range from 1 to 5
  * bind_mode - Binding mode. Accepts one of the [SQSkillBindingModes] enum values
  */

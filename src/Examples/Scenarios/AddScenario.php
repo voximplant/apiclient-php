@@ -28,8 +28,8 @@ $voxApi = new VoximplantApi($options);
  * @param array $params (See below)
  * scenario_name - The scenario name. The length should be less than 30
  * scenario_script - The scenario text. Use the application/x-www-form-urlencoded content type with UTF-8 encoding. The length should be less than 128 KB
- * rule_id - The rule ID. The new scenario binds to the specified rule. Please note, if you do not bind the scenario to any rule, you cannot execute the scenario
- * rule_name - The rule name that can be used instead of rule_id
+ * rule_id - The rule ID. The new scenario binds to the specified rule. Please note, if you do not bind the scenario to any rule, you cannot execute the scenario. Can be used instead of the rule_name parameter
+ * rule_name - The rule name. Can be used instead of the rule_id parameter
  * rewrite - Whether to rewrite the existing scenario
  * application_id - Application ID to bind the scenario to
  * application_name - Application name to bind the scenario to

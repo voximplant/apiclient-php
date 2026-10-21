@@ -16,10 +16,10 @@ class BindScenarioParams
     /** @var string The rule name. Required unless rule_id is provided. */
     public $rule_name;
 
-    /** @var number The application ID. Required unless application_name is provided. */
+    /** @var number The application ID. Can be used instead of the application_name parameter */
     public $application_id;
 
-    /** @var string The application name. Required unless application_id is provided. */
+    /** @var string The application name. Can be used instead of the application_id parameter */
     public $application_name;
 
     /** @var boolean Whether to bind or unbind (set true or false respectively) */

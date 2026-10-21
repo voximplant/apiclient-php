@@ -28,16 +28,16 @@ class GetCallListsParams
     /** @var number The first N records are skipped in the output */
     public $offset;
 
-    /** @var intlist The application ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all applications */
+    /** @var intlist The application ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all applications. Can be used instead of the application_name parameter */
     public $application_id;
 
-    /** @var stringlist The application name list separated by semicolons (;). Can be used instead of application_id */
+    /** @var stringlist The application name list separated by semicolons (;). Can be used instead of the application_id parameter */
     public $application_name;
 
-    /** @var intlist The rule ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all rules */
+    /** @var intlist The rule ID to filter. Can be a list separated by semicolons (;). Use the 'all' value to select all rules. Can be used instead of the rule_name parameter */
     public $rule_id;
 
-    /** @var stringlist The rule name list separated by semicolons (;). Can be used instead of rule_id */
+    /** @var stringlist The rule name list separated by semicolons (;). Can be used instead of the rule_id parameter */
     public $rule_name;
 
     /** @var string The call list status to filter. The possible values are: In progress, Canceled, Completed, Suspended */
