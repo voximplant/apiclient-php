@@ -35125,6 +35125,45 @@ class ResultType
         );
     }
 
+    public function GetCustomRecordStorages()
+    {
+        return array (
+            'result' =>
+            array (
+                'custom_record_storage_id' => 'number',
+                'host' => 'string',
+                'access_key_id' => 'string',
+                'bucket' => 'string',
+                'region' => 'string',
+                'signature_version' => 'string',
+                'bucket_is_domain' => 'boolean',
+                'storage_class' => 'string',
+                'acl' => 'string',
+                'cors' => 'string',
+                'multipart_upload' => 'boolean',
+                'last_test_status' => 'string',
+                'last_operation_short_info' => 'object',
+            ),
+        );
+    }
+
+    public function AddCustomRecordStorage()
+    {
+        return array (
+            'result' =>
+            array (
+                'custom_record_storage_id' => 'number',
+            ),
+        );
+    }
+
+    public function SetCustomRecordStorageInfo()
+    {
+        return array (
+            'result' => 'number',
+        );
+    }
+
     public function CreateKey()
     {
         return array (

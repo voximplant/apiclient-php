@@ -1776,6 +1776,51 @@ class RequestType
         );
     }
 
+    public function GetCustomRecordStorages()
+    {
+        return array (
+            'custom_record_storage_id' => 'number',
+            'with_applications_attached' => 'boolean',
+        );
+    }
+
+    public function AddCustomRecordStorage()
+    {
+        return array (
+            'host' => 'string',
+            'access_key_id' => 'string',
+            'secret_access_key' => 'string',
+            'bucket' => 'string',
+            'region' => 'string',
+            'signature_version' => 'string',
+            'bucket_is_domain' => 'boolean',
+            'storage_class' => 'string',
+            'acl' => 'string',
+            'cors' => 'string',
+            'multipart_upload' => 'boolean',
+            'attached_application_id' => 'string',
+        );
+    }
+
+    public function SetCustomRecordStorageInfo()
+    {
+        return array (
+            'host' => 'string',
+            'access_key_id' => 'string',
+            'secret_access_key' => 'string',
+            'bucket' => 'string',
+            'region' => 'string',
+            'signature_version' => 'string',
+            'bucket_is_domain' => 'boolean',
+            'storage_class' => 'string',
+            'acl' => 'string',
+            'cors' => 'string',
+            'multipart_upload' => 'boolean',
+            'attached_application_id' => 'string',
+            'custom_record_storage_id' => 'number',
+        );
+    }
+
     public function CreateKey()
     {
         return array (
